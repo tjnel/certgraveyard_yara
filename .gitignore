@@ -60,10 +60,10 @@ dmypy.json
 data/*.csv
 data/.csv_hash
 
-# Generated rules (keep structure)
-rules/individual/*.yara
-rules/combined/*.yara
-rules/*.zip
+# Generated rules - tracked in repo for releases
+# rules/individual/*.yara
+# rules/combined/*.yara
+# rules/*.zip
 
 # Release notes (generated)
 RELEASE_NOTES.md
