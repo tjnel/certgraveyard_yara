@@ -20,8 +20,8 @@ Automated YARA rule generation from the [CertGraveyard](https://certgraveyard.or
 
 ```bash
 # Clone the repository
-git clone https://github.com/tjnel/cert-central-yara.git
-cd cert-central-yara
+git clone https://github.com/tjnel/certgraveyard_yara.git
+cd certgraveyard_yara
 
 # Install with UV
 uv sync --all-extras
