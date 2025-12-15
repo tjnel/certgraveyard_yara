@@ -1,7 +1,8 @@
 # CertCentral YARA Rules Generator
 
-[![CI](https://github.com/tjnel/cert-central-yara/actions/workflows/ci.yml/badge.svg)](https://github.com/tjnel/cert-central-yara/actions/workflows/ci.yml)
-[![Daily Update](https://github.com/tjnel/cert-central-yara/actions/workflows/daily-update.yml/badge.svg)](https://github.com/tjnel/cert-central-yara/actions/workflows/daily-update.yml)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+
 
 Automated YARA rule generation from the [CertCentral](https://certcentral.org) compromised certificate database.
 
