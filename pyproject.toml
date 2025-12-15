@@ -1,12 +1,12 @@
 [project]
 name = "cert-central-yara"
 version = "1.0.0"
-description = "Automated YARA rule generation from CertCentral compromised certificate database"
+description = "Automated YARA rule generation from CertGraveyard compromised certificate database"
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
 authors = [
-    {name = "CertCentral YARA Generator"}
+    {name = "CertGraveyard YARA Generator"}
 ]
 dependencies = [
     "httpx>=0.27.0",

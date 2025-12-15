@@ -1,4 +1,4 @@
-name: Daily CertCentral Update
+name: Daily CertGraveyard Update
 
 on:
   schedule:
@@ -62,7 +62,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "chore: update YARA rules from CertCentral $(date +%Y-%m-%d)" || exit 0
+          git commit -m "chore: update YARA rules from CertGraveyard $(date +%Y-%m-%d)" || exit 0
           git push
 
       - name: Trigger release

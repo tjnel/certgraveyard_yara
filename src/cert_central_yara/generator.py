@@ -24,8 +24,8 @@ DEFAULT_YARA_TEMPLATE = '''import "pe"
 rule MAL_Compromised_Cert_{{ malware_name_safe }}_{{ issuer_short_safe }}_{{ serial_safe }} {
    meta:
       description         = "Detects {{ malware_name }} with compromised cert ({{ issuer_short }})"
-      author              = "CertCentral-YARA-Generator"
-      reference           = "https://certcentral.org"
+      author              = "CertGraveyard-YARA-Generator"
+      reference           = "https://certgraveyard.org"
       date                = "{{ valid_from }}"
       version             = "1.0"
 
@@ -366,7 +366,7 @@ def combine_rules(
 def create_zip_archive(
     input_dir: Path | None = None,
     output_dir: Path | None = None,
-    output_filename: str = "cert_central_yara_rules.zip",
+    output_filename: str = "cert_graveyard_yara_rules.zip",
 ) -> Path:
     """Create a ZIP archive of all individual YARA rules.
 

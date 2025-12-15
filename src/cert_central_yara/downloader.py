@@ -9,12 +9,19 @@ import httpx
 
 logger = logging.getLogger(__name__)
 
-# CertCentral CSV download URL
-CERTCENTRAL_CSV_URL = "https://certcentral.org/api/download_csv"
+# CertGraveyard CSV download URL
+CERTGRAVEYARD_CSV_URL = "https://certgraveyard.org/api/download_csv"
+
+# Default headers to mimic a browser request
+DEFAULT_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "text/csv,application/csv,text/plain,*/*",
+    "Accept-Language": "en-US,en;q=0.9",
+}
 
 # Default paths
 DEFAULT_DATA_DIR = Path("data")
-DEFAULT_CSV_FILENAME = "cert_central_database.csv"
+DEFAULT_CSV_FILENAME = "cert_graveyard_database.csv"
 DEFAULT_HASH_FILENAME = ".csv_hash"
 
 
@@ -25,12 +32,12 @@ class DownloadError(Exception):
 
 
 async def download_csv(
-    url: str = CERTCENTRAL_CSV_URL,
+    url: str = CERTGRAVEYARD_CSV_URL,
     output_path: Path | None = None,
     timeout: float = 60.0,
     max_retries: int = 3,
 ) -> Path:
-    """Download CSV from CertCentral with retry logic.
+    """Download CSV from CertGraveyard with retry logic.
 
     Args:
         url: URL to download CSV from.
@@ -56,7 +63,7 @@ async def download_csv(
         try:
             logger.info(f"Downloading CSV from {url} (attempt {attempt + 1}/{max_retries})")
 
-            async with httpx.AsyncClient(timeout=timeout) as client:
+            async with httpx.AsyncClient(timeout=timeout, headers=DEFAULT_HEADERS) as client:
                 response = await client.get(url)
                 response.raise_for_status()
 
@@ -87,7 +94,7 @@ async def download_csv(
 
 
 def download_csv_sync(
-    url: str = CERTCENTRAL_CSV_URL,
+    url: str = CERTGRAVEYARD_CSV_URL,
     output_path: Path | None = None,
     timeout: float = 60.0,
     max_retries: int = 3,

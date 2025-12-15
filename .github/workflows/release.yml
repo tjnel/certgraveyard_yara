@@ -42,16 +42,16 @@ jobs:
       - name: Generate release notes
         run: |
           cat > RELEASE_NOTES.md << EOF
-          # CertCentral YARA Rules - ${{ steps.version.outputs.version }}
+          # CertGraveyard YARA Rules - ${{ steps.version.outputs.version }}
 
           ## Summary
 
-          This release contains **${{ steps.count.outputs.rule_count }}** YARA rules generated from the CertCentral compromised certificate database.
+          This release contains **${{ steps.count.outputs.rule_count }}** YARA rules generated from the CertGraveyard compromised certificate database.
 
           ## Contents
 
           - \`MAL_Compromised_Cert_*.yara\` - Combined YARA ruleset (single file)
-          - \`cert_central_yara_rules.zip\` - Individual rule files (ZIP archive)
+          - \`cert_graveyard_yara_rules.zip\` - Individual rule files (ZIP archive)
 
           ## Usage
 
@@ -60,13 +60,13 @@ jobs:
           yara MAL_Compromised_Cert_*.yara /path/to/scan
 
           # Or extract individual rules
-          unzip cert_central_yara_rules.zip -d rules/
+          unzip cert_graveyard_yara_rules.zip -d rules/
           yara rules/*.yara /path/to/scan
           \`\`\`
 
           ## Source
 
-          Rules generated from [CertCentral](https://certcentral.org) compromised certificate database.
+          Rules generated from [CertGraveyard](https://certgraveyard.org) compromised certificate database.
 
           ## Validation
 
@@ -79,10 +79,10 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.version.outputs.version }}
-          name: CertCentral YARA Rules ${{ steps.version.outputs.version }}
+          name: CertGraveyard YARA Rules ${{ steps.version.outputs.version }}
           body_path: RELEASE_NOTES.md
           files: |
             rules/combined/MAL_Compromised_Cert_*.yara
-            rules/cert_central_yara_rules.zip
+            rules/cert_graveyard_yara_rules.zip
           make_latest: true
 

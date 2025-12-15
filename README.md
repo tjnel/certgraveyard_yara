@@ -1,14 +1,14 @@
-# CertCentral YARA Rules Generator
+# CertGraveyard YARA Rules Generator
 
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
 
-Automated YARA rule generation from the [CertCentral](https://certcentral.org) compromised certificate database.
+Automated YARA rule generation from the [CertGraveyard](https://certgraveyard.org) compromised certificate database.
 
 ## Features
 
-- 🔄 **Daily Updates**: Automatically checks CertCentral for new compromised certificates
+- 🔄 **Daily Updates**: Automatically checks CertGraveyard for new compromised certificates
 - 📝 **YARA Rule Generation**: Creates individual YARA rules for each certificate
 - ✅ **Validation**: Validates all rules with yara-python
 - 📦 **Release Management**: Automated releases with combined ruleset and ZIP archive
@@ -30,7 +30,7 @@ uv sync --all-extras
 ### Usage
 
 ```bash
-# Download latest CSV from CertCentral
+# Download latest CSV from CertGraveyard
 cert-central-yara download
 
 # Check if CSV has changed
@@ -97,8 +97,8 @@ import "pe"
 rule MAL_Compromised_Cert_Emotet_DigiCert_0a_1b_2c_3d {
    meta:
       description         = "Detects malware Emotet using compromised certificate..."
-      author              = "CertCentral-YARA-Generator"
-      reference           = "https://certcentral.org"
+      author              = "CertGraveyard-YARA-Generator"
+      reference           = "https://certgraveyard.org"
       
       hash                = "a1b2c3d4..."
       malware             = "Emotet"
@@ -153,7 +153,7 @@ uv run pytest -v
 
 | Command | Description |
 |---------|-------------|
-| `download` | Download CSV from CertCentral |
+| `download` | Download CSV from CertGraveyard |
 | `check-changed` | Check if CSV has changed since last run |
 | `generate` | Generate YARA rules from CSV |
 | `validate` | Validate YARA rules |
@@ -168,7 +168,7 @@ uv run pytest -v
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `CERTCENTRAL_URL` | CSV download URL | `https://certcentral.org/api/download_csv` |
+| `CERTGRAVEYARD_URL` | CSV download URL | `https://certgraveyard.org/api/download_csv` |
 
 ## License
 
@@ -176,6 +176,6 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## Acknowledgments
 
-- [CertCentral](https://certcentral.org) for providing the compromised certificate database
+- [CertGraveyard](https://certgraveyard.org) for providing the compromised certificate database
 - [YARA](https://virustotal.github.io/yara/) for the pattern matching engine
 

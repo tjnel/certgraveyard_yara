@@ -1,4 +1,4 @@
-"""Command-line interface for CertCentral YARA Generator."""
+"""Command-line interface for CertGraveyard YARA Generator."""
 
 import logging
 from pathlib import Path
@@ -43,7 +43,7 @@ from .validator import (
 # Create Typer app
 app = typer.Typer(
     name="cert-central-yara",
-    help="Automated YARA rule generation from CertCentral compromised certificate database.",
+    help="Automated YARA rule generation from CertGraveyard compromised certificate database.",
     add_completion=False,
 )
 
@@ -78,7 +78,7 @@ def main(
         typer.Option("--verbose", "-V", help="Enable verbose logging"),
     ] = False,
 ) -> None:
-    """CertCentral YARA Rules Generator CLI."""
+    """CertGraveyard YARA Rules Generator CLI."""
     setup_logging(verbose)
 
 
@@ -93,10 +93,10 @@ def download(
         typer.Option("--output", "-o", help="Output file path"),
     ] = None,
 ) -> None:
-    """Download the CertCentral CSV file."""
-    from .downloader import CERTCENTRAL_CSV_URL
+    """Download the CertGraveyard CSV file."""
+    from .downloader import CERTGRAVEYARD_CSV_URL
 
-    url = url or CERTCENTRAL_CSV_URL
+    url = url or CERTGRAVEYARD_CSV_URL
     output = output or (DEFAULT_DATA_DIR / DEFAULT_CSV_FILENAME)
 
     console.print(f"[blue]Downloading CSV from {url}...[/blue]")
@@ -330,7 +330,7 @@ def package(
     console.print(f"[blue]Creating ZIP archive from {input_dir}...[/blue]")
 
     try:
-        output_filename = output_file or "cert_central_yara_rules.zip"
+        output_filename = output_file or "cert_graveyard_yara_rules.zip"
         zip_path = create_zip_archive(input_dir, output_filename=output_filename)
         console.print(f"[green]✓ Created ZIP archive: {zip_path}[/green]")
     except Exception as e:

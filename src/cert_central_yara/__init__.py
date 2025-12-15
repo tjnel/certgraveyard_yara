@@ -1,6 +1,6 @@
-"""CertCentral YARA Rules Generator.
+"""CertGraveyard YARA Rules Generator.
 
-Automated YARA rule generation from CertCentral compromised certificate database.
+Automated YARA rule generation from CertGraveyard compromised certificate database.
 """
 
 __version__ = "1.0.0"

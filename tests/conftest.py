@@ -75,7 +75,7 @@ def temp_dir() -> Generator[Path, None, None]:
 
 @pytest.fixture
 def sample_csv_content() -> str:
-    """Sample CSV content matching CertCentral format."""
+    """Sample CSV content matching CertGraveyard format."""
     header = (
         "Hash,Malware,Malware Type,Malware Notes,Signer,Issuer Short,Issuer,"
         "Serial,Thumbprint,Valid From,Valid To,Country,State,Locality,Email,RDN Serial Number"

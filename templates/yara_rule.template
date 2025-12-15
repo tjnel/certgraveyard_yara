@@ -3,8 +3,8 @@ import "pe"
 rule MAL_Compromised_Cert_{{ malware_name_safe }}_{{ issuer_short_safe }}_{{ serial_safe }} {
    meta:
       description         = "Detects {{ malware_name }} with compromised cert ({{ issuer_short }})"
-      author              = "CertCentral-YARA-Generator"
-      reference           = "https://certcentral.org"
+      author              = "CertGraveyard-YARA-Generator"
+      reference           = "https://certgraveyard.org"
       date                = "{{ valid_from }}"
       version             = "1.0"
 

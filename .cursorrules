@@ -1,7 +1,7 @@
-# Cursor IDE Rules for cert-central-yara
+# Cursor IDE Rules for cert-graveyard-yara
 
 ## Project Context
-This is a Python project that generates YARA rules from CertCentral's compromised certificate database.
+This is a Python project that generates YARA rules from CertGraveyard's compromised certificate database.
 It uses UV for package management, pytest for testing, and validates rules with yara-python.
 
 ## Code Style
