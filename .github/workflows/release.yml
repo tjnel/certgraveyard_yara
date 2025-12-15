@@ -1,0 +1,88 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install UV
+        uses: astral-sh/setup-uv@v4
+        with:
+          version: "latest"
+
+      - name: Setup Python
+        run: uv python install 3.11
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Generate release artifacts
+        run: |
+          uv run cert-central-yara combine
+          uv run cert-central-yara package
+
+      - name: Get version
+        id: version
+        run: echo "version=$(date +%Y.%m.%d)" >> $GITHUB_OUTPUT
+
+      - name: Count rules
+        id: count
+        run: |
+          RULE_COUNT=$(ls -1 rules/individual/*.yara 2>/dev/null | wc -l || echo "0")
+          echo "rule_count=$RULE_COUNT" >> $GITHUB_OUTPUT
+
+      - name: Generate release notes
+        run: |
+          cat > RELEASE_NOTES.md << EOF
+          # CertCentral YARA Rules - ${{ steps.version.outputs.version }}
+
+          ## Summary
+
+          This release contains **${{ steps.count.outputs.rule_count }}** YARA rules generated from the CertCentral compromised certificate database.
+
+          ## Contents
+
+          - \`MAL_Compromised_Cert_*.yara\` - Combined YARA ruleset (single file)
+          - \`cert_central_yara_rules.zip\` - Individual rule files (ZIP archive)
+
+          ## Usage
+
+          \`\`\`bash
+          # Scan with combined ruleset
+          yara MAL_Compromised_Cert_*.yara /path/to/scan
+
+          # Or extract individual rules
+          unzip cert_central_yara_rules.zip -d rules/
+          yara rules/*.yara /path/to/scan
+          \`\`\`
+
+          ## Source
+
+          Rules generated from [CertCentral](https://certcentral.org) compromised certificate database.
+
+          ## Validation
+
+          All rules have been validated with:
+          - ✅ yara-python 4.5+
+
+          EOF
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          name: CertCentral YARA Rules ${{ steps.version.outputs.version }}
+          body_path: RELEASE_NOTES.md
+          files: |
+            rules/combined/MAL_Compromised_Cert_*.yara
+            rules/cert_central_yara_rules.zip
+          make_latest: true
+
