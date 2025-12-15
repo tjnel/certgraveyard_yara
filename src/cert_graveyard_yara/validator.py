@@ -270,4 +270,3 @@ def format_validation_errors(
         lines.append(f"  ... and {truncated} more errors")
 
     return "\n".join(lines)
-

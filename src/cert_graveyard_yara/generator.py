@@ -19,7 +19,7 @@ DEFAULT_COMBINED_DIR = DEFAULT_RULES_DIR / "combined"
 DEFAULT_TEMPLATES_DIR = Path("templates")
 
 # YARA rule template as a string (fallback if file not found)
-DEFAULT_YARA_TEMPLATE = '''import "pe"
+DEFAULT_YARA_TEMPLATE = """import "pe"
 
 rule MAL_Compromised_Cert_{{ malware_name_safe }}_{{ issuer_short_safe }}_{{ serial_safe }} {
    meta:
@@ -55,7 +55,7 @@ rule MAL_Compromised_Cert_{{ malware_name_safe }}_{{ issuer_short_safe }}_{{ ser
          sig.serial == "{{ serial }}"
       )
 }
-'''
+"""
 
 
 def sanitize_name(value: str, default: str = "Unknown", index: int = 0) -> str:
@@ -301,9 +301,7 @@ def generate_all_rules(
         results.append(result)
 
     success_count = sum(1 for r in results if r.success)
-    logger.info(
-        f"Generated {success_count}/{len(results)} YARA rules in {output_dir}"
-    )
+    logger.info(f"Generated {success_count}/{len(results)} YARA rules in {output_dir}")
 
     return results
 
@@ -394,4 +392,3 @@ def create_zip_archive(
 
     logger.info(f"Created ZIP archive with {len(rule_files)} rules: {zip_path}")
     return zip_path
-

@@ -133,7 +133,7 @@ def sample_csv_invalid_rows() -> str:
 @pytest.fixture
 def valid_yara_rule() -> str:
     """A valid YARA rule for testing validation."""
-    return '''import "pe"
+    return """import "pe"
 
 rule Test_Valid_Rule {
    meta:
@@ -143,13 +143,13 @@ rule Test_Valid_Rule {
    condition:
       uint16(0) == 0x5a4d
 }
-'''
+"""
 
 
 @pytest.fixture
 def invalid_yara_rule() -> str:
     """An invalid YARA rule for testing validation."""
-    return '''import "pe"
+    return """import "pe"
 
 rule Invalid_Rule {
    meta:
@@ -159,7 +159,7 @@ rule Invalid_Rule {
    condition:
       uint16(0) == 0x5a4d
 // Missing closing brace
-'''
+"""
 
 
 @pytest.fixture
@@ -176,4 +176,3 @@ def invalid_yara_file(temp_dir: Path, invalid_yara_rule: str) -> Path:
     rule_path = temp_dir / "invalid_rule.yara"
     rule_path.write_text(invalid_yara_rule)
     return rule_path
-

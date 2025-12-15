@@ -44,13 +44,13 @@ class TestValidateWithYara:
             patch.dict("sys.modules", {"yara": None}),
             patch("cert_graveyard_yara.validator.validate_with_yara") as mock_validate,
         ):
-                mock_validate.return_value = ValidationResult(
-                    file_path=str(rule_file),
-                    is_valid=False,
-                    engine="yara",
-                    error_message="yara-python is not installed",
-                )
-                result = mock_validate(rule_file)
+            mock_validate.return_value = ValidationResult(
+                file_path=str(rule_file),
+                is_valid=False,
+                engine="yara",
+                error_message="yara-python is not installed",
+            )
+            result = mock_validate(rule_file)
 
         assert result.is_valid is False
         assert "not installed" in result.error_message or result.error_message is not None
@@ -77,9 +77,7 @@ class TestValidateWithYaraX:
         rule_file.write_text("invalid rule")
 
         with patch("subprocess.run") as mock_run:
-            mock_run.return_value = MagicMock(
-                returncode=1, stderr="syntax error", stdout=""
-            )
+            mock_run.return_value = MagicMock(returncode=1, stderr="syntax error", stdout="")
             result = validate_with_yara_x(rule_file)
 
         assert result.is_valid is False
@@ -152,9 +150,7 @@ class TestValidateAllRules:
         # Create multiple rule files
         for i in range(3):
             rule_file = temp_dir / f"rule_{i}.yara"
-            rule_file.write_text(
-                f'import "pe"\nrule Test{i} {{ condition: true }}'
-            )
+            rule_file.write_text(f'import "pe"\nrule Test{i} {{ condition: true }}')
 
         results = validate_all_rules(temp_dir, ValidationEngine.YARA)
 
@@ -246,4 +242,3 @@ class TestFormatValidationErrors:
 
         assert "10 validation error" in output
         assert "7 more errors" in output
-

@@ -200,4 +200,3 @@ class TestDownloadCsv:
                     output_path=output_path,
                     max_retries=1,
                 )
-

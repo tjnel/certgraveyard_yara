@@ -4,4 +4,3 @@ Automated YARA rule generation from CertGraveyard compromised certificate databa
 """
 
 __version__ = "1.0.0"
-

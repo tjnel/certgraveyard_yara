@@ -44,9 +44,7 @@ class TestParseCsv:
         assert records[0].malware_name == "Unknown"
         assert records[0].cert_issuer_short == "Unknown"
 
-    def test_parse_csv_malformed_rows(
-        self, temp_dir: Path, sample_csv_invalid_rows: str
-    ) -> None:
+    def test_parse_csv_malformed_rows(self, temp_dir: Path, sample_csv_invalid_rows: str) -> None:
         """Test parsing CSV with some invalid rows."""
         csv_path = temp_dir / "invalid.csv"
         csv_path.write_text(sample_csv_invalid_rows)
@@ -192,9 +190,7 @@ class TestCompareRecords:
             ),  # will be modified
         ]
         new_records = [
-            CertificateRecord(
-                hash="hash2", cert_serial="serial2", malware_name="New"
-            ),  # modified
+            CertificateRecord(hash="hash2", cert_serial="serial2", malware_name="New"),  # modified
             CertificateRecord(hash="hash3", cert_serial="serial3"),  # added
         ]
 
@@ -206,4 +202,3 @@ class TestCompareRecords:
         assert modified[0].hash == "hash2"
         assert len(removed) == 1
         assert removed[0].hash == "hash1"
-

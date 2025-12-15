@@ -180,8 +180,7 @@ def compare_records(
             modified.append(new_record)
 
     logger.info(
-        f"Record comparison: {len(added)} added, "
-        f"{len(modified)} modified, {len(removed)} removed"
+        f"Record comparison: {len(added)} added, {len(modified)} modified, {len(removed)} removed"
     )
 
     return added, modified, removed
@@ -216,4 +215,3 @@ def _record_changed(old: CertificateRecord, new: CertificateRecord) -> bool:
     ]
 
     return any(getattr(old, field) != getattr(new, field) for field in fields_to_compare)
-

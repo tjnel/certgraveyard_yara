@@ -209,4 +209,3 @@ def get_stored_hash(hash_file: Path | None = None) -> str | None:
     except Exception as e:
         logger.warning(f"Error reading hash file: {e}")
         return None
-

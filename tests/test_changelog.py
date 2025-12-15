@@ -212,10 +212,7 @@ class TestGenerateReleaseNotes:
 
     def test_generate_release_notes_many_rules(self, temp_dir: Path) -> None:
         """Test that release notes truncate long lists."""
-        records = [
-            CertificateRecord(hash=f"hash{i}", cert_serial=f"serial{i}")
-            for i in range(30)
-        ]
+        records = [CertificateRecord(hash=f"hash{i}", cert_serial=f"serial{i}") for i in range(30)]
         output_path = temp_dir / "RELEASE_NOTES.md"
 
         generate_release_notes(
@@ -249,14 +246,10 @@ class TestDetectChanges:
         """Test detecting mixed changes."""
         old_records = [
             CertificateRecord(hash="hash1", cert_serial="serial1"),
-            CertificateRecord(
-                hash="hash2", cert_serial="serial2", malware_name="OldName"
-            ),
+            CertificateRecord(hash="hash2", cert_serial="serial2", malware_name="OldName"),
         ]
         new_records = [
-            CertificateRecord(
-                hash="hash2", cert_serial="serial2", malware_name="NewName"
-            ),
+            CertificateRecord(hash="hash2", cert_serial="serial2", malware_name="NewName"),
             CertificateRecord(hash="hash3", cert_serial="serial3"),
         ]
 
@@ -269,4 +262,3 @@ class TestDetectChanges:
         assert len(added) == 1
         assert len(modified) == 1
         assert len(removed) == 1
-

@@ -139,7 +139,7 @@ class TestGenerateRuleContent:
             hash="test_hash",
             cert_serial="abc123",
             malware_name='Test "Malware"',
-            cert_issuer='CN=Test\\Issuer',
+            cert_issuer="CN=Test\\Issuer",
         )
         content = generate_rule_content(record)
 
@@ -275,4 +275,3 @@ class TestCreateZipArchive:
             names = zf.namelist()
             assert len(names) == 3
             assert all(name.endswith(".yara") for name in names)
-

@@ -229,10 +229,12 @@ def generate_release_notes(
     ]
 
     if added:
-        lines.extend([
-            "## New Rules",
-            "",
-        ])
+        lines.extend(
+            [
+                "## New Rules",
+                "",
+            ]
+        )
         for record in added[:20]:  # Limit to 20 entries
             rule_name = generate_rule_name(record)
             lines.append(f"- {rule_name}")
@@ -241,10 +243,12 @@ def generate_release_notes(
         lines.append("")
 
     if modified:
-        lines.extend([
-            "## Updated Rules",
-            "",
-        ])
+        lines.extend(
+            [
+                "## Updated Rules",
+                "",
+            ]
+        )
         for record in modified[:10]:
             rule_name = generate_rule_name(record)
             lines.append(f"- {rule_name}")
@@ -298,4 +302,3 @@ def detect_changes(
     )
 
     return entries
-

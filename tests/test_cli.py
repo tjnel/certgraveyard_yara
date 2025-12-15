@@ -58,8 +58,10 @@ class TestCLI:
             app,
             [
                 "generate",
-                "--csv", str(csv_path),
-                "--output", str(output_dir),
+                "--csv",
+                str(csv_path),
+                "--output",
+                str(output_dir),
                 "--no-save-hash",
             ],
         )
@@ -117,4 +119,3 @@ class TestCLI:
         )
         assert result.exit_code == 1
         assert "not found" in result.stdout.lower()
-

@@ -13,9 +13,7 @@ from cert_graveyard_yara.validator import ValidationEngine, validate_all_rules
 class TestFullPipeline:
     """Integration tests for the complete pipeline."""
 
-    def test_full_pipeline_new_csv(
-        self, temp_dir: Path, sample_csv_content: str
-    ) -> None:
+    def test_full_pipeline_new_csv(self, temp_dir: Path, sample_csv_content: str) -> None:
         """Test full pipeline with a new CSV file."""
         # Setup directories
         data_dir = temp_dir / "data"
@@ -59,9 +57,7 @@ class TestFullPipeline:
         zip_path = create_zip_archive(individual_dir, rules_dir)
         assert zip_path.exists()
 
-    def test_full_pipeline_unchanged_csv(
-        self, temp_dir: Path, sample_csv_content: str
-    ) -> None:
+    def test_full_pipeline_unchanged_csv(self, temp_dir: Path, sample_csv_content: str) -> None:
         """Test pipeline behavior when CSV hasn't changed."""
         data_dir = temp_dir / "data"
         data_dir.mkdir(parents=True)
@@ -77,9 +73,7 @@ class TestFullPipeline:
         # Check for changes - should return False
         assert has_csv_changed(csv_hash, hash_file) is False
 
-    def test_full_pipeline_modified_csv(
-        self, temp_dir: Path, sample_csv_content: str
-    ) -> None:
+    def test_full_pipeline_modified_csv(self, temp_dir: Path, sample_csv_content: str) -> None:
         """Test pipeline when CSV has been modified."""
         data_dir = temp_dir / "data"
         data_dir.mkdir(parents=True)
@@ -240,4 +234,3 @@ class TestEdgeCases:
         # Verify the rule is valid
         validation = validate_all_rules(rules_dir, ValidationEngine.YARA)
         assert all(v.is_valid for v in validation)
-

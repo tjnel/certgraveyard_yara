@@ -141,4 +141,3 @@ class GenerationResult:
     certificate_serial: str
     success: bool
     error_message: str | None = None
-
