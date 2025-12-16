@@ -79,13 +79,23 @@ jobs:
         if: always()
         run: rm -f data/cert_graveyard_database_previous.csv
 
+      - name: Log no changes to changelog
+        if: steps.check.outputs.changed == 'false'
+        run: |
+          DATE=$(date +%Y-%m-%d)
+          # Insert "no changes" entry after the [Unreleased] section
+          sed -i "/## \[Unreleased\]/a\\\\n### Checked $DATE\\n- No new certificates detected" CHANGELOG.md
+
       - name: Commit changes
-        if: steps.check.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "chore: update YARA rules from CertGraveyard $(date +%Y-%m-%d)" || exit 0
+          if [ "${{ steps.check.outputs.changed }}" == "true" ]; then
+            git commit -m "chore: update YARA rules from CertGraveyard $(date +%Y-%m-%d)" || exit 0
+          else
+            git commit -m "chore: no changes from CertGraveyard $(date +%Y-%m-%d)" || exit 0
+          fi
           git push
 
     outputs:
