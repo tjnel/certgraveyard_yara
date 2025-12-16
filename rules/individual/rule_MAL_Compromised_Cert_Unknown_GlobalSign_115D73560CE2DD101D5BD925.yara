@@ -8,7 +8,7 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_115D73560CE2DD101D5BD925 {
       date                = "2025-02-25"
       version             = "1.0"
 
-      hash                = "3d82200083a86df09c3b16c9095b844738a76863b1b01092b6c4dbef3b974b12"
+      hash                = "d2f5a074c5ea4c29523cca520f52f9dae3e3ab0c900be97367613f703e4daec8"
       malware             = "Unknown"
       malware_type        = "Unknown"
       malware_notes       = ""
@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_115D73560CE2DD101D5BD925 {
       state               = "Central District"
       locality            = "Ra'anana"
       email               = "contactus@taucentauriltd.com"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "516234788"
 
    condition:
       uint16(0) == 0x5a4d and
