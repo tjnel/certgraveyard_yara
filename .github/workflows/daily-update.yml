@@ -35,6 +35,15 @@ jobs:
       - name: Install dependencies
         run: uv sync --all-extras
 
+      - name: Backup previous CSV for comparison
+        run: |
+          if [ -f data/cert_graveyard_database.csv ]; then
+            cp data/cert_graveyard_database.csv data/cert_graveyard_database_previous.csv
+            echo "Previous CSV backed up"
+          else
+            echo "No previous CSV found"
+          fi
+
       - name: Download and check CSV
         id: check
         run: |
@@ -55,7 +64,20 @@ jobs:
 
       - name: Update changelog
         if: steps.check.outputs.changed == 'true'
-        run: uv run cert-graveyard-yara changelog
+        run: |
+          if [ -f data/cert_graveyard_database_previous.csv ]; then
+            uv run cert-graveyard-yara changelog --previous data/cert_graveyard_database_previous.csv
+          else
+            echo "No previous CSV - skipping changelog (first run)"
+          fi
+
+      - name: Combine rules
+        if: steps.check.outputs.changed == 'true'
+        run: uv run cert-graveyard-yara combine
+
+      - name: Cleanup temporary files
+        if: always()
+        run: rm -f data/cert_graveyard_database_previous.csv
 
       - name: Commit changes
         if: steps.check.outputs.changed == 'true'

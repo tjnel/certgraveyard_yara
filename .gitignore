@@ -56,9 +56,9 @@ dmypy.json
 # Ruff
 .ruff_cache/
 
-# Data files (keep structure but not contents)
-data/*.csv
-data/.csv_hash
+# Data files - tracked to enable change detection
+# data/*.csv
+# data/.csv_hash
 
 # Generated rules - tracked in repo for releases
 # rules/individual/*.yara
