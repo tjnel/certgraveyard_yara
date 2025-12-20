@@ -4935,6 +4935,41 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_11FC7C80473F272CED037319E717F948 
       )
 }
 
+rule MAL_Compromised_Cert_CastleRAT_GlobalSign_2DE9CB84E3F811E6FEB0A6DD {
+   meta:
+      description         = "Detects CastleRAT with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-02-27"
+      version             = "1.0"
+
+      hash                = "6d93dfa327498ec9d6c754056665e36bc809e8f729112cbe4cf68583f5bf3ebe"
+      malware             = "CastleRAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "LOUNGE LLC"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "2d:e9:cb:84:e3:f8:11:e6:fe:b0:a6:dd"
+      cert_thumbprint     = "4A5FE69AFF51A41A116FEAC0D8EE73E8D4CFA7E4"
+      cert_valid_from     = "2025-02-27"
+      cert_valid_to       = "2026-02-28"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "2d:e9:cb:84:e3:f8:11:e6:fe:b0:a6:dd"
+      )
+}
+
 rule MAL_Compromised_Cert_Castleloader_GlobalSign_601EAD2413898A3EDBFE37D6 {
    meta:
       description         = "Detects Castleloader with compromised cert (GlobalSign)"
@@ -28627,6 +28662,41 @@ rule MAL_Compromised_Cert_OysterLoader_Microsoft_3300059D7CA689D296AEAC9E1D00000
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
          sig.serial == "33:00:05:9d:7c:a6:89:d2:96:ae:ac:9e:1d:00:00:00:05:9d:7c"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_Microsoft_330005D3856D2808FE80FE162300000005D385 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-18"
+      version             = "1.0"
+
+      hash                = "80a699d47def71f6ac0fa622a5f0b068d3ffcdb031749a4adc690fe2779ebc77"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "This version of OysterLoader was disguised as an AI application. It installs a scheduled task which loads the Supper backdoor."
+
+      signer              = "ACCENT DESIGN INC."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:05:d3:85:6d:28:08:fe:80:fe:16:23:00:00:00:05:d3:85"
+      cert_thumbprint     = "D24CA9DB911E6F387845D1684B7300CDB757D19F"
+      cert_valid_from     = "2025-12-18"
+      cert_valid_to       = "2025-12-21"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:05:d3:85:6d:28:08:fe:80:fe:16:23:00:00:00:05:d3:85"
       )
 }
 

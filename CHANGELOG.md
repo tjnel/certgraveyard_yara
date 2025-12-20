@@ -4,6 +4,12 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2025.12.20] - 2025-12-20
+
+### Added
+- MAL_Compromised_Cert_OysterLoader_Microsoft_330005D3856D2808FE80FE162300000005D385 (OysterLoader - Microsoft)
+- MAL_Compromised_Cert_CastleRAT_GlobalSign_2DE9CB84E3F811E6FEB0A6DD (CastleRAT - GlobalSign)
+
 ## [2025.12.19] - 2025-12-19
 
 ### Added
