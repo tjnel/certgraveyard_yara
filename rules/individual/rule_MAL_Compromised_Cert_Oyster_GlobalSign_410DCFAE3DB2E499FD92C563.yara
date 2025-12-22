@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Oyster_GlobalSign_410DCFAE3DB2E499FD92C563 {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "proftorg.info@rambler.ru"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1257700210525"
 
    condition:
       uint16(0) == 0x5a4d and

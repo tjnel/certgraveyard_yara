@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_0CB676A4F14B02E1FCEE433B {
       state               = "Rajasthan"
       locality            = "Jaipur"
       email               = "vishupsc106@gmail.com"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "AAA-0171"
 
    condition:
       uint16(0) == 0x5a4d and

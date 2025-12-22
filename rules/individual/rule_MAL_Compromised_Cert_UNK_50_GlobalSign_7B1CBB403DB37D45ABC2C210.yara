@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_UNK_50_GlobalSign_7B1CBB403DB37D45ABC2C210 {
       state               = "Bihar"
       locality            = "Samastipur"
       email               = "ujjawalnidhi.abhi@gmail.com"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "U67190BR2019PLN044649"
 
    condition:
       uint16(0) == 0x5a4d and

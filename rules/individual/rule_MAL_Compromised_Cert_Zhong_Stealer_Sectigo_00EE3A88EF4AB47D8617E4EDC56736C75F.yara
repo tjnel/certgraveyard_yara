@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00EE3A88EF4AB47D8617E4EDC56736C7
       state               = "河北省"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91130503MA0G685G99"
 
    condition:
       uint16(0) == 0x5a4d and

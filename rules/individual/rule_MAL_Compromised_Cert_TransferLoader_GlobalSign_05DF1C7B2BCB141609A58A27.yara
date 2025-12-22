@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_TransferLoader_GlobalSign_05DF1C7B2BCB141609A58A27 {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1217700297000"
 
    condition:
       uint16(0) == 0x5a4d and

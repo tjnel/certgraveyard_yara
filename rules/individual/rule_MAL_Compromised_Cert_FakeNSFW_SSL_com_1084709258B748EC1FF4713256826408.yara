@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_FakeNSFW_SSL_com_1084709258B748EC1FF4713256826408 {
       state               = "Masovian Voivodeship"
       locality            = "Warszawa"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0000955272"
 
    condition:
       uint16(0) == 0x5a4d and

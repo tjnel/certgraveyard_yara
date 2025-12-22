@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Volaris_Microsoft_33000498BFEC9593C7FC832F770000000498
       state               = "Québec"
       locality            = "STE ANNE DE BELLEVUE"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

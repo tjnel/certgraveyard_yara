@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Softwarecloud_SSL_com_700B215E33D4D6E0613324E8DCEFE4FF
       state               = "???"
       locality            = "Hull"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "11849211"
 
    condition:
       uint16(0) == 0x5a4d and

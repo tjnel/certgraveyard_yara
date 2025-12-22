@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Softwarecloud_SSL_com_677AEFDF767972B5C6F083ADD9B258E9
       state               = "Capital Region of Denmark"
       locality            = "Copenhagen"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "43220519"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_UNK_50_SSL_com_11B1D2BBDD832C2E560EEAA79A0D75C0 {
       state               = "???"
       locality            = "London"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "16290725"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_FriendsCompany_SSL_com_7A2A5D0296453B1D8FFF99EB0E59D34
       state               = "???"
       locality            = "Shanghai"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91310115MA1H8Y2K79"
 
    condition:
       uint16(0) == 0x5a4d and

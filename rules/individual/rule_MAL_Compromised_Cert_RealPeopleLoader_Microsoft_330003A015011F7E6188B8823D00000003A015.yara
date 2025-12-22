@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_RealPeopleLoader_Microsoft_330003A015011F7E6188B8823D0
       state               = "Utah"
       locality            = "Salt Lake City"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

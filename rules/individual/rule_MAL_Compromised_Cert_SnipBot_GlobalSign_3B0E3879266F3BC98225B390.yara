@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_SnipBot_GlobalSign_3B0E3879266F3BC98225B390 {
       state               = "Zhejiang"
       locality            = "Hangzhou"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91330103074335428G"
 
    condition:
       uint16(0) == 0x5a4d and

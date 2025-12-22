@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_MonsterV2_Aurotun_Microsoft_3300037399890C4DCE9776933C
       state               = "Arizona"
       locality            = "Mesa"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

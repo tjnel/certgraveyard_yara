@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Rhadamanthys_GlobalSign_3B7EAC8B20F3EDCB557300BE {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1177746889099"
 
    condition:
       uint16(0) == 0x5a4d and

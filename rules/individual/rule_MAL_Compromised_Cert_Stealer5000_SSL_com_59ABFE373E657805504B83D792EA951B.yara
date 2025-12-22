@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Stealer5000_SSL_com_59ABFE373E657805504B83D792EA951B {
       state               = "Uusimaa"
       locality            = "Vantaa"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "2552195-3"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_XRed_DigiCert_0D9D72F1DDA9ED4E39F88FCA66081E67 {
       state               = "江苏省"
       locality            = "无锡市"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91320214069484293T"
 
    condition:
       uint16(0) == 0x5a4d and

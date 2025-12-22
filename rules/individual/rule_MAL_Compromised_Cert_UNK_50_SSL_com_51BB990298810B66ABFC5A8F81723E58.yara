@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_UNK_50_SSL_com_51BB990298810B66ABFC5A8F81723E58 {
       state               = "śląskie"
       locality            = "Żory"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0000131037"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_FakeNSFW_SSL_com_65FFFEAE74DC9167F03FEDA42B624764 {
       state               = "Uusimaa"
       locality            = "Helsinki"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "3233848-7"
 
    condition:
       uint16(0) == 0x5a4d and

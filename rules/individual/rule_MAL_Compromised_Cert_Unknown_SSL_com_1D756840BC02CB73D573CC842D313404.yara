@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_1D756840BC02CB73D573CC842D313404 {
       state               = "???"
       locality            = "Edinburgh"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "SC695236"
 
    condition:
       uint16(0) == 0x5a4d and

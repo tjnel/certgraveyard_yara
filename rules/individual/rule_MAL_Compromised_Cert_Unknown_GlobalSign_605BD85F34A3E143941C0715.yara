@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_605BD85F34A3E143941C0715 {
       state               = "Shanxi"
       locality            = "Yangquan"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91140321MAD49GH05Y"
 
    condition:
       uint16(0) == 0x5a4d and

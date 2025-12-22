@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_698356C5673C3623754A7B32 {
       state               = "Hubei"
       locality            = "Wuhan"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91420104MABWDD9J5W"
 
    condition:
       uint16(0) == 0x5a4d and

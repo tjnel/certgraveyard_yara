@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_XRed_GlobalSign_7E67FCC70CFA4989670E6D23 {
       state               = "Guangdong"
       locality            = "Shenzhen"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "914403003350884898"
 
    condition:
       uint16(0) == 0x5a4d and

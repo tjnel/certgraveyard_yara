@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_16D84CA3D6CC85273B76FABE {
       state               = "Oryol  Oblast"
       locality            = "Oryol"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1135748000838"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_1374AACB98D398309DC23E87 {
       state               = "Arizona"
       locality            = "Scottsdale"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "L16273115"
 
    condition:
       uint16(0) == 0x5a4d and

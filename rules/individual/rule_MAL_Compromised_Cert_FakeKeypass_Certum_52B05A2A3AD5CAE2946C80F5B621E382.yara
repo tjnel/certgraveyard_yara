@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_FakeKeypass_Certum_52B05A2A3AD5CAE2946C80F5B621E382 {
       state               = "Guangdong"
       locality            = "Shenzhen"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91440300MA5EXRTQX0"
 
    condition:
       uint16(0) == 0x5a4d and

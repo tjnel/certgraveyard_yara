@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_FakeIncident_SSL_com_7834A48F9495BA062E921F5368BDE613 
       state               = "Uusimaa"
       locality            = "Espoo"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0612367-7"
 
    condition:
       uint16(0) == 0x5a4d and

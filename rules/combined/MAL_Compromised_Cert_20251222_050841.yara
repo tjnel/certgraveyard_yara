@@ -95,7 +95,7 @@ rule MAL_Compromised_Cert_AgentTesla_SSL_com_7ECB39B8913C25A3E6546E3689AA9DE6 {
       state               = "Uusimaa"
       locality            = "Kauniainen"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "3272070-7"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -1215,7 +1215,7 @@ rule MAL_Compromised_Cert_AureliaLoader_GlobalSign_502C9ACFE6C45CCDA77F9088 {
       state               = "Ontario"
       locality            = "Brampton"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "11725793"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -1495,7 +1495,7 @@ rule MAL_Compromised_Cert_AzoRult_Comodo_4BBF667B63E1962A30AED63B346D789B {
       state               = "Saint-Petersburg"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -4470,7 +4470,7 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_0CB676A4F14B02E1FCEE433B {
       state               = "Rajasthan"
       locality            = "Jaipur"
       email               = "vishupsc106@gmail.com"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "AAA-0171"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -8740,7 +8740,7 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_SSL_com_65DC74FC2995EC9FE2D2E7
       state               = "Województwo śląskie"
       locality            = "Katowice"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0000957395"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -8810,7 +8810,7 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_SSL_com_6D8954760DB07FE5C98453
       state               = "Auckland Region"
       locality            = "Auckland"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "6064767"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -11365,7 +11365,7 @@ rule MAL_Compromised_Cert_FakeAcrobe_GlobalSign_0B6145FD229B0FA8229B8BB3 {
       state               = "Vologda Oblast"
       locality            = "Vologda"
       email               = "oleg-babin@internet.ru"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1253500006803"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -13080,7 +13080,7 @@ rule MAL_Compromised_Cert_FakeChromeExtension_GlobalSign_627C9A310E788378C67B53F
       state               = "Astrakhan Oblast"
       locality            = "Astrakhan"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1063024002183"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -13115,7 +13115,7 @@ rule MAL_Compromised_Cert_FakeChromeUpdate_SSL_com_6C96E1E122F63716AE8C4AD0DC65A
       state               = "Pirkanmaa"
       locality            = "TAMPERE"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "3249395-4"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -13465,7 +13465,7 @@ rule MAL_Compromised_Cert_FakeDocument_Microsoft_330002FA98E55C122556D6766A00000
       state               = "Texas"
       locality            = "Irving"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -13500,7 +13500,7 @@ rule MAL_Compromised_Cert_FakeDocument_Microsoft_33000340DBFB2DC0F2DB04363C00000
       state               = "Texas"
       locality            = "Irving"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -13640,7 +13640,7 @@ rule MAL_Compromised_Cert_FakeDocument_SSL_com_700B215E33D4D6E0613324E8DCEFE4FF 
       state               = "???"
       locality            = "Hull"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "11849211"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -13920,7 +13920,7 @@ rule MAL_Compromised_Cert_FakeIncident_SSL_com_7834A48F9495BA062E921F5368BDE613 
       state               = "Uusimaa"
       locality            = "Espoo"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0612367-7"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -14200,7 +14200,7 @@ rule MAL_Compromised_Cert_FakeKeePass_DigiCert_05C1F7DD747B1AF79AC427A15A8B64AE 
       state               = "???"
       locality            = "Chişinău"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1010600003317"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -14235,7 +14235,7 @@ rule MAL_Compromised_Cert_FakeKeePass_GlobalSign_3ACEAA7BDFAB12376A840610 {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1037739569471"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -14410,7 +14410,7 @@ rule MAL_Compromised_Cert_FakeKeypass_Certum_52B05A2A3AD5CAE2946C80F5B621E382 {
       state               = "Guangdong"
       locality            = "Shenzhen"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91440300MA5EXRTQX0"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -14445,7 +14445,7 @@ rule MAL_Compromised_Cert_FakeKeypass_GlobalSign_26A6819AC81B7A25BCE7D354 {
       state               = "Guangdong"
       locality            = "Foshan"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91440605MACR7QA22Q"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -14515,7 +14515,7 @@ rule MAL_Compromised_Cert_FakeNSFW_SSL_com_1084709258B748EC1FF4713256826408 {
       state               = "Masovian Voivodeship"
       locality            = "Warszawa"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0000955272"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -14550,7 +14550,7 @@ rule MAL_Compromised_Cert_FakeNSFW_SSL_com_12916017A8B479FCBB9562F07097BE52 {
       state               = "Malopolskie"
       locality            = "Nowy Sacz"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0000843484"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -14585,7 +14585,7 @@ rule MAL_Compromised_Cert_FakeNSFW_SSL_com_5ECDA0686C2632163BC7F9F342366FF4 {
       state               = "Buenos Aires Province"
       locality            = "Buenos Aires"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "30-70892751-8"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -14620,7 +14620,7 @@ rule MAL_Compromised_Cert_FakeNSFW_SSL_com_65FFFEAE74DC9167F03FEDA42B624764 {
       state               = "Uusimaa"
       locality            = "Helsinki"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "3233848-7"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -15040,7 +15040,7 @@ rule MAL_Compromised_Cert_FakeStatement_SSL_com_45DF3961393196E00E5F001A73DF9964
       state               = "Etelä-Pohjanmaa"
       locality            = "SEINÄJOKI"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "2182234-5"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -15810,7 +15810,7 @@ rule MAL_Compromised_Cert_FriendsCompany_GlobalSign_4DBE694470C2449C1B460474 {
       state               = "Jiangsu"
       locality            = "Wuxi"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91320281MA20FFNG02"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -16300,7 +16300,7 @@ rule MAL_Compromised_Cert_FriendsCompany_SSL_com_7A2A5D0296453B1D8FFF99EB0E59D34
       state               = "???"
       locality            = "Shanghai"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91310115MA1H8Y2K79"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -16650,7 +16650,7 @@ rule MAL_Compromised_Cert_GoStealer_GlobalSign_280443BBAEBC15C57CA54492 {
       state               = "Rajasthan"
       locality            = "Jaipur"
       email               = "ceothinkellips@gmail.com"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "U92490RJ2021PTC077417"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -18085,7 +18085,7 @@ rule MAL_Compromised_Cert_Hijackloader_SSL_com_3B5B4773444AC9CBF876FEA36838CE6F 
       state               = "Uusimaa"
       locality            = "Kerava"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1504972-0"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -19065,7 +19065,7 @@ rule MAL_Compromised_Cert_KTCrypt_Loader_SSL_com_6524ECD66BD22BCD244151EA1C992E8
       state               = "Jiangsu"
       locality            = "Wuxi"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91320214MA22HHQ74J"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -19905,7 +19905,7 @@ rule MAL_Compromised_Cert_Latrodectus_GlobalSign_79E97FA4E98323F95F2625C7 {
       state               = "Delhi"
       locality            = "New Delhi"
       email               = "officeeverestremit@gmail.com"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "ACA-6037"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -20010,7 +20010,7 @@ rule MAL_Compromised_Cert_Latrodectus_Microsoft_330005DEB3C1E7F9D2006A0C09000000
       state               = "Québec"
       locality            = "MONTREAL"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -20395,7 +20395,7 @@ rule MAL_Compromised_Cert_Latrodectus_SSL_com_611E5DC57B210DC08205140F6D57063F {
       state               = "Bălți Municipality"
       locality            = "Bălţi"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1017602002645"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -20500,7 +20500,7 @@ rule MAL_Compromised_Cert_Latrodectus_stage2_GlobalSign_5FC7AB8E0CCD4838C82C1B61
       state               = "Rajasthan"
       locality            = "Jaipur"
       email               = "teamskyspace@gmail.com"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "AAV-6834"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -20955,7 +20955,7 @@ rule MAL_Compromised_Cert_LumiStealer_SSL_com_2D168D5FD32D40F5BC8A058DB98520EC {
       state               = "São Paulo"
       locality            = "São Paulo"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -21533,7 +21533,7 @@ rule MAL_Compromised_Cert_Lumma_Stealer_Certum_6EA1C1F413D70D7FCCA1C13D2BD6A8B5 
       date                = "2025-02-16"
       version             = "1.0"
 
-      hash                = "8259a493729abd201b33851f56817f812ffd8ac75bfd3abc100e04c022f5ce59"
+      hash                = "50d898c0f480f38d47991dd617e2255e1ed332a973360014e2a047c85381a752"
       malware             = "Lumma Stealer"
       malware_type        = "Infostealer"
       malware_notes       = "This malware was sold as a service and was the most popular infostealer in 2024."
@@ -21735,6 +21735,41 @@ rule MAL_Compromised_Cert_Lumma_Stealer_GlobalSign_0252BD23F462EFE212A000DF {
       )
 }
 
+rule MAL_Compromised_Cert_Lumma_Stealer_GlobalSign_0C785890CB7CF34C41D06B6C {
+   meta:
+      description         = "Detects Lumma Stealer with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-10-15"
+      version             = "1.0"
+
+      hash                = "9fcdb3db8b8a300150dad2d92e24601ec1f052bdbca08e611489f2fdb814305b"
+      malware             = "Lumma Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware was sold as a service and was the most popular infostealer in 2024."
+
+      signer              = "Maibond Network Technology Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "0c:78:58:90:cb:7c:f3:4c:41:d0:6b:6c"
+      cert_thumbprint     = "785eef75d9aa8b8be3d677fd8502447cf675f7becf4198c1570aedf0b70d622c"
+      cert_valid_from     = "2024-10-15"
+      cert_valid_to       = "2025-10-16"
+
+      country             = "CN"
+      state               = "Fujian"
+      locality            = "Fuzhou"
+      email               = "???"
+      rdn_serial_number   = "91350104MA2Y639F25"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "0c:78:58:90:cb:7c:f3:4c:41:d0:6b:6c"
+      )
+}
+
 rule MAL_Compromised_Cert_Lumma_Stealer_GlobalSign_14B3795118B8D9CCD6132BFE {
    meta:
       description         = "Detects Lumma Stealer with compromised cert (GlobalSign)"
@@ -21837,6 +21872,41 @@ rule MAL_Compromised_Cert_Lumma_Stealer_GlobalSign_1B1339DC9E5B26B1DD81255A {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "1b:13:39:dc:9e:5b:26:b1:dd:81:25:5a"
+      )
+}
+
+rule MAL_Compromised_Cert_Lumma_Stealer_GlobalSign_21C9D35D23114F71494A3FEA {
+   meta:
+      description         = "Detects Lumma Stealer with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-03-12"
+      version             = "1.0"
+
+      hash                = "c6e3855f6893092020a2dce35e30869d96a7922f2b805bbdf081eec97cbba62b"
+      malware             = "Lumma Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware was sold as a service and was the most popular infostealer in 2024."
+
+      signer              = "S.R.L. CONSTUDIO GRUP"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "21:c9:d3:5d:23:11:4f:71:49:4a:3f:ea"
+      cert_thumbprint     = "346EA81E7E518EC2BF5DE0AF8A63A0558A39CC1D"
+      cert_valid_from     = "2025-03-12"
+      cert_valid_to       = "2026-03-13"
+
+      country             = "MD"
+      state               = "Chișinău"
+      locality            = "Chișinău"
+      email               = "???"
+      rdn_serial_number   = "1010600029333"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "21:c9:d3:5d:23:11:4f:71:49:4a:3f:ea"
       )
 }
 
@@ -21945,6 +22015,41 @@ rule MAL_Compromised_Cert_Lumma_Stealer_GlobalSign_389FFFD8DB6CD11B662DA89B {
       )
 }
 
+rule MAL_Compromised_Cert_Lumma_Stealer_GlobalSign_3D786B0FC4B4DA7F82AD49FD {
+   meta:
+      description         = "Detects Lumma Stealer with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-05-06"
+      version             = "1.0"
+
+      hash                = "c6a9478bc78e96f2eb72543c98d00ec3c06ee00cffe98423f93e0a7016d468e2"
+      malware             = "Lumma Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware was sold as a service and was the most popular infostealer in 2024."
+
+      signer              = "THIRTY THREE (SHANGHAI)LIMITED"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "3d:78:6b:0f:c4:b4:da:7f:82:ad:49:fd"
+      cert_thumbprint     = ""
+      cert_valid_from     = "2025-05-06"
+      cert_valid_to       = "2026-05-07"
+
+      country             = "CN"
+      state               = "Shanghai"
+      locality            = "Shanghai"
+      email               = ""
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "3d:78:6b:0f:c4:b4:da:7f:82:ad:49:fd"
+      )
+}
+
 rule MAL_Compromised_Cert_Lumma_Stealer_GlobalSign_45156CCC49AFCA8C8C7B23DF {
    meta:
       description         = "Detects Lumma Stealer with compromised cert (GlobalSign)"
@@ -21977,6 +22082,41 @@ rule MAL_Compromised_Cert_Lumma_Stealer_GlobalSign_45156CCC49AFCA8C8C7B23DF {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "45:15:6c:cc:49:af:ca:8c:8c:7b:23:df"
+      )
+}
+
+rule MAL_Compromised_Cert_Lumma_Stealer_GlobalSign_49EF8191E6CFB0F25A125B62 {
+   meta:
+      description         = "Detects Lumma Stealer with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-02-03"
+      version             = "1.0"
+
+      hash                = "11eec5d71c7fadae9d7176448d8fff3de44ec8d3b4df86f0eca59e06adf202d3"
+      malware             = "Lumma Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware was sold as a service and was the most popular infostealer in 2024."
+
+      signer              = "ООО Мб-Сигма"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "49:ef:81:91:e6:cf:b0:f2:5a:12:5b:62"
+      cert_thumbprint     = "0702BA0245DF74C814F328A076E8D4D1504E17F0"
+      cert_valid_from     = "2025-02-03"
+      cert_valid_to       = "2026-02-04"
+
+      country             = "RU"
+      state               = "Санкт-Петербург"
+      locality            = "Санкт-Петербург"
+      email               = "mb.sigma@mail.ru"
+      rdn_serial_number   = "1207800050622"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "49:ef:81:91:e6:cf:b0:f2:5a:12:5b:62"
       )
 }
 
@@ -22327,6 +22467,76 @@ rule MAL_Compromised_Cert_Lumma_Stealer_GlobalSign_7EAF9EB4886EDA7C48DC8EA4 {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "7e:af:9e:b4:88:6e:da:7c:48:dc:8e:a4"
+      )
+}
+
+rule MAL_Compromised_Cert_Lumma_Stealer_GlobalSign_7FB638E71C5F4A5DB43DAC97 {
+   meta:
+      description         = "Detects Lumma Stealer with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-03-28"
+      version             = "1.0"
+
+      hash                = "1d881f83f82d4393e96d206145f35ccaf695380dc05d99a8eae9b2a001e04b13"
+      malware             = "Lumma Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware was sold as a service and was the most popular infostealer in 2024."
+
+      signer              = "SLS Immobilien und Beteiligungs GmbH"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "7f:b6:38:e7:1c:5f:4a:5d:b4:3d:ac:97"
+      cert_thumbprint     = "05AE3873EC1B92235BB7A99A04CD2D06E2C8B815"
+      cert_valid_from     = "2025-03-28"
+      cert_valid_to       = "2026-03-29"
+
+      country             = "AT"
+      state               = "Niederoesterreich"
+      locality            = "Ebreichsdorf"
+      email               = "???"
+      rdn_serial_number   = "632119m"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "7f:b6:38:e7:1c:5f:4a:5d:b4:3d:ac:97"
+      )
+}
+
+rule MAL_Compromised_Cert_Lumma_Stealer_Microsoft_330002F4DBCF4797B76D49B43800000002F4DB {
+   meta:
+      description         = "Detects Lumma Stealer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-03-11"
+      version             = "1.0"
+
+      hash                = "708c39e1249e5d40a9a33017d3d3f7cf8f3e6054adb2c2415cd1e4b686e9373e"
+      malware             = "Lumma Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware was sold as a service and was the most popular infostealer in 2024."
+
+      signer              = "超 王"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:02:f4:db:cf:47:97:b7:6d:49:b4:38:00:00:00:02:f4:db"
+      cert_thumbprint     = "4D04E81739EA845B47BAFD05EBB6F1A16A293D6C"
+      cert_valid_from     = "2025-03-11"
+      cert_valid_to       = "2025-03-14"
+
+      country             = "CN"
+      state               = "Shanxi"
+      locality            = "万荣"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:02:f4:db:cf:47:97:b7:6d:49:b4:38:00:00:00:02:f4:db"
       )
 }
 
@@ -22782,6 +22992,76 @@ rule MAL_Compromised_Cert_Lumma_Stealer_SSL_com_3E73B59FA6DD7A627A3911F893B75460
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "3e:73:b5:9f:a6:dd:7a:62:7a:39:11:f8:93:b7:54:60"
+      )
+}
+
+rule MAL_Compromised_Cert_Lumma_Stealer_SSL_com_48909C7C626AB37268C151E2FA82D923 {
+   meta:
+      description         = "Detects Lumma Stealer with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-03-04"
+      version             = "1.0"
+
+      hash                = "324e1c80d9accb9ef7f96006122b41d3af33cbd74c47a5240537a17fe20110f1"
+      malware             = "Lumma Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware was sold as a service and was the most popular infostealer in 2024."
+
+      signer              = "SOLVED BY AI LTD"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "48:90:9c:7c:62:6a:b3:72:68:c1:51:e2:fa:82:d9:23"
+      cert_thumbprint     = "B6D2B4459D1F8E3F3351761CF1B244FD50430DAA"
+      cert_valid_from     = "2025-03-04"
+      cert_valid_to       = "2026-03-04"
+
+      country             = "GB"
+      state               = "???"
+      locality            = "Edinburgh"
+      email               = "???"
+      rdn_serial_number   = "SC653985"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "48:90:9c:7c:62:6a:b3:72:68:c1:51:e2:fa:82:d9:23"
+      )
+}
+
+rule MAL_Compromised_Cert_Lumma_Stealer_SSL_com_4F12A0A5569392FC0B41C3D077E6586D {
+   meta:
+      description         = "Detects Lumma Stealer with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-03-06"
+      version             = "1.0"
+
+      hash                = "1626516aad9026976a6eaa4e637e8de95cb9d1203e99f50e94f25ea7a06c34f9"
+      malware             = "Lumma Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware was sold as a service and was the most popular infostealer in 2024."
+
+      signer              = "SIFA ESTATE LIMITED"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "4f:12:a0:a5:56:93:92:fc:0b:41:c3:d0:77:e6:58:6d"
+      cert_thumbprint     = "3CF0E45215994AE97A21B5C487369592EA24B1D2"
+      cert_valid_from     = "2025-03-06"
+      cert_valid_to       = "2026-03-06"
+
+      country             = "KE"
+      state               = "???"
+      locality            = "Nairobi"
+      email               = "???"
+      rdn_serial_number   = "CPR/2010/81740"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "4f:12:a0:a5:56:93:92:fc:0b:41:c3:d0:77:e6:58:6d"
       )
 }
 
@@ -23895,7 +24175,7 @@ rule MAL_Compromised_Cert_Meowsterio_Traffer_Team_GlobalSign_41506BE5E85C247D61C
       state               = "Rajasthan"
       locality            = "Jaipur"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "U29304RJ2021PTC075892"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -24280,7 +24560,7 @@ rule MAL_Compromised_Cert_MonsterV2_Aurotun_Microsoft_3300037399890C4DCE9776933C
       state               = "Arizona"
       locality            = "Mesa"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -25445,6 +25725,41 @@ rule MAL_Compromised_Cert_NetSupport_RAT_DigiCert_025020668F51235E9ECFFF8CF00DA6
       )
 }
 
+rule MAL_Compromised_Cert_NetSupport_RAT_DigiCert_03A656478B714A24DD5DAF98F68E878B {
+   meta:
+      description         = "Detects NetSupport RAT with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-12"
+      version             = "1.0"
+
+      hash                = "af143b79a29e51366964416da4b3a30b26def93d52b67a6ad6e9528935bf4a62"
+      malware             = "NetSupport RAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = "This is a weaponised Remote Management and monitoring tool."
+
+      signer              = "FILIPA S.R.L."
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "03:a6:56:47:8b:71:4a:24:dd:5d:af:98:f6:8e:87:8b"
+      cert_thumbprint     = "938EDBA2A0B446E6FE094E15075EE612DCE53A7E"
+      cert_valid_from     = "2025-09-12"
+      cert_valid_to       = "2026-09-11"
+
+      country             = "AR"
+      state               = "???"
+      locality            = "Buenos Aires"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "03:a6:56:47:8b:71:4a:24:dd:5d:af:98:f6:8e:87:8b"
+      )
+}
+
 rule MAL_Compromised_Cert_NetSupport_RAT_DigiCert_070843EA189B84048AE0A3415816EBA3 {
    meta:
       description         = "Detects NetSupport RAT with compromised cert (DigiCert)"
@@ -25715,7 +26030,7 @@ rule MAL_Compromised_Cert_NetSupport_RAT_GlobalSign_1BACADCA4264971772A3A024 {
       state               = "Ha Nam"
       locality            = "Ha Nam"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0700824958"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -25925,7 +26240,7 @@ rule MAL_Compromised_Cert_NetSupport_RAT_GlobalSign_4E49B35F9A33867E60262272 {
       state               = "Saint Petersburg"
       locality            = "Saint Petersburg"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1217800080156"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -25970,6 +26285,41 @@ rule MAL_Compromised_Cert_NetSupport_RAT_GlobalSign_509CC777A842A8EDC4F7E28F {
       )
 }
 
+rule MAL_Compromised_Cert_NetSupport_RAT_GlobalSign_536A9BBEAB40AAF25024CD8B {
+   meta:
+      description         = "Detects NetSupport RAT with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-03"
+      version             = "1.0"
+
+      hash                = "f4615a9c1a9f922536e1ffdd0264ce6c94ef84534ff27b35bd93f1c818eaa743"
+      malware             = "NetSupport RAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = "This is a weaponised Remote Management and monitoring tool."
+
+      signer              = "LLC GrandStroy"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "53:6a:9b:be:ab:40:aa:f2:50:24:cd:8b"
+      cert_thumbprint     = "29EB40C0EFE05D01210D6F3197F854E214CB5A3B"
+      cert_valid_from     = "2025-06-03"
+      cert_valid_to       = "2026-06-04"
+
+      country             = "RU"
+      state               = "Moscow"
+      locality            = "Moscow"
+      email               = "???"
+      rdn_serial_number   = "1091103000922"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "53:6a:9b:be:ab:40:aa:f2:50:24:cd:8b"
+      )
+}
+
 rule MAL_Compromised_Cert_NetSupport_RAT_GlobalSign_543A61A75B00D24BE9901085 {
    meta:
       description         = "Detects NetSupport RAT with compromised cert (GlobalSign)"
@@ -25995,7 +26345,7 @@ rule MAL_Compromised_Cert_NetSupport_RAT_GlobalSign_543A61A75B00D24BE9901085 {
       state               = "Kemerovo Oblast"
       locality            = "Kemerovo"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1204200004876"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -26145,6 +26495,76 @@ rule MAL_Compromised_Cert_NetSupport_RAT_GlobalSign_646E606D30DF08F8C51ACBC1 {
       )
 }
 
+rule MAL_Compromised_Cert_NetSupport_RAT_GlobalSign_6D5BF63F03EA0DD2B37228FA {
+   meta:
+      description         = "Detects NetSupport RAT with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-02-17"
+      version             = "1.0"
+
+      hash                = "9fb97ddbe7875a6162a0f6803c1e1679d6e8797c473b676f9d51ca77691abfeb"
+      malware             = "NetSupport RAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = "This is a weaponised Remote Management and monitoring tool."
+
+      signer              = "SIAFU LIMITED"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "6d:5b:f6:3f:03:ea:0d:d2:b3:72:28:fa"
+      cert_thumbprint     = "B0D91034DAB6E6C6FA1ECDA42975D4AB03646CA7"
+      cert_valid_from     = "2025-02-17"
+      cert_valid_to       = "2026-02-18"
+
+      country             = "KE"
+      state               = "Nairobi"
+      locality            = "Nairobi"
+      email               = "???"
+      rdn_serial_number   = "C.10158"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "6d:5b:f6:3f:03:ea:0d:d2:b3:72:28:fa"
+      )
+}
+
+rule MAL_Compromised_Cert_NetSupport_RAT_GlobalSign_768D8B5A95252BFCF9BE0497 {
+   meta:
+      description         = "Detects NetSupport RAT with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-04-14"
+      version             = "1.0"
+
+      hash                = "ae45484a1881d55afae4952224c4a8352e1163a9fb57d095431711e5dccdcd18"
+      malware             = "NetSupport RAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = "This is a weaponised Remote Management and monitoring tool."
+
+      signer              = "Blockfi Ruinor Security Technology Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "76:8d:8b:5a:95:25:2b:fc:f9:be:04:97"
+      cert_thumbprint     = "4ACC7502C2F5106D47911AF8AB41B4C83D758DDE"
+      cert_valid_from     = "2025-04-14"
+      cert_valid_to       = "2026-04-15"
+
+      country             = "CN"
+      state               = "Shandong"
+      locality            = "Jinan"
+      email               = "???"
+      rdn_serial_number   = "91370102307284861T"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "76:8d:8b:5a:95:25:2b:fc:f9:be:04:97"
+      )
+}
+
 rule MAL_Compromised_Cert_NetSupport_RAT_GlobalSign_7EAF9EB4886EDA7C48DC8EA4 {
    meta:
       description         = "Detects NetSupport RAT with compromised cert (GlobalSign)"
@@ -26250,6 +26670,41 @@ rule MAL_Compromised_Cert_NetSupport_RAT_Microsoft_33000578F93468681279E2CFDE000
       )
 }
 
+rule MAL_Compromised_Cert_NetSupport_RAT_Microsoft_3300058BD460154028B0E8504E000000058BD4 {
+   meta:
+      description         = "Detects NetSupport RAT with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-02"
+      version             = "1.0"
+
+      hash                = "c7cefe78fa66d76523beb05969fc5df2eff2db1512249bbcf9fd8fb2220723de"
+      malware             = "NetSupport RAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "RITZ AND JOHNSON BUILDING PARTNERSHIP, LLC"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:05:8b:d4:60:15:40:28:b0:e8:50:4e:00:00:00:05:8b:d4"
+      cert_thumbprint     = "D5B56201BE8C2A43291A1F8381BDBA39F4345F2B"
+      cert_valid_from     = "2025-12-02"
+      cert_valid_to       = "2025-12-05"
+
+      country             = "US"
+      state               = "Florida"
+      locality            = "OCALA"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:05:8b:d4:60:15:40:28:b0:e8:50:4e:00:00:00:05:8b:d4"
+      )
+}
+
 rule MAL_Compromised_Cert_NetSupport_RAT_Microsoft_3300058C942C910D349BCEE8B2000000058C94 {
    meta:
       description         = "Detects NetSupport RAT with compromised cert (Microsoft)"
@@ -26282,6 +26737,41 @@ rule MAL_Compromised_Cert_NetSupport_RAT_Microsoft_3300058C942C910D349BCEE8B2000
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
          sig.serial == "33:00:05:8c:94:2c:91:0d:34:9b:ce:e8:b2:00:00:00:05:8c:94"
+      )
+}
+
+rule MAL_Compromised_Cert_NetSupport_RAT_Microsoft_33000650DDD1E73845146E2D260000000650DD {
+   meta:
+      description         = "Detects NetSupport RAT with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-30"
+      version             = "1.0"
+
+      hash                = "6684bd671de9dce1e8cfc4d41bf5a4ef3dabc8925eac4a47712b128224518b9e"
+      malware             = "NetSupport RAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = "File is dropped from a fake logistics website: https://x.com/malwrhunterteam/status/1995974194006552855?s=20"
+
+      signer              = "RITZ AND JOHNSON BUILDING PARTNERSHIP, LLC"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:06:50:dd:d1:e7:38:45:14:6e:2d:26:00:00:00:06:50:dd"
+      cert_thumbprint     = "761C3D17E789A71CA32A8C0C85B8FF769BA05BCF"
+      cert_valid_from     = "2025-11-30"
+      cert_valid_to       = "2025-12-03"
+
+      country             = "US"
+      state               = "Florida"
+      locality            = "OCALA"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:06:50:dd:d1:e7:38:45:14:6e:2d:26:00:00:00:06:50:dd"
       )
 }
 
@@ -26460,6 +26950,41 @@ rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_15D82B35761FE064DF2BC72C62D69A0
       )
 }
 
+rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_1D0DB421029C76D20849B6F6D0257D96 {
+   meta:
+      description         = "Detects NetSupport RAT with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-30"
+      version             = "1.0"
+
+      hash                = "76053660a8f03b6cf58158e7db53052dc5ecc0f8d0cdd3c5237cd976cb6fd2f7"
+      malware             = "NetSupport RAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = "This is a weaponised Remote Management and monitoring tool."
+
+      signer              = "Ek-Market Ab Quercus Oy"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "1d:0d:b4:21:02:9c:76:d2:08:49:b6:f6:d0:25:7d:96"
+      cert_thumbprint     = "221B8FCC0917B0EE755616142AF13B826E4AD9B9"
+      cert_valid_from     = "2025-09-30"
+      cert_valid_to       = "2026-09-30"
+
+      country             = "FI"
+      state               = "Uusimaa"
+      locality            = "Ekenäs"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "1d:0d:b4:21:02:9c:76:d2:08:49:b6:f6:d0:25:7d:96"
+      )
+}
+
 rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_1D84AEF0C4EF73EEC7B2794EE51BD73F {
    meta:
       description         = "Detects NetSupport RAT with compromised cert (SSL.com)"
@@ -26492,6 +27017,41 @@ rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_1D84AEF0C4EF73EEC7B2794EE51BD73
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "1d:84:ae:f0:c4:ef:73:ee:c7:b2:79:4e:e5:1b:d7:3f"
+      )
+}
+
+rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_24991F9305780821FB0326248BCBB0EE {
+   meta:
+      description         = "Detects NetSupport RAT with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-12-19"
+      version             = "1.0"
+
+      hash                = "c14cf48a6853918d2928b42ac35c6a3952bd33f5e7ae7be01a294dc2292c1925"
+      malware             = "NetSupport RAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = "This is a weaponised Remote Management and monitoring tool."
+
+      signer              = "Syntech Software Sp. z o.o."
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "24:99:1f:93:05:78:08:21:fb:03:26:24:8b:cb:b0:ee"
+      cert_thumbprint     = "d088c86c5b8955bd5634b17c73621e72b4d0534e7538ba850e2ec21ba2944712"
+      cert_valid_from     = "2024-12-19"
+      cert_valid_to       = "2025-12-19"
+
+      country             = "PL"
+      state               = "Masovian Voivodeship"
+      locality            = "Warszawa"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "24:99:1f:93:05:78:08:21:fb:03:26:24:8b:cb:b0:ee"
       )
 }
 
@@ -26597,6 +27157,76 @@ rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_316BB5E6D2D5FF1F4C2C60028E1CEC0
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
          sig.serial == "31:6b:b5:e6:d2:d5:ff:1f:4c:2c:60:02:8e:1c:ec:08"
+      )
+}
+
+rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_31F2B8DF98119016D60A1DFD656FE40E {
+   meta:
+      description         = "Detects NetSupport RAT with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-29"
+      version             = "1.0"
+
+      hash                = "b9576867738918a2d065dfa9b78ec9657a2a8a7464d786d836bfdc843d43a812"
+      malware             = "NetSupport RAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = "This is a weaponised Remote Management and monitoring tool."
+
+      signer              = "SMI Consulting GmbH"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "31:f2:b8:df:98:11:90:16:d6:0a:1d:fd:65:6f:e4:0e"
+      cert_thumbprint     = "FF5156C6FE68B5C49035DE4F0DDAD5322467166A"
+      cert_valid_from     = "2025-09-29"
+      cert_valid_to       = "2026-08-19"
+
+      country             = "AT"
+      state               = "Wien"
+      locality            = "Wien"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "31:f2:b8:df:98:11:90:16:d6:0a:1d:fd:65:6f:e4:0e"
+      )
+}
+
+rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_3333576DC3404BF2E440D60B60582C33 {
+   meta:
+      description         = "Detects NetSupport RAT with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-12-23"
+      version             = "1.0"
+
+      hash                = "f5ba7bdc07e9c6cc9f22ca5680e51363acd4a8e74587ee3d10bc189ea8ff123a"
+      malware             = "NetSupport RAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = "This is a weaponised Remote Management and monitoring tool."
+
+      signer              = "Thea Software"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "33:33:57:6d:c3:40:4b:f2:e4:40:d6:0b:60:58:2c:33"
+      cert_thumbprint     = ""
+      cert_valid_from     = "2024-12-23"
+      cert_valid_to       = "2025-12-23"
+
+      country             = "FR"
+      state               = "Nouvelle-Aquitaine"
+      locality            = "Le Bouscat"
+      email               = ""
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "33:33:57:6d:c3:40:4b:f2:e4:40:d6:0b:60:58:2c:33"
       )
 }
 
@@ -26915,6 +27545,41 @@ rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_5258128CB8E2C4816C2F9F13BAF422D
       )
 }
 
+rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_53A4AF566690F74B15A2232F7B01CD61 {
+   meta:
+      description         = "Detects NetSupport RAT with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-12-24"
+      version             = "1.0"
+
+      hash                = "acfa8e673b641ed1be17dff41f52589605abbd3afe305a1580b3c8977e90a7fa"
+      malware             = "NetSupport RAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = "This is a weaponised Remote Management and monitoring tool."
+
+      signer              = "Advik Tech Corporation"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "53:a4:af:56:66:90:f7:4b:15:a2:23:2f:7b:01:cd:61"
+      cert_thumbprint     = "9A1CBD2C7831CC8CD56298B01189AF437E0B1673"
+      cert_valid_from     = "2024-12-24"
+      cert_valid_to       = "2025-12-24"
+
+      country             = "CA"
+      state               = "British Columbia"
+      locality            = "Surrey"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "53:a4:af:56:66:90:f7:4b:15:a2:23:2f:7b:01:cd:61"
+      )
+}
+
 rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_57E43478EAD985E2C781F377BF551614 {
    meta:
       description         = "Detects NetSupport RAT with compromised cert (SSL.com)"
@@ -27160,6 +27825,41 @@ rule MAL_Compromised_Cert_NetSupport_RAT_Sectigo_00BDB99D5ECF8271D48E35F1039C216
       )
 }
 
+rule MAL_Compromised_Cert_NetSupport_RAT_Sectigo_139E4375C99FC46A535D52A8550F1A19 {
+   meta:
+      description         = "Detects NetSupport RAT with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-05-05"
+      version             = "1.0"
+
+      hash                = "f11c4a1d7d446218b70a52669840b8362dad781bd2939185c8b2b20357f2a8df"
+      malware             = "NetSupport RAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = "This is a weaponised Remote Management and monitoring tool."
+
+      signer              = "A2Z Services AB"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "13:9e:43:75:c9:9f:c4:6a:53:5d:52:a8:55:0f:1a:19"
+      cert_thumbprint     = "11F3885DC8A43D414CCBE3B5679D9A8B00980C8B"
+      cert_valid_from     = "2025-05-05"
+      cert_valid_to       = "2026-05-05"
+
+      country             = "SE"
+      state               = "Stockholms län"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "13:9e:43:75:c9:9f:c4:6a:53:5d:52:a8:55:0f:1a:19"
+      )
+}
+
 rule MAL_Compromised_Cert_NetSupport_RAT_Sectigo_15C5AF15AFECF1C900CBAB0CA9165629 {
    meta:
       description         = "Detects NetSupport RAT with compromised cert (Sectigo)"
@@ -27290,7 +27990,7 @@ rule MAL_Compromised_Cert_NetSupport_SSL_com_0CC645E9075DEE38345BE490179177DC {
       state               = "Středočeský kraj"
       locality            = "Kolín"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -27885,7 +28585,7 @@ rule MAL_Compromised_Cert_OneStart_SSL_com_2834C87E4445D1B6FF560A24D7F3E0AC {
       state               = "Delaware"
       locality            = "Dover"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "10070121"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -29145,7 +29845,7 @@ rule MAL_Compromised_Cert_Oyster_GlobalSign_20E91E269C6767BC49EB3D34 {
       state               = "Bishkek"
       locality            = "Bishkek"
       email               = "zaharmurashev@gmail.com"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "207602-3301-OOO"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -29180,7 +29880,7 @@ rule MAL_Compromised_Cert_Oyster_GlobalSign_387867714BEB47BED987CB83 {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1127746307160"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -29215,7 +29915,7 @@ rule MAL_Compromised_Cert_Oyster_GlobalSign_3C7F0B3E22B1572B71883C94 {
       state               = "Shanxi"
       locality            = "Jinzhong"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91140727MA0GR8T80N"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -29250,7 +29950,7 @@ rule MAL_Compromised_Cert_Oyster_GlobalSign_3FAFE7EA5469C17A1069661F {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1197746462770"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -29285,7 +29985,7 @@ rule MAL_Compromised_Cert_Oyster_GlobalSign_410DCFAE3DB2E499FD92C563 {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "proftorg.info@rambler.ru"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1257700210525"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -29320,7 +30020,7 @@ rule MAL_Compromised_Cert_Oyster_GlobalSign_48CC67779AA54699C6B1D7FE {
       state               = "Moscow"
       locality            = "Kommunarka"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1217700238139"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -29390,7 +30090,7 @@ rule MAL_Compromised_Cert_Oyster_Microsoft_330003252AF2DC64B34CB7F7DB00000003252
       state               = "New York"
       locality            = "NEW YORK"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -29425,7 +30125,7 @@ rule MAL_Compromised_Cert_Oyster_Microsoft_3300034227859130DB98A2AA4A00000003422
       state               = "North Carolina"
       locality            = "Mocksville"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -29530,7 +30230,7 @@ rule MAL_Compromised_Cert_Oyster_Microsoft_330003808CC20DE933506ACB4F00000003808
       state               = "Arizona"
       locality            = "Chandler"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -29565,7 +30265,7 @@ rule MAL_Compromised_Cert_Oyster_Microsoft_330003F85E2BF6B2496DC329F000000003F85
       state               = "New York"
       locality            = "NEW YORK"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -29600,7 +30300,7 @@ rule MAL_Compromised_Cert_Oyster_Microsoft_330004081060BEC8220B100D8B00000004081
       state               = "North Carolina"
       locality            = "Davidson"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -29915,7 +30615,7 @@ rule MAL_Compromised_Cert_Oyster_SSL_com_2A3A540A1CAFC491099CEFCDC539548F {
       state               = "Jiangsu"
       locality            = "Wuxi"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91320213MA20CM4H0H"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -32645,7 +33345,7 @@ rule MAL_Compromised_Cert_PayDayLoader_GlobalSign_4E8CCC13DF95117058746F21 {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1087746755854"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -32820,7 +33520,7 @@ rule MAL_Compromised_Cert_PerfectStudio_GlobalSign_54A91ED64CA970FB46DACBA5 {
       state               = "Rajasthan"
       locality            = "Jaipur"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "U74999RJ2010PTC056527"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -37580,7 +38280,7 @@ rule MAL_Compromised_Cert_RealPeopleLoader_GlobalSign_630FDDE61C01FA9713DE135B {
       state               = "Hubei"
       locality            = "Ezhou"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91420702MAD5FYH837"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -37685,7 +38385,7 @@ rule MAL_Compromised_Cert_RealPeopleLoader_Microsoft_330002F6B621C3DACF7C0F844C0
       state               = "Arizona"
       locality            = "Glendale"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -37720,7 +38420,7 @@ rule MAL_Compromised_Cert_RealPeopleLoader_Microsoft_33000305923E9A6B3748F117A50
       state               = "Arizona"
       locality            = "Waddell"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -37755,7 +38455,7 @@ rule MAL_Compromised_Cert_RealPeopleLoader_Microsoft_3300031D99C867BB46F4D2ABC00
       state               = "Pennsylvania"
       locality            = "Mc Kean"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -37790,7 +38490,7 @@ rule MAL_Compromised_Cert_RealPeopleLoader_Microsoft_330003A015011F7E6188B8823D0
       state               = "Utah"
       locality            = "Salt Lake City"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -37825,7 +38525,7 @@ rule MAL_Compromised_Cert_RealPeopleLoader_Microsoft_330003D491DF08DD9705B0F9490
       state               = "Arizona"
       locality            = "Chandler"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -38805,7 +39505,7 @@ rule MAL_Compromised_Cert_RemcosRAT_SSL_com_009D9EDAE470A7D76B8B0F1792232D83 {
       state               = "Iowa"
       locality            = "Des Moines"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "108572"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -38875,7 +39575,7 @@ rule MAL_Compromised_Cert_RemcosRAT_SSL_com_0BA7695FB86C69EAB5B4D16DB3C6EB1D {
       state               = "Iowa"
       locality            = "Des Moines"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "108572"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -38980,7 +39680,7 @@ rule MAL_Compromised_Cert_RemcosRAT_SSL_com_54BFAC4E3C2EA108E9CE1E0C10DA8B5A {
       state               = "Dalarna County"
       locality            = "Mora"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "559007-4620"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -39785,7 +40485,7 @@ rule MAL_Compromised_Cert_Rhadamanthys_GlobalSign_3B7EAC8B20F3EDCB557300BE {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1177746889099"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -41185,7 +41885,7 @@ rule MAL_Compromised_Cert_Rusty_Traffer_SSL_com_2CFCA0AE011D8FAC818AB52E4EB52FD3
       state               = "dolnośląskie"
       locality            = "Wrocław"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0000561255"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -41325,7 +42025,7 @@ rule MAL_Compromised_Cert_Rusty_Traffer_SSL_com_7F55C2FDE07D9A27B4BFDA0775DD7301
       state               = "Lower Silesian Voivodeship"
       locality            = "Gniechowice"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0000804582"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -41710,7 +42410,7 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_087711DDF512753346533330D4
       state               = "New York"
       locality            = "Freeport"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -41780,7 +42480,7 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_2E833BA760E021C8C7EE72FA6E
       state               = "Województwo wielkopolskie"
       locality            = "Poznań"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0000684548"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -42025,7 +42725,7 @@ rule MAL_Compromised_Cert_ScreenConnect_Phishing_GlobalSign_60D16EC97ED649E7E625
       state               = "Michigan"
       locality            = "Farmington Hills"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "801895053"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -42056,11 +42756,11 @@ rule MAL_Compromised_Cert_ScreenConnect_Phishing_Verokey_0126669732ACEC9B2FD03AE
       cert_valid_from     = "2025-08-19"
       cert_valid_to       = "2026-08-18"
 
-      country             = "US"
-      state               = "Delaware"
-      locality            = "Dover"
+      country             = "???"
+      state               = "???"
+      locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43110,7 +43810,7 @@ rule MAL_Compromised_Cert_SnipBot_GlobalSign_0BC777F88DDF5F3CE479452F {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "arion.ooo@rambler.ru"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1237700891867"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43145,7 +43845,7 @@ rule MAL_Compromised_Cert_SnipBot_GlobalSign_209B10989A2B18672B29C1C8 {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1237700728616"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43180,7 +43880,7 @@ rule MAL_Compromised_Cert_SnipBot_GlobalSign_299B8CD6809BEB7AFE6AA1CE {
       state               = "Aalborg"
       locality            = "Vodskov"
       email               = "anders.lykke@ccbu.dk"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "37303216"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43215,7 +43915,7 @@ rule MAL_Compromised_Cert_SnipBot_GlobalSign_3B0E3879266F3BC98225B390 {
       state               = "Zhejiang"
       locality            = "Hangzhou"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91330103074335428G"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43250,7 +43950,7 @@ rule MAL_Compromised_Cert_SnipBot_GlobalSign_691ED2236CCA78D180F29DFD {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1237700577267"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43355,7 +44055,7 @@ rule MAL_Compromised_Cert_SoftwareCloud_Microsoft_330004352678CC1E8ABD94DB1C0000
       state               = "New York"
       locality            = "Wallkill"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43460,7 +44160,7 @@ rule MAL_Compromised_Cert_Softwarecloud_Microsoft_330002DF7595879A9999F2306B0000
       state               = "Missouri"
       locality            = "Saint Charles"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43495,7 +44195,7 @@ rule MAL_Compromised_Cert_Softwarecloud_Microsoft_330002E0A058BFA02E8C1B09A90000
       state               = "Missouri"
       locality            = "Saint Charles"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43530,7 +44230,7 @@ rule MAL_Compromised_Cert_Softwarecloud_Microsoft_330002E6C11CDD113F485DE83C0000
       state               = "Missouri"
       locality            = "Saint Charles"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43565,7 +44265,7 @@ rule MAL_Compromised_Cert_Softwarecloud_Microsoft_330002E8E08097DA774663EF690000
       state               = "Texas"
       locality            = "Irving"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43600,7 +44300,7 @@ rule MAL_Compromised_Cert_Softwarecloud_Microsoft_330002F0241B84F150B7CB168E0000
       state               = "Texas"
       locality            = "Irving"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43635,7 +44335,7 @@ rule MAL_Compromised_Cert_Softwarecloud_Microsoft_330003058784DB376DA22489290000
       state               = "Texas"
       locality            = "Irving"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43670,7 +44370,7 @@ rule MAL_Compromised_Cert_Softwarecloud_Microsoft_3300031611E4BA9F20E932640D0000
       state               = "Texas"
       locality            = "Irving"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43705,7 +44405,7 @@ rule MAL_Compromised_Cert_Softwarecloud_Microsoft_3300031D13E2A2EDDA7B811D4C0000
       state               = "Texas"
       locality            = "Irving"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43740,7 +44440,7 @@ rule MAL_Compromised_Cert_Softwarecloud_Microsoft_33000325820F4C14B2DEEC01B40000
       state               = "Texas"
       locality            = "Irving"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43775,7 +44475,7 @@ rule MAL_Compromised_Cert_Softwarecloud_Microsoft_3300034A34A1F69D8624B367CE0000
       state               = "New York"
       locality            = "BROOKLYN"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43810,7 +44510,7 @@ rule MAL_Compromised_Cert_Softwarecloud_Microsoft_3300039A19B6113A899F2279F70000
       state               = "New York"
       locality            = "Manhasset"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43845,7 +44545,7 @@ rule MAL_Compromised_Cert_Softwarecloud_Microsoft_330003C4CB7D52A9E30D0FC9D90000
       state               = "Texas"
       locality            = "Irving"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43880,7 +44580,7 @@ rule MAL_Compromised_Cert_Softwarecloud_Microsoft_330003DCEFA192F3BAF4B80B760000
       state               = "Texas"
       locality            = "Irving"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43915,7 +44615,7 @@ rule MAL_Compromised_Cert_Softwarecloud_Microsoft_3300040608C6D56BDE7466A0B40000
       state               = "New York"
       locality            = "BROOKLYN"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43950,7 +44650,7 @@ rule MAL_Compromised_Cert_Softwarecloud_Microsoft_33000422EDF474C1C6875343EE0000
       state               = "New York"
       locality            = "Wallkill"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -43985,7 +44685,7 @@ rule MAL_Compromised_Cert_Softwarecloud_Microsoft_3300042BCCEE9EB937D70838E70000
       state               = "New York"
       locality            = "Wallkill"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -44020,7 +44720,7 @@ rule MAL_Compromised_Cert_Softwarecloud_Microsoft_330004419D7A2C680ABC8CCA330000
       state               = "New York"
       locality            = "Wallkill"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -44055,7 +44755,7 @@ rule MAL_Compromised_Cert_Softwarecloud_SSL_com_1846DA228F4D8488025ACB3A9D5E99D8
       state               = "Lower Silesian Voivodeship"
       locality            = "Wrocław"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0000940574"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -44090,7 +44790,7 @@ rule MAL_Compromised_Cert_Softwarecloud_SSL_com_34D3F03F4594AF3324E51BF37535AFE8
       state               = "Vienna"
       locality            = "Vienna"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "487535p"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -44125,7 +44825,7 @@ rule MAL_Compromised_Cert_Softwarecloud_SSL_com_4F0659FE1BF2E22EDEC456C9794BF440
       state               = "Uusimaa"
       locality            = "Espoo"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "2957155-2"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -44160,7 +44860,7 @@ rule MAL_Compromised_Cert_Softwarecloud_SSL_com_677AEFDF767972B5C6F083ADD9B258E9
       state               = "Capital Region of Denmark"
       locality            = "Copenhagen"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "43220519"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -44195,7 +44895,7 @@ rule MAL_Compromised_Cert_Softwarecloud_SSL_com_6C897CD96B9ED39CD2D217E14D0F9357
       state               = "Lublin Voivodeship"
       locality            = "Lublin"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0000628786"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -44230,7 +44930,7 @@ rule MAL_Compromised_Cert_Softwarecloud_SSL_com_700B215E33D4D6E0613324E8DCEFE4FF
       state               = "???"
       locality            = "Hull"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "11849211"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -47975,7 +48675,7 @@ rule MAL_Compromised_Cert_StealC_GlobalSign_64D320BA7835B7EABB35090B {
       state               = "Moscow Oblast"
       locality            = "Lytkarino"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1125027013968"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -48150,7 +48850,7 @@ rule MAL_Compromised_Cert_Stealer5000_GlobalSign_47858D45CE2829FA3B600737 {
       state               = "Sverdlovsk Oblast"
       locality            = "Yekaterinburg"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1156658071283"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -48185,7 +48885,7 @@ rule MAL_Compromised_Cert_Stealer5000_SSL_com_59ABFE373E657805504B83D792EA951B {
       state               = "Uusimaa"
       locality            = "Vantaa"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "2552195-3"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -49305,7 +50005,7 @@ rule MAL_Compromised_Cert_TransferLoader_GlobalSign_05DF1C7B2BCB141609A58A27 {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1217700297000"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -49760,7 +50460,7 @@ rule MAL_Compromised_Cert_TrojanizedDiskView_GlobalSign_022A5CB6AEA27E2274822449
       state               = "Bishkek"
       locality            = "Bishkek"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "192750-3301-OOO"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -49865,7 +50565,7 @@ rule MAL_Compromised_Cert_TurboFixPDF_Sectigo_00AF1989410F0529DD265B60481F4A1405
       state               = "Delaware"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "3764490"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -50040,7 +50740,7 @@ rule MAL_Compromised_Cert_UNK_50_GlobalSign_6386FDF30F59906C2AADCAF1 {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1207700257720"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -50075,7 +50775,7 @@ rule MAL_Compromised_Cert_UNK_50_GlobalSign_7B1CBB403DB37D45ABC2C210 {
       state               = "Bihar"
       locality            = "Samastipur"
       email               = "ujjawalnidhi.abhi@gmail.com"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "U67190BR2019PLN044649"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -51160,7 +51860,7 @@ rule MAL_Compromised_Cert_UNK_50_SSL_com_0C8F7F07BE871C4C162AF019BFBA46C8 {
       state               = "???"
       locality            = "Chisinau"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1017600034970"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -51195,7 +51895,7 @@ rule MAL_Compromised_Cert_UNK_50_SSL_com_11B1D2BBDD832C2E560EEAA79A0D75C0 {
       state               = "???"
       locality            = "London"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "16290725"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -51230,7 +51930,7 @@ rule MAL_Compromised_Cert_UNK_50_SSL_com_2397973243352DA3ED055BC1D9A5CFC6 {
       state               = "South Holland"
       locality            = "Dordrecht"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "73576115"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -51300,7 +52000,7 @@ rule MAL_Compromised_Cert_UNK_50_SSL_com_2DDA92271964A1A6F5BB327221C2E36D {
       state               = "Uusimaa"
       locality            = "Kerava"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0203058-8"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -51405,7 +52105,7 @@ rule MAL_Compromised_Cert_UNK_50_SSL_com_51BB990298810B66ABFC5A8F81723E58 {
       state               = "śląskie"
       locality            = "Żory"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0000131037"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -51510,7 +52210,7 @@ rule MAL_Compromised_Cert_UNK_50_SSL_com_6DE73E52DF41492B72C626F1E5A7BE66 {
       state               = "East Flanders"
       locality            = "Lochristi"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0452.792.040"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -53116,7 +53816,7 @@ rule MAL_Compromised_Cert_Unknown_EE_0452205181790702B219BCE761B5C52C {
       cert_valid_from     = "2025-04-08"
       cert_valid_to       = "2025-07-07"
 
-      country             = "---"
+      country             = "???"
       state               = "???"
       locality            = "???"
       email               = "???"
@@ -53515,6 +54215,41 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_115D73560CE2DD101D5BD925 {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_GlobalSign_124DBD1A2E51CA91DFA90016 {
+   meta:
+      description         = "Detects Unknown with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-24"
+      version             = "1.0"
+
+      hash                = "58bff33e99a349f6336b4aa1651fb914a4f8580beac135a2edb3bbdc012f4f18"
+      malware             = "Unknown"
+      malware_type        = "Initial access tool"
+      malware_notes       = "The malware was distributed from malicious advertising as documented here: https://jeromesegura.com/malvertising/2025/12/12-21-2025_RVTools. The MSI uses python to execute a compiled python script disguised as LICENSE.txt"
+
+      signer              = "T.R. LAK HOLDING ApS"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "12:4d:bd:1a:2e:51:ca:91:df:a9:00:16"
+      cert_thumbprint     = "9BB2144E2CC194F9C2F66135EE5ABF82F16CC608"
+      cert_valid_from     = "2025-09-24"
+      cert_valid_to       = "2026-09-25"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "12:4d:bd:1a:2e:51:ca:91:df:a9:00:16"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_GlobalSign_1374AACB98D398309DC23E87 {
    meta:
       description         = "Detects Unknown with compromised cert (GlobalSign)"
@@ -53540,7 +54275,7 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_1374AACB98D398309DC23E87 {
       state               = "Arizona"
       locality            = "Scottsdale"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "L16273115"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -53715,7 +54450,7 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_16D84CA3D6CC85273B76FABE {
       state               = "Oryol  Oblast"
       locality            = "Oryol"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1135748000838"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -54100,7 +54835,7 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_257C741E3A079417E0D3EA02 {
       state               = "GUANGDONG"
       locality            = "SHENZHEN"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "914403003350884898"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -54240,7 +54975,7 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_3092CC6FE5721C75BA8613A7 {
       state               = "Tambov Oblast"
       locality            = "Tambov"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1226800001273"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -55325,7 +56060,7 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_605BD85F34A3E143941C0715 {
       state               = "Shanxi"
       locality            = "Yangquan"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91140321MAD49GH05Y"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -55640,7 +56375,7 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_698356C5673C3623754A7B32 {
       state               = "Hubei"
       locality            = "Wuhan"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91420104MABWDD9J5W"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -55741,7 +56476,7 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_709FBBDC5826F66B39F4E670 {
       cert_valid_from     = "2025-04-13"
       cert_valid_to       = "2026-04-14"
 
-      country             = "---"
+      country             = "???"
       state               = "???"
       locality            = "???"
       email               = "meta.team1337@gmail.com"
@@ -55780,7 +56515,7 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_71548998D5724DFE7ADF6F62 {
       state               = "Moscow Oblast"
       locality            = "Chekhov"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1185074002552"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -56795,7 +57530,7 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_032D7744466225316CC99B0E088E4A3E {
       state               = "Uusimaa"
       locality            = "Espoo"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -56935,7 +57670,7 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_10662BB03030580E746864B75F3CED46 {
       state               = "???"
       locality            = "Nairobi"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "CPR/2010/208593"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -57180,7 +57915,7 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_1D756840BC02CB73D573CC842D313404 {
       state               = "???"
       locality            = "Edinburgh"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "SC695236"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -57390,7 +58125,7 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_2D4B965D94FBD665EDE6488405DDEC72 {
       state               = "???"
       locality            = "Shanghai"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91310116MA1JAA69XR"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -57565,7 +58300,7 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_3148B279E3A48C7AE98E868611808C80 {
       state               = "Uusimaa"
       locality            = "Vantaa"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -58265,7 +59000,7 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_5A2921F8FF4E923964AEE7F397DE65AB {
       state               = "Uusimaa"
       locality            = "Helsinki"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -58370,7 +59105,7 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_654E843F048E3CEA550C9062AC5C5193 {
       state               = "Hovedstaden"
       locality            = "København"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "32330233"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -58475,7 +59210,7 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_6A90068EF19E34BCB5E23FA6C211CBD6 {
       state               = "???"
       locality            = "Hexham"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "09348260"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -59070,7 +59805,7 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_00B7A7CAF4F460E829E9EC6242656E9EBC {
       state               = "Shanghai Shi"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91310120MA1HUQAE7G"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -59280,7 +60015,7 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_00F284A0585FC0AF0D35AEE5177A7B3442 {
       state               = "New York"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -59525,7 +60260,7 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_23789C7CB908269A8329C5C9C08AD4C1 {
       state               = "Shanxi Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91140321MAD49GH05Y"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -59665,7 +60400,7 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_573FD429CFC430E46C5797AC5B84BCBD {
       state               = "Delaware"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "3768166"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -60256,11 +60991,11 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_7368E399E2ED75794AFA87CB933DF778 {
       cert_valid_from     = "2025-12-19"
       cert_valid_to       = "2026-12-19"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "CN"
+      state               = "Fujian"
+      locality            = "Nanan"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91350583MADGH67680"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -60645,7 +61380,7 @@ rule MAL_Compromised_Cert_ValleyRat_Sectigo_00ADC445B14C3C850CC30C6C0007EA9920 {
       state               = "California"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -60960,7 +61695,7 @@ rule MAL_Compromised_Cert_Vidar_SSL_com_70044DC752FEE75A0835741593072573 {
       state               = "canton of Zürich"
       locality            = "Andelfingen"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "CHE-209.993.214"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -61135,7 +61870,7 @@ rule MAL_Compromised_Cert_Volaris_Microsoft_33000498BFEC9593C7FC832F770000000498
       state               = "Québec"
       locality            = "STE ANNE DE BELLEVUE"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -61205,7 +61940,7 @@ rule MAL_Compromised_Cert_WagmiTraffer_GlobalSign_3A48F81C499161FD0C9C072A {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1247700686551"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -62290,7 +63025,7 @@ rule MAL_Compromised_Cert_Winos_SSL_com_72C9DB722E93A08BF09A00BD7963687C {
       state               = "Delaware"
       locality            = "Dover"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "3598731"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -62325,7 +63060,7 @@ rule MAL_Compromised_Cert_XMAS_Traffer_Team_GlobalSign_5731AFDC3A41C9A004C5D636 
       state               = "Moscow Oblast"
       locality            = "Podolsk"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1091108000664"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -62395,7 +63130,7 @@ rule MAL_Compromised_Cert_XRed_DigiCert_0D9D72F1DDA9ED4E39F88FCA66081E67 {
       state               = "江苏省"
       locality            = "无锡市"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91320214069484293T"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -62430,7 +63165,7 @@ rule MAL_Compromised_Cert_XRed_DigiCert_0F550E72660DADB4E28C137E99C79C47 {
       state               = "广东省"
       locality            = "深圳市"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91440300326242237G"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -62500,7 +63235,7 @@ rule MAL_Compromised_Cert_XRed_GlobalSign_7E67FCC70CFA4989670E6D23 {
       state               = "Guangdong"
       locality            = "Shenzhen"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "914403003350884898"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -62605,7 +63340,7 @@ rule MAL_Compromised_Cert_XWorm_SSL_com_51554DAD826DA2EE44D163AA61EA5615 {
       state               = "Rio de Janeiro"
       locality            = "Rio de Janeiro"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -62815,7 +63550,7 @@ rule MAL_Compromised_Cert_Xworm_SSL_com_1C26AAC9A6E9385EDCBFE1CF495409FC {
       state               = "Bahia"
       locality            = "Santa Cruz da Vitória"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "09.429.885/0001-13"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -63340,7 +64075,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0497D45997C350D2867A7764017C3F3
       state               = "Seoul"
       locality            = "Yeongdeungpo-gu"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -63480,7 +64215,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_29494FD2ACB61616AAEAA470 {
       state               = "Shanxi"
       locality            = "Taiyuan"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91140105MADBJG4W5A"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -63690,7 +64425,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_008B3F8F725F80DECBDB4920ADA8817F
       state               = "Gyeonggi-do"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -63760,7 +64495,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00EE3A88EF4AB47D8617E4EDC56736C7
       state               = "河北省"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91130503MA0G685G99"
 
    condition:
       uint16(0) == 0x5a4d and

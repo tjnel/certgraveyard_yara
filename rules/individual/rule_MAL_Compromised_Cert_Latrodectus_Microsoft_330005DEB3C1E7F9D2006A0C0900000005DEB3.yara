@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Latrodectus_Microsoft_330005DEB3C1E7F9D2006A0C09000000
       state               = "Québec"
       locality            = "MONTREAL"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

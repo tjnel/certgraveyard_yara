@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Rusty_Traffer_SSL_com_7F55C2FDE07D9A27B4BFDA0775DD7301
       state               = "Lower Silesian Voivodeship"
       locality            = "Gniechowice"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0000804582"
 
    condition:
       uint16(0) == 0x5a4d and

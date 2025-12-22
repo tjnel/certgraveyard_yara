@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_FakeKeePass_GlobalSign_3ACEAA7BDFAB12376A840610 {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1037739569471"
 
    condition:
       uint16(0) == 0x5a4d and

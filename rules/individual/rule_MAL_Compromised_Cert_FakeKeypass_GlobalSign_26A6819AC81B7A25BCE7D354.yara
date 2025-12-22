@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_FakeKeypass_GlobalSign_26A6819AC81B7A25BCE7D354 {
       state               = "Guangdong"
       locality            = "Foshan"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91440605MACR7QA22Q"
 
    condition:
       uint16(0) == 0x5a4d and

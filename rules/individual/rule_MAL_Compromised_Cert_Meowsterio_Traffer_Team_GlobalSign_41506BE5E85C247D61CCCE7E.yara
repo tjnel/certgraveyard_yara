@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Meowsterio_Traffer_Team_GlobalSign_41506BE5E85C247D61C
       state               = "Rajasthan"
       locality            = "Jaipur"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "U29304RJ2021PTC075892"
 
    condition:
       uint16(0) == 0x5a4d and

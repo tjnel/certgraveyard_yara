@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_NetSupport_RAT_GlobalSign_543A61A75B00D24BE9901085 {
       state               = "Kemerovo Oblast"
       locality            = "Kemerovo"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1204200004876"
 
    condition:
       uint16(0) == 0x5a4d and

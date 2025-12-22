@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0497D45997C350D2867A7764017C3F3
       state               = "Seoul"
       locality            = "Yeongdeungpo-gu"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

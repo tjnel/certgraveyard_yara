@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_00B7A7CAF4F460E829E9EC6242656E9EBC {
       state               = "Shanghai Shi"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91310120MA1HUQAE7G"
 
    condition:
       uint16(0) == 0x5a4d and

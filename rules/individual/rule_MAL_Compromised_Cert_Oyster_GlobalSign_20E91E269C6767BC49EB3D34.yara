@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Oyster_GlobalSign_20E91E269C6767BC49EB3D34 {
       state               = "Bishkek"
       locality            = "Bishkek"
       email               = "zaharmurashev@gmail.com"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "207602-3301-OOO"
 
    condition:
       uint16(0) == 0x5a4d and

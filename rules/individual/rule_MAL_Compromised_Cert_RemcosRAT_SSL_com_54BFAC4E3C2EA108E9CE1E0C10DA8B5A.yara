@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_RemcosRAT_SSL_com_54BFAC4E3C2EA108E9CE1E0C10DA8B5A {
       state               = "Dalarna County"
       locality            = "Mora"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "559007-4620"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_FriendsCompany_GlobalSign_4DBE694470C2449C1B460474 {
       state               = "Jiangsu"
       locality            = "Wuxi"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91320281MA20FFNG02"
 
    condition:
       uint16(0) == 0x5a4d and

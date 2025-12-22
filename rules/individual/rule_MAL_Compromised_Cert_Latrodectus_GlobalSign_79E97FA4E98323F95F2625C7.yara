@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Latrodectus_GlobalSign_79E97FA4E98323F95F2625C7 {
       state               = "Delhi"
       locality            = "New Delhi"
       email               = "officeeverestremit@gmail.com"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "ACA-6037"
 
    condition:
       uint16(0) == 0x5a4d and

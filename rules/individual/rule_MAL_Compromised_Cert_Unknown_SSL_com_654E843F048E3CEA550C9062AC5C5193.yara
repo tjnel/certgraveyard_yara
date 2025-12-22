@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_654E843F048E3CEA550C9062AC5C5193 {
       state               = "Hovedstaden"
       locality            = "København"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "32330233"
 
    condition:
       uint16(0) == 0x5a4d and

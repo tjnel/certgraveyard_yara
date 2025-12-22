@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_23789C7CB908269A8329C5C9C08AD4C1 {
       state               = "Shanxi Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91140321MAD49GH05Y"
 
    condition:
       uint16(0) == 0x5a4d and

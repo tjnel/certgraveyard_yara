@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Rusty_Traffer_SSL_com_2CFCA0AE011D8FAC818AB52E4EB52FD3
       state               = "dolnośląskie"
       locality            = "Wrocław"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0000561255"
 
    condition:
       uint16(0) == 0x5a4d and

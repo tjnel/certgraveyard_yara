@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_6A90068EF19E34BCB5E23FA6C211CBD6 {
       state               = "???"
       locality            = "Hexham"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "09348260"
 
    condition:
       uint16(0) == 0x5a4d and

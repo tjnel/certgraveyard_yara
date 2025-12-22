@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_XMAS_Traffer_Team_GlobalSign_5731AFDC3A41C9A004C5D636 
       state               = "Moscow Oblast"
       locality            = "Podolsk"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1091108000664"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Oyster_GlobalSign_387867714BEB47BED987CB83 {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1127746307160"
 
    condition:
       uint16(0) == 0x5a4d and

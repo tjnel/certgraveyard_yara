@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_3092CC6FE5721C75BA8613A7 {
       state               = "Tambov Oblast"
       locality            = "Tambov"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1226800001273"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_71548998D5724DFE7ADF6F62 {
       state               = "Moscow Oblast"
       locality            = "Chekhov"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1185074002552"
 
    condition:
       uint16(0) == 0x5a4d and

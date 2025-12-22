@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_UNK_50_SSL_com_6DE73E52DF41492B72C626F1E5A7BE66 {
       state               = "East Flanders"
       locality            = "Lochristi"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0452.792.040"
 
    condition:
       uint16(0) == 0x5a4d and

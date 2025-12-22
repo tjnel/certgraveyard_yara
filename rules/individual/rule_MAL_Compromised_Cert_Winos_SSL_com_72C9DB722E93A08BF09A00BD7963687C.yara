@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Winos_SSL_com_72C9DB722E93A08BF09A00BD7963687C {
       state               = "Delaware"
       locality            = "Dover"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "3598731"
 
    condition:
       uint16(0) == 0x5a4d and

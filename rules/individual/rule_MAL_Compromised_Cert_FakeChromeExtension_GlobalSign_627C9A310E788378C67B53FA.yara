@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_FakeChromeExtension_GlobalSign_627C9A310E788378C67B53F
       state               = "Astrakhan Oblast"
       locality            = "Astrakhan"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1063024002183"
 
    condition:
       uint16(0) == 0x5a4d and

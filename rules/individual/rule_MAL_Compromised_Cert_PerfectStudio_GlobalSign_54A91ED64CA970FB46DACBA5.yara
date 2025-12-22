@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_PerfectStudio_GlobalSign_54A91ED64CA970FB46DACBA5 {
       state               = "Rajasthan"
       locality            = "Jaipur"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "U74999RJ2010PTC056527"
 
    condition:
       uint16(0) == 0x5a4d and

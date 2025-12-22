@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_29494FD2ACB61616AAEAA470 {
       state               = "Shanxi"
       locality            = "Taiyuan"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91140105MADBJG4W5A"
 
    condition:
       uint16(0) == 0x5a4d and

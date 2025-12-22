@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_FakeKeePass_DigiCert_05C1F7DD747B1AF79AC427A15A8B64AE 
       state               = "???"
       locality            = "Chişinău"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1010600003317"
 
    condition:
       uint16(0) == 0x5a4d and

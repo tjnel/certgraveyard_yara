@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Softwarecloud_SSL_com_34D3F03F4594AF3324E51BF37535AFE8
       state               = "Vienna"
       locality            = "Vienna"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "487535p"
 
    condition:
       uint16(0) == 0x5a4d and

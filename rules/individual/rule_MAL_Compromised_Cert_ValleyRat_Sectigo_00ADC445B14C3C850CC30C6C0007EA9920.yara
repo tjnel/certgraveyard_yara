@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_ValleyRat_Sectigo_00ADC445B14C3C850CC30C6C0007EA9920 {
       state               = "California"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

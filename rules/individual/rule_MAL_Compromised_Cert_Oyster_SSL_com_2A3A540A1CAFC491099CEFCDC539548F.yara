@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Oyster_SSL_com_2A3A540A1CAFC491099CEFCDC539548F {
       state               = "Jiangsu"
       locality            = "Wuxi"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91320213MA20CM4H0H"
 
    condition:
       uint16(0) == 0x5a4d and

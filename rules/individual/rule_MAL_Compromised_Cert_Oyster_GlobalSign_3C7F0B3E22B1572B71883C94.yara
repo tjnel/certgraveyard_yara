@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Oyster_GlobalSign_3C7F0B3E22B1572B71883C94 {
       state               = "Shanxi"
       locality            = "Jinzhong"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91140727MA0GR8T80N"
 
    condition:
       uint16(0) == 0x5a4d and

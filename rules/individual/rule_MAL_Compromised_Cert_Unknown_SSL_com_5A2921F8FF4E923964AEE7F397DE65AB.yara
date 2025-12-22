@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_5A2921F8FF4E923964AEE7F397DE65AB {
       state               = "Uusimaa"
       locality            = "Helsinki"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_FakeDocument_Microsoft_33000340DBFB2DC0F2DB04363C00000
       state               = "Texas"
       locality            = "Irving"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

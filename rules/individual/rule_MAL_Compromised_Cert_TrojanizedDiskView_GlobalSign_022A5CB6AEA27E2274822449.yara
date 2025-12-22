@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_TrojanizedDiskView_GlobalSign_022A5CB6AEA27E2274822449
       state               = "Bishkek"
       locality            = "Bishkek"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "192750-3301-OOO"
 
    condition:
       uint16(0) == 0x5a4d and

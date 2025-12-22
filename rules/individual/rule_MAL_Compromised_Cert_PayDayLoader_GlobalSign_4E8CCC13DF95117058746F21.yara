@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_PayDayLoader_GlobalSign_4E8CCC13DF95117058746F21 {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1087746755854"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_OneStart_SSL_com_2834C87E4445D1B6FF560A24D7F3E0AC {
       state               = "Delaware"
       locality            = "Dover"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "10070121"
 
    condition:
       uint16(0) == 0x5a4d and

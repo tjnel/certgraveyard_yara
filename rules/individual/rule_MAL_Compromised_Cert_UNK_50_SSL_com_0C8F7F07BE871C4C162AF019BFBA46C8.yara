@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_UNK_50_SSL_com_0C8F7F07BE871C4C162AF019BFBA46C8 {
       state               = "???"
       locality            = "Chisinau"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1017600034970"
 
    condition:
       uint16(0) == 0x5a4d and

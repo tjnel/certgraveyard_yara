@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Hijackloader_SSL_com_3B5B4773444AC9CBF876FEA36838CE6F 
       state               = "Uusimaa"
       locality            = "Kerava"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1504972-0"
 
    condition:
       uint16(0) == 0x5a4d and

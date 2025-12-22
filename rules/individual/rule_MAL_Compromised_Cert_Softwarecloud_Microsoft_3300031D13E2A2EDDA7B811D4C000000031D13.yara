@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Softwarecloud_Microsoft_3300031D13E2A2EDDA7B811D4C0000
       state               = "Texas"
       locality            = "Irving"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

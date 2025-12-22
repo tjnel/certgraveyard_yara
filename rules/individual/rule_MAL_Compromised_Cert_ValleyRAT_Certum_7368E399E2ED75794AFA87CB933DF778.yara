@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_7368E399E2ED75794AFA87CB933DF778 {
       cert_valid_from     = "2025-12-19"
       cert_valid_to       = "2026-12-19"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "CN"
+      state               = "Fujian"
+      locality            = "Nanan"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91350583MADGH67680"
 
    condition:
       uint16(0) == 0x5a4d and

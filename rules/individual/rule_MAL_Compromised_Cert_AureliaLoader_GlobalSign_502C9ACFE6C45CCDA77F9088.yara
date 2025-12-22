@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_AureliaLoader_GlobalSign_502C9ACFE6C45CCDA77F9088 {
       state               = "Ontario"
       locality            = "Brampton"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "11725793"
 
    condition:
       uint16(0) == 0x5a4d and

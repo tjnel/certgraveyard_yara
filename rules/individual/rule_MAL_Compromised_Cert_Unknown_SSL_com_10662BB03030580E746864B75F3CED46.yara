@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_10662BB03030580E746864B75F3CED46 {
       state               = "???"
       locality            = "Nairobi"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "CPR/2010/208593"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_FakeStatement_SSL_com_45DF3961393196E00E5F001A73DF9964
       state               = "Etelä-Pohjanmaa"
       locality            = "SEINÄJOKI"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "2182234-5"
 
    condition:
       uint16(0) == 0x5a4d and

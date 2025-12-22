@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_KTCrypt_Loader_SSL_com_6524ECD66BD22BCD244151EA1C992E8
       state               = "Jiangsu"
       locality            = "Wuxi"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91320214MA22HHQ74J"
 
    condition:
       uint16(0) == 0x5a4d and

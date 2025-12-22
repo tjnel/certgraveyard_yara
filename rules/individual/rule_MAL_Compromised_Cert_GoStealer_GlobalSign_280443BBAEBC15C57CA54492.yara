@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_GoStealer_GlobalSign_280443BBAEBC15C57CA54492 {
       state               = "Rajasthan"
       locality            = "Jaipur"
       email               = "ceothinkellips@gmail.com"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "U92490RJ2021PTC077417"
 
    condition:
       uint16(0) == 0x5a4d and

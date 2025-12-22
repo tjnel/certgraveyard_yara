@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_NetSupport_RAT_GlobalSign_1BACADCA4264971772A3A024 {
       state               = "Ha Nam"
       locality            = "Ha Nam"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0700824958"
 
    condition:
       uint16(0) == 0x5a4d and

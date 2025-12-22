@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_RealPeopleLoader_Microsoft_33000305923E9A6B3748F117A50
       state               = "Arizona"
       locality            = "Waddell"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_257C741E3A079417E0D3EA02 {
       state               = "GUANGDONG"
       locality            = "SHENZHEN"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "914403003350884898"
 
    condition:
       uint16(0) == 0x5a4d and

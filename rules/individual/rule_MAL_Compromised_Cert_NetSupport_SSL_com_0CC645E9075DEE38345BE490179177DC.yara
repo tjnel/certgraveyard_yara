@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_NetSupport_SSL_com_0CC645E9075DEE38345BE490179177DC {
       state               = "Středočeský kraj"
       locality            = "Kolín"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Softwarecloud_SSL_com_4F0659FE1BF2E22EDEC456C9794BF440
       state               = "Uusimaa"
       locality            = "Espoo"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "2957155-2"
 
    condition:
       uint16(0) == 0x5a4d and

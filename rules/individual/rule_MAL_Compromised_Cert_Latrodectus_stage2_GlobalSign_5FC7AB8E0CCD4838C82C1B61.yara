@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Latrodectus_stage2_GlobalSign_5FC7AB8E0CCD4838C82C1B61
       state               = "Rajasthan"
       locality            = "Jaipur"
       email               = "teamskyspace@gmail.com"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "AAV-6834"
 
    condition:
       uint16(0) == 0x5a4d and

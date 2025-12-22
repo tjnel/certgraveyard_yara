@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_XWorm_SSL_com_51554DAD826DA2EE44D163AA61EA5615 {
       state               = "Rio de Janeiro"
       locality            = "Rio de Janeiro"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_RemcosRAT_SSL_com_009D9EDAE470A7D76B8B0F1792232D83 {
       state               = "Iowa"
       locality            = "Des Moines"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "108572"
 
    condition:
       uint16(0) == 0x5a4d and

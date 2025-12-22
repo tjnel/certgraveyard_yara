@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_FakeChromeUpdate_SSL_com_6C96E1E122F63716AE8C4AD0DC65A
       state               = "Pirkanmaa"
       locality            = "TAMPERE"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "3249395-4"
 
    condition:
       uint16(0) == 0x5a4d and

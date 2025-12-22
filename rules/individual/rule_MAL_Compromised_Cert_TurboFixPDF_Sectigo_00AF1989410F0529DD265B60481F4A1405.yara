@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_TurboFixPDF_Sectigo_00AF1989410F0529DD265B60481F4A1405
       state               = "Delaware"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "3764490"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_573FD429CFC430E46C5797AC5B84BCBD {
       state               = "Delaware"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "3768166"
 
    condition:
       uint16(0) == 0x5a4d and

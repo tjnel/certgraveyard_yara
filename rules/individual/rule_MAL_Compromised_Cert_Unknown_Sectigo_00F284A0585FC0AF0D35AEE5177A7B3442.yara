@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_00F284A0585FC0AF0D35AEE5177A7B3442 {
       state               = "New York"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

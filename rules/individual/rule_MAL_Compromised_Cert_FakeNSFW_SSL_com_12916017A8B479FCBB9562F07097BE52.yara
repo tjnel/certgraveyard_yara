@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_FakeNSFW_SSL_com_12916017A8B479FCBB9562F07097BE52 {
       state               = "Malopolskie"
       locality            = "Nowy Sacz"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0000843484"
 
    condition:
       uint16(0) == 0x5a4d and

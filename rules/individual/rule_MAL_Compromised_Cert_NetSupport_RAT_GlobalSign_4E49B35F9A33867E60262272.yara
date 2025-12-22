@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_NetSupport_RAT_GlobalSign_4E49B35F9A33867E60262272 {
       state               = "Saint Petersburg"
       locality            = "Saint Petersburg"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1217800080156"
 
    condition:
       uint16(0) == 0x5a4d and

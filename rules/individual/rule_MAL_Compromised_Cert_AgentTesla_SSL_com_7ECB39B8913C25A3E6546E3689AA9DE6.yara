@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_AgentTesla_SSL_com_7ECB39B8913C25A3E6546E3689AA9DE6 {
       state               = "Uusimaa"
       locality            = "Kauniainen"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "3272070-7"
 
    condition:
       uint16(0) == 0x5a4d and

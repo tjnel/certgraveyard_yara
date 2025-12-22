@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Oyster_Microsoft_3300034227859130DB98A2AA4A00000003422
       state               = "North Carolina"
       locality            = "Mocksville"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

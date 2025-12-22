@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Stealer5000_GlobalSign_47858D45CE2829FA3B600737 {
       state               = "Sverdlovsk Oblast"
       locality            = "Yekaterinburg"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1156658071283"
 
    condition:
       uint16(0) == 0x5a4d and

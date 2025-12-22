@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_StealC_GlobalSign_64D320BA7835B7EABB35090B {
       state               = "Moscow Oblast"
       locality            = "Lytkarino"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1125027013968"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_SSL_com_65DC74FC2995EC9FE2D2E7
       state               = "Województwo śląskie"
       locality            = "Katowice"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0000957395"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Vidar_SSL_com_70044DC752FEE75A0835741593072573 {
       state               = "canton of Zürich"
       locality            = "Andelfingen"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "CHE-209.993.214"
 
    condition:
       uint16(0) == 0x5a4d and

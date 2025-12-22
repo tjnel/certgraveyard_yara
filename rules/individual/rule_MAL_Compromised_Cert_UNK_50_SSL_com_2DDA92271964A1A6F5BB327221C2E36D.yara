@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_UNK_50_SSL_com_2DDA92271964A1A6F5BB327221C2E36D {
       state               = "Uusimaa"
       locality            = "Kerava"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0203058-8"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_FakeNSFW_SSL_com_5ECDA0686C2632163BC7F9F342366FF4 {
       state               = "Buenos Aires Province"
       locality            = "Buenos Aires"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "30-70892751-8"
 
    condition:
       uint16(0) == 0x5a4d and

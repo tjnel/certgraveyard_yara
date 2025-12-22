@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_SoftwareCloud_Microsoft_330004352678CC1E8ABD94DB1C0000
       state               = "New York"
       locality            = "Wallkill"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

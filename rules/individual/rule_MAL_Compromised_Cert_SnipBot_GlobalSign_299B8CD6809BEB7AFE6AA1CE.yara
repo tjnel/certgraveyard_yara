@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_SnipBot_GlobalSign_299B8CD6809BEB7AFE6AA1CE {
       state               = "Aalborg"
       locality            = "Vodskov"
       email               = "anders.lykke@ccbu.dk"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "37303216"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_ScreenConnect_Phishing_GlobalSign_60D16EC97ED649E7E625
       state               = "Michigan"
       locality            = "Farmington Hills"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "801895053"
 
    condition:
       uint16(0) == 0x5a4d and

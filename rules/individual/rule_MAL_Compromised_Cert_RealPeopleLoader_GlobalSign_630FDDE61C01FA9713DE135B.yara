@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_RealPeopleLoader_GlobalSign_630FDDE61C01FA9713DE135B {
       state               = "Hubei"
       locality            = "Ezhou"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91420702MAD5FYH837"
 
    condition:
       uint16(0) == 0x5a4d and

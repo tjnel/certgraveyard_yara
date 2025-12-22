@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_SnipBot_GlobalSign_0BC777F88DDF5F3CE479452F {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "arion.ooo@rambler.ru"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1237700891867"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Softwarecloud_SSL_com_1846DA228F4D8488025ACB3A9D5E99D8
       state               = "Lower Silesian Voivodeship"
       locality            = "Wrocław"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0000940574"
 
    condition:
       uint16(0) == 0x5a4d and

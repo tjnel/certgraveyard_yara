@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_2D4B965D94FBD665EDE6488405DDEC72 {
       state               = "???"
       locality            = "Shanghai"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91310116MA1JAA69XR"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_AzoRult_Comodo_4BBF667B63E1962A30AED63B346D789B {
       state               = "Saint-Petersburg"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

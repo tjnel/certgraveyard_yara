@@ -8,7 +8,7 @@ rule MAL_Compromised_Cert_Lumma_Stealer_Certum_6EA1C1F413D70D7FCCA1C13D2BD6A8B5 
       date                = "2025-02-16"
       version             = "1.0"
 
-      hash                = "8259a493729abd201b33851f56817f812ffd8ac75bfd3abc100e04c022f5ce59"
+      hash                = "50d898c0f480f38d47991dd617e2255e1ed332a973360014e2a047c85381a752"
       malware             = "Lumma Stealer"
       malware_type        = "Infostealer"
       malware_notes       = "This malware was sold as a service and was the most popular infostealer in 2024."

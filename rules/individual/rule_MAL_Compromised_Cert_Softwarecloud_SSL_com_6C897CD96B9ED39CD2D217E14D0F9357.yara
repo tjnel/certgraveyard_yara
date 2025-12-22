@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Softwarecloud_SSL_com_6C897CD96B9ED39CD2D217E14D0F9357
       state               = "Lublin Voivodeship"
       locality            = "Lublin"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0000628786"
 
    condition:
       uint16(0) == 0x5a4d and

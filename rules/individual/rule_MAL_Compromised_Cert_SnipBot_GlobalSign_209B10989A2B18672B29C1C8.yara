@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_SnipBot_GlobalSign_209B10989A2B18672B29C1C8 {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1237700728616"
 
    condition:
       uint16(0) == 0x5a4d and

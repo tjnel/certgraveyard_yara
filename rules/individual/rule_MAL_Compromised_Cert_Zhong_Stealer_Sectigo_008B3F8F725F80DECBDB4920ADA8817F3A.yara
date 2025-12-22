@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_008B3F8F725F80DECBDB4920ADA8817F
       state               = "Gyeonggi-do"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

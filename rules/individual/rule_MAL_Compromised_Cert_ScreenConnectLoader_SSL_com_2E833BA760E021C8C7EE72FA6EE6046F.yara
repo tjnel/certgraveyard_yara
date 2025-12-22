@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_2E833BA760E021C8C7EE72FA6E
       state               = "Województwo wielkopolskie"
       locality            = "Poznań"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "0000684548"
 
    condition:
       uint16(0) == 0x5a4d and

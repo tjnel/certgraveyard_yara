@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_SSL_com_6D8954760DB07FE5C98453
       state               = "Auckland Region"
       locality            = "Auckland"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "6064767"
 
    condition:
       uint16(0) == 0x5a4d and

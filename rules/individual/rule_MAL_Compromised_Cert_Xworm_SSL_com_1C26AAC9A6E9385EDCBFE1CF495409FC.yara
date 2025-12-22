@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Xworm_SSL_com_1C26AAC9A6E9385EDCBFE1CF495409FC {
       state               = "Bahia"
       locality            = "Santa Cruz da Vitória"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "09.429.885/0001-13"
 
    condition:
       uint16(0) == 0x5a4d and

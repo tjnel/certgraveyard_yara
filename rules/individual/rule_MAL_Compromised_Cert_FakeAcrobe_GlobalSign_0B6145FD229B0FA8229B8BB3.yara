@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_FakeAcrobe_GlobalSign_0B6145FD229B0FA8229B8BB3 {
       state               = "Vologda Oblast"
       locality            = "Vologda"
       email               = "oleg-babin@internet.ru"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1253500006803"
 
    condition:
       uint16(0) == 0x5a4d and

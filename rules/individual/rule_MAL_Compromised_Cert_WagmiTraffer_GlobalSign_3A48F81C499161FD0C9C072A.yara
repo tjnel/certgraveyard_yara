@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_WagmiTraffer_GlobalSign_3A48F81C499161FD0C9C072A {
       state               = "Moscow"
       locality            = "Moscow"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1247700686551"
 
    condition:
       uint16(0) == 0x5a4d and

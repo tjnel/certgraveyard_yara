@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_LumiStealer_SSL_com_2D168D5FD32D40F5BC8A058DB98520EC {
       state               = "São Paulo"
       locality            = "São Paulo"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

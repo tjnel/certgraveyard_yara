@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Latrodectus_SSL_com_611E5DC57B210DC08205140F6D57063F {
       state               = "Bălți Municipality"
       locality            = "Bălţi"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1017602002645"
 
    condition:
       uint16(0) == 0x5a4d and
