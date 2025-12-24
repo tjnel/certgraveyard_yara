@@ -4,6 +4,22 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2025.12.24] - 2025-12-24
+
+### Added
+- MAL_Compromised_Cert_MacSync_Apple_29A552D8DFF80468 (MacSync - Apple)
+- MAL_Compromised_Cert_TrashAgent_SSL_com_50371174E52213DCD4654A44F7A4F515 (TrashAgent - SSL.com)
+- MAL_Compromised_Cert_MacSync_Apple_6391B8215CDB6477 (MacSync - Apple)
+- MAL_Compromised_Cert_CastleLoader_GlobalSign_5C1C54F72BCC4DB6079023BA (CastleLoader - GlobalSign)
+- MAL_Compromised_Cert_ValleyRAT_GlobalSign_54920428011B1572DC58F84D (ValleyRAT - GlobalSign)
+- MAL_Compromised_Cert_Unknown_Microsoft_330005D58F978A6C19F60308F100000005D58F (Unknown - Microsoft)
+- MAL_Compromised_Cert_Unknown_GlobalSign_26DAC9CFFDE72C578F8C3060 (Unknown - GlobalSign)
+- MAL_Compromised_Cert_MacSync_Apple_743AC6B4C08DDA28 (MacSync - Apple)
+
+### Modified
+- MAL_Compromised_Cert_CastleLoader_GlobalSign_23CA2FC2A588B52B7D70E96B (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_TrashAgent_SSL_com_0FD30A81433B194F263FB623BE282E65 (Updated metadata for TrashAgent)
+
 ## [2025.12.23] - 2025-12-23
 
 ### Added

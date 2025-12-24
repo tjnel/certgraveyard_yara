@@ -4550,6 +4550,41 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_1916747D5AC1ABEC2D20DB84 {
       )
 }
 
+rule MAL_Compromised_Cert_CastleLoader_GlobalSign_23CA2FC2A588B52B7D70E96B {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-07-30"
+      version             = "1.0"
+
+      hash                = "05d2d06143d363c1e41546f14c1d99b082402460ba4e8598667614de996d2fbc"
+      malware             = "CastleLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "This version of the malware was a trojanized Advanced IP Scanner."
+
+      signer              = "ANVIA LLC"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "23:ca:2f:c2:a5:88:b5:2b:7d:70:e9:6b"
+      cert_thumbprint     = "6CBC820B354C4712EEB55A8CD8AB6ECCB9BA4D21"
+      cert_valid_from     = "2025-07-30"
+      cert_valid_to       = "2026-06-24"
+
+      country             = "RU"
+      state               = "Moscow"
+      locality            = "Moscow"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "23:ca:2f:c2:a5:88:b5:2b:7d:70:e9:6b"
+      )
+}
+
 rule MAL_Compromised_Cert_CastleLoader_GlobalSign_2C204F0654E5D1D07E9E09B7 {
    meta:
       description         = "Detects CastleLoader with compromised cert (GlobalSign)"
@@ -4687,6 +4722,41 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_5641E6878B4E49FA1E6B22F6 {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "56:41:e6:87:8b:4e:49:fa:1e:6b:22:f6"
+      )
+}
+
+rule MAL_Compromised_Cert_CastleLoader_GlobalSign_5C1C54F72BCC4DB6079023BA {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-08-20"
+      version             = "1.0"
+
+      hash                = "7ce399ae92c3e79a25e9013b2c81fe0add119bda0a65336d1e5c231654db01a5"
+      malware             = "CastleLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "This copy was a trojanized Advanced IP scanner installer."
+
+      signer              = "NOMAC LLC"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "5c:1c:54:f7:2b:cc:4d:b6:07:90:23:ba"
+      cert_thumbprint     = "2C28CC8AFC87E5B059623D8F655DFAA5D1E0274B"
+      cert_valid_from     = "2025-08-20"
+      cert_valid_to       = "2026-05-20"
+
+      country             = "RU"
+      state               = "Moscow"
+      locality            = "Moscow"
+      email               = "???"
+      rdn_serial_number   = "1257700190373"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "5c:1c:54:f7:2b:cc:4d:b6:07:90:23:ba"
       )
 }
 
@@ -23482,6 +23552,111 @@ rule MAL_Compromised_Cert_MATA_Sectigo_00D8F7700C8C150FDFFBDE8AF629D3600F {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA R36" and
          sig.serial == "00:d8:f7:70:0c:8c:15:0f:df:fb:de:8a:f6:29:d3:60:0f"
+      )
+}
+
+rule MAL_Compromised_Cert_MacSync_Apple_29A552D8DFF80468 {
+   meta:
+      description         = "Detects MacSync with compromised cert (Apple)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-14"
+      version             = "1.0"
+
+      hash                = "7cfe0b119e616ac81ddb1767a5c7f40bec67d91fdd66e53490c0225789537073"
+      malware             = "MacSync"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "OKAN ATAKOL"
+      cert_issuer_short   = "Apple"
+      cert_issuer         = "Apple Inc."
+      cert_serial         = "29:a5:52:d8:df:f8:04:68"
+      cert_thumbprint     = "0401D7DA62746F5A8A5AA38D46B995EEDDFE0361"
+      cert_valid_from     = "2025-11-14"
+      cert_valid_to       = "2027-02-01"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Apple Inc." and
+         sig.serial == "29:a5:52:d8:df:f8:04:68"
+      )
+}
+
+rule MAL_Compromised_Cert_MacSync_Apple_6391B8215CDB6477 {
+   meta:
+      description         = "Detects MacSync with compromised cert (Apple)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-11-01"
+      version             = "1.0"
+
+      hash                = "0a070d32e5b8648c6515cb5a0b6fba202c5c8f80e15f7c3621bd8fecd7708b04"
+      malware             = "MacSync"
+      malware_type        = "Infostealer"
+      malware_notes       = "Recently identified infostealer documented here: https://www.jamf.com/blog/macsync-stealer-evolution-code-signed-swift-malware-analysis/"
+
+      signer              = "Victor Redmond"
+      cert_issuer_short   = "Apple"
+      cert_issuer         = "Apple Inc."
+      cert_serial         = "63:91:b8:21:5c:db:64:77"
+      cert_thumbprint     = "3660BD4E40539976567F3E4607BAFAB4D98DF5E5"
+      cert_valid_from     = "2024-11-01"
+      cert_valid_to       = "2027-02-01"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Apple Inc." and
+         sig.serial == "63:91:b8:21:5c:db:64:77"
+      )
+}
+
+rule MAL_Compromised_Cert_MacSync_Apple_743AC6B4C08DDA28 {
+   meta:
+      description         = "Detects MacSync with compromised cert (Apple)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-18"
+      version             = "1.0"
+
+      hash                = "b591bfbab57cc69ce985fbc426002ef00826605257de0547f20ebcfecc3724c2"
+      malware             = "MacSync"
+      malware_type        = "Infostealer"
+      malware_notes       = "Recently observed infostealer: https://www.jamf.com/blog/macsync-stealer-evolution-code-signed-swift-malware-analysis/"
+
+      signer              = "FERDI AKYEL"
+      cert_issuer_short   = "Apple"
+      cert_issuer         = "Apple Inc."
+      cert_serial         = "74:3a:c6:b4:c0:8d:da:28"
+      cert_thumbprint     = "5F6CB4AB29EDD0FB82587491B2E874AE26F677AB"
+      cert_valid_from     = "2025-12-18"
+      cert_valid_to       = "2027-02-01"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Apple Inc." and
+         sig.serial == "74:3a:c6:b4:c0:8d:da:28"
       )
 }
 
@@ -50120,6 +50295,76 @@ rule MAL_Compromised_Cert_TransferLoader_Sectigo_2D1DC3C2E0B0682AB3594E5237DD7C2
       )
 }
 
+rule MAL_Compromised_Cert_TrashAgent_SSL_com_0FD30A81433B194F263FB623BE282E65 {
+   meta:
+      description         = "Detects TrashAgent with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-10"
+      version             = "1.0"
+
+      hash                = "88954524b8e24acad13d00e1bb66f6cd437df1039087945ff1b010f9c217c1fa"
+      malware             = "TrashAgent"
+      malware_type        = "Initial access tool"
+      malware_notes       = "This malware was distributed as a fake invoice."
+
+      signer              = "Contour Design Norge AS"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "0f:d3:0a:81:43:3b:19:4f:26:3f:b6:23:be:28:2e:65"
+      cert_thumbprint     = "BFA93667BFA6D1F88EFFBA68073A76866403B29A"
+      cert_valid_from     = "2025-12-10"
+      cert_valid_to       = "2026-12-10"
+
+      country             = "NO"
+      state               = "Oslo"
+      locality            = "Oslo"
+      email               = "???"
+      rdn_serial_number   = "988514241"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "0f:d3:0a:81:43:3b:19:4f:26:3f:b6:23:be:28:2e:65"
+      )
+}
+
+rule MAL_Compromised_Cert_TrashAgent_SSL_com_50371174E52213DCD4654A44F7A4F515 {
+   meta:
+      description         = "Detects TrashAgent with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-24"
+      version             = "1.0"
+
+      hash                = "0d2c1adf36df47199ee1ca42417660ac5027f77671d4f3c59cce0c23d94e25f8"
+      malware             = "TrashAgent"
+      malware_type        = "Initial access tool"
+      malware_notes       = "This malware uses a custom UserAgent string TrashAgent. They use trojanized versions of applications for their malware and present a consistent error as anti-analysis."
+
+      signer              = "Hydraterm AB"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "50:37:11:74:e5:22:13:dc:d4:65:4a:44:f7:a4:f5:15"
+      cert_thumbprint     = "38C81FCCAA01021F13DACD758104A5F0C718DB40"
+      cert_valid_from     = "2025-11-24"
+      cert_valid_to       = "2028-11-23"
+
+      country             = "SE"
+      state               = "Kronoberg County"
+      locality            = "Växjö Kommun"
+      email               = "???"
+      rdn_serial_number   = "559337-1924"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "50:37:11:74:e5:22:13:dc:d4:65:4a:44:f7:a4:f5:15"
+      )
+}
+
 rule MAL_Compromised_Cert_TrickBot_DigiCert_082023879112289BF351D297CC8EFCFC {
    meta:
       description         = "Detects TrickBot with compromised cert (DigiCert)"
@@ -54950,6 +55195,41 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_257C741E3A079417E0D3EA02 {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_GlobalSign_26DAC9CFFDE72C578F8C3060 {
+   meta:
+      description         = "Detects Unknown with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-03"
+      version             = "1.0"
+
+      hash                = "c8a2bde264c1898a38ef5fb2a5bff198c5c2908ec7a4ea66b59681ab9bf82f46"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "M & V SOLUTIONS CO., LTD."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "26:da:c9:cf:fd:e7:2c:57:8f:8c:30:60"
+      cert_thumbprint     = "191f4e0a8fad139601d81d57e2315b0ca31864dcc352f7ce478819d1a3b32889"
+      cert_valid_from     = "2025-11-03"
+      cert_valid_to       = "2026-11-04"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "26:da:c9:cf:fd:e7:2c:57:8f:8c:30:60"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_GlobalSign_26E509E714518BA6CD16D26C {
    meta:
       description         = "Detects Unknown with compromised cert (GlobalSign)"
@@ -57537,6 +57817,41 @@ rule MAL_Compromised_Cert_Unknown_Microsoft_3300059A6D073A00FB51C163EE000000059A
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
          sig.serial == "33:00:05:9a:6d:07:3a:00:fb:51:c1:63:ee:00:00:00:05:9a:6d"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Microsoft_330005D58F978A6C19F60308F100000005D58F {
+   meta:
+      description         = "Detects Unknown with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-17"
+      version             = "1.0"
+
+      hash                = "c1616cab9de94e0ff962bd4ce51cd35bc465bd6ee9eea2ba328abb6ca1e7e33b"
+      malware             = "Unknown"
+      malware_type        = "Initial access tool"
+      malware_notes       = "Flagged by Microsoft as Storm-0300 related."
+
+      signer              = "MARKET BRIDGE HOLDINGS LIMITED"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:05:d5:8f:97:8a:6c:19:f6:03:08:f1:00:00:00:05:d5:8f"
+      cert_thumbprint     = "DC5383549726F60F9F437B7157EAAEDA251A11FA"
+      cert_valid_from     = "2025-12-17"
+      cert_valid_to       = "2025-12-20"
+
+      country             = "GB"
+      state               = "Greater London"
+      locality            = "London"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:05:d5:8f:97:8a:6c:19:f6:03:08:f1:00:00:00:05:d5:8f"
       )
 }
 
@@ -61422,6 +61737,41 @@ rule MAL_Compromised_Cert_ValleyRAT_GlobalSign_0CBAF79465EBF8404FBF0EAA {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "0c:ba:f7:94:65:eb:f8:40:4f:bf:0e:aa"
+      )
+}
+
+rule MAL_Compromised_Cert_ValleyRAT_GlobalSign_54920428011B1572DC58F84D {
+   meta:
+      description         = "Detects ValleyRAT with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-20"
+      version             = "1.0"
+
+      hash                = "1c46675149b0f4d926783c855e860b20548568849cdec941a62abb72534d1e68"
+      malware             = "ValleyRAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = "This version was disguised as a flash player installer. Read more about ValleyRAT here: https://research.checkpoint.com/2025/cracking-valleyrat-from-builder-secrets-to-kernel-rootkits/"
+
+      signer              = "哈尔滨瑚板颂电子科技有限公司"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "54:92:04:28:01:1b:15:72:dc:58:f8:4d"
+      cert_thumbprint     = "8D61A18D80A316E0791FAF1CB8AAFF42B8B621BA"
+      cert_valid_from     = "2025-11-20"
+      cert_valid_to       = "2026-11-21"
+
+      country             = "CN"
+      state               = "黑龙江"
+      locality            = "哈尔滨"
+      email               = "???"
+      rdn_serial_number   = "91230109MAE08WRJ07"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "54:92:04:28:01:1b:15:72:dc:58:f8:4d"
       )
 }
 
