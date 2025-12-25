@@ -55216,11 +55216,11 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_26DAC9CFFDE72C578F8C3060 {
       cert_valid_from     = "2025-11-03"
       cert_valid_to       = "2026-11-04"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "TH"
+      state               = "Chonburi"
+      locality            = "Sattahip"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "0205567049615"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -61390,6 +61390,41 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_4DDD9F79FFA78EB06C8C638334836ACF {
       )
 }
 
+rule MAL_Compromised_Cert_ValleyRAT_Certum_52AF7661636C0C9BEF328C7F13A32230 {
+   meta:
+      description         = "Detects ValleyRAT with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-23"
+      version             = "1.0"
+
+      hash                = "84363809a16939c41a6766373a033c9ddb257c719b9ca59abe79e68dcfe80ae6"
+      malware             = "ValleyRAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = "This same signer name was used to sign ZhongStealer. More about ValleyRAT can be learned here: https://research.checkpoint.com/2025/cracking-valleyrat-from-builder-secrets-to-kernel-rootkits/"
+
+      signer              = "RichQuest Network Technology Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "52:af:76:61:63:6c:0c:9b:ef:32:8c:7f:13:a3:22:30"
+      cert_thumbprint     = "7DC762F855ED9E7A6B2FFB881CA680F004BEA306"
+      cert_valid_from     = "2025-12-23"
+      cert_valid_to       = "2026-12-23"
+
+      country             = "CN"
+      state               = "吉林省"
+      locality            = "松原市"
+      email               = "???"
+      rdn_serial_number   = "91220702MABPBBD61L"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "52:af:76:61:63:6c:0c:9b:ef:32:8c:7f:13:a3:22:30"
+      )
+}
+
 rule MAL_Compromised_Cert_ValleyRAT_Certum_5E0016A3D3E00463E5BF0753D80CDED2 {
    meta:
       description         = "Detects ValleyRAT with compromised cert (Certum)"
@@ -64362,6 +64397,41 @@ rule MAL_Compromised_Cert_ZhongStealer_GlobalSign_7EAD677A7DD7F660379D116A {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "7e:ad:67:7a:7d:d7:f6:60:37:9d:11:6a"
+      )
+}
+
+rule MAL_Compromised_Cert_ZhongStealer_Sectigo_00E3CFD617A941C74853AC65890BB6C46A {
+   meta:
+      description         = "Detects ZhongStealer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-08-11"
+      version             = "1.0"
+
+      hash                = "4cf973d3c8985c32572680203bc01121cf18342f75c139ec0fb202900809917c"
+      malware             = "ZhongStealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "The malware file is named similar to a screenshot or image, pulls second stage contents off of legitimate CDN."
+
+      signer              = "RichQuest Network Technology Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:e3:cf:d6:17:a9:41:c7:48:53:ac:65:89:0b:b6:c4:6a"
+      cert_thumbprint     = "0C4CF82C6D22B8A57A2EC4B475A4C8E9D0BBA092"
+      cert_valid_from     = "2025-08-11"
+      cert_valid_to       = "2026-08-11"
+
+      country             = "CN"
+      state               = "Jilin Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91220702MABPBBD61L"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:e3:cf:d6:17:a9:41:c7:48:53:ac:65:89:0b:b6:c4:6a"
       )
 }
 
