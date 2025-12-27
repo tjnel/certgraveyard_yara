@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_CrazyEvil_Traffer_GlobalSign_61B6B482F4D2937533E8A07B 
 
       hash                = "f427cc8ba338c1400a9576f6ae8008ab16ca358e391c2cbca459cf6def30b354"
       malware             = "CrazyEvil Traffer"
-      malware_type        = "Unknown"
-      malware_notes       = ""
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware was distributed disguised as a video game. The actors send DMs to potential victims asking them to try the game or even offer to pay them to try the game."
 
       signer              = "SZVERES MARKETING SRL"
       cert_issuer_short   = "GlobalSign"

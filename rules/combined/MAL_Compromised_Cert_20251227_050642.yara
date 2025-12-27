@@ -7955,8 +7955,8 @@ rule MAL_Compromised_Cert_CrazyEvil_Traffer_GlobalSign_61B6B482F4D2937533E8A07B 
 
       hash                = "f427cc8ba338c1400a9576f6ae8008ab16ca358e391c2cbca459cf6def30b354"
       malware             = "CrazyEvil Traffer"
-      malware_type        = "Unknown"
-      malware_notes       = ""
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware was distributed disguised as a video game. The actors send DMs to potential victims asking them to try the game or even offer to pay them to try the game."
 
       signer              = "SZVERES MARKETING SRL"
       cert_issuer_short   = "GlobalSign"
@@ -57855,6 +57855,76 @@ rule MAL_Compromised_Cert_Unknown_Microsoft_330005D58F978A6C19F60308F100000005D5
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Microsoft_330005E2E648E24BC51921E7C200000005E2E6 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-21"
+      version             = "1.0"
+
+      hash                = "4bea333d3d2f2a32018cd6afe742c3b25bfcc6bfe8963179dad3940305b13c98"
+      malware             = "Unknown"
+      malware_type        = "Infostealer"
+      malware_notes       = "Someone modified the legitimate EmEditor website to distribute this infostealer. An analysis of the malware can be found here: https://mp.weixin.qq.com/s/M1-UdMaGflhkuqet0K1gqg"
+
+      signer              = "WALSHAM INVESTMENTS LIMITED"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:05:e2:e6:48:e2:4b:c5:19:21:e7:c2:00:00:00:05:e2:e6"
+      cert_thumbprint     = "8FF6A92D47F212725D4A77A9600B18430058B2C2"
+      cert_valid_from     = "2025-12-21"
+      cert_valid_to       = "2025-12-24"
+
+      country             = "GB"
+      state               = "Essex"
+      locality            = "Grays"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:05:e2:e6:48:e2:4b:c5:19:21:e7:c2:00:00:00:05:e2:e6"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Microsoft_330005E4648C6BF731C5D00F3300000005E464 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-20"
+      version             = "1.0"
+
+      hash                = "3d1763b037e66bbde222125a21b23fc24abd76ebab40589748ac69e2f37c27fc"
+      malware             = "Unknown"
+      malware_type        = "Infostealer"
+      malware_notes       = "Someone modified the legitimate EmEditor website to distribute this infostealer. An analysis of the malware can be found here: https://mp.weixin.qq.com/s/M1-UdMaGflhkuqet0K1gqg"
+
+      signer              = "WALSHAM INVESTMENTS LIMITED"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:05:e4:64:8c:6b:f7:31:c5:d0:0f:33:00:00:00:05:e4:64"
+      cert_thumbprint     = "6BDA2A57F1E2BBC235DCAF16728DF2655EBF69C1"
+      cert_valid_from     = "2025-12-20"
+      cert_valid_to       = "2025-12-23"
+
+      country             = "GB"
+      state               = "Essex"
+      locality            = "Grays"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:05:e4:64:8c:6b:f7:31:c5:d0:0f:33:00:00:00:05:e4:64"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_SSL_com_026DB70F749DC993EDB96BD0D65BC394 {
    meta:
       description         = "Detects Unknown with compromised cert (SSL.com)"
@@ -64327,6 +64397,41 @@ rule MAL_Compromised_Cert_ZhongStealer_Certum_418A597765E84F03F07933EFA3CC39D4 {
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
          sig.serial == "41:8a:59:77:65:e8:4f:03:f0:79:33:ef:a3:cc:39:d4"
+      )
+}
+
+rule MAL_Compromised_Cert_ZhongStealer_Certum_4380B3CDE17D335114FF3E21D2A50637 {
+   meta:
+      description         = "Detects ZhongStealer with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-04"
+      version             = "1.0"
+
+      hash                = "a1a114fd875bd6f96d2ceeac2b98596c0ac56d727e4bb970becb2466cec40086"
+      malware             = "ZhongStealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware is distributed disguised as screenshots or photos. The malware downloads secondary stages from legitimate CDN."
+
+      signer              = "Taiyuan Feizhe Trading Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "43:80:b3:cd:e1:7d:33:51:14:ff:3e:21:d2:a5:06:37"
+      cert_thumbprint     = "7ABB2B0F49378F5D53FAF8F804D0B26C1DE9D2B0"
+      cert_valid_from     = "2025-12-04"
+      cert_valid_to       = "2026-12-04"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "43:80:b3:cd:e1:7d:33:51:14:ff:3e:21:d2:a5:06:37"
       )
 }
 

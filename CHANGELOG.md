@@ -4,6 +4,16 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2025.12.27] - 2025-12-27
+
+### Added
+- MAL_Compromised_Cert_Unknown_Microsoft_330005E2E648E24BC51921E7C200000005E2E6 (Unknown - Microsoft)
+- MAL_Compromised_Cert_Unknown_Microsoft_330005E4648C6BF731C5D00F3300000005E464 (Unknown - Microsoft)
+- MAL_Compromised_Cert_ZhongStealer_Certum_4380B3CDE17D335114FF3E21D2A50637 (ZhongStealer - Certum)
+
+### Modified
+- MAL_Compromised_Cert_CrazyEvil_Traffer_GlobalSign_61B6B482F4D2937533E8A07B (Updated metadata for CrazyEvil Traffer)
+
 ## [2025.12.25] - 2025-12-25
 
 ### Added
