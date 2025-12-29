@@ -4,6 +4,16 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2025.12.29] - 2025-12-29
+
+### Added
+- MAL_Compromised_Cert_Unknown_GlobalSign_66B085B30DE79CDDE2B1DDA1 (Unknown - GlobalSign)
+- MAL_Compromised_Cert_SearchLoader_Microsoft_330005E8C830651000B785A9EF00000005E8C8 (SearchLoader - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_WinVnc_GlobalSign_0C800473CA8670527339B6DE (Updated metadata for WinVnc)
+- MAL_Compromised_Cert_ZhongStealer_Certum_4380B3CDE17D335114FF3E21D2A50637 (Updated metadata for ZhongStealer)
+
 ## [2025.12.27] - 2025-12-27
 
 ### Added

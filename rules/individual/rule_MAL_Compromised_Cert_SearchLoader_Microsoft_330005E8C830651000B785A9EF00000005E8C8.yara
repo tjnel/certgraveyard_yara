@@ -1,0 +1,36 @@
+import "pe"
+
+rule MAL_Compromised_Cert_SearchLoader_Microsoft_330005E8C830651000B785A9EF00000005E8C8 {
+   meta:
+      description         = "Detects SearchLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-21"
+      version             = "1.0"
+
+      hash                = "8a6952a09533f1da238681c5f8823493ccd5d05f1c7877a232bf05cb0bac7584"
+      malware             = "SearchLoader"
+      malware_type        = "Infostealer"
+      malware_notes       = ""
+
+      signer              = "SOFTOLIO sp. z o.o."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:05:e8:c8:30:65:10:00:b7:85:a9:ef:00:00:00:05:e8:c8"
+      cert_thumbprint     = "45A7460A9F8217E55A14FB5DC7187EF7A7BDDE32"
+      cert_valid_from     = "2025-12-21"
+      cert_valid_to       = "2025-12-24"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:05:e8:c8:30:65:10:00:b7:85:a9:ef:00:00:00:05:e8:c8"
+      )
+}

@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_ZhongStealer_Certum_4380B3CDE17D335114FF3E21D2A50637 {
       cert_valid_from     = "2025-12-04"
       cert_valid_to       = "2026-12-04"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "CN"
+      state               = "Shanxi"
+      locality            = "Taiyuan"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91140105MADCLAGY31"
 
    condition:
       uint16(0) == 0x5a4d and

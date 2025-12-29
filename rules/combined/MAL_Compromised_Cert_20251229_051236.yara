@@ -43050,6 +43050,41 @@ rule MAL_Compromised_Cert_SearchLoader_Microsoft_3300054397AC0F8252829D630F00000
       )
 }
 
+rule MAL_Compromised_Cert_SearchLoader_Microsoft_330005E8C830651000B785A9EF00000005E8C8 {
+   meta:
+      description         = "Detects SearchLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-21"
+      version             = "1.0"
+
+      hash                = "8a6952a09533f1da238681c5f8823493ccd5d05f1c7877a232bf05cb0bac7584"
+      malware             = "SearchLoader"
+      malware_type        = "Infostealer"
+      malware_notes       = ""
+
+      signer              = "SOFTOLIO sp. z o.o."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:05:e8:c8:30:65:10:00:b7:85:a9:ef:00:00:00:05:e8:c8"
+      cert_thumbprint     = "45A7460A9F8217E55A14FB5DC7187EF7A7BDDE32"
+      cert_valid_from     = "2025-12-21"
+      cert_valid_to       = "2025-12-24"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:05:e8:c8:30:65:10:00:b7:85:a9:ef:00:00:00:05:e8:c8"
+      )
+}
+
 rule MAL_Compromised_Cert_SearchLoader_Microsoft_33000621BC3C359A50E123AB850000000621BC {
    meta:
       description         = "Detects SearchLoader with compromised cert (Microsoft)"
@@ -56700,6 +56735,41 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_66407B43BAC0DD959F14958F {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_GlobalSign_66B085B30DE79CDDE2B1DDA1 {
+   meta:
+      description         = "Detects Unknown with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-09-26"
+      version             = "1.0"
+
+      hash                = "7c82e966c458ed5be7ff7a727e73720968cd6d26eed382aa1f62cce6933399d0"
+      malware             = "Unknown"
+      malware_type        = "Backdoor"
+      malware_notes       = "The MSI file contains a EXE for DLL sideloading. The DLL is a Nim malware implant."
+
+      signer              = "ChasingFire Dream Technologies Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "66:b0:85:b3:0d:e7:9c:dd:e2:b1:dd:a1"
+      cert_thumbprint     = "0C66883B1909D6188FFA8E4D59448B5A8D930294"
+      cert_valid_from     = "2024-09-26"
+      cert_valid_to       = "2025-09-27"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "66:b0:85:b3:0d:e7:9c:dd:e2:b1:dd:a1"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_GlobalSign_69244B6035ED2277724A2F15 {
    meta:
       description         = "Detects Unknown with compromised cert (GlobalSign)"
@@ -63665,6 +63735,41 @@ rule MAL_Compromised_Cert_Win64_Kryptik_FHR_Certum_33C6CBB8827B6F181A449D2027A94
       )
 }
 
+rule MAL_Compromised_Cert_WinVnc_GlobalSign_0C800473CA8670527339B6DE {
+   meta:
+      description         = "Detects WinVnc with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-09-26"
+      version             = "1.0"
+
+      hash                = "4f964a67f2487c39f0f7a69468ae00f8a2d8b04d5c17904e2f40aa99602ca2ae"
+      malware             = "WinVnc"
+      malware_type        = "Remote access tool"
+      malware_notes       = "Drops a WinVnc binary, sets permissions in the firewall to allow for the VNC, configures it to connect to 213.108.21.116:5500. For more detail, see sandbox analysis here: https://tria.ge/251228-q4jzksxmat/behavioral1"
+
+      signer              = "ChasingFire Dream Technologies Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "0c:80:04:73:ca:86:70:52:73:39:b6:de"
+      cert_thumbprint     = "8733550C4D5DEB2F055420E049353B93F724D5F7"
+      cert_valid_from     = "2024-09-26"
+      cert_valid_to       = "2025-09-27"
+
+      country             = "CN"
+      state               = "Hubei"
+      locality            = "Wuhan"
+      email               = "???"
+      rdn_serial_number   = "91420115MA4L020L06"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "0c:80:04:73:ca:86:70:52:73:39:b6:de"
+      )
+}
+
 rule MAL_Compromised_Cert_Winos_SSL_com_2C8C8943925A595FD69F063B98D83B1D {
    meta:
       description         = "Detects Winos with compromised cert (SSL.com)"
@@ -64421,11 +64526,11 @@ rule MAL_Compromised_Cert_ZhongStealer_Certum_4380B3CDE17D335114FF3E21D2A50637 {
       cert_valid_from     = "2025-12-04"
       cert_valid_to       = "2026-12-04"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "CN"
+      state               = "Shanxi"
+      locality            = "Taiyuan"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91140105MADCLAGY31"
 
    condition:
       uint16(0) == 0x5a4d and
