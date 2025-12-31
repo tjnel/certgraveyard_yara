@@ -65345,6 +65345,76 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_008B3F8F725F80DECBDB4920ADA8817F
       )
 }
 
+rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_008CA703D6A6A9FDFCD920C62316723EAC {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-12"
+      version             = "1.0"
+
+      hash                = "1d2f9b6680d3df883dceac3eb5dd35c13a9862ef0ba6f40603df5a1e54408c6e"
+      malware             = "Zhong Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "Malware is frequently disguised as a image or screenshot. Pulls second stages from legitimate CDN."
+
+      signer              = "Luanchuan County Qiangsheng Information Engineering Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:8c:a7:03:d6:a6:a9:fd:fc:d9:20:c6:23:16:72:3e:ac"
+      cert_thumbprint     = "4C489977809BB6A54E528532862CF1D9E4FA9990"
+      cert_valid_from     = "2025-12-12"
+      cert_valid_to       = "2026-12-12"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:8c:a7:03:d6:a6:a9:fd:fc:d9:20:c6:23:16:72:3e:ac"
+      )
+}
+
+rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_0098280C64F0D7F06696998673AC08F8A7 {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-17"
+      version             = "1.0"
+
+      hash                = "cb7793147566cb0cbd2d60918e4825389c549d8a9b89cec611c12ecb028593f5"
+      malware             = "Zhong Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "This is a malware we track as Zhong Stealer; it is frequently delivered disguised as a image or a screenshot; it then pulls its second stage off of legitimate CDN."
+
+      signer              = "Jieyang Santian E-commerce Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:98:28:0c:64:f0:d7:f0:66:96:99:86:73:ac:08:f8:a7"
+      cert_thumbprint     = "769CE5E5558DA6C60F6829E66A1F5DB12151C636"
+      cert_valid_from     = "2025-12-17"
+      cert_valid_to       = "2026-12-17"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:98:28:0c:64:f0:d7:f0:66:96:99:86:73:ac:08:f8:a7"
+      )
+}
+
 rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00C86D943E4E146E5FDF9694F06DA41F2B {
    meta:
       description         = "Detects Zhong Stealer with compromised cert (Sectigo)"

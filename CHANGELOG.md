@@ -4,6 +4,12 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2025.12.31] - 2025-12-31
+
+### Added
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_0098280C64F0D7F06696998673AC08F8A7 (Zhong Stealer - Sectigo)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_008CA703D6A6A9FDFCD920C62316723EAC (Zhong Stealer - Sectigo)
+
 ## [2025.12.30] - 2025-12-30
 
 ### Modified
