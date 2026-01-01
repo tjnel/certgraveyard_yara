@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_0098280C64F0D7F06696998673AC08F8
       cert_valid_from     = "2025-12-17"
       cert_valid_to       = "2026-12-17"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Guangdong Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91445221MAD886Y555"
 
    condition:
       uint16(0) == 0x5a4d and

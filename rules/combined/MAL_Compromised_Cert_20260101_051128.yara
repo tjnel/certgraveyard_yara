@@ -31465,6 +31465,41 @@ rule MAL_Compromised_Cert_PDFSpark_Microsoft_3300068102C2D97F2FA0C377B0000000068
       )
 }
 
+rule MAL_Compromised_Cert_PDFSupernova_DigiCert_014ED6F2E106CB7C2E46E8367263BBEC {
+   meta:
+      description         = "Detects PDFSupernova with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-02"
+      version             = "1.0"
+
+      hash                = "438bffa2420a6a0a17344135160c635d16c029d267d441de539fd45f5c17f551"
+      malware             = "PDFSupernova"
+      malware_type        = "Browser Hijacker"
+      malware_notes       = "This fake PDF editor hijacks the user's browser, see more documentation here: https://blog.lukeacha.com/2025/11/fake-pdf-converter-hides-dark-secret.html"
+
+      signer              = "Trivolead LTD"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "01:4e:d6:f2:e1:06:cb:7c:2e:46:e8:36:72:63:bb:ec"
+      cert_thumbprint     = "AF1624BC79C60D898374A53D515CB72F558B7420"
+      cert_valid_from     = "2025-06-02"
+      cert_valid_to       = "2028-06-01"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "01:4e:d6:f2:e1:06:cb:7c:2e:46:e8:36:72:63:bb:ec"
+      )
+}
+
 rule MAL_Compromised_Cert_PDF_Spark_GlobalSign_7BF01F1C79B42C10A321CBE6 {
    meta:
       description         = "Detects PDF Spark with compromised cert (GlobalSign)"
@@ -50400,6 +50435,41 @@ rule MAL_Compromised_Cert_TrashAgent_SSL_com_50371174E52213DCD4654A44F7A4F515 {
       )
 }
 
+rule MAL_Compromised_Cert_TrashAgent_SSL_com_72CAB4827637EA64DB51CB74C938E929 {
+   meta:
+      description         = "Detects TrashAgent with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-15"
+      version             = "1.0"
+
+      hash                = "a6fa63bc40edbed997c5dc6cd3be7104f99e2f5b76c7248c94b5e3e508b51174"
+      malware             = "TrashAgent"
+      malware_type        = "Initial access tool"
+      malware_notes       = "The malware checks for enterprise apps and doesn't run unless they are present. The malware is frequently disguised as a PDF viewer and presents a fake error."
+
+      signer              = "AudioFreq LLC"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "72:ca:b4:82:76:37:ea:64:db:51:cb:74:c9:38:e9:29"
+      cert_thumbprint     = "1030F26D8811CC1BAB9F031A9B71D0E4DAD36FF8"
+      cert_valid_from     = "2025-12-15"
+      cert_valid_to       = "2026-12-15"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "72:ca:b4:82:76:37:ea:64:db:51:cb:74:c9:38:e9:29"
+      )
+}
+
 rule MAL_Compromised_Cert_TrickBot_DigiCert_082023879112289BF351D297CC8EFCFC {
    meta:
       description         = "Detects TrickBot with compromised cert (DigiCert)"
@@ -64820,6 +64890,111 @@ rule MAL_Compromised_Cert_ZhongStealer_Verokey_04EB8615F356CF0F5BF4DBCD08238DA4 
       )
 }
 
+rule MAL_Compromised_Cert_Zhong_Stealer_Certum_30F927F04880D925FB28775A412E8C13 {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-21"
+      version             = "1.0"
+
+      hash                = "b2ef6a86983e15d0f70e5941b79d03419d4c7bcd4b1c58223f6b8334ed800deb"
+      malware             = "Zhong Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "Loads payloads from AWS S3 bucket. downloads 503 JPG from bucket as decoy: https://tria.ge/251129-r55s4szpem/behavioral1"
+
+      signer              = "Shanghai Baiyang Information Technology Development Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "30:f9:27:f0:48:80:d9:25:fb:28:77:5a:41:2e:8c:13"
+      cert_thumbprint     = "CC2172E282D7443E956F090A6795E33BF817A927"
+      cert_valid_from     = "2025-11-21"
+      cert_valid_to       = "2026-11-21"
+
+      country             = "CN"
+      state               = "上海市"
+      locality            = "上海市"
+      email               = "???"
+      rdn_serial_number   = "91310000MADNJP1G00"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "30:f9:27:f0:48:80:d9:25:fb:28:77:5a:41:2e:8c:13"
+      )
+}
+
+rule MAL_Compromised_Cert_Zhong_Stealer_Certum_418A597765E84F03F07933EFA3CC39D4 {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-11"
+      version             = "1.0"
+
+      hash                = "14d374ea0604f70e6f39306efd948e7962fdd21cdb3e187ba461312027ebd3f5"
+      malware             = "Zhong Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+
+      signer              = "Taiyuan Chenyun Trading Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "41:8a:59:77:65:e8:4f:03:f0:79:33:ef:a3:cc:39:d4"
+      cert_thumbprint     = "6AA164C42049C428431BDD9377D813AB259780A8"
+      cert_valid_from     = "2025-12-11"
+      cert_valid_to       = "2026-12-11"
+
+      country             = "CN"
+      state               = "Shanxi"
+      locality            = "Taiyuan"
+      email               = "???"
+      rdn_serial_number   = "91140105MADD0BH943"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "41:8a:59:77:65:e8:4f:03:f0:79:33:ef:a3:cc:39:d4"
+      )
+}
+
+rule MAL_Compromised_Cert_Zhong_Stealer_Certum_4380B3CDE17D335114FF3E21D2A50637 {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-04"
+      version             = "1.0"
+
+      hash                = "a1a114fd875bd6f96d2ceeac2b98596c0ac56d727e4bb970becb2466cec40086"
+      malware             = "Zhong Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware is distributed disguised as screenshots or photos. The malware downloads secondary stages from legitimate CDN."
+
+      signer              = "Taiyuan Feizhe Trading Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "43:80:b3:cd:e1:7d:33:51:14:ff:3e:21:d2:a5:06:37"
+      cert_thumbprint     = "7ABB2B0F49378F5D53FAF8F804D0B26C1DE9D2B0"
+      cert_valid_from     = "2025-12-04"
+      cert_valid_to       = "2026-12-04"
+
+      country             = "CN"
+      state               = "Shanxi"
+      locality            = "Taiyuan"
+      email               = "???"
+      rdn_serial_number   = "91140105MADCLAGY31"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "43:80:b3:cd:e1:7d:33:51:14:ff:3e:21:d2:a5:06:37"
+      )
+}
+
 rule MAL_Compromised_Cert_Zhong_Stealer_Certum_44E16F602A8BBC60E52ADFFBDA35ED09 {
    meta:
       description         = "Detects Zhong Stealer with compromised cert (Certum)"
@@ -65310,6 +65485,76 @@ rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_648B06C27B37237B6D204BB5 {
       )
 }
 
+rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_74B936AB655DB6CA62761A5C {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-07-09"
+      version             = "1.0"
+
+      hash                = "4de8a71b4e5e37f040532aaf31908311910f449c1a64db9141a485960bbae534"
+      malware             = "Zhong Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+
+      signer              = "合肥亲爱的译官信息科技有限公司"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "74:b9:36:ab:65:5d:b6:ca:62:76:1a:5c"
+      cert_thumbprint     = "25745917F9D93F19CF8C796B660A9A27E3FA3833"
+      cert_valid_from     = "2024-07-09"
+      cert_valid_to       = "2025-08-14"
+
+      country             = "CN"
+      state               = "安徽"
+      locality            = "合肥"
+      email               = "???"
+      rdn_serial_number   = "91340100MA8PA6TBXY"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "74:b9:36:ab:65:5d:b6:ca:62:76:1a:5c"
+      )
+}
+
+rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_7EAD677A7DD7F660379D116A {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-11-01"
+      version             = "1.0"
+
+      hash                = "d58859ddc52f98e48d32f47b000970ad03e807b8eeb3a1aae7d4af2721b43ecf"
+      malware             = "Zhong Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+
+      signer              = "Hena Luxion Network Technology Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "7e:ad:67:7a:7d:d7:f6:60:37:9d:11:6a"
+      cert_thumbprint     = "6DEC33D0A800435FB16E222F8F48D6F0BD650F0D"
+      cert_valid_from     = "2024-11-01"
+      cert_valid_to       = "2025-11-02"
+
+      country             = "CN"
+      state               = "Henan"
+      locality            = "Zhengzhou"
+      email               = "???"
+      rdn_serial_number   = "91410104MA447T3JX7"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "7e:ad:67:7a:7d:d7:f6:60:37:9d:11:6a"
+      )
+}
+
 rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_008B3F8F725F80DECBDB4920ADA8817F3A {
    meta:
       description         = "Detects Zhong Stealer with compromised cert (Sectigo)"
@@ -65366,11 +65611,11 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_008CA703D6A6A9FDFCD920C62316723E
       cert_valid_from     = "2025-12-12"
       cert_valid_to       = "2026-12-12"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Henan Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91410324MACLJTXD7T"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -65401,11 +65646,11 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_0098280C64F0D7F06696998673AC08F8
       cert_valid_from     = "2025-12-17"
       cert_valid_to       = "2026-12-17"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Guangdong Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91445221MAD886Y555"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -65447,6 +65692,41 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00C86D943E4E146E5FDF9694F06DA41F
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV E36" and
          sig.serial == "00:c8:6d:94:3e:4e:14:6e:5f:df:96:94:f0:6d:a4:1f:2b"
+      )
+}
+
+rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00E3CFD617A941C74853AC65890BB6C46A {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-08-11"
+      version             = "1.0"
+
+      hash                = "4cf973d3c8985c32572680203bc01121cf18342f75c139ec0fb202900809917c"
+      malware             = "Zhong Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "The malware file is named similar to a screenshot or image, pulls second stage contents off of legitimate CDN."
+
+      signer              = "RichQuest Network Technology Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:e3:cf:d6:17:a9:41:c7:48:53:ac:65:89:0b:b6:c4:6a"
+      cert_thumbprint     = "0C4CF82C6D22B8A57A2EC4B475A4C8E9D0BBA092"
+      cert_valid_from     = "2025-08-11"
+      cert_valid_to       = "2026-08-11"
+
+      country             = "CN"
+      state               = "Jilin Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91220702MABPBBD61L"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:e3:cf:d6:17:a9:41:c7:48:53:ac:65:89:0b:b6:c4:6a"
       )
 }
 
@@ -65520,6 +65800,41 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_191E24F6C98E31D04F876A2E26E0CC71
       )
 }
 
+rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_22705DBF157ED535146911BAADB3B64A {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-27"
+      version             = "1.0"
+
+      hash                = "a508358a0786ddf2ad9496bb9374d54e71c5044df9c10fe686d43fc70484e54c"
+      malware             = "Zhong Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "The malware was downloaded via storage[.]googleapis[.]com/hongkongwork1/ and is disguised as a  image using the filename photo202512176896m.pif, but is an executable."
+
+      signer              = "Weihai Mingjun Information Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "22:70:5d:bf:15:7e:d5:35:14:69:11:ba:ad:b3:b6:4a"
+      cert_thumbprint     = "A947B270081E9E496FF347F4F89FBE3EC9CB2B72"
+      cert_valid_from     = "2025-11-27"
+      cert_valid_to       = "2026-11-27"
+
+      country             = "CN"
+      state               = "Shandong Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91371000MA3WAC7627"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "22:70:5d:bf:15:7e:d5:35:14:69:11:ba:ad:b3:b6:4a"
+      )
+}
+
 rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_34E947F11A0DA31561875BFC5FBCC5AB {
    meta:
       description         = "Detects Zhong Stealer with compromised cert (Sectigo)"
@@ -65552,6 +65867,111 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_34E947F11A0DA31561875BFC5FBCC5AB
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "34:e9:47:f1:1a:0d:a3:15:61:87:5b:fc:5f:bc:c5:ab"
+      )
+}
+
+rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_4A5F625C9BACBAE47C16B016D58EF875 {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-04"
+      version             = "1.0"
+
+      hash                = "962615e17eca365d80c31dd02f2a6c757c073cb24d31d60a1c7818284bd6ca00"
+      malware             = "Zhong Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "Malware masquerades as a screenshot, pulls additional stages from legitimate CDN."
+
+      signer              = "Henan Jiyanzhong Information Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "4a:5f:62:5c:9b:ac:ba:e4:7c:16:b0:16:d5:8e:f8:75"
+      cert_thumbprint     = "25069239F52911C80E429AFFA16A7D4FCD65EE54"
+      cert_valid_from     = "2025-12-04"
+      cert_valid_to       = "2026-12-04"
+
+      country             = "CN"
+      state               = "Henan Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91410103MACL9D58X6"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "4a:5f:62:5c:9b:ac:ba:e4:7c:16:b0:16:d5:8e:f8:75"
+      )
+}
+
+rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_4C3EDBD0B6450CB8BF2B506032A5B7B2 {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-07"
+      version             = "1.0"
+
+      hash                = "1718b2f1372dbbe9df071205fe749bcefe8857af7e376c812168f2590e1dcb27"
+      malware             = "Zhong Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware often hosts secondary payloads on CDNs. This signer name is \"Kingston Technology Company, Inc\"; but was confirmed not to be a legitimate certificate used by Kingston."
+
+      signer              = "Kingston Technology Company, Inc"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA E36"
+      cert_serial         = "4c:3e:db:d0:b6:45:0c:b8:bf:2b:50:60:32:a5:b7:b2"
+      cert_thumbprint     = "8A99A90A9B2095B52AD670B1BF5CAC68A9784FF8"
+      cert_valid_from     = "2025-06-07"
+      cert_valid_to       = "2026-05-25"
+
+      country             = "US"
+      state               = "California"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA E36" and
+         sig.serial == "4c:3e:db:d0:b6:45:0c:b8:bf:2b:50:60:32:a5:b7:b2"
+      )
+}
+
+rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_4FA68807EFBBD22B25622E60F2EF3041 {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-02-11"
+      version             = "1.0"
+
+      hash                = "be5d6c4aa4b27548a06c2afaef3b4035abf65566e9a8bfd642b4a2032729656e"
+      malware             = "Zhong Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+
+      signer              = "运城市盐湖区风颜商贸有限公司"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "4f:a6:88:07:ef:bb:d2:2b:25:62:2e:60:f2:ef:30:41"
+      cert_thumbprint     = "A176736F8B6462141E4BFDFC1FEB5EC11663D684"
+      cert_valid_from     = "2025-02-11"
+      cert_valid_to       = "2026-05-12"
+
+      country             = "CN"
+      state               = "山西省"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91140802MADALQC44B"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "4f:a6:88:07:ef:bb:d2:2b:25:62:2e:60:f2:ef:30:41"
       )
 }
 
@@ -65692,6 +66112,41 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_754022596DA5B16478C5E880ED2D730F
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "75:40:22:59:6d:a5:b1:64:78:c5:e8:80:ed:2d:73:0f"
+      )
+}
+
+rule MAL_Compromised_Cert_Zhong_Stealer_Verokey_04EB8615F356CF0F5BF4DBCD08238DA4 {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (Verokey)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-10-24"
+      version             = "1.0"
+
+      hash                = "b5fb40289c795be46e746bce7cfb8641bd4d619e49fae62f4998c7915f831e5e"
+      malware             = "Zhong Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware relies on CDNs to pull down second stage components. See https://x.com/malwrhunterteam/status/1997368057702842676?s=20"
+
+      signer              = "山西荣升源科贸有限公司"
+      cert_issuer_short   = "Verokey"
+      cert_issuer         = "Verokey High Assurance Secure Code EV"
+      cert_serial         = "04:eb:86:15:f3:56:cf:0f:5b:f4:db:cd:08:23:8d:a4"
+      cert_thumbprint     = "428FEE9B772BD7E56987E864AD8C83B5721E717F"
+      cert_valid_from     = "2024-10-24"
+      cert_valid_to       = "2026-06-18"
+
+      country             = "CN"
+      state               = "山西省"
+      locality            = "太原市"
+      email               = "???"
+      rdn_serial_number   = "91140105MA0LK0WH8B"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Verokey High Assurance Secure Code EV" and
+         sig.serial == "04:eb:86:15:f3:56:cf:0f:5b:f4:db:cd:08:23:8d:a4"
       )
 }
 

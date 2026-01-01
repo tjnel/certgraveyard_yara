@@ -4,6 +4,27 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.01.01] - 2026-01-01
+
+### Added
+- MAL_Compromised_Cert_PDFSupernova_DigiCert_014ED6F2E106CB7C2E46E8367263BBEC (PDFSupernova - DigiCert)
+- MAL_Compromised_Cert_TrashAgent_SSL_com_72CAB4827637EA64DB51CB74C938E929 (TrashAgent - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_Zhong_Stealer_Certum_30F927F04880D925FB28775A412E8C13 (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Zhong_Stealer_Verokey_04EB8615F356CF0F5BF4DBCD08238DA4 (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00E3CFD617A941C74853AC65890BB6C46A (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_4A5F625C9BACBAE47C16B016D58EF875 (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_4FA68807EFBBD22B25622E60F2EF3041 (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Zhong_Stealer_Certum_4380B3CDE17D335114FF3E21D2A50637 (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_74B936AB655DB6CA62761A5C (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_22705DBF157ED535146911BAADB3B64A (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_4C3EDBD0B6450CB8BF2B506032A5B7B2 (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_0098280C64F0D7F06696998673AC08F8A7 (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_7EAD677A7DD7F660379D116A (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_008CA703D6A6A9FDFCD920C62316723EAC (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Zhong_Stealer_Certum_418A597765E84F03F07933EFA3CC39D4 (Updated metadata for Zhong Stealer)
+
 ## [2025.12.31] - 2025-12-31
 
 ### Added
