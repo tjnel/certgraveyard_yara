@@ -4,6 +4,13 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.01.02] - 2026-01-02
+
+### Modified
+- MAL_Compromised_Cert_TrashAgent_SSL_com_72CAB4827637EA64DB51CB74C938E929 (Updated metadata for TrashAgent)
+- MAL_Compromised_Cert_PDFSupernova_DigiCert_014ED6F2E106CB7C2E46E8367263BBEC (Updated metadata for PDFSupernova)
+- MAL_Compromised_Cert_Nefilim_Sectigo_00C04F5D17AF872CB2C37E3367FE761D0D (Updated metadata for Nefilim)
+
 ## [2026.01.01] - 2026-01-01
 
 ### Added

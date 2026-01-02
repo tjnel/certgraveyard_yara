@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_TrashAgent_SSL_com_72CAB4827637EA64DB51CB74C938E929 {
       cert_valid_from     = "2025-12-15"
       cert_valid_to       = "2026-12-15"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Virginia"
+      locality            = "Crozier"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "11643998"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_PDFSupernova_DigiCert_014ED6F2E106CB7C2E46E8367263BBEC
       cert_valid_from     = "2025-06-02"
       cert_valid_to       = "2028-06-01"
 
-      country             = "???"
+      country             = "IL"
       state               = "???"
-      locality            = "???"
+      locality            = "Tel Aviv-Yafo"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "517161592"
 
    condition:
       uint16(0) == 0x5a4d and
