@@ -4,6 +4,19 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.01.07] - 2026-01-07
+
+### Added
+- MAL_Compromised_Cert_ZhongStealer_Sectigo_1B9C25D3C04716F1FE4A7F61DB7D1758 (ZhongStealer - Sectigo)
+- MAL_Compromised_Cert_Trojan_EmEditor_download_link_supply_chain_Microsoft_3300061FCA4D5F667DCB02B9E7000000061FCA (Trojan EmEditor download link supply chain - Microsoft)
+- MAL_Compromised_Cert_PureLogstealer_Xworm_SSL_com_18C1F0E7CAC9039CAFF80EADDF948EE1 (PureLogstealer, Xworm - SSL.com)
+- MAL_Compromised_Cert_OysterLoader_Microsoft_330006364594A5FEF95046451D000000063645 (OysterLoader - Microsoft)
+- MAL_Compromised_Cert_OffLoader_Certum_6797CF88841092C96699CD2AE6857E1E (OffLoader - Certum)
+
+### Modified
+- MAL_Compromised_Cert_Trojan_EmEditor_Microsoft_330005E2E648E24BC51921E7C200000005E2E6 (Updated metadata for Trojan EmEditor)
+- MAL_Compromised_Cert_Trojan_EmEditor_Microsoft_330005E4648C6BF731C5D00F3300000005E464 (Updated metadata for Trojan EmEditor)
+
 ## [2026.01.02] - 2026-01-02
 
 ### Modified

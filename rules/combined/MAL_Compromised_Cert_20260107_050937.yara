@@ -28700,6 +28700,41 @@ rule MAL_Compromised_Cert_Odyssey_Stealer_Apple_D2A0EC47605756 {
       )
 }
 
+rule MAL_Compromised_Cert_OffLoader_Certum_6797CF88841092C96699CD2AE6857E1E {
+   meta:
+      description         = "Detects OffLoader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-30"
+      version             = "1.0"
+
+      hash                = "eb2df1ba4f3b1a8681594ddcfe605c38749fd6e723bbe5c60dc885d03da0f578"
+      malware             = "OffLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "The malware was delivered disguised as a bill. The malware was flagged as OffLoader by MalwareBazaar."
+
+      signer              = "Leshan Huilai Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "67:97:cf:88:84:10:92:c9:66:99:cd:2a:e6:85:7e:1e"
+      cert_thumbprint     = "84B319205D9089F274B74C274CABEADA68990F97"
+      cert_valid_from     = "2025-12-30"
+      cert_valid_to       = "2026-12-30"
+
+      country             = "CN"
+      state               = "Sichuan"
+      locality            = "Leshan"
+      email               = "???"
+      rdn_serial_number   = "91511102MABUFY4X4J"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "67:97:cf:88:84:10:92:c9:66:99:cd:2a:e6:85:7e:1e"
+      )
+}
+
 rule MAL_Compromised_Cert_OneStart_Adware_GlobalSign_7209B6BCFD61AFA5A476DBF0 {
    meta:
       description         = "Detects OneStart Adware with compromised cert (GlobalSign)"
@@ -29747,6 +29782,41 @@ rule MAL_Compromised_Cert_OysterLoader_Microsoft_330005D52D7502E06772B1B3E100000
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
          sig.serial == "33:00:05:d5:2d:75:02:e0:67:72:b1:b3:e1:00:00:00:05:d5:2d"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_Microsoft_330006364594A5FEF95046451D000000063645 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-05"
+      version             = "1.0"
+
+      hash                = "ae6ab13427b52dbf019348f10740d83903d236f7e703918ffb43667b12c754d2"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "Creates scheduled task named DetectorSpywareSecurity which runs the persistence mechanism."
+
+      signer              = "SOFT CURLS LIMITED"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:06:36:45:94:a5:fe:f9:50:46:45:1d:00:00:00:06:36:45"
+      cert_thumbprint     = "DBCF383B156FADEE062B5230656E6E92A8272AF6"
+      cert_valid_from     = "2026-01-05"
+      cert_valid_to       = "2026-01-08"
+
+      country             = "GB"
+      state               = "Essex"
+      locality            = "Tilbury"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:06:36:45:94:a5:fe:f9:50:46:45:1d:00:00:00:06:36:45"
       )
 }
 
@@ -34017,6 +34087,41 @@ rule MAL_Compromised_Cert_PureHVNC_SSL_com_7EBAD9C6708D4A8E7673717C7D99E4CF {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "7e:ba:d9:c6:70:8d:4a:8e:76:73:71:7c:7d:99:e4:cf"
+      )
+}
+
+rule MAL_Compromised_Cert_PureLogstealer_Xworm_SSL_com_18C1F0E7CAC9039CAFF80EADDF948EE1 {
+   meta:
+      description         = "Detects PureLogstealer, Xworm with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-13"
+      version             = "1.0"
+
+      hash                = "aa412cb3954e212d73da73ceb3fb468d74b2acbbdeb09ff3eb015c914bede0a0"
+      malware             = "PureLogstealer, Xworm"
+      malware_type        = "Infostealer"
+      malware_notes       = ""
+
+      signer              = "AURORA SOLUCOES & TURISMO LTDA"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "18:c1:f0:e7:ca:c9:03:9c:af:f8:0e:ad:df:94:8e:e1"
+      cert_thumbprint     = "F609EE655A952FE42AA7078686D86372BECE422E"
+      cert_valid_from     = "2025-10-13"
+      cert_valid_to       = "2026-10-13"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "18:c1:f0:e7:ca:c9:03:9c:af:f8:0e:ad:df:94:8e:e1"
       )
 }
 
@@ -50855,6 +50960,111 @@ rule MAL_Compromised_Cert_Trojan_DigiCert_0D16167519B24B5B2410B9016D5E0782 {
       )
 }
 
+rule MAL_Compromised_Cert_Trojan_EmEditor_Microsoft_330005E2E648E24BC51921E7C200000005E2E6 {
+   meta:
+      description         = "Detects Trojan EmEditor with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-21"
+      version             = "1.0"
+
+      hash                = "4bea333d3d2f2a32018cd6afe742c3b25bfcc6bfe8963179dad3940305b13c98"
+      malware             = "Trojan EmEditor"
+      malware_type        = "Infostealer"
+      malware_notes       = "Someone modified the legitimate EmEditor website to distribute this infostealer. An analysis of the malware can be found here: https://mp.weixin.qq.com/s/M1-UdMaGflhkuqet0K1gqg"
+
+      signer              = "WALSHAM INVESTMENTS LIMITED"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:05:e2:e6:48:e2:4b:c5:19:21:e7:c2:00:00:00:05:e2:e6"
+      cert_thumbprint     = "8FF6A92D47F212725D4A77A9600B18430058B2C2"
+      cert_valid_from     = "2025-12-21"
+      cert_valid_to       = "2025-12-24"
+
+      country             = "GB"
+      state               = "Essex"
+      locality            = "Grays"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:05:e2:e6:48:e2:4b:c5:19:21:e7:c2:00:00:00:05:e2:e6"
+      )
+}
+
+rule MAL_Compromised_Cert_Trojan_EmEditor_Microsoft_330005E4648C6BF731C5D00F3300000005E464 {
+   meta:
+      description         = "Detects Trojan EmEditor with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-20"
+      version             = "1.0"
+
+      hash                = "3d1763b037e66bbde222125a21b23fc24abd76ebab40589748ac69e2f37c27fc"
+      malware             = "Trojan EmEditor"
+      malware_type        = "Infostealer"
+      malware_notes       = "Someone modified the legitimate EmEditor website to distribute this infostealer. An analysis of the malware can be found here: https://mp.weixin.qq.com/s/M1-UdMaGflhkuqet0K1gqg"
+
+      signer              = "WALSHAM INVESTMENTS LIMITED"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:05:e4:64:8c:6b:f7:31:c5:d0:0f:33:00:00:00:05:e4:64"
+      cert_thumbprint     = "6BDA2A57F1E2BBC235DCAF16728DF2655EBF69C1"
+      cert_valid_from     = "2025-12-20"
+      cert_valid_to       = "2025-12-23"
+
+      country             = "GB"
+      state               = "Essex"
+      locality            = "Grays"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:05:e4:64:8c:6b:f7:31:c5:d0:0f:33:00:00:00:05:e4:64"
+      )
+}
+
+rule MAL_Compromised_Cert_Trojan_EmEditor_download_link_supply_chain_Microsoft_3300061FCA4D5F667DCB02B9E7000000061FCA {
+   meta:
+      description         = "Detects Trojan EmEditor download link supply chain with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-31"
+      version             = "1.0"
+
+      hash                = "da59acc764bbd6b576bef6b1b9038f592ad4df0eed894b0fbd3931f733622a1a"
+      malware             = "Trojan EmEditor download link supply chain"
+      malware_type        = "Initial access tool"
+      malware_notes       = "EmEditor's website was modified to download this file. In sandbox analysis, it attempts to read and execute PowerShell from a malicious domain: https://app.any.run/tasks/6cfbe2bc-1771-4869-8ae2-a50d3ce362c0"
+
+      signer              = "GRH PSYCHIC SERVICES LTD"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:06:1f:ca:4d:5f:66:7d:cb:02:b9:e7:00:00:00:06:1f:ca"
+      cert_thumbprint     = "B6ECF94395A0F8899B3EDC7875FFDCB3F24339B3"
+      cert_valid_from     = "2025-12-31"
+      cert_valid_to       = "2026-01-03"
+
+      country             = "GB"
+      state               = "Sheffield"
+      locality            = "Sheffield"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:06:1f:ca:4d:5f:66:7d:cb:02:b9:e7:00:00:00:06:1f:ca"
+      )
+}
+
 rule MAL_Compromised_Cert_Trojan_Win64_Zapchast_ffs_Certum_33C6CBB8827B6F181A449D2027A94E45 {
    meta:
       description         = "Detects Trojan.Win64.Zapchast.ffs with compromised cert (Certum)"
@@ -64747,6 +64957,41 @@ rule MAL_Compromised_Cert_ZhongStealer_Sectigo_00E3CFD617A941C74853AC65890BB6C46
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "00:e3:cf:d6:17:a9:41:c7:48:53:ac:65:89:0b:b6:c4:6a"
+      )
+}
+
+rule MAL_Compromised_Cert_ZhongStealer_Sectigo_1B9C25D3C04716F1FE4A7F61DB7D1758 {
+   meta:
+      description         = "Detects ZhongStealer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-23"
+      version             = "1.0"
+
+      hash                = "70a20ad7ed0d8fbea9d82b585094d58e9113e8e3669ffefd89f5e291bcbedebe"
+      malware             = "ZhongStealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "Malware masquerades as a photo or screenshot. It then pulls a second stage from legitimate CDN."
+
+      signer              = "Xiamen Boyue Zhiyan Information Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "1b:9c:25:d3:c0:47:16:f1:fe:4a:7f:61:db:7d:17:58"
+      cert_thumbprint     = "22B188A6F3ADC342FBA9F813A626402070F92026"
+      cert_valid_from     = "2025-12-23"
+      cert_valid_to       = "2026-12-23"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "1b:9c:25:d3:c0:47:16:f1:fe:4a:7f:61:db:7d:17:58"
       )
 }
 
