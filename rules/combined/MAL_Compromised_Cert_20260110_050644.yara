@@ -7980,6 +7980,41 @@ rule MAL_Compromised_Cert_CrazyEvil_Traffer_GlobalSign_61B6B482F4D2937533E8A07B 
       )
 }
 
+rule MAL_Compromised_Cert_CrazyEvil_Traffer_Microsoft_3300061F6D63594C7D87BC040B000000061F6D {
+   meta:
+      description         = "Detects CrazyEvil Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-31"
+      version             = "1.0"
+
+      hash                = "9507ce7534cf31314fb38535e85231fa63d603ce68cabeaaf8a4b0020ac91aa4"
+      malware             = "CrazyEvil Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "SOFTOLIO sp. z o.o."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:06:1f:6d:63:59:4c:7d:87:bc:04:0b:00:00:00:06:1f:6d"
+      cert_thumbprint     = ""
+      cert_valid_from     = "2025-12-31"
+      cert_valid_to       = "2026-01-03"
+
+      country             = "PL"
+      state               = "Pomorskie"
+      locality            = "GDYNIA"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:06:1f:6d:63:59:4c:7d:87:bc:04:0b:00:00:00:06:1f:6d"
+      )
+}
+
 rule MAL_Compromised_Cert_CrazyEvil_Traffer_Sectigo_009D8810BFF34A30460ABF1E5410324DA8 {
    meta:
       description         = "Detects CrazyEvil Traffer with compromised cert (Sectigo)"
@@ -17497,6 +17532,41 @@ rule MAL_Compromised_Cert_Havoc_SSL_com_34C68B013B1CFBDC4B9A686B51F8CE28 {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "34:c6:8b:01:3b:1c:fb:dc:4b:9a:68:6b:51:f8:ce:28"
+      )
+}
+
+rule MAL_Compromised_Cert_Havoc_Sectigo_75707ED539F8F3786167A5D9C606B03B {
+   meta:
+      description         = "Detects Havoc with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-21"
+      version             = "1.0"
+
+      hash                = "c2b4214f65aaf845bb7ec37c7fe83270d5774ec3b1eafb47cc4b9f793be8c35f"
+      malware             = "Havoc"
+      malware_type        = "Remote access tool"
+      malware_notes       = "This EXE was disguised as a PDF seemingly targeting Belguim and French organizations."
+
+      signer              = "BAUCHET LILIAN"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "75:70:7e:d5:39:f8:f3:78:61:67:a5:d9:c6:06:b0:3b"
+      cert_thumbprint     = "258B6E3D29ADCE07B7785B1DA03EC8B9076C0C6C"
+      cert_valid_from     = "2025-10-21"
+      cert_valid_to       = "2026-10-21"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "75:70:7e:d5:39:f8:f3:78:61:67:a5:d9:c6:06:b0:3b"
       )
 }
 
@@ -28067,6 +28137,41 @@ rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_76771B8BF57A621AF11F57CFB0285C8
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
          sig.serial == "76:77:1b:8b:f5:7a:62:1a:f1:1f:57:cf:b0:28:5c:88"
+      )
+}
+
+rule MAL_Compromised_Cert_NetSupport_RAT_Sectigo_00B6273EFC94E73F6446EF0344D037527E {
+   meta:
+      description         = "Detects NetSupport RAT with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-26"
+      version             = "1.0"
+
+      hash                = "ccc3a92b91011399a12c48284aa8d3a1147e1972edaa8c57b4710c07c10cf221"
+      malware             = "NetSupport RAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = "The malware was disguised as a document provided as an application response, but installs NetSupport RAT"
+
+      signer              = "Wuxi Aulan Metal Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:b6:27:3e:fc:94:e7:3f:64:46:ef:03:44:d0:37:52:7e"
+      cert_thumbprint     = "CC6D0799149D3AA4709442248744A819956F2CE9"
+      cert_valid_from     = "2025-12-26"
+      cert_valid_to       = "2026-12-26"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:b6:27:3e:fc:94:e7:3f:64:46:ef:03:44:d0:37:52:7e"
       )
 }
 
@@ -42592,6 +42697,41 @@ rule MAL_Compromised_Cert_SYSTEMBC_SSL_com_23D2CAAE31B75460ACDBD1B42D6E7743 {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "23:d2:ca:ae:31:b7:54:60:ac:db:d1:b4:2d:6e:77:43"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Certum_0FF41D3867F0498A308AB24792F3358F {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-07"
+      version             = "1.0"
+
+      hash                = "3f2de9f29834ca7fb64dc53ac7415e9903b1cfb23e52b1b0a28dc08798c2f790"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = "This ScreenConnect installer was disguised as a Microsoft Teams installer. It connects to app.zyabozadpap.top and Telegram."
+
+      signer              = "Joyce Baloyi"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "0f:f4:1d:38:67:f0:49:8a:30:8a:b2:47:92:f3:35:8f"
+      cert_thumbprint     = "D3A6F3AA7DC8FCAF0746D87FFEEB7946EA279E82"
+      cert_valid_from     = "2026-01-07"
+      cert_valid_to       = "2027-01-07"
+
+      country             = "ZA"
+      state               = "???"
+      locality            = "Johannesburg"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "0f:f4:1d:38:67:f0:49:8a:30:8a:b2:47:92:f3:35:8f"
       )
 }
 
@@ -61866,11 +62006,11 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_51EC6208C20191DB2EC825969E857A68 {
       cert_valid_from     = "2025-12-30"
       cert_valid_to       = "2026-12-30"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "CN"
+      state               = "Fujian"
+      locality            = "Fuzhou"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91350103MABP6BJDXT"
 
    condition:
       uint16(0) == 0x5a4d and
