@@ -4,6 +4,27 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.01.11] - 2026-01-11
+
+### Added
+- MAL_Compromised_Cert_UNK_50_Microsoft_330005D979322D82AB26D77E5700000005D979 (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_UNK_50_Microsoft_330005E03FF118FB56115D509500000005E03F (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_FakeRVTools_Certum_34CA52133F074E12B8A81819DA47E8FB (FakeRVTools - Certum)
+- MAL_Compromised_Cert_RemoteManipulator_GlobalSign_6E4DA2A3CFA63A68B1259AD5 (RemoteManipulator - GlobalSign)
+- MAL_Compromised_Cert_Oddysey_Stealer_Apple_5D02F7C79213CBE0 (Oddysey Stealer - Apple)
+- MAL_Compromised_Cert_UNK_50_Microsoft_3300064937CBE61E2D66EC3778000000064937 (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_UNK_50_Sectigo_00CED479C97896DBC26435A29EB885B933 (UNK-50 - Sectigo)
+- MAL_Compromised_Cert_UNK_50_GlobalSign_62CBF575C5F8A7A20BBF1CB1 (UNK-50 - GlobalSign)
+- MAL_Compromised_Cert_UNK_50_Microsoft_330006C2036666AE6BA75FD63300000006C203 (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_ValleyRAT_Certum_134216E462B8FC279A7AF7382F45F3D3 (ValleyRAT - Certum)
+- MAL_Compromised_Cert_UNK_50_Microsoft_330007058C9AC84237BBAFF51F00000007058C (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_FakeBinance_GlobalSign_1EC5118D01550617398147F2 (FakeBinance - GlobalSign)
+- MAL_Compromised_Cert_Odyssey_Stealer_Apple_5DDABE521195AE49 (Odyssey Stealer - Apple)
+
+### Modified
+- MAL_Compromised_Cert_Havoc_Sectigo_75707ED539F8F3786167A5D9C606B03B (Updated metadata for Havoc)
+- MAL_Compromised_Cert_NetSupport_RAT_Sectigo_00B6273EFC94E73F6446EF0344D037527E (Updated metadata for NetSupport RAT)
+
 ## [2026.01.10] - 2026-01-10
 
 ### Added

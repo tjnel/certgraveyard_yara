@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_NetSupport_RAT_Sectigo_00B6273EFC94E73F6446EF0344D0375
       cert_valid_from     = "2025-12-26"
       cert_valid_to       = "2026-12-26"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Jiangsu Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91320214MA1XRMWC85"
 
    condition:
       uint16(0) == 0x5a4d and

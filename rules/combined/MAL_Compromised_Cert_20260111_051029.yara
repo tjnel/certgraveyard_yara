@@ -13160,6 +13160,41 @@ rule MAL_Compromised_Cert_FakeBat_Sectigo_5537908F151E7077149B1954A28632B4 {
       )
 }
 
+rule MAL_Compromised_Cert_FakeBinance_GlobalSign_1EC5118D01550617398147F2 {
+   meta:
+      description         = "Detects FakeBinance with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-04-25"
+      version             = "1.0"
+
+      hash                = "c4123d0488577f66e98f8833bcbcd9ea8752e0f440ad91f3e0065270edd589fa"
+      malware             = "FakeBinance"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "SR TRADING Limited Liability Company"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "1e:c5:11:8d:01:55:06:17:39:81:47:f2"
+      cert_thumbprint     = "DA32D4E683D6B45D0D8B6193D0459A49F0565B04"
+      cert_valid_from     = "2025-04-25"
+      cert_valid_to       = "2026-04-26"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "1e:c5:11:8d:01:55:06:17:39:81:47:f2"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeChromeExtension_GlobalSign_627C9A310E788378C67B53FA {
    meta:
       description         = "Detects FakeChromeExtension with compromised cert (GlobalSign)"
@@ -15047,6 +15082,41 @@ rule MAL_Compromised_Cert_FakePutty_Sectigo_00FD7B8FA580A5360A2D82E905D75915F8 {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "00:fd:7b:8f:a5:80:a5:36:0a:2d:82:e9:05:d7:59:15:f8"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeRVTools_Certum_34CA52133F074E12B8A81819DA47E8FB {
+   meta:
+      description         = "Detects FakeRVTools with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-19"
+      version             = "1.0"
+
+      hash                = "cbbe98e1b36eb68a7afe534c21055f9cc793c2a6a7ca63256d273020a096f7a7"
+      malware             = "FakeRVTools"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Wuhan Shuoxi Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "34:ca:52:13:3f:07:4e:12:b8:a8:18:19:da:47:e8:fb"
+      cert_thumbprint     = "A3682074F5896CB276A2E2A6CCB8C8423C0D8187"
+      cert_valid_from     = "2025-12-19"
+      cert_valid_to       = "2026-12-19"
+
+      country             = "CN"
+      state               = "Hubei"
+      locality            = "Wuhan"
+      email               = "???"
+      rdn_serial_number   = "91420103MA4F4TL53L"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "34:ca:52:13:3f:07:4e:12:b8:a8:18:19:da:47:e8:fb"
       )
 }
 
@@ -17556,11 +17626,11 @@ rule MAL_Compromised_Cert_Havoc_Sectigo_75707ED539F8F3786167A5D9C606B03B {
       cert_valid_from     = "2025-10-21"
       cert_valid_to       = "2026-10-21"
 
-      country             = "???"
-      state               = "???"
+      country             = "FR"
+      state               = "Grand-Est"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "991 231 440"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -28161,11 +28231,11 @@ rule MAL_Compromised_Cert_NetSupport_RAT_Sectigo_00B6273EFC94E73F6446EF0344D0375
       cert_valid_from     = "2025-12-26"
       cert_valid_to       = "2026-12-26"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Jiangsu Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91320214MA1XRMWC85"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -28665,6 +28735,41 @@ rule MAL_Compromised_Cert_Octowave_Loader_Certum_6E84423B5FF541764F3ECA7100B06D1
       )
 }
 
+rule MAL_Compromised_Cert_Oddysey_Stealer_Apple_5D02F7C79213CBE0 {
+   meta:
+      description         = "Detects Oddysey Stealer with compromised cert (Apple)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-21"
+      version             = "1.0"
+
+      hash                = "1bcba93c7626a8b7b974737627d33d883836f1f6e5462d61dbfb0792463ad199"
+      malware             = "Oddysey Stealer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Mireille Drapeau"
+      cert_issuer_short   = "Apple"
+      cert_issuer         = "Apple Inc."
+      cert_serial         = "5d:02:f7:c7:92:13:cb:e0"
+      cert_thumbprint     = "870A3A44E5954DAAE50E9E5A90DC08499CB4200F"
+      cert_valid_from     = "2025-12-21"
+      cert_valid_to       = "2027-02-01"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Apple Inc." and
+         sig.serial == "5d:02:f7:c7:92:13:cb:e0"
+      )
+}
+
 rule MAL_Compromised_Cert_Odyssey_Stealer_Apple_2BEB4AB91970859A {
    meta:
       description         = "Detects Odyssey Stealer with compromised cert (Apple)"
@@ -28697,6 +28802,41 @@ rule MAL_Compromised_Cert_Odyssey_Stealer_Apple_2BEB4AB91970859A {
       for any sig in pe.signatures : (
          sig.issuer contains "Apple Inc." and
          sig.serial == "2b:eb:4a:b9:19:70:85:9a"
+      )
+}
+
+rule MAL_Compromised_Cert_Odyssey_Stealer_Apple_5DDABE521195AE49 {
+   meta:
+      description         = "Detects Odyssey Stealer with compromised cert (Apple)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-09"
+      version             = "1.0"
+
+      hash                = "fbc3d4819f01f2d9d31ecb420d3a9efa12cc4e6bf98415edfffbe99656cdff44"
+      malware             = "Odyssey Stealer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Sandrine Lecours"
+      cert_issuer_short   = "Apple"
+      cert_issuer         = "Apple Inc."
+      cert_serial         = "5d:da:be:52:11:95:ae:49"
+      cert_thumbprint     = "A48CE0006A8C4B0761CF2BA639E3C80B7DFC5146"
+      cert_valid_from     = "2026-01-09"
+      cert_valid_to       = "2027-02-01"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Apple Inc." and
+         sig.serial == "5d:da:be:52:11:95:ae:49"
       )
 }
 
@@ -40425,6 +40565,41 @@ rule MAL_Compromised_Cert_Remcos_GlobalSign_32D05E78573EFED7E2B30A3C {
       )
 }
 
+rule MAL_Compromised_Cert_RemoteManipulator_GlobalSign_6E4DA2A3CFA63A68B1259AD5 {
+   meta:
+      description         = "Detects RemoteManipulator with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-07-17"
+      version             = "1.0"
+
+      hash                = "43a8c1b43e946a20e1bfc549a38fd7a0b9f1efab2fe3e6a3c0b874584ddf0171"
+      malware             = "RemoteManipulator"
+      malware_type        = "Remote access tool"
+      malware_notes       = "This is the second stage dropped by a fake crypto-wallet application: 03e91fbfc07c3dc4f50f550decf38e2816604d85f1f0deb136f922aa8fa55b2e"
+
+      signer              = "JAGNANI CREATIONS PVT. LTD"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "6e:4d:a2:a3:cf:a6:3a:68:b1:25:9a:d5"
+      cert_thumbprint     = "BF923693B067A3FED8F14AB34F7CF0FF9361D8DC"
+      cert_valid_from     = "2025-07-17"
+      cert_valid_to       = "2026-07-18"
+
+      country             = "IN"
+      state               = "Rajasthan"
+      locality            = "Jaipur"
+      email               = "jagnanicreation@gmail.com"
+      rdn_serial_number   = "U24114RJ1992PTC006935"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "6e:4d:a2:a3:cf:a6:3a:68:b1:25:9a:d5"
+      )
+}
+
 rule MAL_Compromised_Cert_RemoteManipulator_Sectigo_00CA4822E6905AA4FCA9E28523F04F14A3 {
    meta:
       description         = "Detects RemoteManipulator with compromised cert (Sectigo)"
@@ -51520,6 +51695,41 @@ rule MAL_Compromised_Cert_UNK_50_GlobalSign_5B71AF90AE6F6C6424BBFB1B {
       )
 }
 
+rule MAL_Compromised_Cert_UNK_50_GlobalSign_62CBF575C5F8A7A20BBF1CB1 {
+   meta:
+      description         = "Detects UNK-50 with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-15"
+      version             = "1.0"
+
+      hash                = "4c20c6bedd49d9672a061a2d662d2169487c6243de083f3a2246f26ab730b2e8"
+      malware             = "UNK-50"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Südpack Verpackungen SE & Co. KG"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "62:cb:f5:75:c5:f8:a7:a2:0b:bf:1c:b1"
+      cert_thumbprint     = "04E2C0BED678211577AB864D4A2303A819FF2EFE"
+      cert_valid_from     = "2025-12-15"
+      cert_valid_to       = "2026-12-16"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "62:cb:f5:75:c5:f8:a7:a2:0b:bf:1c:b1"
+      )
+}
+
 rule MAL_Compromised_Cert_UNK_50_GlobalSign_6386FDF30F59906C2AADCAF1 {
    meta:
       description         = "Detects UNK-50 with compromised cert (GlobalSign)"
@@ -52290,6 +52500,76 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_330005CF0655374B893F5E81FB00000005CF0
       )
 }
 
+rule MAL_Compromised_Cert_UNK_50_Microsoft_330005D979322D82AB26D77E5700000005D979 {
+   meta:
+      description         = "Detects UNK-50 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-18"
+      version             = "1.0"
+
+      hash                = "d113b09b5e34329277b9822c512ddadbc326d68f8aa4fa984cacb7c1f938701a"
+      malware             = "UNK-50"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "SARTO THOMAS LIMITED"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:05:d9:79:32:2d:82:ab:26:d7:7e:57:00:00:00:05:d9:79"
+      cert_thumbprint     = "7D5907F81391F5605730CBCAB53D876D8AA7ABEE"
+      cert_valid_from     = "2025-12-18"
+      cert_valid_to       = "2025-12-21"
+
+      country             = "GB"
+      state               = "Hampshire"
+      locality            = "Whiteley"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:05:d9:79:32:2d:82:ab:26:d7:7e:57:00:00:00:05:d9:79"
+      )
+}
+
+rule MAL_Compromised_Cert_UNK_50_Microsoft_330005E03FF118FB56115D509500000005E03F {
+   meta:
+      description         = "Detects UNK-50 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-19"
+      version             = "1.0"
+
+      hash                = "fb15d6ff1b499858aab40d8bad0e5e9032e22b11d686d22e144dbcf1a81f3976"
+      malware             = "UNK-50"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "BELFAST CITY FITNESS LTD"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:05:e0:3f:f1:18:fb:56:11:5d:50:95:00:00:00:05:e0:3f"
+      cert_thumbprint     = "6C31F4669A20EF6792BC7893B934E865476EF340"
+      cert_valid_from     = "2025-12-19"
+      cert_valid_to       = "2025-12-22"
+
+      country             = "GB"
+      state               = "Birmingham"
+      locality            = "Birmingham"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:05:e0:3f:f1:18:fb:56:11:5d:50:95:00:00:00:05:e0:3f"
+      )
+}
+
 rule MAL_Compromised_Cert_UNK_50_Microsoft_330005E8C830651000B785A9EF00000005E8C8 {
    meta:
       description         = "Detects UNK-50 with compromised cert (Microsoft)"
@@ -52427,6 +52707,41 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_3300061C84BFC0AA8EABB74882000000061C8
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
          sig.serial == "33:00:06:1c:84:bf:c0:aa:8e:ab:b7:48:82:00:00:00:06:1c:84"
+      )
+}
+
+rule MAL_Compromised_Cert_UNK_50_Microsoft_3300064937CBE61E2D66EC3778000000064937 {
+   meta:
+      description         = "Detects UNK-50 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-08"
+      version             = "1.0"
+
+      hash                = "5ceb78fd5d675779df1f81f50abb43eaae3d8bff2f4d3161c6778f6d656cc70f"
+      malware             = "UNK-50"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Market Intelligence Systems (MIS) B.V."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:06:49:37:cb:e6:1e:2d:66:ec:37:78:00:00:00:06:49:37"
+      cert_thumbprint     = "5AD607D097A6E66CC75DA9ADD0AFF795D026C92A"
+      cert_valid_from     = "2026-01-08"
+      cert_valid_to       = "2026-01-11"
+
+      country             = "NL"
+      state               = "Zuid-Holland"
+      locality            = "Dordrecht"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:06:49:37:cb:e6:1e:2d:66:ec:37:78:00:00:00:06:49:37"
       )
 }
 
@@ -52672,6 +52987,76 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_330006BD17074683368C2F606300000006BD1
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
          sig.serial == "33:00:06:bd:17:07:46:83:36:8c:2f:60:63:00:00:00:06:bd:17"
+      )
+}
+
+rule MAL_Compromised_Cert_UNK_50_Microsoft_330006C2036666AE6BA75FD63300000006C203 {
+   meta:
+      description         = "Detects UNK-50 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-03"
+      version             = "1.0"
+
+      hash                = "d12df83cb84b0e9636148cfdae448152b87e54d68caf9f3c202c0b4a479fd9fc"
+      malware             = "UNK-50"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "SOFTOLIO sp. z o.o."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:06:c2:03:66:66:ae:6b:a7:5f:d6:33:00:00:00:06:c2:03"
+      cert_thumbprint     = "82F7E904F0C136239B7335D5F7E3AAA1223DC325"
+      cert_valid_from     = "2026-01-03"
+      cert_valid_to       = "2026-01-06"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:06:c2:03:66:66:ae:6b:a7:5f:d6:33:00:00:00:06:c2:03"
+      )
+}
+
+rule MAL_Compromised_Cert_UNK_50_Microsoft_330007058C9AC84237BBAFF51F00000007058C {
+   meta:
+      description         = "Detects UNK-50 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-09"
+      version             = "1.0"
+
+      hash                = "dad515ffd0ed9d6181220893edb32245e9477a1c297b4084590986f126818b5f"
+      malware             = "UNK-50"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Market Intelligence Systems (MIS) B.V."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:07:05:8c:9a:c8:42:37:bb:af:f5:1f:00:00:00:07:05:8c"
+      cert_thumbprint     = "9A4DDF9F3041A8A07D13B361F9B5C81E058B49E6"
+      cert_valid_from     = "2026-01-09"
+      cert_valid_to       = "2026-01-12"
+
+      country             = "NL"
+      state               = "Zuid-Holland"
+      locality            = "Dordrecht"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:07:05:8c:9a:c8:42:37:bb:af:f5:1f:00:00:00:07:05:8c"
       )
 }
 
@@ -53127,6 +53512,41 @@ rule MAL_Compromised_Cert_UNK_50_SSL_com_71E98ECE107000F15A341F2AB90A7890 {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "71:e9:8e:ce:10:70:00:f1:5a:34:1f:2a:b9:0a:78:90"
+      )
+}
+
+rule MAL_Compromised_Cert_UNK_50_Sectigo_00CED479C97896DBC26435A29EB885B933 {
+   meta:
+      description         = "Detects UNK-50 with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-13"
+      version             = "1.0"
+
+      hash                = "e2398c154858077cdc6f5ba5c031a7af3380fb47d493076098d5bf11655d4f78"
+      malware             = "UNK-50"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "FAV MAKINA OTOM. DANIS. ITHALAT IHR. SAN. VE TIC. LTD. STI."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:ce:d4:79:c9:78:96:db:c2:64:35:a2:9e:b8:85:b9:33"
+      cert_thumbprint     = "8FCB2FE970729C95EE0A74A3A59C95F818721E35"
+      cert_valid_from     = "2025-11-13"
+      cert_valid_to       = "2026-11-13"
+
+      country             = "TR"
+      state               = "Bursa"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "127520"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:ce:d4:79:c9:78:96:db:c2:64:35:a2:9e:b8:85:b9:33"
       )
 }
 
@@ -61842,6 +62262,41 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_12248CFBA203C55278C33B413A81FFB3 {
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Code Signing 2021 CA" and
          sig.serial == "12:24:8c:fb:a2:03:c5:52:78:c3:3b:41:3a:81:ff:b3"
+      )
+}
+
+rule MAL_Compromised_Cert_ValleyRAT_Certum_134216E462B8FC279A7AF7382F45F3D3 {
+   meta:
+      description         = "Detects ValleyRAT with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-07-25"
+      version             = "1.0"
+
+      hash                = "f8d5e36ae7af535acd72982e1b5f745adb2b39b83d522709c4c18630bdc87d1c"
+      malware             = "ValleyRAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = "An open source RAT heavily used by Golden Eye Dog. Reaches out to pull down payload: https[:]//microsoft001[.]oss-cn-hangzhou.aliyuncs[.]com/Microsoft/shellcode_encrypted.bin"
+
+      signer              = "Jin Chen"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "13:42:16:e4:62:b8:fc:27:9a:7a:f7:38:2f:45:f3:d3"
+      cert_thumbprint     = "2DE84F17D23598E144E8D3033B0E77FE0A197B63"
+      cert_valid_from     = "2025-07-25"
+      cert_valid_to       = "2026-07-25"
+
+      country             = "CN"
+      state               = "Guangdong"
+      locality            = "Heyuan"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "13:42:16:e4:62:b8:fc:27:9a:7a:f7:38:2f:45:f3:d3"
       )
 }
 

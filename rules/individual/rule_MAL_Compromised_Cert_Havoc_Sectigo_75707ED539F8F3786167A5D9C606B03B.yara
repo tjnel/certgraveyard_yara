@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Havoc_Sectigo_75707ED539F8F3786167A5D9C606B03B {
       cert_valid_from     = "2025-10-21"
       cert_valid_to       = "2026-10-21"
 
-      country             = "???"
-      state               = "???"
+      country             = "FR"
+      state               = "Grand-Est"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "991 231 440"
 
    condition:
       uint16(0) == 0x5a4d and
