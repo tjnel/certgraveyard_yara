@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeBinance_GlobalSign_1EC5118D01550617398147F2 {
       cert_valid_from     = "2025-04-25"
       cert_valid_to       = "2026-04-26"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "KG"
+      state               = "Bishkek"
+      locality            = "Bishkek"
+      email               = "admin@srkgy.com"
+      rdn_serial_number   = "123324-3300-OOO"
 
    condition:
       uint16(0) == 0x5a4d and

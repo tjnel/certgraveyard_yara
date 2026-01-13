@@ -13181,11 +13181,11 @@ rule MAL_Compromised_Cert_FakeBinance_GlobalSign_1EC5118D01550617398147F2 {
       cert_valid_from     = "2025-04-25"
       cert_valid_to       = "2026-04-26"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "KG"
+      state               = "Bishkek"
+      locality            = "Bishkek"
+      email               = "admin@srkgy.com"
+      rdn_serial_number   = "123324-3300-OOO"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -18302,6 +18302,41 @@ rule MAL_Compromised_Cert_Hijackloader_GlobalSign_47AA6CB664D14C17D3BC67D8 {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "47:aa:6c:b6:64:d1:4c:17:d3:bc:67:d8"
+      )
+}
+
+rule MAL_Compromised_Cert_Hijackloader_Microsoft_330006CE519E7F692CF18F808100000006CE51 {
+   meta:
+      description         = "Detects Hijackloader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-06"
+      version             = "1.0"
+
+      hash                = "94307191dba3962e5dc121fa2a984a784a951af0c0fc9229571898667e320578"
+      malware             = "Hijackloader"
+      malware_type        = "Loader"
+      malware_notes       = "The malware was distributed as a keypass installer: https://jeromesegura.com/malvertising/2026/01/01-11-2026_KeePass"
+
+      signer              = "FOCUS DIGITAL AGENCY SP Z O O"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:06:ce:51:9e:7f:69:2c:f1:8f:80:81:00:00:00:06:ce:51"
+      cert_thumbprint     = "2276CF17FC2E11B61EA9DE89F757DA0ADA0CB35C"
+      cert_valid_from     = "2026-01-06"
+      cert_valid_to       = "2026-01-09"
+
+      country             = "PL"
+      state               = "Mazowieckie"
+      locality            = "Warszawa"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:06:ce:51:9e:7f:69:2c:f1:8f:80:81:00:00:00:06:ce:51"
       )
 }
 
@@ -44415,6 +44450,41 @@ rule MAL_Compromised_Cert_Silence_Sectigo_7D27332C3CB3A382A4FD232C5C66A2 {
       )
 }
 
+rule MAL_Compromised_Cert_SmokedHam_Certum_34CA52133F074E12B8A81819DA47E8FB {
+   meta:
+      description         = "Detects SmokedHam with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-19"
+      version             = "1.0"
+
+      hash                = "cbbe98e1b36eb68a7afe534c21055f9cc793c2a6a7ca63256d273020a096f7a7"
+      malware             = "SmokedHam"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Wuhan Shuoxi Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "34:ca:52:13:3f:07:4e:12:b8:a8:18:19:da:47:e8:fb"
+      cert_thumbprint     = "A3682074F5896CB276A2E2A6CCB8C8423C0D8187"
+      cert_valid_from     = "2025-12-19"
+      cert_valid_to       = "2026-12-19"
+
+      country             = "CN"
+      state               = "Hubei"
+      locality            = "Wuhan"
+      email               = "???"
+      rdn_serial_number   = "91420103MA4F4TL53L"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "34:ca:52:13:3f:07:4e:12:b8:a8:18:19:da:47:e8:fb"
+      )
+}
+
 rule MAL_Compromised_Cert_SmokedHam_GlobalSign_5C5A8861E945052570898682 {
    meta:
       description         = "Detects SmokedHam with compromised cert (GlobalSign)"
@@ -51716,11 +51786,11 @@ rule MAL_Compromised_Cert_UNK_50_GlobalSign_62CBF575C5F8A7A20BBF1CB1 {
       cert_valid_from     = "2025-12-15"
       cert_valid_to       = "2026-12-16"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "AT"
+      state               = "Wien"
+      locality            = "Wien"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "466845m"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -53011,11 +53081,11 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_330006C2036666AE6BA75FD63300000006C20
       cert_valid_from     = "2026-01-03"
       cert_valid_to       = "2026-01-06"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "PL"
+      state               = "Pomorskie"
+      locality            = "GDYNIA"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

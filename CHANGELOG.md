@@ -4,6 +4,17 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.01.13] - 2026-01-13
+
+### Added
+- MAL_Compromised_Cert_Hijackloader_Microsoft_330006CE519E7F692CF18F808100000006CE51 (Hijackloader - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_UNK_50_Microsoft_330006C2036666AE6BA75FD63300000006C203 (Updated metadata for UNK-50)
+- MAL_Compromised_Cert_SmokedHam_Certum_34CA52133F074E12B8A81819DA47E8FB (Updated metadata for SmokedHam)
+- MAL_Compromised_Cert_UNK_50_GlobalSign_62CBF575C5F8A7A20BBF1CB1 (Updated metadata for UNK-50)
+- MAL_Compromised_Cert_FakeBinance_GlobalSign_1EC5118D01550617398147F2 (Updated metadata for FakeBinance)
+
 ## [2026.01.11] - 2026-01-11
 
 ### Added

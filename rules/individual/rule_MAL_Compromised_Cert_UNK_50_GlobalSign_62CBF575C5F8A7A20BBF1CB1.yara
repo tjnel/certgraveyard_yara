@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_UNK_50_GlobalSign_62CBF575C5F8A7A20BBF1CB1 {
       cert_valid_from     = "2025-12-15"
       cert_valid_to       = "2026-12-16"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "AT"
+      state               = "Wien"
+      locality            = "Wien"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "466845m"
 
    condition:
       uint16(0) == 0x5a4d and
