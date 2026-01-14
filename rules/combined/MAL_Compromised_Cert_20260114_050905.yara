@@ -210,6 +210,41 @@ rule MAL_Compromised_Cert_AirStalk_SSL_com_29AFB8D913DB84FDB362F4FD927B8553 {
       )
 }
 
+rule MAL_Compromised_Cert_Akira_related_following_Teams_malvertising_Sectigo_239B3B73251BDF4C4EEA5C90DFAAC059 {
+   meta:
+      description         = "Detects Akira-related following Teams malvertising with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-08"
+      version             = "1.0"
+
+      hash                = "a252b2e2e1eb1423cb2781dd194fd5758817157847b3eb18bc86486c2f366643"
+      malware             = "Akira-related following Teams malvertising"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Wenzhou Feixun Internet Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "23:9b:3b:73:25:1b:df:4c:4e:ea:5c:90:df:aa:c0:59"
+      cert_thumbprint     = "B39874FFCA4BC94F016EE888E2A6EB8A25A544ED"
+      cert_valid_from     = "2025-12-08"
+      cert_valid_to       = "2026-12-08"
+
+      country             = "CN"
+      state               = "Zhejiang Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91330302MA2H91PU2D"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "23:9b:3b:73:25:1b:df:4c:4e:ea:5c:90:df:aa:c0:59"
+      )
+}
+
 rule MAL_Compromised_Cert_Amadey_SSL_com_3BC667FDD38FC44F09451D379221BA59 {
    meta:
       description         = "Detects Amadey with compromised cert (SSL.com)"
@@ -44590,6 +44625,41 @@ rule MAL_Compromised_Cert_SmokedHam_SSL_com_0F491FD7CE3703C5E761665D57C565DB {
       )
 }
 
+rule MAL_Compromised_Cert_SmokedHam_Sectigo_008E00CF619B911A2BAC78B1B214098177 {
+   meta:
+      description         = "Detects SmokedHam with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-23"
+      version             = "1.0"
+
+      hash                = "d57ae70866ba32a5d356eeb09c5ed606e0ab118316d5c9970ee04b460853b303"
+      malware             = "SmokedHam"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Jieyang Yusheng Network Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:8e:00:cf:61:9b:91:1a:2b:ac:78:b1:b2:14:09:81:77"
+      cert_thumbprint     = "31FF86255713D2EBC1933D7B5EC8EA3AC25325F2"
+      cert_valid_from     = "2025-12-23"
+      cert_valid_to       = "2026-12-23"
+
+      country             = "CN"
+      state               = "Guangdong Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91445221MABN8AL450"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:8e:00:cf:61:9b:91:1a:2b:ac:78:b1:b2:14:09:81:77"
+      )
+}
+
 rule MAL_Compromised_Cert_SmokedHam_Sectigo_066295A2AC93A8EAB2696CB8798E0C33 {
    meta:
       description         = "Detects SmokedHam with compromised cert (Sectigo)"
@@ -65622,6 +65692,41 @@ rule MAL_Compromised_Cert_ZhongStealer_GlobalSign_7EAD677A7DD7F660379D116A {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "7e:ad:67:7a:7d:d7:f6:60:37:9d:11:6a"
+      )
+}
+
+rule MAL_Compromised_Cert_ZhongStealer_SSL_com_6FC27F0BBACFAA99807405016341540A {
+   meta:
+      description         = "Detects ZhongStealer with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-12-20"
+      version             = "1.0"
+
+      hash                = "6650052939aa7e4fe49c9d1aff74319c46506efe341f6d9e6d9900cdb7e40c91"
+      malware             = "ZhongStealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "An infostealer used by a Chinese cybercrime group tracked as Golden eye dog. Pulls second stage from legitimate CDN."
+
+      signer              = "Schäfer Informatik GmbH"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "6f:c2:7f:0b:ba:cf:aa:99:80:74:05:01:63:41:54:0a"
+      cert_thumbprint     = "37F65607307BA60C409086FFDA3070A39A470905"
+      cert_valid_from     = "2024-12-20"
+      cert_valid_to       = "2027-12-20"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "6f:c2:7f:0b:ba:cf:aa:99:80:74:05:01:63:41:54:0a"
       )
 }
 
