@@ -4,6 +4,22 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.01.15] - 2026-01-15
+
+### Added
+- MAL_Compromised_Cert_UNK_52_GlobalSign_02B323FB889A4928AD1E541B (UNK-52 - GlobalSign)
+- MAL_Compromised_Cert_HijackLoader_ShadowLadder_Microsoft_33000660F0D638FC46189CF1820000000660F0 (HijackLoader, ShadowLadder - Microsoft)
+- MAL_Compromised_Cert_FakeDocument_GlobalSign_354AE1381C0C0D64FB813198 (FakeDocument - GlobalSign)
+- MAL_Compromised_Cert_OysterLoader_Microsoft_330007153BFD5290301D62863F00000007153B (OysterLoader - Microsoft)
+- MAL_Compromised_Cert_TrojanizedTrading_Sectigo_5A6D707A84E6D581D2D31E9854A3AA15 (TrojanizedTrading - Sectigo)
+- MAL_Compromised_Cert_Unknown_Microsoft_330006D18A37899D7C1808ED4D00000006D18A (Unknown - Microsoft)
+- MAL_Compromised_Cert_PureHVNC_Certum_65F02736623718993AC28B6B704ED42F (PureHVNC - Certum)
+- MAL_Compromised_Cert_ZhongStealer_SSL_com_7D0FA22D5E5F69EA34350A46FE01289F (ZhongStealer - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_ZhongStealer_SSL_com_6FC27F0BBACFAA99807405016341540A (Updated metadata for ZhongStealer)
+- MAL_Compromised_Cert_UNK_52_Akira_related_following_Teams_malvertising_Sectigo_239B3B73251BDF4C4EEA5C90DFAAC059 (Updated metadata for UNK-52,Akira-related following Teams malvertising)
+
 ## [2026.01.14] - 2026-01-14
 
 ### Added
