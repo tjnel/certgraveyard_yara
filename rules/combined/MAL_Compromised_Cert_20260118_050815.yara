@@ -51030,6 +51030,41 @@ rule MAL_Compromised_Cert_T_21_Microsoft_3300064BD6D7CA610950AFC4D9000000064BD6 
       )
 }
 
+rule MAL_Compromised_Cert_T_21_Microsoft_3300067F6453B114E565885BC0000000067F64 {
+   meta:
+      description         = "Detects T-21 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-17"
+      version             = "1.0"
+
+      hash                = "74c7afe099f09369957203ca7985e63f569438fcd3e6da7cfbee01f9b7d5c3e9"
+      malware             = "T-21"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "LAKESIDE TRANSMISSION INC."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:06:7f:64:53:b1:14:e5:65:88:5b:c0:00:00:00:06:7f:64"
+      cert_thumbprint     = "FD8746502AA6A9F9938847F72ECD0B43EB5CE2BD"
+      cert_valid_from     = "2026-01-17"
+      cert_valid_to       = "2026-01-20"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:06:7f:64:53:b1:14:e5:65:88:5b:c0:00:00:00:06:7f:64"
+      )
+}
+
 rule MAL_Compromised_Cert_T_21_Microsoft_3300068281A2EB372E8FC4A340000000068281 {
    meta:
       description         = "Detects T-21 with compromised cert (Microsoft)"
@@ -57596,11 +57631,11 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_3D1ED9CE0D8A81789EF479DE {
       cert_valid_from     = "2025-06-17"
       cert_valid_to       = "2026-03-25"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "RU"
+      state               = "Москва"
+      locality            = "Москва"
+      email               = "srtoyserviser@mail.ru"
+      rdn_serial_number   = "1247700335827"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -59532,6 +59567,41 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_7C75A58852CA4C72348CF24D {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "7c:75:a5:88:52:ca:4c:72:34:8c:f2:4d"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_GlobalSign_7CC72BF80DFDC184E66C93A1 {
+   meta:
+      description         = "Detects Unknown with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2023-04-18"
+      version             = "1.0"
+
+      hash                = "408a89bc9966e76f3a192ecbf47b36fdc8ddaa4067aaee753c0bd6ae502f5cea"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "JOZEAL NETWORK TECHNOLOGY CO., LIMITED"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "7c:c7:2b:f8:0d:fd:c1:84:e6:6c:93:a1"
+      cert_thumbprint     = "EBC8B1DE7ADAF53A0E9E1E1553D5018C014C5B64"
+      cert_valid_from     = "2023-04-18"
+      cert_valid_to       = "2026-04-18"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "7c:c7:2b:f8:0d:fd:c1:84:e6:6c:93:a1"
       )
 }
 
