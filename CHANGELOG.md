@@ -4,6 +4,20 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.01.20] - 2026-01-20
+
+### Added
+- MAL_Compromised_Cert_FakeDocusign_Sectigo_009CEFB645497C453AECC4B9F8BC5A0710 (FakeDocusign - Sectigo)
+- MAL_Compromised_Cert_VPNClientPhishing_Certum_773DD2F9ADAC8E552D11AD737D17F772 (VPNClientPhishing - Certum)
+- MAL_Compromised_Cert_Zhong_Stealer_SSL_com_4824B75744F606DCEEF3A06D638FFDA2 (Zhong Stealer - SSL.com)
+- MAL_Compromised_Cert_Wagmi_Traffer_team_SSL_com_1D4EF724D40A79B6CCA06EB1076CBFF9 (Wagmi Traffer team - SSL.com)
+- MAL_Compromised_Cert_OysterLoader_SSL_com_064745A9D210EA060B7C5A64E7F75162 (OysterLoader - SSL.com)
+- MAL_Compromised_Cert_Traffer_Certum_4B1DE55AF5EE5E01FBC56E094F8959AD (Traffer - Certum)
+
+### Modified
+- MAL_Compromised_Cert_Unknown_GlobalSign_7CC72BF80DFDC184E66C93A1 (Updated metadata for Unknown)
+- MAL_Compromised_Cert_T_21_Microsoft_3300067F6453B114E565885BC0000000067F64 (Updated metadata for T-21)
+
 ## [2026.01.18] - 2026-01-18
 
 ### Added

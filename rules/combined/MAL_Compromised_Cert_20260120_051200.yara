@@ -14000,6 +14000,41 @@ rule MAL_Compromised_Cert_FakeDocusign_SSL_com_63B13BB7320117B3A722735ECB578BB5 
       )
 }
 
+rule MAL_Compromised_Cert_FakeDocusign_Sectigo_009CEFB645497C453AECC4B9F8BC5A0710 {
+   meta:
+      description         = "Detects FakeDocusign with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-12"
+      version             = "1.0"
+
+      hash                = "3a7f8b2c1d11f024c24c14ced04c0d4ba64b40eda0f890b393e4a06263fd019a"
+      malware             = "FakeDocusign"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious installers delivered from websites impersonating DocuSign. Likely traffer operations targeting cryptocurrencies users worldwide"
+
+      signer              = "Guangzhou Shuo Stone Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:9c:ef:b6:45:49:7c:45:3a:ec:c4:b9:f8:bc:5a:07:10"
+      cert_thumbprint     = "4C973998DDD6BE8B255AE7A2203A8D244CAE27C3"
+      cert_valid_from     = "2025-11-12"
+      cert_valid_to       = "2026-11-12"
+
+      country             = "CN"
+      state               = "Guangdong Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91440117MAD995LX5C"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:9c:ef:b6:45:49:7c:45:3a:ec:c4:b9:f8:bc:5a:07:10"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeDropboxDocSend_GlobalSign_5869602DD339F533AF17A0FD {
    meta:
       description         = "Detects FakeDropboxDocSend with compromised cert (GlobalSign)"
@@ -30657,6 +30692,41 @@ rule MAL_Compromised_Cert_OysterLoader_SSL_com_0268598BAEB054A09457D976E86EF28B 
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "02:68:59:8b:ae:b0:54:a0:94:57:d9:76:e8:6e:f2:8b"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_SSL_com_064745A9D210EA060B7C5A64E7F75162 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-08-28"
+      version             = "1.0"
+
+      hash                = "33448e03ab7973452032086db5dcb22e7526fe5b46df093902986664072bb12a"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "This malware was part of an ongoing campaign and was disguised as an AI application: AIVpro_alpha.exe. The malware created a scheduled task for persistence. If unmitigated, provides remote access to ransomware actors."
+
+      signer              = "PANGEA CIVIL ENGINEERS SRL"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "06:47:45:a9:d2:10:ea:06:0b:7c:5a:64:e7:f7:51:62"
+      cert_thumbprint     = "D2F530D7A6A152E3198F6B1326F8FC54098C09D2"
+      cert_valid_from     = "2025-08-28"
+      cert_valid_to       = "2026-08-28"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "06:47:45:a9:d2:10:ea:06:0b:7c:5a:64:e7:f7:51:62"
       )
 }
 
@@ -51051,11 +51121,11 @@ rule MAL_Compromised_Cert_T_21_Microsoft_3300067F6453B114E565885BC0000000067F64 
       cert_valid_from     = "2026-01-17"
       cert_valid_to       = "2026-01-20"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Michigan"
+      locality            = "MT CLEMENS"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -51377,6 +51447,41 @@ rule MAL_Compromised_Cert_TerraStealer_SSL_com_343C7C502BDCE06C9F3C6551C9D0A451 
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "34:3c:7c:50:2b:dc:e0:6c:9f:3c:65:51:c9:d0:a4:51"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Certum_4B1DE55AF5EE5E01FBC56E094F8959AD {
+   meta:
+      description         = "Detects Traffer with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-04"
+      version             = "1.0"
+
+      hash                = "3afcd68c357bf33815bf7cc04631ddb1204b71347b06e8dc04a00246cb7a08d7"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Microsoft Teams Meeting Launcher"
+
+      signer              = "Taiyuan Yiyu Trading Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "4b:1d:e5:5a:f5:ee:5e:01:fb:c5:6e:09:4f:89:59:ad"
+      cert_thumbprint     = "BCCD43B323E9CCDA993CC3CA7B4DDE0EFA4E6BC1"
+      cert_valid_from     = "2025-12-04"
+      cert_valid_to       = "2026-12-04"
+
+      country             = "CN"
+      state               = "Shanxi"
+      locality            = "Taiyuan"
+      email               = "???"
+      rdn_serial_number   = "91140105MADC6K7F6C"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "4b:1d:e5:5a:f5:ee:5e:01:fb:c5:6e:09:4f:89:59:ad"
       )
 }
 
@@ -59591,11 +59696,11 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_7CC72BF80DFDC184E66C93A1 {
       cert_valid_from     = "2023-04-18"
       cert_valid_to       = "2026-04-18"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "HK"
+      state               = "Kowloon"
+      locality            = "Kwun Tong"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "2940285"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -63455,6 +63560,41 @@ rule MAL_Compromised_Cert_Unknown_bootkit_SSL_com_767FCD8623FB84E3D6E7CF6F8A8078
       )
 }
 
+rule MAL_Compromised_Cert_VPNClientPhishing_Certum_773DD2F9ADAC8E552D11AD737D17F772 {
+   meta:
+      description         = "Detects VPNClientPhishing with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-11"
+      version             = "1.0"
+
+      hash                = "cfa4781ebfa5a8d68b233efb723dbde434ca70b2f76ff28127ecf13753bfe011"
+      malware             = "VPNClientPhishing"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake VPN Client spread via SEO poisoning sending credentials to vpn-connection[.]pro. Detonation: https://app.any.run/tasks/e83886f5-d9bf-498c-b98a-ab9ae52c299c"
+
+      signer              = "Taiyuan Lihua Near Information Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "77:3d:d2:f9:ad:ac:8e:55:2d:11:ad:73:7d:17:f7:72"
+      cert_thumbprint     = "731B7470AA8F16ADBDEF712A01C2FCBCA5A1D554"
+      cert_valid_from     = "2025-12-11"
+      cert_valid_to       = "2026-12-11"
+
+      country             = "CN"
+      state               = "Shanxi"
+      locality            = "Taiyuan"
+      email               = "???"
+      rdn_serial_number   = "91140106MA0M4T3R8E"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "77:3d:d2:f9:ad:ac:8e:55:2d:11:ad:73:7d:17:f7:72"
+      )
+}
+
 rule MAL_Compromised_Cert_ValleyRAT_Certum_0582253D22D291481B75770C1556C56F {
    meta:
       description         = "Detects ValleyRAT with compromised cert (Certum)"
@@ -65202,6 +65342,41 @@ rule MAL_Compromised_Cert_Wagmi_Traffer_Team_GlobalSign_75D0F25D4BFA30C1461F3721
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "75:d0:f2:5d:4b:fa:30:c1:46:1f:37:21"
+      )
+}
+
+rule MAL_Compromised_Cert_Wagmi_Traffer_team_SSL_com_1D4EF724D40A79B6CCA06EB1076CBFF9 {
+   meta:
+      description         = "Detects Wagmi Traffer team with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-10"
+      version             = "1.0"
+
+      hash                = "5a5d7eb08e963c140cba3e4176c1fbc59031ff195452f0068641427c388f257b"
+      malware             = "Wagmi Traffer team"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "SAFARPE TECHNOLOGY LLP"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "1d:4e:f7:24:d4:0a:79:b6:cc:a0:6e:b1:07:6c:bf:f9"
+      cert_thumbprint     = ""
+      cert_valid_from     = "2026-01-10"
+      cert_valid_to       = "2027-01-09"
+
+      country             = "IN"
+      state               = "West Bengal"
+      locality            = "Kolkata"
+      email               = ""
+      rdn_serial_number   = "UDYAM-WB-10-0169920"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "1d:4e:f7:24:d4:0a:79:b6:cc:a0:6e:b1:07:6c:bf:f9"
       )
 }
 
@@ -67932,6 +68107,41 @@ rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_7EAD677A7DD7F660379D116A {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "7e:ad:67:7a:7d:d7:f6:60:37:9d:11:6a"
+      )
+}
+
+rule MAL_Compromised_Cert_Zhong_Stealer_SSL_com_4824B75744F606DCEEF3A06D638FFDA2 {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2023-12-18"
+      version             = "1.0"
+
+      hash                = "f1a9b7ca2235fc2c7642fff339782a184835ed6ab0d971690c079bbefc9a85c5"
+      malware             = "Zhong Stealer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Portier Global Pty Ltd"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "48:24:b7:57:44:f6:06:dc:ee:f3:a0:6d:63:8f:fd:a2"
+      cert_thumbprint     = "61D8BED5A5007F3DA29EB18ABB18CF75EB102FD1"
+      cert_valid_from     = "2023-12-18"
+      cert_valid_to       = "2026-12-17"
+
+      country             = "AU"
+      state               = "Queensland"
+      locality            = "Little Mountain"
+      email               = "???"
+      rdn_serial_number   = "86 672 385 661"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "48:24:b7:57:44:f6:06:dc:ee:f3:a0:6d:63:8f:fd:a2"
       )
 }
 
