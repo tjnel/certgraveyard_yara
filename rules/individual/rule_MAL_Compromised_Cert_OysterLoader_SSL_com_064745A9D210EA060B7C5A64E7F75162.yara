@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_OysterLoader_SSL_com_064745A9D210EA060B7C5A64E7F75162 
       cert_valid_from     = "2025-08-28"
       cert_valid_to       = "2026-08-28"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "RO"
+      state               = "Ilfov County"
+      locality            = "Popeşti-Leordeni"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "J23 30 2013"
 
    condition:
       uint16(0) == 0x5a4d and

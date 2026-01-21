@@ -11095,6 +11095,76 @@ rule MAL_Compromised_Cert_Donut_Sectigo_77344A8C067A2B9BB97938F227B7D39F {
       )
 }
 
+rule MAL_Compromised_Cert_DragonBreath_Certum_2016DBB4AD27CCA2F4C5E5D761FAA9A2 {
+   meta:
+      description         = "Detects DragonBreath with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-04"
+      version             = "1.0"
+
+      hash                = "03f41826ee5624e938ff9de7b621fc954decdf4b6f8cc266c43706881053c1ba"
+      malware             = "DragonBreath"
+      malware_type        = "Unknown"
+      malware_notes       = "APT DragonBreath campaign spotted targeting Cambodia. Ref: https://x.com/PrakkiSathwik/status/2013512888875655436"
+
+      signer              = "Yongji Zaihui E-commerce Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "20:16:db:b4:ad:27:cc:a2:f4:c5:e5:d7:61:fa:a9:a2"
+      cert_thumbprint     = "EAE3B98E04DE4721E730D85C1360706DB763FEB4"
+      cert_valid_from     = "2025-12-04"
+      cert_valid_to       = "2026-12-04"
+
+      country             = "CN"
+      state               = "Shanxi"
+      locality            = "Yongji"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "20:16:db:b4:ad:27:cc:a2:f4:c5:e5:d7:61:fa:a9:a2"
+      )
+}
+
+rule MAL_Compromised_Cert_DragonBreath_Certum_2CA603826E9AA069165C691F969F326D {
+   meta:
+      description         = "Detects DragonBreath with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-03-25"
+      version             = "1.0"
+
+      hash                = "627169b1bad0744f636c72a86f6f8e0ff1f4fbb475e8629576a2462a0341ca4f"
+      malware             = "DragonBreath"
+      malware_type        = "Unknown"
+      malware_notes       = "APT DragonBreath campaign spotted targeting Cambodia. Ref: https://x.com/PrakkiSathwik/status/2013512888875655436"
+
+      signer              = "Open Source Developer, Jiawu Wang"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "2c:a6:03:82:6e:9a:a0:69:16:5c:69:1f:96:9f:32:6d"
+      cert_thumbprint     = "21A279CE005CB11FD0968416F484BC411CC85389"
+      cert_valid_from     = "2025-03-25"
+      cert_valid_to       = "2026-03-25"
+
+      country             = "CN"
+      state               = "Guizhou"
+      locality            = "Anshun"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "2c:a6:03:82:6e:9a:a0:69:16:5c:69:1f:96:9f:32:6d"
+      )
+}
+
 rule MAL_Compromised_Cert_Dridex_Sectigo_00E573D9C8B403C41BD59FFA0A8EFD4168 {
    meta:
       description         = "Detects Dridex with compromised cert (Sectigo)"
@@ -15362,6 +15432,41 @@ rule MAL_Compromised_Cert_FakeUpwork_Sectigo_64A01FE7A8119B436BAE518AD1D5670E {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "64:a0:1f:e7:a8:11:9b:43:6b:ae:51:8a:d1:d5:67:0e"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeWalletInstaller_Sectigo_00CA7E5EC6CA344E6A3296B9317ADF0B59 {
+   meta:
+      description         = "Detects FakeWalletInstaller with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-16"
+      version             = "1.0"
+
+      hash                = "33249913aaff8172a459eba02c38d10ebbb7644c9b3d09c4bcc5ccd1a1e4bfa1"
+      malware             = "FakeWalletInstaller"
+      malware_type        = "Infostealer"
+      malware_notes       = "The application was disguised to be a Neon Wallet installer."
+
+      signer              = "Jiangyin Kenadi International Trade Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:ca:7e:5e:c6:ca:34:4e:6a:32:96:b9:31:7a:df:0b:59"
+      cert_thumbprint     = "5AF0EADE73CDA1DFF0F2F4C5B644D5D43598B7E3"
+      cert_valid_from     = "2025-12-16"
+      cert_valid_to       = "2026-12-16"
+
+      country             = "CN"
+      state               = "Jiangsu Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91320281MA1XEGJA1C"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:ca:7e:5e:c6:ca:34:4e:6a:32:96:b9:31:7a:df:0b:59"
       )
 }
 
@@ -30716,11 +30821,11 @@ rule MAL_Compromised_Cert_OysterLoader_SSL_com_064745A9D210EA060B7C5A64E7F75162 
       cert_valid_from     = "2025-08-28"
       cert_valid_to       = "2026-08-28"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "RO"
+      state               = "Ilfov County"
+      locality            = "Popeşti-Leordeni"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "J23 30 2013"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -54107,6 +54212,41 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_330006782DA6C8B6CE5664F88500000006782
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
          sig.serial == "33:00:06:78:2d:a6:c8:b6:ce:56:64:f8:85:00:00:00:06:78:2d"
+      )
+}
+
+rule MAL_Compromised_Cert_UNK_50_Microsoft_3300068CF598B305D42D2B7EAE000000068CF5 {
+   meta:
+      description         = "Detects UNK-50 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-19"
+      version             = "1.0"
+
+      hash                = "653c6ca37e2b299b2d4609e06d08cc0a8459c30d87a0ff0bdfcffac581622abb"
+      malware             = "UNK-50"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "DIGITAL ADVERTISING BUSINESS INFLUENCERS S.R.L."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:06:8c:f5:98:b3:05:d4:2d:2b:7e:ae:00:00:00:06:8c:f5"
+      cert_thumbprint     = "660DBB5AF5150413D8D5853CCEE37C4C6D5DAB76"
+      cert_valid_from     = "2026-01-19"
+      cert_valid_to       = "2026-01-22"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:06:8c:f5:98:b3:05:d4:2d:2b:7e:ae:00:00:00:06:8c:f5"
       )
 }
 

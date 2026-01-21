@@ -4,6 +4,17 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.01.21] - 2026-01-21
+
+### Added
+- MAL_Compromised_Cert_DragonBreath_Certum_2016DBB4AD27CCA2F4C5E5D761FAA9A2 (DragonBreath - Certum)
+- MAL_Compromised_Cert_FakeWalletInstaller_Sectigo_00CA7E5EC6CA344E6A3296B9317ADF0B59 (FakeWalletInstaller - Sectigo)
+- MAL_Compromised_Cert_DragonBreath_Certum_2CA603826E9AA069165C691F969F326D (DragonBreath - Certum)
+- MAL_Compromised_Cert_UNK_50_Microsoft_3300068CF598B305D42D2B7EAE000000068CF5 (UNK-50 - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_OysterLoader_SSL_com_064745A9D210EA060B7C5A64E7F75162 (Updated metadata for OysterLoader)
+
 ## [2026.01.20] - 2026-01-20
 
 ### Added
