@@ -4,6 +4,18 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.01.22] - 2026-01-22
+
+### Added
+- MAL_Compromised_Cert_ScreenConnectLoader_GlobalSign_6E2B391C7FF99AB597A70E5B (ScreenConnectLoader - GlobalSign)
+- MAL_Compromised_Cert_FakeUpdate_SSL_com_7B506D3D23E689FF63395DE65FEB25A3 (FakeUpdate - SSL.com)
+- MAL_Compromised_Cert_ScreenConnectLoader_GlobalSign_1DA8F5EBC1E0C908D1AD1BE6 (ScreenConnectLoader - GlobalSign)
+- MAL_Compromised_Cert_FakeDocument_Certum_2133253A493F954BDE3391A06AEDF263 (FakeDocument - Certum)
+- MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_4F10DF22BF708616F9437AB06E0FAAB0 (ScreenConnectLoader - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_UNK_50_Microsoft_3300068CF598B305D42D2B7EAE000000068CF5 (Updated metadata for UNK-50)
+
 ## [2026.01.21] - 2026-01-21
 
 ### Added

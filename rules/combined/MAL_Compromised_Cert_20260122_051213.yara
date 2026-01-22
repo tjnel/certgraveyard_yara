@@ -13510,6 +13510,41 @@ rule MAL_Compromised_Cert_FakeCursorAI_SSL_com_640E69BE1ED44E910A37FFCE16911CE8 
       )
 }
 
+rule MAL_Compromised_Cert_FakeDocument_Certum_2133253A493F954BDE3391A06AEDF263 {
+   meta:
+      description         = "Detects FakeDocument with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-04-17"
+      version             = "1.0"
+
+      hash                = "2027ed1e4a19434b02f23bfd72221eb54408f1f56ee1a44c75fe1aca861a2f41"
+      malware             = "FakeDocument"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious installer disguised as a fake invoice delivering unkown stealer via HijackLoader. Ref: https://app.any.run/tasks/da709fd9-f8fd-46d6-a939-55369bbb1fbc"
+
+      signer              = "天津语奥科技有限公司"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "21:33:25:3a:49:3f:95:4b:de:33:91:a0:6a:ed:f2:63"
+      cert_thumbprint     = "8386DB3C54A8D75F6EF76BE8DC95348435A44ED5"
+      cert_valid_from     = "2025-04-17"
+      cert_valid_to       = "2026-04-17"
+
+      country             = "CN"
+      state               = "天津"
+      locality            = "天津"
+      email               = "???"
+      rdn_serial_number   = "91120102MAD7KFG849"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "21:33:25:3a:49:3f:95:4b:de:33:91:a0:6a:ed:f2:63"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeDocument_Certum_64065DA5F28814E1470536854F7D0162 {
    meta:
       description         = "Detects FakeDocument with compromised cert (Certum)"
@@ -15397,6 +15432,41 @@ rule MAL_Compromised_Cert_FakeStatement_SSL_com_45DF3961393196E00E5F001A73DF9964
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "45:df:39:61:39:31:96:e0:0e:5f:00:1a:73:df:99:64"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeUpdate_SSL_com_7B506D3D23E689FF63395DE65FEB25A3 {
+   meta:
+      description         = "Detects FakeUpdate with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-05-07"
+      version             = "1.0"
+
+      hash                = "21db3b34ea5c058d6e998c7e3916261fee5f30644116c49da8a3f073c6780a68"
+      malware             = "FakeUpdate"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "FORME PROPERTY SERVICES LIMITED"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "7b:50:6d:3d:23:e6:89:ff:63:39:5d:e6:5f:eb:25:a3"
+      cert_thumbprint     = "49C434CD0293AC6E7CDEDA5E4E54B15AE6CF9A46"
+      cert_valid_from     = "2025-05-07"
+      cert_valid_to       = "2026-05-07"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "7b:50:6d:3d:23:e6:89:ff:63:39:5d:e6:5f:eb:25:a3"
       )
 }
 
@@ -43750,6 +43820,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_GlobalSign_0DB1B701C9F6B3F37385CD3
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_GlobalSign_1DA8F5EBC1E0C908D1AD1BE6 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-25"
+      version             = "1.0"
+
+      hash                = "1928fc51879838e6447f2232bcf788f7837d789fc08ba2bcb83eca70cc73dbef"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious installer disguised as a fake transaction document that loads a legit RMM tool"
+
+      signer              = "PAKINPAKORN LIMITED PARTNERSHIP"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "1d:a8:f5:eb:c1:e0:c9:08:d1:ad:1b:e6"
+      cert_thumbprint     = "3DE69FAF9E46C8129AF6326714AC60A36C62877D"
+      cert_valid_from     = "2025-11-25"
+      cert_valid_to       = "2026-11-26"
+
+      country             = "TH"
+      state               = "CHIANG MAI"
+      locality            = "SAN SAI"
+      email               = "???"
+      rdn_serial_number   = "0503552004900"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "1d:a8:f5:eb:c1:e0:c9:08:d1:ad:1b:e6"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_GlobalSign_3F639FE6C6390AE939EAA74E {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (GlobalSign)"
@@ -43817,6 +43922,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_GlobalSign_6BD6A96F96CA98B8AA31A21
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "6b:d6:a9:6f:96:ca:98:b8:aa:31:a2:11"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_GlobalSign_6E2B391C7FF99AB597A70E5B {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-15"
+      version             = "1.0"
+
+      hash                = "a67637afafdd1045cf28ccbacf5e503e9a9d12af6fe9640fc68d3f3a1e3954e8"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "SAKHRI YANIS Entrepreneur individuel"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "6e:2b:39:1c:7f:f9:9a:b5:97:a7:0e:5b"
+      cert_thumbprint     = "CF49FBF2A3790CEDB24C3AC4315E3498953FFFC7"
+      cert_valid_from     = "2025-12-15"
+      cert_valid_to       = "2026-12-16"
+
+      country             = "FR"
+      state               = "Hauts-de-Seine"
+      locality            = "Issy-les-Moulineaux"
+      email               = "mohamedhaje04@gmail.com"
+      rdn_serial_number   = "989 260 229"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "6e:2b:39:1c:7f:f9:9a:b5:97:a7:0e:5b"
       )
 }
 
@@ -43992,6 +44132,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_2E833BA760E021C8C7EE72FA6E
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "2e:83:3b:a7:60:e0:21:c8:c7:ee:72:fa:6e:e6:04:6f"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_4F10DF22BF708616F9437AB06E0FAAB0 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-19"
+      version             = "1.0"
+
+      hash                = "460e2568c1198ace18c12d70ac5328dbd07bef3497e2b199afebea31610c8b47"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "UMNOTHO SOFTWARE SA CC"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "4f:10:df:22:bf:70:86:16:f9:43:7a:b0:6e:0f:aa:b0"
+      cert_thumbprint     = "61D0362B8C735DAE6B6715A25707BEE03FA98A7A"
+      cert_valid_from     = "2025-11-19"
+      cert_valid_to       = "2026-11-18"
+
+      country             = "ZA"
+      state               = "KwaZulu-Natal"
+      locality            = "Melmoth"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "4f:10:df:22:bf:70:86:16:f9:43:7a:b0:6e:0f:aa:b0"
       )
 }
 
@@ -54236,11 +54411,11 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_3300068CF598B305D42D2B7EAE000000068CF
       cert_valid_from     = "2026-01-19"
       cert_valid_to       = "2026-01-22"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "RO"
+      state               = "Brasov"
+      locality            = "Brasov"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
