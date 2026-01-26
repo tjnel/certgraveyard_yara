@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_T_21_Microsoft_3300072F066B9375526382C9F6000000072F06 
       cert_valid_from     = "2026-01-23"
       cert_valid_to       = "2026-01-26"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Michigan"
+      locality            = "MT CLEMENS"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

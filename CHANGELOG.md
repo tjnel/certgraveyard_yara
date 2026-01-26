@@ -4,6 +4,12 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.01.26] - 2026-01-26
+
+### Modified
+- MAL_Compromised_Cert_T_21_Microsoft_3300072F066B9375526382C9F6000000072F06 (Updated metadata for T-21)
+- MAL_Compromised_Cert_Traffer_Certum_068403F633568879E1E7CBB5F64E130B (Updated metadata for Traffer)
+
 ## [2026.01.25] - 2026-01-25
 
 ### Added
