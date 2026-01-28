@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Xworm_Sectigo_56A83022F71F3C701CD3BFEA1D8202DF {
       cert_valid_from     = "2026-01-16"
       cert_valid_to       = "2027-01-16"
 
-      country             = "???"
-      state               = "???"
+      country             = "TR"
+      state               = "İstanbul"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "491614-5"
 
    condition:
       uint16(0) == 0x5a4d and

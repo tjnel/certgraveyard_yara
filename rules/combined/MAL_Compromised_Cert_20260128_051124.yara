@@ -21910,6 +21910,41 @@ rule MAL_Compromised_Cert_Lazarus_Sectigo_029BF7E1CB09FE277564BD27C267DE5A {
       )
 }
 
+rule MAL_Compromised_Cert_LegionLoader_Certum_66245C8FEF6F0EF948111C458D177B9F {
+   meta:
+      description         = "Detects LegionLoader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-05-14"
+      version             = "1.0"
+
+      hash                = "7cc1c413cd12c8bc7f5811036c6ad662b07744cd8a466fa51e49d9988dfd3000"
+      malware             = "LegionLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Doken Consult OU"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "66:24:5c:8f:ef:6f:0e:f9:48:11:1c:45:8d:17:7b:9f"
+      cert_thumbprint     = "15537B0C69AAE110E9695A75E5A6480754CA1ADD"
+      cert_valid_from     = "2024-05-14"
+      cert_valid_to       = "2025-05-14"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "66:24:5c:8f:ef:6f:0e:f9:48:11:1c:45:8d:17:7b:9f"
+      )
+}
+
 rule MAL_Compromised_Cert_LegionLoader_Sectigo_269FB93CCBAFAFE2B5F144B5BEFE93F3 {
    meta:
       description         = "Detects LegionLoader with compromised cert (Sectigo)"
@@ -52675,6 +52710,41 @@ rule MAL_Compromised_Cert_TransferLoader_Sectigo_2D1DC3C2E0B0682AB3594E5237DD7C2
       )
 }
 
+rule MAL_Compromised_Cert_TransferLoader_Sectigo_701640EA48E057540967509B99E48AE5 {
+   meta:
+      description         = "Detects TransferLoader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-11"
+      version             = "1.0"
+
+      hash                = "2c70e3b4af65679fc4f4c135dc1c03bd7ec2ae8065e2e5c50db3aaec0effc11f"
+      malware             = "TransferLoader"
+      malware_type        = "Loader"
+      malware_notes       = "Malware requires a specific file name to run. Reaches out to mstiserviceconfig[.]com"
+
+      signer              = "Hangzhou Wenyu Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "70:16:40:ea:48:e0:57:54:09:67:50:9b:99:e4:8a:e5"
+      cert_thumbprint     = "D1F7153FE825467A3069D70F8A2493CB4E18B758"
+      cert_valid_from     = "2025-12-11"
+      cert_valid_to       = "2026-12-11"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "70:16:40:ea:48:e0:57:54:09:67:50:9b:99:e4:8a:e5"
+      )
+}
+
 rule MAL_Compromised_Cert_Transferloader_Sectigo_227563ECCF59CBD7E3E7C8731B666194 {
    meta:
       description         = "Detects Transferloader with compromised cert (Sectigo)"
@@ -63945,6 +64015,41 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_059D20D33CD12FCFFDBBDA534FD1C675 {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Sectigo_187B4539289D41A58D982932E7831752 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-06"
+      version             = "1.0"
+
+      hash                = "90a87fb3a52e07bb24c023832deed25cfd7e3988ca1bfee64a88989273a96a07"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = "File distributed via the malicious LabInstalls PPI network. Ref: https://loaderinsight.agency/?p=payload_view&hash=90a87fb3a52e07bb24c023832deed25cfd7e3988ca1bfee64a88989273a96a07"
+
+      signer              = "WASH AND CUT HAIR SALOON LIMITED"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV E36"
+      cert_serial         = "18:7b:45:39:28:9d:41:a5:8d:98:29:32:e7:83:17:52"
+      cert_thumbprint     = "07A54802BA299BECC6BBD88621A860FD7D8040D0"
+      cert_valid_from     = "2025-11-06"
+      cert_valid_to       = "2026-11-06"
+
+      country             = "GB"
+      state               = "England"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "06905521"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV E36" and
+         sig.serial == "18:7b:45:39:28:9d:41:a5:8d:98:29:32:e7:83:17:52"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_Sectigo_1E074DA361479DD29F2E014AB6ACF5F2 {
    meta:
       description         = "Detects Unknown with compromised cert (Sectigo)"
@@ -64782,6 +64887,41 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_52AF7661636C0C9BEF328C7F13A32230 {
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
          sig.serial == "52:af:76:61:63:6c:0c:9b:ef:32:8c:7f:13:a3:22:30"
+      )
+}
+
+rule MAL_Compromised_Cert_ValleyRAT_Certum_567E1FA7B741E453DEE4CBFAAD7D8062 {
+   meta:
+      description         = "Detects ValleyRAT with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-02"
+      version             = "1.0"
+
+      hash                = "097b38cef99feeb4d5acc40f6c204d83b49a1a4550038b88fd3572bd6c082be9"
+      malware             = "ValleyRAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Yangzhou Dadaxing Internet Information Service Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "56:7e:1f:a7:b7:41:e4:53:de:e4:cb:fa:ad:7d:80:62"
+      cert_thumbprint     = "4B1801DCD2C66936ADBBE424D702B877B38D7F36"
+      cert_valid_from     = "2025-09-02"
+      cert_valid_to       = "2026-09-02"
+
+      country             = "CN"
+      state               = "Jiangsu"
+      locality            = "Yangzhou"
+      email               = "???"
+      rdn_serial_number   = "91321002MAEM2JJP0Q"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "56:7e:1f:a7:b7:41:e4:53:de:e4:cb:fa:ad:7d:80:62"
       )
 }
 
@@ -67711,11 +67851,11 @@ rule MAL_Compromised_Cert_Xworm_Sectigo_56A83022F71F3C701CD3BFEA1D8202DF {
       cert_valid_from     = "2026-01-16"
       cert_valid_to       = "2027-01-16"
 
-      country             = "???"
-      state               = "???"
+      country             = "TR"
+      state               = "İstanbul"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "491614-5"
 
    condition:
       uint16(0) == 0x5a4d and

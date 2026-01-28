@@ -4,6 +4,17 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.01.28] - 2026-01-28
+
+### Added
+- MAL_Compromised_Cert_ValleyRAT_Certum_567E1FA7B741E453DEE4CBFAAD7D8062 (ValleyRAT - Certum)
+- MAL_Compromised_Cert_Unknown_Sectigo_187B4539289D41A58D982932E7831752 (Unknown - Sectigo)
+- MAL_Compromised_Cert_LegionLoader_Certum_66245C8FEF6F0EF948111C458D177B9F (LegionLoader - Certum)
+- MAL_Compromised_Cert_TransferLoader_Sectigo_701640EA48E057540967509B99E48AE5 (TransferLoader - Sectigo)
+
+### Modified
+- MAL_Compromised_Cert_Xworm_Sectigo_56A83022F71F3C701CD3BFEA1D8202DF (Updated metadata for Xworm)
+
 ## [2026.01.27] - 2026-01-27
 
 ### Added
