@@ -4,6 +4,27 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.01.29] - 2026-01-29
+
+### Added
+- MAL_Compromised_Cert_AnyPDFTrojan_DigiCert_0E513A559B22A73332C8E5CADF02AE17 (AnyPDFTrojan - DigiCert)
+- MAL_Compromised_Cert_MarkiRAT_SSL_com_12CA4926152D33A0EEEB8E9C30A49A1D (MarkiRAT - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_1FBFB66ADE0146F9C61C6218 (Updated metadata for Crazy Evil Traffer Team)
+- MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_SSL_com_5DFD0E9D2EB85BE5912CCB6EFE551AB9 (Updated metadata for Crazy Evil Traffer Team)
+- MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_3C720E116FF39685FD1BC018 (Updated metadata for Crazy Evil Traffer Team)
+- MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_02229C110CF8795398A98735 (Updated metadata for Crazy Evil Traffer Team)
+- MAL_Compromised_Cert_LegionLoader_Certum_66245C8FEF6F0EF948111C458D177B9F (Updated metadata for LegionLoader)
+- MAL_Compromised_Cert_D3F_ckLoader_SSL_com_584C7B537ABF0DD673CC35C9CF040E91 (Updated metadata for D3F@ckLoader)
+- MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_5298A114ED373199B8DF7B68 (Updated metadata for Crazy Evil Traffer Team)
+- MAL_Compromised_Cert_TransferLoader_Sectigo_701640EA48E057540967509B99E48AE5 (Updated metadata for TransferLoader)
+- MAL_Compromised_Cert_D3F_ckLoader_GlobalSign_496D920DA43B2EBA710E135F (Updated metadata for D3F@ckLoader)
+- MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_Sectigo_009D8810BFF34A30460ABF1E5410324DA8 (Updated metadata for Crazy Evil Traffer Team)
+- MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_Microsoft_3300061F6D63594C7D87BC040B000000061F6D (Updated metadata for Crazy Evil Traffer Team)
+- MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_Sectigo_250824C25A5D2BA93002CFAEDBFAF1BA (Updated metadata for Crazy Evil Traffer Team)
+- MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_61B6B482F4D2937533E8A07B (Updated metadata for Crazy Evil Traffer Team)
+
 ## [2026.01.28] - 2026-01-28
 
 ### Added

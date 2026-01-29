@@ -630,6 +630,41 @@ rule MAL_Compromised_Cert_AnyDesk_GlobalSign_15363337CE1FDC16444D8DF3 {
       )
 }
 
+rule MAL_Compromised_Cert_AnyPDFTrojan_DigiCert_0E513A559B22A73332C8E5CADF02AE17 {
+   meta:
+      description         = "Detects AnyPDFTrojan with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-04-16"
+      version             = "1.0"
+
+      hash                = "a48284edc2079d5cdde52c63fa25ac06e929f4324328c0d22fccc2ac5977df28"
+      malware             = "AnyPDFTrojan"
+      malware_type        = "Backdoor"
+      malware_notes       = "anyPDF is an Adclicker Trojan and a Backdoor - displays hidden ads on your device and simulates ad presses to generate revenue to the attackers. It has the capability to steal PDF related files that you open in your web browser and would be able to send your browsing history to C2 if instructed to do so. See https://rifteyy.org/report/anypdf-malware-analysis for analysis."
+
+      signer              = "Lupus Tech Limited"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "0e:51:3a:55:9b:22:a7:33:32:c8:e5:ca:df:02:ae:17"
+      cert_thumbprint     = "09B373711A32A0D2360E2F6996C8E3C7DB8BD64F"
+      cert_valid_from     = "2025-04-16"
+      cert_valid_to       = "2028-04-20"
+
+      country             = "GB"
+      state               = "???"
+      locality            = "Egham"
+      email               = "???"
+      rdn_serial_number   = "13890437"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "0e:51:3a:55:9b:22:a7:33:32:c8:e5:ca:df:02:ae:17"
+      )
+}
+
 rule MAL_Compromised_Cert_Arechclient2_GlobalSign_7E9054290FC79CAAFE9E5EC6 {
    meta:
       description         = "Detects Arechclient2 with compromised cert (GlobalSign)"
@@ -8190,6 +8225,41 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_010A8D74E727BB24A47
       )
 }
 
+rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_02229C110CF8795398A98735 {
+   meta:
+      description         = "Detects Crazy Evil Traffer Team with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-03"
+      version             = "1.0"
+
+      hash                = "dce96f220fca15e105160d35cddb9022207da667c22a6607ea1f3249b0653287"
+      malware             = "Crazy Evil Traffer Team"
+      malware_type        = "Loader"
+      malware_notes       = "This malware is sold as a service. Frequently used with infostealers. See the following for more details: https://trac-labs.com/the-wagmi-manual-copy-paste-and-profit-2803a15bf540"
+
+      signer              = "Olepole LLC"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "02:22:9c:11:0c:f8:79:53:98:a9:87:35"
+      cert_thumbprint     = "4026F7A5DA6ECDA8E5A2A676C9BF82D1AF2B57E9"
+      cert_valid_from     = "2025-06-03"
+      cert_valid_to       = "2026-06-04"
+
+      country             = "RU"
+      state               = "Moscow"
+      locality            = "Moscow"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "02:22:9c:11:0c:f8:79:53:98:a9:87:35"
+      )
+}
+
 rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_1334C4352845314A1151AE35 {
    meta:
       description         = "Detects Crazy Evil Traffer Team with compromised cert (GlobalSign)"
@@ -8257,6 +8327,41 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_18AC896DD6B2EA430E8
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "18:ac:89:6d:d6:b2:ea:43:0e:85:f6:8e"
+      )
+}
+
+rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_1FBFB66ADE0146F9C61C6218 {
+   meta:
+      description         = "Detects Crazy Evil Traffer Team with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-25"
+      version             = "1.0"
+
+      hash                = "4a802433176d4678103090719cd052db50692b2755945e57717f28e5dc257b3d"
+      malware             = "Crazy Evil Traffer Team"
+      malware_type        = "Loader"
+      malware_notes       = "This malware is sold as a service. Frequently used with infostealers. See the following for more details: https://trac-labs.com/the-wagmi-manual-copy-paste-and-profit-2803a15bf540"
+
+      signer              = "Heze Hongwei Network Technology Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "1f:bf:b6:6a:de:01:46:f9:c6:1c:62:18"
+      cert_thumbprint     = "88BF2C043ACE8CBC5211B5ED99DBDF9C2F24FF20"
+      cert_valid_from     = "2025-06-25"
+      cert_valid_to       = "2026-06-26"
+
+      country             = "CN"
+      state               = "Shandong"
+      locality            = "Heze"
+      email               = "???"
+      rdn_serial_number   = "91371702MABYMG6429"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "1f:bf:b6:6a:de:01:46:f9:c6:1c:62:18"
       )
 }
 
@@ -8400,6 +8505,41 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_36D5370B083DB9016FC
       )
 }
 
+rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_3C720E116FF39685FD1BC018 {
+   meta:
+      description         = "Detects Crazy Evil Traffer Team with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-30"
+      version             = "1.0"
+
+      hash                = "7c5583fff213bd93237b110c274a7ceb8063dd7ee1d0b4fd38351e2975be5cee"
+      malware             = "Crazy Evil Traffer Team"
+      malware_type        = "Loader"
+      malware_notes       = "This malware is sold as a service. Frequently used with infostealers. See the following for more details: https://trac-labs.com/the-wagmi-manual-copy-paste-and-profit-2803a15bf540"
+
+      signer              = "AASIM MEDICARE PRIVATE LIMITED"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "3c:72:0e:11:6f:f3:96:85:fd:1b:c0:18"
+      cert_thumbprint     = "C51DF2A048F6E41B542A02BBC688884E4DE7011E"
+      cert_valid_from     = "2025-06-30"
+      cert_valid_to       = "2026-07-01"
+
+      country             = "IN"
+      state               = "Bihar"
+      locality            = "Samastipur"
+      email               = "karansn82@gmail.com"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "3c:72:0e:11:6f:f3:96:85:fd:1b:c0:18"
+      )
+}
+
 rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_426CBFFCD566DBCEA4652191 {
    meta:
       description         = "Detects Crazy Evil Traffer Team with compromised cert (GlobalSign)"
@@ -8467,6 +8607,41 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_50A57A36055177255C7
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "50:a5:7a:36:05:51:77:25:5c:77:bd:c6"
+      )
+}
+
+rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_5298A114ED373199B8DF7B68 {
+   meta:
+      description         = "Detects Crazy Evil Traffer Team with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-05-30"
+      version             = "1.0"
+
+      hash                = "1450b45187c0f485fad45496717be8e45dec1d4f619ee4294febeeb1d01fd66c"
+      malware             = "Crazy Evil Traffer Team"
+      malware_type        = "Loader"
+      malware_notes       = "This malware is sold as a service. Frequently used with infostealers. See the following for more details: https://trac-labs.com/the-wagmi-manual-copy-paste-and-profit-2803a15bf540"
+
+      signer              = "SUNEX STONES PRIVATE LIMITED"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "52:98:a1:14:ed:37:31:99:b8:df:7b:68"
+      cert_thumbprint     = "DD21129EBA5097150A8D0AAEAD2BC18746FAD52F"
+      cert_valid_from     = "2025-05-30"
+      cert_valid_to       = "2026-05-31"
+
+      country             = "IN"
+      state               = "Rajasthan"
+      locality            = "Jaipur"
+      email               = "anupsinghalrchem@gmail.com"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "52:98:a1:14:ed:37:31:99:b8:df:7b:68"
       )
 }
 
@@ -8572,6 +8747,41 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_609660FCE84EC163C37
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "60:96:60:fc:e8:4e:c1:63:c3:71:2c:2b"
+      )
+}
+
+rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_61B6B482F4D2937533E8A07B {
+   meta:
+      description         = "Detects Crazy Evil Traffer Team with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-03"
+      version             = "1.0"
+
+      hash                = "f427cc8ba338c1400a9576f6ae8008ab16ca358e391c2cbca459cf6def30b354"
+      malware             = "Crazy Evil Traffer Team"
+      malware_type        = "Infostealer"
+      malware_notes       = "This malware was distributed disguised as a video game. The actors send DMs to potential victims asking them to try the game or even offer to pay them to try the game."
+
+      signer              = "SZVERES MARKETING SRL"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "61:b6:b4:82:f4:d2:93:75:33:e8:a0:7b"
+      cert_thumbprint     = ""
+      cert_valid_from     = "2025-10-03"
+      cert_valid_to       = "2026-10-04"
+
+      country             = "RO"
+      state               = "Timiș"
+      locality            = "Biled"
+      email               = ""
+      rdn_serial_number   = "J35/1100/2022"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "61:b6:b4:82:f4:d2:93:75:33:e8:a0:7b"
       )
 }
 
@@ -8715,6 +8925,41 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_Microsoft_33000306F23A9C36B302
       )
 }
 
+rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_Microsoft_3300061F6D63594C7D87BC040B000000061F6D {
+   meta:
+      description         = "Detects Crazy Evil Traffer Team with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-31"
+      version             = "1.0"
+
+      hash                = "9507ce7534cf31314fb38535e85231fa63d603ce68cabeaaf8a4b0020ac91aa4"
+      malware             = "Crazy Evil Traffer Team"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "SOFTOLIO sp. z o.o."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:06:1f:6d:63:59:4c:7d:87:bc:04:0b:00:00:00:06:1f:6d"
+      cert_thumbprint     = ""
+      cert_valid_from     = "2025-12-31"
+      cert_valid_to       = "2026-01-03"
+
+      country             = "PL"
+      state               = "Pomorskie"
+      locality            = "GDYNIA"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:06:1f:6d:63:59:4c:7d:87:bc:04:0b:00:00:00:06:1f:6d"
+      )
+}
+
 rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_SSL_com_15460441B271C3759342B930975B90DA {
    meta:
       description         = "Detects Crazy Evil Traffer Team with compromised cert (SSL.com)"
@@ -8855,6 +9100,41 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_SSL_com_56F6A688C743831312A4A8
       )
 }
 
+rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_SSL_com_5DFD0E9D2EB85BE5912CCB6EFE551AB9 {
+   meta:
+      description         = "Detects Crazy Evil Traffer Team with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-04"
+      version             = "1.0"
+
+      hash                = "ae111d30ea9abe210c4451982a3ea67e99e36cb37e534d133d6bc603afacbea7"
+      malware             = "Crazy Evil Traffer Team"
+      malware_type        = "Loader"
+      malware_notes       = "This malware is sold as a service. Frequently used with infostealers. See the following for more details: https://trac-labs.com/the-wagmi-manual-copy-paste-and-profit-2803a15bf540"
+
+      signer              = "Richester Business Network Inc."
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "5d:fd:0e:9d:2e:b8:5b:e5:91:2c:cb:6e:fe:55:1a:b9"
+      cert_thumbprint     = "1A90B2BEF92A6E67D4542EBE9D0B28B550AB720D"
+      cert_valid_from     = "2025-09-04"
+      cert_valid_to       = "2026-09-01"
+
+      country             = "CA"
+      state               = "Alberta"
+      locality            = "Calgary"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "5d:fd:0e:9d:2e:b8:5b:e5:91:2c:cb:6e:fe:55:1a:b9"
+      )
+}
+
 rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_SSL_com_65DC74FC2995EC9FE2D2E7A616CFE915 {
    meta:
       description         = "Detects Crazy Evil Traffer Team with compromised cert (SSL.com)"
@@ -8960,6 +9240,41 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_SSL_com_6D8954760DB07FE5C98453
       )
 }
 
+rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_Sectigo_009D8810BFF34A30460ABF1E5410324DA8 {
+   meta:
+      description         = "Detects Crazy Evil Traffer Team with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-17"
+      version             = "1.0"
+
+      hash                = "d4b323c06ed57e99016411f0fb1ff66f3c20141c253ef46c4035281118c412a4"
+      malware             = "Crazy Evil Traffer Team"
+      malware_type        = "Loader"
+      malware_notes       = "This malware is sold as a service. Frequently used with infostealers. See the following for more details: https://trac-labs.com/the-wagmi-manual-copy-paste-and-profit-2803a15bf540"
+
+      signer              = "Gucheng County Sili Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:9d:88:10:bf:f3:4a:30:46:0a:bf:1e:54:10:32:4d:a8"
+      cert_thumbprint     = "C739BEE07E4D6DFAA168854601BADC2232628826"
+      cert_valid_from     = "2025-06-17"
+      cert_valid_to       = "2026-06-17"
+
+      country             = "CN"
+      state               = "Hubei Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:9d:88:10:bf:f3:4a:30:46:0a:bf:1e:54:10:32:4d:a8"
+      )
+}
+
 rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_Sectigo_00EF5A23A24B787CDD7A1CF590238E4DED {
    meta:
       description         = "Detects Crazy Evil Traffer Team with compromised cert (Sectigo)"
@@ -8992,6 +9307,41 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_Sectigo_00EF5A23A24B787CDD7A1C
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV E36" and
          sig.serial == "00:ef:5a:23:a2:4b:78:7c:dd:7a:1c:f5:90:23:8e:4d:ed"
+      )
+}
+
+rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_Sectigo_250824C25A5D2BA93002CFAEDBFAF1BA {
+   meta:
+      description         = "Detects Crazy Evil Traffer Team with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-23"
+      version             = "1.0"
+
+      hash                = "c60f79c9fd9432f493256c8c5aa794dd141f9480c3d4fe187e4c48ceaf79088f"
+      malware             = "Crazy Evil Traffer Team"
+      malware_type        = "Loader"
+      malware_notes       = "This malware is sold as a service. Frequently used with infostealers. See the following for more details: https://trac-labs.com/the-wagmi-manual-copy-paste-and-profit-2803a15bf540"
+
+      signer              = "PAPER AND COTTON LTD"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV E36"
+      cert_serial         = "25:08:24:c2:5a:5d:2b:a9:30:02:cf:ae:db:fa:f1:ba"
+      cert_thumbprint     = "8A8945969807D26B12DB2BF83BBBB244AEFE3DB2"
+      cert_valid_from     = "2025-10-23"
+      cert_valid_to       = "2026-10-23"
+
+      country             = "GB"
+      state               = "Gloucestershire"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV E36" and
+         sig.serial == "25:08:24:c2:5a:5d:2b:a9:30:02:cf:ae:db:fa:f1:ba"
       )
 }
 
@@ -9552,6 +9902,41 @@ rule MAL_Compromised_Cert_D3F_ckLoader_SSL_com_4DEBD035CAFE5E73D5C7E0960D450AFD 
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "4d:eb:d0:35:ca:fe:5e:73:d5:c7:e0:96:0d:45:0a:fd"
+      )
+}
+
+rule MAL_Compromised_Cert_D3F_ckLoader_SSL_com_584C7B537ABF0DD673CC35C9CF040E91 {
+   meta:
+      description         = "Detects D3F@ckLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-04-03"
+      version             = "1.0"
+
+      hash                = "d42d30f58b5b3443212310c7fdebc2f611d5cecc6c1f924d7c948fb1b1c819ea"
+      malware             = "D3F@ckLoader"
+      malware_type        = "Loader"
+      malware_notes       = "This malware as sold was part of a service: it included both the loader and a code-signing certificate. See this for more details: https://www.esentire.com/blog/exploring-the-d3f-ck-malware-as-a-service-loader"
+
+      signer              = "Creative Software Services Ltd"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "58:4c:7b:53:7a:bf:0d:d6:73:cc:35:c9:cf:04:0e:91"
+      cert_thumbprint     = "FC925E894C131D85BEA5EABA92C3460D6CD54935"
+      cert_valid_from     = "2024-04-03"
+      cert_valid_to       = "2025-04-03"
+
+      country             = "GB"
+      state               = "England"
+      locality            = "Treeton"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "58:4c:7b:53:7a:bf:0d:d6:73:cc:35:c9:cf:04:0e:91"
       )
 }
 
@@ -21931,11 +22316,11 @@ rule MAL_Compromised_Cert_LegionLoader_Certum_66245C8FEF6F0EF948111C458D177B9F {
       cert_valid_from     = "2024-05-14"
       cert_valid_to       = "2025-05-14"
 
-      country             = "???"
+      country             = "EE"
       state               = "???"
-      locality            = "???"
+      locality            = "Tallinn"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "14918730"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -25197,6 +25582,41 @@ rule MAL_Compromised_Cert_Malware_Sectigo_7D36CBB64BC9ADD17BA71737D3ECCECA {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo RSA Code Signing CA" and
          sig.serial == "7d:36:cb:b6:4b:c9:ad:d1:7b:a7:17:37:d3:ec:ce:ca"
+      )
+}
+
+rule MAL_Compromised_Cert_MarkiRAT_SSL_com_12CA4926152D33A0EEEB8E9C30A49A1D {
+   meta:
+      description         = "Detects MarkiRAT with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-07-28"
+      version             = "1.0"
+
+      hash                = "a4f1b79e96a7d016de1991a64506792018de99eac5df00f7cabe26ef41b2bd81"
+      malware             = "MarkiRAT"
+      malware_type        = "Trojan"
+      malware_notes       = "File uses same mutex and C2 behavior as previously reported by https://securelist.com/ferocious-kitten-6-years-of-covert-surveillance-in-iran/102806/"
+
+      signer              = "Nikki Boy Semblante"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "12:ca:49:26:15:2d:33:a0:ee:eb:8e:9c:30:a4:9a:1d"
+      cert_thumbprint     = "EAB8C45400DBCDB0B956DFF73984B8FC323E2013"
+      cert_valid_from     = "2025-07-28"
+      cert_valid_to       = "2026-07-28"
+
+      country             = "PH"
+      state               = "Leyte"
+      locality            = "Ormoc City"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "12:ca:49:26:15:2d:33:a0:ee:eb:8e:9c:30:a4:9a:1d"
       )
 }
 
@@ -52731,11 +53151,11 @@ rule MAL_Compromised_Cert_TransferLoader_Sectigo_701640EA48E057540967509B99E48AE
       cert_valid_from     = "2025-12-11"
       cert_valid_to       = "2026-12-11"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Zhejiang Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91330114MA2KLTYM9M"
 
    condition:
       uint16(0) == 0x5a4d and

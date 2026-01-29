@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_LegionLoader_Certum_66245C8FEF6F0EF948111C458D177B9F {
       cert_valid_from     = "2024-05-14"
       cert_valid_to       = "2025-05-14"
 
-      country             = "???"
+      country             = "EE"
       state               = "???"
-      locality            = "???"
+      locality            = "Tallinn"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "14918730"
 
    condition:
       uint16(0) == 0x5a4d and

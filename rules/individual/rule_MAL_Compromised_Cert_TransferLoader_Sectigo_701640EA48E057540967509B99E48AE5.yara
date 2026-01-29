@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_TransferLoader_Sectigo_701640EA48E057540967509B99E48AE
       cert_valid_from     = "2025-12-11"
       cert_valid_to       = "2026-12-11"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Zhejiang Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91330114MA2KLTYM9M"
 
    condition:
       uint16(0) == 0x5a4d and
