@@ -16240,6 +16240,76 @@ rule MAL_Compromised_Cert_FakeWallet_Sectigo_0094F5923990A86F83CDE9B6FABC70DF10 
       )
 }
 
+rule MAL_Compromised_Cert_FakeWallet_Sectigo_00CA7E5EC6CA344E6A3296B9317ADF0B59 {
+   meta:
+      description         = "Detects FakeWallet with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-16"
+      version             = "1.0"
+
+      hash                = "33249913aaff8172a459eba02c38d10ebbb7644c9b3d09c4bcc5ccd1a1e4bfa1"
+      malware             = "FakeWallet"
+      malware_type        = "Infostealer"
+      malware_notes       = "The application was disguised to be a Neon Wallet installer."
+
+      signer              = "Jiangyin Kenadi International Trade Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:ca:7e:5e:c6:ca:34:4e:6a:32:96:b9:31:7a:df:0b:59"
+      cert_thumbprint     = "5AF0EADE73CDA1DFF0F2F4C5B644D5D43598B7E3"
+      cert_valid_from     = "2025-12-16"
+      cert_valid_to       = "2026-12-16"
+
+      country             = "CN"
+      state               = "Jiangsu Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91320281MA1XEGJA1C"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:ca:7e:5e:c6:ca:34:4e:6a:32:96:b9:31:7a:df:0b:59"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeWallet_Sectigo_59F0E495A504C6E47F40A02BF0BA6DDB {
+   meta:
+      description         = "Detects FakeWallet with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-09"
+      version             = "1.0"
+
+      hash                = "6651210296c02f468f0fecdadcaa06824f9222f0bfd794b78653ff298a84ad34"
+      malware             = "FakeWallet"
+      malware_type        = "Infostealer"
+      malware_notes       = "Application is a fake Multibit wallet installer."
+
+      signer              = "Anhui Shanxian Tongxin Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "59:f0:e4:95:a5:04:c6:e4:7f:40:a0:2b:f0:ba:6d:db"
+      cert_thumbprint     = "6394219837078FE26499EAB084B99904626083DD"
+      cert_valid_from     = "2026-01-09"
+      cert_valid_to       = "2027-01-09"
+
+      country             = "CN"
+      state               = "Anhui Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91340104MA8N19889Y"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "59:f0:e4:95:a5:04:c6:e4:7f:40:a0:2b:f0:ba:6d:db"
+      )
+}
+
 rule MAL_Compromised_Cert_Fakebat_Certificate_SSL_com_6CD23039DFDA4B9363F3666113C2CBC8 {
    meta:
       description         = "Detects Fakebat_Certificate with compromised cert (SSL.com)"
@@ -28756,11 +28826,11 @@ rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_1E5B7FB3E10C9141512CECB24D56D4F
       cert_valid_from     = "2026-01-22"
       cert_valid_to       = "2027-01-22"
 
-      country             = "???"
+      country             = "SK"
       state               = "???"
-      locality            = "???"
+      locality            = "Bratislava"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "54614821"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -30622,6 +30692,41 @@ rule MAL_Compromised_Cert_Onyx_RMM_Sectigo_06F88E55252FF3342C6C47004DD8022A {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "06:f8:8e:55:25:2f:f3:34:2c:6c:47:00:4d:d8:02:2a"
+      )
+}
+
+rule MAL_Compromised_Cert_OpenMyManual_Sectigo_7D06C48CCB0E09945CE6557C7C8EB5A8 {
+   meta:
+      description         = "Detects OpenMyManual with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-01-17"
+      version             = "1.0"
+
+      hash                = "a16cbf9ab535d4ad628b583ec3e026799f38bb50b98c495333302f7b804390ea"
+      malware             = "OpenMyManual"
+      malware_type        = "Trojan"
+      malware_notes       = "A trojan manual finding application."
+
+      signer              = "Pixel Catalyst Media LLC"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "7d:06:c4:8c:cb:0e:09:94:5c:e6:55:7c:7c:8e:b5:a8"
+      cert_thumbprint     = "2D4129109DBF921DB0BC48D41DA32DA0FF1BF024"
+      cert_valid_from     = "2025-01-17"
+      cert_valid_to       = "2028-01-17"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "7d:06:c4:8c:cb:0e:09:94:5c:e6:55:7c:7c:8e:b5:a8"
       )
 }
 
@@ -57782,6 +57887,41 @@ rule MAL_Compromised_Cert_Unknown_DigiCert_0E15E5500631C4E3A92EF50200E5031B {
       for any sig in pe.signatures : (
          sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
          sig.serial == "0e:15:e5:50:06:31:c4:e3:a9:2e:f5:02:00:e5:03:1b"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_DigiCert_0E5909036A53A3F72552067E888B8239 {
+   meta:
+      description         = "Detects Unknown with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-11-08"
+      version             = "1.0"
+
+      hash                = "6445145ba1f2a8a3fdd9d4a3a3b25be420b61dbe03f7cee5c38e6956e3fc4a48"
+      malware             = "Unknown"
+      malware_type        = "Trojan"
+      malware_notes       = "The malware downloads remote files to drop into temporary directories and then creates firewall exclusions for them."
+
+      signer              = "34.028.832 HIGOR PEREIRA MORAIS"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "0e:59:09:03:6a:53:a3:f7:25:52:06:7e:88:8b:82:39"
+      cert_thumbprint     = "2B598D1AAB6A031C52FC757F131FDECDFDB16C52"
+      cert_valid_from     = "2024-11-08"
+      cert_valid_to       = "2025-11-07"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "0e:59:09:03:6a:53:a3:f7:25:52:06:7e:88:8b:82:39"
       )
 }
 

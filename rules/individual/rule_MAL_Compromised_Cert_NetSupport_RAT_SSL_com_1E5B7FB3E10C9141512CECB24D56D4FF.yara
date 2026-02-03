@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_1E5B7FB3E10C9141512CECB24D56D4F
       cert_valid_from     = "2026-01-22"
       cert_valid_to       = "2027-01-22"
 
-      country             = "???"
+      country             = "SK"
       state               = "???"
-      locality            = "???"
+      locality            = "Bratislava"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "54614821"
 
    condition:
       uint16(0) == 0x5a4d and
