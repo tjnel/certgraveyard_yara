@@ -30716,11 +30716,11 @@ rule MAL_Compromised_Cert_OpenMyManual_Sectigo_7D06C48CCB0E09945CE6557C7C8EB5A8 
       cert_valid_from     = "2025-01-17"
       cert_valid_to       = "2028-01-17"
 
-      country             = "???"
-      state               = "???"
+      country             = "US"
+      state               = "Delaware"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "3782580"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -44450,6 +44450,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Certum_0FF41D3867F0498A308AB24792F
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Certum_6002EF4359609E6BE08215CC40F9B377 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-23"
+      version             = "1.0"
+
+      hash                = "8bba91fb8bc5629d55b2068e548843cea582365e712213533647e2e79525c4fa"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = "Sent via email disguised as a social security document."
+
+      signer              = "BEACH JOHN WILLIAM"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "60:02:ef:43:59:60:9e:6b:e0:82:15:cc:40:f9:b3:77"
+      cert_thumbprint     = "5EF6C0869F593CF53FF99B7497EE41DABB18755E"
+      cert_valid_from     = "2025-12-23"
+      cert_valid_to       = "2026-12-23"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "60:02:ef:43:59:60:9e:6b:e0:82:15:cc:40:f9:b3:77"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_DigiCert_029C936B150B5C3588B661A870BEB57B {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (DigiCert)"
@@ -51205,6 +51240,41 @@ rule MAL_Compromised_Cert_StealC_GlobalSign_1C8065E6FC5E7D5370B937B1 {
       )
 }
 
+rule MAL_Compromised_Cert_StealC_GlobalSign_2A0B54F354DA2C94ABA626C1 {
+   meta:
+      description         = "Detects StealC with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-02-20"
+      version             = "1.0"
+
+      hash                = "a72304a18fa28a8b75bdc89d1704a9d833fc5146a441ae4fe425741ce137e427"
+      malware             = "StealC"
+      malware_type        = "Infostealer"
+      malware_notes       = "Malware was disguised as a VPN."
+
+      signer              = "OOO Upravlyayushchaya Kompaniya Boksit"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "2a:0b:54:f3:54:da:2c:94:ab:a6:26:c1"
+      cert_thumbprint     = "AC0B800F87A27DF2368362857D15FA31D0D91AB3"
+      cert_valid_from     = "2025-02-20"
+      cert_valid_to       = "2026-02-21"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "2a:0b:54:f3:54:da:2c:94:ab:a6:26:c1"
+      )
+}
+
 rule MAL_Compromised_Cert_StealC_GlobalSign_64D320BA7835B7EABB35090B {
    meta:
       description         = "Detects StealC with compromised cert (GlobalSign)"
@@ -57911,11 +57981,11 @@ rule MAL_Compromised_Cert_Unknown_DigiCert_0E5909036A53A3F72552067E888B8239 {
       cert_valid_from     = "2024-11-08"
       cert_valid_to       = "2025-11-07"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "BR"
+      state               = "PARAIBA"
+      locality            = "CAMPINA GRANDE"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "34.028.832/0001-38"
 
    condition:
       uint16(0) == 0x5a4d and

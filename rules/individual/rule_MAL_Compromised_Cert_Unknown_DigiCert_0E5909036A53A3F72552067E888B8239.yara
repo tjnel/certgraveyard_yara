@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Unknown_DigiCert_0E5909036A53A3F72552067E888B8239 {
       cert_valid_from     = "2024-11-08"
       cert_valid_to       = "2025-11-07"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "BR"
+      state               = "PARAIBA"
+      locality            = "CAMPINA GRANDE"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "34.028.832/0001-38"
 
    condition:
       uint16(0) == 0x5a4d and

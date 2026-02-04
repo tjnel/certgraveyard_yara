@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_OpenMyManual_Sectigo_7D06C48CCB0E09945CE6557C7C8EB5A8 
       cert_valid_from     = "2025-01-17"
       cert_valid_to       = "2028-01-17"
 
-      country             = "???"
-      state               = "???"
+      country             = "US"
+      state               = "Delaware"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "3782580"
 
    condition:
       uint16(0) == 0x5a4d and
