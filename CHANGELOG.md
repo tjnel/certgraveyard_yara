@@ -4,6 +4,12 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.02.07] - 2026-02-07
+
+### Added
+- MAL_Compromised_Cert_HijackLoader_Sectigo_256039FE43338724270197A2C048EC15 (HijackLoader - Sectigo)
+- MAL_Compromised_Cert_FakeZabbix_Sectigo_00FEA7AAE8DAD9370F4E82DBC2EBB0F916 (FakeZabbix - Sectigo)
+
 ## [2026.02.06] - 2026-02-06
 
 ### Added
