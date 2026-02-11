@@ -17500,6 +17500,41 @@ rule MAL_Compromised_Cert_GPUGate_GlobalSign_76DBA39518898AC66E6D1100 {
       )
 }
 
+rule MAL_Compromised_Cert_GalacticPDF_Trojan_DigiCert_0F62A61D298FFBC5A426F165BB63E477 {
+   meta:
+      description         = "Detects GalacticPDF, Trojan with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-13"
+      version             = "1.0"
+
+      hash                = "074b1f2b5734f038497f0a5cf06c9c349f072161c032830cbcad9508b1075f7d"
+      malware             = "GalacticPDF, Trojan"
+      malware_type        = "Trojan"
+      malware_notes       = "App is a functional PDF editor but also manipulates the user's browser and search engine."
+
+      signer              = "MONKEY DIGITAL LTD"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "0f:62:a6:1d:29:8f:fb:c5:a4:26:f1:65:bb:63:e4:77"
+      cert_thumbprint     = "E356D919C331C0984180CC29224BC5D1E18C9A5D"
+      cert_valid_from     = "2026-01-13"
+      cert_valid_to       = "2028-01-12"
+
+      country             = "IL"
+      state               = "???"
+      locality            = "Holon"
+      email               = "???"
+      rdn_serial_number   = "516195021"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "0f:62:a6:1d:29:8f:fb:c5:a4:26:f1:65:bb:63:e4:77"
+      )
+}
+
 rule MAL_Compromised_Cert_Gh0stRAT_Certum_5F737E82330734C32297EF89B72FB607 {
    meta:
       description         = "Detects Gh0stRAT with compromised cert (Certum)"
@@ -42210,6 +42245,41 @@ rule MAL_Compromised_Cert_Remcos_GlobalSign_32D05E78573EFED7E2B30A3C {
       )
 }
 
+rule MAL_Compromised_Cert_Remcos_RAT_GlobalSign_258E91BD0C0CC0A8C4BC5D8A {
+   meta:
+      description         = "Detects Remcos RAT with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-27"
+      version             = "1.0"
+
+      hash                = "a08293e23e09d53692aca4b20974f270e48c58c53532c6cc715993d24e928e35"
+      malware             = "Remcos RAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = "File's metadata claims to be a CrowdStrike Falcon installer."
+
+      signer              = "HYPERBOLA TRADECOM LIMITED"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "25:8e:91:bd:0c:0c:c0:a8:c4:bc:5d:8a"
+      cert_thumbprint     = "2CD39CB64393756174636228F62B47E2EB0698AE"
+      cert_valid_from     = "2025-11-27"
+      cert_valid_to       = "2026-11-28"
+
+      country             = "IN"
+      state               = "West Bengal"
+      locality            = "Kolkata"
+      email               = "???"
+      rdn_serial_number   = "U74900WB2013PLC191576"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "25:8e:91:bd:0c:0c:c0:a8:c4:bc:5d:8a"
+      )
+}
+
 rule MAL_Compromised_Cert_RemoteManipulator_GlobalSign_6E4DA2A3CFA63A68B1259AD5 {
    meta:
       description         = "Detects RemoteManipulator with compromised cert (GlobalSign)"
@@ -44835,6 +44905,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_GlobalSign_3F639FE6C6390AE939EAA74
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_GlobalSign_5D4B0D20E782AC7DC39CEA61 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-29"
+      version             = "1.0"
+
+      hash                = "edbb4d8d6b549ea5ec04e8a43e51d5fffad9276a52dacad8bba4ea09d9b41063"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = "The malware was distributed disguised as a document, connects to the domain zkyhgfvluyvjh[.]im"
+
+      signer              = "ALTERNATIVE HOME HEALTHCARE SERVICES LLC"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "5d:4b:0d:20:e7:82:ac:7d:c3:9c:ea:61"
+      cert_thumbprint     = "33E8E4820D1E45C70467FA92480C03A362688F7C"
+      cert_valid_from     = "2025-12-29"
+      cert_valid_to       = "2026-12-30"
+
+      country             = "US"
+      state               = "South Carolina"
+      locality            = "Lancaster"
+      email               = "???"
+      rdn_serial_number   = "00765152"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "5d:4b:0d:20:e7:82:ac:7d:c3:9c:ea:61"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_GlobalSign_6BD6A96F96CA98B8AA31A211 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (GlobalSign)"
@@ -45252,6 +45357,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_00D703B2786230CDC702B125CA
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "00:d7:03:b2:78:62:30:cd:c7:02:b1:25:ca:3c:29:c5:93"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_2423453A99B347263BBBA607F4F55FAB {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-11"
+      version             = "1.0"
+
+      hash                = "bcd7a7a77859184ce14ce7e9e7649b4e37a37129528c867fcf5b1a9726916f84"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "The malware was distributed disguised as a invoice document, connects to the domain ssagntroplexa[.]com"
+
+      signer              = "CORE OPERATING SYSTEM LLC"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "24:23:45:3a:99:b3:47:26:3b:bb:a6:07:f4:f5:5f:ab"
+      cert_thumbprint     = "52DDE3E85F79594473B2AE3239AD4369D1360E1F"
+      cert_valid_from     = "2025-11-11"
+      cert_valid_to       = "2028-11-10"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "24:23:45:3a:99:b3:47:26:3b:bb:a6:07:f4:f5:5f:ab"
       )
 }
 
@@ -58272,6 +58412,41 @@ rule MAL_Compromised_Cert_Unknown_Fake_Browser_update_DigiCert_0C0999179801B46B9
       for any sig in pe.signatures : (
          sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA256 2021 CA1" and
          sig.serial == "0c:09:99:17:98:01:b4:6b:92:91:1b:8b:67:10:18:a8"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Fake_Browser_update_GlobalSign_733CFAED784964232D1A8EFE {
+   meta:
+      description         = "Detects Unknown, Fake Browser update with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-04-22"
+      version             = "1.0"
+
+      hash                = "66c6145976275f9dafd40e291d3c4ee9446a11dbf93aebba6097068ed922ffc7"
+      malware             = "Unknown, Fake Browser update"
+      malware_type        = "Browser Hijacker"
+      malware_notes       = "App loads Edge Bitcoin Wallet components to intercept credit card and crypto wallet information."
+
+      signer              = "Weifang Jinqihua Human Resources Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "73:3c:fa:ed:78:49:64:23:2d:1a:8e:fe"
+      cert_thumbprint     = "30EB1176D171BD54C3E69CCF0F61288BB0667991"
+      cert_valid_from     = "2025-04-22"
+      cert_valid_to       = "2026-04-23"
+
+      country             = "CN"
+      state               = "Shandong"
+      locality            = "Weifang"
+      email               = "???"
+      rdn_serial_number   = "91370705MA3U9MRD7T"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "73:3c:fa:ed:78:49:64:23:2d:1a:8e:fe"
       )
 }
 

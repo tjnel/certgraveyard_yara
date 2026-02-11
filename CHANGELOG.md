@@ -4,6 +4,15 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.02.11] - 2026-02-11
+
+### Added
+- MAL_Compromised_Cert_Remcos_RAT_GlobalSign_258E91BD0C0CC0A8C4BC5D8A (Remcos RAT - GlobalSign)
+- MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_2423453A99B347263BBBA607F4F55FAB (ScreenConnectLoader - Sectigo)
+- MAL_Compromised_Cert_ScreenConnectLoader_GlobalSign_5D4B0D20E782AC7DC39CEA61 (ScreenConnectLoader - GlobalSign)
+- MAL_Compromised_Cert_GalacticPDF_Trojan_DigiCert_0F62A61D298FFBC5A426F165BB63E477 (GalacticPDF, Trojan - DigiCert)
+- MAL_Compromised_Cert_Unknown_Fake_Browser_update_GlobalSign_733CFAED784964232D1A8EFE (Unknown, Fake Browser update - GlobalSign)
+
 ## [2026.02.10] - 2026-02-10
 
 ### Added
