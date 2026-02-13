@@ -4,6 +4,15 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.02.13] - 2026-02-13
+
+### Added
+- MAL_Compromised_Cert_FakeDropbox_Sectigo_00BCA75234F538C606EECBDD0C8646F774 (FakeDropbox - Sectigo)
+- MAL_Compromised_Cert_XenoRAT_SSL_com_368FC710C15C5D27046BB54908E1258D (XenoRAT - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_StealC_Sectigo_00D32BDB629F7938BB42FC0D833FCFD1BE (Updated metadata for StealC)
+
 ## [2026.02.12] - 2026-02-12
 
 ### Added

@@ -14700,6 +14700,41 @@ rule MAL_Compromised_Cert_FakeDropboxDocSend_Sectigo_00CD308B846B1CA4CF08F6DF76F
       )
 }
 
+rule MAL_Compromised_Cert_FakeDropbox_Sectigo_00BCA75234F538C606EECBDD0C8646F774 {
+   meta:
+      description         = "Detects FakeDropbox with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-30"
+      version             = "1.0"
+
+      hash                = "477b70c677c0a3dd145463957a2e737a36c90b3a860b155a4c1c6ab7610b0f99"
+      malware             = "FakeDropbox"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "BSD TASIMACILIK TURIZM INSAAT SANAYI TICARET LIMITED SIRKETI"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:bc:a7:52:34:f5:38:c6:06:ee:cb:dd:0c:86:46:f7:74"
+      cert_thumbprint     = "DDC8F9ECE2C7B4176BF9BEF770A2FA432FDBB227"
+      cert_valid_from     = "2026-01-30"
+      cert_valid_to       = "2027-01-30"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:bc:a7:52:34:f5:38:c6:06:ee:cb:dd:0c:86:46:f7:74"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeIncident_SSL_com_3AEB4EDA7679266BA856153C6D438080 {
    meta:
       description         = "Detects FakeIncident with compromised cert (SSL.com)"
@@ -51786,11 +51821,11 @@ rule MAL_Compromised_Cert_StealC_Sectigo_00D32BDB629F7938BB42FC0D833FCFD1BE {
       cert_valid_from     = "2025-08-22"
       cert_valid_to       = "2026-08-22"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Shanxi Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91140105MADC8H5Y12"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -68982,6 +69017,41 @@ rule MAL_Compromised_Cert_XWorm_SSL_com_51554DAD826DA2EE44D163AA61EA5615 {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
          sig.serial == "51:55:4d:ad:82:6d:a2:ee:44:d1:63:aa:61:ea:56:15"
+      )
+}
+
+rule MAL_Compromised_Cert_XenoRAT_SSL_com_368FC710C15C5D27046BB54908E1258D {
+   meta:
+      description         = "Detects XenoRAT with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-04"
+      version             = "1.0"
+
+      hash                = "d8e984b4cf7122e97ac108cfc8143f1887b743af6aefe34e79e2891c94054112"
+      malware             = "XenoRAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Bato Dugarminaev"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "36:8f:c7:10:c1:5c:5d:27:04:6b:b5:49:08:e1:25:8d"
+      cert_thumbprint     = "388A3C918DE5080C7B504C39205F033BFC59E22A"
+      cert_valid_from     = "2026-02-04"
+      cert_valid_to       = "2027-02-03"
+
+      country             = "MT"
+      state               = "Ħamrun"
+      locality            = "Ħamrun"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "36:8f:c7:10:c1:5c:5d:27:04:6b:b5:49:08:e1:25:8d"
       )
 }
 

@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_StealC_Sectigo_00D32BDB629F7938BB42FC0D833FCFD1BE {
       cert_valid_from     = "2025-08-22"
       cert_valid_to       = "2026-08-22"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Shanxi Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91140105MADC8H5Y12"
 
    condition:
       uint16(0) == 0x5a4d and
