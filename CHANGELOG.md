@@ -4,6 +4,15 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.02.15] - 2026-02-15
+
+### Added
+- MAL_Compromised_Cert_RemoteAdminLoader_Sectigo_00AD08F3CD30D2B8CB6A6868D12406BDFA (RemoteAdminLoader - Sectigo)
+- MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_00BCA75234F538C606EECBDD0C8646F774 (ScreenConnectLoader - Sectigo)
+
+### Modified
+- MAL_Compromised_Cert_Unknown_Sectigo_0E48AC7BECF392252A06748BE3C9A0EB (Updated metadata for Unknown)
+
 ## [2026.02.14] - 2026-02-14
 
 ### Added

@@ -42420,6 +42420,41 @@ rule MAL_Compromised_Cert_Remcos_RAT_GlobalSign_258E91BD0C0CC0A8C4BC5D8A {
       )
 }
 
+rule MAL_Compromised_Cert_RemoteAdminLoader_Sectigo_00AD08F3CD30D2B8CB6A6868D12406BDFA {
+   meta:
+      description         = "Detects RemoteAdminLoader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-09"
+      version             = "1.0"
+
+      hash                = "b9b07224e5840482a5bf351c3f4984e46387dcf2808f9324c0da343d74136e1d"
+      malware             = "RemoteAdminLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = "Fake cryptowallet that installs remote admin tool."
+
+      signer              = "Anhui Kangbei Si Energy Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:ad:08:f3:cd:30:d2:b8:cb:6a:68:68:d1:24:06:bd:fa"
+      cert_thumbprint     = "3F21E8D154D8A5061843D48BEBBB4E0CD650B67C"
+      cert_valid_from     = "2026-01-09"
+      cert_valid_to       = "2027-01-09"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:ad:08:f3:cd:30:d2:b8:cb:6a:68:68:d1:24:06:bd:fa"
+      )
+}
+
 rule MAL_Compromised_Cert_RemoteManipulator_GlobalSign_6E4DA2A3CFA63A68B1259AD5 {
    meta:
       description         = "Detects RemoteManipulator with compromised cert (GlobalSign)"
@@ -45532,6 +45567,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_779D697C260E9987B6A6C4121D
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "77:9d:69:7c:26:0e:99:87:b6:a6:c4:12:1d:ac:80:8a"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_00BCA75234F538C606EECBDD0C8646F774 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-30"
+      version             = "1.0"
+
+      hash                = "a5b1a12aa56b1dd1ebfbcf8e658443f8ed0c314e8b9be6a9622427cd77bbeadd"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = "This file was used to target Brazil and used a lure disguised as document from the police."
+
+      signer              = "BSD TASIMACILIK TURIZM INSAAT SANAYI TICARET LIMITED SIRKETI"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:bc:a7:52:34:f5:38:c6:06:ee:cb:dd:0c:86:46:f7:74"
+      cert_thumbprint     = "DDC8F9ECE2C7B4176BF9BEF770A2FA432FDBB227"
+      cert_valid_from     = "2026-01-30"
+      cert_valid_to       = "2027-01-30"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:bc:a7:52:34:f5:38:c6:06:ee:cb:dd:0c:86:46:f7:74"
       )
 }
 
@@ -65471,11 +65541,11 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_0E48AC7BECF392252A06748BE3C9A0EB {
       cert_valid_from     = "2025-10-20"
       cert_valid_to       = "2027-01-18"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Shanghai Shi"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91310115MA1K4MHB7B"
 
    condition:
       uint16(0) == 0x5a4d and
