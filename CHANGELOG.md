@@ -4,6 +4,16 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.02.17] - 2026-02-17
+
+### Added
+- MAL_Compromised_Cert_FakeCiscoVPN_Sectigo_00BBD8E8B439FE6DB51E2E4EC70504A439 (FakeCiscoVPN - Sectigo)
+- MAL_Compromised_Cert_UNK_50_Microsoft_330007AFEEA2D4B5F7A7BA551200000007AFEE (UNK-50 - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_00BCA75234F538C606EECBDD0C8646F774 (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_RemoteAdminLoader_Sectigo_00AD08F3CD30D2B8CB6A6868D12406BDFA (Updated metadata for RemoteAdminLoader)
+
 ## [2026.02.15] - 2026-02-15
 
 ### Added

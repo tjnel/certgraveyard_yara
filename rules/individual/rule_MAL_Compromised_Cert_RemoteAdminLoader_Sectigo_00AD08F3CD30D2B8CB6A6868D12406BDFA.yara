@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_RemoteAdminLoader_Sectigo_00AD08F3CD30D2B8CB6A6868D124
       cert_valid_from     = "2026-01-09"
       cert_valid_to       = "2027-01-09"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Anhui Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91340122MA2UGUNA54"
 
    condition:
       uint16(0) == 0x5a4d and
