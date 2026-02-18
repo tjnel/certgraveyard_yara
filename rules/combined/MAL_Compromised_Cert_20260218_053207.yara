@@ -11900,6 +11900,41 @@ rule MAL_Compromised_Cert_ElysiumStealer_Sectigo_6AAA62208A3A78BFAC1443007D031E6
       )
 }
 
+rule MAL_Compromised_Cert_EvilAI_Certum_3FF2B6872A6D7018078C820704F95028 {
+   meta:
+      description         = "Detects EvilAI with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2023-07-26"
+      version             = "1.0"
+
+      hash                = "2b2937df3e5ae5465058b45ddaf6e46432613fa5ac678d4d64a8daf0c2f56bfc"
+      malware             = "EvilAI"
+      malware_type        = "Unknown"
+      malware_notes       = "Discussion: https://www.reddit.com/r/antivirus/comments/1r368h4/malware_analysis_networkgraphicssetupexe"
+
+      signer              = "Danylo Babenko"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "3f:f2:b6:87:2a:6d:70:18:07:8c:82:07:04:f9:50:28"
+      cert_thumbprint     = "17B64AA8D6C8A1F04BF19F48023B8D315022B2F5"
+      cert_valid_from     = "2023-07-26"
+      cert_valid_to       = "2026-07-25"
+
+      country             = "UA"
+      state               = "Kyiv"
+      locality            = "Kyiv"
+      email               = "support@fivemods.io"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "3f:f2:b6:87:2a:6d:70:18:07:8c:82:07:04:f9:50:28"
+      )
+}
+
 rule MAL_Compromised_Cert_FEEDFACE_GlobalSign_319A56CABCD2B8E24FAC13F2 {
    meta:
       description         = "Detects FEEDFACE with compromised cert (GlobalSign)"
@@ -13916,11 +13951,11 @@ rule MAL_Compromised_Cert_FakeCiscoVPN_Sectigo_00BBD8E8B439FE6DB51E2E4EC70504A43
       cert_valid_from     = "2026-01-23"
       cert_valid_to       = "2027-01-23"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Fujian Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91350200MA8W1M559G"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -46760,6 +46795,41 @@ rule MAL_Compromised_Cert_Silence_Sectigo_7D27332C3CB3A382A4FD232C5C66A2 {
       )
 }
 
+rule MAL_Compromised_Cert_SmartLoader_Microsoft_330006E63A45096D2272D901DC00000006E63A {
+   meta:
+      description         = "Detects SmartLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-14"
+      version             = "1.0"
+
+      hash                = "d532388be87256369b8f61886c45ac13b298d5e3f6853cde361491e9a414381a"
+      malware             = "SmartLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Proton Application"
+
+      signer              = "Anquesia Gray"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:06:e6:3a:45:09:6d:22:72:d9:01:dc:00:00:00:06:e6:3a"
+      cert_thumbprint     = "C849B459E8421187078ED13A83B8A17C7B749A23"
+      cert_valid_from     = "2026-02-14"
+      cert_valid_to       = "2026-02-17"
+
+      country             = "US"
+      state               = "Georgia"
+      locality            = "Atlanta"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:06:e6:3a:45:09:6d:22:72:d9:01:dc:00:00:00:06:e6:3a"
+      )
+}
+
 rule MAL_Compromised_Cert_SmokedHam_Certum_34CA52133F074E12B8A81819DA47E8FB {
    meta:
       description         = "Detects SmokedHam with compromised cert (Certum)"
@@ -53200,6 +53270,41 @@ rule MAL_Compromised_Cert_T_21_Microsoft_3300072F066B9375526382C9F6000000072F06 
       )
 }
 
+rule MAL_Compromised_Cert_T_21_Microsoft_330007CC7E3707951EEE017ED500000007CC7E {
+   meta:
+      description         = "Detects T-21 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-16"
+      version             = "1.0"
+
+      hash                = "1325a627124c5372e5825fa7329c76ea0f421ea96574fc42e7ea18c783692ab7"
+      malware             = "T-21"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Webex builds delivered from fake meeting websites impersonating companies worldwide"
+
+      signer              = "Anquesia Gray"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:07:cc:7e:37:07:95:1e:ee:01:7e:d5:00:00:00:07:cc:7e"
+      cert_thumbprint     = "C1A17F2290B1C7A56E54424D7F1022E8ED30D456"
+      cert_valid_from     = "2026-02-16"
+      cert_valid_to       = "2026-02-19"
+
+      country             = "US"
+      state               = "Georgia"
+      locality            = "Atlanta"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:07:cc:7e:37:07:95:1e:ee:01:7e:d5:00:00:00:07:cc:7e"
+      )
+}
+
 rule MAL_Compromised_Cert_TamperedChef_GlobalSign_4BC8E9DA91CB67F9EA1B6079 {
    meta:
       description         = "Detects TamperedChef with compromised cert (GlobalSign)"
@@ -56616,11 +56721,11 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_330007AFEEA2D4B5F7A7BA551200000007AFE
       cert_valid_from     = "2026-02-12"
       cert_valid_to       = "2026-02-15"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "RO"
+      state               = "Brasov"
+      locality            = "Brasov"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -65237,6 +65342,41 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_00B7A7CAF4F460E829E9EC6242656E9EBC {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "00:b7:a7:ca:f4:f4:60:e8:29:e9:ec:62:42:65:6e:9e:bc"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Sectigo_00BDE35FE4188DD8BAA55772BC6FEF5B9E {
+   meta:
+      description         = "Detects Unknown with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-03"
+      version             = "1.0"
+
+      hash                = "e06dbe87f6cdcfc942f274c4d7883a5ebadf48b7d5eab2a9ef0e900783a8e915"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = "Putty build delivered from the malicious InstallsLab PPI network"
+
+      signer              = "Cage And Stone Fabrication LLC"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV E36"
+      cert_serial         = "00:bd:e3:5f:e4:18:8d:d8:ba:a5:57:72:bc:6f:ef:5b:9e"
+      cert_thumbprint     = "DB97EB5BB01780752703DF68B7EA95F5131F46D3"
+      cert_valid_from     = "2026-02-03"
+      cert_valid_to       = "2027-02-03"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV E36" and
+         sig.serial == "00:bd:e3:5f:e4:18:8d:d8:ba:a5:57:72:bc:6f:ef:5b:9e"
       )
 }
 

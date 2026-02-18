@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeCiscoVPN_Sectigo_00BBD8E8B439FE6DB51E2E4EC70504A43
       cert_valid_from     = "2026-01-23"
       cert_valid_to       = "2027-01-23"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Fujian Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91350200MA8W1M559G"
 
    condition:
       uint16(0) == 0x5a4d and
