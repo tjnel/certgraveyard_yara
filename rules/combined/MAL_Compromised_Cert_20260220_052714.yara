@@ -210,6 +210,41 @@ rule MAL_Compromised_Cert_AirStalk_SSL_com_29AFB8D913DB84FDB362F4FD927B8553 {
       )
 }
 
+rule MAL_Compromised_Cert_Akira_Microsoft_330006DF515A14FE3748416FE200000006DF51 {
+   meta:
+      description         = "Detects Akira with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-11"
+      version             = "1.0"
+
+      hash                = "2b7d8a519f44d3105e9fde2770c75efb933994c658855dca7d48c8b4897f81e6"
+      malware             = "Akira"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Amy Cherne"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:06:df:51:5a:14:fe:37:48:41:6f:e2:00:00:00:06:df:51"
+      cert_thumbprint     = "2087BB914327E937EA6E77FE6C832576338C2AF8"
+      cert_valid_from     = "2026-02-11"
+      cert_valid_to       = "2026-02-14"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:06:df:51:5a:14:fe:37:48:41:6f:e2:00:00:00:06:df:51"
+      )
+}
+
 rule MAL_Compromised_Cert_Akira_related_following_Teams_malvertising_Sectigo_239B3B73251BDF4C4EEA5C90DFAAC059 {
    meta:
       description         = "Detects Akira-related following Teams malvertising with compromised cert (Sectigo)"
@@ -16657,6 +16692,41 @@ rule MAL_Compromised_Cert_FlawedAmmyy_GlobalSign_4484F1C5B6A72DFEC0E1CA55 {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "44:84:f1:c5:b6:a7:2d:fe:c0:e1:ca:55"
+      )
+}
+
+rule MAL_Compromised_Cert_Forever_Botnet_Sectigo_011E9B8CCD60D504B4130D90D14A4BA7 {
+   meta:
+      description         = "Detects Forever Botnet with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-02"
+      version             = "1.0"
+
+      hash                = "dd1e7fd35306a22f511197716c7e9fe2c1ba149ffd275a5221c4452165a4b29d"
+      malware             = "Forever Botnet"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: kapa[.]is/f"
+
+      signer              = "MAYDA PETROL OTOMOTIV INSAAT LIMITED SIRKETI"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "01:1e:9b:8c:cd:60:d5:04:b4:13:0d:90:d1:4a:4b:a7"
+      cert_thumbprint     = "CD0EC5A42195775521CA6246C215DEB116CFE18C"
+      cert_valid_from     = "2026-02-02"
+      cert_valid_to       = "2027-02-02"
+
+      country             = "TR"
+      state               = "İstanbul"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "324489-5"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "01:1e:9b:8c:cd:60:d5:04:b4:13:0d:90:d1:4a:4b:a7"
       )
 }
 
@@ -44030,6 +44100,41 @@ rule MAL_Compromised_Cert_RomCom_DigiCert_07B749F7C9E5021A1EF5B61AE96A6C46 {
       )
 }
 
+rule MAL_Compromised_Cert_RomCom_GlobalSign_1AF334F5EA8DEF7E2A53BF1E {
+   meta:
+      description         = "Detects RomCom with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-29"
+      version             = "1.0"
+
+      hash                = "c388bec860ce843bc16448568d642cc8c3afe127ac09f7758fd2e449c75fd202"
+      malware             = "RomCom"
+      malware_type        = "Initial access tool"
+      malware_notes       = "Malicious executable faking as a PDF"
+
+      signer              = "X, LIMITED LIABILITY COMPANY"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "1a:f3:34:f5:ea:8d:ef:7e:2a:53:bf:1e"
+      cert_thumbprint     = "410DAD049512BF2A316BB3E7DBEE13AA2E0DA7C2"
+      cert_valid_from     = "2026-01-29"
+      cert_valid_to       = "2026-12-10"
+
+      country             = "JP"
+      state               = "Tokyo"
+      locality            = "Minato"
+      email               = "???"
+      rdn_serial_number   = "0104-03-028255"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "1a:f3:34:f5:ea:8d:ef:7e:2a:53:bf:1e"
+      )
+}
+
 rule MAL_Compromised_Cert_RomCom_GlobalSign_2B36039344664935BC7DB613 {
    meta:
       description         = "Detects RomCom with compromised cert (GlobalSign)"
@@ -54107,6 +54212,41 @@ rule MAL_Compromised_Cert_Traffer_SSL_com_7BC02CACE5CED69F028420070DE45873 {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "7b:c0:2c:ac:e5:ce:d6:9f:02:84:20:07:0d:e4:58:73"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Sectigo_0083BD8AAFECDE4DCEB4D1E2471D8D0139 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-19"
+      version             = "1.0"
+
+      hash                = "5661526b77a414058208171fbd529197d78f54e682cb054b74dda0842416ff2f"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake meeting software targeting cryptocurrencies users worldwide"
+
+      signer              = "Linyi Rongyun Network Information Service Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:83:bd:8a:af:ec:de:4d:ce:b4:d1:e2:47:1d:8d:01:39"
+      cert_thumbprint     = "58EA3E0A8D5AC02838006267BA1C63BB3C2E7285"
+      cert_valid_from     = "2026-01-19"
+      cert_valid_to       = "2027-01-19"
+
+      country             = "CN"
+      state               = "Shandong Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91371311312720445T"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:83:bd:8a:af:ec:de:4d:ce:b4:d1:e2:47:1d:8d:01:39"
       )
 }
 

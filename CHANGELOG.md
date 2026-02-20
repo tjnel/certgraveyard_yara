@@ -4,6 +4,14 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.02.20] - 2026-02-20
+
+### Added
+- MAL_Compromised_Cert_Traffer_Sectigo_0083BD8AAFECDE4DCEB4D1E2471D8D0139 (Traffer - Sectigo)
+- MAL_Compromised_Cert_RomCom_GlobalSign_1AF334F5EA8DEF7E2A53BF1E (RomCom - GlobalSign)
+- MAL_Compromised_Cert_Forever_Botnet_Sectigo_011E9B8CCD60D504B4130D90D14A4BA7 (Forever Botnet - Sectigo)
+- MAL_Compromised_Cert_Akira_Microsoft_330006DF515A14FE3748416FE200000006DF51 (Akira - Microsoft)
+
 ## [2026.02.19] - 2026-02-19
 
 ### Modified
