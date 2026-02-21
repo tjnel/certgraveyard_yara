@@ -4,6 +4,14 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.02.21] - 2026-02-21
+
+### Added
+- MAL_Compromised_Cert_Matanbuchus_GlobalSign_683E4A08FEA68510C9AD7216 (Matanbuchus - GlobalSign)
+
+### Modified
+- MAL_Compromised_Cert_Akira_Microsoft_330006DF515A14FE3748416FE200000006DF51 (Updated metadata for Akira)
+
 ## [2026.02.20] - 2026-02-20
 
 ### Added

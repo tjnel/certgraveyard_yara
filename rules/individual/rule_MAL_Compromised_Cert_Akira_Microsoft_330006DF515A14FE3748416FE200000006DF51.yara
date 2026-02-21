@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Akira_Microsoft_330006DF515A14FE3748416FE200000006DF51
       cert_valid_from     = "2026-02-11"
       cert_valid_to       = "2026-02-14"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Georgia"
+      locality            = "Stone Mountain"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
