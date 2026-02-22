@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Matanbuchus_GlobalSign_683E4A08FEA68510C9AD7216 {
       cert_valid_from     = "2025-12-01"
       cert_valid_to       = "2026-12-02"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "RU"
+      state               = "Vologda Oblast"
+      locality            = "Vologda"
+      email               = "geroev1967@mail.ru"
+      rdn_serial_number   = "1193525011866"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -4,6 +4,14 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.02.22] - 2026-02-22
+
+### Added
+- MAL_Compromised_Cert_AxolotlLoader_Microsoft_330007DC4E73FC0B983770783900000007DC4E (AxolotlLoader - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_Matanbuchus_GlobalSign_683E4A08FEA68510C9AD7216 (Updated metadata for Matanbuchus)
+
 ## [2026.02.21] - 2026-02-21
 
 ### Added
