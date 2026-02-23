@@ -8,10 +8,10 @@ rule MAL_Compromised_Cert_GalacticPDF_Trojan_DigiCert_0F62A61D298FFBC5A426F165BB
       date                = "2026-01-13"
       version             = "1.0"
 
-      hash                = "074b1f2b5734f038497f0a5cf06c9c349f072161c032830cbcad9508b1075f7d"
+      hash                = "4b41fa4a8f00d2e564cb2f9d8ec000f13661ea8bf8036b88b362cf8a2802e513"
       malware             = "GalacticPDF, Trojan"
-      malware_type        = "Trojan"
-      malware_notes       = "App is a functional PDF editor but also manipulates the user's browser and search engine."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "MONKEY DIGITAL LTD"
       cert_issuer_short   = "DigiCert"

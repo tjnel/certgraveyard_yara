@@ -16030,6 +16030,251 @@ rule MAL_Compromised_Cert_FakePutty_Sectigo_00FD7B8FA580A5360A2D82E905D75915F8 {
       )
 }
 
+rule MAL_Compromised_Cert_FakeRMM_DigiCert_047655211EB5C269B88F4DCEBA4AE762 {
+   meta:
+      description         = "Detects FakeRMM with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-16"
+      version             = "1.0"
+
+      hash                = "dee3b88825ea12734b4d537c15d7d2d177e9f869e7d6ea43642e316c9f4f9970"
+      malware             = "FakeRMM"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious installers posing as a fake RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+
+      signer              = "TRUSTCONNECT SOFTWARE"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "04:76:55:21:1e:b5:c2:69:b8:8f:4d:ce:ba:4a:e7:62"
+      cert_thumbprint     = "7878684A34FDD35B1002EF96379A3133BA8BC19B"
+      cert_valid_from     = "2026-02-16"
+      cert_valid_to       = "2027-02-16"
+
+      country             = "ZA"
+      state               = "Gauteng"
+      locality            = "Johannesburg"
+      email               = "???"
+      rdn_serial_number   = "K2026029661"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "04:76:55:21:1e:b5:c2:69:b8:8f:4d:ce:ba:4a:e7:62"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeRMM_Microsoft_330006F7BF3100D927BDFF629B00000006F7BF {
+   meta:
+      description         = "Detects FakeRMM with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-18"
+      version             = "1.0"
+
+      hash                = "8888ab30499348d868135da1d7e80369efab7b53904a802ecc60615827bd9dbd"
+      malware             = "FakeRMM"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious installers posing as a fake RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+
+      signer              = "PERRY CHANG"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:06:f7:bf:31:00:d9:27:bd:ff:62:9b:00:00:00:06:f7:bf"
+      cert_thumbprint     = "804F5783F9F798494EB5D22A677D91779EFA0464"
+      cert_valid_from     = "2026-02-18"
+      cert_valid_to       = "2026-02-21"
+
+      country             = "US"
+      state               = "California"
+      locality            = "Laguna Niguel"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:06:f7:bf:31:00:d9:27:bd:ff:62:9b:00:00:00:06:f7:bf"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeRMM_Microsoft_33000701EEBA0F73D66E4CEA800000000701EE {
+   meta:
+      description         = "Detects FakeRMM with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-20"
+      version             = "1.0"
+
+      hash                = "827a08808e1729b8f6711b522e0c572a7997b1c48ae2dc64fabc81ceab69183f"
+      malware             = "FakeRMM"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious installers posing as a fake RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+
+      signer              = "MELISSA LEHMAN"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:07:01:ee:ba:0f:73:d6:6e:4c:ea:80:00:00:00:07:01:ee"
+      cert_thumbprint     = "310613FE171FB1DFA18AB713F65F9CAA71B4482C"
+      cert_valid_from     = "2026-02-20"
+      cert_valid_to       = "2026-02-23"
+
+      country             = "US"
+      state               = "Kansas"
+      locality            = "clay center"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:07:01:ee:ba:0f:73:d6:6e:4c:ea:80:00:00:00:07:01:ee"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeRMM_Microsoft_330007DD8DF1C1AF342CDF84D300000007DD8D {
+   meta:
+      description         = "Detects FakeRMM with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-19"
+      version             = "1.0"
+
+      hash                = "dee64b39920c45f3f833185178a6490e9f35c2229a3ab911b4c1698e03bad8a9"
+      malware             = "FakeRMM"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious installers posing as a fake RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+
+      signer              = "Khyree Woodberry"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:07:dd:8d:f1:c1:af:34:2c:df:84:d3:00:00:00:07:dd:8d"
+      cert_thumbprint     = "CD49434C7A5D88FC5022F4268115A77C2C032333"
+      cert_valid_from     = "2026-02-19"
+      cert_valid_to       = "2026-02-22"
+
+      country             = "US"
+      state               = "Maryland"
+      locality            = "baltimore"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:07:dd:8d:f1:c1:af:34:2c:df:84:d3:00:00:00:07:dd:8d"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeRMM_Microsoft_330007E159397E8634FE81A78200000007E159 {
+   meta:
+      description         = "Detects FakeRMM with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-20"
+      version             = "1.0"
+
+      hash                = "7303a95893caaf748406a1931d062f5b64320c96852fedefd0a6f6291f29caa3"
+      malware             = "FakeRMM"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious installers posing as a fake RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+
+      signer              = "PERRY CHANG"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:07:e1:59:39:7e:86:34:fe:81:a7:82:00:00:00:07:e1:59"
+      cert_thumbprint     = "81182228E5B76F958E1DD90E1EA4E58DACD8884C"
+      cert_valid_from     = "2026-02-20"
+      cert_valid_to       = "2026-02-23"
+
+      country             = "US"
+      state               = "California"
+      locality            = "Laguna Niguel"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:07:e1:59:39:7e:86:34:fe:81:a7:82:00:00:00:07:e1:59"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeRMM_Microsoft_330007E678B2E9E6A09C386D6E00000007E678 {
+   meta:
+      description         = "Detects FakeRMM with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-20"
+      version             = "1.0"
+
+      hash                = "63450bf8e4abe98ba2b27b17d8da918848b466c0e38249ed4a71dc663f102172"
+      malware             = "FakeRMM"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious installers posing as a fake RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+
+      signer              = "Khyree Woodberry"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:07:e6:78:b2:e9:e6:a0:9c:38:6d:6e:00:00:00:07:e6:78"
+      cert_thumbprint     = "C2DF7637E5014BB5554BE762DE6C6F0A63DC83CD"
+      cert_valid_from     = "2026-02-20"
+      cert_valid_to       = "2026-02-23"
+
+      country             = "US"
+      state               = "Maryland"
+      locality            = "baltimore"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:07:e6:78:b2:e9:e6:a0:9c:38:6d:6e:00:00:00:07:e6:78"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeRMM_Microsoft_330007EC424A6EF1E456B9D7F300000007EC42 {
+   meta:
+      description         = "Detects FakeRMM with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-21"
+      version             = "1.0"
+
+      hash                = "28cc12c092e331809e92dd20604ee1f646cbb96f8426f3944214605f590fe7df"
+      malware             = "FakeRMM"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious installers posing as a RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+
+      signer              = "NICHOLAS HALL"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:07:ec:42:4a:6e:f1:e4:56:b9:d7:f3:00:00:00:07:ec:42"
+      cert_thumbprint     = "8E3A7719FC7004C5987272E1CA236F4B6F99A14D"
+      cert_valid_from     = "2026-02-21"
+      cert_valid_to       = "2026-02-24"
+
+      country             = "US"
+      state               = "Indiana"
+      locality            = "HANOVER"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:07:ec:42:4a:6e:f1:e4:56:b9:d7:f3:00:00:00:07:ec:42"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeRVTools_Certum_34CA52133F074E12B8A81819DA47E8FB {
    meta:
       description         = "Detects FakeRVTools with compromised cert (Certum)"
@@ -16727,6 +16972,41 @@ rule MAL_Compromised_Cert_FlawedAmmyy_GlobalSign_4484F1C5B6A72DFEC0E1CA55 {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "44:84:f1:c5:b6:a7:2d:fe:c0:e1:ca:55"
+      )
+}
+
+rule MAL_Compromised_Cert_Forever_Botnet_Sectigo_00CA473A252585ECB88AB26697FF194D91 {
+   meta:
+      description         = "Detects Forever Botnet with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-27"
+      version             = "1.0"
+
+      hash                = "473a013ae706915b43a046239821356afe4572c15e621f4ee63883e766c63af6"
+      malware             = "Forever Botnet"
+      malware_type        = "Unknown"
+      malware_notes       = "Malware campaign targeting BR users via fake documents. C2: cms[.]lmcnow[.]com/q/"
+
+      signer              = "Xiamen Time Travel Network Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:ca:47:3a:25:25:85:ec:b8:8a:b2:66:97:ff:19:4d:91"
+      cert_thumbprint     = "58FC7F333D1D7E65B75D9FC97B7FC4C1E67D17F7"
+      cert_valid_from     = "2026-01-27"
+      cert_valid_to       = "2027-01-27"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350203769285658W"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:ca:47:3a:25:25:85:ec:b8:8a:b2:66:97:ff:19:4d:91"
       )
 }
 
@@ -17788,10 +18068,10 @@ rule MAL_Compromised_Cert_GalacticPDF_Trojan_DigiCert_0F62A61D298FFBC5A426F165BB
       date                = "2026-01-13"
       version             = "1.0"
 
-      hash                = "074b1f2b5734f038497f0a5cf06c9c349f072161c032830cbcad9508b1075f7d"
+      hash                = "4b41fa4a8f00d2e564cb2f9d8ec000f13661ea8bf8036b88b362cf8a2802e513"
       malware             = "GalacticPDF, Trojan"
-      malware_type        = "Trojan"
-      malware_notes       = "App is a functional PDF editor but also manipulates the user's browser and search engine."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "MONKEY DIGITAL LTD"
       cert_issuer_short   = "DigiCert"

@@ -4,6 +4,19 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.02.23] - 2026-02-23
+
+### Added
+- MAL_Compromised_Cert_FakeRMM_DigiCert_047655211EB5C269B88F4DCEBA4AE762 (FakeRMM - DigiCert)
+- MAL_Compromised_Cert_GalacticPDF_Trojan_DigiCert_0F62A61D298FFBC5A426F165BB63E477 (GalacticPDF, Trojan - DigiCert)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_33000701EEBA0F73D66E4CEA800000000701EE (FakeRMM - Microsoft)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_330007E678B2E9E6A09C386D6E00000007E678 (FakeRMM - Microsoft)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_330006F7BF3100D927BDFF629B00000006F7BF (FakeRMM - Microsoft)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_330007EC424A6EF1E456B9D7F300000007EC42 (FakeRMM - Microsoft)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_330007DD8DF1C1AF342CDF84D300000007DD8D (FakeRMM - Microsoft)
+- MAL_Compromised_Cert_Forever_Botnet_Sectigo_00CA473A252585ECB88AB26697FF194D91 (Forever Botnet - Sectigo)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_330007E159397E8634FE81A78200000007E159 (FakeRMM - Microsoft)
+
 ## [2026.02.22] - 2026-02-22
 
 ### Added
