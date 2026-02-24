@@ -16975,6 +16975,41 @@ rule MAL_Compromised_Cert_FlawedAmmyy_GlobalSign_4484F1C5B6A72DFEC0E1CA55 {
       )
 }
 
+rule MAL_Compromised_Cert_Forever_Botnet_Sectigo_00C69698DD8E61DEE8A1D93828AB378761 {
+   meta:
+      description         = "Detects Forever Botnet with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-04"
+      version             = "1.0"
+
+      hash                = "d6b507696400dc1d67412872cb02f3f813cec2bdb70b00083ef718331a444bab"
+      malware             = "Forever Botnet"
+      malware_type        = "Unknown"
+      malware_notes       = "Builds loaded as a stage 2 on infected machines. Malware campaign targeting BR users via fake documents."
+
+      signer              = "Xiamen Gejie Ya Intelligent Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:c6:96:98:dd:8e:61:de:e8:a1:d9:38:28:ab:37:87:61"
+      cert_thumbprint     = "48BD2F170B27AE826EC09597ADCABD8EF46C5EDE"
+      cert_valid_from     = "2026-02-04"
+      cert_valid_to       = "2027-02-04"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:c6:96:98:dd:8e:61:de:e8:a1:d9:38:28:ab:37:87:61"
+      )
+}
+
 rule MAL_Compromised_Cert_Forever_Botnet_Sectigo_00CA473A252585ECB88AB26697FF194D91 {
    meta:
       description         = "Detects Forever Botnet with compromised cert (Sectigo)"
@@ -29607,6 +29642,41 @@ rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_1E5B7FB3E10C9141512CECB24D56D4F
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "1e:5b:7f:b3:e1:0c:91:41:51:2c:ec:b2:4d:56:d4:ff"
+      )
+}
+
+rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_22A5CF785D165B31ECFA4616E05C31C7 {
+   meta:
+      description         = "Detects NetSupport RAT with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-22"
+      version             = "1.0"
+
+      hash                = "8099e85c4aa05f50ff299a130dc26a67b45aed519668e8b1ee1692e0034196c2"
+      malware             = "NetSupport RAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Flagship Promotion s. r. o."
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "22:a5:cf:78:5d:16:5b:31:ec:fa:46:16:e0:5c:31:c7"
+      cert_thumbprint     = "76A522257D09EC3F41B0431AAE2D8CE7F81B427E"
+      cert_valid_from     = "2026-01-22"
+      cert_valid_to       = "2027-01-22"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "22:a5:cf:78:5d:16:5b:31:ec:fa:46:16:e0:5c:31:c7"
       )
 }
 
@@ -57187,6 +57257,41 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_330007058C9AC84237BBAFF51F00000007058
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
          sig.serial == "33:00:07:05:8c:9a:c8:42:37:bb:af:f5:1f:00:00:00:07:05:8c"
+      )
+}
+
+rule MAL_Compromised_Cert_UNK_50_Microsoft_330007071EFE69BB502E196C7A00000007071E {
+   meta:
+      description         = "Detects UNK-50 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-21"
+      version             = "1.0"
+
+      hash                = "d734a6cabf906ee6ca934e2b16ac65c42b44e24d232fec469e0c3c3a1239afc5"
+      malware             = "UNK-50"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake AI applications targeting crypto users worldwide"
+
+      signer              = "Marni Hirschorn"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:07:07:1e:fe:69:bb:50:2e:19:6c:7a:00:00:00:07:07:1e"
+      cert_thumbprint     = "677E00A19E24D91C3797496E7195F025123795EB"
+      cert_valid_from     = "2026-02-21"
+      cert_valid_to       = "2026-02-24"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:07:07:1e:fe:69:bb:50:2e:19:6c:7a:00:00:00:07:07:1e"
       )
 }
 
