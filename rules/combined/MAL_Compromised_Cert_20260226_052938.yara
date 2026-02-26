@@ -3150,6 +3150,41 @@ rule MAL_Compromised_Cert_BatLoader_GlobalSign_7FAC4E218B3327DC2A1DE2A9 {
       )
 }
 
+rule MAL_Compromised_Cert_BatLoader_SSL_com_0AD3EC95833032EEBF53B660984CC67D {
+   meta:
+      description         = "Detects BatLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2023-04-03"
+      version             = "1.0"
+
+      hash                = "413cd9af982a04a8eff61e66860582f3236b2f8523b88b9330eccdd5ffc58348"
+      malware             = "BatLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "Initial access tool dropped by ClearFake: https://blog.sekoia.io/clearfake-a-newcomer-to-the-fake-updates-threats-landscape/"
+
+      signer              = "STECH CONSULTANCY LIMITED"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "0a:d3:ec:95:83:30:32:ee:bf:53:b6:60:98:4c:c6:7d"
+      cert_thumbprint     = "549DEBD6819A099B1EDECF964F9704088422F2BA"
+      cert_valid_from     = "2023-04-03"
+      cert_valid_to       = "2024-04-01"
+
+      country             = "GB"
+      state               = "???"
+      locality            = "Poringland"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "0a:d3:ec:95:83:30:32:ee:bf:53:b6:60:98:4c:c6:7d"
+      )
+}
+
 rule MAL_Compromised_Cert_BatLoader_SSL_com_1F5F6C8F6F37E026CE572643B6BB3BBD {
    meta:
       description         = "Detects BatLoader with compromised cert (SSL.com)"
@@ -16073,10 +16108,10 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330006F7BF3100D927BDFF629B00000006F7
       date                = "2026-02-18"
       version             = "1.0"
 
-      hash                = "8888ab30499348d868135da1d7e80369efab7b53904a802ecc60615827bd9dbd"
+      hash                = "8b2b511a7f68f20a5a200a9b28adec1e45ef0b5ebbc901485d17916c348a4489"
       malware             = "FakeRMM"
       malware_type        = "Unknown"
-      malware_notes       = "Malicious installers posing as a fake RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+      malware_notes       = ""
 
       signer              = "PERRY CHANG"
       cert_issuer_short   = "Microsoft"
@@ -16086,11 +16121,11 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330006F7BF3100D927BDFF629B00000006F7
       cert_valid_from     = "2026-02-18"
       cert_valid_to       = "2026-02-21"
 
-      country             = "US"
-      state               = "California"
-      locality            = "Laguna Niguel"
+      country             = "???"
+      state               = "???"
+      locality            = "???"
       email               = "???"
-      rdn_serial_number   = "Not Specified"
+      rdn_serial_number   = ""
 
    condition:
       uint16(0) == 0x5a4d and
@@ -16996,11 +17031,11 @@ rule MAL_Compromised_Cert_Forever_Botnet_Sectigo_00C69698DD8E61DEE8A1D93828AB378
       cert_valid_from     = "2026-02-04"
       cert_valid_to       = "2027-02-04"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Fujian Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91350206MA31QN6N4K"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -29666,11 +29701,11 @@ rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_22A5CF785D165B31ECFA4616E05C31C
       cert_valid_from     = "2026-01-22"
       cert_valid_to       = "2027-01-22"
 
-      country             = "???"
+      country             = "SK"
       state               = "???"
-      locality            = "???"
+      locality            = "Bratislava"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "54614821"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -57281,11 +57316,11 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_330007071EFE69BB502E196C7A00000007071
       cert_valid_from     = "2026-02-21"
       cert_valid_to       = "2026-02-24"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "New Jersey"
+      locality            = "Woodcliff Lake"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

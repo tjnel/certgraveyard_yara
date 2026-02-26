@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Forever_Botnet_Sectigo_00C69698DD8E61DEE8A1D93828AB378
       cert_valid_from     = "2026-02-04"
       cert_valid_to       = "2027-02-04"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Fujian Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91350206MA31QN6N4K"
 
    condition:
       uint16(0) == 0x5a4d and

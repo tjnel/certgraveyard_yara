@@ -8,10 +8,10 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330006F7BF3100D927BDFF629B00000006F7
       date                = "2026-02-18"
       version             = "1.0"
 
-      hash                = "8888ab30499348d868135da1d7e80369efab7b53904a802ecc60615827bd9dbd"
+      hash                = "8b2b511a7f68f20a5a200a9b28adec1e45ef0b5ebbc901485d17916c348a4489"
       malware             = "FakeRMM"
       malware_type        = "Unknown"
-      malware_notes       = "Malicious installers posing as a fake RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+      malware_notes       = ""
 
       signer              = "PERRY CHANG"
       cert_issuer_short   = "Microsoft"
@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330006F7BF3100D927BDFF629B00000006F7
       cert_valid_from     = "2026-02-18"
       cert_valid_to       = "2026-02-21"
 
-      country             = "US"
-      state               = "California"
-      locality            = "Laguna Niguel"
+      country             = "???"
+      state               = "???"
+      locality            = "???"
       email               = "???"
-      rdn_serial_number   = "Not Specified"
+      rdn_serial_number   = ""
 
    condition:
       uint16(0) == 0x5a4d and

@@ -4,6 +4,17 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.02.26] - 2026-02-26
+
+### Added
+- MAL_Compromised_Cert_FakeRMM_Microsoft_330006F7BF3100D927BDFF629B00000006F7BF (FakeRMM - Microsoft)
+- MAL_Compromised_Cert_BatLoader_SSL_com_0AD3EC95833032EEBF53B660984CC67D (BatLoader - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_UNK_50_Microsoft_330007071EFE69BB502E196C7A00000007071E (Updated metadata for UNK-50)
+- MAL_Compromised_Cert_Forever_Botnet_Sectigo_00C69698DD8E61DEE8A1D93828AB378761 (Updated metadata for Forever Botnet)
+- MAL_Compromised_Cert_NetSupport_RAT_SSL_com_22A5CF785D165B31ECFA4616E05C31C7 (Updated metadata for NetSupport RAT)
+
 ## [2026.02.24] - 2026-02-24
 
 ### Added

@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_330007071EFE69BB502E196C7A00000007071
       cert_valid_from     = "2026-02-21"
       cert_valid_to       = "2026-02-24"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "New Jersey"
+      locality            = "Woodcliff Lake"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
