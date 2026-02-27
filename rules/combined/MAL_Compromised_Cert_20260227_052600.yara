@@ -875,6 +875,41 @@ rule MAL_Compromised_Cert_AsyncRAT_GlobalSign_46DD87B21B58C57F71E8F95F {
       )
 }
 
+rule MAL_Compromised_Cert_AsyncRAT_GlobalSign_63258FC97BE58CAD161C931A {
+   meta:
+      description         = "Detects AsyncRAT with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-04-08"
+      version             = "1.0"
+
+      hash                = "42d8f7e1ebb5ab2e948db328d28361df0e1ce8f8ce0c91b6a65f9a771a9da56c"
+      malware             = "AsyncRAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "NIGHTRAPTOR SİBER GÜVENLİK TEKNOLOJİ YAZILIM DAN.LTD.ŞTİ."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 CodeSigning CA 2020"
+      cert_serial         = "63:25:8f:c9:7b:e5:8c:ad:16:1c:93:1a"
+      cert_thumbprint     = "1AB5E4E078A454CD24BBB57208F54DD2ED576929"
+      cert_valid_from     = "2025-04-08"
+      cert_valid_to       = "2026-04-09"
+
+      country             = "TR"
+      state               = "İSTANBUL"
+      locality            = "SANCAKTEPE"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 CodeSigning CA 2020" and
+         sig.serial == "63:25:8f:c9:7b:e5:8c:ad:16:1c:93:1a"
+      )
+}
+
 rule MAL_Compromised_Cert_AsyncRAT_GlobalSign_6D697B15A91B985E9398396C {
    meta:
       description         = "Detects AsyncRAT with compromised cert (GlobalSign)"
@@ -16121,11 +16156,11 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330006F7BF3100D927BDFF629B00000006F7
       cert_valid_from     = "2026-02-18"
       cert_valid_to       = "2026-02-21"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "California"
+      locality            = "Laguna Niguel"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -16167,6 +16202,76 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_33000701EEBA0F73D66E4CEA800000000701
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
          sig.serial == "33:00:07:01:ee:ba:0f:73:d6:6e:4c:ea:80:00:00:00:07:01:ee"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeRMM_Microsoft_3300070CE19C11C380B63372C3000000070CE1 {
+   meta:
+      description         = "Detects FakeRMM with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-23"
+      version             = "1.0"
+
+      hash                = "b24cd241b4f39d65a521b580dccd67ee702ad905d8f955f1b6f3e4c3ca476202"
+      malware             = "FakeRMM"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious installers posing as a RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+
+      signer              = "NICHOLAS HALL"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:07:0c:e1:9c:11:c3:80:b6:33:72:c3:00:00:00:07:0c:e1"
+      cert_thumbprint     = "1C491F0E99E4A88B814F27448CE49EF9EED91BF8"
+      cert_valid_from     = "2026-02-23"
+      cert_valid_to       = "2026-02-26"
+
+      country             = "US"
+      state               = "Indiana"
+      locality            = "HANOVER"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:07:0c:e1:9c:11:c3:80:b6:33:72:c3:00:00:00:07:0c:e1"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeRMM_Microsoft_3300071A845B6BA727FE6BDEF2000000071A84 {
+   meta:
+      description         = "Detects FakeRMM with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-24"
+      version             = "1.0"
+
+      hash                = "ca1730909d5f4d75dca58e0e7ba0340cbf2a16bbb60f8a76fd37a45d8e216f8b"
+      malware             = "FakeRMM"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious installers posing as a fake RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+
+      signer              = "NICHOLAS HALL"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:07:1a:84:5b:6b:a7:27:fe:6b:de:f2:00:00:00:07:1a:84"
+      cert_thumbprint     = "ECDA81777858651510C5C6CB2750AEF8FF0486D1"
+      cert_valid_from     = "2026-02-24"
+      cert_valid_to       = "2026-02-27"
+
+      country             = "US"
+      state               = "Indiana"
+      locality            = "HANOVER"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:07:1a:84:5b:6b:a7:27:fe:6b:de:f2:00:00:00:07:1a:84"
       )
 }
 
@@ -16447,6 +16552,41 @@ rule MAL_Compromised_Cert_FakeStatement_SSL_com_45DF3961393196E00E5F001A73DF9964
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "45:df:39:61:39:31:96:e0:0e:5f:00:1a:73:df:99:64"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeUpdate_GlobalSign_561A653190654ABDAD02E40A {
+   meta:
+      description         = "Detects FakeUpdate with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-17"
+      version             = "1.0"
+
+      hash                = "6a2642ed05187a4d428eb7c9b609b03c69a427a9a0508c419b15ad277a518e73"
+      malware             = "FakeUpdate"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious installer impersonating a Google Update"
+
+      signer              = "WASH & CUT HAIR SALOON LIMITED"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "56:1a:65:31:90:65:4a:bd:ad:02:e4:0a"
+      cert_thumbprint     = "FB69800B66B67DC2F225A83B047629A26D716CCC"
+      cert_valid_from     = "2026-02-17"
+      cert_valid_to       = "2027-02-18"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "56:1a:65:31:90:65:4a:bd:ad:02:e4:0a"
       )
 }
 
@@ -47425,6 +47565,41 @@ rule MAL_Compromised_Cert_SmokedHam_Certum_34CA52133F074E12B8A81819DA47E8FB {
       )
 }
 
+rule MAL_Compromised_Cert_SmokedHam_DigiCert_0F1D0BCD041489253F5E15983EB52F11 {
+   meta:
+      description         = "Detects SmokedHam with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-16"
+      version             = "1.0"
+
+      hash                = "82399d57042cd8056fd5e3b45618cc6cdf9621573fcfb9b62531d987e2650e48"
+      malware             = "SmokedHam"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious trojanized installers impersonating software applications leading to SmokedHam RAT"
+
+      signer              = "Softguard Technology Yazılım Hizmetleri Anonim Şirketi"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "0f:1d:0b:cd:04:14:89:25:3f:5e:15:98:3e:b5:2f:11"
+      cert_thumbprint     = "4EF659A2314D0A4990CE97C01FEFDFD1F851F06A"
+      cert_valid_from     = "2026-02-16"
+      cert_valid_to       = "2027-02-15"
+
+      country             = "TR"
+      state               = "İstanbul"
+      locality            = "Avcılar"
+      email               = "???"
+      rdn_serial_number   = "1043733"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "0f:1d:0b:cd:04:14:89:25:3f:5e:15:98:3e:b5:2f:11"
+      )
+}
+
 rule MAL_Compromised_Cert_SmokedHam_GlobalSign_5C5A8861E945052570898682 {
    meta:
       description         = "Detects SmokedHam with compromised cert (GlobalSign)"
@@ -55087,6 +55262,41 @@ rule MAL_Compromised_Cert_TrickBot_Sectigo_00AFC5522898143AAFAAB7FD52304CF00C {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo RSA Code Signing CA" and
          sig.serial == "00:af:c5:52:28:98:14:3a:af:aa:b7:fd:52:30:4c:f0:0c"
+      )
+}
+
+rule MAL_Compromised_Cert_TrojanChrome_Sectigo_654D4C61766E8EBC09EC79E4B37D5DAB {
+   meta:
+      description         = "Detects TrojanChrome with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-14"
+      version             = "1.0"
+
+      hash                = "099d63e692457bfccc2cf59278ae6a268cb03964f18d0d27f536027b43c89896"
+      malware             = "TrojanChrome"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Chrome installer bundled with drivers[.]solutions/META-INF/xuoa.sys"
+
+      signer              = "Hubei Da'e Zhidao Food Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "65:4d:4c:61:76:6e:8e:bc:09:ec:79:e4:b3:7d:5d:ab"
+      cert_thumbprint     = "732BF1DCB42EBBC8ADA9102FDD927239D2640B5E"
+      cert_valid_from     = "2026-01-14"
+      cert_valid_to       = "2027-01-14"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "65:4d:4c:61:76:6e:8e:bc:09:ec:79:e4:b3:7d:5d:ab"
       )
 }
 
