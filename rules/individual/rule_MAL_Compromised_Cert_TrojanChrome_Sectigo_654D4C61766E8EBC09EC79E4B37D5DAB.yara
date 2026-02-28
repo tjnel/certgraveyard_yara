@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_TrojanChrome_Sectigo_654D4C61766E8EBC09EC79E4B37D5DAB 
       cert_valid_from     = "2026-01-14"
       cert_valid_to       = "2027-01-14"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Hubei Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91420112MA4F1P255Q"
 
    condition:
       uint16(0) == 0x5a4d and

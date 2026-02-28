@@ -4,6 +4,15 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.02.28] - 2026-02-28
+
+### Added
+- MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_00D395614C911201F1178CC6EA695C2862 (ScreenConnectLoader - Sectigo)
+
+### Modified
+- MAL_Compromised_Cert_FakeUpdate_GlobalSign_561A653190654ABDAD02E40A (Updated metadata for FakeUpdate)
+- MAL_Compromised_Cert_TrojanChrome_Sectigo_654D4C61766E8EBC09EC79E4B37D5DAB (Updated metadata for TrojanChrome)
+
 ## [2026.02.27] - 2026-02-27
 
 ### Added
