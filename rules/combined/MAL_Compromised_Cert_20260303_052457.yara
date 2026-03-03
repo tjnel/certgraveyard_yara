@@ -245,6 +245,41 @@ rule MAL_Compromised_Cert_Akira_Microsoft_330006DF515A14FE3748416FE200000006DF51
       )
 }
 
+rule MAL_Compromised_Cert_Akira_Microsoft_33000725FEA86DD19E8571B26C0000000725FE {
+   meta:
+      description         = "Detects Akira with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-28"
+      version             = "1.0"
+
+      hash                = "a8c380b57cb7c381ca6ba845bd7af7333f52ee4dc4e935e98b48bb81facad72b"
+      malware             = "Akira"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Donald Gay"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:07:25:fe:a8:6d:d1:9e:85:71:b2:6c:00:00:00:07:25:fe"
+      cert_thumbprint     = "9DCB994EA2B8E6169B76A524FAE7B2D2DCD1807D"
+      cert_valid_from     = "2026-02-28"
+      cert_valid_to       = "2026-03-03"
+
+      country             = "US"
+      state               = "Maryland"
+      locality            = "Clinton"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:07:25:fe:a8:6d:d1:9e:85:71:b2:6c:00:00:00:07:25:fe"
+      )
+}
+
 rule MAL_Compromised_Cert_Akira_related_following_Teams_malvertising_Sectigo_239B3B73251BDF4C4EEA5C90DFAAC059 {
    meta:
       description         = "Detects Akira-related following Teams malvertising with compromised cert (Sectigo)"
@@ -14312,6 +14347,41 @@ rule MAL_Compromised_Cert_FakeDocument_Certum_64065DA5F28814E1470536854F7D0162 {
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Code Signing 2021 CA" and
          sig.serial == "64:06:5d:a5:f2:88:14:e1:47:05:36:85:4f:7d:01:62"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeDocument_DigiCert_0FA698D92B3420800CFD2C72E766AE53 {
+   meta:
+      description         = "Detects FakeDocument with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-20"
+      version             = "1.0"
+
+      hash                = "89295ba81f3008c6ab03fdd77dc4a75a0920f708fb4e09c156c077b4dfedd0ec"
+      malware             = "FakeDocument"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "CYBERWHIZ SIBER GUVENLIK ANONIM SIRKETI"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "0f:a6:98:d9:2b:34:20:80:0c:fd:2c:72:e7:66:ae:53"
+      cert_thumbprint     = "0EDBF2819738DFDF6160D64B9FF4D8EBDD059133"
+      cert_valid_from     = "2026-02-20"
+      cert_valid_to       = "2027-02-19"
+
+      country             = "TR"
+      state               = "İstanbul"
+      locality            = "Şişli"
+      email               = "???"
+      rdn_serial_number   = "1026249"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "0f:a6:98:d9:2b:34:20:80:0c:fd:2c:72:e7:66:ae:53"
       )
 }
 
@@ -54075,6 +54145,41 @@ rule MAL_Compromised_Cert_T_21_Microsoft_330007CC7E3707951EEE017ED500000007CC7E 
       )
 }
 
+rule MAL_Compromised_Cert_T_21_Microsoft_330007D38040BEA32E92CD64E400000007D380 {
+   meta:
+      description         = "Detects T-21 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-26"
+      version             = "1.0"
+
+      hash                = "602e708dc5c31cd35f95e1a147d1345135aeead8a021fe2be4cfe65220b9ccd9"
+      malware             = "T-21"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Anquesia Gray"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:07:d3:80:40:be:a3:2e:92:cd:64:e4:00:00:00:07:d3:80"
+      cert_thumbprint     = "E4815DD5E649E90E7123C3296EC2383C11BF2C0B"
+      cert_valid_from     = "2026-02-26"
+      cert_valid_to       = "2026-03-01"
+
+      country             = "US"
+      state               = "Georgia"
+      locality            = "Atlanta"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:07:d3:80:40:be:a3:2e:92:cd:64:e4:00:00:00:07:d3:80"
+      )
+}
+
 rule MAL_Compromised_Cert_TamperedChef_GlobalSign_4BC8E9DA91CB67F9EA1B6079 {
    meta:
       description         = "Detects TamperedChef with compromised cert (GlobalSign)"
@@ -54912,6 +55017,41 @@ rule MAL_Compromised_Cert_Traffer_Sectigo_0083BD8AAFECDE4DCEB4D1E2471D8D0139 {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "00:83:bd:8a:af:ec:de:4d:ce:b4:d1:e2:47:1d:8d:01:39"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Sectigo_00AF14E42F5DF730547AEF8E581C0DB316 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-13"
+      version             = "1.0"
+
+      hash                = "8904b6b4463f6c08351e06fedf65191110919d71e911e92346c92c957fbf2b84"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "SESE IC VE DIS TICARET ANONIM SIRKETI"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:af:14:e4:2f:5d:f7:30:54:7a:ef:8e:58:1c:0d:b3:16"
+      cert_thumbprint     = "EA236A07189C37573F41EC47EFCA083208FB3FD9"
+      cert_valid_from     = "2026-02-13"
+      cert_valid_to       = "2027-02-13"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:af:14:e4:2f:5d:f7:30:54:7a:ef:8e:58:1c:0d:b3:16"
       )
 }
 
@@ -63732,6 +63872,41 @@ rule MAL_Compromised_Cert_Unknown_Microsoft_330006D18A37899D7C1808ED4D00000006D1
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
          sig.serial == "33:00:06:d1:8a:37:89:9d:7c:18:08:ed:4d:00:00:00:06:d1:8a"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Microsoft_3300079A51C7063E66053D229B000000079A51 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-16"
+      version             = "1.0"
+
+      hash                = "24857fe82f454719cd18bcbe19b0cfa5387bee1022008b7f5f3a8be9f05e4d14"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Donald Gay"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:07:9a:51:c7:06:3e:66:05:3d:22:9b:00:00:00:07:9a:51"
+      cert_thumbprint     = "B674578D4BDB24CD58BF2DC884EAA658B7AA250C"
+      cert_valid_from     = "2026-02-16"
+      cert_valid_to       = "2026-02-19"
+
+      country             = "US"
+      state               = "Maryland"
+      locality            = "Clinton"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:07:9a:51:c7:06:3e:66:05:3d:22:9b:00:00:00:07:9a:51"
       )
 }
 

@@ -4,6 +4,15 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.03] - 2026-03-03
+
+### Added
+- MAL_Compromised_Cert_FakeDocument_DigiCert_0FA698D92B3420800CFD2C72E766AE53 (FakeDocument - DigiCert)
+- MAL_Compromised_Cert_Traffer_Sectigo_00AF14E42F5DF730547AEF8E581C0DB316 (Traffer - Sectigo)
+- MAL_Compromised_Cert_T_21_Microsoft_330007D38040BEA32E92CD64E400000007D380 (T-21 - Microsoft)
+- MAL_Compromised_Cert_Unknown_Microsoft_3300079A51C7063E66053D229B000000079A51 (Unknown - Microsoft)
+- MAL_Compromised_Cert_Akira_Microsoft_33000725FEA86DD19E8571B26C0000000725FE (Akira - Microsoft)
+
 ## [2026.02.28] - 2026-02-28
 
 ### Added
