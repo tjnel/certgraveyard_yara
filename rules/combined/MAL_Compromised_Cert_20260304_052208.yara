@@ -17220,6 +17220,216 @@ rule MAL_Compromised_Cert_FlawedAmmyy_GlobalSign_4484F1C5B6A72DFEC0E1CA55 {
       )
 }
 
+rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300072BFDB49FB17014EC2F01000000072BFD {
+   meta:
+      description         = "Detects Forever Botnet,BR-01 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-01"
+      version             = "1.0"
+
+      hash                = "1936cdf04ecac3f44c463f6db324cea93f7f6e4b3498212b89005a49054098b1"
+      malware             = "Forever Botnet,BR-01"
+      malware_type        = "Unknown"
+      malware_notes       = "Malware campaign targeting BR users via fake documents. C2:  jmkkload[.]com/bba13d314ed6c2ec94/"
+
+      signer              = "Julie Jorgensen"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:07:2b:fd:b4:9f:b1:70:14:ec:2f:01:00:00:00:07:2b:fd"
+      cert_thumbprint     = "3DF9FB8296CCD50B6FAE7092B301B95965A7A4EE"
+      cert_valid_from     = "2026-03-01"
+      cert_valid_to       = "2026-03-04"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:07:2b:fd:b4:9f:b1:70:14:ec:2f:01:00:00:00:07:2b:fd"
+      )
+}
+
+rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330007F98A12E14A67A7FA6F1D00000007F98A {
+   meta:
+      description         = "Detects Forever Botnet,BR-01 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-24"
+      version             = "1.0"
+
+      hash                = "fa0bea1d8ca48f71e5f0a89c943bcccb4837d8f3f71a804772e4b8451a069020"
+      malware             = "Forever Botnet,BR-01"
+      malware_type        = "Unknown"
+      malware_notes       = "Malware campaign targeting BR users via fake documents. C2: segurancak[.]org"
+
+      signer              = "Julie Jorgensen"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:07:f9:8a:12:e1:4a:67:a7:fa:6f:1d:00:00:00:07:f9:8a"
+      cert_thumbprint     = "EE12224017440A2F82AFA4BE22D0611D8AA809A7"
+      cert_valid_from     = "2026-02-24"
+      cert_valid_to       = "2026-02-27"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:07:f9:8a:12:e1:4a:67:a7:fa:6f:1d:00:00:00:07:f9:8a"
+      )
+}
+
+rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300080DCFE7C584DFEEEF1257000000080DCF {
+   meta:
+      description         = "Detects Forever Botnet,BR-01 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-26"
+      version             = "1.0"
+
+      hash                = "698b6bcbdcc300ccc14569ad066872125e670571fbf2b24c721fdfbb6323959f"
+      malware             = "Forever Botnet,BR-01"
+      malware_type        = "Unknown"
+      malware_notes       = "Malware campaign targeting BR users via fake documents. C2: jmkkload[.]com/bba13d314ed6c2ec94/"
+
+      signer              = "Julie Jorgensen"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:08:0d:cf:e7:c5:84:df:ee:ef:12:57:00:00:00:08:0d:cf"
+      cert_thumbprint     = "883B807ECEC8262ECF5DD31FFB62B9F8765D1304"
+      cert_valid_from     = "2026-02-26"
+      cert_valid_to       = "2026-03-01"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:08:0d:cf:e7:c5:84:df:ee:ef:12:57:00:00:00:08:0d:cf"
+      )
+}
+
+rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Sectigo_00C69698DD8E61DEE8A1D93828AB378761 {
+   meta:
+      description         = "Detects Forever Botnet,BR-01 with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-04"
+      version             = "1.0"
+
+      hash                = "d6b507696400dc1d67412872cb02f3f813cec2bdb70b00083ef718331a444bab"
+      malware             = "Forever Botnet,BR-01"
+      malware_type        = "Unknown"
+      malware_notes       = "Builds loaded as a stage 2 on infected machines. Malware campaign targeting BR users via fake documents."
+
+      signer              = "Xiamen Gejie Ya Intelligent Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:c6:96:98:dd:8e:61:de:e8:a1:d9:38:28:ab:37:87:61"
+      cert_thumbprint     = "48BD2F170B27AE826EC09597ADCABD8EF46C5EDE"
+      cert_valid_from     = "2026-02-04"
+      cert_valid_to       = "2027-02-04"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350206MA31QN6N4K"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:c6:96:98:dd:8e:61:de:e8:a1:d9:38:28:ab:37:87:61"
+      )
+}
+
+rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Sectigo_00CA473A252585ECB88AB26697FF194D91 {
+   meta:
+      description         = "Detects Forever Botnet,BR-01 with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-27"
+      version             = "1.0"
+
+      hash                = "473a013ae706915b43a046239821356afe4572c15e621f4ee63883e766c63af6"
+      malware             = "Forever Botnet,BR-01"
+      malware_type        = "Unknown"
+      malware_notes       = "Malware campaign targeting BR users via fake documents. C2: cms[.]lmcnow[.]com/q/"
+
+      signer              = "Xiamen Time Travel Network Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:ca:47:3a:25:25:85:ec:b8:8a:b2:66:97:ff:19:4d:91"
+      cert_thumbprint     = "58FC7F333D1D7E65B75D9FC97B7FC4C1E67D17F7"
+      cert_valid_from     = "2026-01-27"
+      cert_valid_to       = "2027-01-27"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350203769285658W"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:ca:47:3a:25:25:85:ec:b8:8a:b2:66:97:ff:19:4d:91"
+      )
+}
+
+rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Sectigo_011E9B8CCD60D504B4130D90D14A4BA7 {
+   meta:
+      description         = "Detects Forever Botnet,BR-01 with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-02"
+      version             = "1.0"
+
+      hash                = "dd1e7fd35306a22f511197716c7e9fe2c1ba149ffd275a5221c4452165a4b29d"
+      malware             = "Forever Botnet,BR-01"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: kapa[.]is/f"
+
+      signer              = "MAYDA PETROL OTOMOTIV INSAAT LIMITED SIRKETI"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "01:1e:9b:8c:cd:60:d5:04:b4:13:0d:90:d1:4a:4b:a7"
+      cert_thumbprint     = "CD0EC5A42195775521CA6246C215DEB116CFE18C"
+      cert_valid_from     = "2026-02-02"
+      cert_valid_to       = "2027-02-02"
+
+      country             = "TR"
+      state               = "İstanbul"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "324489-5"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "01:1e:9b:8c:cd:60:d5:04:b4:13:0d:90:d1:4a:4b:a7"
+      )
+}
+
 rule MAL_Compromised_Cert_Forever_Botnet_Sectigo_00C69698DD8E61DEE8A1D93828AB378761 {
    meta:
       description         = "Detects Forever Botnet with compromised cert (Sectigo)"
@@ -46165,6 +46375,111 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_GoGetSSL_0C7368921398F9E38DBDA6AB2
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007227525ABC3F117376B2E000000072275 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-28"
+      version             = "1.0"
+
+      hash                = "aeee527e9ea6a87040019f31abeaf54d3bcda214b2fe040f3334ccf8644eb953"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "JAMIE QUIGGINS"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:07:22:75:25:ab:c3:f1:17:37:6b:2e:00:00:00:07:22:75"
+      cert_thumbprint     = "8E6495E919929347634FB6D0E8FB4F0DDFF0D12E"
+      cert_valid_from     = "2026-02-28"
+      cert_valid_to       = "2026-03-03"
+
+      country             = "US"
+      state               = "California"
+      locality            = "Los Angeles"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:07:22:75:25:ab:c3:f1:17:37:6b:2e:00:00:00:07:22:75"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007939495380FCABA19BA08000000079394 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-15"
+      version             = "1.0"
+
+      hash                = "71f07a260efb92c9c2fa4b59cb02a3a76d4ffc1a24b05a0a64d615c860e52fd7"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: rmm.vendor-portal[.]net"
+
+      signer              = "Julie Jorgensen"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:07:93:94:95:38:0f:ca:ba:19:ba:08:00:00:00:07:93:94"
+      cert_thumbprint     = "7F47E499EBEE4B02024D1C6EDFB6D65C1D16019D"
+      cert_valid_from     = "2026-02-15"
+      cert_valid_to       = "2026-02-18"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:07:93:94:95:38:0f:ca:ba:19:ba:08:00:00:00:07:93:94"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330008224666C9E529903DB5AF000000082246 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-02"
+      version             = "1.0"
+
+      hash                = "6e09ccbc3001f784b23b9e4c216bc68f3c3df16e0140cee7fa4f9857d34f7203"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "JAMIE QUIGGINS"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:08:22:46:66:c9:e5:29:90:3d:b5:af:00:00:00:08:22:46"
+      cert_thumbprint     = "F6D38B2CB32DAA0D0DB4AAB7FC3E8EBD947FE384"
+      cert_valid_from     = "2026-03-02"
+      cert_valid_to       = "2026-03-05"
+
+      country             = "US"
+      state               = "California"
+      locality            = "Los Angeles"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:08:22:46:66:c9:e5:29:90:3d:b5:af:00:00:00:08:22:46"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_087711DDF512753346533330D4E96B11 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (SSL.com)"
@@ -55041,11 +55356,11 @@ rule MAL_Compromised_Cert_Traffer_Sectigo_00AF14E42F5DF730547AEF8E581C0DB316 {
       cert_valid_from     = "2026-02-13"
       cert_valid_to       = "2027-02-13"
 
-      country             = "???"
-      state               = "???"
+      country             = "TR"
+      state               = "İstanbul"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "1089231"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -57642,6 +57957,41 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_330006C2036666AE6BA75FD63300000006C20
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
          sig.serial == "33:00:06:c2:03:66:66:ae:6b:a7:5f:d6:33:00:00:00:06:c2:03"
+      )
+}
+
+rule MAL_Compromised_Cert_UNK_50_Microsoft_330006FF8E27776DA38EED7D1500000006FF8E {
+   meta:
+      description         = "Detects UNK-50 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-19"
+      version             = "1.0"
+
+      hash                = "22ba925d5a801655ddd6012e066c270fd5065933611cd0dc88a71c2c779b39ae"
+      malware             = "UNK-50"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Anquesia Gray"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:06:ff:8e:27:77:6d:a3:8e:ed:7d:15:00:00:00:06:ff:8e"
+      cert_thumbprint     = "E726048E3BE74AFA9944BE517B69338C558C8773"
+      cert_valid_from     = "2026-02-19"
+      cert_valid_to       = "2026-02-22"
+
+      country             = "US"
+      state               = "Georgia"
+      locality            = "Atlanta"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:06:ff:8e:27:77:6d:a3:8e:ed:7d:15:00:00:00:06:ff:8e"
       )
 }
 
@@ -62685,6 +63035,41 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_6AE0A20A8E7B84C607E91D16 {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_GlobalSign_6B44BA90EFCD9804F553E6E5 {
+   meta:
+      description         = "Detects Unknown with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-03-19"
+      version             = "1.0"
+
+      hash                = "449be9e617efdbbf57169e452ec4d20935e67e524bc26335a73209821873f3c7"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "OR KAHOL LTD"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "6b:44:ba:90:ef:cd:98:04:f5:53:e6:e5"
+      cert_thumbprint     = "4217BAC417F82CC3416ACD4E3954DD17A1E8E23D"
+      cert_valid_from     = "2024-03-19"
+      cert_valid_to       = "2025-03-20"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "6b:44:ba:90:ef:cd:98:04:f5:53:e6:e5"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_GlobalSign_70866B586685F4F39A5B4717 {
    meta:
       description         = "Detects Unknown with compromised cert (GlobalSign)"
@@ -63875,6 +64260,76 @@ rule MAL_Compromised_Cert_Unknown_Microsoft_330006D18A37899D7C1808ED4D00000006D1
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Microsoft_3300070C7A2B04CE4F071E4928000000070C7A {
+   meta:
+      description         = "Detects Unknown with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-22"
+      version             = "1.0"
+
+      hash                = "18cb2495b5e0512f8026d7fd123ae821d554d918ecd7269e9b8eb40ca2f480cc"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: cybernetvillage[.]com"
+
+      signer              = "Julie Jorgensen"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:07:0c:7a:2b:04:ce:4f:07:1e:49:28:00:00:00:07:0c:7a"
+      cert_thumbprint     = "7464F97100FB5398F1DADB3C14F25E63BBB68415"
+      cert_valid_from     = "2026-02-22"
+      cert_valid_to       = "2026-02-25"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:07:0c:7a:2b:04:ce:4f:07:1e:49:28:00:00:00:07:0c:7a"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Microsoft_3300072B29C3BF8403A6C15BE2000000072B29 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-01"
+      version             = "1.0"
+
+      hash                = "64263640a6fdeb2388bca2e9094a17065308cf8dcb0032454c0a71d9b78327eb"
+      malware             = "Unknown"
+      malware_type        = "Initial access tool"
+      malware_notes       = "File is disguised as Obsidian installer, uses python script to pull down second stage payload."
+
+      signer              = "Donald Gay"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:07:2b:29:c3:bf:84:03:a6:c1:5b:e2:00:00:00:07:2b:29"
+      cert_thumbprint     = "F8444DFC740B94227AB9B2E757B8F8F1FA49362A"
+      cert_valid_from     = "2026-03-01"
+      cert_valid_to       = "2026-03-04"
+
+      country             = "US"
+      state               = "Maryland"
+      locality            = "Clinton"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:07:2b:29:c3:bf:84:03:a6:c1:5b:e2:00:00:00:07:2b:29"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_Microsoft_3300079A51C7063E66053D229B000000079A51 {
    meta:
       description         = "Detects Unknown with compromised cert (Microsoft)"
@@ -63907,6 +64362,41 @@ rule MAL_Compromised_Cert_Unknown_Microsoft_3300079A51C7063E66053D229B000000079A
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
          sig.serial == "33:00:07:9a:51:c7:06:3e:66:05:3d:22:9b:00:00:00:07:9a:51"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Microsoft_330007F670F4216275CF1D6E9300000007F670 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-23"
+      version             = "1.0"
+
+      hash                = "e96f42668ed0b9780ae76c2b5af44129d4b63ffbb50e3341bcf724a2c9f9a5f7"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: 198-37-119-78.sslip[.]io"
+
+      signer              = "Julie Jorgensen"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:07:f6:70:f4:21:62:75:cf:1d:6e:93:00:00:00:07:f6:70"
+      cert_thumbprint     = "F0C43DFECF4C53AF1CC5677821E987A27FEB74BF"
+      cert_valid_from     = "2026-02-23"
+      cert_valid_to       = "2026-02-26"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:07:f6:70:f4:21:62:75:cf:1d:6e:93:00:00:00:07:f6:70"
       )
 }
 
@@ -67095,6 +67585,41 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_4E8FD0366C20091348C62BE2F2976CC9 {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Sectigo_50699944C012F49C9F254B6900E78256 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-05-21"
+      version             = "1.0"
+
+      hash                = "f3c11d0d18c5fe7c40c2ff833a618a46873ae99b0e7525f692d407395fd61b8b"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Astro Bright LTD"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "50:69:99:44:c0:12:f4:9c:9f:25:4b:69:00:e7:82:56"
+      cert_thumbprint     = "FE8AC01467F8E21806BA338E69DF21B5B7E74E78"
+      cert_valid_from     = "2025-05-21"
+      cert_valid_to       = "2026-05-21"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "50:69:99:44:c0:12:f4:9c:9f:25:4b:69:00:e7:82:56"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_Sectigo_573FD429CFC430E46C5797AC5B84BCBD {
    meta:
       description         = "Detects Unknown with compromised cert (Sectigo)"
@@ -68387,6 +68912,76 @@ rule MAL_Compromised_Cert_ValleyRat_Sectigo_00ADC445B14C3C850CC30C6C0007EA9920 {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA E36" and
          sig.serial == "00:ad:c4:45:b1:4c:3c:85:0c:c3:0c:6c:00:07:ea:99:20"
+      )
+}
+
+rule MAL_Compromised_Cert_VariantLoader_GlobalSign_231C809371ABD30629B74CFC {
+   meta:
+      description         = "Detects VariantLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-05"
+      version             = "1.0"
+
+      hash                = "f262806eac85417246608d3053280fa74a04011b0836b25f74691503301d2ff3"
+      malware             = "VariantLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: 188.137.248.50"
+
+      signer              = "Individual entrepreneur Turenko Daniil Aleksandrovich"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "23:1c:80:93:71:ab:d3:06:29:b7:4c:fc"
+      cert_thumbprint     = "46C494F1B059AF936FFB04E4B7BA1685F37A2CE4"
+      cert_valid_from     = "2026-02-05"
+      cert_valid_to       = "2027-02-06"
+
+      country             = "RU"
+      state               = "Moscow Oblast"
+      locality            = "Noginsk"
+      email               = "dany.tur2004@gmail.com"
+      rdn_serial_number   = "325508100325374"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "23:1c:80:93:71:ab:d3:06:29:b7:4c:fc"
+      )
+}
+
+rule MAL_Compromised_Cert_VariantLoader_Microsoft_330007D6C658F5D47885D0967800000007D6C6 {
+   meta:
+      description         = "Detects VariantLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-18"
+      version             = "1.0"
+
+      hash                = "4867245e221e4770e00abb3c4d5b4fe85c7e7c325b053ec3d88b776686f42f58"
+      malware             = "VariantLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: 146.103.113.60"
+
+      signer              = "JAMIE QUIGGINS"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:07:d6:c6:58:f5:d4:78:85:d0:96:78:00:00:00:07:d6:c6"
+      cert_thumbprint     = "EA78EB54A97267F4D5850E25AA9DAC8C6DF6C403"
+      cert_valid_from     = "2026-02-18"
+      cert_valid_to       = "2026-02-21"
+
+      country             = "US"
+      state               = "California"
+      locality            = "Los Angeles"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:07:d6:c6:58:f5:d4:78:85:d0:96:78:00:00:00:07:d6:c6"
       )
 }
 

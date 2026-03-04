@@ -4,6 +4,33 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.04] - 2026-03-04
+
+### Added
+- MAL_Compromised_Cert_UNK_50_Microsoft_330006FF8E27776DA38EED7D1500000006FF8E (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330007F98A12E14A67A7FA6F1D00000007F98A (Forever Botnet,BR-01 - Microsoft)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300072BFDB49FB17014EC2F01000000072BFD (Forever Botnet,BR-01 - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007227525ABC3F117376B2E000000072275 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300080DCFE7C584DFEEEF1257000000080DCF (Forever Botnet,BR-01 - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330008224666C9E529903DB5AF000000082246 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_Unknown_Microsoft_3300070C7A2B04CE4F071E4928000000070C7A (Unknown - Microsoft)
+- MAL_Compromised_Cert_VariantLoader_GlobalSign_231C809371ABD30629B74CFC (VariantLoader - GlobalSign)
+- MAL_Compromised_Cert_Unknown_Microsoft_330007F670F4216275CF1D6E9300000007F670 (Unknown - Microsoft)
+- MAL_Compromised_Cert_Unknown_Sectigo_50699944C012F49C9F254B6900E78256 (Unknown - Sectigo)
+- MAL_Compromised_Cert_VariantLoader_Microsoft_330007D6C658F5D47885D0967800000007D6C6 (VariantLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007939495380FCABA19BA08000000079394 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_Unknown_GlobalSign_6B44BA90EFCD9804F553E6E5 (Unknown - GlobalSign)
+- MAL_Compromised_Cert_Unknown_Microsoft_3300072B29C3BF8403A6C15BE2000000072B29 (Unknown - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Sectigo_011E9B8CCD60D504B4130D90D14A4BA7 (Updated metadata for Forever Botnet,BR-01)
+- MAL_Compromised_Cert_Traffer_Sectigo_00AF14E42F5DF730547AEF8E581C0DB316 (Updated metadata for Traffer)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Sectigo_00C69698DD8E61DEE8A1D93828AB378761 (Updated metadata for Forever Botnet,BR-01)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Sectigo_00CA473A252585ECB88AB26697FF194D91 (Updated metadata for Forever Botnet,BR-01)
+
+### Removed
+- MAL_Compromised_Cert_Unkown_Loader_Microsoft_330006E63A45096D2272D901DC00000006E63A (Removed Unkown,Loader rule)
+
 ## [2026.03.03] - 2026-03-03
 
 ### Added
