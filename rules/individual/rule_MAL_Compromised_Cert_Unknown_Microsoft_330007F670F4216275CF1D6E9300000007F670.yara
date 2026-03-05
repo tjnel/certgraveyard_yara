@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Unknown_Microsoft_330007F670F4216275CF1D6E9300000007F6
       cert_valid_from     = "2026-02-23"
       cert_valid_to       = "2026-02-26"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Maryland"
+      locality            = "BALTIMORE"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

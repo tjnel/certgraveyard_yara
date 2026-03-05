@@ -4,6 +4,26 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.05] - 2026-03-05
+
+### Added
+- MAL_Compromised_Cert_FakeTrading_SSL_com_6B902553D4FAA01CD0FA62009C8F2DB2 (FakeTrading - SSL.com)
+- MAL_Compromised_Cert_Unknown_Microsoft_330008170BB2D349F650E6C2BF00000008170B (Unknown - Microsoft)
+- MAL_Compromised_Cert_T_21_Microsoft_33000820D01FC17A0AE7D1AB020000000820D0 (T-21 - Microsoft)
+- MAL_Compromised_Cert_evilai_Sectigo_00BF9A4635A5CCDED66E6D1158BD19B485 (evilai - Sectigo)
+- MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_1452A7543159FF8B16C659C26435CD11 (ScreenConnectLoader - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007939495380FCABA19BA08000000079394 (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_Unknown_Microsoft_3300070C7A2B04CE4F071E4928000000070C7A (Updated metadata for Unknown)
+- MAL_Compromised_Cert_Unknown_Microsoft_330007F670F4216275CF1D6E9300000007F670 (Updated metadata for Unknown)
+- MAL_Compromised_Cert_Unknown_GlobalSign_6B44BA90EFCD9804F553E6E5 (Updated metadata for Unknown)
+- MAL_Compromised_Cert_Unknown_Sectigo_50699944C012F49C9F254B6900E78256 (Updated metadata for Unknown)
+- MAL_Compromised_Cert_EtherRAT_Microsoft_33000725FEA86DD19E8571B26C0000000725FE (Updated metadata for EtherRAT)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330007F98A12E14A67A7FA6F1D00000007F98A (Updated metadata for Forever Botnet,BR-01)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300080DCFE7C584DFEEEF1257000000080DCF (Updated metadata for Forever Botnet,BR-01)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300072BFDB49FB17014EC2F01000000072BFD (Updated metadata for Forever Botnet,BR-01)
+
 ## [2026.03.04] - 2026-03-04
 
 ### Added

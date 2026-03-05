@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_6B44BA90EFCD9804F553E6E5 {
       cert_valid_from     = "2024-03-19"
       cert_valid_to       = "2025-03-20"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "IL"
+      state               = "Central District"
+      locality            = "Ra'anana"
+      email               = "info@orkahol.com"
+      rdn_serial_number   = "516891165"
 
    condition:
       uint16(0) == 0x5a4d and
