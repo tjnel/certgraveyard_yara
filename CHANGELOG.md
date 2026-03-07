@@ -4,6 +4,12 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.07] - 2026-03-07
+
+### Added
+- MAL_Compromised_Cert_DonutLoader_GlobalSign_5949C884647BA999C2AC2F78 (DonutLoader - GlobalSign)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300073B04691AB4FE2AA4ACD7000000073B04 (Forever Botnet,BR-01 - Microsoft)
+
 ## [2026.03.06] - 2026-03-06
 
 ### Added

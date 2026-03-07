@@ -11585,6 +11585,41 @@ rule MAL_Compromised_Cert_Donot_SSL_com_26CCC279DBF534B4D7B205B1A849B8EC {
       )
 }
 
+rule MAL_Compromised_Cert_DonutLoader_GlobalSign_5949C884647BA999C2AC2F78 {
+   meta:
+      description         = "Detects DonutLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-20"
+      version             = "1.0"
+
+      hash                = "89e52fa31535e46b5f08becbe1c591aff709036554856e6d250a503719081705"
+      malware             = "DonutLoader"
+      malware_type        = "Loader"
+      malware_notes       = "Decrypts payload using AES encryption, loads AsyncRAT."
+
+      signer              = "成都美付通宝网络科技有限公司"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "59:49:c8:84:64:7b:a9:99:c2:ac:2f:78"
+      cert_thumbprint     = "8AD4ACC8DA628F5D09C044FA770105CC151D2989"
+      cert_valid_from     = "2026-01-20"
+      cert_valid_to       = "2027-01-21"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "59:49:c8:84:64:7b:a9:99:c2:ac:2f:78"
+      )
+}
+
 rule MAL_Compromised_Cert_Donut_Certum_1732215D6B96071060E7551FFD98D6C7 {
    meta:
       description         = "Detects Donut with compromised cert (Certum)"
@@ -17427,6 +17462,41 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300072BFDB49FB17014EC2
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
          sig.serial == "33:00:07:2b:fd:b4:9f:b1:70:14:ec:2f:01:00:00:00:07:2b:fd"
+      )
+}
+
+rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300073B04691AB4FE2AA4ACD7000000073B04 {
+   meta:
+      description         = "Detects Forever Botnet,BR-01 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-04"
+      version             = "1.0"
+
+      hash                = "d7fb1b329cf15e9bb814a696788a65d3fff26289bb56e3c015b007027e47f152"
+      malware             = "Forever Botnet,BR-01"
+      malware_type        = "Unknown"
+      malware_notes       = "Malware campaign targeting BR users via fake documents. C2: jmkkload[.]com/bba13d314ed6c2ec94/"
+
+      signer              = "Julie Jorgensen"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:07:3b:04:69:1a:b4:fe:2a:a4:ac:d7:00:00:00:07:3b:04"
+      cert_thumbprint     = "b010ff1b691422bc0ab3f992a8a52a9c128f39c6"
+      cert_valid_from     = "2026-03-04"
+      cert_valid_to       = "2026-03-07"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:07:3b:04:69:1a:b4:fe:2a:a4:ac:d7:00:00:00:07:3b:04"
       )
 }
 
