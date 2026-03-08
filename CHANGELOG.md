@@ -4,6 +4,11 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.08] - 2026-03-08
+
+### Modified
+- MAL_Compromised_Cert_FakeNSFW2_Microsoft_3300070C7A2B04CE4F071E4928000000070C7A (Updated metadata for FakeNSFW2)
+
 ## [2026.03.07] - 2026-03-07
 
 ### Added
