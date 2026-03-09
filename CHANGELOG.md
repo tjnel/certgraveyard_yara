@@ -4,6 +4,25 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.09] - 2026-03-09
+
+### Added
+- MAL_Compromised_Cert_Unknown_Microsoft_330007203EBC6F47C85206C10A00000007203E (Unknown - Microsoft)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00EFCDE65B00EF4F8F30A7D043BAE2AE88 (Zhong Stealer - Sectigo)
+- MAL_Compromised_Cert_FakeNSFW2_Microsoft_33000716DA1421DC51AF35E0650000000716DA (FakeNSFW2 - Microsoft)
+- MAL_Compromised_Cert_UNK_50_Microsoft_3300070C3A5C15733DA5CD40AB000000070C3A (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_FakeNSFW2_Microsoft_330007EB34623DC96AB6A4E6DF00000007EB34 (FakeNSFW2 - Microsoft)
+- MAL_Compromised_Cert_Unknown_Microsoft_3300082A8BABA70A0B83E0CC71000000082A8B (Unknown - Microsoft)
+- MAL_Compromised_Cert_FakeNSFW2_Microsoft_33000737DA331B0DDCB48E286E0000000737DA (FakeNSFW2 - Microsoft)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_24C1C7BD23D4D568C91241E510602337 (Zhong Stealer - Sectigo)
+- MAL_Compromised_Cert_Traffer_Sectigo_60C9A3E24ACBE0213443A16196701206 (Traffer - Sectigo)
+- MAL_Compromised_Cert_VariantLoader_Microsoft_3300074922C21B39978789B2E2000000074922 (VariantLoader - Microsoft)
+- MAL_Compromised_Cert_ValleyRAT_GlobalSign_49A710D6C41DA0A7CAC7F97A (ValleyRAT - GlobalSign)
+- MAL_Compromised_Cert_Unknown_Microsoft_33000745B1311945510CADE1F40000000745B1 (Unknown - Microsoft)
+- MAL_Compromised_Cert_Unknown_Microsoft_330007D55E53DD8514C78F28B500000007D55E (Unknown - Microsoft)
+- MAL_Compromised_Cert_FakeNDASign_Microsoft_3300073B7CFE433F3290F2E720000000073B7C (FakeNDASign - Microsoft)
+- MAL_Compromised_Cert_FakeNSFW2_Microsoft_330007FCB9D77958E8844B605400000007FCB9 (FakeNSFW2 - Microsoft)
+
 ## [2026.03.08] - 2026-03-08
 
 ### Modified
