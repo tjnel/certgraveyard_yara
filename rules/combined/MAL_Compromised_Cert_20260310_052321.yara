@@ -14665,6 +14665,41 @@ rule MAL_Compromised_Cert_FakeDocument_GlobalSign_3D0483EEC50371CB79AE3F64 {
       )
 }
 
+rule MAL_Compromised_Cert_FakeDocument_GlobalSign_7CB161B58EB2E9DA1CD0A36D {
+   meta:
+      description         = "Detects FakeDocument with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-03-25"
+      version             = "1.0"
+
+      hash                = "75a5663b7b0b0100688f8004b99630041134c77c457bea2a3f9b55d68b4015d3"
+      malware             = "FakeDocument"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Reviihuray Communication Technology Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "7c:b1:61:b5:8e:b2:e9:da:1c:d0:a3:6d"
+      cert_thumbprint     = "CB30938DE072D077D7ED3BCD018C482C7511AE28"
+      cert_valid_from     = "2025-03-25"
+      cert_valid_to       = "2026-03-26"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "7c:b1:61:b5:8e:b2:e9:da:1c:d0:a3:6d"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeDocument_Microsoft_330002FA98E55C122556D6766A00000002FA98 {
    meta:
       description         = "Detects FakeDocument with compromised cert (Microsoft)"
@@ -27752,6 +27787,41 @@ rule MAL_Compromised_Cert_MeshAgent_DigiCert_028349DAF3B78B800A5845AA01F19806 {
       for any sig in pe.signatures : (
          sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
          sig.serial == "02:83:49:da:f3:b7:8b:80:0a:58:45:aa:01:f1:98:06"
+      )
+}
+
+rule MAL_Compromised_Cert_MeshAgent_GlobalSign_2B2E6AABDD8EF6346604ABBF {
+   meta:
+      description         = "Detects MeshAgent with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-10"
+      version             = "1.0"
+
+      hash                = "dbfe1f915f40122a336cd5d0de802a6f3ec0204ab75321934a06dafbc1964446"
+      malware             = "MeshAgent"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake VMWare installer leading to MeshCentral RMM - C2: 103.65.230.86"
+
+      signer              = "Pacex Learning Private Limited"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "2b:2e:6a:ab:dd:8e:f6:34:66:04:ab:bf"
+      cert_thumbprint     = "39CABAB57736654FC72EA10D626641ED52299356"
+      cert_valid_from     = "2025-11-10"
+      cert_valid_to       = "2026-11-11"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "2b:2e:6a:ab:dd:8e:f6:34:66:04:ab:bf"
       )
 }
 
@@ -48682,6 +48752,41 @@ rule MAL_Compromised_Cert_SmokedHam_Sectigo_008E00CF619B911A2BAC78B1B214098177 {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "00:8e:00:cf:61:9b:91:1a:2b:ac:78:b1:b2:14:09:81:77"
+      )
+}
+
+rule MAL_Compromised_Cert_SmokedHam_Sectigo_00B0D4CE585BFBD203E9C4056C5583C3B4 {
+   meta:
+      description         = "Detects SmokedHam with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-27"
+      version             = "1.0"
+
+      hash                = "863074914d88d72874e616de171bfababc9c11bc53bf39216b3db52ab02c11b4"
+      malware             = "SmokedHam"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake RVTools"
+
+      signer              = "Xiamen Fangjin Network Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:b0:d4:ce:58:5b:fb:d2:03:e9:c4:05:6c:55:83:c3:b4"
+      cert_thumbprint     = "32BEFB1C0459DE0DB9E013D1BC98334004F69913"
+      cert_valid_from     = "2026-02-27"
+      cert_valid_to       = "2027-02-27"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:b0:d4:ce:58:5b:fb:d2:03:e9:c4:05:6c:55:83:c3:b4"
       )
 }
 
@@ -73952,6 +74057,41 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_34E947F11A0DA31561875BFC5FBCC5AB
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "34:e9:47:f1:1a:0d:a3:15:61:87:5b:fc:5f:bc:c5:ab"
+      )
+}
+
+rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_45D3E97BAEE6E4057EF4FA680CAF010D {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-27"
+      version             = "1.0"
+
+      hash                = "82447740e38310f28c47a61c7cb743dfa075d4194bb5588812a08895e02c89ea"
+      malware             = "Zhong Stealer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Xiamen Sihai Rongchuang Network Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "45:d3:e9:7b:ae:e6:e4:05:7e:f4:fa:68:0c:af:01:0d"
+      cert_thumbprint     = "4ECD789457499B7C0080A9CAA5A78FD18FDB618F"
+      cert_valid_from     = "2026-01-27"
+      cert_valid_to       = "2027-01-27"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "45:d3:e9:7b:ae:e6:e4:05:7e:f4:fa:68:0c:af:01:0d"
       )
 }
 

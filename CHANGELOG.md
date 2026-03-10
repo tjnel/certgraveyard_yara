@@ -4,6 +4,14 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.10] - 2026-03-10
+
+### Added
+- MAL_Compromised_Cert_MeshAgent_GlobalSign_2B2E6AABDD8EF6346604ABBF (MeshAgent - GlobalSign)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_45D3E97BAEE6E4057EF4FA680CAF010D (Zhong Stealer - Sectigo)
+- MAL_Compromised_Cert_SmokedHam_Sectigo_00B0D4CE585BFBD203E9C4056C5583C3B4 (SmokedHam - Sectigo)
+- MAL_Compromised_Cert_FakeDocument_GlobalSign_7CB161B58EB2E9DA1CD0A36D (FakeDocument - GlobalSign)
+
 ## [2026.03.09] - 2026-03-09
 
 ### Added
