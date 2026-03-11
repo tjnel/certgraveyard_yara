@@ -4,6 +4,18 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.11] - 2026-03-11
+
+### Added
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_33000808856B83136090D41CE6000000080885 (Forever Botnet,BR-01 - Microsoft)
+- MAL_Compromised_Cert_FakeTrading_SSL_com_084DF03CC7D8CAF34C5C2CFEEC448B27 (FakeTrading - SSL.com)
+- MAL_Compromised_Cert_EtherRAT_Microsoft_330007F426F21F52410471D61800000007F426 (EtherRAT - Microsoft)
+- MAL_Compromised_Cert_EtherRAT_Sectigo_03C2DE2572AEE65EF1A2009CD0853040 (EtherRAT - Sectigo)
+- MAL_Compromised_Cert_EtherRAT_Microsoft_3300073381959ADEFA5D30FAAB000000073381 (EtherRAT - Microsoft)
+- MAL_Compromised_Cert_PDFSupernova_GlobalSign_041E6F850FA605AF6ACF2E75 (PDFSupernova - GlobalSign)
+- MAL_Compromised_Cert_FakeWallet_Sectigo_46EA72160535D97FF6848BF817F1149B (FakeWallet - Sectigo)
+- MAL_Compromised_Cert_EtherRAT_Microsoft_3300074243FF56B1E8C3BF551C000000074243 (EtherRAT - Microsoft)
+
 ## [2026.03.10] - 2026-03-10
 
 ### Added
