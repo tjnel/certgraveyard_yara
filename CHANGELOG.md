@@ -4,6 +4,25 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.12] - 2026-03-12
+
+### Added
+- MAL_Compromised_Cert_FakeTrading_SSL_com_50736A370250FC80E523D41A25D996C9 (FakeTrading - SSL.com)
+- MAL_Compromised_Cert_FakeWallet_Sectigo_8D1AA13900E5593AD72CA20D844B5301 (FakeWallet - Sectigo)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_33000836CA486A8B51FA9226320000000836CA (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_330007438AEF232CA91040F01900000007438A (FakeRMM - Microsoft)
+- MAL_Compromised_Cert_FakeDocument_Microsoft_33000757EE1AAA9DF35571A1D10000000757EE (FakeDocument - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007373E454ED3173FA3760F00000007373E (ScreenConnectLoader - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_CastleLoader_Microsoft_3300073381959ADEFA5D30FAAB000000073381 (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_33000725FEA86DD19E8571B26C0000000725FE (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_CastleLoader_Sectigo_03C2DE2572AEE65EF1A2009CD0853040 (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_FakeRMM_Certum_055A00A5DC820FDA8DBB754490B4BACF (Updated metadata for FakeRMM)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_3300074243FF56B1E8C3BF551C000000074243 (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_CastleLoader_GlobalSign_1D050F8E6F39C00C585367F2 (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_330007F426F21F52410471D61800000007F426 (Updated metadata for CastleLoader)
+
 ## [2026.03.11] - 2026-03-11
 
 ### Added
