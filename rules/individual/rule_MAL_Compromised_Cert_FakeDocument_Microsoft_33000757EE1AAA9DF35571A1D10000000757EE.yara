@@ -21,10 +21,10 @@ rule MAL_Compromised_Cert_FakeDocument_Microsoft_33000757EE1AAA9DF35571A1D100000
       cert_valid_from     = "2026-03-09"
       cert_valid_to       = "2026-03-12"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:

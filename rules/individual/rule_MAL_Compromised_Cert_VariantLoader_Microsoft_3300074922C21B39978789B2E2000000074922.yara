@@ -21,10 +21,10 @@ rule MAL_Compromised_Cert_VariantLoader_Microsoft_3300074922C21B39978789B2E20000
       cert_valid_from     = "2026-03-06"
       cert_valid_to       = "2026-03-09"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:

@@ -21,10 +21,10 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_03C2DE2572AEE65EF1A2009CD0853040 
       cert_valid_from     = "2026-01-30"
       cert_valid_to       = "2027-01-30"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:

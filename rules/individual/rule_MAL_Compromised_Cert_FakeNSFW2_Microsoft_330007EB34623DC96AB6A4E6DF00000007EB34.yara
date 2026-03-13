@@ -21,10 +21,10 @@ rule MAL_Compromised_Cert_FakeNSFW2_Microsoft_330007EB34623DC96AB6A4E6DF00000007
       cert_valid_from     = "2026-03-02"
       cert_valid_to       = "2026-03-05"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:

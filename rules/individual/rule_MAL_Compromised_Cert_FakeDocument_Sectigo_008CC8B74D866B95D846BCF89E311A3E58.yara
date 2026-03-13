@@ -21,10 +21,10 @@ rule MAL_Compromised_Cert_FakeDocument_Sectigo_008CC8B74D866B95D846BCF89E311A3E5
       cert_valid_from     = "2026-02-10"
       cert_valid_to       = "2027-02-10"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:

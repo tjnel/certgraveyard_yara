@@ -21,10 +21,10 @@ rule MAL_Compromised_Cert_DonutLoader_GlobalSign_5949C884647BA999C2AC2F78 {
       cert_valid_from     = "2026-01-20"
       cert_valid_to       = "2027-01-21"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:

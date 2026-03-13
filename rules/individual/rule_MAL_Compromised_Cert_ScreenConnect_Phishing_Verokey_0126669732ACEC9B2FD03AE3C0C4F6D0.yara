@@ -21,10 +21,10 @@ rule MAL_Compromised_Cert_ScreenConnect_Phishing_Verokey_0126669732ACEC9B2FD03AE
       cert_valid_from     = "2025-08-19"
       cert_valid_to       = "2026-08-18"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = "Not Specified"
 
    condition:

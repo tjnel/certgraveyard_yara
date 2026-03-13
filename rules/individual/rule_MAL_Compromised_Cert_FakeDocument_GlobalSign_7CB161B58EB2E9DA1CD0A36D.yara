@@ -21,10 +21,10 @@ rule MAL_Compromised_Cert_FakeDocument_GlobalSign_7CB161B58EB2E9DA1CD0A36D {
       cert_valid_from     = "2025-03-25"
       cert_valid_to       = "2026-03-26"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:

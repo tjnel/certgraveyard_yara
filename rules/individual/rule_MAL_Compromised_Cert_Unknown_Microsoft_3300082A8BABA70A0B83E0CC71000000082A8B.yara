@@ -21,10 +21,10 @@ rule MAL_Compromised_Cert_Unknown_Microsoft_3300082A8BABA70A0B83E0CC71000000082A
       cert_valid_from     = "2026-03-04"
       cert_valid_to       = "2026-03-07"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:

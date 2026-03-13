@@ -21,10 +21,10 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00EFCDE65B00EF4F8F30A7D043BAE2AE
       cert_valid_from     = "2026-01-19"
       cert_valid_to       = "2027-01-19"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:

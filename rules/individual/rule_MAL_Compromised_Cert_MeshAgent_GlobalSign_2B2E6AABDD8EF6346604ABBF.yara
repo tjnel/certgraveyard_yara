@@ -21,10 +21,10 @@ rule MAL_Compromised_Cert_MeshAgent_GlobalSign_2B2E6AABDD8EF6346604ABBF {
       cert_valid_from     = "2025-11-10"
       cert_valid_to       = "2026-11-11"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:

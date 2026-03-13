@@ -21,10 +21,10 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_3300073381959ADEFA5D30FAAB00000
       cert_valid_from     = "2026-03-03"
       cert_valid_to       = "2026-03-06"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:

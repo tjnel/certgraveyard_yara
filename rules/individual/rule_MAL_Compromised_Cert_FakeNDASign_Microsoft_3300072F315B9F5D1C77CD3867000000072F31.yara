@@ -21,10 +21,10 @@ rule MAL_Compromised_Cert_FakeNDASign_Microsoft_3300072F315B9F5D1C77CD3867000000
       cert_valid_from     = "2026-03-02"
       cert_valid_to       = "2026-03-05"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:

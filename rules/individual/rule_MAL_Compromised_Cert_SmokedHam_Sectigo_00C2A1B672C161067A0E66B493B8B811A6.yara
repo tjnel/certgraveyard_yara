@@ -21,10 +21,10 @@ rule MAL_Compromised_Cert_SmokedHam_Sectigo_00C2A1B672C161067A0E66B493B8B811A6 {
       cert_valid_from     = "2026-01-13"
       cert_valid_to       = "2027-01-13"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:
