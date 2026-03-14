@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_RomCom_GlobalSign_150D2E1FF959E364F325EF47 {
       cert_valid_from     = "2026-02-28"
       cert_valid_to       = "2027-02-20"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "KG"
+      state               = "Osh"
+      locality            = "Osh"
+      email               = "urmatbekjaparov@outlook.com"
+      rdn_serial_number   = "171572-3310-OOO"
 
    condition:
       uint16(0) == 0x5a4d and

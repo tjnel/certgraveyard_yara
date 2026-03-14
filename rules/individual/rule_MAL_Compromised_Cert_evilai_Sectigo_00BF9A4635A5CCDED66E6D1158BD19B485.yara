@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_evilai_Sectigo_00BF9A4635A5CCDED66E6D1158BD19B485 {
       cert_valid_from     = "2025-12-23"
       cert_valid_to       = "2026-12-23"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
-      email               = "---"
-      rdn_serial_number   = ""
+      country             = "IL"
+      state               = "Central"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "517134870"
 
    condition:
       uint16(0) == 0x5a4d and

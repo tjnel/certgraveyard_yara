@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeTrading_SSL_com_50736A370250FC80E523D41A25D996C9 {
       cert_valid_from     = "2026-03-10"
       cert_valid_to       = "2026-08-22"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
-      email               = "---"
-      rdn_serial_number   = ""
+      country             = "PL"
+      state               = "Łódź Voivodeship"
+      locality            = "Łódź"
+      email               = "???"
+      rdn_serial_number   = "0000936459"
 
    condition:
       uint16(0) == 0x5a4d and

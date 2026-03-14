@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Remcos_RAT_GlobalSign_6F35B24C2D6C5F4BB1E08659 {
       cert_valid_from     = "2025-12-08"
       cert_valid_to       = "2026-11-26"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
-      email               = "---"
-      rdn_serial_number   = ""
+      country             = "CN"
+      state               = "Guangdong"
+      locality            = "Guangzhou"
+      email               = "???"
+      rdn_serial_number   = "91440101MA59QJN634"
 
    condition:
       uint16(0) == 0x5a4d and

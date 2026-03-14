@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_1452A7543159FF8B16C659C264
       cert_valid_from     = "2025-12-19"
       cert_valid_to       = "2026-12-18"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
-      email               = "---"
-      rdn_serial_number   = ""
+      country             = "US"
+      state               = "California"
+      locality            = "Arnold"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

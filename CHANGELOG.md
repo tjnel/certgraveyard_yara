@@ -4,6 +4,68 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.14] - 2026-03-14
+
+### Added
+- MAL_Compromised_Cert_Loader_of_Vidar_Lumma_Microsoft_3300084E9366266EBC2CC66393000000084E93 (Loader of Vidar & Lumma - Microsoft)
+- MAL_Compromised_Cert_TamperedChef_GlobalSign_3468B8E920EB67F7272B6D59 (TamperedChef - GlobalSign)
+- MAL_Compromised_Cert_Loader_of_Vidar_Lumma_Microsoft_3300076E1C86261F5709D3F421000000076E1C (Loader of Vidar & Lumma - Microsoft)
+- MAL_Compromised_Cert_Traffer_DigiCert_0C284A110B1C1BFAD1405E6DF6282A09 (Traffer - DigiCert)
+- MAL_Compromised_Cert_TamperedChef_SSL_com_0126D2B7817E53EB6C540A8E5696EE3D (TamperedChef - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00EFCDE65B00EF4F8F30A7D043BAE2AE88 (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_FakeNSFW2_Microsoft_330007EB34623DC96AB6A4E6DF00000007EB34 (Updated metadata for FakeNSFW2)
+- MAL_Compromised_Cert_FakeNSFW2_Microsoft_33000716DA1421DC51AF35E0650000000716DA (Updated metadata for FakeNSFW2)
+- MAL_Compromised_Cert_FakeTrading_SSL_com_50736A370250FC80E523D41A25D996C9 (Updated metadata for FakeTrading)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_3300073381959ADEFA5D30FAAB000000073381 (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_PDFSupernova_GlobalSign_041E6F850FA605AF6ACF2E75 (Updated metadata for PDFSupernova)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_3300074243FF56B1E8C3BF551C000000074243 (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_VariantLoader_Microsoft_3300074922C21B39978789B2E2000000074922 (Updated metadata for VariantLoader)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_330007F426F21F52410471D61800000007F426 (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_009C32E4F7CE30CE6283084B355EC9FBAF (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_UNK_50_Microsoft_3300070C3A5C15733DA5CD40AB000000070C3A (Updated metadata for UNK-50)
+- MAL_Compromised_Cert_Unknown_Microsoft_330007D55E53DD8514C78F28B500000007D55E (Updated metadata for Unknown)
+- MAL_Compromised_Cert_FakeWallet_Sectigo_46EA72160535D97FF6848BF817F1149B (Updated metadata for FakeWallet)
+- MAL_Compromised_Cert_FakeDocument_Microsoft_33000757EE1AAA9DF35571A1D10000000757EE (Updated metadata for FakeDocument)
+- MAL_Compromised_Cert_CastleLoader_GlobalSign_1D050F8E6F39C00C585367F2 (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_DonutLoader_GlobalSign_5949C884647BA999C2AC2F78 (Updated metadata for DonutLoader)
+- MAL_Compromised_Cert_ValleyRAT_GlobalSign_49A710D6C41DA0A7CAC7F97A (Updated metadata for ValleyRAT)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_330007438AEF232CA91040F01900000007438A (Updated metadata for FakeRMM)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007373E454ED3173FA3760F00000007373E (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_FakeTrading_SSL_com_084DF03CC7D8CAF34C5C2CFEEC448B27 (Updated metadata for FakeTrading)
+- MAL_Compromised_Cert_Unknown_Microsoft_3300082A8BABA70A0B83E0CC71000000082A8B (Updated metadata for Unknown)
+- MAL_Compromised_Cert_FakeDocument_Sectigo_008CC8B74D866B95D846BCF89E311A3E58 (Updated metadata for FakeDocument)
+- MAL_Compromised_Cert_SmokedHam_Sectigo_00C2A1B672C161067A0E66B493B8B811A6 (Updated metadata for SmokedHam)
+- MAL_Compromised_Cert_FakeNSFW2_Microsoft_3300080D2103A19D93ADFED776000000080D21 (Updated metadata for FakeNSFW2)
+- MAL_Compromised_Cert_Traffer_Sectigo_60C9A3E24ACBE0213443A16196701206 (Updated metadata for Traffer)
+- MAL_Compromised_Cert_FakeNSFW2_Microsoft_33000737DA331B0DDCB48E286E0000000737DA (Updated metadata for FakeNSFW2)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_33000836CA486A8B51FA9226320000000836CA (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_FakeTrading_SSL_com_6B902553D4FAA01CD0FA62009C8F2DB2 (Updated metadata for FakeTrading)
+- MAL_Compromised_Cert_CastleLoader_GlobalSign_00995B7EFE49137D33BD8C10 (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_T_21_Microsoft_33000820D01FC17A0AE7D1AB020000000820D0 (Updated metadata for T-21)
+- MAL_Compromised_Cert_Unknown_Microsoft_330008170BB2D349F650E6C2BF00000008170B (Updated metadata for Unknown)
+- MAL_Compromised_Cert_FakeDocument_GlobalSign_7CB161B58EB2E9DA1CD0A36D (Updated metadata for FakeDocument)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_2D6390A227DB381F5D8930952F2324A0 (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_33000808856B83136090D41CE6000000080885 (Updated metadata for Forever Botnet,BR-01)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_45D3E97BAEE6E4057EF4FA680CAF010D (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_SmokedHam_Sectigo_00B0D4CE585BFBD203E9C4056C5583C3B4 (Updated metadata for SmokedHam)
+- MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_1452A7543159FF8B16C659C26435CD11 (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_RomCom_GlobalSign_150D2E1FF959E364F325EF47 (Updated metadata for RomCom)
+- MAL_Compromised_Cert_UNK_50_Microsoft_330007FEC703614EE8690370C200000007FEC7 (Updated metadata for UNK-50)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_24C1C7BD23D4D568C91241E510602337 (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Unknown_Microsoft_330007203EBC6F47C85206C10A00000007203E (Updated metadata for Unknown)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300073B04691AB4FE2AA4ACD7000000073B04 (Updated metadata for Forever Botnet,BR-01)
+- MAL_Compromised_Cert_VariantLoader_Microsoft_330007505578D1E438F5CAF082000000075055 (Updated metadata for VariantLoader)
+- MAL_Compromised_Cert_FakeNDASign_Microsoft_3300072F315B9F5D1C77CD3867000000072F31 (Updated metadata for FakeNDASign)
+- MAL_Compromised_Cert_CastleLoader_Sectigo_03C2DE2572AEE65EF1A2009CD0853040 (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_FakeNDASign_Microsoft_3300073B7CFE433F3290F2E720000000073B7C (Updated metadata for FakeNDASign)
+- MAL_Compromised_Cert_MeshAgent_GlobalSign_2B2E6AABDD8EF6346604ABBF (Updated metadata for MeshAgent)
+- MAL_Compromised_Cert_Remcos_RAT_GlobalSign_6F35B24C2D6C5F4BB1E08659 (Updated metadata for Remcos RAT)
+- MAL_Compromised_Cert_evilai_Sectigo_00BF9A4635A5CCDED66E6D1158BD19B485 (Updated metadata for evilai)
+- MAL_Compromised_Cert_FakeNSFW2_Microsoft_330007FCB9D77958E8844B605400000007FCB9 (Updated metadata for FakeNSFW2)
+- MAL_Compromised_Cert_Unknown_Microsoft_33000745B1311945510CADE1F40000000745B1 (Updated metadata for Unknown)
+
 ## [2026.03.13] - 2026-03-13
 
 ### Added

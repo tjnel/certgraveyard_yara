@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_00995B7EFE49137D33BD8C10 {
       cert_valid_from     = "2026-02-11"
       cert_valid_to       = "2027-02-12"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
-      email               = "---"
-      rdn_serial_number   = ""
+      country             = "VN"
+      state               = "Hung Yen"
+      locality            = "Hung Yen"
+      email               = "account2.hdp@pioneer-v.com"
+      rdn_serial_number   = "1001111635"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeNSFW2_Microsoft_33000716DA1421DC51AF35E06500000007
       cert_valid_from     = "2026-02-24"
       cert_valid_to       = "2026-02-27"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
-      email               = "---"
-      rdn_serial_number   = ""
+      country             = "US"
+      state               = "Georgia"
+      locality            = "Atlanta"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

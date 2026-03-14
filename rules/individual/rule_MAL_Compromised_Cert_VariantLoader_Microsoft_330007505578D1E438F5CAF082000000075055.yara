@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_VariantLoader_Microsoft_330007505578D1E438F5CAF0820000
       cert_valid_from     = "2026-03-08"
       cert_valid_to       = "2026-03-11"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "RO"
+      state               = "Brasov"
+      locality            = "Brasov"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

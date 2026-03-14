@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_PDFSupernova_GlobalSign_041E6F850FA605AF6ACF2E75 {
       cert_valid_from     = "2026-01-27"
       cert_valid_to       = "2027-01-28"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
-      email               = "---"
-      rdn_serial_number   = ""
+      country             = "IL"
+      state               = "Tel Aviv"
+      locality            = "Holon"
+      email               = "???"
+      rdn_serial_number   = "517165643"
 
    condition:
       uint16(0) == 0x5a4d and

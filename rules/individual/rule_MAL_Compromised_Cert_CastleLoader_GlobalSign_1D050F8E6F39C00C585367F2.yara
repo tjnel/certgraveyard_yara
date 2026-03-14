@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_1D050F8E6F39C00C585367F2 {
       cert_valid_from     = "2025-08-19"
       cert_valid_to       = "2026-07-12"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
-      email               = "---"
-      rdn_serial_number   = ""
+      country             = "RU"
+      state               = "Saint Petersburg"
+      locality            = "Saint Petersburg"
+      email               = "???"
+      rdn_serial_number   = "1187847201882"
 
    condition:
       uint16(0) == 0x5a4d and
