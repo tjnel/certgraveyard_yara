@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Traffer_DigiCert_0C284A110B1C1BFAD1405E6DF6282A09 {
       cert_valid_from     = "2026-02-17"
       cert_valid_to       = "2027-02-16"
 
-      country             = "???"
+      country             = "CZ"
       state               = "???"
-      locality            = "???"
+      locality            = "Prague"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "02244365"
 
    condition:
       uint16(0) == 0x5a4d and

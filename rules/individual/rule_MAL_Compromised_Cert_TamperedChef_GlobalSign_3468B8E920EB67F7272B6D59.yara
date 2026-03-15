@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_TamperedChef_GlobalSign_3468B8E920EB67F7272B6D59 {
       cert_valid_from     = "2020-07-15"
       cert_valid_to       = "2023-07-16"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "MT"
+      state               = "Gozo Region"
+      locality            = "Victoria"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "C95306"
 
    condition:
       uint16(0) == 0x5a4d and

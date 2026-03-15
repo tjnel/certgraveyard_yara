@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Loader_of_Vidar_Lumma_Microsoft_3300084E9366266EBC2CC6
       cert_valid_from     = "2026-03-11"
       cert_valid_to       = "2026-03-14"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "North Carolina"
+      locality            = "Cary"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -4,6 +4,22 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.15] - 2026-03-15
+
+### Added
+- MAL_Compromised_Cert_FakeNDASign_Microsoft_3300084B4DB3FBEEF8CDC80160000000084B4D (FakeNDASign - Microsoft)
+- MAL_Compromised_Cert_NetSupport_RAT_Microsoft_330007F9A364B898353AA1880400000007F9A3 (NetSupport RAT - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_00DFC63ED833CE7EF89B6F7C00B0D7D663 (ScreenConnectLoader - Sectigo)
+- MAL_Compromised_Cert_EvilAI_Sectigo_00A888CB01C4A97F105FDA08F27C7BB2BC (EvilAI - Sectigo)
+- MAL_Compromised_Cert_ScreenConnectLoader_GlobalSign_43D3FCF322E58B92EDA32A97 (ScreenConnectLoader - GlobalSign)
+
+### Modified
+- MAL_Compromised_Cert_Traffer_DigiCert_0C284A110B1C1BFAD1405E6DF6282A09 (Updated metadata for Traffer)
+- MAL_Compromised_Cert_TamperedChef_GlobalSign_3468B8E920EB67F7272B6D59 (Updated metadata for TamperedChef)
+- MAL_Compromised_Cert_Loader_of_Vidar_Lumma_Microsoft_3300076E1C86261F5709D3F421000000076E1C (Updated metadata for Loader of Vidar & Lumma)
+- MAL_Compromised_Cert_TamperedChef_SSL_com_0126D2B7817E53EB6C540A8E5696EE3D (Updated metadata for TamperedChef)
+- MAL_Compromised_Cert_Loader_of_Vidar_Lumma_Microsoft_3300084E9366266EBC2CC66393000000084E93 (Updated metadata for Loader of Vidar & Lumma)
+
 ## [2026.03.14] - 2026-03-14
 
 ### Added

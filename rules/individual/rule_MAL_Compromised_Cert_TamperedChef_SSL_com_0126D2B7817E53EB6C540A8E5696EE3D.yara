@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_TamperedChef_SSL_com_0126D2B7817E53EB6C540A8E5696EE3D 
       cert_valid_from     = "2021-09-17"
       cert_valid_to       = "2024-09-16"
 
-      country             = "???"
+      country             = "SG"
       state               = "???"
-      locality            = "???"
+      locality            = "Singapore"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "202032098W"
 
    condition:
       uint16(0) == 0x5a4d and
