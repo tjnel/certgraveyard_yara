@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_EvilAI_Sectigo_00A888CB01C4A97F105FDA08F27C7BB2BC {
       cert_valid_from     = "2025-12-29"
       cert_valid_to       = "2026-12-29"
 
-      country             = "???"
-      state               = "???"
+      country             = "IL"
+      state               = "Tel Aviv"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "516891132"
 
    condition:
       uint16(0) == 0x5a4d and

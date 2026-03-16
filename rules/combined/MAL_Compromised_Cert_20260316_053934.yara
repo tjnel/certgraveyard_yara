@@ -12656,11 +12656,11 @@ rule MAL_Compromised_Cert_EvilAI_Sectigo_00A888CB01C4A97F105FDA08F27C7BB2BC {
       cert_valid_from     = "2025-12-29"
       cert_valid_to       = "2026-12-29"
 
-      country             = "???"
-      state               = "???"
+      country             = "IL"
+      state               = "Tel Aviv"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "516891132"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -63945,6 +63945,41 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_48C2F340350A31E335150ED8 {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_GlobalSign_4929DE367C94EB3414B5797D {
+   meta:
+      description         = "Detects Unknown with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-12"
+      version             = "1.0"
+
+      hash                = "5175ae4c75a8e1d10decb0a787d31784a986cafe5e4a24d3aa0eb7e7748f916f"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = "Dropped by Amadey - LabInstalls PPI service"
+
+      signer              = "IP Shusharin Matvei Anatolievich"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "49:29:de:36:7c:94:eb:34:14:b5:79:7d"
+      cert_thumbprint     = "0558086FDDD157D89011174DF15B4B6A22EA9ED3"
+      cert_valid_from     = "2026-03-12"
+      cert_valid_to       = "2027-03-13"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "49:29:de:36:7c:94:eb:34:14:b5:79:7d"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_GlobalSign_493C157B7D0D910E46E98F84 {
    meta:
       description         = "Detects Unknown with compromised cert (GlobalSign)"
@@ -66392,6 +66427,41 @@ rule MAL_Compromised_Cert_Unknown_Microsoft_33000745B1311945510CADE1F40000000745
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
          sig.serial == "33:00:07:45:b1:31:19:45:51:0c:ad:e1:f4:00:00:00:07:45:b1"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Microsoft_3300076A64AE1DBFA635A9F333000000076A64 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-14"
+      version             = "1.0"
+
+      hash                = "60171e71774630b9f5c824e2a4ee4742aff1461e0c1910395430ba1592c469cd"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: foxkids[.]us"
+
+      signer              = "Sergio Villafane"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:07:6a:64:ae:1d:bf:a6:35:a9:f3:33:00:00:00:07:6a:64"
+      cert_thumbprint     = "00E6B8B764E30C4AB259B23BB2F18674B47794BD"
+      cert_valid_from     = "2026-03-14"
+      cert_valid_to       = "2026-03-17"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:07:6a:64:ae:1d:bf:a6:35:a9:f3:33:00:00:00:07:6a:64"
       )
 }
 
@@ -71292,6 +71362,41 @@ rule MAL_Compromised_Cert_VariantLoader_Microsoft_330007D6C658F5D47885D096780000
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
          sig.serial == "33:00:07:d6:c6:58:f5:d4:78:85:d0:96:78:00:00:00:07:d6:c6"
+      )
+}
+
+rule MAL_Compromised_Cert_VariantLoader_Microsoft_3300086DB8A890F33A2422AEE0000000086DB8 {
+   meta:
+      description         = "Detects VariantLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-15"
+      version             = "1.0"
+
+      hash                = "8cfeb26253cfd08f252058689556f21764078afe77ddcf79d4538e0ddf5d6e51"
+      malware             = "VariantLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: 188.137.246.189"
+
+      signer              = "DIGITAL ADVERTISING BUSINESS INFLUENCERS S.R.L."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:08:6d:b8:a8:90:f3:3a:24:22:ae:e0:00:00:00:08:6d:b8"
+      cert_thumbprint     = "2E4833B716A7B56DE54FDEEF1E0814EAD26B9E31"
+      cert_valid_from     = "2026-03-15"
+      cert_valid_to       = "2026-03-18"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:08:6d:b8:a8:90:f3:3a:24:22:ae:e0:00:00:00:08:6d:b8"
       )
 }
 
