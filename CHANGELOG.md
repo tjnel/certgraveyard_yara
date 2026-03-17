@@ -4,6 +4,20 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.17] - 2026-03-17
+
+### Added
+- MAL_Compromised_Cert_MacSync_Stealer_Apple_4E1615B174DC487B (MacSync Stealer - Apple)
+- MAL_Compromised_Cert_AutoCAD_Trojan_Certum_21EC6FC7878BF7B28D994CF66DBFC994 (AutoCAD-Trojan - Certum)
+- MAL_Compromised_Cert_ConnectWise_Factura_Unknown_00 (ConnectWise-Factura - Unknown)
+- MAL_Compromised_Cert_BlackSanta_Sectigo_9E0433AB8DD97C709FF850DDAB967C87 (BlackSanta - Sectigo)
+- MAL_Compromised_Cert_IcedID_SSL_com_698FF388ADB50B88AFB832E76B0A0AD1 (IcedID - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_Unknown_GlobalSign_4929DE367C94EB3414B5797D (Updated metadata for Unknown)
+- MAL_Compromised_Cert_Unknown_Microsoft_3300076A64AE1DBFA635A9F333000000076A64 (Updated metadata for Unknown)
+- MAL_Compromised_Cert_VariantLoader_Microsoft_3300086DB8A890F33A2422AEE0000000086DB8 (Updated metadata for VariantLoader)
+
 ## [2026.03.16] - 2026-03-16
 
 ### Added

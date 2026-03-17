@@ -1540,6 +1540,41 @@ rule MAL_Compromised_Cert_AureliaLoader_Sectigo_00FFD6543365C7F9ACC14C9AA6E9BA4C
       )
 }
 
+rule MAL_Compromised_Cert_AutoCAD_Trojan_Certum_21EC6FC7878BF7B28D994CF66DBFC994 {
+   meta:
+      description         = "Detects AutoCAD-Trojan with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-04-15"
+      version             = "1.0"
+
+      hash                = "17d2b3fb0c1942c43588d26ba9aecd6f6a9a549f86a8bb4120865cfbd9caf137"
+      malware             = "AutoCAD-Trojan"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Guangzhou Recording Network Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "21:ec:6f:c7:87:8b:f7:b2:8d:99:4c:f6:6d:bf:c9:94"
+      cert_thumbprint     = "5348cd6fd9db43cc8bff7285ca0194f3bb639a0efd3f49f764eaa35f262222f1"
+      cert_valid_from     = "2025-04-15"
+      cert_valid_to       = "2026-04-15"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "21:ec:6f:c7:87:8b:f7:b2:8d:99:4c:f6:6d:bf:c9:94"
+      )
+}
+
 rule MAL_Compromised_Cert_Avanquest_Entrust_00A1064F640EBB2E456AA13A404CA3DD29 {
    meta:
       description         = "Detects Avanquest with compromised cert (Entrust)"
@@ -3812,6 +3847,41 @@ rule MAL_Compromised_Cert_BitRAT_Sectigo_00D9E834182DEC62C654E775E809AC1D1B {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo RSA Code Signing CA" and
          sig.serial == "00:d9:e8:34:18:2d:ec:62:c6:54:e7:75:e8:09:ac:1d:1b"
+      )
+}
+
+rule MAL_Compromised_Cert_BlackSanta_Sectigo_9E0433AB8DD97C709FF850DDAB967C87 {
+   meta:
+      description         = "Detects BlackSanta with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2022-04-08"
+      version             = "1.0"
+
+      hash                = "83fcc6bf733751bab43e92d31b810c4cecd4d8640668d2ed26f47f62edd942cf"
+      malware             = "BlackSanta"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "ADLICE (Julien ASCOET)"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "9e:04:33:ab:8d:d9:7c:70:9f:f8:50:dd:ab:96:7c:87"
+      cert_thumbprint     = "ae0d8e0dd13b1d61f4b1eb4ac6aa49ef5c27a965d25cd22588486894ba18d7fd"
+      cert_valid_from     = "2022-04-08"
+      cert_valid_to       = "2023-04-08"
+
+      country             = "FR"
+      state               = "Loire-Atlantique"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "793 308 925 00023"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "9e:04:33:ab:8d:d9:7c:70:9f:f8:50:dd:ab:96:7c:87"
       )
 }
 
@@ -8222,6 +8292,41 @@ rule MAL_Compromised_Cert_ConnectWiseLoader_Sectigo_4E3DC08BA3B230C5968A4C8B6B1B
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "4e:3d:c0:8b:a3:b2:30:c5:96:8a:4c:8b:6b:1b:3c:64"
+      )
+}
+
+rule MAL_Compromised_Cert_ConnectWise_Factura_Unknown_00 {
+   meta:
+      description         = "Detects ConnectWise-Factura with compromised cert (Unknown)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2023-04-01"
+      version             = "1.0"
+
+      hash                = "180b959eaecaa6c410af4f4445befcde5947a537ec396196fda014258625e2dd"
+      malware             = "ConnectWise-Factura"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "ScreenConnect Client"
+      cert_issuer_short   = "Unknown"
+      cert_issuer         = "ScreenConnect Client Root"
+      cert_serial         = "00"
+      cert_thumbprint     = "159e02d18c3f70b33127d2274ed976fe69ff4c55c2b633cac4f416c67a027003"
+      cert_valid_from     = "2023-04-01"
+      cert_valid_to       = "2038-01-01"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "ScreenConnect Client Root" and
+         sig.serial == "00"
       )
 }
 
@@ -22618,24 +22723,24 @@ rule MAL_Compromised_Cert_IcedID_SSL_com_698FF388ADB50B88AFB832E76B0A0AD1 {
       date                = "2023-01-30"
       version             = "1.0"
 
-      hash                = "244e55adeb71ae1cbd57af87dd4fa0c2f1143233ffddf254da27a721c61a63c4"
+      hash                = "17014299f399f71d1d6bed136b8c624a366b222166e692522d14e2bba70bb79f"
       malware             = "IcedID"
-      malware_type        = "Initial access tool"
-      malware_notes       = "A malware initially created as a banking trojan but then transitioned to initial access tool used by ransomware gangs: https://www.proofpoint.com/us/blog/threat-insight/fork-ice-new-era-icedid and https://www.proofpoint.com/us/blog/threat-insight/first-step-initial-access-leads-ransomware"
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "BELLAP LIMITED"
       cert_issuer_short   = "SSL.com"
       cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
       cert_serial         = "69:8f:f3:88:ad:b5:0b:88:af:b8:32:e7:6b:0a:0a:d1"
-      cert_thumbprint     = "D1DE8B155C9D45ADB47BA96BDC8670C84BB4390A"
+      cert_thumbprint     = "479e01dde7e7529ed4ad111a2d7b3b16fdc6fbe2ed0d6ff015c1c823ca0939db"
       cert_valid_from     = "2023-01-30"
       cert_valid_to       = "2023-12-18"
 
-      country             = "GB"
-      state               = "England"
-      locality            = "Sandhurst"
+      country             = "???"
+      state               = "???"
+      locality            = "???"
       email               = "???"
-      rdn_serial_number   = "Not Specified"
+      rdn_serial_number   = ""
 
    condition:
       uint16(0) == 0x5a4d and
@@ -27717,6 +27822,41 @@ rule MAL_Compromised_Cert_MacSync_Stealer_Apple_29A552D8DFF80468 {
       for any sig in pe.signatures : (
          sig.issuer contains "Apple Inc." and
          sig.serial == "29:a5:52:d8:df:f8:04:68"
+      )
+}
+
+rule MAL_Compromised_Cert_MacSync_Stealer_Apple_4E1615B174DC487B {
+   meta:
+      description         = "Detects MacSync Stealer with compromised cert (Apple)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-27"
+      version             = "1.0"
+
+      hash                = "335509df3ae8aefe79267e70c70edc4cacd6f277ead4b12abd8e5c836f1b39a1"
+      malware             = "MacSync Stealer"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake meeting software ZKcall - info: https://x.com/osint_barbie/status/2032641814822269418"
+
+      signer              = "FERDI AYSEL"
+      cert_issuer_short   = "Apple"
+      cert_issuer         = "Apple Inc."
+      cert_serial         = "4e:16:15:b1:74:dc:48:7b"
+      cert_thumbprint     = "09F9CB15D45CC6EBD04D8726D8DFFD66BF9D20DC"
+      cert_valid_from     = "2026-02-27"
+      cert_valid_to       = "2027-02-01"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Apple Inc." and
+         sig.serial == "4e:16:15:b1:74:dc:48:7b"
       )
 }
 
@@ -63966,11 +64106,11 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_4929DE367C94EB3414B5797D {
       cert_valid_from     = "2026-03-12"
       cert_valid_to       = "2027-03-13"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "RU"
+      state               = "Irkutsk Oblast"
+      locality            = "Usolye-Sibirskoye"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "325385000088006"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -66451,11 +66591,11 @@ rule MAL_Compromised_Cert_Unknown_Microsoft_3300076A64AE1DBFA635A9F333000000076A
       cert_valid_from     = "2026-03-14"
       cert_valid_to       = "2026-03-17"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Texas"
+      locality            = "Dallas"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -71386,11 +71526,11 @@ rule MAL_Compromised_Cert_VariantLoader_Microsoft_3300086DB8A890F33A2422AEE00000
       cert_valid_from     = "2026-03-15"
       cert_valid_to       = "2026-03-18"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "RO"
+      state               = "Brasov"
+      locality            = "Brasov"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

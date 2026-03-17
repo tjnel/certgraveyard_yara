@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_4929DE367C94EB3414B5797D {
       cert_valid_from     = "2026-03-12"
       cert_valid_to       = "2027-03-13"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "RU"
+      state               = "Irkutsk Oblast"
+      locality            = "Usolye-Sibirskoye"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "325385000088006"
 
    condition:
       uint16(0) == 0x5a4d and
