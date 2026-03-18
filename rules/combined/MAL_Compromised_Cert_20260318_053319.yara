@@ -1561,11 +1561,11 @@ rule MAL_Compromised_Cert_AutoCAD_Trojan_Certum_21EC6FC7878BF7B28D994CF66DBFC994
       cert_valid_from     = "2025-04-15"
       cert_valid_to       = "2026-04-15"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "CN"
+      state               = "Guangdong"
+      locality            = "Guangzhou"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91440101MA59QJN634"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -15365,6 +15365,41 @@ rule MAL_Compromised_Cert_FakeDocument_Microsoft_33000757EE1AAA9DF35571A1D100000
       )
 }
 
+rule MAL_Compromised_Cert_FakeDocument_Microsoft_33000879E850AD2CA7CCC013F00000000879E8 {
+   meta:
+      description         = "Detects FakeDocument with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-16"
+      version             = "1.0"
+
+      hash                = "2336ef2777274c5ebffa98e86a6085d8de354267fe85f9ee9ea74fd92c051724"
+      malware             = "FakeDocument"
+      malware_type        = "Loader"
+      malware_notes       = "File was disguised as a document, targeting Brazilian speakers."
+
+      signer              = "Mariah Lingle"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:08:79:e8:50:ad:2c:a7:cc:c0:13:f0:00:00:00:08:79:e8"
+      cert_thumbprint     = "8A302AB8685AC70C4AEB4E3B2E369727E78D544B"
+      cert_valid_from     = "2026-03-16"
+      cert_valid_to       = "2026-03-19"
+
+      country             = "US"
+      state               = "Montana"
+      locality            = "Columbia Fals"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:08:79:e8:50:ad:2c:a7:cc:c0:13:f0:00:00:00:08:79:e8"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeDocument_SSL_com_456BD03DD2043B977A2C7894BEC2BBC2 {
    meta:
       description         = "Detects FakeDocument with compromised cert (SSL.com)"
@@ -18442,6 +18477,41 @@ rule MAL_Compromised_Cert_FakeZabbix_Sectigo_00FEA7AAE8DAD9370F4E82DBC2EBB0F916 
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "00:fe:a7:aa:e8:da:d9:37:0f:4e:82:db:c2:eb:b0:f9:16"
+      )
+}
+
+rule MAL_Compromised_Cert_Fake_F5Updater_SSL_com_4FF0CAF9735335B3C10FABF148214582 {
+   meta:
+      description         = "Detects Fake-F5Updater with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2023-12-06"
+      version             = "1.0"
+
+      hash                = "fe07dca68f288a4f6d7cbd34d79bb70bc309635876298d4fde33c25277e30bd2"
+      malware             = "Fake-F5Updater"
+      malware_type        = "Initial access tool"
+      malware_notes       = "Initial lure is a tool to update an F5 Client, check's users IP and connects to Telegram."
+
+      signer              = "Skytec Global Ltd"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "4f:f0:ca:f9:73:53:35:b3:c1:0f:ab:f1:48:21:45:82"
+      cert_thumbprint     = "2C4D35D1166A96D14088645FA3807E40A02B64BD"
+      cert_valid_from     = "2023-12-06"
+      cert_valid_to       = "2024-12-05"
+
+      country             = "GB"
+      state               = "???"
+      locality            = "Billingham"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "4f:f0:ca:f9:73:53:35:b3:c1:0f:ab:f1:48:21:45:82"
       )
 }
 
@@ -22725,22 +22795,22 @@ rule MAL_Compromised_Cert_IcedID_SSL_com_698FF388ADB50B88AFB832E76B0A0AD1 {
 
       hash                = "17014299f399f71d1d6bed136b8c624a366b222166e692522d14e2bba70bb79f"
       malware             = "IcedID"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "BELLAP LIMITED"
       cert_issuer_short   = "SSL.com"
       cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
       cert_serial         = "69:8f:f3:88:ad:b5:0b:88:af:b8:32:e7:6b:0a:0a:d1"
-      cert_thumbprint     = "479e01dde7e7529ed4ad111a2d7b3b16fdc6fbe2ed0d6ff015c1c823ca0939db"
+      cert_thumbprint     = "D1DE8B155C9D45ADB47BA96BDC8670C84BB4390A"
       cert_valid_from     = "2023-01-30"
       cert_valid_to       = "2023-12-18"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "GB"
+      state               = "England"
+      locality            = "Sandhurst"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -48510,6 +48580,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_779D697C260E9987B6A6C4121D
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_008A56400E67CF955565985A1EC21E6D90 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-24"
+      version             = "1.0"
+
+      hash                = "13289da026158286a619c2aaa11efe2901ca5bb61c5d6b46681da338e7469cf7"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "ZHEJIANG WILLING FOREIGN TR CO MAKİNA TİCARET LİMİTED ŞİRKETİ"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:8a:56:40:0e:67:cf:95:55:65:98:5a:1e:c2:1e:6d:90"
+      cert_thumbprint     = "BEE0E578D9819C58087DF6D620362E3088C11AAB"
+      cert_valid_from     = "2026-02-24"
+      cert_valid_to       = "2027-02-24"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:8a:56:40:0e:67:cf:95:55:65:98:5a:1e:c2:1e:6d:90"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_00BCA75234F538C606EECBDD0C8646F774 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (Sectigo)"
@@ -62160,6 +62265,41 @@ rule MAL_Compromised_Cert_Unknown_DigiCert_0A9CC40EEEB4103C26115504E22BC0AC {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_DigiCert_0B6C00A73E3C3EC6FDBE7347F88AB02D {
+   meta:
+      description         = "Detects Unknown with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-05"
+      version             = "1.0"
+
+      hash                = "143fa9567ebbccacceb58201dd85b7206fdf22882ff2cea0da994a513572f14e"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Mann Technologies LLC"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA256 2021 CA1"
+      cert_serial         = "0b:6c:00:a7:3e:3c:3e:c6:fd:be:73:47:f8:8a:b0:2d"
+      cert_thumbprint     = "3931A1AE0FF5D92E24758B46B12889D1C9484DAB"
+      cert_valid_from     = "2026-03-05"
+      cert_valid_to       = "2027-03-02"
+
+      country             = "US"
+      state               = "Michigan"
+      locality            = "Ann Arbor"
+      email               = "???"
+      rdn_serial_number   = "802428818"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA256 2021 CA1" and
+         sig.serial == "0b:6c:00:a7:3e:3c:3e:c6:fd:be:73:47:f8:8a:b0:2d"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_DigiCert_0B886032861D9553C68F803313A98975 {
    meta:
       description         = "Detects Unknown with compromised cert (DigiCert)"
@@ -70070,6 +70210,41 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_5C0250B49652EA243EBC0F2253844A8E {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Sectigo_63CA758ADC388C2C35EDFFBE86591A55 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-03"
+      version             = "1.0"
+
+      hash                = "2e775b4d6e08d393d45eef272df92ad173ead4d8dd20a5df36b6ea906f19c7bd"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Wuhan Liansitong Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "63:ca:75:8a:dc:38:8c:2c:35:ed:ff:be:86:59:1a:55"
+      cert_thumbprint     = "5098F94DE882260DB79FBAA9C389676F9D58F059"
+      cert_valid_from     = "2025-10-03"
+      cert_valid_to       = "2026-10-03"
+
+      country             = "CN"
+      state               = "Hubei Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91420100MA7M3NX92T"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "63:ca:75:8a:dc:38:8c:2c:35:ed:ff:be:86:59:1a:55"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_Sectigo_736E809F29D85F0391217FC62D8530C6 {
    meta:
       description         = "Detects Unknown with compromised cert (Sectigo)"
@@ -75317,6 +75492,41 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_009C32E4F7CE30CE6283084B355EC9FB
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "00:9c:32:e4:f7:ce:30:ce:62:83:08:4b:35:5e:c9:fb:af"
+      )
+}
+
+rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00A5DFA3D16E72E4B9CA5FA3B9665C2805 {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-23"
+      version             = "1.0"
+
+      hash                = "a8d911dd10c0abac0de077868ab455f1869f63cda456ecab048a1572c8d35e7f"
+      malware             = "Zhong Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = ""
+
+      signer              = "Xiamen Lede Song Information Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:a5:df:a3:d1:6e:72:e4:b9:ca:5f:a3:b9:66:5c:28:05"
+      cert_thumbprint     = "FEC827C25EF8D92D9647E0BC10A5B444C94F2901"
+      cert_valid_from     = "2026-01-23"
+      cert_valid_to       = "2027-01-23"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350203302946627U"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:a5:df:a3:d1:6e:72:e4:b9:ca:5f:a3:b9:66:5c:28:05"
       )
 }
 

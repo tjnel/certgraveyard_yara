@@ -4,6 +4,23 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.18] - 2026-03-18
+
+### Added
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00A5DFA3D16E72E4B9CA5FA3B9665C2805 (Zhong Stealer - Sectigo)
+- MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_008A56400E67CF955565985A1EC21E6D90 (ScreenConnectLoader - Sectigo)
+- MAL_Compromised_Cert_FakeDocument_Microsoft_33000879E850AD2CA7CCC013F00000000879E8 (FakeDocument - Microsoft)
+- MAL_Compromised_Cert_Unknown_Sectigo_63CA758ADC388C2C35EDFFBE86591A55 (Unknown - Sectigo)
+- MAL_Compromised_Cert_Fake_F5Updater_SSL_com_4FF0CAF9735335B3C10FABF148214582 (Fake-F5Updater - SSL.com)
+- MAL_Compromised_Cert_Unknown_DigiCert_0B6C00A73E3C3EC6FDBE7347F88AB02D (Unknown - DigiCert)
+
+### Modified
+- MAL_Compromised_Cert_AutoCAD_Trojan_Certum_21EC6FC7878BF7B28D994CF66DBFC994 (Updated metadata for AutoCAD-Trojan)
+- MAL_Compromised_Cert_IcedID_SSL_com_698FF388ADB50B88AFB832E76B0A0AD1 (Updated metadata for IcedID)
+
+### Removed
+- MAL_Compromised_Cert_ConnectWise_Factura_Unknown_00 (Removed ConnectWise-Factura rule)
+
 ## [2026.03.17] - 2026-03-17
 
 ### Added

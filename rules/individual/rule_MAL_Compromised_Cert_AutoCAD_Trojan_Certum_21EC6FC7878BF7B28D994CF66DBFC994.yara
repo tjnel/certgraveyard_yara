@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_AutoCAD_Trojan_Certum_21EC6FC7878BF7B28D994CF66DBFC994
       cert_valid_from     = "2025-04-15"
       cert_valid_to       = "2026-04-15"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "CN"
+      state               = "Guangdong"
+      locality            = "Guangzhou"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91440101MA59QJN634"
 
    condition:
       uint16(0) == 0x5a4d and

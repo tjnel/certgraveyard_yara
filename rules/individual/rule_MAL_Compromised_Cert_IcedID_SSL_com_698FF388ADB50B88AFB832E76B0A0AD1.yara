@@ -10,22 +10,22 @@ rule MAL_Compromised_Cert_IcedID_SSL_com_698FF388ADB50B88AFB832E76B0A0AD1 {
 
       hash                = "17014299f399f71d1d6bed136b8c624a366b222166e692522d14e2bba70bb79f"
       malware             = "IcedID"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "BELLAP LIMITED"
       cert_issuer_short   = "SSL.com"
       cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
       cert_serial         = "69:8f:f3:88:ad:b5:0b:88:af:b8:32:e7:6b:0a:0a:d1"
-      cert_thumbprint     = "479e01dde7e7529ed4ad111a2d7b3b16fdc6fbe2ed0d6ff015c1c823ca0939db"
+      cert_thumbprint     = "D1DE8B155C9D45ADB47BA96BDC8670C84BB4390A"
       cert_valid_from     = "2023-01-30"
       cert_valid_to       = "2023-12-18"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "GB"
+      state               = "England"
+      locality            = "Sandhurst"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
