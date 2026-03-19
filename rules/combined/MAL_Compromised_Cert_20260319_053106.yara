@@ -48601,11 +48601,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_008A56400E67CF955565985A1E
       cert_valid_from     = "2026-02-24"
       cert_valid_to       = "2027-02-24"
 
-      country             = "???"
-      state               = "???"
+      country             = "TR"
+      state               = "İstanbul"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "1093169"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -48822,6 +48822,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_4E3DC08BA3B230C5968A4C8B6B
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "4e:3d:c0:8b:a3:b2:30:c5:96:8a:4c:8b:6b:1b:3c:64"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_5254E162E2F5628B0D8540EE17F56995 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-04"
+      version             = "1.0"
+
+      hash                = "d4f085a345cd8a3f662711ea7f8f72084bb7367085912028b7f4acc4e30f3d9e"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Lway Firmware"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "52:54:e1:62:e2:f5:62:8b:0d:85:40:ee:17:f5:69:95"
+      cert_thumbprint     = "352DA60D57818350C65D40130ED087A2F58FD596"
+      cert_valid_from     = "2026-03-04"
+      cert_valid_to       = "2027-06-02"
+
+      country             = "FI"
+      state               = "Uusimaa"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "3462375-9"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "52:54:e1:62:e2:f5:62:8b:0d:85:40:ee:17:f5:69:95"
       )
 }
 
@@ -66080,6 +66115,41 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_7FEECB43A23A6FB7DCB24F54 {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_GoGetSSL_0B9FFB5061C28B5C82AFAA11DDC55210 {
+   meta:
+      description         = "Detects Unknown with compromised cert (GoGetSSL)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-16"
+      version             = "1.0"
+
+      hash                = "2686a649c29df76f437b54c815f359d0652155a4657aaf8479b6398d8cfc78aa"
+      malware             = "Unknown"
+      malware_type        = "Loader"
+      malware_notes       = "The malware functions as a loader and drops several infostealer payloads. https://app.any.run/tasks/35f70eb9-b5f1-44ea-8a82-d0c40cbe6900/"
+
+      signer              = "SIFE SOFTWARE LLC"
+      cert_issuer_short   = "GoGetSSL"
+      cert_issuer         = "GoGetSSL G4 CS RSA4096 SHA256 2022 CA-1"
+      cert_serial         = "0b:9f:fb:50:61:c2:8b:5c:82:af:aa:11:dd:c5:52:10"
+      cert_thumbprint     = "92E19541858C250F9C197BE06726146A408C89E1"
+      cert_valid_from     = "2026-03-16"
+      cert_valid_to       = "2027-03-15"
+
+      country             = "US"
+      state               = "Wyoming"
+      locality            = "Jackson"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GoGetSSL G4 CS RSA4096 SHA256 2022 CA-1" and
+         sig.serial == "0b:9f:fb:50:61:c2:8b:5c:82:af:aa:11:dd:c5:52:10"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_GoGetSSL_0C3262BDCC0D66477B27A9A9C0515675 {
    meta:
       description         = "Detects Unknown with compromised cert (GoGetSSL)"
@@ -70070,6 +70140,41 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_3FF70CFB935B5B7136DC064BC320EAF7 {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Sectigo_4C57EAA65F0A551CCF5B6EB46AB459F8 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-01"
+      version             = "1.0"
+
+      hash                = "89a63487a28ab7e99863c0160b73fd7931059124e0c3b944c40b999769a7b6a0"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Tropical RIiff Ltd"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "4c:57:ea:a6:5f:0a:55:1c:cf:5b:6e:b4:6a:b4:59:f8"
+      cert_thumbprint     = "112A2987C140633DD202A24C1604C16C47A405BA"
+      cert_valid_from     = "2025-12-01"
+      cert_valid_to       = "2026-12-01"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "4c:57:ea:a6:5f:0a:55:1c:cf:5b:6e:b4:6a:b4:59:f8"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_Sectigo_4E8FD0366C20091348C62BE2F2976CC9 {
    meta:
       description         = "Detects Unknown with compromised cert (Sectigo)"
@@ -70242,6 +70347,41 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_63CA758ADC388C2C35EDFFBE86591A55 {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "63:ca:75:8a:dc:38:8c:2c:35:ed:ff:be:86:59:1a:55"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Sectigo_67D93F28BBA15C7A070A4FB845F81068 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-17"
+      version             = "1.0"
+
+      hash                = "c67305dc8d58959ea09d38f31c8f5ee4893887a6c160f187e84ce8a7b18ca167"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Logos Aqua LTD"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "67:d9:3f:28:bb:a1:5c:7a:07:0a:4f:b8:45:f8:10:68"
+      cert_thumbprint     = "240DEFC57DEBA96223D2AFDFEC427A7C18FCBAEE"
+      cert_valid_from     = "2025-12-17"
+      cert_valid_to       = "2026-12-17"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "67:d9:3f:28:bb:a1:5c:7a:07:0a:4f:b8:45:f8:10:68"
       )
 }
 
