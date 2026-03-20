@@ -4,6 +4,23 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.20] - 2026-03-20
+
+### Added
+- MAL_Compromised_Cert_Unknown_Sectigo_6899ACCDEF437A54C6659C1DA748885B (Unknown - Sectigo)
+- MAL_Compromised_Cert_Unknown_Sectigo_7EF13C01CE34093827A3186CACF37630 (Unknown - Sectigo)
+- MAL_Compromised_Cert_Unknown_Sectigo_611DC543A37DBAB0F4C982A437DD1C24 (Unknown - Sectigo)
+- MAL_Compromised_Cert_Unknown_Sectigo_00A5DFA3D16E72E4B9CA5FA3B9665C2805 (Unknown - Sectigo)
+- MAL_Compromised_Cert_Remcos_RAT_DigiCert_0974288FAD05A288A7CA76C20446696F (Remcos RAT - DigiCert)
+- MAL_Compromised_Cert_Unknown_Sectigo_00EED2C30A99A60BF952C32CAC4C21B623 (Unknown - Sectigo)
+- MAL_Compromised_Cert_Unknown_Sectigo_0094FAEF953FFD84F5CAC6C77E45247A68 (Unknown - Sectigo)
+- MAL_Compromised_Cert_AsyncRAT_Sectigo_11155C1D560A58A18A469370FD6DD518 (AsyncRAT - Sectigo)
+- MAL_Compromised_Cert_Unknown_Sectigo_00A17E0D68EA949320B5EA0BB0F28A3FB6 (Unknown - Sectigo)
+- MAL_Compromised_Cert_Unknown_Fake_Invoice_Certum_76E2ACF0F2F39C06A0B34E4309A8EAF2 (Unknown (Fake Invoice) - Certum)
+- MAL_Compromised_Cert_Unknown_Sectigo_4A9C63924593F709C2F8336B06709D78 (Unknown - Sectigo)
+- MAL_Compromised_Cert_Unknown_Sectigo_7C74A3C9578969D8A164D63522F4491D (Unknown - Sectigo)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00F085B0DB24FFD0E1E9998566D79E8342 (Zhong Stealer - Sectigo)
+
 ## [2026.03.19] - 2026-03-19
 
 ### Added
