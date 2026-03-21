@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_7EF13C01CE34093827A3186CACF37630 {
       cert_valid_from     = "2025-11-11"
       cert_valid_to       = "2026-11-11"
 
-      country             = "???"
-      state               = "???"
+      country             = "US"
+      state               = "Wyoming"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "2025-001774961"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_AsyncRAT_Sectigo_11155C1D560A58A18A469370FD6DD518 {
       cert_valid_from     = "2026-01-27"
       cert_valid_to       = "2027-01-27"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Hubei Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91420115MA4K2C4T94"
 
    condition:
       uint16(0) == 0x5a4d and

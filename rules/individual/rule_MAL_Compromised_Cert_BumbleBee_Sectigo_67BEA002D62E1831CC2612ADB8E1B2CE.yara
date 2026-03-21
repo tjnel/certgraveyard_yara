@@ -1,23 +1,23 @@
 import "pe"
 
-rule MAL_Compromised_Cert_Unknown_Sectigo_00A5DFA3D16E72E4B9CA5FA3B9665C2805 {
+rule MAL_Compromised_Cert_BumbleBee_Sectigo_67BEA002D62E1831CC2612ADB8E1B2CE {
    meta:
-      description         = "Detects Unknown with compromised cert (Sectigo)"
+      description         = "Detects BumbleBee with compromised cert (Sectigo)"
       author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2026-01-23"
       version             = "1.0"
 
-      hash                = "e0ba6b57913ae6c29a18ccee23bdd17263f062bbdb25feef0ba43b23cd54d0f3"
-      malware             = "Unknown"
+      hash                = "640c518ff312e024c1e3bb198a2240c59b2205ab562053a1e644276592a5c07d"
+      malware             = "BumbleBee"
       malware_type        = "Unknown"
       malware_notes       = ""
 
-      signer              = "Xiamen Lede Song Information Technology Co., Ltd."
+      signer              = "Xiamen Xisu Technology Co., Ltd."
       cert_issuer_short   = "Sectigo"
       cert_issuer         = "Sectigo Public Code Signing CA EV R36"
-      cert_serial         = "00:a5:df:a3:d1:6e:72:e4:b9:ca:5f:a3:b9:66:5c:28:05"
-      cert_thumbprint     = "FEC827C25EF8D92D9647E0BC10A5B444C94F2901"
+      cert_serial         = "67:be:a0:02:d6:2e:18:31:cc:26:12:ad:b8:e1:b2:ce"
+      cert_thumbprint     = "BAF6F7831218C352B4CB784EB54A6E86319138AC"
       cert_valid_from     = "2026-01-23"
       cert_valid_to       = "2027-01-23"
 
@@ -25,12 +25,12 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_00A5DFA3D16E72E4B9CA5FA3B9665C2805 {
       state               = "Fujian Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "91350203302946627U"
+      rdn_serial_number   = "91350200MA35CYLRX4"
 
    condition:
       uint16(0) == 0x5a4d and
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
-         sig.serial == "00:a5:df:a3:d1:6e:72:e4:b9:ca:5f:a3:b9:66:5c:28:05"
+         sig.serial == "67:be:a0:02:d6:2e:18:31:cc:26:12:ad:b8:e1:b2:ce"
       )
 }

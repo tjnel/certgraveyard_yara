@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Remcos_RAT_DigiCert_0974288FAD05A288A7CA76C20446696F {
       cert_valid_from     = "2025-11-13"
       cert_valid_to       = "2026-12-18"
 
-      country             = "???"
+      country             = "HK"
       state               = "???"
-      locality            = "???"
+      locality            = "Kowloon"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "72759881"
 
    condition:
       uint16(0) == 0x5a4d and

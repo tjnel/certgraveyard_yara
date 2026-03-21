@@ -1246,11 +1246,11 @@ rule MAL_Compromised_Cert_AsyncRAT_Sectigo_11155C1D560A58A18A469370FD6DD518 {
       cert_valid_from     = "2026-01-27"
       cert_valid_to       = "2027-01-27"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Hubei Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91420115MA4K2C4T94"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -4372,6 +4372,41 @@ rule MAL_Compromised_Cert_BumbleBee_Sectigo_65CFD8419D70CE4011D97BC79D18315E {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA R36" and
          sig.serial == "65:cf:d8:41:9d:70:ce:40:11:d9:7b:c7:9d:18:31:5e"
+      )
+}
+
+rule MAL_Compromised_Cert_BumbleBee_Sectigo_67BEA002D62E1831CC2612ADB8E1B2CE {
+   meta:
+      description         = "Detects BumbleBee with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-23"
+      version             = "1.0"
+
+      hash                = "640c518ff312e024c1e3bb198a2240c59b2205ab562053a1e644276592a5c07d"
+      malware             = "BumbleBee"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Xiamen Xisu Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "67:be:a0:02:d6:2e:18:31:cc:26:12:ad:b8:e1:b2:ce"
+      cert_thumbprint     = "BAF6F7831218C352B4CB784EB54A6E86319138AC"
+      cert_valid_from     = "2026-01-23"
+      cert_valid_to       = "2027-01-23"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350200MA35CYLRX4"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "67:be:a0:02:d6:2e:18:31:cc:26:12:ad:b8:e1:b2:ce"
       )
 }
 
@@ -17287,6 +17322,41 @@ rule MAL_Compromised_Cert_FakePDFBrowserHijacker_DigiCert_037FAF39D5EFECFEEDC295
       for any sig in pe.signatures : (
          sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
          sig.serial == "03:7f:af:39:d5:ef:ec:fe:ed:c2:95:0f:62:5e:ab:0e"
+      )
+}
+
+rule MAL_Compromised_Cert_FakePDF_NovaViewer_Sectigo_67BEA002D62E1831CC2612ADB8E1B2CE {
+   meta:
+      description         = "Detects FakePDF, NovaViewer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-23"
+      version             = "1.0"
+
+      hash                = "a63cb8de82ca6f2739e46a73c59d607dcf34e683c396aa0e4a4ce96d3666bfcf"
+      malware             = "FakePDF, NovaViewer"
+      malware_type        = "Unknown"
+      malware_notes       = "The malware had behavior consistent with other fake PDF viewers such as GalacticPDF. This cert was then also used by a Russian cybercrime actor."
+
+      signer              = "Xiamen Xisu Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "67:be:a0:02:d6:2e:18:31:cc:26:12:ad:b8:e1:b2:ce"
+      cert_thumbprint     = "BAF6F7831218C352B4CB784EB54A6E86319138AC"
+      cert_valid_from     = "2026-01-23"
+      cert_valid_to       = "2027-01-23"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350200MA35CYLRX4"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "67:be:a0:02:d6:2e:18:31:cc:26:12:ad:b8:e1:b2:ce"
       )
 }
 
@@ -45136,11 +45206,11 @@ rule MAL_Compromised_Cert_Remcos_RAT_DigiCert_0974288FAD05A288A7CA76C20446696F {
       cert_valid_from     = "2025-11-13"
       cert_valid_to       = "2026-12-18"
 
-      country             = "???"
+      country             = "HK"
       state               = "???"
-      locality            = "???"
+      locality            = "Kowloon"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "72759881"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -57365,6 +57435,41 @@ rule MAL_Compromised_Cert_Traffer_SSL_com_09F47115283E8B0E17A5DD5C7EE7FCC8 {
       )
 }
 
+rule MAL_Compromised_Cert_Traffer_SSL_com_1354107DF674025F1F24B8CFB01AAEC3 {
+   meta:
+      description         = "Detects Traffer with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-30"
+      version             = "1.0"
+
+      hash                = "ef5037d0c61441c4dc532452cdc89019a53a1a12e2693482e2d7fae325b6adc4"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake meeting software targeting crypto users worldwide"
+
+      signer              = "MATRIKULA LTD"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "13:54:10:7d:f6:74:02:5f:1f:24:b8:cf:b0:1a:ae:c3"
+      cert_thumbprint     = "34D1489DA06EBB5524CCF3A8D4BE8C1B5A7E6D9B"
+      cert_valid_from     = "2025-09-30"
+      cert_valid_to       = "2026-09-30"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "13:54:10:7d:f6:74:02:5f:1f:24:b8:cf:b0:1a:ae:c3"
+      )
+}
+
 rule MAL_Compromised_Cert_Traffer_SSL_com_16E9DC8270A3A9AC9B58DE5EC7B056CB {
    meta:
       description         = "Detects Traffer with compromised cert (SSL.com)"
@@ -62741,11 +62846,11 @@ rule MAL_Compromised_Cert_Unknown_Fake_Invoice_Certum_76E2ACF0F2F39C06A0B34E4309
       cert_valid_from     = "2025-11-08"
       cert_valid_to       = "2026-10-30"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "CN"
+      state               = "北京市"
+      locality            = "北京市"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91110112MAENGGCR13"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -69426,11 +69531,11 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_0094FAEF953FFD84F5CAC6C77E45247A68 {
       cert_valid_from     = "2025-11-06"
       cert_valid_to       = "2026-11-06"
 
-      country             = "???"
-      state               = "???"
+      country             = "US"
+      state               = "Wyoming"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "2025-001775958"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -69496,11 +69601,11 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_00A17E0D68EA949320B5EA0BB0F28A3FB6 {
       cert_valid_from     = "2025-12-30"
       cert_valid_to       = "2026-12-30"
 
-      country             = "???"
-      state               = "???"
+      country             = "IL"
+      state               = "HaMerkaz"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "514875400"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -69531,11 +69636,11 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_00A5DFA3D16E72E4B9CA5FA3B9665C2805 {
       cert_valid_from     = "2026-01-23"
       cert_valid_to       = "2027-01-23"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Fujian Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91350203302946627U"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -69916,11 +70021,11 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_00EED2C30A99A60BF952C32CAC4C21B623 {
       cert_valid_from     = "2025-11-11"
       cert_valid_to       = "2026-11-11"
 
-      country             = "???"
-      state               = "???"
+      country             = "US"
+      state               = "Wyoming"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "2025-001776598"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -70406,11 +70511,11 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_4A9C63924593F709C2F8336B06709D78 {
       cert_valid_from     = "2025-10-08"
       cert_valid_to       = "2026-10-08"
 
-      country             = "???"
-      state               = "???"
+      country             = "US"
+      state               = "Wyoming"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "2025-001775888"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -70441,11 +70546,11 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_4C57EAA65F0A551CCF5B6EB46AB459F8 {
       cert_valid_from     = "2025-12-01"
       cert_valid_to       = "2026-12-01"
 
-      country             = "???"
-      state               = "???"
+      country             = "IL"
+      state               = "Central"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "517108411"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -70616,11 +70721,11 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_611DC543A37DBAB0F4C982A437DD1C24 {
       cert_valid_from     = "2025-12-15"
       cert_valid_to       = "2026-12-15"
 
-      country             = "???"
-      state               = "???"
+      country             = "IL"
+      state               = "Central"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "516231552"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -70686,11 +70791,11 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_67D93F28BBA15C7A070A4FB845F81068 {
       cert_valid_from     = "2025-12-17"
       cert_valid_to       = "2026-12-17"
 
-      country             = "???"
-      state               = "???"
+      country             = "IL"
+      state               = "Tel Aviv"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "516891165"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -70721,11 +70826,11 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_6899ACCDEF437A54C6659C1DA748885B {
       cert_valid_from     = "2025-10-28"
       cert_valid_to       = "2026-10-28"
 
-      country             = "???"
-      state               = "???"
+      country             = "IL"
+      state               = "Tel Aviv"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "517124012"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -70791,11 +70896,11 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_7C74A3C9578969D8A164D63522F4491D {
       cert_valid_from     = "2026-01-08"
       cert_valid_to       = "2027-01-08"
 
-      country             = "???"
-      state               = "???"
+      country             = "IL"
+      state               = "Central"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "516234788"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -70826,11 +70931,11 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_7EF13C01CE34093827A3186CACF37630 {
       cert_valid_from     = "2025-11-11"
       cert_valid_to       = "2026-11-11"
 
-      country             = "???"
-      state               = "???"
+      country             = "US"
+      state               = "Wyoming"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "2025-001774961"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -76251,11 +76356,11 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00F085B0DB24FFD0E1E9998566D79E83
       cert_valid_from     = "2026-01-27"
       cert_valid_to       = "2027-01-27"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Fujian Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91350206303142401U"
 
    condition:
       uint16(0) == 0x5a4d and

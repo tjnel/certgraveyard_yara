@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Unknown_Fake_Invoice_Certum_76E2ACF0F2F39C06A0B34E4309
       cert_valid_from     = "2025-11-08"
       cert_valid_to       = "2026-10-30"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "CN"
+      state               = "北京市"
+      locality            = "北京市"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91110112MAENGGCR13"
 
    condition:
       uint16(0) == 0x5a4d and
