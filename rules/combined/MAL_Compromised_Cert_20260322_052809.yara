@@ -5285,6 +5285,41 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_737C5C461D3864AC4F089E26 {
       )
 }
 
+rule MAL_Compromised_Cert_CastleLoader_GoGetSSL_0C00AB5BFC8328FB8AAAD01F48DB8DD2 {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (GoGetSSL)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-03"
+      version             = "1.0"
+
+      hash                = "bc8cb64c089415ccc2bfd9d29bf74fe06ae5e3b0493a336412184d20ac774604"
+      malware             = "CastleLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: briskbeverage[.]com"
+
+      signer              = "TECHNOLOGY APPRAISALS LIMITED"
+      cert_issuer_short   = "GoGetSSL"
+      cert_issuer         = "GoGetSSL G4 CS RSA4096 SHA256 2022 CA-1"
+      cert_serial         = "0c:00:ab:5b:fc:83:28:fb:8a:aa:d0:1f:48:db:8d:d2"
+      cert_thumbprint     = "778DB28F1B779AD4DC895055287084A5533064F0"
+      cert_valid_from     = "2026-03-03"
+      cert_valid_to       = "2027-03-02"
+
+      country             = "GB"
+      state               = "???"
+      locality            = "Twickenham"
+      email               = "???"
+      rdn_serial_number   = "01850356"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GoGetSSL G4 CS RSA4096 SHA256 2022 CA-1" and
+         sig.serial == "0c:00:ab:5b:fc:83:28:fb:8a:aa:d0:1f:48:db:8d:d2"
+      )
+}
+
 rule MAL_Compromised_Cert_CastleLoader_Microsoft_33000725FEA86DD19E8571B26C0000000725FE {
    meta:
       description         = "Detects CastleLoader with compromised cert (Microsoft)"
@@ -5597,6 +5632,41 @@ rule MAL_Compromised_Cert_CastleLoader_SSL_com_63F98070213489715A8D224F58E1C1D5 
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "63:f9:80:70:21:34:89:71:5a:8d:22:4f:58:e1:c1:d5"
+      )
+}
+
+rule MAL_Compromised_Cert_CastleLoader_Sectigo_00825FF994DC68446E998A6F20F122561C {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-09"
+      version             = "1.0"
+
+      hash                = "068e34ef7cb67e5a8d34b4d6977cd69be00d52b12d119413fb00d9b68dbc63b6"
+      malware             = "CastleLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: newmemorystarter[.]com"
+
+      signer              = "Xiamen Kangchu Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:82:5f:f9:94:dc:68:44:6e:99:8a:6f:20:f1:22:56:1c"
+      cert_thumbprint     = "0B5489CB786EC936F4B7504EDD0FF5CBA028C0FA"
+      cert_valid_from     = "2026-03-09"
+      cert_valid_to       = "2027-03-09"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350206MA33L0MQ2U"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:82:5f:f9:94:dc:68:44:6e:99:8a:6f:20:f1:22:56:1c"
       )
 }
 
@@ -55195,6 +55265,146 @@ rule MAL_Compromised_Cert_Spyder_SSL_com_72F3D28CC3666D4C5B2C7E915E0A2C5F {
       )
 }
 
+rule MAL_Compromised_Cert_StatusLoader_Microsoft_3300082A8BABA70A0B83E0CC71000000082A8B {
+   meta:
+      description         = "Detects StatusLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-04"
+      version             = "1.0"
+
+      hash                = "e7f89e6b4d98cba833a8c7c607626c2f0d3eb7a831bf8ab053b95e29b3970818"
+      malware             = "StatusLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "Trojanized game installers. Detonation -> https://app.any.run/tasks/b573136d-3902-4c14-91b6-e38def28e96f"
+
+      signer              = "Ricardo Reis"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:08:2a:8b:ab:a7:0a:0b:83:e0:cc:71:00:00:00:08:2a:8b"
+      cert_thumbprint     = "F72C3C4F77BE4081F8791710260F5332D709612B"
+      cert_valid_from     = "2026-03-04"
+      cert_valid_to       = "2026-03-07"
+
+      country             = "US"
+      state               = "South Carolina"
+      locality            = "Johnston"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:08:2a:8b:ab:a7:0a:0b:83:e0:cc:71:00:00:00:08:2a:8b"
+      )
+}
+
+rule MAL_Compromised_Cert_StatusLoader_SSL_com_18F563F306288E4EFAEB3077F99F234A {
+   meta:
+      description         = "Detects StatusLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-01-07"
+      version             = "1.0"
+
+      hash                = "27b1281daa3529ce465df70b5436c5ea3413cd054f4b9ecabbfdf278f1a109b4"
+      malware             = "StatusLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Capsule Software"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "18:f5:63:f3:06:28:8e:4e:fa:eb:30:77:f9:9f:23:4a"
+      cert_thumbprint     = "DBD7FA9C157B0440336D479CFEAD517CE2BB6655"
+      cert_valid_from     = "2025-01-07"
+      cert_valid_to       = "2026-01-07"
+
+      country             = "FR"
+      state               = "Occitania"
+      locality            = "Montpellier"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "18:f5:63:f3:06:28:8e:4e:fa:eb:30:77:f9:9f:23:4a"
+      )
+}
+
+rule MAL_Compromised_Cert_StatusLoader_SSL_com_666EABB70B4BFCCA1E0DE0BF3256CB4B {
+   meta:
+      description         = "Detects StatusLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-01-07"
+      version             = "1.0"
+
+      hash                = "8da2ad369527e360b5d4e3970b9340ba81831dd37f4852a5d8a82bfa03d63886"
+      malware             = "StatusLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Prospere Software Sp. z o.o."
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "66:6e:ab:b7:0b:4b:fc:ca:1e:0d:e0:bf:32:56:cb:4b"
+      cert_thumbprint     = "474C70712413735AF91AE7383A1F7FA918229457"
+      cert_valid_from     = "2025-01-07"
+      cert_valid_to       = "2026-01-07"
+
+      country             = "PL"
+      state               = "Podkarpackie Voivodeship"
+      locality            = "Rzeszów"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "66:6e:ab:b7:0b:4b:fc:ca:1e:0d:e0:bf:32:56:cb:4b"
+      )
+}
+
+rule MAL_Compromised_Cert_StatusLoader_SSL_com_6F80EC3395E1E11086F3349C54447A3F {
+   meta:
+      description         = "Detects StatusLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-11-25"
+      version             = "1.0"
+
+      hash                = "605573bb6ca5ff1331a45f5250d74f1c620cc7101d7d89a958278065092c6f4a"
+      malware             = "StatusLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Nightmoon Software"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "6f:80:ec:33:95:e1:e1:10:86:f3:34:9c:54:44:7a:3f"
+      cert_thumbprint     = "4DE4CB6AD4FB48B3146064B666369F8C33F90C4B"
+      cert_valid_from     = "2024-11-25"
+      cert_valid_to       = "2025-11-25"
+
+      country             = "FR"
+      state               = "Île-de-France"
+      locality            = "Paris"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "6f:80:ec:33:95:e1:e1:10:86:f3:34:9c:54:44:7a:3f"
+      )
+}
+
 rule MAL_Compromised_Cert_StealC_GlobalSign_1C8065E6FC5E7D5370B937B1 {
    meta:
       description         = "Detects StealC with compromised cert (GlobalSign)"
@@ -57456,11 +57666,11 @@ rule MAL_Compromised_Cert_Traffer_SSL_com_1354107DF674025F1F24B8CFB01AAEC3 {
       cert_valid_from     = "2025-09-30"
       cert_valid_to       = "2026-09-30"
 
-      country             = "???"
+      country             = "GB"
       state               = "???"
-      locality            = "???"
+      locality            = "London"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "16200073"
 
    condition:
       uint16(0) == 0x5a4d and

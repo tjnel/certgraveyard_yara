@@ -4,6 +4,19 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.22] - 2026-03-22
+
+### Added
+- MAL_Compromised_Cert_CastleLoader_GoGetSSL_0C00AB5BFC8328FB8AAAD01F48DB8DD2 (CastleLoader - GoGetSSL)
+- MAL_Compromised_Cert_CastleLoader_Sectigo_00825FF994DC68446E998A6F20F122561C (CastleLoader - Sectigo)
+
+### Modified
+- MAL_Compromised_Cert_StatusLoader_SSL_com_18F563F306288E4EFAEB3077F99F234A (Updated metadata for StatusLoader)
+- MAL_Compromised_Cert_StatusLoader_SSL_com_666EABB70B4BFCCA1E0DE0BF3256CB4B (Updated metadata for StatusLoader)
+- MAL_Compromised_Cert_Traffer_SSL_com_1354107DF674025F1F24B8CFB01AAEC3 (Updated metadata for Traffer)
+- MAL_Compromised_Cert_StatusLoader_SSL_com_6F80EC3395E1E11086F3349C54447A3F (Updated metadata for StatusLoader)
+- MAL_Compromised_Cert_StatusLoader_Microsoft_3300082A8BABA70A0B83E0CC71000000082A8B (Updated metadata for StatusLoader)
+
 ## [2026.03.21] - 2026-03-21
 
 ### Added
