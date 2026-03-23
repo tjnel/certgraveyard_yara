@@ -24,7 +24,7 @@ rule MAL_Compromised_Cert_RuRat_Sectigo_1A88479AE02BEC4FB5F67E44BD6C83EE {
       country             = "CN"
       state               = "Jiangsu Sheng"
       locality            = "???"
-      email               = ""
+      email               = "???"
       rdn_serial_number   = "91320281MA20B1986E"
 
    condition:

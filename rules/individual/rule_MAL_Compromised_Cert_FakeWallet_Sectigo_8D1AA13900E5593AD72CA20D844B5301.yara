@@ -23,8 +23,8 @@ rule MAL_Compromised_Cert_FakeWallet_Sectigo_8D1AA13900E5593AD72CA20D844B5301 {
 
       country             = "CN"
       state               = "Shandong Sheng"
-      locality            = ""
-      email               = ""
+      locality            = "???"
+      email               = "???"
       rdn_serial_number   = "91370785MA3TA0Q097"
 
    condition:

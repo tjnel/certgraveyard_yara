@@ -21,9 +21,9 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_709FBBDC5826F66B39F4E670 {
       cert_valid_from     = "2025-04-13"
       cert_valid_to       = "2026-04-14"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
+      country             = "???"
+      state               = "???"
+      locality            = "???"
       email               = "meta.team1337@gmail.com"
       rdn_serial_number   = "Not Specified"
 

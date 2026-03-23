@@ -4,6 +4,27 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.23] - 2026-03-23
+
+### Added
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330008936B9F218049D1F67B0600000008936B (Forever Botnet,BR-01 - Microsoft)
+- MAL_Compromised_Cert_FakeDocument_SSL_com_6ECCC78826E405A2B5E09EAED8439926 (FakeDocument - SSL.com)
+- MAL_Compromised_Cert_StatusLoader_Microsoft_330008410ECC8CFBCFC50425C600000008410E (StatusLoader - Microsoft)
+- MAL_Compromised_Cert_FakeMSTeams_Microsoft_3300078738DC02A68CB93FC81D000000078738 (FakeMSTeams - Microsoft)
+- MAL_Compromised_Cert_Unknown_Fake_Browser_update_GlobalSign_79A789837A15BAF721307D48 (Unknown, Fake Browser update - GlobalSign)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300077E668F71119BE1AEC322000000077E66 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_VariantLoader_Microsoft_33000854A07FFD5E99A098C2110000000854A0 (VariantLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_00EF0E84C496252CF958D7D34547D1CD38 (ScreenConnectLoader - Sectigo)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000825AD34361AD3BE05732D0000000825AD (ScreenConnectLoader - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_RuRat_Sectigo_1A88479AE02BEC4FB5F67E44BD6C83EE (Updated metadata for RuRat)
+- MAL_Compromised_Cert_Unknown_EE_0452205181790702B219BCE761B5C52C (Updated metadata for Unknown)
+- MAL_Compromised_Cert_FakeWallet_Sectigo_8D1AA13900E5593AD72CA20D844B5301 (Updated metadata for FakeWallet)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_33000879E850AD2CA7CCC013F00000000879E8 (Updated metadata for Forever Botnet,BR-01)
+- MAL_Compromised_Cert_Unknown_GlobalSign_709FBBDC5826F66B39F4E670 (Updated metadata for Unknown)
+- MAL_Compromised_Cert_ScreenConnect_Phishing_Verokey_0126669732ACEC9B2FD03AE3C0C4F6D0 (Updated metadata for ScreenConnect Phishing)
+
 ## [2026.03.22] - 2026-03-22
 
 ### Added
