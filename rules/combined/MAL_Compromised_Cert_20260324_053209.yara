@@ -18585,6 +18585,41 @@ rule MAL_Compromised_Cert_FakeWallet_Sectigo_00CA7E5EC6CA344E6A3296B9317ADF0B59 
       )
 }
 
+rule MAL_Compromised_Cert_FakeWallet_Sectigo_00FAC1893DDD1269E2FFF8DF609F973FA1 {
+   meta:
+      description         = "Detects FakeWallet with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-20"
+      version             = "1.0"
+
+      hash                = "dd346703480c4e0204a647b0f56dec31bd3bb180d858dcbda8b962104c653b3b"
+      malware             = "FakeWallet"
+      malware_type        = "Unknown"
+      malware_notes       = "MAlicious installer impersonating Anchor Wallet"
+
+      signer              = "Wuxi Junhang Metal Materials Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:fa:c1:89:3d:dd:12:69:e2:ff:f8:df:60:9f:97:3f:a1"
+      cert_thumbprint     = "AA0AA1375A96591AF74F772E606EFF2E1757EFD1"
+      cert_valid_from     = "2026-01-20"
+      cert_valid_to       = "2027-01-20"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:fa:c1:89:3d:dd:12:69:e2:ff:f8:df:60:9f:97:3f:a1"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeWallet_Sectigo_46EA72160535D97FF6848BF817F1149B {
    meta:
       description         = "Detects FakeWallet with compromised cert (Sectigo)"
@@ -19107,6 +19142,41 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330008936B9F218049D1F67
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
          sig.serial == "33:00:08:93:6b:9f:21:80:49:d1:f6:7b:06:00:00:00:08:93:6b"
+      )
+}
+
+rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330008A2D1467FAF446BA206DA00000008A2D1 {
+   meta:
+      description         = "Detects Forever Botnet,BR-01 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-22"
+      version             = "1.0"
+
+      hash                = "1e1883289ec619ae7d2b60e1b85e032a29f14401d1108cc9918bdef390940c4c"
+      malware             = "Forever Botnet,BR-01"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Mariah Lingle"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:08:a2:d1:46:7f:af:44:6b:a2:06:da:00:00:00:08:a2:d1"
+      cert_thumbprint     = "223D7EAD695023490C85C60A888DB19A9ABD0AF7"
+      cert_valid_from     = "2026-03-22"
+      cert_valid_to       = "2026-03-25"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:08:a2:d1:46:7f:af:44:6b:a2:06:da:00:00:00:08:a2:d1"
       )
 }
 
@@ -20577,6 +20647,41 @@ rule MAL_Compromised_Cert_GhostRAT_Certum_46C6C62207C137E628861568419977EE {
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
          sig.serial == "46:c6:c6:22:07:c1:37:e6:28:86:15:68:41:99:77:ee"
+      )
+}
+
+rule MAL_Compromised_Cert_GhostRAT_Certum_76E2ACF0F2F39C06A0B34E4309A8EAF2 {
+   meta:
+      description         = "Detects GhostRAT with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-08"
+      version             = "1.0"
+
+      hash                = "779272fd234deb25d4275715eb9e72e58492a149ed48c8ab1819b710864d29ed"
+      malware             = "GhostRAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = "The malware appears to be a newer version of GhostRAT. Disguised as a fake invoice."
+
+      signer              = "北京谷云达吉商贸有限公司"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "76:e2:ac:f0:f2:f3:9c:06:a0:b3:4e:43:09:a8:ea:f2"
+      cert_thumbprint     = "A55D45182DD2D9CF4455F21E3B63ED498424276C"
+      cert_valid_from     = "2025-11-08"
+      cert_valid_to       = "2026-10-30"
+
+      country             = "CN"
+      state               = "北京市"
+      locality            = "北京市"
+      email               = "???"
+      rdn_serial_number   = "91110112MAENGGCR13"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "76:e2:ac:f0:f2:f3:9c:06:a0:b3:4e:43:09:a8:ea:f2"
       )
 }
 
@@ -35875,6 +35980,41 @@ rule MAL_Compromised_Cert_Oyster_Microsoft_33000571E980AABA26C5B271BD0000000571E
       )
 }
 
+rule MAL_Compromised_Cert_Oyster_SSL_com_064745A9D210EA060B7C5A64E7F75162 {
+   meta:
+      description         = "Detects Oyster with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-08-28"
+      version             = "1.0"
+
+      hash                = "ce8fb6edbf238116d2c6b102773cdf2329887ba0eeb537ec288bd4e196d08ccc"
+      malware             = "Oyster"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "PANGEA CIVIL ENGINEERS SRL"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "06:47:45:a9:d2:10:ea:06:0b:7c:5a:64:e7:f7:51:62"
+      cert_thumbprint     = "D2F530D7A6A152E3198F6B1326F8FC54098C09D2"
+      cert_valid_from     = "2025-08-28"
+      cert_valid_to       = "2026-08-28"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "06:47:45:a9:d2:10:ea:06:0b:7c:5a:64:e7:f7:51:62"
+      )
+}
+
 rule MAL_Compromised_Cert_Oyster_SSL_com_14E52D6A45004663FEF6E69DAAA54FEF {
    meta:
       description         = "Detects Oyster with compromised cert (SSL.com)"
@@ -48717,6 +48857,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000825AD34361AD3BE0573
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
          sig.serial == "33:00:08:25:ad:34:36:1a:d3:be:05:73:2d:00:00:00:08:25:ad"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330008568D4A72F36727C1360000000008568D {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-18"
+      version             = "1.0"
+
+      hash                = "a3ac637f33bb3945aa82d53f8579f618ceb664d9b714cb667fdd9bbfa5337266"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Perry Sabrina Ann"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:08:56:8d:4a:72:f3:67:27:c1:36:00:00:00:00:08:56:8d"
+      cert_thumbprint     = "524A4BC321382EA4F1DA705B96068D2517D1EC52"
+      cert_valid_from     = "2026-03-18"
+      cert_valid_to       = "2026-03-21"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:08:56:8d:4a:72:f3:67:27:c1:36:00:00:00:00:08:56:8d"
       )
 }
 
