@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_00EF0E84C496252CF958D7D345
       cert_valid_from     = "2026-03-10"
       cert_valid_to       = "2027-03-10"
 
-      country             = "???"
-      state               = "???"
+      country             = "JP"
+      state               = "Fukuoka"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "2900-03-017884"
 
    condition:
       uint16(0) == 0x5a4d and

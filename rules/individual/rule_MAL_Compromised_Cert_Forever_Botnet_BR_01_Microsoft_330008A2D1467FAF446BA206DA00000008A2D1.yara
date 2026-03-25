@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330008A2D1467FAF446BA20
       cert_valid_from     = "2026-03-22"
       cert_valid_to       = "2026-03-25"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Montana"
+      locality            = "Columbia Fals"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

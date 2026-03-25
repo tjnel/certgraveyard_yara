@@ -8,7 +8,7 @@ rule MAL_Compromised_Cert_Unknown_DigiCert_01FD6F6E1223421F0260949FCEB36201 {
       date                = "2024-12-19"
       version             = "1.0"
 
-      hash                = "18c616aad862dcd00837362a8f3c3eb2419b3a01721675ffda8b22461d37eb52"
+      hash                = "c3a12b22ca7c4008d1f672194cc54520001e86d2fc1225c6e6c3615f7af6d676"
       malware             = "Unknown"
       malware_type        = "Unknown"
       malware_notes       = ""

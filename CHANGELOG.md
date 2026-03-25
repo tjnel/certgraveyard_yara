@@ -4,6 +4,31 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.25] - 2026-03-25
+
+### Added
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300078BBEED7D75E6661215A0000000078BBE (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_T_21_Microsoft_33000729ED2E7CC5AB0849D7E90000000729ED (T-21 - Microsoft)
+- MAL_Compromised_Cert_FakeTrading_Certum_5C1BC02A08E7A473C3A1F7246DCF5E25 (FakeTrading - Certum)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000772DECA6D8A4A9FDD88450000000772DE (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_ResolverRAT_DigiCert_01C2A5FBB91FFE2B0847C9712A04007D (ResolverRAT - DigiCert)
+- MAL_Compromised_Cert_HijackLoader_Certum_1585C2EDD17BB80BC7DE15448CF4792D (HijackLoader - Certum)
+- MAL_Compromised_Cert_FakeUpdate_GlobalSign_1480C3984BE2003F4F1C932E (FakeUpdate - GlobalSign)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007918F39FB07238374052B00000007918F (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_FakeMSTeams_Microsoft_3300086D150E4B7148FEAEE9E3000000086D15 (FakeMSTeams - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000825AD34361AD3BE05732D0000000825AD (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330008A2D1467FAF446BA206DA00000008A2D1 (Updated metadata for Forever Botnet,BR-01)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330008568D4A72F36727C1360000000008568D (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_00EF0E84C496252CF958D7D34547D1CD38 (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_Oyster_SSL_com_064745A9D210EA060B7C5A64E7F75162 (Updated metadata for Oyster)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300077E668F71119BE1AEC322000000077E66 (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_FakeWallet_Sectigo_00FAC1893DDD1269E2FFF8DF609F973FA1 (Updated metadata for FakeWallet)
+
+### Removed
+- MAL_Compromised_Cert_Unknown_DigiCert_01FD6F6E1223421F0260949FCEB36201 (Removed Unknown rule)
+
 ## [2026.03.24] - 2026-03-24
 
 ### Added
