@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_HijackLoader_Certum_1585C2EDD17BB80BC7DE15448CF4792D {
       cert_valid_from     = "2026-01-29"
       cert_valid_to       = "2027-01-29"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "CN"
+      state               = "广东"
+      locality            = "广州"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91440106MAEJYFQT9N"
 
    condition:
       uint16(0) == 0x5a4d and

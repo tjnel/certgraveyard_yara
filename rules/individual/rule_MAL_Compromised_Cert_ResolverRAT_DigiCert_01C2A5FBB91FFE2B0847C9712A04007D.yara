@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_ResolverRAT_DigiCert_01C2A5FBB91FFE2B0847C9712A04007D 
       cert_valid_from     = "2026-03-18"
       cert_valid_to       = "2027-03-17"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "BR"
+      state               = "Sao Paulo"
+      locality            = "SAO PAULO"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

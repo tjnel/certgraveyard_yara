@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeUpdate_GlobalSign_1480C3984BE2003F4F1C932E {
       cert_valid_from     = "2026-02-03"
       cert_valid_to       = "2027-02-04"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "GB"
+      state               = "Greater London"
+      locality            = "London"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "14274607"
 
    condition:
       uint16(0) == 0x5a4d and

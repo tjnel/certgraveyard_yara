@@ -4,6 +4,34 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.26] - 2026-03-26
+
+### Added
+- MAL_Compromised_Cert_StatusLoader_Microsoft_330008530CF9A7AFB498F69EED00000008530C (StatusLoader - Microsoft)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300079F5A61308F2D1C329164000000079F5A (Forever Botnet,BR-01 - Microsoft)
+- MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_3300079173F96971CC939E847D000000079173 (LoremIpsumLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_384B493AB76FAE54F83AE6BFA87E5C10 (ScreenConnectLoader - Sectigo)
+- MAL_Compromised_Cert_Traffer_Sectigo_29612758EEBEF8B08BE2BF7D866555B2 (Traffer - Sectigo)
+- MAL_Compromised_Cert_StatusLoader_DigiCert_08F03A563241B64D3A7A5C6AA5CF2D8E (StatusLoader - DigiCert)
+- MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_33000879E17AFAF3353F27B2860000000879E1 (LoremIpsumLoader - Microsoft)
+- MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_33000774B9DB21164857B20A870000000774B9 (LoremIpsumLoader - Microsoft)
+- MAL_Compromised_Cert_StatusLoader_Microsoft_33000782978A81DFD059A5E20A000000078297 (StatusLoader - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000772DECA6D8A4A9FDD88450000000772DE (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_HijackLoader_Certum_1585C2EDD17BB80BC7DE15448CF4792D (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300078BBEED7D75E6661215A0000000078BBE (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_ResolverRAT_DigiCert_01C2A5FBB91FFE2B0847C9712A04007D (Updated metadata for ResolverRAT)
+- MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_330007DC4E73FC0B983770783900000007DC4E (Updated metadata for LoremIpsumLoader)
+- MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_3300086D150E4B7148FEAEE9E3000000086D15 (Updated metadata for LoremIpsumLoader)
+- MAL_Compromised_Cert_T_21_Microsoft_33000729ED2E7CC5AB0849D7E90000000729ED (Updated metadata for T-21)
+- MAL_Compromised_Cert_Lumma_Stealer_GlobalSign_3321E36953436779598030B7 (Updated metadata for Lumma Stealer)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007918F39FB07238374052B00000007918F (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_IcedID_Certum_6E44FCEDD49F22F7A28CECC99104F61A (Updated metadata for IcedID)
+- MAL_Compromised_Cert_FakeUpdate_GlobalSign_1480C3984BE2003F4F1C932E (Updated metadata for FakeUpdate)
+- MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_3300078738DC02A68CB93FC81D000000078738 (Updated metadata for LoremIpsumLoader)
+- MAL_Compromised_Cert_FakeTrading_Certum_5C1BC02A08E7A473C3A1F7246DCF5E25 (Updated metadata for FakeTrading)
+
 ## [2026.03.25] - 2026-03-25
 
 ### Added

@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeTrading_Certum_5C1BC02A08E7A473C3A1F7246DCF5E25 {
       cert_valid_from     = "2026-03-13"
       cert_valid_to       = "2027-03-13"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "FI"
+      state               = "North Savo"
+      locality            = "Kuopio"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "1860677-2"
 
    condition:
       uint16(0) == 0x5a4d and

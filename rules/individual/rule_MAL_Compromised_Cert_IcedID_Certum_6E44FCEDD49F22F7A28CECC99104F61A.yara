@@ -8,7 +8,7 @@ rule MAL_Compromised_Cert_IcedID_Certum_6E44FCEDD49F22F7A28CECC99104F61A {
       date                = "2023-01-05"
       version             = "1.0"
 
-      hash                = "f9fa964ae4dfbf4ecc518fc37985fa5e12bb1059687110d24fb035497940cda3"
+      hash                = "0221bf1e1bd171c17527a863531518a95bcc025c87888e66b9512a5651073d16"
       malware             = "IcedID"
       malware_type        = "Initial access tool"
       malware_notes       = "A malware initially created as a banking trojan but then transitioned to initial access tool used by ransomware gangs: https://www.proofpoint.com/us/blog/threat-insight/fork-ice-new-era-icedid and https://www.proofpoint.com/us/blog/threat-insight/first-step-initial-access-leads-ransomware"

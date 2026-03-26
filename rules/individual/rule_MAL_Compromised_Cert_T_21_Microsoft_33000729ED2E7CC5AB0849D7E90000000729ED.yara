@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_T_21_Microsoft_33000729ED2E7CC5AB0849D7E90000000729ED 
       cert_valid_from     = "2026-03-01"
       cert_valid_to       = "2026-03-04"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Georgia"
+      locality            = "Atlanta"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
