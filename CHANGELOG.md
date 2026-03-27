@@ -4,6 +4,18 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.27] - 2026-03-27
+
+### Added
+- MAL_Compromised_Cert_QuasarRAT_Certum_621BB34996258258F752A174D473FE1D (QuasarRAT - Certum)
+- MAL_Compromised_Cert_T_21_Microsoft_330008A608D135F72C359D334C00000008A608 (T-21 - Microsoft)
+- MAL_Compromised_Cert_ZhongStealer_SSL_com_1144335932C394E43644A300BF7A746F (ZhongStealer - SSL.com)
+- MAL_Compromised_Cert_FakeDocument_Microsoft_330008B41662C4BC6792517D3700000008B416 (FakeDocument - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_00CB77AE87CFDDF44C5CCE239AA4AEF766 (ScreenConnectLoader - Sectigo)
+
+### Modified
+- MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_384B493AB76FAE54F83AE6BFA87E5C10 (Updated metadata for ScreenConnectLoader)
+
 ## [2026.03.26] - 2026-03-26
 
 ### Added

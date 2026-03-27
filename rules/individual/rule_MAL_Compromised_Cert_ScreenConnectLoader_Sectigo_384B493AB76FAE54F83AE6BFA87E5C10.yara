@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_384B493AB76FAE54F83AE6BFA8
       cert_valid_from     = "2025-12-24"
       cert_valid_to       = "2026-12-24"
 
-      country             = "???"
-      state               = "???"
+      country             = "US"
+      state               = "California"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "2300041"
 
    condition:
       uint16(0) == 0x5a4d and
