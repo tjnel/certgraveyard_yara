@@ -4,6 +4,21 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.28] - 2026-03-28
+
+### Added
+- MAL_Compromised_Cert_BR_02_Sectigo_500D712788CEC6D67E88B9469D9E8284 (BR-02 - Sectigo)
+- MAL_Compromised_Cert_Unknown_Sectigo_00C0AC0D9E7DCACB044CFFBB68D24C7058 (Unknown - Sectigo)
+- MAL_Compromised_Cert_BR_02_Sectigo_00CE28962C8D867055C3DEBD7A73DA22E2 (BR-02 - Sectigo)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330008BF7AFB3B5E4631E287B400000008BF7A (Forever Botnet,BR-01 - Microsoft)
+- MAL_Compromised_Cert_FakePDF_NovaViewer_Sectigo_3CF1CF07647C6052688E66D3B2E179DF (FakePDF, NovaViewer - Sectigo)
+- MAL_Compromised_Cert_FakePDF_Leaflet_Sectigo_00B56043A71D40DB6A93D4FF407EE7FB1A (FakePDF, Leaflet - Sectigo)
+- MAL_Compromised_Cert_ETDucky_FakeRMM_SSL_com_6607C6D3AA188E3EA1CEDBEC3A764F36 (ETDucky, FakeRMM - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_GhostRAT_Certum_46C6C62207C137E628861568419977EE (Updated metadata for GhostRAT)
+- MAL_Compromised_Cert_ZhongStealer_SSL_com_1144335932C394E43644A300BF7A746F (Updated metadata for ZhongStealer)
+
 ## [2026.03.27] - 2026-03-27
 
 ### Added

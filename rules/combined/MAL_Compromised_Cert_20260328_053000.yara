@@ -1820,6 +1820,76 @@ rule MAL_Compromised_Cert_AzoRult_Comodo_4BBF667B63E1962A30AED63B346D789B {
       )
 }
 
+rule MAL_Compromised_Cert_BR_02_Sectigo_00CE28962C8D867055C3DEBD7A73DA22E2 {
+   meta:
+      description         = "Detects BR-02 with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-12"
+      version             = "1.0"
+
+      hash                = "7982894ad1279e7942fc7f5906f0ced2e04056045a81b02f123c9856d48caeee"
+      malware             = "BR-02"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Xiamen Lingmeng Network Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:ce:28:96:2c:8d:86:70:55:c3:de:bd:7a:73:da:22:e2"
+      cert_thumbprint     = "7C652CF2B559B873B8B7D129AD4AB37CC9724F64"
+      cert_valid_from     = "2026-03-12"
+      cert_valid_to       = "2027-03-12"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350206051171854W"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:ce:28:96:2c:8d:86:70:55:c3:de:bd:7a:73:da:22:e2"
+      )
+}
+
+rule MAL_Compromised_Cert_BR_02_Sectigo_500D712788CEC6D67E88B9469D9E8284 {
+   meta:
+      description         = "Detects BR-02 with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-12"
+      version             = "1.0"
+
+      hash                = "a59cba001f2093aa44758293c6efca87110339e3c68fe25da49a986f948c16fb"
+      malware             = "BR-02"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "TERYAKİ GRUP REKLAM ORGANİZASYON VE PRODÜKSİYON TİC LTD ŞTI"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "50:0d:71:27:88:ce:c6:d6:7e:88:b9:46:9d:9e:82:84"
+      cert_thumbprint     = "13E800DC16BC2D36B90BF6EDA8612519E0A077A2"
+      cert_valid_from     = "2026-02-12"
+      cert_valid_to       = "2027-02-12"
+
+      country             = "TR"
+      state               = "İstanbul"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "1122490"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "50:0d:71:27:88:ce:c6:d6:7e:88:b9:46:9d:9e:82:84"
+      )
+}
+
 rule MAL_Compromised_Cert_Babadeda_Sectigo_00967CB0898680D1C174B2BAAE5FA332DB {
    meta:
       description         = "Detects Babadeda with compromised cert (Sectigo)"
@@ -12495,6 +12565,41 @@ rule MAL_Compromised_Cert_DuckTail_Entrust_1B59FEA3A77A45F4EF50215669617D38 {
       )
 }
 
+rule MAL_Compromised_Cert_ETDucky_FakeRMM_SSL_com_6607C6D3AA188E3EA1CEDBEC3A764F36 {
+   meta:
+      description         = "Detects ETDucky, FakeRMM with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-05"
+      version             = "1.0"
+
+      hash                = "eae8cd926d6e304636c68e9923bc3f8132aebf27e330ecb61c8f5c8c7e77f385"
+      malware             = "ETDucky, FakeRMM"
+      malware_type        = "Remote access tool"
+      malware_notes       = "Company founded in Feb 2026, certificate issued in Mar 2026, abused by cybercrime before end of the month."
+
+      signer              = "ET Ducky LLC"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "66:07:c6:d3:aa:18:8e:3e:a1:ce:db:ec:3a:76:4f:36"
+      cert_thumbprint     = "EDB66DA33B39DEC4478F27C0BF1A1F54490A3C09"
+      cert_valid_from     = "2026-03-05"
+      cert_valid_to       = "2027-03-05"
+
+      country             = "US"
+      state               = "Washington"
+      locality            = "Bellingham"
+      email               = "???"
+      rdn_serial_number   = "606 084 406"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "66:07:c6:d3:aa:18:8e:3e:a1:ce:db:ec:3a:76:4f:36"
+      )
+}
+
 rule MAL_Compromised_Cert_Easy2Convert_FakePDFEditor_GlobalSign_0A6047DEA944141527D85E24 {
    meta:
       description         = "Detects Easy2Convert_FakePDFEditor with compromised cert (GlobalSign)"
@@ -17535,6 +17640,76 @@ rule MAL_Compromised_Cert_FakePDFBrowserHijacker_DigiCert_037FAF39D5EFECFEEDC295
       )
 }
 
+rule MAL_Compromised_Cert_FakePDF_Leaflet_Sectigo_00B56043A71D40DB6A93D4FF407EE7FB1A {
+   meta:
+      description         = "Detects FakePDF, Leaflet with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-05"
+      version             = "1.0"
+
+      hash                = "cbf744e397e2bc34ea2a8fe5cc533bdd575346231300feb7b7e3d8f985626112"
+      malware             = "FakePDF, Leaflet"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Xiamen Haobo Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:b5:60:43:a7:1d:40:db:6a:93:d4:ff:40:7e:e7:fb:1a"
+      cert_thumbprint     = "C67C4ABB6B328AB290783081E66FA6C9D96B076F"
+      cert_valid_from     = "2026-03-05"
+      cert_valid_to       = "2027-03-05"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350205MA2Y7JPQ3Q"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:b5:60:43:a7:1d:40:db:6a:93:d4:ff:40:7e:e7:fb:1a"
+      )
+}
+
+rule MAL_Compromised_Cert_FakePDF_NovaViewer_Sectigo_3CF1CF07647C6052688E66D3B2E179DF {
+   meta:
+      description         = "Detects FakePDF, NovaViewer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-04"
+      version             = "1.0"
+
+      hash                = "5fa5a32476d1e677e544e27d795a8c627b5ed9adf210d5c9b9626c1173115a62"
+      malware             = "FakePDF, NovaViewer"
+      malware_type        = "Unknown"
+      malware_notes       = "The malware had behavior consistent with other fake PDF viewers such as GalacticPDF"
+
+      signer              = "Xiamen Duohanbeiwei Network Co., Ltd"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "3c:f1:cf:07:64:7c:60:52:68:8e:66:d3:b2:e1:79:df"
+      cert_thumbprint     = "8BB90CD512B2A0992771F65D41C37F0EBDD2801F"
+      cert_valid_from     = "2026-02-04"
+      cert_valid_to       = "2027-02-04"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350213MAE3YX8L38"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "3c:f1:cf:07:64:7c:60:52:68:8e:66:d3:b2:e1:79:df"
+      )
+}
+
 rule MAL_Compromised_Cert_FakePDF_NovaViewer_Sectigo_67BEA002D62E1831CC2612ADB8E1B2CE {
    meta:
       description         = "Detects FakePDF, NovaViewer with compromised cert (Sectigo)"
@@ -19355,6 +19530,41 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330008A2D1467FAF446BA20
       )
 }
 
+rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330008BF7AFB3B5E4631E287B400000008BF7A {
+   meta:
+      description         = "Detects Forever Botnet,BR-01 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-26"
+      version             = "1.0"
+
+      hash                = "f7ffcbb73bf9265ef842966048d7448f395a99e60bee72dd0d230e674d6e218c"
+      malware             = "Forever Botnet,BR-01"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Stalin Fabrico Loor Romero"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:08:bf:7a:fb:3b:5e:46:31:e2:87:b4:00:00:00:08:bf:7a"
+      cert_thumbprint     = "955F3C5831E143164BBFB554640FF810033D45CF"
+      cert_valid_from     = "2026-03-26"
+      cert_valid_to       = "2026-03-29"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:08:bf:7a:fb:3b:5e:46:31:e2:87:b4:00:00:00:08:bf:7a"
+      )
+}
+
 rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Sectigo_00C69698DD8E61DEE8A1D93828AB378761 {
    meta:
       description         = "Detects Forever Botnet,BR-01 with compromised cert (Sectigo)"
@@ -20800,8 +21010,8 @@ rule MAL_Compromised_Cert_GhostRAT_Certum_46C6C62207C137E628861568419977EE {
 
       hash                = "968e5b0abc123f1f2097b5064637a1ab5779205682988880910e3c2d11d51f31"
       malware             = "GhostRAT"
-      malware_type        = "Remote access tool"
-      malware_notes       = "This sample was delivered via phishing, disguised as a image file. This malware is known to be used by a wide range of actors."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "北京谷云达吉商贸有限公司"
       cert_issuer_short   = "Certum"
@@ -20815,7 +21025,7 @@ rule MAL_Compromised_Cert_GhostRAT_Certum_46C6C62207C137E628861568419977EE {
       state               = "北京市"
       locality            = "北京市"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91110112MAENGGCR13"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -71435,6 +71645,41 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_00BDE35FE4188DD8BAA55772BC6FEF5B9E {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Sectigo_00C0AC0D9E7DCACB044CFFBB68D24C7058 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-13"
+      version             = "1.0"
+
+      hash                = "f062ad651c7e214b1bddc45fe9a927182ef2143a4007b7bbc48389e321855767"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: 62.164.177.107:9000/wmglb"
+
+      signer              = "Xiamen Buling Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:c0:ac:0d:9e:7d:ca:cb:04:4c:ff:bb:68:d2:4c:70:58"
+      cert_thumbprint     = "DC64DF1242DB011FBF1D0551EF0950411E729165"
+      cert_valid_from     = "2026-01-13"
+      cert_valid_to       = "2027-01-13"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350206MA34JFXG1D"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:c0:ac:0d:9e:7d:ca:cb:04:4c:ff:bb:68:d2:4c:70:58"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_Sectigo_00D2AC939F9CD0551ECE4BEA6578EF29FF {
    meta:
       description         = "Detects Unknown with compromised cert (Sectigo)"
@@ -76671,11 +76916,11 @@ rule MAL_Compromised_Cert_ZhongStealer_SSL_com_1144335932C394E43644A300BF7A746F 
       cert_valid_from     = "2026-01-12"
       cert_valid_to       = "2027-11-19"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "PL"
+      state               = "Mazowieckie"
+      locality            = "Warszawa"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "0000065743"
 
    condition:
       uint16(0) == 0x5a4d and

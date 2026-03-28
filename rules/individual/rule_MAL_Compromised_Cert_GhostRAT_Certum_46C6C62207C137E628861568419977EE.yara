@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_GhostRAT_Certum_46C6C62207C137E628861568419977EE {
 
       hash                = "968e5b0abc123f1f2097b5064637a1ab5779205682988880910e3c2d11d51f31"
       malware             = "GhostRAT"
-      malware_type        = "Remote access tool"
-      malware_notes       = "This sample was delivered via phishing, disguised as a image file. This malware is known to be used by a wide range of actors."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "北京谷云达吉商贸有限公司"
       cert_issuer_short   = "Certum"
@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_GhostRAT_Certum_46C6C62207C137E628861568419977EE {
       state               = "北京市"
       locality            = "北京市"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "91110112MAENGGCR13"
 
    condition:
       uint16(0) == 0x5a4d and

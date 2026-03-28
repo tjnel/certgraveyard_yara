@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_ZhongStealer_SSL_com_1144335932C394E43644A300BF7A746F 
       cert_valid_from     = "2026-01-12"
       cert_valid_to       = "2027-11-19"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "PL"
+      state               = "Mazowieckie"
+      locality            = "Warszawa"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "0000065743"
 
    condition:
       uint16(0) == 0x5a4d and
