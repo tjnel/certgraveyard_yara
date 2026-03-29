@@ -1,15 +1,15 @@
 import "pe"
 
-rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330008BF7AFB3B5E4631E287B400000008BF7A {
+rule MAL_Compromised_Cert_BackdoorElectron_Microsoft_330008BF7AFB3B5E4631E287B400000008BF7A {
    meta:
-      description         = "Detects Forever Botnet,BR-01 with compromised cert (Microsoft)"
+      description         = "Detects BackdoorElectron with compromised cert (Microsoft)"
       author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2026-03-26"
       version             = "1.0"
 
-      hash                = "f7ffcbb73bf9265ef842966048d7448f395a99e60bee72dd0d230e674d6e218c"
-      malware             = "Forever Botnet,BR-01"
+      hash                = "932620b4b6f1d2336b6bbb6e11ad85391cce459db49552dfeef86fb5504acf03"
+      malware             = "BackdoorElectron"
       malware_type        = "Unknown"
       malware_notes       = ""
 
@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330008BF7AFB3B5E4631E28
       cert_valid_from     = "2026-03-26"
       cert_valid_to       = "2026-03-29"
 
-      country             = "US"
-      state               = "Texas"
-      locality            = "Richmond"
+      country             = "???"
+      state               = "???"
+      locality            = "???"
       email               = "???"
-      rdn_serial_number   = "Not Specified"
+      rdn_serial_number   = ""
 
    condition:
       uint16(0) == 0x5a4d and
