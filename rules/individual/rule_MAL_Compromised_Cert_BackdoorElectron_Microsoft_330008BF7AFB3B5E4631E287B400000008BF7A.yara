@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_BackdoorElectron_Microsoft_330008BF7AFB3B5E4631E287B40
       cert_valid_from     = "2026-03-26"
       cert_valid_to       = "2026-03-29"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Texas"
+      locality            = "Richmond"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

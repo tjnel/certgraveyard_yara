@@ -1946,11 +1946,11 @@ rule MAL_Compromised_Cert_BackdoorElectron_Microsoft_330008BF7AFB3B5E4631E287B40
       cert_valid_from     = "2026-03-26"
       cert_valid_to       = "2026-03-29"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Texas"
+      locality            = "Richmond"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -13020,6 +13020,76 @@ rule MAL_Compromised_Cert_EvilAI_Certum_3FF2B6872A6D7018078C820704F95028 {
       )
 }
 
+rule MAL_Compromised_Cert_EvilAI_Sectigo_0094FAEF953FFD84F5CAC6C77E45247A68 {
+   meta:
+      description         = "Detects EvilAI with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-06"
+      version             = "1.0"
+
+      hash                = "071ea43c2a6ffeea0a5f7a9fe940dd81288174601d50847faaee5d62263454a5"
+      malware             = "EvilAI"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Reach Spark Labs LLC"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:94:fa:ef:95:3f:fd:84:f5:ca:c6:c7:7e:45:24:7a:68"
+      cert_thumbprint     = "A89017F826EDABA95248443557F3CAC571A098E2"
+      cert_valid_from     = "2025-11-06"
+      cert_valid_to       = "2026-11-06"
+
+      country             = "US"
+      state               = "Wyoming"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "2025-001775958"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:94:fa:ef:95:3f:fd:84:f5:ca:c6:c7:7e:45:24:7a:68"
+      )
+}
+
+rule MAL_Compromised_Cert_EvilAI_Sectigo_00A17E0D68EA949320B5EA0BB0F28A3FB6 {
+   meta:
+      description         = "Detects EvilAI with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-30"
+      version             = "1.0"
+
+      hash                = "4ed12571df78e99c6e9daabc893766ab059036f9ce65ffc9eef450c5a5a1f3e2"
+      malware             = "EvilAI"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Ice Ignite LTD"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:a1:7e:0d:68:ea:94:93:20:b5:ea:0b:b0:f2:8a:3f:b6"
+      cert_thumbprint     = "E1BB445DF62E7F30F7F2AB94F5C7C5F0C3183D28"
+      cert_valid_from     = "2025-12-30"
+      cert_valid_to       = "2026-12-30"
+
+      country             = "IL"
+      state               = "HaMerkaz"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "514875400"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:a1:7e:0d:68:ea:94:93:20:b5:ea:0b:b0:f2:8a:3f:b6"
+      )
+}
+
 rule MAL_Compromised_Cert_EvilAI_Sectigo_00A888CB01C4A97F105FDA08F27C7BB2BC {
    meta:
       description         = "Detects EvilAI with compromised cert (Sectigo)"
@@ -13052,6 +13122,251 @@ rule MAL_Compromised_Cert_EvilAI_Sectigo_00A888CB01C4A97F105FDA08F27C7BB2BC {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "00:a8:88:cb:01:c4:a9:7f:10:5f:da:08:f2:7c:7b:b2:bc"
+      )
+}
+
+rule MAL_Compromised_Cert_EvilAI_Sectigo_00CC30AD05F738E13861377BC08D188AE3 {
+   meta:
+      description         = "Detects EvilAI with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-20"
+      version             = "1.0"
+
+      hash                = "a1df99ad45cb2c14c2d9f582f41877715ee59bef6f7af761ae8972580e730ee1"
+      malware             = "EvilAI"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Xiamen Juyoupin Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:cc:30:ad:05:f7:38:e1:38:61:37:7b:c0:8d:18:8a:e3"
+      cert_thumbprint     = "63D108A5673C28BC0E3D3533AB35265C5C4C667D"
+      cert_valid_from     = "2026-01-20"
+      cert_valid_to       = "2027-01-20"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350200MA8T7LY50L"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:cc:30:ad:05:f7:38:e1:38:61:37:7b:c0:8d:18:8a:e3"
+      )
+}
+
+rule MAL_Compromised_Cert_EvilAI_Sectigo_00EED2C30A99A60BF952C32CAC4C21B623 {
+   meta:
+      description         = "Detects EvilAI with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-11"
+      version             = "1.0"
+
+      hash                = "a880d9a03e9c9689802831e3e038d938b3379f5cfb5475ecbac6f681e14664c8"
+      malware             = "EvilAI"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Brand Flux Marketing LLC"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:ee:d2:c3:0a:99:a6:0b:f9:52:c3:2c:ac:4c:21:b6:23"
+      cert_thumbprint     = "4DBDBA51B67B8A5D65806909F0000504E5CAA720"
+      cert_valid_from     = "2025-11-11"
+      cert_valid_to       = "2026-11-11"
+
+      country             = "US"
+      state               = "Wyoming"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "2025-001776598"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:ee:d2:c3:0a:99:a6:0b:f9:52:c3:2c:ac:4c:21:b6:23"
+      )
+}
+
+rule MAL_Compromised_Cert_EvilAI_Sectigo_0CF28ED37CB518C20C6EFCD550B0629B {
+   meta:
+      description         = "Detects EvilAI with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-16"
+      version             = "1.0"
+
+      hash                = "b34ad2bcea2f7e3459975747fa3e44fe958cad413bc5e45768bcbf86cf505fa2"
+      malware             = "EvilAI"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Eos Mist LTD"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "0c:f2:8e:d3:7c:b5:18:c2:0c:6e:fc:d5:50:b0:62:9b"
+      cert_thumbprint     = "6A9A8A2AF4D5006D4F639C2CDF6AEF7A64A46211"
+      cert_valid_from     = "2026-02-16"
+      cert_valid_to       = "2027-02-16"
+
+      country             = "IL"
+      state               = "Central"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "516234788"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "0c:f2:8e:d3:7c:b5:18:c2:0c:6e:fc:d5:50:b0:62:9b"
+      )
+}
+
+rule MAL_Compromised_Cert_EvilAI_Sectigo_2D567E9BCBADE9DF178AA2AF77545724 {
+   meta:
+      description         = "Detects EvilAI with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-29"
+      version             = "1.0"
+
+      hash                = "ae91e1e3316e47747182650317f0a1810426bfc9a70d1dc46d4d12b3e2f79fa0"
+      malware             = "EvilAI"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Chengdu Jiadao Hexin Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "2d:56:7e:9b:cb:ad:e9:df:17:8a:a2:af:77:54:57:24"
+      cert_thumbprint     = "FC638FFC7932F858EDB8E97E54EDCE1BB0CAD264"
+      cert_valid_from     = "2025-11-29"
+      cert_valid_to       = "2026-11-29"
+
+      country             = "CN"
+      state               = "Sichuan Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91510124MAACHUX355"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "2d:56:7e:9b:cb:ad:e9:df:17:8a:a2:af:77:54:57:24"
+      )
+}
+
+rule MAL_Compromised_Cert_EvilAI_Sectigo_4A9C63924593F709C2F8336B06709D78 {
+   meta:
+      description         = "Detects EvilAI with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-08"
+      version             = "1.0"
+
+      hash                = "e75bcf0d9d5684f1dd7ba517d6158517edf2534e533c7bd54ef53ecebd068b35"
+      malware             = "EvilAI"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Pulse Drift Media LLC"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "4a:9c:63:92:45:93:f7:09:c2:f8:33:6b:06:70:9d:78"
+      cert_thumbprint     = "82EEA41960AC840E8270CE9146D0CA1E793CC79E"
+      cert_valid_from     = "2025-10-08"
+      cert_valid_to       = "2026-10-08"
+
+      country             = "US"
+      state               = "Wyoming"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "2025-001775888"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "4a:9c:63:92:45:93:f7:09:c2:f8:33:6b:06:70:9d:78"
+      )
+}
+
+rule MAL_Compromised_Cert_EvilAI_Sectigo_7C74A3C9578969D8A164D63522F4491D {
+   meta:
+      description         = "Detects EvilAI with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-08"
+      version             = "1.0"
+
+      hash                = "6968840ce1b13d50d13f7f0320a2e5d66bfd97073f325231edc58ec85e694b6b"
+      malware             = "EvilAI"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Eos Mist LTD"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "7c:74:a3:c9:57:89:69:d8:a1:64:d6:35:22:f4:49:1d"
+      cert_thumbprint     = "521676B457B9E2ABB2944222F11AE962C829DDDE"
+      cert_valid_from     = "2026-01-08"
+      cert_valid_to       = "2027-01-08"
+
+      country             = "IL"
+      state               = "Central"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "516234788"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "7c:74:a3:c9:57:89:69:d8:a1:64:d6:35:22:f4:49:1d"
+      )
+}
+
+rule MAL_Compromised_Cert_EvilAI_Sectigo_7EF13C01CE34093827A3186CACF37630 {
+   meta:
+      description         = "Detects EvilAI with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-11"
+      version             = "1.0"
+
+      hash                = "3f906f28de0b804c69c26792820e29a208ce57fe54da0eaef3e7020793bcbce3"
+      malware             = "EvilAI"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Sphere Ignite Studio LLC"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "7e:f1:3c:01:ce:34:09:38:27:a3:18:6c:ac:f3:76:30"
+      cert_thumbprint     = "4F9CD354F88C7262259B7E4A2420196315740F36"
+      cert_valid_from     = "2025-11-11"
+      cert_valid_to       = "2026-11-11"
+
+      country             = "US"
+      state               = "Wyoming"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "2025-001774961"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "7e:f1:3c:01:ce:34:09:38:27:a3:18:6c:ac:f3:76:30"
       )
 }
 
@@ -18967,6 +19282,41 @@ rule MAL_Compromised_Cert_FakeWallet_Sectigo_00FAC1893DDD1269E2FFF8DF609F973FA1 
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "00:fa:c1:89:3d:dd:12:69:e2:ff:f8:df:60:9f:97:3f:a1"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeWallet_Sectigo_3CBE9D4011670300D1997DB20AD1468E {
+   meta:
+      description         = "Detects FakeWallet with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-21"
+      version             = "1.0"
+
+      hash                = "9eb8fadaf8c766972a690ac705d6a4af32db75d84d290aa8a8584885e59204dd"
+      malware             = "FakeWallet"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious installer impersonating Sollet Wallet"
+
+      signer              = "Yixing Guhao Ceramics Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "3c:be:9d:40:11:67:03:00:d1:99:7d:b2:0a:d1:46:8e"
+      cert_thumbprint     = "15F82BC7DA08A375FBFF15A9E9766A8C34896DA3"
+      cert_valid_from     = "2026-01-21"
+      cert_valid_to       = "2027-01-21"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "3c:be:9d:40:11:67:03:00:d1:99:7d:b2:0a:d1:46:8e"
       )
 }
 

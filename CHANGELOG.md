@@ -4,6 +4,23 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.30] - 2026-03-30
+
+### Added
+- MAL_Compromised_Cert_EvilAI_Sectigo_2D567E9BCBADE9DF178AA2AF77545724 (EvilAI - Sectigo)
+- MAL_Compromised_Cert_EvilAI_Sectigo_0CF28ED37CB518C20C6EFCD550B0629B (EvilAI - Sectigo)
+- MAL_Compromised_Cert_FakeWallet_Sectigo_3CBE9D4011670300D1997DB20AD1468E (FakeWallet - Sectigo)
+- MAL_Compromised_Cert_EvilAI_Sectigo_00CC30AD05F738E13861377BC08D188AE3 (EvilAI - Sectigo)
+
+### Modified
+- MAL_Compromised_Cert_EvilAI_Sectigo_00A17E0D68EA949320B5EA0BB0F28A3FB6 (Updated metadata for EvilAI)
+- MAL_Compromised_Cert_EvilAI_Sectigo_7EF13C01CE34093827A3186CACF37630 (Updated metadata for EvilAI)
+- MAL_Compromised_Cert_EvilAI_Sectigo_0094FAEF953FFD84F5CAC6C77E45247A68 (Updated metadata for EvilAI)
+- MAL_Compromised_Cert_EvilAI_Sectigo_00EED2C30A99A60BF952C32CAC4C21B623 (Updated metadata for EvilAI)
+- MAL_Compromised_Cert_BackdoorElectron_Microsoft_330008BF7AFB3B5E4631E287B400000008BF7A (Updated metadata for BackdoorElectron)
+- MAL_Compromised_Cert_EvilAI_Sectigo_4A9C63924593F709C2F8336B06709D78 (Updated metadata for EvilAI)
+- MAL_Compromised_Cert_EvilAI_Sectigo_7C74A3C9578969D8A164D63522F4491D (Updated metadata for EvilAI)
+
 ## [2026.03.29] - 2026-03-29
 
 ### Added
