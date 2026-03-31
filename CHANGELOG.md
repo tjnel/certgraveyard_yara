@@ -4,6 +4,20 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.03.31] - 2026-03-31
+
+### Added
+- MAL_Compromised_Cert_CastleLoader_Sectigo_3D750F9AC0E074D810BCF82573950AF3 (CastleLoader - Sectigo)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_33000895015C8E0366320A9CB8000000089501 (Forever Botnet,BR-01 - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_Sectigo_00A8F8379EE21B6B3859DA939532512002 (CastleLoader - Sectigo)
+- MAL_Compromised_Cert_FakeNDASign_Microsoft_330007BAE25F25ABAAD971133B00000007BAE2 (FakeNDASign - Microsoft)
+- MAL_Compromised_Cert_FakeWallet_Sectigo_0091929DE2700952A16EC4A63D9D815E9D (FakeWallet - Sectigo)
+- MAL_Compromised_Cert_RomCom_GlobalSign_02EB8FA2C506DAAF6D4CC641 (RomCom - GlobalSign)
+- MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_330007BADC8C3111FCC016B22B00000007BADC (LoremIpsumLoader - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_FakeWallet_Sectigo_3CBE9D4011670300D1997DB20AD1468E (Updated metadata for FakeWallet)
+
 ## [2026.03.30] - 2026-03-30
 
 ### Added

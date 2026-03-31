@@ -5775,6 +5775,41 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_00825FF994DC68446E998A6F20F122561
       )
 }
 
+rule MAL_Compromised_Cert_CastleLoader_Sectigo_00A8F8379EE21B6B3859DA939532512002 {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-19"
+      version             = "1.0"
+
+      hash                = "b38c9f871dc4735320464bb80219372a0ffe2b4f8750942b550576ace9b012b8"
+      malware             = "CastleLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Xiamen Yufeng Tiantai Network Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:a8:f8:37:9e:e2:1b:6b:38:59:da:93:95:32:51:20:02"
+      cert_thumbprint     = "FBBE30902F0D6F10ABEFE71B8879CAC0339B0578"
+      cert_valid_from     = "2026-03-19"
+      cert_valid_to       = "2027-03-19"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350203MACUPRB30D"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:a8:f8:37:9e:e2:1b:6b:38:59:da:93:95:32:51:20:02"
+      )
+}
+
 rule MAL_Compromised_Cert_CastleLoader_Sectigo_00C4C826993B825CA050C82622E1D698CF {
    meta:
       description         = "Detects CastleLoader with compromised cert (Sectigo)"
@@ -5877,6 +5912,41 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_11FC7C80473F272CED037319E717F948 
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "11:fc:7c:80:47:3f:27:2c:ed:03:73:19:e7:17:f9:48"
+      )
+}
+
+rule MAL_Compromised_Cert_CastleLoader_Sectigo_3D750F9AC0E074D810BCF82573950AF3 {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-19"
+      version             = "1.0"
+
+      hash                = "e913b436fe3debd25ed0fa24e84e313f104490be66687a584f9cc15e0b23d9c8"
+      malware             = "CastleLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Xiamen Longhu Sanlu E-commerce Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "3d:75:0f:9a:c0:e0:74:d8:10:bc:f8:25:73:95:0a:f3"
+      cert_thumbprint     = "4023C8F4A6A4FC50A59D64B697482A79EEE367EC"
+      cert_valid_from     = "2026-03-19"
+      cert_valid_to       = "2027-03-19"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350203094066632J"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "3d:75:0f:9a:c0:e0:74:d8:10:bc:f8:25:73:95:0a:f3"
       )
 }
 
@@ -17325,6 +17395,41 @@ rule MAL_Compromised_Cert_FakeNDASign_Microsoft_3300073B7CFE433F3290F2E720000000
       )
 }
 
+rule MAL_Compromised_Cert_FakeNDASign_Microsoft_330007BAE25F25ABAAD971133B00000007BAE2 {
+   meta:
+      description         = "Detects FakeNDASign with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-30"
+      version             = "1.0"
+
+      hash                = "e25fa1d0a29eaea8b9a60a2d39c73f147efd544d391a4a4e115df13534226481"
+      malware             = "FakeNDASign"
+      malware_type        = "Unknown"
+      malware_notes       = "Malware campaign targeting job-seekers with fake landing ndavia[.]com"
+
+      signer              = "Robert Walters"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:07:ba:e2:5f:25:ab:aa:d9:71:13:3b:00:00:00:07:ba:e2"
+      cert_thumbprint     = "583010C39855AE4F2E246D06D1D9D3B74653EAC0"
+      cert_valid_from     = "2026-03-30"
+      cert_valid_to       = "2026-04-02"
+
+      country             = "US"
+      state               = "California"
+      locality            = "Placentia"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:07:ba:e2:5f:25:ab:aa:d9:71:13:3b:00:00:00:07:ba:e2"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeNDASign_Microsoft_3300084B4DB3FBEEF8CDC80160000000084B4D {
    meta:
       description         = "Detects FakeNDASign with compromised cert (Microsoft)"
@@ -19180,6 +19285,41 @@ rule MAL_Compromised_Cert_FakeWallet_SSL_com_74CC097BCA0EBAE54EC126E526AC20DC {
       )
 }
 
+rule MAL_Compromised_Cert_FakeWallet_Sectigo_0091929DE2700952A16EC4A63D9D815E9D {
+   meta:
+      description         = "Detects FakeWallet with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-28"
+      version             = "1.0"
+
+      hash                = "11b7a18b617876c34d98a8ec362f6a08c3e7308b5e7c6d792d4c417e55ce3814"
+      malware             = "FakeWallet"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious installer impersonating Electrum XRP wallet"
+
+      signer              = "Hefei Fanchun Cultural Communication Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:91:92:9d:e2:70:09:52:a1:6e:c4:a6:3d:9d:81:5e:9d"
+      cert_thumbprint     = "F69C92AD7827043C9D0B5B78A810DE9B3A98FA67"
+      cert_valid_from     = "2026-01-28"
+      cert_valid_to       = "2027-01-28"
+
+      country             = "CN"
+      state               = "Anhui Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91330109MA2HXDJ10C"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:91:92:9d:e2:70:09:52:a1:6e:c4:a6:3d:9d:81:5e:9d"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeWallet_Sectigo_0094F5923990A86F83CDE9B6FABC70DF10 {
    meta:
       description         = "Detects FakeWallet with compromised cert (Sectigo)"
@@ -19306,11 +19446,11 @@ rule MAL_Compromised_Cert_FakeWallet_Sectigo_3CBE9D4011670300D1997DB20AD1468E {
       cert_valid_from     = "2026-01-21"
       cert_valid_to       = "2027-01-21"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Jiangsu Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91320282MA22C8GP6K"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -19877,6 +20017,41 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330008936B9F218049D1F67
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
          sig.serial == "33:00:08:93:6b:9f:21:80:49:d1:f6:7b:06:00:00:00:08:93:6b"
+      )
+}
+
+rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_33000895015C8E0366320A9CB8000000089501 {
+   meta:
+      description         = "Detects Forever Botnet,BR-01 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-29"
+      version             = "1.0"
+
+      hash                = "d418420aa4accfb887be12a22b277a1ea14a74bbb074debd1dc2cd341117ec1a"
+      malware             = "Forever Botnet,BR-01"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Stalin Fabrico Loor Romero"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:08:95:01:5c:8e:03:66:32:0a:9c:b8:00:00:00:08:95:01"
+      cert_thumbprint     = "EAF99F6612D630F0E09891C6BDE940E52244B3D9"
+      cert_valid_from     = "2026-03-29"
+      cert_valid_to       = "2026-04-01"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "Richmond"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:08:95:01:5c:8e:03:66:32:0a:9c:b8:00:00:00:08:95:01"
       )
 }
 
@@ -26562,6 +26737,41 @@ rule MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_3300079173F96971CC939E847D0
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
          sig.serial == "33:00:07:91:73:f9:69:71:cc:93:9e:84:7d:00:00:00:07:91:73"
+      )
+}
+
+rule MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_330007BADC8C3111FCC016B22B00000007BADC {
+   meta:
+      description         = "Detects LoremIpsumLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-30"
+      version             = "1.0"
+
+      hash                = "bd23dea9295ebf3783b8c958723800308f6a77c3e059319af0b9ce0b2f67cb2a"
+      malware             = "LoremIpsumLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "Installs a Microsoft Teams as a decoy."
+
+      signer              = "ZINEB SEFRIOUI"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:07:ba:dc:8c:31:11:fc:c0:16:b2:2b:00:00:00:07:ba:dc"
+      cert_thumbprint     = "E5F72590511CDFB533E50115EEB0BE8A730D8C56"
+      cert_valid_from     = "2026-03-30"
+      cert_valid_to       = "2026-04-02"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:07:ba:dc:8c:31:11:fc:c0:16:b2:2b:00:00:00:07:ba:dc"
       )
 }
 
@@ -48297,6 +48507,41 @@ rule MAL_Compromised_Cert_RomCom_DigiCert_07B749F7C9E5021A1EF5B61AE96A6C46 {
       for any sig in pe.signatures : (
          sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
          sig.serial == "07:b7:49:f7:c9:e5:02:1a:1e:f5:b6:1a:e9:6a:6c:46"
+      )
+}
+
+rule MAL_Compromised_Cert_RomCom_GlobalSign_02EB8FA2C506DAAF6D4CC641 {
+   meta:
+      description         = "Detects RomCom with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-20"
+      version             = "1.0"
+
+      hash                = "1d03b2544e313266cf43f3744391cc0a9f91f30be8c1bc47f67c6a7d6118165e"
+      malware             = "RomCom"
+      malware_type        = "Initial access tool"
+      malware_notes       = "Dropped from fake GoogleDrive."
+
+      signer              = "INLINE SOFTWARE ANS"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "02:eb:8f:a2:c5:06:da:af:6d:4c:c6:41"
+      cert_thumbprint     = "AF80872643182ADD9724708F7892F936993922C7"
+      cert_valid_from     = "2026-02-20"
+      cert_valid_to       = "2027-02-21"
+
+      country             = "NO"
+      state               = "Oslo"
+      locality            = "Oslo"
+      email               = "???"
+      rdn_serial_number   = "990 163 898"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "02:eb:8f:a2:c5:06:da:af:6d:4c:c6:41"
       )
 }
 
