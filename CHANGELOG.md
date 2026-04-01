@@ -4,6 +4,11 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.04.01] - 2026-04-01
+
+### Modified
+- MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_330007BADC8C3111FCC016B22B00000007BADC (Updated metadata for LoremIpsumLoader)
+
 ## [2026.03.31] - 2026-03-31
 
 ### Added
