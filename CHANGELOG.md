@@ -4,6 +4,28 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.04.02] - 2026-04-02
+
+### Added
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00831A7B254D0681288BEB3797AA141B77 (Zhong Stealer - Sectigo)
+- MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_330008E2B86CCF64EF87699B7300000008E2B8 (LoremIpsumLoader - Microsoft)
+- MAL_Compromised_Cert_FakePDF_PDFLab_Sectigo_00BB6F90DE295BBA1CB4ECA3E64C36277C (FakePDF, PDFLab - Sectigo)
+- MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_330007C066AA4007786CB243E900000007C066 (LoremIpsumLoader - Microsoft)
+- MAL_Compromised_Cert_WhatsApp_session_stealer_Certum_5EDC58F66A14EBCFA5DBABC554D6C566 (WhatsApp session stealer - Certum)
+- MAL_Compromised_Cert_BumbleBee_Sectigo_3CF1CF07647C6052688E66D3B2E179DF (BumbleBee - Sectigo)
+- MAL_Compromised_Cert_SecTopRAT_ArechClient2_Microsoft_33000867FAE797A311B1F40D630000000867FA (SecTopRAT,ArechClient2 - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_BumbleBee_GlobalSign_5550E7366660417E8F144A5C (Updated metadata for BumbleBee)
+- MAL_Compromised_Cert_BumbleBee_GlobalSign_5C37013893858BA3EFBBED44 (Updated metadata for BumbleBee)
+- MAL_Compromised_Cert_BumbleBee_GlobalSign_3805DC7EA4CD84151C90FFAF (Updated metadata for BumbleBee)
+- MAL_Compromised_Cert_BumbleBee_GlobalSign_398A54E22351662D5BF28FA0 (Updated metadata for BumbleBee)
+- MAL_Compromised_Cert_BumbleBee_GlobalSign_694485FC3754D759163719A3 (Updated metadata for BumbleBee)
+- MAL_Compromised_Cert_BumbleBee_GlobalSign_073B9B32FE16B00A4268F97B (Updated metadata for BumbleBee)
+
+### Removed
+- MAL_Compromised_Cert_ETDucky_FakeRMM_SSL_com_6607C6D3AA188E3EA1CEDBEC3A764F36 (Removed ETDucky, FakeRMM rule)
+
 ## [2026.04.01] - 2026-04-01
 
 ### Modified
