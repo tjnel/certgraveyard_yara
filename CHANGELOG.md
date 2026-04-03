@@ -4,6 +4,16 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.04.03] - 2026-04-03
+
+### Added
+- MAL_Compromised_Cert_EvilAI_Sectigo_00A4969B69DD31D1AFA2F2937A2844FF73 (EvilAI - Sectigo)
+- MAL_Compromised_Cert_Unknown_GlobalSign_1B282C1B3E5EF170CBF9993A (Unknown - GlobalSign)
+
+### Modified
+- MAL_Compromised_Cert_StatusLoader_Sectigo_00C0AC0D9E7DCACB044CFFBB68D24C7058 (Updated metadata for StatusLoader)
+- MAL_Compromised_Cert_StatusLoader_Microsoft_33000867FAE797A311B1F40D630000000867FA (Updated metadata for StatusLoader)
+
 ## [2026.04.02] - 2026-04-02
 
 ### Added
