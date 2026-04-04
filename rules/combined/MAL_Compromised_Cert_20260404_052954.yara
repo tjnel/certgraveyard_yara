@@ -60865,6 +60865,41 @@ rule MAL_Compromised_Cert_TransferLoader_Sectigo_701640EA48E057540967509B99E48AE
       )
 }
 
+rule MAL_Compromised_Cert_TransferLoader_Sectigo_7A37178F179E98A61707912AD0DEB4F9 {
+   meta:
+      description         = "Detects TransferLoader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-04"
+      version             = "1.0"
+
+      hash                = "9d8373d9bccb3ba200e4c1aae48c083736298c4eb3a37feb17896bcf5cb02616"
+      malware             = "TransferLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
+
+      signer              = "Xiamen Zhiqing Information Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "7a:37:17:8f:17:9e:98:a6:17:07:91:2a:d0:de:b4:f9"
+      cert_thumbprint     = "92970EDFC9E778A9CF21918ED38D6483233C6963"
+      cert_valid_from     = "2026-03-04"
+      cert_valid_to       = "2027-03-04"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "7a:37:17:8f:17:9e:98:a6:17:07:91:2a:d0:de:b4:f9"
+      )
+}
+
 rule MAL_Compromised_Cert_Transferloader_Sectigo_227563ECCF59CBD7E3E7C8731B666194 {
    meta:
       description         = "Detects Transferloader with compromised cert (Sectigo)"
@@ -66521,11 +66556,11 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_1B282C1B3E5EF170CBF9993A {
       cert_valid_from     = "2026-03-10"
       cert_valid_to       = "2027-03-11"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "TR"
+      state               = "Istanbul"
+      locality            = "Istanbul"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "1087834"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -79797,6 +79832,41 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_34E947F11A0DA31561875BFC5FBCC5AB
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "34:e9:47:f1:1a:0d:a3:15:61:87:5b:fc:5f:bc:c5:ab"
+      )
+}
+
+rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_38BF78674DA7DED94863D622BA150FDB {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-19"
+      version             = "1.0"
+
+      hash                = "7c995c884d4e3b0d38157c510bcc37cd7a8ca35ae24eb1ea0c7e52d76b8a7dca"
+      malware             = "Zhong Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = ""
+
+      signer              = "Xiamen Dahonghuo Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "38:bf:78:67:4d:a7:de:d9:48:63:d6:22:ba:15:0f:db"
+      cert_thumbprint     = "6330EC795E2B93B4A2221A78C25CFCD578A04A02"
+      cert_valid_from     = "2026-03-19"
+      cert_valid_to       = "2027-03-19"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350206MA34UAC54C"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "38:bf:78:67:4d:a7:de:d9:48:63:d6:22:ba:15:0f:db"
       )
 }
 
