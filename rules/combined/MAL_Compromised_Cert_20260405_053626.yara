@@ -60886,11 +60886,11 @@ rule MAL_Compromised_Cert_TransferLoader_Sectigo_7A37178F179E98A61707912AD0DEB4F
       cert_valid_from     = "2026-03-04"
       cert_valid_to       = "2027-03-04"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Fujian Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91350205MACM7UFB4Q"
 
    condition:
       uint16(0) == 0x5a4d and
