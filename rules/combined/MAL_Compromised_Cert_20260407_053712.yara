@@ -16646,11 +16646,11 @@ rule MAL_Compromised_Cert_FakeDocument_Sectigo_00ACB4AF64AC061AADB00B5370B4CA024
       cert_valid_from     = "2026-03-24"
       cert_valid_to       = "2027-03-24"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Fujian Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91350203MADN0B6E4T"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -50281,11 +50281,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_GlobalSign_59611D26E291A6E43FE407B
       cert_valid_from     = "2026-03-30"
       cert_valid_to       = "2027-03-31"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "AT"
+      state               = "Wien"
+      locality            = "Wien"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "283786h"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -52742,6 +52742,41 @@ rule MAL_Compromised_Cert_SmokedHam_GlobalSign_74E3872F1704AB1FA55B715B {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "74:e3:87:2f:17:04:ab:1f:a5:5b:71:5b"
+      )
+}
+
+rule MAL_Compromised_Cert_SmokedHam_Microsoft_330008E0AAEAA997DF0BBA56FE00000008E0AA {
+   meta:
+      description         = "Detects SmokedHam with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-01"
+      version             = "1.0"
+
+      hash                = "111cc2d2232705565c4dbbddf7d16104bbf83554248a2ed0520b4e37bdc3acf5"
+      malware             = "SmokedHam"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
+
+      signer              = "CHRISTOPHER CONLEY"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:08:e0:aa:ea:a9:97:df:0b:ba:56:fe:00:00:00:08:e0:aa"
+      cert_thumbprint     = "9DD89FD3363F79226A5CDCB3B3F182C549822CBF"
+      cert_valid_from     = "2026-04-01"
+      cert_valid_to       = "2026-04-04"
+
+      country             = "US"
+      state               = "Alaska"
+      locality            = "ANCHORAGE"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:08:e0:aa:ea:a9:97:df:0b:ba:56:fe:00:00:00:08:e0:aa"
       )
 }
 
@@ -78876,11 +78911,11 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_03A4E330B16DED8C61AD0FB23ECB2E1
       cert_valid_from     = "2026-04-02"
       cert_valid_to       = "2027-04-30"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "北京市"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91110114585817189X"
 
    condition:
       uint16(0) == 0x5a4d and

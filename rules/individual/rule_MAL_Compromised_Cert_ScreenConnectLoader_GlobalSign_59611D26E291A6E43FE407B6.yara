@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_GlobalSign_59611D26E291A6E43FE407B
       cert_valid_from     = "2026-03-30"
       cert_valid_to       = "2027-03-31"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "AT"
+      state               = "Wien"
+      locality            = "Wien"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "283786h"
 
    condition:
       uint16(0) == 0x5a4d and

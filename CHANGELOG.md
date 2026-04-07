@@ -4,6 +4,16 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.04.07] - 2026-04-07
+
+### Added
+- MAL_Compromised_Cert_SmokedHam_Microsoft_330008E0AAEAA997DF0BBA56FE00000008E0AA (SmokedHam - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_FakeDocument_Sectigo_00ACB4AF64AC061AADB00B5370B4CA0246 (Updated metadata for FakeDocument)
+- MAL_Compromised_Cert_Zhong_Stealer_DigiCert_03A4E330B16DED8C61AD0FB23ECB2E1A (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_ScreenConnectLoader_GlobalSign_59611D26E291A6E43FE407B6 (Updated metadata for ScreenConnectLoader)
+
 ## [2026.04.06] - 2026-04-06
 
 ### Added
