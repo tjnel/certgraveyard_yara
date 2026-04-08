@@ -4,6 +4,16 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.04.08] - 2026-04-08
+
+### Added
+- MAL_Compromised_Cert_FakeMullvad_Sectigo_36453787AE28F52F1E09C6822DD816C3 (FakeMullvad - Sectigo)
+- MAL_Compromised_Cert_Zhong_Stealer_DigiCert_02ED93FDB6CFB33A477E218531F32922 (Zhong Stealer - DigiCert)
+- MAL_Compromised_Cert_FakeKeePass_Sectigo_00C7A713AF125FBE47B79DCB11EC819E16 (FakeKeePass - Sectigo)
+- MAL_Compromised_Cert_RomCom_Certum_56D0EAAC945D2F0615772047C9C131F5 (RomCom - Certum)
+- MAL_Compromised_Cert_UNK_50_Microsoft_330007C55BD31142C199294EA500000007C55B (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_VariantLoader_Microsoft_3300089BEBADC9E0C3B72199AD000000089BEB (VariantLoader - Microsoft)
+
 ## [2026.04.07] - 2026-04-07
 
 ### Added
