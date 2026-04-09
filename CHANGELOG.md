@@ -4,6 +4,22 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.04.09] - 2026-04-09
+
+### Added
+- MAL_Compromised_Cert_Unknown_FakePDF_Microsoft_330007E91616A73C962F797CAB00000007E916 (Unknown,FakePDF - Microsoft)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330007C40A6B2924C691CE681A00000007C40A (Forever Botnet,BR-01 - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_3300079E8643F87B3C63BDF561000000079E86 (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_3300089A0D4ACA6FD9F156502C000000089A0D (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_330007929266E02AB4FEC3E46C000000079292 (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_FakeMSTeams_Certum_0F971773C38E4B32ACB121855151BAA4 (FakeMSTeams - Certum)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330008DCD7BAA40977D7FE5F0500000008DCD7 (Forever Botnet,BR-01 - Microsoft)
+- MAL_Compromised_Cert_FakeUpdate_Microsoft_330007EB2EFDF089C1D4B0FADC00000007EB2E (FakeUpdate - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_FakeKeePass_Sectigo_00C7A713AF125FBE47B79DCB11EC819E16 (Updated metadata for FakeKeePass)
+- MAL_Compromised_Cert_FakeMullvad_Sectigo_36453787AE28F52F1E09C6822DD816C3 (Updated metadata for FakeMullvad)
+
 ## [2026.04.08] - 2026-04-08
 
 ### Added

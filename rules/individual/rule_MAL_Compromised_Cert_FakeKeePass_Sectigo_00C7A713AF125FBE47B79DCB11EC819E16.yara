@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeKeePass_Sectigo_00C7A713AF125FBE47B79DCB11EC819E16
       cert_valid_from     = "2026-01-02"
       cert_valid_to       = "2027-01-02"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Guangdong Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91440300MAD22F4T7A"
 
    condition:
       uint16(0) == 0x5a4d and

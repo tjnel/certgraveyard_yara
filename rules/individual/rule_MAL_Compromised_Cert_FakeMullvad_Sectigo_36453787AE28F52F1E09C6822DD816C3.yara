@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeMullvad_Sectigo_36453787AE28F52F1E09C6822DD816C3 {
       cert_valid_from     = "2026-01-02"
       cert_valid_to       = "2027-01-02"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Fujian Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "913502030658786582"
 
    condition:
       uint16(0) == 0x5a4d and
