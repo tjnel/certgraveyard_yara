@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeMSTeams_Certum_0F971773C38E4B32ACB121855151BAA4 {
       cert_valid_from     = "2026-03-14"
       cert_valid_to       = "2027-03-14"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "BG"
+      state               = "Burgas"
+      locality            = "Burgas"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

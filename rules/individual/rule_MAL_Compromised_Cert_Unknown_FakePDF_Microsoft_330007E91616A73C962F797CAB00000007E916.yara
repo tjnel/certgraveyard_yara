@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Unknown_FakePDF_Microsoft_330007E91616A73C962F797CAB00
       cert_valid_from     = "2026-04-07"
       cert_valid_to       = "2026-04-10"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "California"
+      locality            = "ADELANTO"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

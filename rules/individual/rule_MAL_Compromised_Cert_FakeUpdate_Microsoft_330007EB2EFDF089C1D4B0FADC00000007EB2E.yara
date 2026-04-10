@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeUpdate_Microsoft_330007EB2EFDF089C1D4B0FADC0000000
       cert_valid_from     = "2026-04-06"
       cert_valid_to       = "2026-04-09"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "California"
+      locality            = "PALO ALTO"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

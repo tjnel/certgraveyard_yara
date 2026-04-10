@@ -4,6 +4,29 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.04.10] - 2026-04-10
+
+### Added
+- MAL_Compromised_Cert_SmokedHam_Microsoft_3300000F85CC4C7C90F2B50435000000000F85 (SmokedHam - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_Sectigo_00A2C875FDD0D6FA22A2261813DEF8A56E (CastleLoader - Sectigo)
+- MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0CAE428F1BDCBEBAF284EEE9A643B1D8 (Zhong Stealer - DigiCert)
+- MAL_Compromised_Cert_Zhong_Stealer_DigiCert_01AF6469365C81AD7222E60FB1317062 (Zhong Stealer - DigiCert)
+
+### Modified
+- MAL_Compromised_Cert_FakeMSTeams_Certum_0F971773C38E4B32ACB121855151BAA4 (Updated metadata for FakeMSTeams)
+- MAL_Compromised_Cert_ValleyRAT_DigiCert_0DB8378E7C5F330A988848572F290434 (Updated metadata for ValleyRAT)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_1B9C25D3C04716F1FE4A7F61DB7D1758 (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_ValleyRAT_Certum_65620C1D74A8FD9630E9F2BF6281A61A (Updated metadata for ValleyRAT)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_3300089A0D4ACA6FD9F156502C000000089A0D (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_Unknown_FakePDF_Microsoft_330007E91616A73C962F797CAB00000007E916 (Updated metadata for Unknown,FakePDF)
+- MAL_Compromised_Cert_Zhong_Stealer_SSL_com_6FC27F0BBACFAA99807405016341540A (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_FakeUpdate_Microsoft_330007EB2EFDF089C1D4B0FADC00000007EB2E (Updated metadata for FakeUpdate)
+- MAL_Compromised_Cert_Zhong_Stealer_SSL_com_1144335932C394E43644A300BF7A746F (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_ValleyRAT_Sectigo_00ADC445B14C3C850CC30C6C0007EA9920 (Updated metadata for ValleyRAT)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_3300079E8643F87B3C63BDF561000000079E86 (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_Zhong_Stealer_SSL_com_7D0FA22D5E5F69EA34350A46FE01289F (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_330007929266E02AB4FEC3E46C000000079292 (Updated metadata for CastleLoader)
+
 ## [2026.04.09] - 2026-04-09
 
 ### Added
