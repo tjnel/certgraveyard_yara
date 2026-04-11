@@ -4,6 +4,13 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.04.11] - 2026-04-11
+
+### Added
+- MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0AE04FFA7B23CC3F7395B25F41255157 (Zhong Stealer - DigiCert)
+- MAL_Compromised_Cert_FakeRVTools_Sectigo_4069675AB7D4E8D61699ABB3745AD415 (FakeRVTools - Sectigo)
+- MAL_Compromised_Cert_FakeNDASign_Microsoft_330008B3D4C50528713453810100000008B3D4 (FakeNDASign - Microsoft)
+
 ## [2026.04.10] - 2026-04-10
 
 ### Added

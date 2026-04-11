@@ -18025,6 +18025,41 @@ rule MAL_Compromised_Cert_FakeNDASign_Microsoft_3300084B4DB3FBEEF8CDC80160000000
       )
 }
 
+rule MAL_Compromised_Cert_FakeNDASign_Microsoft_330008B3D4C50528713453810100000008B3D4 {
+   meta:
+      description         = "Detects FakeNDASign with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-25"
+      version             = "1.0"
+
+      hash                = "80b3c302cb1ab35193d4e54b3df270f5900a96d8848baa23f9505821b7d6610c"
+      malware             = "FakeNDASign"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
+
+      signer              = "Robert Walters"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:08:b3:d4:c5:05:28:71:34:53:81:01:00:00:00:08:b3:d4"
+      cert_thumbprint     = "E7A0D1E6DBDEE957127E17E9E40C93A277C9AA09"
+      cert_valid_from     = "2026-03-25"
+      cert_valid_to       = "2026-03-28"
+
+      country             = "US"
+      state               = "California"
+      locality            = "Placentia"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:08:b3:d4:c5:05:28:71:34:53:81:01:00:00:00:08:b3:d4"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeNSFW2_Microsoft_3300070C7A2B04CE4F071E4928000000070C7A {
    meta:
       description         = "Detects FakeNSFW2 with compromised cert (Microsoft)"
@@ -19282,6 +19317,41 @@ rule MAL_Compromised_Cert_FakeRVTools_GlobalSign_5A076B593C5E7DCA24430353 {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "5a:07:6b:59:3c:5e:7d:ca:24:43:03:53"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeRVTools_Sectigo_4069675AB7D4E8D61699ABB3745AD415 {
+   meta:
+      description         = "Detects FakeRVTools with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-09"
+      version             = "1.0"
+
+      hash                = "62df37acd922519eaea83a8679c6ff0c051a14768a18e7047f8cf0df4f021ddc"
+      malware             = "FakeRVTools"
+      malware_type        = "Unknown"
+      malware_notes       = "rv-tools[.]org"
+
+      signer              = "Zhongqing Information Technology (Xiamen) Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "40:69:67:5a:b7:d4:e8:d6:16:99:ab:b3:74:5a:d4:15"
+      cert_thumbprint     = "85D691439B83BCB9B021E9557ACF3C9BE38143D8"
+      cert_valid_from     = "2026-03-09"
+      cert_valid_to       = "2027-03-09"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "40:69:67:5a:b7:d4:e8:d6:16:99:ab:b3:74:5a:d4:15"
       )
 }
 
@@ -79692,6 +79762,41 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0A04CAF1BB3BC17A33C6E155EC4F588
       for any sig in pe.signatures : (
          sig.issuer contains "DigiCert Global G3 Code Signing ECC SHA384 2021 CA1" and
          sig.serial == "0a:04:ca:f1:bb:3b:c1:7a:33:c6:e1:55:ec:4f:58:83"
+      )
+}
+
+rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0AE04FFA7B23CC3F7395B25F41255157 {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-04"
+      version             = "1.0"
+
+      hash                = "c08a59750b5a72761d457e7b9875aa251f71c64d0c6bf7e391bb5c5f35cefc3c"
+      malware             = "Zhong Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = ""
+
+      signer              = "Luxvisions Innovation Technology Corp. Limited"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "0a:e0:4f:fa:7b:23:cc:3f:73:95:b2:5f:41:25:51:57"
+      cert_thumbprint     = "D569373B0DE55B737BAFB92656E5E3FFD1C47FEE"
+      cert_valid_from     = "2026-04-04"
+      cert_valid_to       = "2027-04-03"
+
+      country             = "CN"
+      state               = "Guangdong Province"
+      locality            = "Guangzhou"
+      email               = "???"
+      rdn_serial_number   = "91440101MA5AQWN78F"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "0a:e0:4f:fa:7b:23:cc:3f:73:95:b2:5f:41:25:51:57"
       )
 }
 
