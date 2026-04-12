@@ -4,6 +4,20 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.04.12] - 2026-04-12
+
+### Added
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007E8B5C8B22119B0B9A96000000007E8B5 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007A2006AFF3E68DB3F14A500000007A200 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300078B2CFE8B1145EAB178EB000000078B2C (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_Zhong_Stealer_DigiCert_049209454DB22190C7697285C3D5AD9B (Zhong Stealer - DigiCert)
+- MAL_Compromised_Cert_FakeUtility_Sectigo_00FB9FD9D5CF4778459DA4762CFDD4CA55 (FakeUtility - Sectigo)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007B3F9A9A4D05C01D4ECA700000007B3F9 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007EE40B5E0953926959AE700000007EE40 (ScreenConnectLoader - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_FakeRVTools_Sectigo_4069675AB7D4E8D61699ABB3745AD415 (Updated metadata for FakeRVTools)
+
 ## [2026.04.11] - 2026-04-11
 
 ### Added
