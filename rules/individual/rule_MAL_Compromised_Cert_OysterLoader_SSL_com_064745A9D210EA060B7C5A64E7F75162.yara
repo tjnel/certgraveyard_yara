@@ -8,10 +8,10 @@ rule MAL_Compromised_Cert_OysterLoader_SSL_com_064745A9D210EA060B7C5A64E7F75162 
       date                = "2025-08-28"
       version             = "1.0"
 
-      hash                = "33448e03ab7973452032086db5dcb22e7526fe5b46df093902986664072bb12a"
+      hash                = "ce8fb6edbf238116d2c6b102773cdf2329887ba0eeb537ec288bd4e196d08ccc"
       malware             = "OysterLoader"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware was part of an ongoing campaign and was disguised as an AI application: AIVpro_alpha.exe. The malware created a scheduled task for persistence. If unmitigated, provides remote access to ransomware actors."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "PANGEA CIVIL ENGINEERS SRL"
       cert_issuer_short   = "SSL.com"

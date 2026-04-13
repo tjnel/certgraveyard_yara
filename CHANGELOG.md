@@ -4,6 +4,45 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.04.13] - 2026-04-13
+
+### Modified
+- MAL_Compromised_Cert_OysterLoader_Microsoft_330004293537896BFB9C5AFFF6000000042935 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_Microsoft_3300043B67E4F8C74D2C120775000000043B67 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_Microsoft_330004716107E4C6AFE2950F49000000047161 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_Microsoft_330004081060BEC8220B100D8B000000040810 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_Microsoft_330003808CC20DE933506ACB4F00000003808C (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_Microsoft_3300034227859130DB98A2AA4A000000034227 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_SSL_com_2A3A540A1CAFC491099CEFCDC539548F (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_Microsoft_3300049B30C093ECFBF658940B000000049B30 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_SSL_com_7227974DB1FF4268501BB4B31EB8FF39 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_GlobalSign_3C7F0B3E22B1572B71883C94 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_Microsoft_330003808CC20DE933506ACB4F00000003808C (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_GlobalSign_14DE6008EE49B48E31CDA252 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_Microsoft_3300034A49F250470438D14A33000000034A49 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_SSL_com_064745A9D210EA060B7C5A64E7F75162 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_Microsoft_33000571E980AABA26C5B271BD0000000571E9 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_GlobalSign_3FAFE7EA5469C17A1069661F (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_SSL_com_14E52D6A45004663FEF6E69DAAA54FEF (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_GlobalSign_387867714BEB47BED987CB83 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_GlobalSign_03401D78C301D8B05979084B (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_GlobalSign_410DCFAE3DB2E499FD92C563 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_GlobalSign_48CC67779AA54699C6B1D7FE (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_Microsoft_33000373DA29C35A6AC0484D690000000373DA (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_GlobalSign_7C75A58852CA4C72348CF24D (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_SSL_com_28352420650C12A8E08A1B9909DE99FF (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_Microsoft_330004DF75475E1045FF87DE4200000004DF75 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_Microsoft_330003252AF2DC64B34CB7F7DB00000003252A (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_Microsoft_3300034A49F250470438D14A33000000034A49 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_SSL_com_53E6BB421575CFA2BE73195FD4049955 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_GlobalSign_20E91E269C6767BC49EB3D34 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_GlobalSign_18F9B670AB6C08E2AA13B122 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_Microsoft_3300043B67E4F8C74D2C120775000000043B67 (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_SSL_com_31D4015BD379F5DC18056F60D51A43CF (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_Microsoft_330003F85E2BF6B2496DC329F000000003F85E (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_OysterLoader_GlobalSign_48CC67779AA54699C6B1D7FE (Updated metadata for OysterLoader)
+- MAL_Compromised_Cert_FakeUtility_Sectigo_00FB9FD9D5CF4778459DA4762CFDD4CA55 (Updated metadata for FakeUtility)
+
 ## [2026.04.12] - 2026-04-12
 
 ### Added

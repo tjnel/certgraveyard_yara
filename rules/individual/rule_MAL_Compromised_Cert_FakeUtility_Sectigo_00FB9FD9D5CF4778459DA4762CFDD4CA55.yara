@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeUtility_Sectigo_00FB9FD9D5CF4778459DA4762CFDD4CA55
       cert_valid_from     = "2025-10-03"
       cert_valid_to       = "2026-10-03"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Sichuan Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91510100MADJ6CPP7M"
 
    condition:
       uint16(0) == 0x5a4d and

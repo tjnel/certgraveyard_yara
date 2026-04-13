@@ -19761,11 +19761,11 @@ rule MAL_Compromised_Cert_FakeUtility_Sectigo_00FB9FD9D5CF4778459DA4762CFDD4CA55
       cert_valid_from     = "2025-10-03"
       cert_valid_to       = "2026-10-03"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Sichuan Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91510100MADJ6CPP7M"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -36365,6 +36365,41 @@ rule MAL_Compromised_Cert_OysterLoader_DigiCert_0ED7F77844A2FA7D73F285219EE1A519
       )
 }
 
+rule MAL_Compromised_Cert_OysterLoader_GlobalSign_03401D78C301D8B05979084B {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-08-07"
+      version             = "1.0"
+
+      hash                = "d32b4924143948935a74f03ae921a4c2efa4a94848d49274208e7007c0102f73"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "BLUS CONSULTING LLP"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "03:40:1d:78:c3:01:d8:b0:59:79:08:4b"
+      cert_thumbprint     = "42FE654215B0D1046BDA7B5CD3A9B372449F9844"
+      cert_valid_from     = "2025-08-07"
+      cert_valid_to       = "2026-08-08"
+
+      country             = "IN"
+      state               = "Delhi"
+      locality            = "New Delhi"
+      email               = "ceoblusconsulting@gmail.com"
+      rdn_serial_number   = "AAS-4006"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "03:40:1d:78:c3:01:d8:b0:59:79:08:4b"
+      )
+}
+
 rule MAL_Compromised_Cert_OysterLoader_GlobalSign_04CF28D1A98360DF407FBED6 {
    meta:
       description         = "Detects OysterLoader with compromised cert (GlobalSign)"
@@ -36443,7 +36478,7 @@ rule MAL_Compromised_Cert_OysterLoader_GlobalSign_14DE6008EE49B48E31CDA252 {
       date                = "2025-07-03"
       version             = "1.0"
 
-      hash                = "a8e9f0da26a3d6729e744a6ea566c4fd4e372ceb4b2e7fc01d08844bfc5c3abb"
+      hash                = "3d22a974677164d6bd7166e521e96d07cd00c884b0aeacb5555505c6a62a1c26"
       malware             = "OysterLoader"
       malware_type        = "Initial access tool"
       malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
@@ -36467,6 +36502,76 @@ rule MAL_Compromised_Cert_OysterLoader_GlobalSign_14DE6008EE49B48E31CDA252 {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "14:de:60:08:ee:49:b4:8e:31:cd:a2:52"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_GlobalSign_18F9B670AB6C08E2AA13B122 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-08-07"
+      version             = "1.0"
+
+      hash                = "401e3fe6d27a438016a82c4bbc710dfca5ff3c8f533f5eadc7393ce4f1c2d498"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "LLC MCD - Profile"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "18:f9:b6:70:ab:6c:08:e2:aa:13:b1:22"
+      cert_thumbprint     = "03C6A12293856EC70A88A91E9DEF3224103B3262"
+      cert_valid_from     = "2025-08-07"
+      cert_valid_to       = "2026-04-24"
+
+      country             = "RU"
+      state               = "Moscow Oblast"
+      locality            = "Khimki"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "18:f9:b6:70:ab:6c:08:e2:aa:13:b1:22"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_GlobalSign_20E91E269C6767BC49EB3D34 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-08-08"
+      version             = "1.0"
+
+      hash                = "eb56b8c537a20ffcefa4140ab30a2b6ee009c531c6c9748935574b7b3d7f41b0"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "Bi-Test Limited Liability Company"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "20:e9:1e:26:9c:67:67:bc:49:eb:3d:34"
+      cert_thumbprint     = "392603E3F1D066C037F300FFF8D777856218F8E3"
+      cert_valid_from     = "2025-08-08"
+      cert_valid_to       = "2026-03-14"
+
+      country             = "KG"
+      state               = "Bishkek"
+      locality            = "Bishkek"
+      email               = "zaharmurashev@gmail.com"
+      rdn_serial_number   = "207602-3301-OOO"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "20:e9:1e:26:9c:67:67:bc:49:eb:3d:34"
       )
 }
 
@@ -36540,6 +36645,41 @@ rule MAL_Compromised_Cert_OysterLoader_GlobalSign_307E841F5277C970CEA18C01 {
       )
 }
 
+rule MAL_Compromised_Cert_OysterLoader_GlobalSign_387867714BEB47BED987CB83 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-26"
+      version             = "1.0"
+
+      hash                = "2e34b7e186e2a40c25177b573981c5c817c104f91a58a93a2e1bd1a0bbfd596a"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "LLC Abris"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "38:78:67:71:4b:eb:47:be:d9:87:cb:83"
+      cert_thumbprint     = "3C19819D63233B5D516B6D45F2FA8FC6A6EB7989"
+      cert_valid_from     = "2025-06-26"
+      cert_valid_to       = "2026-06-27"
+
+      country             = "RU"
+      state               = "Moscow"
+      locality            = "Moscow"
+      email               = "???"
+      rdn_serial_number   = "1127746307160"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "38:78:67:71:4b:eb:47:be:d9:87:cb:83"
+      )
+}
+
 rule MAL_Compromised_Cert_OysterLoader_GlobalSign_389C4A5BD8B84886ADAFD32C {
    meta:
       description         = "Detects OysterLoader with compromised cert (GlobalSign)"
@@ -36572,6 +36712,146 @@ rule MAL_Compromised_Cert_OysterLoader_GlobalSign_389C4A5BD8B84886ADAFD32C {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "38:9c:4a:5b:d8:b8:48:86:ad:af:d3:2c"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_GlobalSign_3C7F0B3E22B1572B71883C94 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-05-06"
+      version             = "1.0"
+
+      hash                = "681c59113d3a87a0086716b91642258097dc4da809d76c5566d184783d3b6cd4"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "Shanxi Jiusheng Tongtai Trading Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "3c:7f:0b:3e:22:b1:57:2b:71:88:3c:94"
+      cert_thumbprint     = "B4335AA9A34670C139BAD65C3DF83CAAA5147BB1"
+      cert_valid_from     = "2025-05-06"
+      cert_valid_to       = "2026-05-07"
+
+      country             = "CN"
+      state               = "Shanxi"
+      locality            = "Jinzhong"
+      email               = "???"
+      rdn_serial_number   = "91140727MA0GR8T80N"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "3c:7f:0b:3e:22:b1:57:2b:71:88:3c:94"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_GlobalSign_3FAFE7EA5469C17A1069661F {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-25"
+      version             = "1.0"
+
+      hash                = "a653b4f7f76ee8e6bd9ffa816c0a14dca2d591a84ee570d4b6245079064b5794"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "LLC Fortuna"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "3f:af:e7:ea:54:69:c1:7a:10:69:66:1f"
+      cert_thumbprint     = "CF22E3985849DD295571C535385019FA9559758C"
+      cert_valid_from     = "2025-06-25"
+      cert_valid_to       = "2026-06-26"
+
+      country             = "RU"
+      state               = "Moscow"
+      locality            = "Moscow"
+      email               = "???"
+      rdn_serial_number   = "1197746462770"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "3f:af:e7:ea:54:69:c1:7a:10:69:66:1f"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_GlobalSign_410DCFAE3DB2E499FD92C563 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-11"
+      version             = "1.0"
+
+      hash                = "80c8a6ecd5619d137aa57ddf252ab5dc9044266fca87f3e90c5b7f3664c5142f"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "PROFTORG LLC"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "41:0d:cf:ae:3d:b2:e4:99:fd:92:c5:63"
+      cert_thumbprint     = "D8F9AD4881FAEDF9B2EB4983C321FF499DCB931F"
+      cert_valid_from     = "2025-06-11"
+      cert_valid_to       = "2026-06-12"
+
+      country             = "RU"
+      state               = "Moscow"
+      locality            = "Moscow"
+      email               = "proftorg.info@rambler.ru"
+      rdn_serial_number   = "1257700210525"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "41:0d:cf:ae:3d:b2:e4:99:fd:92:c5:63"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_GlobalSign_48CC67779AA54699C6B1D7FE {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-08-02"
+      version             = "1.0"
+
+      hash                = "b61b51ba6ad7f7fe6465093a7c3f3f10d1079159febe33efb26fd64fa80408f1"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "LLC Globalnerudpostavka"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "48:cc:67:77:9a:a5:46:99:c6:b1:d7:fe"
+      cert_thumbprint     = "48D6D6529B0B98FD7CEAC4BF044519098ACE9213"
+      cert_valid_from     = "2025-08-02"
+      cert_valid_to       = "2026-04-11"
+
+      country             = "RU"
+      state               = "Moscow"
+      locality            = "Kommunarka"
+      email               = "???"
+      rdn_serial_number   = "1217700238139"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "48:cc:67:77:9a:a5:46:99:c6:b1:d7:fe"
       )
 }
 
@@ -36610,6 +36890,41 @@ rule MAL_Compromised_Cert_OysterLoader_GlobalSign_569587BA554EAD2539616B50 {
       )
 }
 
+rule MAL_Compromised_Cert_OysterLoader_GlobalSign_7C75A58852CA4C72348CF24D {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-07-04"
+      version             = "1.0"
+
+      hash                = "eef6d4b6bdf48a605cade0b517d5a51fc4f4570e505f3d8b9b66158902dcd4af"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "LLC Bravery"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "7c:75:a5:88:52:ca:4c:72:34:8c:f2:4d"
+      cert_thumbprint     = "FB85AA1E12C09130035D3EB72B50EBF5CCE092C7"
+      cert_valid_from     = "2025-07-04"
+      cert_valid_to       = "2026-07-05"
+
+      country             = "RU"
+      state               = "Moscow"
+      locality            = "Moscow"
+      email               = "???"
+      rdn_serial_number   = "1226100007077"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "7c:75:a5:88:52:ca:4c:72:34:8c:f2:4d"
+      )
+}
+
 rule MAL_Compromised_Cert_OysterLoader_GoGetSSL_0CD398F0C19E99E5A5CD1CCB63D49059 {
    meta:
       description         = "Detects OysterLoader with compromised cert (GoGetSSL)"
@@ -36642,6 +36957,391 @@ rule MAL_Compromised_Cert_OysterLoader_GoGetSSL_0CD398F0C19E99E5A5CD1CCB63D49059
       for any sig in pe.signatures : (
          sig.issuer contains "GoGetSSL G4 CS RSA4096 SHA256 2022 CA-1" and
          sig.serial == "0c:d3:98:f0:c1:9e:99:e5:a5:cd:1c:cb:63:d4:90:59"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_Microsoft_330003252AF2DC64B34CB7F7DB00000003252A {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-06"
+      version             = "1.0"
+
+      hash                = "daa4ca6b3a4d567eac51b70921a9d6254884477bf5454f966d0ef412c6f0e443"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "GALVIN & ASSOCIATES LLC"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:03:25:2a:f2:dc:64:b3:4c:b7:f7:db:00:00:00:03:25:2a"
+      cert_thumbprint     = "802BB60E5A6C41D66D4BD76E5A62474BF2CBCDB7"
+      cert_valid_from     = "2025-06-06"
+      cert_valid_to       = "2025-06-09"
+
+      country             = "US"
+      state               = "New York"
+      locality            = "NEW YORK"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:03:25:2a:f2:dc:64:b3:4c:b7:f7:db:00:00:00:03:25:2a"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_Microsoft_3300034227859130DB98A2AA4A000000034227 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-10"
+      version             = "1.0"
+
+      hash                = "cd671cfa42714a6d517476add60690081a16a5c6abaacce25fcb9c5ddf41b7d3"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "Micros in Action, Incorporated"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:03:42:27:85:91:30:db:98:a2:aa:4a:00:00:00:03:42:27"
+      cert_thumbprint     = "10F1D072B41F68104AAD99659EE2F97E0D62F37A"
+      cert_valid_from     = "2025-06-10"
+      cert_valid_to       = "2025-06-13"
+
+      country             = "US"
+      state               = "North Carolina"
+      locality            = "Mocksville"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:03:42:27:85:91:30:db:98:a2:aa:4a:00:00:00:03:42:27"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_Microsoft_3300034A49F250470438D14A33000000034A49 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-12"
+      version             = "1.0"
+
+      hash                = "e9e5311fbf76eea22c42daa381074feecb745020db473184e6236f9a08816925"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "Micros in Action, Incorporated"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:03:4a:49:f2:50:47:04:38:d1:4a:33:00:00:00:03:4a:49"
+      cert_thumbprint     = "CF798CFDD81C09378349DC8A9331C144E3797CBE"
+      cert_valid_from     = "2025-06-12"
+      cert_valid_to       = "2025-06-15"
+
+      country             = "US"
+      state               = "North Carolina"
+      locality            = "Mocksville"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:03:4a:49:f2:50:47:04:38:d1:4a:33:00:00:00:03:4a:49"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_Microsoft_33000373DA29C35A6AC0484D690000000373DA {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-28"
+      version             = "1.0"
+
+      hash                = "0ada29254a6f60816b648c8247d46f1eb122439137f93c91388da2c0d4586550"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "TOLEDO SOFTWARE LLC"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:03:73:da:29:c3:5a:6a:c0:48:4d:69:00:00:00:03:73:da"
+      cert_thumbprint     = "EE70CAA544AFDFF40ED83528B637A7651B3EAA3C"
+      cert_valid_from     = "2025-06-28"
+      cert_valid_to       = "2025-07-01"
+
+      country             = "US"
+      state               = "Ohio"
+      locality            = "Toledo"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:03:73:da:29:c3:5a:6a:c0:48:4d:69:00:00:00:03:73:da"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_Microsoft_330003808CC20DE933506ACB4F00000003808C {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-07-01"
+      version             = "1.0"
+
+      hash                = "eaebd963b1e8dc5d3bd53a4842401559700f3201cd6589870281ab5b1ab57af3"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "Alternative Power Systems Solutions LLC"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:03:80:8c:c2:0d:e9:33:50:6a:cb:4f:00:00:00:03:80:8c"
+      cert_thumbprint     = "5E48471106CD3B222863E6A27B8C86F98DCE369A"
+      cert_valid_from     = "2025-07-01"
+      cert_valid_to       = "2025-07-04"
+
+      country             = "US"
+      state               = "Arizona"
+      locality            = "Chandler"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:03:80:8c:c2:0d:e9:33:50:6a:cb:4f:00:00:00:03:80:8c"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_Microsoft_330003F85E2BF6B2496DC329F000000003F85E {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-05"
+      version             = "1.0"
+
+      hash                = "dae9df9ce0f5286cfe871fda680e4de440c8444a44ceb434c28d5ccf786f5e8d"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "GALVIN & ASSOCIATES LLC"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:03:f8:5e:2b:f6:b2:49:6d:c3:29:f0:00:00:00:03:f8:5e"
+      cert_thumbprint     = "F88EF64C0B48D03ACC8F4916A9331BF0B961AC85"
+      cert_valid_from     = "2025-06-05"
+      cert_valid_to       = "2025-06-08"
+
+      country             = "US"
+      state               = "New York"
+      locality            = "NEW YORK"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:03:f8:5e:2b:f6:b2:49:6d:c3:29:f0:00:00:00:03:f8:5e"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_Microsoft_330004081060BEC8220B100D8B000000040810 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-15"
+      version             = "1.0"
+
+      hash                = "0bcdbd79c13fc50955804d0f2666c878542157fc3d4987d18d13c72e9697209e"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "IceCube Software, Inc."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:04:08:10:60:be:c8:22:0b:10:0d:8b:00:00:00:04:08:10"
+      cert_thumbprint     = "98FF3C03623F77A5A43D4C32A39A1CBE9DF42DD7"
+      cert_valid_from     = "2025-06-15"
+      cert_valid_to       = "2025-06-18"
+
+      country             = "US"
+      state               = "North Carolina"
+      locality            = "Davidson"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:04:08:10:60:be:c8:22:0b:10:0d:8b:00:00:00:04:08:10"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_Microsoft_330004293537896BFB9C5AFFF6000000042935 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-27"
+      version             = "1.0"
+
+      hash                = "51c85e40fb4f5bc3fd872261ffef181485791e2ffbe84ab96227461040a1ca4d"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "TOLEDO SOFTWARE LLC"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:04:29:35:37:89:6b:fb:9c:5a:ff:f6:00:00:00:04:29:35"
+      cert_thumbprint     = "AA330263723DDE937F070D2018F29DB7EE05E9B4"
+      cert_valid_from     = "2025-06-27"
+      cert_valid_to       = "2025-06-30"
+
+      country             = "US"
+      state               = "Ohio"
+      locality            = "Toledo"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:04:29:35:37:89:6b:fb:9c:5a:ff:f6:00:00:00:04:29:35"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_Microsoft_3300043B67E4F8C74D2C120775000000043B67 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-25"
+      version             = "1.0"
+
+      hash                = "dd995934bdab89ca6941633dea1ef6e6d9c3982af5b454ecb0a6c440032b30fb"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "NEW VISION MARKETING LLC"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:04:3b:67:e4:f8:c7:4d:2c:12:07:75:00:00:00:04:3b:67"
+      cert_thumbprint     = "51BB5BAEB3D293332FAB7E9A4CC23F406AFB0D94"
+      cert_valid_from     = "2025-06-25"
+      cert_valid_to       = "2025-06-28"
+
+      country             = "US"
+      state               = "Arizona"
+      locality            = "Mesa"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:04:3b:67:e4:f8:c7:4d:2c:12:07:75:00:00:00:04:3b:67"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_Microsoft_330004716107E4C6AFE2950F49000000047161 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-23"
+      version             = "1.0"
+
+      hash                = "32b0f69e2d046cb835060751fcda28b633cbbd964e6e54dbbc1482fff4d51b57"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "KUTTANADAN CREATIONS INC."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:04:71:61:07:e4:c6:af:e2:95:0f:49:00:00:00:04:71:61"
+      cert_thumbprint     = "A81B9CB3F76D8AD099102B4F05531DD1C877D845"
+      cert_valid_from     = "2025-09-23"
+      cert_valid_to       = "2025-09-26"
+
+      country             = "US"
+      state               = "New York"
+      locality            = "Floral Park"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:04:71:61:07:e4:c6:af:e2:95:0f:49:00:00:00:04:71:61"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_Microsoft_3300049B30C093ECFBF658940B000000049B30 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-02"
+      version             = "1.0"
+
+      hash                = "464db7461d6d67d99132eeaa9962d3691a3efc73f194fb660b4b8c77c10d9591"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "Nitta-Lai Investment Corp."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:04:9b:30:c0:93:ec:fb:f6:58:94:0b:00:00:00:04:9b:30"
+      cert_thumbprint     = "220BF4DB83683AD2B0C78852BE2B1D71699C6AD2"
+      cert_valid_from     = "2025-10-02"
+      cert_valid_to       = "2025-10-05"
+
+      country             = "CA"
+      state               = "Ontario"
+      locality            = "Etobicoke"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:04:9b:30:c0:93:ec:fb:f6:58:94:0b:00:00:00:04:9b:30"
       )
 }
 
@@ -36715,6 +37415,41 @@ rule MAL_Compromised_Cert_OysterLoader_Microsoft_330004BE507DF668D35C53F0C500000
       )
 }
 
+rule MAL_Compromised_Cert_OysterLoader_Microsoft_330004DF75475E1045FF87DE4200000004DF75 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-17"
+      version             = "1.0"
+
+      hash                = "b52dddf4022ee45243ad01705d5a8d5070cd62aa89174f1ab83f5b58f66d577a"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "Chidiac Entreprises Commerciales Inc."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:04:df:75:47:5e:10:45:ff:87:de:42:00:00:00:04:df:75"
+      cert_thumbprint     = "3C8979488316F223F882BCBBA527BB7D9D96A9AF"
+      cert_valid_from     = "2025-10-17"
+      cert_valid_to       = "2025-10-20"
+
+      country             = "CA"
+      state               = "Québec"
+      locality            = "MONTREAL"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:04:df:75:47:5e:10:45:ff:87:de:42:00:00:00:04:df:75"
+      )
+}
+
 rule MAL_Compromised_Cert_OysterLoader_Microsoft_3300050DC76B5EAA3EBF6729AB000000050DC7 {
    meta:
       description         = "Detects OysterLoader with compromised cert (Microsoft)"
@@ -36782,6 +37517,41 @@ rule MAL_Compromised_Cert_OysterLoader_Microsoft_330005700A78B0BEC32F1C809F00000
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
          sig.serial == "33:00:05:70:0a:78:b0:be:c3:2f:1c:80:9f:00:00:00:05:70:0a"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_Microsoft_33000571E980AABA26C5B271BD0000000571E9 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-22"
+      version             = "1.0"
+
+      hash                = "5c797080fa605cab2cd581645f00843f9c91c9c2d0ad4598ccb7886f990c916b"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "DELANEY HOME INSPECTIONS LLC"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:05:71:e9:80:aa:ba:26:c5:b2:71:bd:00:00:00:05:71:e9"
+      cert_thumbprint     = "003075A520624B49542FDBE04DB976D04D2B7A0A"
+      cert_valid_from     = "2025-09-22"
+      cert_valid_to       = "2025-09-25"
+
+      country             = "US"
+      state               = "New York"
+      locality            = "Oceanside"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:05:71:e9:80:aa:ba:26:c5:b2:71:bd:00:00:00:05:71:e9"
       )
 }
 
@@ -37143,10 +37913,10 @@ rule MAL_Compromised_Cert_OysterLoader_SSL_com_064745A9D210EA060B7C5A64E7F75162 
       date                = "2025-08-28"
       version             = "1.0"
 
-      hash                = "33448e03ab7973452032086db5dcb22e7526fe5b46df093902986664072bb12a"
+      hash                = "ce8fb6edbf238116d2c6b102773cdf2329887ba0eeb537ec288bd4e196d08ccc"
       malware             = "OysterLoader"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware was part of an ongoing campaign and was disguised as an AI application: AIVpro_alpha.exe. The malware created a scheduled task for persistence. If unmitigated, provides remote access to ransomware actors."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "PANGEA CIVIL ENGINEERS SRL"
       cert_issuer_short   = "SSL.com"
@@ -37202,6 +37972,181 @@ rule MAL_Compromised_Cert_OysterLoader_SSL_com_13CEA619DDE4C2A434A8974E4AC18FB4 
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "13:ce:a6:19:dd:e4:c2:a4:34:a8:97:4e:4a:c1:8f:b4"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_SSL_com_14E52D6A45004663FEF6E69DAAA54FEF {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-17"
+      version             = "1.0"
+
+      hash                = "a4e1c33b1280a0b2daab512b5a4cfdd775743a1980c9b63eb4bfb739356378ae"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "NEETLA LIFESTYLE PRIVATE LIMITED"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "14:e5:2d:6a:45:00:46:63:fe:f6:e6:9d:aa:a5:4f:ef"
+      cert_thumbprint     = "4FB21616AA8C7042CCAD9095DA5E14376EE75796"
+      cert_valid_from     = "2025-10-17"
+      cert_valid_to       = "2026-10-17"
+
+      country             = "IN"
+      state               = "Rajasthan"
+      locality            = "Jaipur"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "14:e5:2d:6a:45:00:46:63:fe:f6:e6:9d:aa:a5:4f:ef"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_SSL_com_28352420650C12A8E08A1B9909DE99FF {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-08-08"
+      version             = "1.0"
+
+      hash                = "067f6c9d36af9d3c088a37151721eb4981dde65c549d22b5a3ada0b90441e571"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "P M-Soft v/Per Mortensen"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "28:35:24:20:65:0c:12:a8:e0:8a:1b:99:09:de:99:ff"
+      cert_thumbprint     = "984CA1B6801E7109D4074D6BFC2B606B9DAC363A"
+      cert_valid_from     = "2025-08-08"
+      cert_valid_to       = "2026-08-08"
+
+      country             = "DK"
+      state               = "Region Zealand"
+      locality            = "Nykøbing Falster"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "28:35:24:20:65:0c:12:a8:e0:8a:1b:99:09:de:99:ff"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_SSL_com_2A3A540A1CAFC491099CEFCDC539548F {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-07-23"
+      version             = "1.0"
+
+      hash                = "b339fed7fef43e82877fa606d19ae94b1393d75e09637066acc69777478a3799"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "Wuxi Dainaide Network Technology Co., Ltd."
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "2a:3a:54:0a:1c:af:c4:91:09:9c:ef:cd:c5:39:54:8f"
+      cert_thumbprint     = "151A8B902C8FA864B8D7DB95FFA2784E3DD4C4B7"
+      cert_valid_from     = "2025-07-23"
+      cert_valid_to       = "2026-07-01"
+
+      country             = "CN"
+      state               = "Jiangsu"
+      locality            = "Wuxi"
+      email               = "???"
+      rdn_serial_number   = "91320213MA20CM4H0H"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "2a:3a:54:0a:1c:af:c4:91:09:9c:ef:cd:c5:39:54:8f"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_SSL_com_31D4015BD379F5DC18056F60D51A43CF {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-08"
+      version             = "1.0"
+
+      hash                = "4e4a3751581252e210f6f45881d778d1f482146f92dc790504bfbcd2bdfa0129"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "Art en Code B.V."
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "31:d4:01:5b:d3:79:f5:dc:18:05:6f:60:d5:1a:43:cf"
+      cert_thumbprint     = "A122735906981AF7D785808D27830E4894801B2D"
+      cert_valid_from     = "2025-09-08"
+      cert_valid_to       = "2026-09-07"
+
+      country             = "NL"
+      state               = "Noord-Holland"
+      locality            = "Zwanenburg"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "31:d4:01:5b:d3:79:f5:dc:18:05:6f:60:d5:1a:43:cf"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_SSL_com_53E6BB421575CFA2BE73195FD4049955 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-30"
+      version             = "1.0"
+
+      hash                = "4ddb9521976c04879613601ae1399b7b9809dcd33d58869b2a2053e716d35442"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "CAPELLO MEDIA SOLUTIONS LTD"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "53:e6:bb:42:15:75:cf:a2:be:73:19:5f:d4:04:99:55"
+      cert_thumbprint     = "AFA4DBE5B098717A926F7A28C100E87C9788BBDF"
+      cert_valid_from     = "2025-06-30"
+      cert_valid_to       = "2026-06-30"
+
+      country             = "GB"
+      state               = "???"
+      locality            = "ALTRINCHAM"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "53:e6:bb:42:15:75:cf:a2:be:73:19:5f:d4:04:99:55"
       )
 }
 
@@ -37272,6 +38217,41 @@ rule MAL_Compromised_Cert_OysterLoader_SSL_com_6E4E1C0C8DAD20BF52B5928502824B49 
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA ECC R2" and
          sig.serial == "6e:4e:1c:0c:8d:ad:20:bf:52:b5:92:85:02:82:4b:49"
+      )
+}
+
+rule MAL_Compromised_Cert_OysterLoader_SSL_com_7227974DB1FF4268501BB4B31EB8FF39 {
+   meta:
+      description         = "Detects OysterLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-04"
+      version             = "1.0"
+
+      hash                = "31ebdf2d6fb973f648c05226b57ff264d8b650dfe03f995deba0fa795d76f37c"
+      malware             = "OysterLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+
+      signer              = "4th State Oy"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "72:27:97:4d:b1:ff:42:68:50:1b:b4:b3:1e:b8:ff:39"
+      cert_thumbprint     = "24010C3BA7C765BF2F46DE1D2412736CF869A0FE"
+      cert_valid_from     = "2025-09-04"
+      cert_valid_to       = "2026-09-04"
+
+      country             = "FI"
+      state               = "Uusimaa"
+      locality            = "Helsinki"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "72:27:97:4d:b1:ff:42:68:50:1b:b4:b3:1e:b8:ff:39"
       )
 }
 

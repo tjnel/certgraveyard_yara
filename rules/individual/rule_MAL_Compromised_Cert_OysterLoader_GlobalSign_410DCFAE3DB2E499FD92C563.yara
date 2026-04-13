@@ -1,36 +1,36 @@
 import "pe"
 
-rule MAL_Compromised_Cert_OysterLoader_GlobalSign_14DE6008EE49B48E31CDA252 {
+rule MAL_Compromised_Cert_OysterLoader_GlobalSign_410DCFAE3DB2E499FD92C563 {
    meta:
       description         = "Detects OysterLoader with compromised cert (GlobalSign)"
       author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
-      date                = "2025-07-03"
+      date                = "2025-06-11"
       version             = "1.0"
 
-      hash                = "3d22a974677164d6bd7166e521e96d07cd00c884b0aeacb5555505c6a62a1c26"
+      hash                = "80c8a6ecd5619d137aa57ddf252ab5dc9044266fca87f3e90c5b7f3664c5142f"
       malware             = "OysterLoader"
       malware_type        = "Initial access tool"
       malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
 
-      signer              = "LLC Infomed22"
+      signer              = "PROFTORG LLC"
       cert_issuer_short   = "GlobalSign"
       cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
-      cert_serial         = "14:de:60:08:ee:49:b4:8e:31:cd:a2:52"
-      cert_thumbprint     = "12CFA8824939504311DA5F35A52A16743199FB1E"
-      cert_valid_from     = "2025-07-03"
-      cert_valid_to       = "2026-07-04"
+      cert_serial         = "41:0d:cf:ae:3d:b2:e4:99:fd:92:c5:63"
+      cert_thumbprint     = "D8F9AD4881FAEDF9B2EB4983C321FF499DCB931F"
+      cert_valid_from     = "2025-06-11"
+      cert_valid_to       = "2026-06-12"
 
       country             = "RU"
-      state               = "Republic of Bashkortostan"
-      locality            = "Ishimbay"
-      email               = "???"
-      rdn_serial_number   = "1220200021557"
+      state               = "Moscow"
+      locality            = "Moscow"
+      email               = "proftorg.info@rambler.ru"
+      rdn_serial_number   = "1257700210525"
 
    condition:
       uint16(0) == 0x5a4d and
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
-         sig.serial == "14:de:60:08:ee:49:b4:8e:31:cd:a2:52"
+         sig.serial == "41:0d:cf:ae:3d:b2:e4:99:fd:92:c5:63"
       )
 }
