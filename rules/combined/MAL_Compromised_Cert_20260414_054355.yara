@@ -54425,6 +54425,41 @@ rule MAL_Compromised_Cert_SmokedHam_Microsoft_3300000F85CC4C7C90F2B5043500000000
       )
 }
 
+rule MAL_Compromised_Cert_SmokedHam_Microsoft_33000038D6166B7C5CEAE0BEBD0000000038D6 {
+   meta:
+      description         = "Detects SmokedHam with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-12"
+      version             = "1.0"
+
+      hash                = "9fd74c0e4f2bb5a078162e33a6c8c665f0afbdedd09a9c9f14437696da495f71"
+      malware             = "SmokedHam"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "CHRISTOPHER CONLEY"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:00:38:d6:16:6b:7c:5c:ea:e0:be:bd:00:00:00:00:38:d6"
+      cert_thumbprint     = "C47BCB83356B2A5D05ACE7E18F1579669EF125EE"
+      cert_valid_from     = "2026-04-12"
+      cert_valid_to       = "2026-04-15"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:00:38:d6:16:6b:7c:5c:ea:e0:be:bd:00:00:00:00:38:d6"
+      )
+}
+
 rule MAL_Compromised_Cert_SmokedHam_Microsoft_330008E0AAEAA997DF0BBA56FE00000008E0AA {
    meta:
       description         = "Detects SmokedHam with compromised cert (Microsoft)"
@@ -81022,6 +81057,41 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0AE04FFA7B23CC3F7395B25F4125515
       for any sig in pe.signatures : (
          sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
          sig.serial == "0a:e0:4f:fa:7b:23:cc:3f:73:95:b2:5f:41:25:51:57"
+      )
+}
+
+rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0AF316CB4E5D9BAF35B35E85677B17EE {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-11"
+      version             = "1.0"
+
+      hash                = "f76c31ecdafb59279833f17f350d9c2b1317da269823097e8dd1736c72449c88"
+      malware             = "Zhong Stealer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "PALIT MICROSYSTEMS LTD. TAIWAN BRANCH (BELIZE)"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "0a:f3:16:cb:4e:5d:9b:af:35:b3:5e:85:67:7b:17:ee"
+      cert_thumbprint     = "FBA16B68994972218252024AA5623A784E32D7AA"
+      cert_valid_from     = "2026-04-11"
+      cert_valid_to       = "2027-04-10"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "0a:f3:16:cb:4e:5d:9b:af:35:b3:5e:85:67:7b:17:ee"
       )
 }
 
