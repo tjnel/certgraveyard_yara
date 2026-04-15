@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_SmokedHam_Microsoft_33000038D6166B7C5CEAE0BEBD00000000
       cert_valid_from     = "2026-04-12"
       cert_valid_to       = "2026-04-15"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Alaska"
+      locality            = "ANCHORAGE"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

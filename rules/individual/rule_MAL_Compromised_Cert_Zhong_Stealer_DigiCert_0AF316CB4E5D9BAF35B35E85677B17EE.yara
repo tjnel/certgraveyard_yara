@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0AF316CB4E5D9BAF35B35E85677B17E
       cert_valid_from     = "2026-04-11"
       cert_valid_to       = "2027-04-10"
 
-      country             = "???"
-      state               = "???"
+      country             = "TW"
+      state               = "Taipei City"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "28437291"
 
    condition:
       uint16(0) == 0x5a4d and

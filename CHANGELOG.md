@@ -4,6 +4,25 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.04.15] - 2026-04-15
+
+### Added
+- MAL_Compromised_Cert_FakeWallet_Sectigo_6B01F6B50C12816C8330A9C9DAE18430 (FakeWallet - Sectigo)
+- MAL_Compromised_Cert_T_21_Microsoft_3300004F77A8D5C60474AEFDE4000000004F77 (T-21 - Microsoft)
+- MAL_Compromised_Cert_Traffer_GlobalSign_393C3D01271DBF2133DBBA98 (Traffer - GlobalSign)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_330008BB04FE247CAAC9FADC7300000008BB04 (FakeRMM - Microsoft)
+- MAL_Compromised_Cert_Zhong_Stealer_DigiCert_09186DCA3667374ADBD63A2F4FD96365 (Zhong Stealer - DigiCert)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_33000023311910DDBBFB8386B2000000002331 (FakeRMM - Microsoft)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_3300003ED76A78FF208BF50426000000003ED7 (FakeRMM - Microsoft)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_330007D4E2A923E5F22C2A519000000007D4E2 (FakeRMM - Microsoft)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_330007E88C865C39C4C86DF29800000007E88C (FakeRMM - Microsoft)
+- MAL_Compromised_Cert_Vidar_SSL_com_594200D2EE47728E81FD8B8E1A70EC50 (Vidar - SSL.com)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_330008F14B653BF56DB14D28A300000008F14B (FakeRMM - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0AF316CB4E5D9BAF35B35E85677B17EE (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_SmokedHam_Microsoft_33000038D6166B7C5CEAE0BEBD0000000038D6 (Updated metadata for SmokedHam)
+
 ## [2026.04.14] - 2026-04-14
 
 ### Added
