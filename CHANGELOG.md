@@ -4,6 +4,20 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.04.16] - 2026-04-16
+
+### Added
+- MAL_Compromised_Cert_FakeRMM_Microsoft_33000014F122445605D78886DC0000000014F1 (FakeRMM - Microsoft)
+- MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_33000054615839E1FEEE0D0B8C000000005461 (LoremIpsumLoader - Microsoft)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_3300079EBC390DFE053B615058000000079EBC (FakeRMM - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_FakeRMM_Microsoft_33000023311910DDBBFB8386B2000000002331 (Updated metadata for FakeRMM)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_330007D4E2A923E5F22C2A519000000007D4E2 (Updated metadata for FakeRMM)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_330008F14B653BF56DB14D28A300000008F14B (Updated metadata for FakeRMM)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_330007E88C865C39C4C86DF29800000007E88C (Updated metadata for FakeRMM)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_330008BB04FE247CAAC9FADC7300000008BB04 (Updated metadata for FakeRMM)
+
 ## [2026.04.15] - 2026-04-15
 
 ### Added

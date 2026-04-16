@@ -1,25 +1,25 @@
 import "pe"
 
-rule MAL_Compromised_Cert_FakeRMM_Microsoft_33000023311910DDBBFB8386B2000000002331 {
+rule MAL_Compromised_Cert_FakeRMM_Microsoft_33000014F122445605D78886DC0000000014F1 {
    meta:
       description         = "Detects FakeRMM with compromised cert (Microsoft)"
       author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
-      date                = "2026-04-09"
+      date                = "2026-04-13"
       version             = "1.0"
 
-      hash                = "f7720759f5979b2181d85432730edafac64ab5b9e74a2fedd6bf7bbe22afa06b"
+      hash                = "2eac72a04860eb435310bf03ffbf475e5468b251b9eb5e0ae6fabd2d4ca3447e"
       malware             = "FakeRMM"
       malware_type        = "Unknown"
       malware_notes       = ""
 
       signer              = "Frank Farris"
       cert_issuer_short   = "Microsoft"
-      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
-      cert_serial         = "33:00:00:23:31:19:10:dd:bb:fb:83:86:b2:00:00:00:00:23:31"
-      cert_thumbprint     = "F6CBA45B562BA250E47CF7FCA4A04E807CD3D80B"
-      cert_valid_from     = "2026-04-09"
-      cert_valid_to       = "2026-04-12"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:00:14:f1:22:44:56:05:d7:88:86:dc:00:00:00:00:14:f1"
+      cert_thumbprint     = "BD91F74285A5789002308A49FE9B29325DF462F2"
+      cert_valid_from     = "2026-04-13"
+      cert_valid_to       = "2026-04-16"
 
       country             = "US"
       state               = "Tennessee"
@@ -30,7 +30,7 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_33000023311910DDBBFB8386B20000000023
    condition:
       uint16(0) == 0x5a4d and
       for any sig in pe.signatures : (
-         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
-         sig.serial == "33:00:00:23:31:19:10:dd:bb:fb:83:86:b2:00:00:00:00:23:31"
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:00:14:f1:22:44:56:05:d7:88:86:dc:00:00:00:00:14:f1"
       )
 }

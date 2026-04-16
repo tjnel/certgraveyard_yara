@@ -18935,6 +18935,41 @@ rule MAL_Compromised_Cert_FakeRMM_DigiCert_047655211EB5C269B88F4DCEBA4AE762 {
       )
 }
 
+rule MAL_Compromised_Cert_FakeRMM_Microsoft_33000014F122445605D78886DC0000000014F1 {
+   meta:
+      description         = "Detects FakeRMM with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-13"
+      version             = "1.0"
+
+      hash                = "2eac72a04860eb435310bf03ffbf475e5468b251b9eb5e0ae6fabd2d4ca3447e"
+      malware             = "FakeRMM"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Frank Farris"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:00:14:f1:22:44:56:05:d7:88:86:dc:00:00:00:00:14:f1"
+      cert_thumbprint     = "BD91F74285A5789002308A49FE9B29325DF462F2"
+      cert_valid_from     = "2026-04-13"
+      cert_valid_to       = "2026-04-16"
+
+      country             = "US"
+      state               = "Tennessee"
+      locality            = "nashville"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:00:14:f1:22:44:56:05:d7:88:86:dc:00:00:00:00:14:f1"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeRMM_Microsoft_33000023311910DDBBFB8386B2000000002331 {
    meta:
       description         = "Detects FakeRMM with compromised cert (Microsoft)"
@@ -18956,11 +18991,11 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_33000023311910DDBBFB8386B20000000023
       cert_valid_from     = "2026-04-09"
       cert_valid_to       = "2026-04-12"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Tennessee"
+      locality            = "nashville"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -19180,6 +19215,41 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330007438AEF232CA91040F0190000000743
       )
 }
 
+rule MAL_Compromised_Cert_FakeRMM_Microsoft_3300079EBC390DFE053B615058000000079EBC {
+   meta:
+      description         = "Detects FakeRMM with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-24"
+      version             = "1.0"
+
+      hash                = "6f7c9cdf8cee3978f8aa0e218a640a93ed2fce44c58f7107790dbee994f617a4"
+      malware             = "FakeRMM"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
+
+      signer              = "Juan Benavidez"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:07:9e:bc:39:0d:fe:05:3b:61:50:58:00:00:00:07:9e:bc"
+      cert_thumbprint     = "317B7913C3E410E4D7706AEEAC6CF339E0E2D2E9"
+      cert_valid_from     = "2026-03-24"
+      cert_valid_to       = "2026-03-27"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:07:9e:bc:39:0d:fe:05:3b:61:50:58:00:00:00:07:9e:bc"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeRMM_Microsoft_330007D4E2A923E5F22C2A519000000007D4E2 {
    meta:
       description         = "Detects FakeRMM with compromised cert (Microsoft)"
@@ -19201,11 +19271,11 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330007D4E2A923E5F22C2A519000000007D4
       cert_valid_from     = "2026-04-03"
       cert_valid_to       = "2026-04-06"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Hawaii"
+      locality            = "KULA"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -19341,11 +19411,11 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330007E88C865C39C4C86DF29800000007E8
       cert_valid_from     = "2026-04-06"
       cert_valid_to       = "2026-04-09"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Hawaii"
+      locality            = "KULA"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -19411,11 +19481,11 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330008BB04FE247CAAC9FADC7300000008BB
       cert_valid_from     = "2026-04-07"
       cert_valid_to       = "2026-04-10"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Hawaii"
+      locality            = "KULA"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -19446,11 +19516,11 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330008F14B653BF56DB14D28A300000008F1
       cert_valid_from     = "2026-04-05"
       cert_valid_to       = "2026-04-08"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Hawaii"
+      locality            = "KULA"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -27682,6 +27752,41 @@ rule MAL_Compromised_Cert_LockerGoga_Sectigo_5DA173EB1AC76340AC058E1FF4BF5E1B {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo RSA Code Signing CA" and
          sig.serial == "5d:a1:73:eb:1a:c7:63:40:ac:05:8e:1f:f4:bf:5e:1b"
+      )
+}
+
+rule MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_33000054615839E1FEEE0D0B8C000000005461 {
+   meta:
+      description         = "Detects LoremIpsumLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-14"
+      version             = "1.0"
+
+      hash                = "a3467d8158e14ba6d86f46181da0cfd8143bb117087acf09d62243ecdcc60a82"
+      malware             = "LoremIpsumLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "KELLY SULLIVAN"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:00:54:61:58:39:e1:fe:ee:0d:0b:8c:00:00:00:00:54:61"
+      cert_thumbprint     = "8F45EE898F08464D0757BF685834297939457BB4"
+      cert_valid_from     = "2026-04-14"
+      cert_valid_to       = "2026-04-17"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:00:54:61:58:39:e1:fe:ee:0d:0b:8c:00:00:00:00:54:61"
       )
 }
 
