@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_3300079EBC390DFE053B615058000000079E
       cert_valid_from     = "2026-03-24"
       cert_valid_to       = "2026-03-27"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Texas"
+      locality            = "san antonio"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -4,6 +4,27 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.04.17] - 2026-04-17
+
+### Added
+- MAL_Compromised_Cert_FakeRMM_Microsoft_3300001D099986F3B1F6209D43000000001D09 (FakeRMM - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_3300001A0A0DA6F871B03A582B000000001A0A (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_Zhong_Stealer_DigiCert_06500EE65FFBFB6EA4F4B16AB6F910C6 (Zhong Stealer - DigiCert)
+- MAL_Compromised_Cert_FakeSlack_Certum_55905FC78103517BD3088E330EB8B09C (FakeSlack - Certum)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_33000839C40044B3E475E0C6190000000839C4 (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_FakeRMM_Microsoft_3300001596B905221D86BD8F76000000001596 (FakeRMM - Microsoft)
+- MAL_Compromised_Cert_Zhong_Stealer_GoGetSSL_0B416CA38FFA8579C017C0311CCD8D8A (Zhong Stealer - GoGetSSL)
+- MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0654CDA3DEFAF29DC152EF189C11E337 (Zhong Stealer - DigiCert)
+- MAL_Compromised_Cert_VariantLoader_Microsoft_33000022B35ECEFAD922E89D900000000022B3 (VariantLoader - Microsoft)
+- MAL_Compromised_Cert_NetSupport_RAT_Microsoft_33000056B4BBEA79F1DA04E1350000000056B4 (NetSupport RAT - Microsoft)
+- MAL_Compromised_Cert_Gh0stRAT_GlobalSign_470CAD1AA6A9B8F934140B10 (Gh0stRAT - GlobalSign)
+- MAL_Compromised_Cert_CastleLoader_DigiCert_0D5713F88E9AFE9B0D1CECA05E0C3532 (CastleLoader - DigiCert)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_33000882A36F2FF4A04720A3E70000000882A3 (CastleLoader - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_FakeRMM_Microsoft_3300079EBC390DFE053B615058000000079EBC (Updated metadata for FakeRMM)
+- MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_33000054615839E1FEEE0D0B8C000000005461 (Updated metadata for LoremIpsumLoader)
+
 ## [2026.04.16] - 2026-04-16
 
 ### Added
