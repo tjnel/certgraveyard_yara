@@ -4,6 +4,15 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.04.18] - 2026-04-18
+
+### Added
+- MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_3300002432BF3E1810A9B250AC000000002432 (LoremIpsumLoader - Microsoft)
+- MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0E53B99068FF7BF9C1BBBB025ECEDB58 (Zhong Stealer - DigiCert)
+
+### Modified
+- MAL_Compromised_Cert_CastleLoader_Microsoft_3300001A0A0DA6F871B03A582B000000001A0A (Updated metadata for CastleLoader)
+
 ## [2026.04.17] - 2026-04-17
 
 ### Added

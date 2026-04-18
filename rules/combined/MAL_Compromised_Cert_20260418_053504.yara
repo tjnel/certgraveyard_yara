@@ -5726,11 +5726,11 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_3300001A0A0DA6F871B03A582B00000
       cert_valid_from     = "2026-04-15"
       cert_valid_to       = "2026-04-18"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "GB"
+      state               = "Greater London"
+      locality            = "LONDON"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -28032,6 +28032,41 @@ rule MAL_Compromised_Cert_LockerGoga_Sectigo_5DA173EB1AC76340AC058E1FF4BF5E1B {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo RSA Code Signing CA" and
          sig.serial == "5d:a1:73:eb:1a:c7:63:40:ac:05:8e:1f:f4:bf:5e:1b"
+      )
+}
+
+rule MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_3300002432BF3E1810A9B250AC000000002432 {
+   meta:
+      description         = "Detects LoremIpsumLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-16"
+      version             = "1.0"
+
+      hash                = "aa9c31a09d58142f32bf306fbfc628d14467a68e05bb55ef5c2fde98b84b0688"
+      malware             = "LoremIpsumLoader"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
+
+      signer              = "TREY TROTTER"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:00:24:32:bf:3e:18:10:a9:b2:50:ac:00:00:00:00:24:32"
+      cert_thumbprint     = "00865059D3E48DF80839A2B4D101F35E0F102456"
+      cert_valid_from     = "2026-04-16"
+      cert_valid_to       = "2026-04-19"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:00:24:32:bf:3e:18:10:a9:b2:50:ac:00:00:00:00:24:32"
       )
 }
 
@@ -82037,6 +82072,41 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0CAE428F1BDCBEBAF284EEE9A643B1D
       for any sig in pe.signatures : (
          sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
          sig.serial == "0c:ae:42:8f:1b:dc:be:ba:f2:84:ee:e9:a6:43:b1:d8"
+      )
+}
+
+rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0E53B99068FF7BF9C1BBBB025ECEDB58 {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-17"
+      version             = "1.0"
+
+      hash                = "4ba01f317dd469c6ce5fb5333828ea5faf6761c263431ebcd0a5c17c06b00868"
+      malware             = "Zhong Stealer"
+      malware_type        = "Infostealer"
+      malware_notes       = ""
+
+      signer              = "SoftStory G.Zielinski, K.Jez s.c."
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "0e:53:b9:90:68:ff:7b:f9:c1:bb:bb:02:5e:ce:db:58"
+      cert_thumbprint     = "5675D2723A91F4BC5180A0C112187297F3D58F29"
+      cert_valid_from     = "2026-04-17"
+      cert_valid_to       = "2027-04-16"
+
+      country             = "PL"
+      state               = "???"
+      locality            = "Tarnów"
+      email               = "???"
+      rdn_serial_number   = "852721168"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "0e:53:b9:90:68:ff:7b:f9:c1:bb:bb:02:5e:ce:db:58"
       )
 }
 
