@@ -183,7 +183,7 @@ def generate_rule_content(
         "issuer_short": escape_yara_string(record.cert_issuer_short),
         "issuer": escape_yara_string(record.cert_issuer),
         "issuer_escaped": escape_yara_string(record.cert_issuer),
-        "serial": formatted_serial,
+        "serial": escape_yara_string(formatted_serial),
         "thumbprint": escape_yara_string(record.cert_thumbprint),
         "valid_from": escape_yara_string(record.cert_valid_from),
         "valid_to": escape_yara_string(record.cert_valid_to),

@@ -139,6 +139,7 @@ class TestEscapeYaraString:
     def test_escape_mixed_control_chars(self) -> None:
         """Test escaping of multiple control characters in one string."""
         result = escape_yara_string("notes:\nfoo\r\nbar\tbaz")
+        assert result == "notes:\\nfoo\\r\\nbar\\tbaz"
         assert "\n" not in result
         assert "\r" not in result
         assert "\t" not in result
