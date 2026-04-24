@@ -118,6 +118,31 @@ class TestEscapeYaraString:
         result = escape_yara_string("")
         assert result == ""
 
+    def test_escape_newline(self) -> None:
+        """Test that newline characters are escaped."""
+        result = escape_yara_string("line1\nline2")
+        assert result == "line1\\nline2"
+        assert "\n" not in result
+
+    def test_escape_carriage_return(self) -> None:
+        """Test that carriage return characters are escaped."""
+        result = escape_yara_string("line1\rline2")
+        assert result == "line1\\rline2"
+        assert "\r" not in result
+
+    def test_escape_tab(self) -> None:
+        """Test that tab characters are escaped."""
+        result = escape_yara_string("col1\tcol2")
+        assert result == "col1\\tcol2"
+        assert "\t" not in result
+
+    def test_escape_mixed_control_chars(self) -> None:
+        """Test escaping of multiple control characters in one string."""
+        result = escape_yara_string("notes:\nfoo\r\nbar\tbaz")
+        assert "\n" not in result
+        assert "\r" not in result
+        assert "\t" not in result
+
 
 class TestGenerateRuleContent:
     """Tests for generate_rule_content function."""
@@ -145,6 +170,23 @@ class TestGenerateRuleContent:
 
         # Check that quotes are escaped in metadata
         assert '\\"' in content or "Test" in content
+
+    def test_generate_rule_content_escapes_newlines_in_metadata(self) -> None:
+        """Test that newlines in metadata fields don't break YARA syntax."""
+        record = CertificateRecord(
+            hash="test_hash",
+            cert_serial="abc123",
+            malware_notes="C2 server\ndownloads payload",
+        )
+        content = generate_rule_content(record)
+
+        # Literal newline must not appear inside any metadata string value
+        lines = content.splitlines()
+        for line in lines:
+            if "malware_notes" in line:
+                assert line.count('"') % 2 == 0, "Unbalanced quotes in malware_notes line"
+        # The escaped sequence should appear instead
+        assert "\\n" in content
 
 
 class TestGenerateRuleFilename:

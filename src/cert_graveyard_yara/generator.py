@@ -116,8 +116,13 @@ def escape_yara_string(value: str) -> str:
     if not value:
         return ""
 
-    # Escape backslashes first, then double quotes
-    escaped = value.replace("\\", "\\\\").replace('"', '\\"')
+    # Escape backslashes first, then double quotes, then control characters
+    # that would break YARA's single-line string literal syntax
+    escaped = value.replace("\\", "\\\\")
+    escaped = escaped.replace('"', '\\"')
+    escaped = escaped.replace("\n", "\\n")
+    escaped = escaped.replace("\r", "\\r")
+    escaped = escaped.replace("\t", "\\t")
     return escaped
 
 
