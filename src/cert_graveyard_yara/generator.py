@@ -116,8 +116,13 @@ def escape_yara_string(value: str) -> str:
     if not value:
         return ""
 
-    # Escape backslashes first, then double quotes
-    escaped = value.replace("\\", "\\\\").replace('"', '\\"')
+    # Escape backslashes first, then double quotes, then control characters
+    # that would break YARA's single-line string literal syntax
+    escaped = value.replace("\\", "\\\\")
+    escaped = escaped.replace('"', '\\"')
+    escaped = escaped.replace("\n", "\\n")
+    escaped = escaped.replace("\r", "\\r")
+    escaped = escaped.replace("\t", "\\t")
     return escaped
 
 
@@ -178,7 +183,7 @@ def generate_rule_content(
         "issuer_short": escape_yara_string(record.cert_issuer_short),
         "issuer": escape_yara_string(record.cert_issuer),
         "issuer_escaped": escape_yara_string(record.cert_issuer),
-        "serial": formatted_serial,
+        "serial": escape_yara_string(formatted_serial),
         "thumbprint": escape_yara_string(record.cert_thumbprint),
         "valid_from": escape_yara_string(record.cert_valid_from),
         "valid_to": escape_yara_string(record.cert_valid_to),
