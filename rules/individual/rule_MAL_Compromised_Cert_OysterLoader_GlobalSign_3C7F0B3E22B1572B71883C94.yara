@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_OysterLoader_GlobalSign_3C7F0B3E22B1572B71883C94 {
 
       hash                = "681c59113d3a87a0086716b91642258097dc4da809d76c5566d184783d3b6cd4"
       malware             = "OysterLoader"
-      malware_type        = "Initial access tool"
-      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Shanxi Jiusheng Tongtai Trading Co., Ltd."
       cert_issuer_short   = "GlobalSign"

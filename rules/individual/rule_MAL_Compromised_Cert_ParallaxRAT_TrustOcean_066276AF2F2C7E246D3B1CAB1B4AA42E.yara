@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_ParallaxRAT_TrustOcean_066276AF2F2C7E246D3B1CAB1B4AA42
 
       hash                = "222c327eef40050baf9e05f80d39f53bf7955bd84bf212887405a665060c369f"
       malware             = "ParallaxRAT"
-      malware_type        = "Remote access tool"
-      malware_notes       = "This malware is sold as a service. It started being seen first in 2019: https://www.morphisec.com/blog/parallax-rat-active-status/"
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "IQ Trade ApS"
       cert_issuer_short   = "TrustOcean"

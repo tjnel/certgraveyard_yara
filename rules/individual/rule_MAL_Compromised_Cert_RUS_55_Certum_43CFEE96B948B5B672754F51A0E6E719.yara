@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_RUS_55_Certum_43CFEE96B948B5B672754F51A0E6E719 {
 
       hash                = "c85a23cddbc9979c0c9c8040218c41b0a0008fee9e60cf8a885f94594eff04ea"
       malware             = "RUS-55"
-      malware_type        = "Remote access tool"
-      malware_notes       = "File was distributed as a trojanized RVTools installer. See analysis here https://tria.ge/251217-ny7gksen6v/behavioral1"
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Taiyuan Tataomi Technology Co., Ltd."
       cert_issuer_short   = "Certum"

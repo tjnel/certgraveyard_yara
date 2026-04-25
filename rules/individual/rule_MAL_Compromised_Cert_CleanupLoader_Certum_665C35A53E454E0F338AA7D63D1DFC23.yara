@@ -8,7 +8,7 @@ rule MAL_Compromised_Cert_CleanupLoader_Certum_665C35A53E454E0F338AA7D63D1DFC23 
       date                = "2024-08-22"
       version             = "1.0"
 
-      hash                = "06f004d36af77e45e904ac1e23aa0e67fbe491dca950282ebdf8551ef03da16e"
+      hash                = "43f4ca1c7474c0476a42d937dc4af01c8ccfc20331baa0465ac0f3408f52b2e2"
       malware             = "CleanupLoader"
       malware_type        = "Unknown"
       malware_notes       = ""

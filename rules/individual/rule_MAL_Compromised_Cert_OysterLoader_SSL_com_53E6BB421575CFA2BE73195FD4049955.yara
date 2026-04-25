@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_OysterLoader_SSL_com_53E6BB421575CFA2BE73195FD4049955 
 
       hash                = "4ddb9521976c04879613601ae1399b7b9809dcd33d58869b2a2053e716d35442"
       malware             = "OysterLoader"
-      malware_type        = "Initial access tool"
-      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "CAPELLO MEDIA SOLUTIONS LTD"
       cert_issuer_short   = "SSL.com"

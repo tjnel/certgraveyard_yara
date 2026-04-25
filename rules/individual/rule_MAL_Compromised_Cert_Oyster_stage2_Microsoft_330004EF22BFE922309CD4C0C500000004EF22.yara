@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Oyster_stage2_Microsoft_330004EF22BFE922309CD4C0C50000
 
       hash                = "b4a4d565a4d69e1e54557044809fc281591cdc5781126f978df8094467ba59fd"
       malware             = "Oyster_stage2"
-      malware_type        = "Initial access tool"
-      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Mobiquity Technologies, Inc."
       cert_issuer_short   = "Microsoft"

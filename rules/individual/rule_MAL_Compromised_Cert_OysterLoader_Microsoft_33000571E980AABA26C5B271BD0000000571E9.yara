@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_OysterLoader_Microsoft_33000571E980AABA26C5B271BD00000
 
       hash                = "5c797080fa605cab2cd581645f00843f9c91c9c2d0ad4598ccb7886f990c916b"
       malware             = "OysterLoader"
-      malware_type        = "Initial access tool"
-      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "DELANEY HOME INSPECTIONS LLC"
       cert_issuer_short   = "Microsoft"

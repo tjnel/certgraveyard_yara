@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_RUS_55_GlobalSign_5A076B593C5E7DCA24430353 {
 
       hash                = "75485847e431dddea1d9aee4cbc49066defc4fa8347cda67835009ca7d95b799"
       malware             = "RUS-55"
-      malware_type        = "Remote access tool"
-      malware_notes       = "This malware was distributed as a trojanized RVTools installer: https://app.any.run/tasks/4e6d41c8-08d6-4f2c-9eb5-3fd29ee5900b"
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "WEGUN (THAILAND) CO., LTD."
       cert_issuer_short   = "GlobalSign"

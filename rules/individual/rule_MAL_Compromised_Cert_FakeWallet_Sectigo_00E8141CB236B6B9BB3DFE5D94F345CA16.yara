@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeWallet_Sectigo_00E8141CB236B6B9BB3DFE5D94F345CA16 
       cert_valid_from     = "2025-12-31"
       cert_valid_to       = "2026-12-31"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Jiangsu Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91320206MA1WWYG908"
 
    condition:
       uint16(0) == 0x5a4d and

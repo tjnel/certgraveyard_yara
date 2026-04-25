@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_ParallaxRAT_GlobalSign_12527F7D7F83A74C9721008F {
 
       hash                = "f95f203c80586c9e6ea078bc983f690e8b15c6e133e70554fb75b3469e3dae17"
       malware             = "ParallaxRAT"
-      malware_type        = "Remote access tool"
-      malware_notes       = "This malware is sold as a service. It started being seen first in 2019: https://www.morphisec.com/blog/parallax-rat-active-status/"
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Blockfi Ruinor Security Technology Co., Ltd."
       cert_issuer_short   = "GlobalSign"

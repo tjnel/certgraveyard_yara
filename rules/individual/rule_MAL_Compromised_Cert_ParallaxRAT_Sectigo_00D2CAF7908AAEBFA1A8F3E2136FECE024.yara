@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_ParallaxRAT_Sectigo_00D2CAF7908AAEBFA1A8F3E2136FECE024
 
       hash                = "f7bab5e7e4487b86dd052dc4e9b9fd27f53d1a33852f6e5ce9ae91c302c33bcf"
       malware             = "ParallaxRAT"
-      malware_type        = "Remote access tool"
-      malware_notes       = "This malware is sold as a service. It started being seen first in 2019: https://www.morphisec.com/blog/parallax-rat-active-status/"
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "FANATOR, OOO"
       cert_issuer_short   = "Sectigo"

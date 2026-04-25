@@ -1,0 +1,36 @@
+import "pe"
+
+rule MAL_Compromised_Cert_Unknown_Sectigo_00C79F817F082986BEF3209F6723C8DA97 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2021-03-22"
+      version             = "1.0"
+
+      hash                = "dd49651e325b04ea14733bcd676c0a1cb58ab36bf79162868ade02b396ec3ab0"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = "These are historical entries. Additional review is required to understand more."
+
+      signer              = "Al-Faris group d.o.o."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo RSA Code Signing CA"
+      cert_serial         = "00:c7:9f:81:7f:08:29:86:be:f3:20:9f:67:23:c8:da:97"
+      cert_thumbprint     = "E2BF86DC46FCA1C35F98FF84D8976BE8AA0668BC"
+      cert_valid_from     = "2021-03-22"
+      cert_valid_to       = "2022-03-22"
+
+      country             = "SI"
+      state               = "???"
+      locality            = "Ljubljana"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo RSA Code Signing CA" and
+         sig.serial == "00:c7:9f:81:7f:08:29:86:be:f3:20:9f:67:23:c8:da:97"
+      )
+}

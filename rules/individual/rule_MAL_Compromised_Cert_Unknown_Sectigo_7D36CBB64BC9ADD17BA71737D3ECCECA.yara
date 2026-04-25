@@ -1,0 +1,36 @@
+import "pe"
+
+rule MAL_Compromised_Cert_Unknown_Sectigo_7D36CBB64BC9ADD17BA71737D3ECCECA {
+   meta:
+      description         = "Detects Unknown with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2021-03-18"
+      version             = "1.0"
+
+      hash                = "ea0623979d7a7a03dfda901509f8b17cd7fd9347d463e08737ea5f412dcc0464"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = "These are historical entries. Additional review is required to understand more."
+
+      signer              = "LTD SERVICES LIMITED"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo RSA Code Signing CA"
+      cert_serial         = "7d:36:cb:b6:4b:c9:ad:d1:7b:a7:17:37:d3:ec:ce:ca"
+      cert_thumbprint     = "A7287460DCF02E38484937B121CE8548191D4E64"
+      cert_valid_from     = "2021-03-18"
+      cert_valid_to       = "2022-03-18"
+
+      country             = "GB"
+      state               = "Essex"
+      locality            = "Clacton-On-Sea"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo RSA Code Signing CA" and
+         sig.serial == "7d:36:cb:b6:4b:c9:ad:d1:7b:a7:17:37:d3:ec:ce:ca"
+      )
+}

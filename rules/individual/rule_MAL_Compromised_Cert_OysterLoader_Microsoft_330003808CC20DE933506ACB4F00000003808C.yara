@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_OysterLoader_Microsoft_330003808CC20DE933506ACB4F00000
 
       hash                = "eaebd963b1e8dc5d3bd53a4842401559700f3201cd6589870281ab5b1ab57af3"
       malware             = "OysterLoader"
-      malware_type        = "Initial access tool"
-      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Alternative Power Systems Solutions LLC"
       cert_issuer_short   = "Microsoft"

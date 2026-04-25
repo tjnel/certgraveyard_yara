@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Oyster_stage2_Microsoft_3300046D2CA79D945D76ADD4FE0000
 
       hash                = "c66540bc726ae996fdc876819e41cdc0af4bdb092acb16ed5aefe031a3f20403"
       malware             = "Oyster_stage2"
-      malware_type        = "Initial access tool"
-      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "HCCO Retail Ltd."
       cert_issuer_short   = "Microsoft"

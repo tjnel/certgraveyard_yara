@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_OysterLoader_GlobalSign_03401D78C301D8B05979084B {
 
       hash                = "d32b4924143948935a74f03ae921a4c2efa4a94848d49274208e7007c0102f73"
       malware             = "OysterLoader"
-      malware_type        = "Initial access tool"
-      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "BLUS CONSULTING LLP"
       cert_issuer_short   = "GlobalSign"

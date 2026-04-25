@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_ParallaxRAT_GlobalSign_05D50A0E09BB9A836FFB90A3 {
 
       hash                = "377ecfd2413aa044082c4f89e7c50baaeac0acbae8d7f5ada32ad915ad905557"
       malware             = "ParallaxRAT"
-      malware_type        = "Remote access tool"
-      malware_notes       = "This malware is sold as a service. It started being seen first in 2019: https://www.morphisec.com/blog/parallax-rat-active-status/"
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Toliz Info Tech Solutions INC."
       cert_issuer_short   = "GlobalSign"

@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Oyster_stage2_Microsoft_33000487A5FBFCCAB5ECACDA5E0000
 
       hash                = "f21483536cbd1fa4f5cb1e996adbe6a82522ca90e14975f6172794995ed9e9a2"
       malware             = "Oyster_stage2"
-      malware_type        = "Initial access tool"
-      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "BRANCH INVESTMENTS HAWAII LLC"
       cert_issuer_short   = "Microsoft"

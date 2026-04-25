@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Oyster_Latrodectus_Stage2_GlobalSign_104D1BFA90D93794E
 
       hash                = "13b1d27bb1fa279da12934f1c219baf993b1170c57207d95c4a5aa258c402b6c"
       malware             = "Oyster_Latrodectus_Stage2"
-      malware_type        = "Initial access tool"
-      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "LLC Nasta"
       cert_issuer_short   = "GlobalSign"

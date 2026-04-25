@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_OysterLoader_Microsoft_3300049B30C093ECFBF658940B00000
 
       hash                = "464db7461d6d67d99132eeaa9962d3691a3efc73f194fb660b4b8c77c10d9591"
       malware             = "OysterLoader"
-      malware_type        = "Initial access tool"
-      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Nitta-Lai Investment Corp."
       cert_issuer_short   = "Microsoft"

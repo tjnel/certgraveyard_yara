@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_OysterLoader_Microsoft_330004081060BEC8220B100D8B00000
 
       hash                = "0bcdbd79c13fc50955804d0f2666c878542157fc3d4987d18d13c72e9697209e"
       malware             = "OysterLoader"
-      malware_type        = "Initial access tool"
-      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "IceCube Software, Inc."
       cert_issuer_short   = "Microsoft"

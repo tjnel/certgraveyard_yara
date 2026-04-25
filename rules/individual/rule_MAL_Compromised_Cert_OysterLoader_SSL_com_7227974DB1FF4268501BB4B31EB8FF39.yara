@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_OysterLoader_SSL_com_7227974DB1FF4268501BB4B31EB8FF39 
 
       hash                = "31ebdf2d6fb973f648c05226b57ff264d8b650dfe03f995deba0fa795d76f37c"
       malware             = "OysterLoader"
-      malware_type        = "Initial access tool"
-      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "4th State Oy"
       cert_issuer_short   = "SSL.com"

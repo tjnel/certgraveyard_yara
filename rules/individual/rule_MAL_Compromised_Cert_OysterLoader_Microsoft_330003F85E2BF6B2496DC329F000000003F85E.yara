@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_OysterLoader_Microsoft_330003F85E2BF6B2496DC329F000000
 
       hash                = "dae9df9ce0f5286cfe871fda680e4de440c8444a44ceb434c28d5ccf786f5e8d"
       malware             = "OysterLoader"
-      malware_type        = "Initial access tool"
-      malware_notes       = "An initial access tool used by the Rhysida ransomware gang. See https://expel.com/blog/certified-oysterloader-tracking-rhysida-ransomware-gang-activity-via-code-signing-certificates/ for more details."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "GALVIN & ASSOCIATES LLC"
       cert_issuer_short   = "Microsoft"

@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_RUS_55_GlobalSign_65E6B4B9104AFCF9BEE6F984 {
 
       hash                = "65a1d8ca5284d70df6a0a5cbd9a69c11c87e8cf7c17483aa213c31fe544c9c9f"
       malware             = "RUS-55"
-      malware_type        = "Remote access tool"
-      malware_notes       = "Uses a python script to prepare a .NET binary to be compiled and executed: https://tria.ge/251129-pycsmsht2e/behavioral2"
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "WILD LLC"
       cert_issuer_short   = "GlobalSign"
