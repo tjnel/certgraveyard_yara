@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_3300007141884BAED0CBF91F0D00000
       cert_valid_from     = "2026-04-23"
       cert_valid_to       = "2026-04-26"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "GB"
+      state               = "Greater London"
+      locality            = "LONDON"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
