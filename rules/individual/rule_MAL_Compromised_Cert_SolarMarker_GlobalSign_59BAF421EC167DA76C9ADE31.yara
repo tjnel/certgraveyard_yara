@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_59BAF421EC167DA76C9ADE31 {
 
       hash                = "1160da03685be4abedafa4f03b02cdf3f3242bc1d6985187acf281f5c7e46168"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Repeat Business Ltd"
       cert_issuer_short   = "GlobalSign"

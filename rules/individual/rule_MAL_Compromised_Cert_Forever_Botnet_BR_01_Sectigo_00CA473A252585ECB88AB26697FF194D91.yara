@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Sectigo_00CA473A252585ECB88AB2669
       hash                = "473a013ae706915b43a046239821356afe4572c15e621f4ee63883e766c63af6"
       malware             = "Forever Botnet,BR-01"
       malware_type        = "Unknown"
-      malware_notes       = "Malware campaign targeting BR users via fake documents. C2: cms[.]lmcnow[.]com/q/"
+      malware_notes       = ""
 
       signer              = "Xiamen Time Travel Network Co., Ltd."
       cert_issuer_short   = "Sectigo"

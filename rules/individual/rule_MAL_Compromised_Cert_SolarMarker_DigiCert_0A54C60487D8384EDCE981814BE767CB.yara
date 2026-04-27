@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0A54C60487D8384EDCE981814BE767CB 
 
       hash                = "0abe73a746671028db3ef2ba3ea8bea059888fc177d76a11e34cd1f075b24b69"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Decapolis Consulting Inc."
       cert_issuer_short   = "DigiCert"

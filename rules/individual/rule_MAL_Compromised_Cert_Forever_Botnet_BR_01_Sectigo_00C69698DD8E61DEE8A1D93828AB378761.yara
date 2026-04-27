@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Sectigo_00C69698DD8E61DEE8A1D9382
       hash                = "d6b507696400dc1d67412872cb02f3f813cec2bdb70b00083ef718331a444bab"
       malware             = "Forever Botnet,BR-01"
       malware_type        = "Unknown"
-      malware_notes       = "Builds loaded as a stage 2 on infected machines. Malware campaign targeting BR users via fake documents."
+      malware_notes       = ""
 
       signer              = "Xiamen Gejie Ya Intelligent Technology Co., Ltd."
       cert_issuer_short   = "Sectigo"

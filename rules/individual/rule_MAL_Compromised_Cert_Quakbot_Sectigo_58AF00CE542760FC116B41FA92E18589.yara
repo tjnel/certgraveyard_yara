@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_58AF00CE542760FC116B41FA92E18589 {
 
       hash                = "78bc13074087f93fcc8f11ae013995f9a366b6943330c3d02f0b50c4ae96c8a7"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "DICKIE MUSDALE WINDFARM LIMITED"
       cert_issuer_short   = "Sectigo"

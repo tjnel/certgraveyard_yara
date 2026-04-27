@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_SolarMarker_Sectigo_5DD4A4D405BE799614F437693B0F2929 {
 
       hash                = "13a1bead1187cbc6072c410501a417b812e82f1bbbf6a93deaab26ae5ea67628"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Changzhou Daqian Freighting Service Co., Ltd."
       cert_issuer_short   = "Sectigo"

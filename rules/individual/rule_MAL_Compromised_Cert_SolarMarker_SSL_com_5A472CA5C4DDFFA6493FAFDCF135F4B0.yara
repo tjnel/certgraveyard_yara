@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_5A472CA5C4DDFFA6493FAFDCF135F4B0 {
 
       hash                = "2db7438e5b4298ce068006ef96f729fd0bb4863e856425215ad9e77f807562e0"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "HOLDING MEDICAL GROUP KATOWICE SP Z O O"
       cert_issuer_short   = "SSL.com"

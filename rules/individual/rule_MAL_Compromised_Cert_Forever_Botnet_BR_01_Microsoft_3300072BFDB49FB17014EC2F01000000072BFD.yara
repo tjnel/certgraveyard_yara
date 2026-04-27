@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300072BFDB49FB17014EC2
       hash                = "1936cdf04ecac3f44c463f6db324cea93f7f6e4b3498212b89005a49054098b1"
       malware             = "Forever Botnet,BR-01"
       malware_type        = "Unknown"
-      malware_notes       = "Malware campaign targeting BR users via fake documents. C2:  jmkkload[.]com/bba13d314ed6c2ec94/"
+      malware_notes       = ""
 
       signer              = "Julie Jorgensen"
       cert_issuer_short   = "Microsoft"

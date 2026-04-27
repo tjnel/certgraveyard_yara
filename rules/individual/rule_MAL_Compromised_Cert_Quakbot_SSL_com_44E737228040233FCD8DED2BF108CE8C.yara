@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Quakbot_SSL_com_44E737228040233FCD8DED2BF108CE8C {
 
       hash                = "8db0b8f45f726a963b34410c74194e0b40f6720561731e8242ee60a8a7d7e3ce"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Ken Friedman AB"
       cert_issuer_short   = "SSL.com"

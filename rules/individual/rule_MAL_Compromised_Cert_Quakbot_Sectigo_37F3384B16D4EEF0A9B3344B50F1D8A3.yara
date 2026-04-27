@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_37F3384B16D4EEF0A9B3344B50F1D8A3 {
 
       hash                = "c0f3d4a44486b91a5cb4911608f036ce303b3020aa90cbe5d79c35bc84e1ad5b"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Sore Loser Games ApS"
       cert_issuer_short   = "Sectigo"

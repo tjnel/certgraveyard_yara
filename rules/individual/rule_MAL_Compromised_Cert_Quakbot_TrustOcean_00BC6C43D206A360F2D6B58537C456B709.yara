@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Quakbot_TrustOcean_00BC6C43D206A360F2D6B58537C456B709 
 
       hash                = "77abaa92184007a6176bf62098a90cf705254fae15ba25bcf2cd4359ca708428"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ANKADA GROUP, d.o.o."
       cert_issuer_short   = "TrustOcean"

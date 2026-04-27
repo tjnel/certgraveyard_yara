@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_SolarMarker_Sectigo_00B66CF27F736D8CE85BEB1EBF0CA7DEE3
 
       hash                = "278ec8f7a0cd969ebb84e72f60f19bb6f6fd6f7268ebe68245c46e6de2a43cf1"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "九江绿洲环境技术有限公司"
       cert_issuer_short   = "Sectigo"

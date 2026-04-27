@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330008936B9F218049D1F67
       hash                = "34c578754cb2f08e5d8a5b02f1aeaa5d90ff3b566b9beae3a76ab77efb878194"
       malware             = "Forever Botnet,BR-01"
       malware_type        = "Unknown"
-      malware_notes       = "C2: oficiospolicia.com"
+      malware_notes       = ""
 
       signer              = "Mariah Lingle"
       cert_issuer_short   = "Microsoft"

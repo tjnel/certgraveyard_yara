@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_33000879E850AD2CA7CCC01
 
       hash                = "2336ef2777274c5ebffa98e86a6085d8de354267fe85f9ee9ea74fd92c051724"
       malware             = "Forever Botnet,BR-01"
-      malware_type        = "Loader"
-      malware_notes       = "File was disguised as a document, targeting Brazilian speakers."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Mariah Lingle"
       cert_issuer_short   = "Microsoft"

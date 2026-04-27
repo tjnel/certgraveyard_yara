@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_5A364C4957D93406F76321C2316F42F0 {
 
       hash                = "4e7f9e963408d0744d58a933d904996d43aa5f065fe12a6b9cbace6a527932a7"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Board Game Bucket Ltd"
       cert_issuer_short   = "Certum"

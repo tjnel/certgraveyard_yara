@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00DA156922F4760E0C5F5BCF79812A27E1 {
 
       hash                = "2b9861436d994bee6a332cbaf71a9fd6f157089062f414207c9effe84bf556e5"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "DRINK AND BUBBLE LTD"
       cert_issuer_short   = "Sectigo"

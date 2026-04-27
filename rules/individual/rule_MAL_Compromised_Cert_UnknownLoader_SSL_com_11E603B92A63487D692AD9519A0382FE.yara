@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_UnknownLoader_SSL_com_11E603B92A63487D692AD9519A0382FE
       cert_valid_from     = "2025-05-21"
       cert_valid_to       = "2026-05-21"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "FR"
+      state               = "Île-de-France"
+      locality            = "Louveciennes"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "503 310 138"
 
    condition:
       uint16(0) == 0x5a4d and

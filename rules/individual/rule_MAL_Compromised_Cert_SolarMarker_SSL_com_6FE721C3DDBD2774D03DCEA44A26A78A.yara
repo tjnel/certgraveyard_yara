@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_6FE721C3DDBD2774D03DCEA44A26A78A {
 
       hash                = "1e7914f799371cbc8560bc52203d3531bb20cb4f6092158c76a4842dbf85dabc"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "OOO ENDI"
       cert_issuer_short   = "SSL.com"

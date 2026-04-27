@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_03AD977571E5079C2AD3846D61CE6E54 
 
       hash                = "96512386ea92612cd3c09c377f6a62e1df7a940ce4e46ca5562d75a1017413c9"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Plus 5 XP Corporation"
       cert_issuer_short   = "DigiCert"

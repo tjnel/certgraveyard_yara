@@ -4830,6 +4830,41 @@ rule MAL_Compromised_Cert_CastleLoader_DigiCert_0D5713F88E9AFE9B0D1CECA05E0C3532
       )
 }
 
+rule MAL_Compromised_Cert_CastleLoader_DigiCert_0D7AA26068DDDAF9CF05D412C8DFCEB8 {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-12"
+      version             = "1.0"
+
+      hash                = "5441e3aaf800ec7a5a4dae946a8173537b140a850a5002ab9fa1903c1e0fa125"
+      malware             = "CastleLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: koshei[.]icu"
+
+      signer              = "LASSFERA s.r.o."
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "0d:7a:a2:60:68:dd:da:f9:cf:05:d4:12:c8:df:ce:b8"
+      cert_thumbprint     = "4BCF10A7D6D4D26409B64A4A48B4CDC2771E3237"
+      cert_valid_from     = "2026-03-12"
+      cert_valid_to       = "2027-03-09"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "0d:7a:a2:60:68:dd:da:f9:cf:05:d4:12:c8:df:ce:b8"
+      )
+}
+
 rule MAL_Compromised_Cert_CastleLoader_GlobalSign_00995B7EFE49137D33BD8C10 {
    meta:
       description         = "Detects CastleLoader with compromised cert (GlobalSign)"
@@ -5180,6 +5215,41 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_3BC6960C1395678BD09FD48A {
       )
 }
 
+rule MAL_Compromised_Cert_CastleLoader_GlobalSign_55E10866AA01B582A37E1CF7 {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-08"
+      version             = "1.0"
+
+      hash                = "15f848dfe1797a6356ea510a4cc46985be164ef15e25a0496ff0882726ead4cc"
+      malware             = "CastleLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: johnmacroskgf[.]com"
+
+      signer              = "LLC MK Grand Stroy"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "55:e1:08:66:aa:01:b5:82:a3:7e:1c:f7"
+      cert_thumbprint     = "2CE0A82B9EAE6DC5855FF1FF7C14752887FC841B"
+      cert_valid_from     = "2026-04-08"
+      cert_valid_to       = "2027-04-09"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "55:e1:08:66:aa:01:b5:82:a3:7e:1c:f7"
+      )
+}
+
 rule MAL_Compromised_Cert_CastleLoader_GlobalSign_5641E6878B4E49FA1E6B22F6 {
    meta:
       description         = "Detects CastleLoader with compromised cert (GlobalSign)"
@@ -5422,6 +5492,41 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_3300007141884BAED0CBF91F0D00000
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
          sig.serial == "33:00:00:71:41:88:4b:ae:d0:cb:f9:1f:0d:00:00:00:00:71:41"
+      )
+}
+
+rule MAL_Compromised_Cert_CastleLoader_Microsoft_330000721DB1BB9DED4AE9044600000000721D {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-23"
+      version             = "1.0"
+
+      hash                = "0dc0e160c1898c94e4cbda8d2a6b4d8334a423894cb1e5838195b905f22fdda4"
+      malware             = "CastleLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: bmwservicebestik[.]com"
+
+      signer              = "SHYANNE COLLINS"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:00:72:1d:b1:bb:9d:ed:4a:e9:04:46:00:00:00:00:72:1d"
+      cert_thumbprint     = "3795A3BC5A8145744E31C90039F19BEBFD0AA841"
+      cert_valid_from     = "2026-04-23"
+      cert_valid_to       = "2026-04-26"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:00:72:1d:b1:bb:9d:ed:4a:e9:04:46:00:00:00:00:72:1d"
       )
 }
 
@@ -6192,6 +6297,76 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_3D750F9AC0E074D810BCF82573950AF3 
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "3d:75:0f:9a:c0:e0:74:d8:10:bc:f8:25:73:95:0a:f3"
+      )
+}
+
+rule MAL_Compromised_Cert_CastleLoader_Sectigo_5447CA4779903CBA0128612D312425D6 {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-19"
+      version             = "1.0"
+
+      hash                = "001a10b946d41f8794c110f97cd46b961fea0c0d50c92efaef1d166adaffe8b8"
+      malware             = "CastleLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: fillenmore[.]com"
+
+      signer              = "Lway Firmware"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "54:47:ca:47:79:90:3c:ba:01:28:61:2d:31:24:25:d6"
+      cert_thumbprint     = "684478482130B435E0CE498D740A295DA4E261E2"
+      cert_valid_from     = "2026-03-19"
+      cert_valid_to       = "2027-06-17"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "54:47:ca:47:79:90:3c:ba:01:28:61:2d:31:24:25:d6"
+      )
+}
+
+rule MAL_Compromised_Cert_CastleLoader_Sectigo_5A7260B535C87EAB8C60DC791FBADBA0 {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-01"
+      version             = "1.0"
+
+      hash                = "dc06cf3983981f0996b24f8724a292bb2a401c7a57c33dff0ed88fb737dc54c9"
+      malware             = "CastleLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: bmwservicebestik[.]com"
+
+      signer              = "ENGINEERING AND TECHNICAL PROCUREMENT SERVICES LTD"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "5a:72:60:b5:35:c8:7e:ab:8c:60:dc:79:1f:ba:db:a0"
+      cert_thumbprint     = "33B92801CAD416477349E00102AB74183AFA7867"
+      cert_valid_from     = "2026-04-01"
+      cert_valid_to       = "2027-04-01"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "5a:72:60:b5:35:c8:7e:ab:8c:60:dc:79:1f:ba:db:a0"
       )
 }
 
@@ -19810,6 +19985,41 @@ rule MAL_Compromised_Cert_FatalRAT_Certum_6C162B47BDE6ABB337796A32ACEAEB3A {
       )
 }
 
+rule MAL_Compromised_Cert_FiveModsLoader_GoGetSSL_0439B3B542C9E5DAAB59C63511445382 {
+   meta:
+      description         = "Detects FiveModsLoader with compromised cert (GoGetSSL)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-21"
+      version             = "1.0"
+
+      hash                = "0c934d4d04bbbd163e8a43eee5db54d80a8578753f0c5a1884c3bca9e9355217"
+      malware             = "FiveModsLoader"
+      malware_type        = "Backdoor"
+      malware_notes       = ""
+
+      signer              = "Danylo Babenko"
+      cert_issuer_short   = "GoGetSSL"
+      cert_issuer         = "GoGetSSL G4 CS RSA4096 SHA256 2022 CA-1"
+      cert_serial         = "04:39:b3:b5:42:c9:e5:da:ab:59:c6:35:11:44:53:82"
+      cert_thumbprint     = "914F0440019327E71BF233E7E1C8E2BE1A16CD50"
+      cert_valid_from     = "2026-03-21"
+      cert_valid_to       = "2027-03-20"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GoGetSSL G4 CS RSA4096 SHA256 2022 CA-1" and
+         sig.serial == "04:39:b3:b5:42:c9:e5:da:ab:59:c6:35:11:44:53:82"
+      )
+}
+
 rule MAL_Compromised_Cert_FlawedAmmyy_GlobalSign_4484F1C5B6A72DFEC0E1CA55 {
    meta:
       description         = "Detects FlawedAmmyy with compromised cert (GlobalSign)"
@@ -19891,7 +20101,7 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300072BFDB49FB17014EC2
       hash                = "1936cdf04ecac3f44c463f6db324cea93f7f6e4b3498212b89005a49054098b1"
       malware             = "Forever Botnet,BR-01"
       malware_type        = "Unknown"
-      malware_notes       = "Malware campaign targeting BR users via fake documents. C2:  jmkkload[.]com/bba13d314ed6c2ec94/"
+      malware_notes       = ""
 
       signer              = "Julie Jorgensen"
       cert_issuer_short   = "Microsoft"
@@ -19926,7 +20136,7 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300073B04691AB4FE2AA4A
       hash                = "d7fb1b329cf15e9bb814a696788a65d3fff26289bb56e3c015b007027e47f152"
       malware             = "Forever Botnet,BR-01"
       malware_type        = "Unknown"
-      malware_notes       = "Malware campaign targeting BR users via fake documents. C2: jmkkload[.]com/bba13d314ed6c2ec94/"
+      malware_notes       = ""
 
       signer              = "Julie Jorgensen"
       cert_issuer_short   = "Microsoft"
@@ -20031,7 +20241,7 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330007F98A12E14A67A7FA6
       hash                = "fa0bea1d8ca48f71e5f0a89c943bcccb4837d8f3f71a804772e4b8451a069020"
       malware             = "Forever Botnet,BR-01"
       malware_type        = "Unknown"
-      malware_notes       = "Malware campaign targeting BR users via fake documents. C2: segurancak[.]org"
+      malware_notes       = ""
 
       signer              = "Julie Jorgensen"
       cert_issuer_short   = "Microsoft"
@@ -20066,7 +20276,7 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_33000808856B83136090D41
       hash                = "e81c9825936156152f52ab17caae50cd5a457c58ea714880629f5dcd2637c9cf"
       malware             = "Forever Botnet,BR-01"
       malware_type        = "Unknown"
-      malware_notes       = "Malware campaign targeting BR users via fake documents. C2: jmkkload[.]com/bba13d314ed6c2ec94/"
+      malware_notes       = ""
 
       signer              = "Jerry Hayes"
       cert_issuer_short   = "Microsoft"
@@ -20101,7 +20311,7 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300080DCFE7C584DFEEEF1
       hash                = "698b6bcbdcc300ccc14569ad066872125e670571fbf2b24c721fdfbb6323959f"
       malware             = "Forever Botnet,BR-01"
       malware_type        = "Unknown"
-      malware_notes       = "Malware campaign targeting BR users via fake documents. C2: jmkkload[.]com/bba13d314ed6c2ec94/"
+      malware_notes       = ""
 
       signer              = "Julie Jorgensen"
       cert_issuer_short   = "Microsoft"
@@ -20135,8 +20345,8 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_33000879E850AD2CA7CCC01
 
       hash                = "2336ef2777274c5ebffa98e86a6085d8de354267fe85f9ee9ea74fd92c051724"
       malware             = "Forever Botnet,BR-01"
-      malware_type        = "Loader"
-      malware_notes       = "File was disguised as a document, targeting Brazilian speakers."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Mariah Lingle"
       cert_issuer_short   = "Microsoft"
@@ -20171,7 +20381,7 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330008936B9F218049D1F67
       hash                = "34c578754cb2f08e5d8a5b02f1aeaa5d90ff3b566b9beae3a76ab77efb878194"
       malware             = "Forever Botnet,BR-01"
       malware_type        = "Unknown"
-      malware_notes       = "C2: oficiospolicia.com"
+      malware_notes       = ""
 
       signer              = "Mariah Lingle"
       cert_issuer_short   = "Microsoft"
@@ -20346,7 +20556,7 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Sectigo_00C69698DD8E61DEE8A1D9382
       hash                = "d6b507696400dc1d67412872cb02f3f813cec2bdb70b00083ef718331a444bab"
       malware             = "Forever Botnet,BR-01"
       malware_type        = "Unknown"
-      malware_notes       = "Builds loaded as a stage 2 on infected machines. Malware campaign targeting BR users via fake documents."
+      malware_notes       = ""
 
       signer              = "Xiamen Gejie Ya Intelligent Technology Co., Ltd."
       cert_issuer_short   = "Sectigo"
@@ -20381,7 +20591,7 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Sectigo_00CA473A252585ECB88AB2669
       hash                = "473a013ae706915b43a046239821356afe4572c15e621f4ee63883e766c63af6"
       malware             = "Forever Botnet,BR-01"
       malware_type        = "Unknown"
-      malware_notes       = "Malware campaign targeting BR users via fake documents. C2: cms[.]lmcnow[.]com/q/"
+      malware_notes       = ""
 
       signer              = "Xiamen Time Travel Network Co., Ltd."
       cert_issuer_short   = "Sectigo"
@@ -20416,7 +20626,7 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Sectigo_011E9B8CCD60D504B4130D90D
       hash                = "dd1e7fd35306a22f511197716c7e9fe2c1ba149ffd275a5221c4452165a4b29d"
       malware             = "Forever Botnet,BR-01"
       malware_type        = "Unknown"
-      malware_notes       = "C2: kapa[.]is/f"
+      malware_notes       = ""
 
       signer              = "MAYDA PETROL OTOMOTIV INSAAT LIMITED SIRKETI"
       cert_issuer_short   = "Sectigo"
@@ -39350,8 +39560,8 @@ rule MAL_Compromised_Cert_Quakbot_Certum_3CDBD09436B29CB127FCFB1823EE9A9A {
 
       hash                = "de095ea31816e724d6ec46f703b096e893efec5bcba9d018c52820e22d4fbd45"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "FORMICA Solution a.s."
       cert_issuer_short   = "Certum"
@@ -39385,8 +39595,8 @@ rule MAL_Compromised_Cert_Quakbot_SSL_com_03980D54388F052199A48939D5203C0C {
 
       hash                = "e88610db05636a1476435ec1f39d3651b080c8a6b8756452d421d7a822a2e115"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Clover Field ApS"
       cert_issuer_short   = "SSL.com"
@@ -39420,8 +39630,8 @@ rule MAL_Compromised_Cert_Quakbot_SSL_com_1730848A0A9AEB9F5968331E08D74236 {
 
       hash                = "93a98b919aec23411ae62dba8d0d22f939da45dec19db2b4e7293124d8f1507f"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "SOFTWARE AGILITY LIMITED"
       cert_issuer_short   = "SSL.com"
@@ -39455,8 +39665,8 @@ rule MAL_Compromised_Cert_Quakbot_SSL_com_44E737228040233FCD8DED2BF108CE8C {
 
       hash                = "8db0b8f45f726a963b34410c74194e0b40f6720561731e8242ee60a8a7d7e3ce"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Ken Friedman AB"
       cert_issuer_short   = "SSL.com"
@@ -39490,8 +39700,8 @@ rule MAL_Compromised_Cert_Quakbot_SSL_com_4A3F0BF26862263DAC496033F50594CB {
 
       hash                = "fda2abd24764809fb36d4d2ee7ab5f6e8c06381fe6d9bb191bde62411c96ba92"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "SOFTWARE MEDICAL DEVICES LIMITED"
       cert_issuer_short   = "SSL.com"
@@ -39525,8 +39735,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00881573FC67FF7395DDE5BCCFBCE5B088 {
 
       hash                = "de9738c0910931b2b5e1f68841637a25301d17ab3860cd6e2cc1cbef9af1f5dd"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Trade in Brasil s.r.o."
       cert_issuer_short   = "Sectigo"
@@ -39560,8 +39770,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00890570B6B0E2868A53BE3F8F904A88EE {
 
       hash                = "f5e0f08a97072dde8e5481e5cc645717055c821ce76d2d0d80e76a57b47f931b"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "JESEN LESS d.o.o."
       cert_issuer_short   = "Sectigo"
@@ -39595,8 +39805,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_0092D9B92F8CF7A1BA8B2C025BE730C300 {
 
       hash                = "18462e94cec35c1bf5be85d3473631829e1aea7ab283df694606d8a5057e538a"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "UPLagga Systems s.r.o."
       cert_issuer_short   = "Sectigo"
@@ -39630,8 +39840,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00984E84CFE362E278F558E2C70AAAFAC2 {
 
       hash                = "94f38d5422e546a4569120ceca7895b0b0828cffac8beb82c57135ccd82cbbd6"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Arctic Nights Äkäslompolo Oy"
       cert_issuer_short   = "Sectigo"
@@ -39665,8 +39875,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_009BD81A9ADAF71F1FF081C1F4A05D7FD7 {
 
       hash                = "d86093212dafd8a363412060ce27984f98829de5cbe684978407f6478b8d68cf"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "SMART TOYS AND GAMES, INC"
       cert_issuer_short   = "Sectigo"
@@ -39700,8 +39910,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00A03EA3A4FA772B17037A0B80F1F968AA {
 
       hash                = "fc7a4edf9d9984d4a53b4296f0d0160436144bc5631b8c5b445a86f3bfa9ff61"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "DREVOKAPITAL, s.r.o."
       cert_issuer_short   = "Sectigo"
@@ -39735,8 +39945,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00A7989F8BE0C82D35A19E7B3DD4BE30E5 {
 
       hash                = "8b49bc1afd15dcc2bcc23b7637d58aca9a17b5b8a9e66ebdd109200fda384f0e"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Instamix Limited"
       cert_issuer_short   = "Sectigo"
@@ -39770,8 +39980,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00A918455C0D4DA7CA474F41F11A7CF38C {
 
       hash                = "e7a6e97363a3160280cdff69153dad3255759fc76dd10fc990432fd6c8f20cd4"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "MIDDRA INTERNATIONAL CORP."
       cert_issuer_short   = "Sectigo"
@@ -39805,8 +40015,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00AA07D4F2857119CEE514A0BD412F8201 {
 
       hash                = "cb4241399f69ba6a8b4e2297b225953b764fb41b4c27dcb3c923c0c54a51d627"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "HANGA GIP d.o.o."
       cert_issuer_short   = "Sectigo"
@@ -39840,8 +40050,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00AA1D84779792B57F91FE7A4BDE041942 {
 
       hash                = "8ad652ed5304408015e65d5ab8ecf65fecf8f00c1e5eb97606bd01d6031f5418"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "AXIUM NORTHWESTERN HYDRO INC."
       cert_issuer_short   = "Sectigo"
@@ -39875,8 +40085,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00AA28C9BD16D9D304F18AF223B27BFA1E {
 
       hash                = "68199ddf000a34ebcf9cedb1d45eefb0319f0a802197e64c4658e7ea9f04a943"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Tecno trade d.o.o."
       cert_issuer_short   = "Sectigo"
@@ -39910,8 +40120,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00AC307E5257BB814B818D3633B630326F {
 
       hash                = "3b2e8af68cd45ca960f18b429395e701b650e7d603060282994feb9d01c90852"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Aqua Direct s.r.o."
       cert_issuer_short   = "Sectigo"
@@ -39945,8 +40155,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00AFE8FEE94B41422E01E4897BCD52D0A4 {
 
       hash                = "253b5a915f1d7e14804228c862f39df4f8b2a7e7f96d94a863069c1c4d87e4e6"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "TLGM ApS"
       cert_issuer_short   = "Sectigo"
@@ -39980,8 +40190,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00B2E730B0526F36FAF7D093D48D6D9997 {
 
       hash                = "fa8bb8aade3749fb3338d7cd35c9e07781a5422aed193f85e5a3bc1b2fd02c1f"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Bamboo Connect s.r.o."
       cert_issuer_short   = "Sectigo"
@@ -40015,8 +40225,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00B2F9C693A2E6634565F63C79B01DD8F8 {
 
       hash                = "e3bf20fa69644c0ca34c600feb3c43f70a1d51408534d1167825a2178a7b7073"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "PHL E STATE ApS"
       cert_issuer_short   = "Sectigo"
@@ -40050,8 +40260,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00B61B8E71514059ADC604DA05C283E514 {
 
       hash                = "12a59869c0e78eed60e76adc9c592ba8b9f3d2835f19d4c46e7a458739d6aedf"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "APP DIVISION ApS"
       cert_issuer_short   = "Sectigo"
@@ -40085,8 +40295,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00BDC81BC76090DAE0EEE2E1EB744A4F9A {
 
       hash                = "892f8de40ffec90d9316a37e3a7cea1a137aa278c733fd599333f3ba0f5e4157"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ALM4U GmbH"
       cert_issuer_short   = "Sectigo"
@@ -40120,8 +40330,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00C2FC83D458E653837FCFC132C9B03062 {
 
       hash                = "dcda70b5cc63629dd2760dbc76ffda0bedefd0ee92af4d4e3740acc7dd2eaff2"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "OOO Vertical"
       cert_issuer_short   = "Sectigo"
@@ -40155,8 +40365,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00C318D876768258A696AB9DD825E27ACD {
 
       hash                = "4be7aad46de1042ea916b9e6ef6f18fcb56b40e768b94b733b70ca2995866cc6"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "OOO Genezis"
       cert_issuer_short   = "Sectigo"
@@ -40190,8 +40400,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00C51F4CF4D82BC920421E1AD93E39D490 {
 
       hash                = "37e973699f119ce5a2047281aa6f52429bc15164abdfe110f3340ee02d4c21b5"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "CUT AHEAD LTD"
       cert_issuer_short   = "Sectigo"
@@ -40225,8 +40435,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00C8442A8185082EF1ED7DC3FFF2176AA7 {
 
       hash                = "53214f4721ef1221632de09fd853580056811ac6632b517d77fb326956129530"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Ambidekstr LLC"
       cert_issuer_short   = "Sectigo"
@@ -40260,8 +40470,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00C8EDCFE8BE174C2F204D858C5B91DEA5 {
 
       hash                = "11d92a8bbd12d0f4634904ccc0037f58e99ab9d71e8341930a25564b3f2dec78"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Paarcopy Oy"
       cert_issuer_short   = "Sectigo"
@@ -40295,8 +40505,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00CA646B4275406DF639CF603756F63D77 {
 
       hash                = "6fcb5a86e736d4ec02334c9573a3eab21769538b30786cf02c5744ad5336594f"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "SHOECORP LIMITED"
       cert_issuer_short   = "Sectigo"
@@ -40330,8 +40540,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00CC95D6EBF18A3711E196AEA210465A19 {
 
       hash                = "f86eb10a728b912bfb98529ccc0e2dfedfe1bda9b12b8556dba19f810720a567"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "GEN Sistemi, d.o.o."
       cert_issuer_short   = "Sectigo"
@@ -40365,8 +40575,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00D3356318924C8C42959BF1D1574E6482 {
 
       hash                = "e38dfd919696b891fad1c1e5e0d69bcda08a044b526db42f68a149cd5d871bfb"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ADV TOURS d.o.o."
       cert_issuer_short   = "Sectigo"
@@ -40400,8 +40610,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00D338F8A490E37E6C2BE80A0E349929FA {
 
       hash                = "dbc1c772413a6d461d8c5db0d1b2538d9879c3f6890c8be34fe9723b5817909f"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "SAGUARO ApS"
       cert_issuer_short   = "Sectigo"
@@ -40435,8 +40645,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00D3AEE8ABB9948844A3AC1C04CC7E6BDF {
 
       hash                = "cd8a94e42e7119a3f1b5117151b7bb2fe4a777f221581b2dae0c2cf0e8ddedf2"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "HOUSE 9A s.r.o"
       cert_issuer_short   = "Sectigo"
@@ -40470,8 +40680,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00D4EF1AB6AB5D3CB35E4EFB7984DEF7A2 {
 
       hash                = "309bca5d9fde32746cd61a7ea4b2da3ef8f6cf2de57ee40e835c1b26237c991a"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "REIGN BROS ApS"
       cert_issuer_short   = "Sectigo"
@@ -40505,8 +40715,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00D59A05955A4A421500F9561CE983AAC4 {
 
       hash                = "f0329494b1a9a26aac06e2606c95e31167035d8f576ed8773664d7578913cf36"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Olymp LLC"
       cert_issuer_short   = "Sectigo"
@@ -40540,8 +40750,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00D627F1000D12485995514BFBDEFC55D9 {
 
       hash                = "27a1293d50124b0f40f4872bca6490eda7f01462dc612de6898e264bb91d9a6c"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "THREE D CORPORATION PTY LTD"
       cert_issuer_short   = "Sectigo"
@@ -40575,8 +40785,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00D7C432E8D4EDEF515BFB9D1C214FF0F5 {
 
       hash                = "fc59281d717018816d0ff8f2aa58e5491df892d3e85c50c8826b8e0ee5904af1"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "LLC \"MILKY PUT\""
       cert_issuer_short   = "Sectigo"
@@ -40610,8 +40820,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00DA156922F4760E0C5F5BCF79812A27E1 {
 
       hash                = "2b9861436d994bee6a332cbaf71a9fd6f157089062f414207c9effe84bf556e5"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "DRINK AND BUBBLE LTD"
       cert_issuer_short   = "Sectigo"
@@ -40645,8 +40855,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00DA20761AFBB0463C55B1EA88BBC7EC57 {
 
       hash                = "a9db99b934cb21df04e03d2b0d08ea6e6aaaa31ed185cdcff3d0148ea28454a3"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "CLEVER CLOSE s.r.o."
       cert_issuer_short   = "Sectigo"
@@ -40680,8 +40890,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00DADF44E4046372313EE97B8E394C4079 {
 
       hash                = "07dc705da27544ca4d232515c665dff2bbbf6b0ab49fd07c602e20d6a512b4af"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Digital Capital Management Ireland Limited"
       cert_issuer_short   = "Sectigo"
@@ -40715,8 +40925,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00E04A344B397F752A45B128A594A3D6B5 {
 
       hash                = "fa70becac90d59aa490f4735e317fe5950b3e05dd6537894a38608413369d649"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Highweb Ireland Operations Limited"
       cert_issuer_short   = "Sectigo"
@@ -40750,8 +40960,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00E267FDBDC16F22E8185D35C437F84C87 {
 
       hash                = "4767f1d796361381636e0a0f6815346e85e23e441fa9e281baa17fc93910117d"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "APOTHEKA, s.r.o."
       cert_issuer_short   = "Sectigo"
@@ -40785,8 +40995,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00E38259CF24CC702CE441B683AD578911 {
 
       hash                = "f953b103ae09065e639890aa4e133f54ac9a2a5f5eb519d970b2b8d40d251626"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Akhirah Technologies Inc."
       cert_issuer_short   = "Sectigo"
@@ -40820,8 +41030,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00E5AD42C509A7C24605530D35832C091E {
 
       hash                = "3849944c5db10f13305f76c92c1a8c80bc37f6a0514c19ea4a2bbeae62438113"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "VESNA, OOO"
       cert_issuer_short   = "Sectigo"
@@ -40855,8 +41065,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00E953ADA7E8F1438E5F7680FF599AE43E {
 
       hash                = "2606bf8f473dee7f8407db99323d14f8c241c25db538b20dfe7fb368c46b4278"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "KULBYT LLC"
       cert_issuer_short   = "Sectigo"
@@ -40890,8 +41100,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00EA720222D92DC8D48E3B3C3B0FC360A6 {
 
       hash                = "c972346b25a36cb3ddaeb4ede844d18711cbbf8226d74075879e5d8b49b8d46c"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "CAVANAGH NETS LIMITED"
       cert_issuer_short   = "Sectigo"
@@ -40925,8 +41135,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00F097E59809AE2E771B7B9AE5FC3408D7 {
 
       hash                = "96e21a6d02770fdff74ac912154f8c7c7a934d7236360485920c8550fa0050a1"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ABEL RENOVATIONS, INC."
       cert_issuer_short   = "Sectigo"
@@ -40960,8 +41170,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00F675139EA68B897A865A98F8E4611F00 {
 
       hash                = "c2482679c665dbec35164aba7554000817139035dc12efc9e936790ca49e7854"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "BS TEHNIK d.o.o."
       cert_issuer_short   = "Sectigo"
@@ -40995,8 +41205,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00F8C2E08438BB0E9ADC955E4B493E5821 {
 
       hash                = "b66b7bfcdc8d6fb55fe600c20302405a22e1e7b60a0bb1e48a0ccf4e5daf8e50"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "DocsGen Software Solutions Inc."
       cert_issuer_short   = "Sectigo"
@@ -41030,8 +41240,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00FE41941464B9992A69B7317418AE8EB7 {
 
       hash                = "9668bf80c1521a42cebce4a8c81da28fd5b10d846af370b2ad7c0ccda415c258"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Milsean Software Limited"
       cert_issuer_short   = "Sectigo"
@@ -41065,8 +41275,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00FED006FBF85CD1C6BA6B4345B198E1E6 {
 
       hash                = "ca14dd19ab553fa613a98a71f1d50ef73b9f91436f47b1a35c9ea8a4be2c2cc5"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "LoL d.o.o."
       cert_issuer_short   = "Sectigo"
@@ -41100,8 +41310,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00FF52EB011BB748FEE75153CBE1E50DD6 {
 
       hash                = "62653335118bb647653455b6aba600123b00a26e2b1fb74ad422b66abba60cfe"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "TASK ANNA LIMITED"
       cert_issuer_short   = "Sectigo"
@@ -41135,8 +41345,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_016836311FC39FBB8E6F308BB03CC2B3 {
 
       hash                = "91020b6ada47f05e9941da3d5fc747a4bdf088e30fdbf010b50ce9ccf0de0cc6"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "SERVICE STREAM LIMITED"
       cert_issuer_short   = "Sectigo"
@@ -41170,8 +41380,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_02B6656292310B84022DB5541BC48FAF {
 
       hash                = "a4649e5f4c93e99352a63345569bf762c0eace3f56f6b8da56f3802923bf058d"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "DILA d.o.o."
       cert_issuer_short   = "Sectigo"
@@ -41205,8 +41415,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_0A392F03DED5D73CDEEDA75052A57176 {
 
       hash                = "f9bbfe101624f224998b0ad845512014efa6a42265ebe45e8e13a28a775d39b2"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "FLOWER COMPUTERS LTD"
       cert_issuer_short   = "Sectigo"
@@ -41240,8 +41450,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_0CF2D0B5BFDD68CF777A0C12F806A569 {
 
       hash                = "f270de517926fb72dbc2e5e5d7335568f426fc524ad07e0ba553619080dbba3c"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "PROTIP d.o.o. - v stečaju"
       cert_issuer_short   = "Sectigo"
@@ -41275,8 +41485,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_121070BE1E782F206985543BC7BC58B6 {
 
       hash                = "423e9834d7e38533008abe7196be51ca3d424a16c9a96fd4b2638933eab8bb83"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Prod Can Holdings Inc."
       cert_issuer_short   = "Sectigo"
@@ -41310,8 +41520,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_121FCA3CFA4BD011669F5CC4E053AA3F {
 
       hash                = "692aa8adc305de52bc4c784fc272aaf943b4f8128162b712b24444342078c751"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Kymijoen Projektipalvelut Oy"
       cert_issuer_short   = "Sectigo"
@@ -41345,8 +41555,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_1249AA2ADA4967969B71CE63BF187C38 {
 
       hash                = "0dc710737c12ea1c1215fbd39e00347649fff1fb0e512287c86873f66a9f0a35"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Umbrella LLC"
       cert_issuer_short   = "Sectigo"
@@ -41380,8 +41590,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_13794371C052EC0559E9B492ABB25C26 {
 
       hash                = "0652d513a2c43aaabbb806eeda3e035aa3b12449a718610d42453896d9f97751"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Carmel group LLC"
       cert_issuer_short   = "Sectigo"
@@ -41415,8 +41625,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_13C7B92282AAE782BFB00BAF879935F4 {
 
       hash                = "ba505ad08b0cc2ca037d5349a1076be579e53b7f20750e779ad07692489eea6f"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "THE WIZARD GIFT CORPORATION"
       cert_issuer_short   = "Sectigo"
@@ -41450,8 +41660,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_142AAC4217E22B525C8587589773BA9B {
 
       hash                = "f543e03f714e5105b167fbddfe2112f0decaa3521971ed88f631dbca39caf8f2"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "A.B. gostinstvo trgovina posredništvo in druge storitve, d.o.o."
       cert_issuer_short   = "Sectigo"
@@ -41485,8 +41695,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_15C21DAB7F4E644E4B35C4858004D8A9 {
 
       hash                = "82dae5e93006e8bbbef21b855953a5445999ec08a89852f40bdc848c9c072186"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "P.REGO, s.r.o."
       cert_issuer_short   = "Sectigo"
@@ -41520,8 +41730,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_17D99CC2F5B29522D422332E681F3E18 {
 
       hash                = "a50992df4e3904b464d2202318046d25e5e072f56fcee0d524ceedcced0db0ed"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "PKV Trading ApS"
       cert_issuer_short   = "Sectigo"
@@ -41555,8 +41765,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_186D49FAC34CE99775B8E7FFBF50679D {
 
       hash                = "aadef6b90d90f628926fe3ca9bcc2104430bc404e9e451282ae139bcbde43320"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Hairis LLC"
       cert_issuer_short   = "Sectigo"
@@ -41590,8 +41800,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_1AE3C4ECCECDA2127D43BE390A850DDA {
 
       hash                = "5e840de448a948691f5dcb9699a771e9b0cff4c87a279070aa049eb336afbc9f"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "PARTYNET LIMITED"
       cert_issuer_short   = "Sectigo"
@@ -41625,8 +41835,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_1AEC3D3F752A38617C1D7A677D0B5591 {
 
       hash                = "c9c640e28bf179489b862381ef3e20c50a2557d76e6f165968433753d6e78d60"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "SILVER d.o.o."
       cert_issuer_short   = "Sectigo"
@@ -41660,8 +41870,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_1DEEA179F5757FE529043577762419DF {
 
       hash                = "07c6b6453907697a5832f5ef5b99dda2180b9f5fd4fee7ba8f64bab637db8fb1"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "SPIRIT CONSULTING s. r. o."
       cert_issuer_short   = "Sectigo"
@@ -41695,8 +41905,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_1F23F001458716D435CCA1A55D660EC5 {
 
       hash                = "e187fbf6543d1993f0945c04ee520600b6493236bae169a020f9a10c547e249d"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "OOO Ringen"
       cert_issuer_short   = "Sectigo"
@@ -41730,8 +41940,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_1FFC9825644CAF5B1F521780C5C7F42C {
 
       hash                = "378a6fdf9d2629f912926cdee7dbe401675d31dda23fa6a0b5a150db80e62739"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ACTIVUS LIMITED"
       cert_issuer_short   = "Sectigo"
@@ -41765,8 +41975,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_24E4A2B3DB6BE1007B9DDC91995BC0C8 {
 
       hash                = "2d68755335776e3de28fcd1757b7dcc07688b31c37205ce2324d92c2f419c6f0"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "FLY BETTER s.r.o."
       cert_issuer_short   = "Sectigo"
@@ -41800,8 +42010,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_26F855A25890B749578F13E4B9459768 {
 
       hash                = "866343b3294e723c5ba44a197dd24e180471ca3f5b811281b16087855b369c16"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Boo’s Q & Sweets Corporation"
       cert_issuer_short   = "Sectigo"
@@ -41835,8 +42045,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_2C1EE9B583310B5E34A1EE6945A34B26 {
 
       hash                = "71e2483b2d36765651132c9c1f935784a2008a91159b0ee3bbfb94193d0d644e"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "OOO Artmarket"
       cert_issuer_short   = "Sectigo"
@@ -41870,8 +42080,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_2E36360538624C9B1AFD78A2FB756028 {
 
       hash                = "ead37db279d439a8b30916b254590b21fe9ed268447bafd2fbc8e693e8ba7200"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Ts Trade ApS"
       cert_issuer_short   = "Sectigo"
@@ -41905,8 +42115,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_3223B4616C2687C04865BEE8321726A8 {
 
       hash                = "8584e035ae371ae08206bc56eaffdb6ebb0284adfdd3612f6ae40d07676d5f08"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "FORTUNE STAR TRADING, INC."
       cert_issuer_short   = "Sectigo"
@@ -41940,8 +42150,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_333CA7D100B139B0D9C1A97CB458E226 {
 
       hash                = "45406dae6b2c7383a3464de9112940cc9a388767fa867f17bc2a9c904861b358"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "FSE, d.o.o."
       cert_issuer_short   = "Sectigo"
@@ -41975,8 +42185,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_35590EBE4A02DC23317D8CE47A947A9B {
 
       hash                = "fab5aa283fc3a246f79d64cd53a2a6ac62aa0a34d86c2f637d766adb16574a99"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "OOO Largos"
       cert_issuer_short   = "Sectigo"
@@ -42010,8 +42220,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_3696883055975D571199C6B5D48F3CD5 {
 
       hash                = "dec2d24131b54bda92b59c49acc410da4af20a730b3113c0472479ac168e3a81"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Korist Networks Incorporated"
       cert_issuer_short   = "Sectigo"
@@ -42045,8 +42255,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_37F3384B16D4EEF0A9B3344B50F1D8A3 {
 
       hash                = "c0f3d4a44486b91a5cb4911608f036ce303b3020aa90cbe5d79c35bc84e1ad5b"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Sore Loser Games ApS"
       cert_issuer_short   = "Sectigo"
@@ -42080,8 +42290,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_38989EC61ECDB7391FF5647F7D58AD18 {
 
       hash                = "ec9352eeb82834a128bd306eddc085b5138083a4ce1e98d847fd936a309b52cb"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "RotA Games ApS"
       cert_issuer_short   = "Sectigo"
@@ -42115,8 +42325,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_3990362C34015CE4C23ECC3377FD3C06 {
 
       hash                = "7308f0965c7fa1b09efb2c252c2868b77e52527dac3f33eea697148bda017c48"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "RZOH ApS"
       cert_issuer_short   = "Sectigo"
@@ -42150,8 +42360,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_3BCAED3EF678F2F9BF38D09E149B8D70 {
 
       hash                = "78749911faeac0032bb0c8562761fa6ee3fb85f37e099f5169d9dcc29c8024bd"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "StarY Media Inc."
       cert_issuer_short   = "Sectigo"
@@ -42185,8 +42395,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_425DC3E0CA8BCDCE19D00D87E3F0BA28 {
 
       hash                = "29ab0dd1ecd81ef53162bc8d991b18113eac17f876cac17ffc301e589030f9a2"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Protover LLC"
       cert_issuer_short   = "Sectigo"
@@ -42220,8 +42430,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_435ABF46053A0A445C54217A8C233A7F {
 
       hash                = "ae940943dc46aa505baf564660c241d7ac92a0018b663142ba08296f6d129af2"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "OOO Kodemika"
       cert_issuer_short   = "Sectigo"
@@ -42255,8 +42465,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_4679C5398A279318365FD77A84445699 {
 
       hash                = "964b4ec11e60e4a5f7464b8ec4510f6f514e7e49185da9f445e07724536febd0"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "HURT GROUP HOLDINGS LIMITED"
       cert_issuer_short   = "Sectigo"
@@ -42290,8 +42500,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_4728189FA0F57793484CDF764F5E283D {
 
       hash                = "d5ef3d005f494f728076a6e0fe22a9160ac4fa584f4956582cbe77b499b586de"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Power Save Systems s.r.o."
       cert_issuer_short   = "Sectigo"
@@ -42325,8 +42535,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_4743E140C05B33F0449023946BD05ACB {
 
       hash                = "0170f0382c417a0c0b14cce5c023563e60cd75583a0ce5d6393f4d1f55d548e6"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "STROI RENOV SARL"
       cert_issuer_short   = "Sectigo"
@@ -42360,8 +42570,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_4A7F07C5D4AD2E23F9E8E03F0E229DD4 {
 
       hash                = "8b843d780403b64d562c38c56dcd9cc8abe2c70cc5324660cbd2757e41fd5057"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Danalis LLC"
       cert_issuer_short   = "Sectigo"
@@ -42395,8 +42605,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_4B03CABE6A0481F17A2DBEB9AEFAD425 {
 
       hash                = "f15e75823d25a23ed5ec3c5236b514add35a9a104803f0e16527c087f8a7c26b"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "RASSVET, OOO"
       cert_issuer_short   = "Sectigo"
@@ -42430,8 +42640,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_4E7545C9FC5938F5198AB9F1749CA31C {
 
       hash                = "4b485f8f1809545de7951d651893358ea247b2788811ab09654ded91fd2449b3"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "For M d.o.o."
       cert_issuer_short   = "Sectigo"
@@ -42465,8 +42675,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_51CD5393514F7ACE2B407C3DBFB09D8D {
 
       hash                = "1a49d434e0a95bd312d3d0a6d4fd5335830970bef8009eac1739c27f4986753c"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "APPI CZ a.s"
       cert_issuer_short   = "Sectigo"
@@ -42500,8 +42710,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_5226A724CFA0B4BC0164ECDA3F02A3DC {
 
       hash                = "de3ace90ae7600dd07a646040f20b96a426bea44d6747e83ea903ea50f70372f"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "VALENTE SP Z O O"
       cert_issuer_short   = "Sectigo"
@@ -42535,8 +42745,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_539015999E304A5952985A994F9C3A53 {
 
       hash                = "31b1c3b7706cbd03c97eb962c049dd024c06129648849206530dd960d2fdf115"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Service lab LLC"
       cert_issuer_short   = "Sectigo"
@@ -42570,8 +42780,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_58AF00CE542760FC116B41FA92E18589 {
 
       hash                = "78bc13074087f93fcc8f11ae013995f9a366b6943330c3d02f0b50c4ae96c8a7"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "DICKIE MUSDALE WINDFARM LIMITED"
       cert_issuer_short   = "Sectigo"
@@ -42605,8 +42815,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_5B1F9EC88D185631AB032DBFD5166C0D {
 
       hash                = "42bc9b623f70e46d6aab4910d8c75221aecf89a00756a61b21f952eea13a446c"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "TOPFLIGHT GROUP LIMITED"
       cert_issuer_short   = "Sectigo"
@@ -42640,8 +42850,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_5B440A47E8CE3DD202271E5C7A666C78 {
 
       hash                = "f82299590f685b0915f2f18ad25c1d11ab35120d5055b1c06720b519ac2cb23f"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Master Networking s.r.o."
       cert_issuer_short   = "Sectigo"
@@ -42675,8 +42885,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_5C7E78F53C31D6AA5B45DE14B47EB5C4 {
 
       hash                = "d041ef7ec1117e7947220390fb169788d96ae373471029f83fe9a0858a92f39e"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Cubic Information Systems, UAB"
       cert_issuer_short   = "Sectigo"
@@ -42710,8 +42920,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_623EAE6A66D3A6EE80DF9CCEBE51181E {
 
       hash                = "8cc8f32b2f44e84325e5153ec4fd60c31a35884220e7c36b753550356d6a25c8"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "GAIN AI LTD"
       cert_issuer_short   = "Sectigo"
@@ -42745,8 +42955,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_626735ED30E50E3E0553986D806BFC54 {
 
       hash                = "085f0f3f25b1328d153a7c56125e1d8a4d43bc882fe3f250d742ea5247850c02"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "FISH ACCOUNTING & TRANSLATING LIMITED"
       cert_issuer_short   = "Sectigo"
@@ -42780,8 +42990,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_690910DC89D7857C3500FB74BED2B08D {
 
       hash                = "fe1fe8c9671f6b23f16c52d3a726ba99f00e2559e7991c4e67d88b7cf945da9d"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "OLIMP STROI, OOO"
       cert_issuer_short   = "Sectigo"
@@ -42815,8 +43025,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_69A72F5591AD78A0825FBB9402AB9543 {
 
       hash                = "80b5ed7b12e236b36722bed7293766a4a7307a948c841eef8585fd8ae4813608"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "PUSH BANK LIMITED"
       cert_issuer_short   = "Sectigo"
@@ -42850,8 +43060,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_6A241FFE96A6349DF608D22C02942268 {
 
       hash                = "f01877dc957f31702ff592478646c66b44abb7c02d40f20031de3a7b98b28e2b"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "HELP, d.o.o."
       cert_issuer_short   = "Sectigo"
@@ -42885,8 +43095,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_6E0CCBDFB4777E10EA6221B90DC350C2 {
 
       hash                = "664772bd38ffaf9acb17b9485747ba706d7ddf1d8374f8fd6594251d1df85be9"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "TRAUMALAB INTERNATIONAL APS"
       cert_issuer_short   = "Sectigo"
@@ -42920,8 +43130,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_70E1EBD170DB8102D8C28E58392E5632 {
 
       hash                = "c3cba8b38b1c9d930d6352803848798e6e9b8ef37e52523b97d5b94dd52fc732"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Equal Cash Technologies Limited"
       cert_issuer_short   = "Sectigo"
@@ -42955,8 +43165,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_7156EC47EF01AB8359EF4304E5AF1A05 {
 
       hash                = "5aef62812d4c85ceff8b7242d7903482754f0f0bd49712f1a9746bd07a99cb72"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "BOREC, OOO"
       cert_issuer_short   = "Sectigo"
@@ -42990,8 +43200,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_7AB21306B11FF280A93FC445876988AB {
 
       hash                = "3d6f88d4ae3da95201d454a65199a8402e1834973c934f5e6658b8964c4d9105"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ABC BIOS d.o.o."
       cert_issuer_short   = "Sectigo"
@@ -43025,8 +43235,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_7E0CCDA0EF37ACEF6C2EBE4538627E5C {
 
       hash                = "dc062275af294c93bf891da3aa1445bb52433632e83c97d152d05f0aa3466650"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Orangetree B.V."
       cert_issuer_short   = "Sectigo"
@@ -43060,8 +43270,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_7ED801843FA001B8ADD52D3A97B25931 {
 
       hash                = "d148d0eee0b33861cc58801464a1c04c4b61aaf87be8b2fbc027d8fd1ce8b9a6"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "AM El-Teknik ApS"
       cert_issuer_short   = "Sectigo"
@@ -43095,8 +43305,8 @@ rule MAL_Compromised_Cert_Quakbot_TrustOcean_00936BC256D2057CA9B9EC3034C3ED0EE6 
 
       hash                = "dbac4888cb2be8a41986d0992abcb7215556da786e9b12759f6a39eede97b5f5"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "SALES & MAINTENANCE LIMITED"
       cert_issuer_short   = "TrustOcean"
@@ -43130,8 +43340,8 @@ rule MAL_Compromised_Cert_Quakbot_TrustOcean_00ADDB899F8229FD53E6435E08BBD3A733 
 
       hash                = "d617ac91f216f3fb38c60b1c5bb1f623805d69fdf076636167bb09adfba5af67"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "U.K. STEEL EXPORTS LIMITED"
       cert_issuer_short   = "TrustOcean"
@@ -43165,8 +43375,8 @@ rule MAL_Compromised_Cert_Quakbot_TrustOcean_00BC6C43D206A360F2D6B58537C456B709 
 
       hash                = "77abaa92184007a6176bf62098a90cf705254fae15ba25bcf2cd4359ca708428"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ANKADA GROUP, d.o.o."
       cert_issuer_short   = "TrustOcean"
@@ -48930,6 +49140,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_GoGetSSL_0C7368921398F9E38DBDA6AB2
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000015BF49C00E94FDC31E940000000015BF {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-14"
+      version             = "1.0"
+
+      hash                = "60ddfc25ccc4cf804a4225cbb4e33548cb4e0d2b1334e9916e083914926ba874"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Perry Sabrina Ann"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:00:15:bf:49:c0:0e:94:fd:c3:1e:94:00:00:00:00:15:bf"
+      cert_thumbprint     = "700367DC5F5CE0A7874F9ECFB4101D4EE1CBBBEE"
+      cert_valid_from     = "2026-04-14"
+      cert_valid_to       = "2026-04-17"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:00:15:bf:49:c0:0e:94:fd:c3:1e:94:00:00:00:00:15:bf"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300004428428678F9C72CCD14000000004428 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
@@ -48962,6 +49207,216 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300004428428678F9C72CCD
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
          sig.serial == "33:00:00:44:28:42:86:78:f9:c7:2c:cd:14:00:00:00:00:44:28"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300005148694B37DCDA9E19CE000000005148 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-19"
+      version             = "1.0"
+
+      hash                = "e43ba5bfa5302cc7e0006e2ae6cfea8a472678858410d190f98e15babe84ded5"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Frank Farris"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:00:51:48:69:4b:37:dc:da:9e:19:ce:00:00:00:00:51:48"
+      cert_thumbprint     = "FD7D7B68479230B404E86518729666C31594AB09"
+      cert_valid_from     = "2026-04-19"
+      cert_valid_to       = "2026-04-22"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:00:51:48:69:4b:37:dc:da:9e:19:ce:00:00:00:00:51:48"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300005E046E3329FE185C4715000000005E04 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-20"
+      version             = "1.0"
+
+      hash                = "5051350c1c2058d7ad4cd95c40219c68bc559fcb15434a688b88672dd376bd13"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Frank Farris"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:00:5e:04:6e:33:29:fe:18:5c:47:15:00:00:00:00:5e:04"
+      cert_thumbprint     = "4787FEC48F672F6D4587BD6C8F3781C79E8C4514"
+      cert_valid_from     = "2026-04-20"
+      cert_valid_to       = "2026-04-23"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:00:5e:04:6e:33:29:fe:18:5c:47:15:00:00:00:00:5e:04"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000660EF0961CCA2028E6C500000000660E {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-21"
+      version             = "1.0"
+
+      hash                = "1375c7d3b694cf197c1669174392f6d1cd579a7adf0385f644667acea52f35f2"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Frank Farris"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:00:66:0e:f0:96:1c:ca:20:28:e6:c5:00:00:00:00:66:0e"
+      cert_thumbprint     = "A2E5CC9AC0D54BB06252DAAC0282DAD0F1EF2F45"
+      cert_valid_from     = "2026-04-21"
+      cert_valid_to       = "2026-04-24"
+
+      country             = "US"
+      state               = "Tennessee"
+      locality            = "nashville"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:00:66:0e:f0:96:1c:ca:20:28:e6:c5:00:00:00:00:66:0e"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300006AFD78815D7CD8EB8537000000006AFD {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-22"
+      version             = "1.0"
+
+      hash                = "a9e96c7fd61fc2ea26576ad6f0dfc36fceb795ebb60219e0e7aed689fe75b3c1"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Frank Farris"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:00:6a:fd:78:81:5d:7c:d8:eb:85:37:00:00:00:00:6a:fd"
+      cert_thumbprint     = "D0A63A1D54A1823AA6005A3FFBD8AE850B6BD7A8"
+      cert_valid_from     = "2026-04-22"
+      cert_valid_to       = "2026-04-25"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:00:6a:fd:78:81:5d:7c:d8:eb:85:37:00:00:00:00:6a:fd"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300006C03E05B593A61954D42000000006C03 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-22"
+      version             = "1.0"
+
+      hash                = "39966799de10438c2e7c0050b53f0f2943a1ca99507e9a1e171e9c3db74e7670"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Perry Sabrina Ann"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:00:6c:03:e0:5b:59:3a:61:95:4d:42:00:00:00:00:6c:03"
+      cert_thumbprint     = "73874BEFAF2348DCE7255B52A91E127FAA1CB5EF"
+      cert_valid_from     = "2026-04-22"
+      cert_valid_to       = "2026-04-25"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:00:6c:03:e0:5b:59:3a:61:95:4d:42:00:00:00:00:6c:03"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000073F4ACB16D687DDB584B0000000073F4 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-23"
+      version             = "1.0"
+
+      hash                = "2db81e3bbef7e22d38d61b2e2db69eb7ad9fb74c08b09d596922245ae1796e0d"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Frank Farris"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:00:73:f4:ac:b1:6d:68:7d:db:58:4b:00:00:00:00:73:f4"
+      cert_thumbprint     = "C92104A668F30F93C969CDB32A022BC747C29DBD"
+      cert_valid_from     = "2026-04-23"
+      cert_valid_to       = "2026-04-26"
+
+      country             = "US"
+      state               = "Tennessee"
+      locality            = "nashville"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:00:73:f4:ac:b1:6d:68:7d:db:58:4b:00:00:00:00:73:f4"
       )
 }
 
@@ -50222,6 +50677,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_5886E0F4BAA836E9231BA6F8F9
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "58:86:e0:f4:ba:a8:36:e9:23:1b:a6:f8:f9:65:e5:1d"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_7E0D2428F8B3793BE0947AB4DAB9473C {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-17"
+      version             = "1.0"
+
+      hash                = "30bf84c083d8b9068fa2a2ef675c485f5d7071acef3d8a123f03cedf6f64c4d7"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "ELITE SOFTWARE LLC"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "7e:0d:24:28:f8:b3:79:3b:e0:94:7a:b4:da:b9:47:3c"
+      cert_thumbprint     = "94666E3AE756E64EF3ACD75B223829CF4ADCC7C0"
+      cert_valid_from     = "2026-03-17"
+      cert_valid_to       = "2027-03-17"
+
+      country             = "US"
+      state               = "California"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "B20260092982"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "7e:0d:24:28:f8:b3:79:3b:e0:94:7a:b4:da:b9:47:3c"
       )
 }
 
@@ -52685,8 +53175,8 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_0291C35AB6F0EC2F79C8F1CE5F37E776 {
 
       hash                = "8447b77cc4b708ed9f68d0d71dd79f5e66fe27fedd081dcc1339b6d35c387725"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "OOO Ruvents"
       cert_issuer_short   = "Certum"
@@ -52720,8 +53210,8 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_092A8190ED1DEA673F505593BED137D4 {
 
       hash                = "bbfae2ab644c8d0f1ba82b01032b1962c43855cc6716193ce872ac16cda166df"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "SMARTYUNITI OOO"
       cert_issuer_short   = "Certum"
@@ -52755,8 +53245,8 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_22B71B4E1DFFAF027DAD91DE93DD4E00 {
 
       hash                = "18aeff0a97dfd33b6f0664f43ecafd18511af559002072f680a4e5929a9c7e4f"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "APPS HORIZON"
       cert_issuer_short   = "Certum"
@@ -52790,8 +53280,8 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_2782171DABF21DBB7C0A155C38BC1FFB {
 
       hash                = "5af99cfc85db7d386c951c76581433cf9bf82eafa775daef93d8bde38a5d6afc"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Bauder Ltd"
       cert_issuer_short   = "Certum"
@@ -52825,8 +53315,8 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_36FF674EB305E99C35565FA301D5C4B0 {
 
       hash                = "8e06c31285911c936425921ccf9f20107160174acd602cc7f2dd8ca677e8956d"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "OOO Sistema"
       cert_issuer_short   = "Certum"
@@ -52860,8 +53350,8 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_3CDBD09436B29CB127FCFB1823EE9A9A {
 
       hash                = "28b41fbae3fec855c2f4779dde8d4e990d3e5ceede80a89bcf420a59459d84b8"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "FORMICA Solution a.s."
       cert_issuer_short   = "Certum"
@@ -52895,8 +53385,8 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_5A364C4957D93406F76321C2316F42F0 {
 
       hash                = "4e7f9e963408d0744d58a933d904996d43aa5f065fe12a6b9cbace6a527932a7"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Board Game Bucket Ltd"
       cert_issuer_short   = "Certum"
@@ -52930,8 +53420,8 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_5EBFBF4B22271CE3E174938BBA664980 {
 
       hash                = "b10e90ffd7b0bec744d7de5d65e1c71a213aafae0c9fb897ce97c8496725af2b"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "A13 Software Ltd"
       cert_issuer_short   = "Certum"
@@ -52965,8 +53455,8 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_61B237AEF2F478344BB2DFF63A6368A2 {
 
       hash                = "5da219f776810a42d8c8e26989f420ece92e87b6279e3bb39dc9627ad0b7f909"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Crowded Out Limited"
       cert_issuer_short   = "Certum"
@@ -53000,8 +53490,8 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_69FDC58EC3C51276598AE539541FE236 {
 
       hash                = "336e2f4cd131ca8c6ebf87fe23ac876a119992e24b5f84d5bbf7b6fcf5c43a5d"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "DataIntegra s.r.o."
       cert_issuer_short   = "Certum"
@@ -53035,8 +53525,8 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_6BE642576DDB9D7631CF2DFCE425CC9F {
 
       hash                = "2d3dcb25a63f0df5a3033bea79cffce04e748133c3f80722033eb8adccc6d13d"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Cloud Estates London Limited"
       cert_issuer_short   = "Certum"
@@ -53070,8 +53560,8 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_6CE7A0C62F27FA98F78853E1AD11173F {
 
       hash                = "e531f0ecc9731fc8ffc22f8bc24d7ef1f09a3d8cff3f1369e0010ea173eb593a"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "D&K ENGINEERING"
       cert_issuer_short   = "Certum"
@@ -53105,8 +53595,8 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_6E44FCEDD49F22F7A28CECC99104F61A {
 
       hash                = "373b8a34d4dc77de66e36f69cbf2cd2e232b78606092961bc59bfd6a70fbf565"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "M-Trans Maciej Caban"
       cert_issuer_short   = "Certum"
@@ -53140,8 +53630,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_029331118B3CBFFD93410BCE02AC3211 
 
       hash                = "add7cdf9d10a61d354f6235cc5b8576208df03afc67df767687092b6cee66df7"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Lunar Industrial Software, Inc."
       cert_issuer_short   = "DigiCert"
@@ -53175,8 +53665,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_03AD977571E5079C2AD3846D61CE6E54 
 
       hash                = "96512386ea92612cd3c09c377f6a62e1df7a940ce4e46ca5562d75a1017413c9"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Plus 5 XP Corporation"
       cert_issuer_short   = "DigiCert"
@@ -53210,8 +53700,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_04926FF6AAC88D45447E23ADC38D34E5 
 
       hash                = "ab7489ecce8cbd41191d4e63e741d679d95bfb77b01a55285abf65f3337918f8"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Dynamic Digital Marketing Ltd."
       cert_issuer_short   = "DigiCert"
@@ -53245,8 +53735,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_04C57B9205B4533656B302990A86D113 
 
       hash                = "9c699540819d96bfe614049cf31abc8b850bc3f74b19654a06db75fc0ac6db8f"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Tevora Business Solutions, Inc."
       cert_issuer_short   = "DigiCert"
@@ -53280,8 +53770,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0524906F41BB30C9FEA7C91CECDF5BFA 
 
       hash                = "7c213efd427bc3a594a4d794cbb40b63ce8a3e3dc19312011cb7ddbf60811da1"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Snowi Tech Inc."
       cert_issuer_short   = "DigiCert"
@@ -53315,8 +53805,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_055561A0C693BE9239850D8053149DF5 
 
       hash                = "057aa4a06395c384a2a9d29f499b410ac1da6fc2c10aa61908eea3e67a32b872"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "TOV \"SELT MOTO\""
       cert_issuer_short   = "DigiCert"
@@ -53350,8 +53840,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_055C02563838CEA7452A07111BBA010D 
 
       hash                = "29014a3438c174c2e7377168adf62080e7566e1664c1b639e454a9ad961b5fde"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Verbtronic Digital Inc."
       cert_issuer_short   = "DigiCert"
@@ -53385,8 +53875,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_05634456DBEDB3556CA8415E64815C5D 
 
       hash                = "1d4ab34baa9e5c2cc73ec2788ca8d849befe8c0ef5d8fdd5b7a4bed5de6ebaff"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Walden Intertech Inc."
       cert_issuer_short   = "DigiCert"
@@ -53420,8 +53910,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_05BB162F6EFE852B7BD4712FD737A61E 
 
       hash                = "770658cdc73ef874c0f4daedb014daea71b5c179c1474ecd6d373d89ac45b48c"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Wellpro Impact Solutions Oy"
       cert_issuer_short   = "DigiCert"
@@ -53455,8 +53945,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_061051FF2A8AFAB10347A6F1FF08ECB6 
 
       hash                = "1197067d50dd5dd5af12e715e2cc00c0ba1ff738173928bbcfbbad1ee0a52f21"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "TACHOPARTS SP Z O O"
       cert_issuer_short   = "DigiCert"
@@ -53490,8 +53980,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0636769AA66BF4317A772F5FE23CE085 
 
       hash                = "f1974ba6905ffb380edf9bad7c799b31c4d3668fd80d87691ca885ee18d551dc"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "IDS-Software Limited"
       cert_issuer_short   = "DigiCert"
@@ -53525,8 +54015,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_06487A92B1D912B79F2291C0D3820F2C 
 
       hash                = "a8b1ff391ff0937a12b63d34b6a8326bf5058e0a2ac9ae5306ed8d708f1e6e44"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Soto Manufacturing SRL"
       cert_issuer_short   = "DigiCert"
@@ -53560,8 +54050,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_064893F1B9414DCA47F5B83A018D938D 
 
       hash                = "f61f2dc8346f3777b4210ecc84ec55a909666a38796124172317007041a17030"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Stratos Digital Limited"
       cert_issuer_short   = "DigiCert"
@@ -53595,8 +54085,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_065C065ABC9FF9A3C719AD656ABEC485 
 
       hash                = "08e055a874ff5c2dcd27eb973b991fcbcd20d2ab6e3baa183f004f5f22c4f9e8"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "SijuThomas Consulting Inc."
       cert_issuer_short   = "DigiCert"
@@ -53630,8 +54120,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_068D0AB0A8356C79919FE07391362873 
 
       hash                = "0404db80657a603605b3c0128269a1d7eea2b4e0a17b7a3f48ddc0640248f2c0"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Vespero s. r. o."
       cert_issuer_short   = "DigiCert"
@@ -53665,8 +54155,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_06FA27A121CC82230C3013EE634B6C62 
 
       hash                = "2f7287a8b0c612801e77de6c2f37e22e0a67579f203a0aaf40095bf6ff70e6ee"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Zimmi Consulting Inc"
       cert_issuer_short   = "DigiCert"
@@ -53700,8 +54190,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_075D421B06BDB8CF2E01A79D07F094F1 
 
       hash                = "92279e087fea81889e228bf4032ff3765ecfbb9231ffb8e8d63662e22300599b"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Stream Synergy Inc."
       cert_issuer_short   = "DigiCert"
@@ -53735,8 +54225,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_08063F7043D2981C5A9A8E7769875262 
 
       hash                = "5e2d71794b574e880880b771fd2011f16a5eb1346b731caacdac0d80bfc0c0a1"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Hillcoe Software Inc."
       cert_issuer_short   = "DigiCert"
@@ -53770,8 +54260,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0839DC3E884FD7B0F441F0A5378ACFC0 
 
       hash                = "b1620fbd2194bc09812c01134b7f60292cfbabd26f1360ecb04c1f66cb2dd4f5"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "SN Pelletier Consulting Inc."
       cert_issuer_short   = "DigiCert"
@@ -53805,8 +54295,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0883DB137021B51F3A2A08A76A4BC066 
 
       hash                = "11543f09c416237d92090cebbefafdb2f03cec72a6f3fdedf8afe3c315181b5a"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Divertida Creative Limited"
       cert_issuer_short   = "DigiCert"
@@ -53840,8 +54330,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0A54C60487D8384EDCE981814BE767CB 
 
       hash                = "0abe73a746671028db3ef2ba3ea8bea059888fc177d76a11e34cd1f075b24b69"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Decapolis Consulting Inc."
       cert_issuer_short   = "DigiCert"
@@ -53875,8 +54365,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0B446CBB7D80181261507B59A57D35B8 
 
       hash                = "0c8d4cfd455bf5f799b4b4bf748eefc7cabe940363fe55dd71f881f7607c3bf3"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "MD Management SARL"
       cert_issuer_short   = "DigiCert"
@@ -53910,8 +54400,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0BE38632E9FB3C60CD21B13DDAE65AAD 
 
       hash                = "9fcdb329122b918110be82e8040386798f1a0c28ad1d103bf06e5df6ec820aca"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Ameri Mode Inc."
       cert_issuer_short   = "DigiCert"
@@ -53945,8 +54435,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0C6B875DE4F598244A6D6751ABFBDFBD 
 
       hash                = "f268491d2f7e9ab562a239ec56c4b38d669a7bd88181efb0bd89e450c68dd421"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Full Stack s. r. o."
       cert_issuer_short   = "DigiCert"
@@ -53980,8 +54470,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0C761FB29DA396BDCCE9850E32EEB8D9 
 
       hash                = "6c59f4f268f1ce1d85cdf9169e81464bb950ec572ea1e3ab9cc4ff4a75589435"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Table Ronde 1155 Inc."
       cert_issuer_short   = "DigiCert"
@@ -54015,8 +54505,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0D6D1BA122C0E6586352D55D246D07A0 
 
       hash                = "6d1a637ee2263dc7918b886a8a1878fb73a000510bc6f42e0c59669487c46e82"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "G & D Consulting, LLC."
       cert_issuer_short   = "DigiCert"
@@ -54050,8 +54540,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0DD8B5184BF2BD3342498F8AFCF78FD9 
 
       hash                = "b3d5baeef9ba35109bd270f5ec27e15cf691217dd591b29ae83ebd07989af947"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Aero IT ApS"
       cert_issuer_short   = "DigiCert"
@@ -54085,8 +54575,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0E6A6A2DF3B07B2438A0C96EF4413167 
 
       hash                = "e99896598b6c6df29735f4c0f08c99ff49275cba850c81c1249e865b6f4f8ba8"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Trinode Software Oy"
       cert_issuer_short   = "DigiCert"
@@ -54120,8 +54610,8 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0E9D7A2348CE1EB34FF6D61A86244DEE 
 
       hash                = "2d72b1e256c6b483684ff9268be5318a7294490c7f05a07e025f54a4cadd2f2e"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "BizIncorp Online Limited"
       cert_issuer_short   = "DigiCert"
@@ -54155,8 +54645,8 @@ rule MAL_Compromised_Cert_SolarMarker_Entrust_192776242ED08D537676143D67B5D23A {
 
       hash                = "5bccb6950b0aad0956ab9a0eb02e503fc613d4744b9f396fdbcb2fd965e69542"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Gurung Solutions Ltd"
       cert_issuer_short   = "Entrust"
@@ -54190,8 +54680,8 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_0CF35922B751266769123CB9 {
 
       hash                = "315d36da6305f267f36216733590babcbcb405c4fc88935d2f3a7bf610cf98fe"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "SMART AC VIET NAM TM & DV JOINT STOCK COMPANY"
       cert_issuer_short   = "GlobalSign"
@@ -54225,8 +54715,8 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_1139DBB02776FA0F0C0DF30B {
 
       hash                = "62cc290842868cf7de7c9e75c150ac58acc33e33cd26f12e4fa614408453c549"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ITM LLC"
       cert_issuer_short   = "GlobalSign"
@@ -54260,8 +54750,8 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_11B61750E45083AE450F8EC7 {
 
       hash                = "be1d635e6325a67ea4cbab84066e56e76a28c7c5ca26abdf466860cf11010e1f"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Jiazhou Education & Consulting Inc."
       cert_issuer_short   = "GlobalSign"
@@ -54295,8 +54785,8 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_16BA6FBAAF80A4239EB27A18 {
 
       hash                = "5abc14737cb65a1e645bd5a2e3301b0e3e1e861a184034a6cc67ce57ee38f448"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "SCHPITZE ApS"
       cert_issuer_short   = "GlobalSign"
@@ -54330,8 +54820,8 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_182010E6F30A0FDCC3F1BD44 {
 
       hash                = "59b1140b830a98ad213d6e92abd8329d3485cb530143c2ad7cff70362c4c181d"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "LAABAI LTD"
       cert_issuer_short   = "GlobalSign"
@@ -54365,8 +54855,8 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_1D36C4F439D651503589318F {
 
       hash                = "cce973b40f864284f2226213f1989c45861d89fd62eb0e311e880f5d017e23b2"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "REDWOOD MARKETING SOLUTIONS INC."
       cert_issuer_short   = "GlobalSign"
@@ -54400,8 +54890,8 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_20758F91D61AA738C7D8C03D {
 
       hash                = "e89360d7d77e6979d54dc567cee54ac6128b8ed9250bc3164c5e77c43cd8a647"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "RUBEZH LLC"
       cert_issuer_short   = "GlobalSign"
@@ -54435,8 +54925,8 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_34D1F82D6B7BAE4075CEEEB7 {
 
       hash                = "834c6ba26f460e98e9abad308eb261e2f23125d006573ec67b438d62eeabee60"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "JYL Business Solutions Inc."
       cert_issuer_short   = "GlobalSign"
@@ -54470,8 +54960,8 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_3FAC2FCD5CDFBDE7E9EF0C51 {
 
       hash                = "90a377b69113082ec2789371e02043277fbf8595a6f1f7cd1c6a70493381ab80"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "FASTIDIOUS ACCOUNTANTS LTD"
       cert_issuer_short   = "GlobalSign"
@@ -54505,8 +54995,8 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_52F5172C4B2C258F5E33B71C {
 
       hash                = "c6fda8a049ebd7872358acfa2505f226e931e0f71090c19412e7b6d0a1c6e129"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "CHILL ANAESTHESIA LTD."
       cert_issuer_short   = "GlobalSign"
@@ -54540,8 +55030,8 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_59BAF421EC167DA76C9ADE31 {
 
       hash                = "1160da03685be4abedafa4f03b02cdf3f3242bc1d6985187acf281f5c7e46168"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Repeat Business Ltd"
       cert_issuer_short   = "GlobalSign"
@@ -54575,8 +55065,8 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_65654FEAF83C48513D968826 {
 
       hash                = "3e99b59df79d1ab9ff7386e209d9135192661042bcdf44dde85ff4687ff57d01"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "PRIVATE SECURITY ORGANIZATION BARK LLC"
       cert_issuer_short   = "GlobalSign"
@@ -54610,8 +55100,8 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_6C4ED4D7E425DD681FA71F59 {
 
       hash                = "a13278be27e4b0c38d7102496f3d4fcfb31cf710389edee244a4c5dd40055c4f"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "MORYS LLC"
       cert_issuer_short   = "GlobalSign"
@@ -54645,8 +55135,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_0915E7AD8C2B57E11D65AFC9E497D252 {
 
       hash                = "b55b93ec2e7b962840adfacb4e6007c620f6e7fc9a1289825b44b1376a5cc081"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ТОВ \"Ветох\""
       cert_issuer_short   = "SSL.com"
@@ -54680,8 +55170,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_0EF9DCEF244E302160FEB44B41E24F1F {
 
       hash                = "55da66e72382877954b3d050a9ca5e4daad614d5b0c788e61187184b7352e768"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "TRACK PROJECT SP Z O O"
       cert_issuer_short   = "SSL.com"
@@ -54715,8 +55205,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_11BB96AF61D33B7097E13E0C41DCF747 {
 
       hash                = "48d7f595d98bbe45cf34f1ba7280a89c27e59de9b17fdfd8bc5d6d1cf817c321"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "D&J BROWN IDIOMAS LTDA"
       cert_issuer_short   = "SSL.com"
@@ -54750,8 +55240,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_14ECD44C98C3DF27FCC699DC70E32C7A {
 
       hash                = "f799e7e81b66cf7d787abc864ed82c3dc5fd2aa95c9f3d24a39c79a3741d37c1"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Daxon Digital Services Inc"
       cert_issuer_short   = "SSL.com"
@@ -54785,8 +55275,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_1550D13FAFBA5857AA657751CCFB6BEC {
 
       hash                = "4f349e005eb9cebef10044b3f4aa181ea75cf9c107fb0683931397b2ea06a86d"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "BAAAD KITTY LIMITED"
       cert_issuer_short   = "SSL.com"
@@ -54820,8 +55310,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_157EF6D6D74883FE50765D9DA9E11C69 {
 
       hash                = "6c89c09213a79a917a97f4531b9ef01da8feee805d2d3b7de92a831dbec9a7e6"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ТОВ \"Тотоп\""
       cert_issuer_short   = "SSL.com"
@@ -54855,8 +55345,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_19C82A677E106CC31FC9BA4B660CECFB {
 
       hash                = "c249477d921abc7aefb41f46c489c215f807a5d9a9aa68c426295304895eaf10"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Gajanan Consulting Ltd."
       cert_issuer_short   = "SSL.com"
@@ -54890,8 +55380,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_1C633276C70754EEE95F71369090E72E {
 
       hash                = "250fe7be536bb8674dd7e0e7c4de2ca1e3311ed657181d950dda6590a3bded51"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ТОВ \"Айтипути\""
       cert_issuer_short   = "SSL.com"
@@ -54925,8 +55415,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_1F53605ED1F00A604E5FEB198FE3C4CC {
 
       hash                = "8f536b3f85b999cf0a899de83523c8fea56647e6be6880fbbc7856e1cb802902"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "AAA AUTO SERVICES LIMITED"
       cert_issuer_short   = "SSL.com"
@@ -54960,8 +55450,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_2151496E74F30C019E232B48369F3F1D {
 
       hash                = "4cb0a000097880a2e0a945005f4acba541df8d2ffd7a34afcbd88e404dcbba71"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ТОВ \"ЛефІ\""
       cert_issuer_short   = "SSL.com"
@@ -54995,8 +55485,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_2352CE593F487633E8C7C819FABF9C74 {
 
       hash                = "e38b838995dfe3df7419264d3a02877fe8239e691b2bcd18b843afe8c7f9961e"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ТОВ \"ТОРГОВИЙ ДІМ КБ СТІЛ\""
       cert_issuer_short   = "SSL.com"
@@ -55030,8 +55520,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_235A083100CDC9C67691B31B1E958A0E {
 
       hash                = "a2ebd484b939b5c5bd273de83e56e46b56d250e144b6d467e89d1df4a26c4ee8"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Databytes Software Ltd"
       cert_issuer_short   = "SSL.com"
@@ -55065,8 +55555,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_27987C7E3C455F499B18AFD03B3CBBDF {
 
       hash                = "ce8c2fc7e49bc791f10b5022a0d353debb620d11b4f7add4c2215771250b34eb"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ТОВ \"Блу Сейл Комодіті\""
       cert_issuer_short   = "SSL.com"
@@ -55100,8 +55590,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_295C8F66D4D6F2FE513D4800A88A00D2 {
 
       hash                = "b68a65e9f8cb6aff77c8d1973e60063de53ca052ee6c98919c96decf5ef705a8"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ТОВ \"Трейдинг Комфорт\""
       cert_issuer_short   = "SSL.com"
@@ -55135,8 +55625,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_29B93DF5BD68A809F5C81D223A03C8EF {
 
       hash                = "32e0c3db78cdeaa026b8b9ed9c3e4f599eb5d9cb4184aaacae8ec94a0c1be438"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ТОВ \"Чеб\""
       cert_issuer_short   = "SSL.com"
@@ -55170,8 +55660,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_2A17239F25F18AA969D76DEC4722598D {
 
       hash                = "a24bc1178a53b6afb67d802a2adb2ab48a9f203e9c6da756323a3178b0b6d02c"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ТОВ \"Гемінг сапорт\""
       cert_issuer_short   = "SSL.com"
@@ -55205,8 +55695,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_2A57BA9291CC7575CB304870EACDF208 {
 
       hash                = "f88a27309d2915e04cd8ccac850db250f214ade9ce0fe38029f0214283ebb5c4"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ТОВ \"локкерс\""
       cert_issuer_short   = "SSL.com"
@@ -55240,8 +55730,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_2C18DB497B7FB347A85769E628C4DD00 {
 
       hash                = "a75819503eadb1816eee8884801d11ea7e8d1257ead704bca2aea42afe5edada"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ТОВ \"Дефи\""
       cert_issuer_short   = "SSL.com"
@@ -55275,8 +55765,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_4313DE25D720C619AE59B4A612947FE2 {
 
       hash                = "0dc32f351d59be068455286148d1c654287e5538e5429d12a014b0a6f9970efd"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "SPECIALIST TECHNICIANS LIMITED"
       cert_issuer_short   = "SSL.com"
@@ -55310,8 +55800,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_4331B82FB98E900AAFE89579EF607E6E {
 
       hash                = "bd6d8c48c1faad08dc110393275243acb0f5c7c8884d8c6663d2538cced4ad8e"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Bau Yannis GmbH"
       cert_issuer_short   = "SSL.com"
@@ -55345,8 +55835,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_43D0D946C75986936AE17F987E429BC0 {
 
       hash                = "dd2e32461bc4ee417a49566db06f29cf84aef11577c9648f4b3f62ac0edf354e"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ТОВ \"Гого\""
       cert_issuer_short   = "SSL.com"
@@ -55380,8 +55870,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_45948EF79A0B586E27414708C0BDDD2A {
 
       hash                = "817debed45f7f3e0e95da4df3476b58ba0dc3ff7552473c66abd94646fddc962"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "R J DATSON LIMITED"
       cert_issuer_short   = "SSL.com"
@@ -55415,8 +55905,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_46C453AF07ED90364AEF8EB7EA959CFA {
 
       hash                = "4788925332fc6128c895b0e0736a1d7d90e3891f2abb456523cbf0c1ced7d1e2"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Heart Craft Brewery s. r. o."
       cert_issuer_short   = "SSL.com"
@@ -55450,8 +55940,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_4949E243E0DFC150577BFEB9D722C185 {
 
       hash                = "a0114420ff98f4f09df676527add4ccaaf4326b4bd0c87b153d1ea71adf50022"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "LAABAI LTD"
       cert_issuer_short   = "SSL.com"
@@ -55485,8 +55975,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_4A8EDE8C9A2A4D6E4E715914F57625FE {
 
       hash                = "9d215743885b4f6d937deb0975c1b4b7a771d2d1c67a958b18f28383756bafc2"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ТОВ \"Ред Драгон Девелоп\""
       cert_issuer_short   = "SSL.com"
@@ -55520,8 +56010,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_50940364ABB9A9A36B3D76920AE4BA99 {
 
       hash                = "a82a9e1f6667350808a19219d586d10bcea85cf73b67024d8c58366981fe4993"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Game Warriors Limited"
       cert_issuer_short   = "SSL.com"
@@ -55555,8 +56045,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_582754520B29E5E364C2EA504C4E33FF {
 
       hash                = "a31d955304360eade30679137269659a9c7b1e53aecb2eb7e616a4ad0f91c655"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ТОВ \"Гейм Трейд\""
       cert_issuer_short   = "SSL.com"
@@ -55590,8 +56080,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_58367738B9503A2AA9CFC771B3C19E11 {
 
       hash                = "fbef401c6a7ad24640f6b6583aa0d0fa02aa895c47ab08e68b0e6e312d1b42a5"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "SLIM DOG SP Z O O"
       cert_issuer_short   = "SSL.com"
@@ -55625,8 +56115,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_5A472CA5C4DDFFA6493FAFDCF135F4B0 {
 
       hash                = "2db7438e5b4298ce068006ef96f729fd0bb4863e856425215ad9e77f807562e0"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "HOLDING MEDICAL GROUP KATOWICE SP Z O O"
       cert_issuer_short   = "SSL.com"
@@ -55660,8 +56150,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_5A76082854191C938CCF735EDD4CF55A {
 
       hash                = "af1f2b516ede83cf2699ba54113ce7a7d81d17040588746a19a1fa2ea41175d6"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Softindex Limited"
       cert_issuer_short   = "SSL.com"
@@ -55695,8 +56185,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_5BA900D7A761EE27C27998C8B9B4FA70 {
 
       hash                = "394fa8af1348cbcf3d9beae6dc8b6afb24c6b96bcc3be52601a5b84f9adf007c"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "OOO LEVELAP"
       cert_issuer_short   = "SSL.com"
@@ -55730,8 +56220,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_610D58E503B2328D6CB6DF7BA7606F98 {
 
       hash                = "21646416f656f7b4da74214f2a33bc19733bdd30525381ceb66bb87a6ceb32d6"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "BELLANN BOARD & PACKAGING CO.LIMITED"
       cert_issuer_short   = "SSL.com"
@@ -55765,8 +56255,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_6ADA64000BBAF0497538A2BF1938F2BA {
 
       hash                = "9dc4e8a0d45b04b1b4bc2df2a16aa37e5597624feed3b53a9c5ca2929a2fb6c3"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ТОВ \"Оноп\""
       cert_issuer_short   = "SSL.com"
@@ -55800,8 +56290,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_6CDA1A0D2917A790C24B0F3FBDD9F7EB {
 
       hash                = "d4debb62f43fb37f8ad0968499d2d48d3cfad20f4ed20d8b3fe9e4759fd95d68"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Austin Software Company LLC"
       cert_issuer_short   = "SSL.com"
@@ -55835,8 +56325,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_6FE721C3DDBD2774D03DCEA44A26A78A {
 
       hash                = "1e7914f799371cbc8560bc52203d3531bb20cb4f6092158c76a4842dbf85dabc"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "OOO ENDI"
       cert_issuer_short   = "SSL.com"
@@ -55870,8 +56360,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_71B5F261CB3D4563B9C7119FF093C098 {
 
       hash                = "1252f2bf3817714a8303f7e448930d6d4f797a70ec7effc80f2b1db5e49b9077"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Optimus"
       cert_issuer_short   = "SSL.com"
@@ -55905,8 +56395,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_74FFF77F8BEB817FD3826F6EFF8F0C7A {
 
       hash                = "777cb8aae1e77e841b4981965198f62e60e55a4f910120980dc5ad997ab71fb5"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ТОВ \"РЕОВГУЦ\""
       cert_issuer_short   = "SSL.com"
@@ -55940,8 +56430,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_77AE3B91E2B86DE3D5929B8AEC1C83DC {
 
       hash                = "820eda2078723e7f1c09d0e6d3641ea822c2b36c981cb5bfa4e445733664c087"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ТОВ \"Софт Енжін юа\""
       cert_issuer_short   = "SSL.com"
@@ -55975,8 +56465,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_7A885053853B73FAC66797D4DA68E94E {
 
       hash                = "65569db0dceb1c06be2a2cccedfef1447d14ec6d6f3d5ce28c4997c45c4991a8"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "TOV RT RUNA"
       cert_issuer_short   = "SSL.com"
@@ -56010,8 +56500,8 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_7C8A13BFC595B0DCE94BD5A1B390BA99 {
 
       hash                = "39102fb7bb6a74a9c8cb6d46419f9015b381199ea8524c1376672b30fffd69d2"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "ТОВ \"Трафік Девелоп ЮА\""
       cert_issuer_short   = "SSL.com"
@@ -56045,8 +56535,8 @@ rule MAL_Compromised_Cert_SolarMarker_Sectigo_00B66CF27F736D8CE85BEB1EBF0CA7DEE3
 
       hash                = "278ec8f7a0cd969ebb84e72f60f19bb6f6fd6f7268ebe68245c46e6de2a43cf1"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "九江绿洲环境技术有限公司"
       cert_issuer_short   = "Sectigo"
@@ -56080,8 +56570,8 @@ rule MAL_Compromised_Cert_SolarMarker_Sectigo_2D88C0AF1FE2609961C171213C03BD23 {
 
       hash                = "42788ef63efc2e74f7695cc618706e9f149a713b3241458503bf81290d8163ac"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Zhuzhou Lizhong Precision Manufacturing Technology Co., Ltd."
       cert_issuer_short   = "Sectigo"
@@ -56115,8 +56605,8 @@ rule MAL_Compromised_Cert_SolarMarker_Sectigo_3821DCACA66A5C5176B921B4D9ED4C97 {
 
       hash                = "7853518d97bf86211ce0193fcdc8e484615204e97d417386651aa6bbfe686eea"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "BUL D'EVASION"
       cert_issuer_short   = "Sectigo"
@@ -56150,8 +56640,8 @@ rule MAL_Compromised_Cert_SolarMarker_Sectigo_5DD4A4D405BE799614F437693B0F2929 {
 
       hash                = "13a1bead1187cbc6072c410501a417b812e82f1bbbf6a93deaab26ae5ea67628"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Changzhou Daqian Freighting Service Co., Ltd."
       cert_issuer_short   = "Sectigo"
@@ -56185,8 +56675,8 @@ rule MAL_Compromised_Cert_SolarMarker_Sectigo_7E68FA2E528364E694D06200A418EF68 {
 
       hash                = "5ef62c7d66c9f9470658e647afd257cbc087056ec07b4eafd7879682701cd05a"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "C.T.M. d.o.o."
       cert_issuer_short   = "Sectigo"
@@ -62951,11 +63441,11 @@ rule MAL_Compromised_Cert_UnknownLoader_SSL_com_11E603B92A63487D692AD9519A0382FE
       cert_valid_from     = "2025-05-21"
       cert_valid_to       = "2026-05-21"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "FR"
+      state               = "Île-de-France"
+      locality            = "Louveciennes"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "503 310 138"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00AA1D84779792B57F91FE7A4BDE041942 {
 
       hash                = "8ad652ed5304408015e65d5ab8ecf65fecf8f00c1e5eb97606bd01d6031f5418"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "AXIUM NORTHWESTERN HYDRO INC."
       cert_issuer_short   = "Sectigo"

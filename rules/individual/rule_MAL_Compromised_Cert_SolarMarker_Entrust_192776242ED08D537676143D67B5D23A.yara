@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_SolarMarker_Entrust_192776242ED08D537676143D67B5D23A {
 
       hash                = "5bccb6950b0aad0956ab9a0eb02e503fc613d4744b9f396fdbcb2fd965e69542"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Gurung Solutions Ltd"
       cert_issuer_short   = "Entrust"

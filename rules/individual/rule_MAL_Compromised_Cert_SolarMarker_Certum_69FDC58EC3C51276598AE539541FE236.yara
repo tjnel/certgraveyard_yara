@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_69FDC58EC3C51276598AE539541FE236 {
 
       hash                = "336e2f4cd131ca8c6ebf87fe23ac876a119992e24b5f84d5bbf7b6fcf5c43a5d"
       malware             = "SolarMarker"
-      malware_type        = "Remote access tool"
-      malware_notes       = "A remote access tool active 2020-2023. Installs a VNC client to perform on-device-fraud."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "DataIntegra s.r.o."
       cert_issuer_short   = "Certum"

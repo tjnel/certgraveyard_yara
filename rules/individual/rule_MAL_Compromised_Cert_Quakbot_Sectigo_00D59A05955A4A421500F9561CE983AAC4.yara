@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Quakbot_Sectigo_00D59A05955A4A421500F9561CE983AAC4 {
 
       hash                = "f0329494b1a9a26aac06e2606c95e31167035d8f576ed8773664d7578913cf36"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Olymp LLC"
       cert_issuer_short   = "Sectigo"

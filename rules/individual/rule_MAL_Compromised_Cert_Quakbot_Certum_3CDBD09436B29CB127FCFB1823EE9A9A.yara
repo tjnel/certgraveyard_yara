@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Quakbot_Certum_3CDBD09436B29CB127FCFB1823EE9A9A {
 
       hash                = "de095ea31816e724d6ec46f703b096e893efec5bcba9d018c52820e22d4fbd45"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "FORMICA Solution a.s."
       cert_issuer_short   = "Certum"

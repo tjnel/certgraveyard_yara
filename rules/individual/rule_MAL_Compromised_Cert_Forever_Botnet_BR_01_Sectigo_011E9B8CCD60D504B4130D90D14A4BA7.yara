@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Sectigo_011E9B8CCD60D504B4130D90D
       hash                = "dd1e7fd35306a22f511197716c7e9fe2c1ba149ffd275a5221c4452165a4b29d"
       malware             = "Forever Botnet,BR-01"
       malware_type        = "Unknown"
-      malware_notes       = "C2: kapa[.]is/f"
+      malware_notes       = ""
 
       signer              = "MAYDA PETROL OTOMOTIV INSAAT LIMITED SIRKETI"
       cert_issuer_short   = "Sectigo"

@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Quakbot_SSL_com_03980D54388F052199A48939D5203C0C {
 
       hash                = "e88610db05636a1476435ec1f39d3651b080c8a6b8756452d421d7a822a2e115"
       malware             = "Quakbot"
-      malware_type        = "Initial access tool"
-      malware_notes       = "This malware originated as a banking trojan and then became a initial access tool used by ransomware gangs."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Clover Field ApS"
       cert_issuer_short   = "SSL.com"
