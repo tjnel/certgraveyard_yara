@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_754022596DA5B16478C5E880ED2D730F
 
       hash                = "36d4a0c46a0b9613b7f4ab38a9bf1a8ee3d54e059f2451f20e999a7b49b9af56"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Yongji Xiaodong Network Technology Co., Ltd."
       cert_issuer_short   = "Sectigo"

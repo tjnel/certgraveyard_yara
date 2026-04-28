@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_ValleyRAT_GlobalSign_54920428011B1572DC58F84D {
       hash                = "1c46675149b0f4d926783c855e860b20548568849cdec941a62abb72534d1e68"
       malware             = "ValleyRAT"
       malware_type        = "Remote access tool"
-      malware_notes       = "This version was disguised as a flash player installer. Read more about ValleyRAT here: https://research.checkpoint.com/2025/cracking-valleyrat-from-builder-secrets-to-kernel-rootkits/"
+      malware_notes       = ""
 
       signer              = "哈尔滨瑚板颂电子科技有限公司"
       cert_issuer_short   = "GlobalSign"

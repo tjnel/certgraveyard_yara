@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_BatLoader_SSL_com_3E723D32CB1BDD13DF58B0A04C675AB9 {
       hash                = "2e65cfebde138e4dd816d3e8b8105e796c4eb38cfa27015938c0445ee5be8331"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Agilable Consulting Inc."
       cert_issuer_short   = "SSL.com"

@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_BatLoader_GlobalSign_7FAC4E218B3327DC2A1DE2A9 {
       hash                = "7a11299b01c06a9ae30db6c51e59d9a5b8ab69e15db8f757718e5b52ce3184ed"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Provizan Business Solutions, Inc."
       cert_issuer_short   = "GlobalSign"

@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_23CA2FC2A588B52B7D70E96B {
       hash                = "05d2d06143d363c1e41546f14c1d99b082402460ba4e8598667614de996d2fbc"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This version of the malware was a trojanized Advanced IP Scanner."
+      malware_notes       = ""
 
       signer              = "ANVIA LLC"
       cert_issuer_short   = "GlobalSign"

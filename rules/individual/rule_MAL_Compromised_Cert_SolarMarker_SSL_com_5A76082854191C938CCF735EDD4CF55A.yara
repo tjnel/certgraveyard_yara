@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_5A76082854191C938CCF735EDD4CF55A {
 
       hash                = "af1f2b516ede83cf2699ba54113ce7a7d81d17040588746a19a1fa2ea41175d6"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Softindex Limited"

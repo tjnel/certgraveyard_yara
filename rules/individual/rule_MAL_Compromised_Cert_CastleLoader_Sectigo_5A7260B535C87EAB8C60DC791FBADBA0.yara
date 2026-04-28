@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_5A7260B535C87EAB8C60DC791FBADBA0 
 
       hash                = "dc06cf3983981f0996b24f8724a292bb2a401c7a57c33dff0ed88fb737dc54c9"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: bmwservicebestik[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "ENGINEERING AND TECHNICAL PROCUREMENT SERVICES LTD"
       cert_issuer_short   = "Sectigo"
@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_5A7260B535C87EAB8C60DC791FBADBA0 
       cert_valid_from     = "2026-04-01"
       cert_valid_to       = "2027-04-01"
 
-      country             = "???"
-      state               = "???"
+      country             = "GB"
+      state               = "Essex"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "07993399"
 
    condition:
       uint16(0) == 0x5a4d and

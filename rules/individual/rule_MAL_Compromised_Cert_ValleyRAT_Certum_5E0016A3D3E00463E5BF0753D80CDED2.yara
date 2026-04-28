@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_5E0016A3D3E00463E5BF0753D80CDED2 {
 
       hash                = "232d2526c54d5e0795bc7bd077362de5f18d9089d4ae25d6e9a709f2f3ef940a"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Gucheng County Qizhishang Trading Co., Ltd."

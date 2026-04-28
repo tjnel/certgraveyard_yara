@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_45948EF79A0B586E27414708C0BDDD2A {
 
       hash                = "817debed45f7f3e0e95da4df3476b58ba0dc3ff7552473c66abd94646fddc962"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "R J DATSON LIMITED"

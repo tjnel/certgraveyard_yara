@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_182010E6F30A0FDCC3F1BD44 {
 
       hash                = "59b1140b830a98ad213d6e92abd8329d3485cb530143c2ad7cff70362c4c181d"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "LAABAI LTD"

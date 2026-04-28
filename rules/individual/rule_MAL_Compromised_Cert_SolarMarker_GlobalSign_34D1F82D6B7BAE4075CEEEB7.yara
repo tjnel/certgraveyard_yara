@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_34D1F82D6B7BAE4075CEEEB7 {
 
       hash                = "834c6ba26f460e98e9abad308eb261e2f23125d006573ec67b438d62eeabee60"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "JYL Business Solutions Inc."

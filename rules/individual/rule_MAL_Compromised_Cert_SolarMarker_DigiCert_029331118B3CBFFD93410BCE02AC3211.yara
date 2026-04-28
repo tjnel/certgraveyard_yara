@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_029331118B3CBFFD93410BCE02AC3211 
 
       hash                = "add7cdf9d10a61d354f6235cc5b8576208df03afc67df767687092b6cee66df7"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Lunar Industrial Software, Inc."

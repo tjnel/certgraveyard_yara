@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0AF316CB4E5D9BAF35B35E85677B17E
 
       hash                = "f76c31ecdafb59279833f17f350d9c2b1317da269823097e8dd1736c72449c88"
       malware             = "Zhong Stealer"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "PALIT MICROSYSTEMS LTD. TAIWAN BRANCH (BELIZE)"

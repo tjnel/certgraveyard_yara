@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_08063F7043D2981C5A9A8E7769875262 
 
       hash                = "5e2d71794b574e880880b771fd2011f16a5eb1346b731caacdac0d80bfc0c0a1"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Hillcoe Software Inc."

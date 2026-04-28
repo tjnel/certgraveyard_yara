@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_PDFast_GlobalSign_448B91A86A90F9E0E585A032 {
 
       hash                = "2ef67a07ced37631e6984f98a8ee249164a25da79358e0a0461ab50ac0b02f8f"
       malware             = "PDFast"
-      malware_type        = "Unknown"
+      malware_type        = "Trojan"
       malware_notes       = ""
 
       signer              = "HOTEL FATAZ (PRIVATE) LIMITED"

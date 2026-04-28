@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_008CA703D6A6A9FDFCD920C62316723E
 
       hash                = "1d2f9b6680d3df883dceac3eb5dd35c13a9862ef0ba6f40603df5a1e54408c6e"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "Malware is frequently disguised as a image or screenshot. Pulls second stages from legitimate CDN."
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Luanchuan County Qiangsheng Information Engineering Co., Ltd."
       cert_issuer_short   = "Sectigo"

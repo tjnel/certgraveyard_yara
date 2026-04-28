@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_FakeRMM_DigiCert_047655211EB5C269B88F4DCEBA4AE762 {
 
       hash                = "dee3b88825ea12734b4d537c15d7d2d177e9f869e7d6ea43642e316c9f4f9970"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
-      malware_notes       = "Malicious installers posing as a fake RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "TRUSTCONNECT SOFTWARE"
       cert_issuer_short   = "DigiCert"

@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_3300089A0D4ACA6FD9F156502C00000
 
       hash                = "24bcbe18745c1ba65c68f9c55e1208fb0b5ef9f4702ef4165fcb98818d4adcc7"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "godblessaids[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "MIGUEL GUTIERREZLUPERCIO"
       cert_issuer_short   = "Microsoft"

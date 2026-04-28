@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_Sectigo_2D88C0AF1FE2609961C171213C03BD23 {
 
       hash                = "42788ef63efc2e74f7695cc618706e9f149a713b3241458503bf81290d8163ac"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Zhuzhou Lizhong Precision Manufacturing Technology Co., Ltd."

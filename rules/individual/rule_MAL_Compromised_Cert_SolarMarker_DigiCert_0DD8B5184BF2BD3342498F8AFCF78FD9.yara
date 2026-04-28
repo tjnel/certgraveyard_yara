@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0DD8B5184BF2BD3342498F8AFCF78FD9 
 
       hash                = "b3d5baeef9ba35109bd270f5ec27e15cf691217dd591b29ae83ebd07989af947"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Aero IT ApS"

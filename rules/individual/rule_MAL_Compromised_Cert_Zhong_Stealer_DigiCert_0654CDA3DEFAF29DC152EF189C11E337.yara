@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0654CDA3DEFAF29DC152EF189C11E33
 
       hash                = "02f95352c8d55f41f53339283ffed6f1cf548b2c5040aa9d1e37bafcd9fa55b4"
       malware             = "Zhong Stealer"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Shuttle Inc."

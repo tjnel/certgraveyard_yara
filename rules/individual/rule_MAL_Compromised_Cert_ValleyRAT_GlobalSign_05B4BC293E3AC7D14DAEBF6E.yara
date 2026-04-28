@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_ValleyRAT_GlobalSign_05B4BC293E3AC7D14DAEBF6E {
 
       hash                = "2b2363d3759ef8b676f398fc413c56a1058b8bc9c5633f24c55538e5ba501afb"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Nanjing Yueyue Kunkun Technology Co., Ltd."

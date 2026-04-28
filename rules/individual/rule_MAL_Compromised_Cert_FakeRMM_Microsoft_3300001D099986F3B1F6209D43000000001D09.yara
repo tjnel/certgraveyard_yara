@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_3300001D099986F3B1F6209D43000000001D
 
       hash                = "d68bfbe6e957ae3189533534c3408f2991bd18bdb5601278f6250509714d51df"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Frank Farris"

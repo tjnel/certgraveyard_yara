@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330007438AEF232CA91040F0190000000743
 
       hash                = "14c62111879e9c9d738ed901db6533da38846454ed3b001ddbb3ad64840683f0"
       malware             = "FakeRMM"
-      malware_type        = "Remote access tool"
-      malware_notes       = "From the makers of TrustConnect."
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "DAWN MALLORY"
       cert_issuer_short   = "Microsoft"

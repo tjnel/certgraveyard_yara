@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_5EBFBF4B22271CE3E174938BBA664980 {
 
       hash                = "b10e90ffd7b0bec744d7de5d65e1c71a213aafae0c9fb897ce97c8496725af2b"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "A13 Software Ltd"

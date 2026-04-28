@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_4C4C9F16877C6C8508A12BDD7C94607D {
 
       hash                = "43130df9d6c99e0d01470a57e0a21215a9afbb1c9b191e1b86fcb046316de6d1"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Xiangyang Dianjue Trading Store (Sole Proprietorship)"

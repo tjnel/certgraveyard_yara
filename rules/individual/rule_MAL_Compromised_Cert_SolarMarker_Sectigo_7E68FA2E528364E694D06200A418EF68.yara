@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_Sectigo_7E68FA2E528364E694D06200A418EF68 {
 
       hash                = "5ef62c7d66c9f9470658e647afd257cbc087056ec07b4eafd7879682701cd05a"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "C.T.M. d.o.o."

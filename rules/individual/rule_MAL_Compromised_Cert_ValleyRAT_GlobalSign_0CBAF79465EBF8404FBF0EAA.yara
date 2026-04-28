@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_ValleyRAT_GlobalSign_0CBAF79465EBF8404FBF0EAA {
 
       hash                = "7ffd77507493be9e2370139ae1116a8175ca7358378e121d6cb2ccdc27fe6912"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Xi'an Vanci Electronic Technology Co., Ltd."

@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Sectigo_00ADC445B14C3C850CC30C6C0007EA9920 {
 
       hash                = "1a0fcd81af6b14b367f1ac93aa7a7b650450405f7652a17e667604e681d457b0"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Acoustica, Inc"

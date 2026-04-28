@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_3300003ED76A78FF208BF50426000000003E
 
       hash                = "88a45b1f6489eed1f9470e8671da6389724154d887f58b59ed467dad0149d091"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
-      malware_notes       = "Fake DocuSign setup. From the makers of TrustConnect"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "Frank Farris"
       cert_issuer_short   = "Microsoft"

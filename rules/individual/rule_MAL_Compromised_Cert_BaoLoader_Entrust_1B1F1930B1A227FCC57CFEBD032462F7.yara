@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_BaoLoader_Entrust_1B1F1930B1A227FCC57CFEBD032462F7 {
 
       hash                = "e505e4bc6c76f8ccd1d626832d1d5d5d2852a5c78016c43bdc2f502af6e40396"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Drake Media Inc"
       cert_issuer_short   = "Entrust"

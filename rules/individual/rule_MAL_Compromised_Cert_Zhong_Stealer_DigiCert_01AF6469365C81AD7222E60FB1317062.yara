@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_01AF6469365C81AD7222E60FB131706
 
       hash                = "00ed464e867fdc31ac4eb4e18757fe4b79b2f79ff63cc469cfcfeb205df20af0"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "深圳市优品投资顾问有限公司"

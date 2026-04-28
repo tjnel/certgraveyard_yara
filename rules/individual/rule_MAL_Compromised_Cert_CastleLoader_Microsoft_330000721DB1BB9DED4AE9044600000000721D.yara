@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_330000721DB1BB9DED4AE9044600000
 
       hash                = "0dc0e160c1898c94e4cbda8d2a6b4d8334a423894cb1e5838195b905f22fdda4"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: bmwservicebestik[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "SHYANNE COLLINS"
       cert_issuer_short   = "Microsoft"
@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_330000721DB1BB9DED4AE9044600000
       cert_valid_from     = "2026-04-23"
       cert_valid_to       = "2026-04-26"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Arkansas"
+      locality            = "MORRILTON"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_FakeRMM_Certum_055A00A5DC820FDA8DBB754490B4BACF {
 
       hash                = "cf85a4816715b8fa6c1eb5b50d1c70cfef116522742f6f1c77cb8689166b9f40"
       malware             = "FakeRMM"
-      malware_type        = "Remote access tool"
-      malware_notes       = "This malware is being distributed by phishing. The software appears to be designed to be an RMM but is also brand new, all indicators point to malicious."
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "TrustConnect Software PTY LTD"
       cert_issuer_short   = "Certum"

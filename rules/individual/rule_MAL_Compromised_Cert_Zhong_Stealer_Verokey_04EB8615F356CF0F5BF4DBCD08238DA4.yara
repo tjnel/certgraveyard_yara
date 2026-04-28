@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Verokey_04EB8615F356CF0F5BF4DBCD08238DA4
 
       hash                = "b5fb40289c795be46e746bce7cfb8641bd4d619e49fae62f4998c7915f831e5e"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware relies on CDNs to pull down second stage components. See https://x.com/malwrhunterteam/status/1997368057702842676?s=20"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "山西荣升源科贸有限公司"
       cert_issuer_short   = "Verokey"

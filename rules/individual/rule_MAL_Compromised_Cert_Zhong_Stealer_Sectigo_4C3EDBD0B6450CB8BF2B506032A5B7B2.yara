@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_4C3EDBD0B6450CB8BF2B506032A5B7B2
 
       hash                = "1718b2f1372dbbe9df071205fe749bcefe8857af7e376c812168f2590e1dcb27"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware often hosts secondary payloads on CDNs. This signer name is \"Kingston Technology Company, Inc\"; but was confirmed not to be a legitimate certificate used by Kingston."
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Kingston Technology Company, Inc"
       cert_issuer_short   = "Sectigo"

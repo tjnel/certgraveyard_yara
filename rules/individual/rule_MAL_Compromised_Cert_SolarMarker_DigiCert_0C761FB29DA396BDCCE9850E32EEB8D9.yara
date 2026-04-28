@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0C761FB29DA396BDCCE9850E32EEB8D9 
 
       hash                = "6c59f4f268f1ce1d85cdf9169e81464bb950ec572ea1e3ab9cc4ff4a75589435"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Table Ronde 1155 Inc."

@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_7365D3835BB5D34BD1A3F9EE0B8E728C {
 
       hash                = "877dadf7ce4684878ea086cbd4c111d5dfb87c2659366f6df5079047fbea13db"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Yangzhou Bai'ao Information Technology Co., Ltd."

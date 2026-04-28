@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_5C1C54F72BCC4DB6079023BA {
       hash                = "7ce399ae92c3e79a25e9013b2c81fe0add119bda0a65336d1e5c231654db01a5"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This copy was a trojanized Advanced IP scanner installer."
+      malware_notes       = ""
 
       signer              = "NOMAC LLC"
       cert_issuer_short   = "GlobalSign"

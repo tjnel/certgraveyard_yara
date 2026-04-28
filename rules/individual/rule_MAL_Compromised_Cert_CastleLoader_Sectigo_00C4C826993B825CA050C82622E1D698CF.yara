@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_00C4C826993B825CA050C82622E1D698C
       hash                = "aaf8b6441e239acade66d3f60fae59ef4f426dc14768ee7530ccbdcd61ef6e4e"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This is an initial access tool that is frequenty used to load infostealers or remote access tools, sold as Malware-as-a-Service: https://www.ibm.com/think/x-force/dissecting-castlebot-maas-operation"
+      malware_notes       = ""
 
       signer              = "Flight 041 LLC"
       cert_issuer_short   = "Sectigo"

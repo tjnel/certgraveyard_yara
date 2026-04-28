@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_PDFast_GlobalSign_7D3626E63E3516AB22116D1E {
 
       hash                = "a7f0794872bc5d0fedcf6161c7002e0d9fc7e23cd8d390e0327db7c010dd7a1a"
       malware             = "PDFast"
-      malware_type        = "Unknown"
+      malware_type        = "Trojan"
       malware_notes       = ""
 
       signer              = "AL STARE LLC"

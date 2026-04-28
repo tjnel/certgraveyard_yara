@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Gh0stRAT_GlobalSign_56AEB8269A0FE8ADF9D1BBD8 {
 
       hash                = "d8655cb920dff79d3fc2006247925cf66c198595ed3e496218a5b24c2bb1080f"
       malware             = "Gh0stRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "UCon Technology Co., Ltd."

@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FiveModsLoader_GoGetSSL_0439B3B542C9E5DAAB59C635114453
       cert_valid_from     = "2026-03-21"
       cert_valid_to       = "2027-03-20"
 
-      country             = "???"
+      country             = "UA"
       state               = "???"
-      locality            = "???"
+      locality            = "Kyiv"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

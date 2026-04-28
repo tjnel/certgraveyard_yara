@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_03C2DE2572AEE65EF1A2009CD0853040 
 
       hash                = "11875de4d8789bc95ba00bc040b8160549252dae2fb18f948d9380fb0d297c32"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: mazafakadadscomeone[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "CULTURE AND EDUCATION INTERNATIONAL LIMITED"
       cert_issuer_short   = "Sectigo"

@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_0CB676A4F14B02E1FCEE433B {
       hash                = "9c8d22a4d79060a227f71842a2b20fa545c7b2bb87f58e3364781cf943342608"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This is an initial access tool that is frequenty used to load infostealers or remote access tools, sold as Malware-as-a-Service: https://www.ibm.com/think/x-force/dissecting-castlebot-maas-operation"
+      malware_notes       = ""
 
       signer              = "SURANA ENTERTAINMENT PARADISE LLP"
       cert_issuer_short   = "GlobalSign"

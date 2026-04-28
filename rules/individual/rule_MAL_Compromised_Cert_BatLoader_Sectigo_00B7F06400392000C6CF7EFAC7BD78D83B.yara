@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_BatLoader_Sectigo_00B7F06400392000C6CF7EFAC7BD78D83B {
       hash                = "2727a418f31e8c0841f8c3e79455067798a1c11c2b83b5c74d2de4fb3476b654"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Zhuzhou ZHUOER-TECH Co., Ltd."
       cert_issuer_short   = "Sectigo"

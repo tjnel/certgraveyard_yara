@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_BatLoader_Certum_35B49EE870AEA532E6EF0A4987105C8F {
 
       hash                = "e8492d0af0f44af35b753e7f75242da53c27b089bb11d44520724ae74428c48e"
       malware             = "BatLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Kancelaria Adwokacka Adwokat Aleksandra Krzemińska"

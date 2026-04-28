@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_049209454DB22190C7697285C3D5AD9
 
       hash                = "c918dded298b0d76d4ac51f23b391f62a95f58b3fa2488202ecbbc9c7ce8e785"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "DigiFors GmbH"

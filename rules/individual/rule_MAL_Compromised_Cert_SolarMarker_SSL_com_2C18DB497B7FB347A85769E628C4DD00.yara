@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_2C18DB497B7FB347A85769E628C4DD00 {
 
       hash                = "a75819503eadb1816eee8884801d11ea7e8d1257ead704bca2aea42afe5edada"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"Дефи\""

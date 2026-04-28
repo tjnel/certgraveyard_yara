@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Certum_4380B3CDE17D335114FF3E21D2A50637 
 
       hash                = "a1a114fd875bd6f96d2ceeac2b98596c0ac56d727e4bb970becb2466cec40086"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware is distributed disguised as screenshots or photos. The malware downloads secondary stages from legitimate CDN."
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Taiyuan Feizhe Trading Co., Ltd."
       cert_issuer_short   = "Certum"

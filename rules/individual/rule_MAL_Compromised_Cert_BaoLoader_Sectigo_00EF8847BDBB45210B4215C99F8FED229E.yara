@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_BaoLoader_Sectigo_00EF8847BDBB45210B4215C99F8FED229E {
 
       hash                = "8dab0c6c0afcf6e1d07b0379f2487f62df7e644a8fad771387fc03e2bdf9db85"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Byte Media Sdn Bhd"
       cert_issuer_short   = "Sectigo"

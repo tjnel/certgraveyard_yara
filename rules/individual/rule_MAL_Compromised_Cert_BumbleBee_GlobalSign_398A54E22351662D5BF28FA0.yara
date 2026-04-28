@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_398A54E22351662D5BF28FA0 {
 
       hash                = "1ba85af9be3e263befdaac86084f96b014684c8d3a85d0572ca1113e52a4fa4d"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "LLC Leighton"

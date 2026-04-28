@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_3FAC2FCD5CDFBDE7E9EF0C51 {
 
       hash                = "90a377b69113082ec2789371e02043277fbf8595a6f1f7cd1c6a70493381ab80"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "FASTIDIOUS ACCOUNTANTS LTD"

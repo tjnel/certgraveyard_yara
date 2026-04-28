@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_BatLoader_SSL_com_5E00AA573FDF345515C83BF346C4EE22 {
       hash                = "8d1f6fac51e8130f9b769f77220a7d142aa0458cf51677375967015c7a29f8f4"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "LMC BIOPOLYMERS LIMITED"
       cert_issuer_short   = "SSL.com"

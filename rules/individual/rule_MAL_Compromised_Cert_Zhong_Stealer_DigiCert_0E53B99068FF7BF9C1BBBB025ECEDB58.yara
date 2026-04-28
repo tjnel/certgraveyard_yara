@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0E53B99068FF7BF9C1BBBB025ECEDB5
 
       hash                = "4ba01f317dd469c6ce5fb5333828ea5faf6761c263431ebcd0a5c17c06b00868"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "SoftStory G.Zielinski, K.Jez s.c."

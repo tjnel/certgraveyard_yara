@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0636769AA66BF4317A772F5FE23CE085 
 
       hash                = "f1974ba6905ffb380edf9bad7c799b31c4d3668fd80d87691ca885ee18d551dc"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "IDS-Software Limited"

@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_BumbleBee_Sectigo_67BEA002D62E1831CC2612ADB8E1B2CE {
 
       hash                = "640c518ff312e024c1e3bb198a2240c59b2205ab562053a1e644276592a5c07d"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Xiamen Xisu Technology Co., Ltd."

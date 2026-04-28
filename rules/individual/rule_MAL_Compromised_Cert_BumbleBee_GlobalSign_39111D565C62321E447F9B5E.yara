@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_39111D565C62321E447F9B5E {
 
       hash                = "e5e8a24a628b99b2172fee5d53f003ff097739dc5c23b4374d328d72f45813cd"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "LLC Alliance"

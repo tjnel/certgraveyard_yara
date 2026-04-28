@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_GoGetSSL_0B416CA38FFA8579C017C0311CCD8D8
 
       hash                = "99b7658dc52cedff3403e0df0b392828baa3344571593115b2349579c2b840ca"
       malware             = "Zhong Stealer"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Heyi Siwei Software Development Studio"

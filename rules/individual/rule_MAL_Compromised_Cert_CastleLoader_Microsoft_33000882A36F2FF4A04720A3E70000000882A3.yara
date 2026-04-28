@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_33000882A36F2FF4A04720A3E700000
 
       hash                = "f8e78a1a7a6a6b6c40ad5f2d72d2eac1814af01efe96a13e4b9bf7dce2ed438f"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Teresa Boswell"

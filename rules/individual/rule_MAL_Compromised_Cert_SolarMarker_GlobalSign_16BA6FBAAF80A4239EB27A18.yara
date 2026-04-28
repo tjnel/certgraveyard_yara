@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_16BA6FBAAF80A4239EB27A18 {
 
       hash                = "5abc14737cb65a1e645bd5a2e3301b0e3e1e861a184034a6cc67ce57ee38f448"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "SCHPITZE ApS"

@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_BatLoader_GlobalSign_1D9FAB7FB929C704E9205EBB {
       hash                = "1c93d7e99ad24f2f4550859cdd3a1d785ad70a7c05b216b1d18a34bd569947ef"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Buicrosr Monerrka Network Technology Co., Ltd."
       cert_issuer_short   = "GlobalSign"

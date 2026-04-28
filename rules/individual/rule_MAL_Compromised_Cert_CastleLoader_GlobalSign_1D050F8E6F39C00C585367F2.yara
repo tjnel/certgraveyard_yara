@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_1D050F8E6F39C00C585367F2 {
 
       hash                = "61882e8813e03a91adb06a282118ac522d7f8490a9995a57ca37bb71abc2a716"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: franksinatra[.]icu"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "LLC Innovative Technologies"
       cert_issuer_short   = "GlobalSign"

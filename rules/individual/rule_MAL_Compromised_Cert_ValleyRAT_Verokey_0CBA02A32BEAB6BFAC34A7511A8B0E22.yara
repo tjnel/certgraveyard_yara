@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Verokey_0CBA02A32BEAB6BFAC34A7511A8B0E22 {
 
       hash                = "8b83e7a8abe5779edde1bf8b753cb1aec232d31c1c25e4df69510cf36110bdfe"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "山西荣升源科贸有限公司"

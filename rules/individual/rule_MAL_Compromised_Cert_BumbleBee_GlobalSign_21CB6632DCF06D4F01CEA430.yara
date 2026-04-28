@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_21CB6632DCF06D4F01CEA430 {
 
       hash                = "bd4a1d110e65697620272aa573ed4e49eb9c236ce4b90a039bcde5a9f222cb35"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "LLC Vector"

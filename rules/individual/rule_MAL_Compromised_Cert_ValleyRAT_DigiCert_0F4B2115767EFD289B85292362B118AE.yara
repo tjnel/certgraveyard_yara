@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_ValleyRAT_DigiCert_0F4B2115767EFD289B85292362B118AE {
 
       hash                = "123baf5762064dac90572c7d7815f47ad4dc930b0ee2f14939cac54378cb25d9"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "咸宁创翼互联网科技有限公司"

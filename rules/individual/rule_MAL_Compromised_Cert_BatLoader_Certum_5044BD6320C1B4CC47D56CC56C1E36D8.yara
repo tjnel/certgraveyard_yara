@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_BatLoader_Certum_5044BD6320C1B4CC47D56CC56C1E36D8 {
       hash                = "4b2557cf1e0fa54051631931fd164edbfc5e1c0986aa8e776d3fe446a670c10a"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Dalian Tester Software Technology Co., Ltd."
       cert_issuer_short   = "Certum"

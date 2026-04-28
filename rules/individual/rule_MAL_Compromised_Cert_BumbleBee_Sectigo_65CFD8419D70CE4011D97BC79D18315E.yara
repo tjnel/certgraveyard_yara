@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_BumbleBee_Sectigo_65CFD8419D70CE4011D97BC79D18315E {
 
       hash                = "35f2ec59313bbe5b78e4b043f06f8961f6f3e77b870544d15ee7cc1fca987d8c"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "FACE AESTHETICS LTD"

@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_BatLoader_GlobalSign_365A71D953A7E1B3A59FD64D {
       hash                = "15c39d2084e399b4a0126c0b1026bd2342f8dc5d812cf0d0caae8e35ee689407"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "MK Investment Properties Inc."
       cert_issuer_short   = "GlobalSign"

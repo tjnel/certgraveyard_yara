@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_09186DCA3667374ADBD63A2F4FD9636
 
       hash                = "8509af4802dd79fc503c425c9dda035d9b636f22ffac81a8f04e6a9d080fdcc3"
       malware             = "Zhong Stealer"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "BlockCerts Blockchain Canada, Inc."

@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_235A083100CDC9C67691B31B1E958A0E {
 
       hash                = "a2ebd484b939b5c5bd273de83e56e46b56d250e144b6d467e89d1df4a26c4ee8"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Databytes Software Ltd"

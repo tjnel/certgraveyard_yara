@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Certum_5CCC14BFA5980319E17B16F0360684FF 
 
       hash                = "f0373871da028119a2726637859014eb63d2c7770924fe17b47199a6e6255aa6"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Changdu Wopu Technology Co., Ltd."
       cert_issuer_short   = "Certum"

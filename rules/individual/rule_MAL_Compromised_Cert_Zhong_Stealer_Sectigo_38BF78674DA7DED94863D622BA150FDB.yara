@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_38BF78674DA7DED94863D622BA150FDB
 
       hash                = "7c995c884d4e3b0d38157c510bcc37cd7a8ca35ae24eb1ea0c7e52d76b8a7dca"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Xiamen Dahonghuo Technology Co., Ltd."

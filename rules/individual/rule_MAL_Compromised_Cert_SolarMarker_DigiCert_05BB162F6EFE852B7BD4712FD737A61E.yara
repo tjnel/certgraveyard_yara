@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_05BB162F6EFE852B7BD4712FD737A61E 
 
       hash                = "770658cdc73ef874c0f4daedb014daea71b5c179c1474ecd6d373d89ac45b48c"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Wellpro Impact Solutions Oy"

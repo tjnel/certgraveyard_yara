@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_064893F1B9414DCA47F5B83A018D938D 
 
       hash                = "f61f2dc8346f3777b4210ecc84ec55a909666a38796124172317007041a17030"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Stratos Digital Limited"

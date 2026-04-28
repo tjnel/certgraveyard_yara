@@ -1900,8 +1900,8 @@ rule MAL_Compromised_Cert_BaoLoader_DigiCert_02781A66F33F15486EE791304A20AD29 {
 
       hash                = "6b6fc62a294d5ef1c619d623f1cf6d735d9f191df9ef5c745b0881b1e01b8565"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Realistic Media Inc."
       cert_issuer_short   = "DigiCert"
@@ -1935,8 +1935,8 @@ rule MAL_Compromised_Cert_BaoLoader_DigiCert_035A3901296CAAD75132EBA7C9116DB0 {
 
       hash                = "5c80c6a527f9c0d57c5411d9a9192235cfa88351a3d372ae05e48f36b6e41a80"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Eclipse Media Inc."
       cert_issuer_short   = "DigiCert"
@@ -1970,8 +1970,8 @@ rule MAL_Compromised_Cert_BaoLoader_DigiCert_05FD71DF68B6096A10DB1E78F3F45CBA {
 
       hash                = "baa1d067ab1a30d8c25f3837332268b954784b1941bc1c9883f6f7ab7a548987"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Blaze Media Inc."
       cert_issuer_short   = "DigiCert"
@@ -2005,8 +2005,8 @@ rule MAL_Compromised_Cert_BaoLoader_DigiCert_0A253234E29F318F9B6846682E99078D {
 
       hash                = "2926e6a08ac1e28928573996cd82bdc19054b8ae7642b91765aab1a16e5c7128"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Millennial Media Inc."
       cert_issuer_short   = "DigiCert"
@@ -2040,8 +2040,8 @@ rule MAL_Compromised_Cert_BaoLoader_DigiCert_0DEFC375DC6DCDAED0CE4B249127755A {
 
       hash                = "b9b4375c1992b71f9dc08ee613b2b316b8df8b9e1fdd2c7a1e98d89f43a1625f"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Summit Nexus Holdings LLC"
       cert_issuer_short   = "DigiCert"
@@ -2075,8 +2075,8 @@ rule MAL_Compromised_Cert_BaoLoader_DigiCert_0F493BE626DF58694E1875FA9155D40C {
 
       hash                = "35ab1c46e0341e6cda9ba1db61e8d8c0496df90ee758ed02d15f564a62b35da8"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Astral Media Inc."
       cert_issuer_short   = "DigiCert"
@@ -2110,8 +2110,8 @@ rule MAL_Compromised_Cert_BaoLoader_Entrust_1B1F1930B1A227FCC57CFEBD032462F7 {
 
       hash                = "e505e4bc6c76f8ccd1d626832d1d5d5d2852a5c78016c43bdc2f502af6e40396"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Drake Media Inc"
       cert_issuer_short   = "Entrust"
@@ -2145,8 +2145,8 @@ rule MAL_Compromised_Cert_BaoLoader_Entrust_3F744CB0496EB63557494B807C0681BE {
 
       hash                = "6ec07c1d2dc566d59a7576cc4a89c605bcfc8abd414c77338c940fb8e3ed5f1a"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Byte Media Sdn Bhd"
       cert_issuer_short   = "Entrust"
@@ -2180,8 +2180,8 @@ rule MAL_Compromised_Cert_BaoLoader_GlobalSign_008FE0F2949874A0F1CA17AC {
 
       hash                = "099c77409d23507d65ee7783575c77c4eeee86cd35b9338ac6fcdfef894ad472"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "INCREDIBLE MEDIA INC"
       cert_issuer_short   = "GlobalSign"
@@ -2215,8 +2215,8 @@ rule MAL_Compromised_Cert_BaoLoader_GlobalSign_08052628354E0AC4912C4412 {
 
       hash                = "9104b6e9f63232535b1f2ccb516122cf07bb62d3175044d7699e49c79cbc8f60"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Interlink Media Inc."
       cert_issuer_short   = "GlobalSign"
@@ -2250,8 +2250,8 @@ rule MAL_Compromised_Cert_BaoLoader_GlobalSign_45E49826E8314D963DDB53B6 {
 
       hash                = "6a08f7bfe8e62249990f97ad0b1e386218b60cace5c336a656f514f7f4df2c9f"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Digital Promotions Sdn. Bhd."
       cert_issuer_short   = "GlobalSign"
@@ -2285,8 +2285,8 @@ rule MAL_Compromised_Cert_BaoLoader_GlobalSign_5499B3DF6966C9151EF0135D {
 
       hash                = "bbee7d6beb0b1fc2f19bbda5a0765c00af7ec16642f7b4ad6f7bc8f6d43a2cc7"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Eclipse Media Inc."
       cert_issuer_short   = "GlobalSign"
@@ -2320,8 +2320,8 @@ rule MAL_Compromised_Cert_BaoLoader_GlobalSign_582C3A4B9934B7EC1028B638 {
 
       hash                = "fde67ba523b2c1e517d679ad4eaf87925c6bbf2f171b9212462dc9a855faa34b"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Echo Infini Sdn. Bhd."
       cert_issuer_short   = "GlobalSign"
@@ -2355,8 +2355,8 @@ rule MAL_Compromised_Cert_BaoLoader_GlobalSign_64351C662E8F81778E29BC8D {
 
       hash                = "4c2678aed5975d0968569000dd0092de29584b626eaaaaa9873bf0295388d1f2"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Drake Media Inc"
       cert_issuer_short   = "GlobalSign"
@@ -2390,8 +2390,8 @@ rule MAL_Compromised_Cert_BaoLoader_GlobalSign_6F2A7BF616E12C9E2B4DA846 {
 
       hash                = "00151cc770d6add3501a7b8cd7815858637d3fe6a0cb7a78fe98a1487cae2f83"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "ASTRAL MEDIA INC."
       cert_issuer_short   = "GlobalSign"
@@ -2425,8 +2425,8 @@ rule MAL_Compromised_Cert_BaoLoader_GlobalSign_71F4DED233C732913D3EF342 {
 
       hash                = "bd48834ed8fd535fce2749bf63133fa4ddbd43cf582fb9651568adead625f61a"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Byte Media Sdn. Bhd."
       cert_issuer_short   = "GlobalSign"
@@ -2460,8 +2460,8 @@ rule MAL_Compromised_Cert_BaoLoader_SSL_com_1709C0F1042395431C1283C6412C4BA5 {
 
       hash                = "7022b6b2caa7ecfc1a9575b74cce793336fc5fe4571955b1240716d9ab4b9e84"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Eclipse Media Inc"
       cert_issuer_short   = "SSL.com"
@@ -2495,8 +2495,8 @@ rule MAL_Compromised_Cert_BaoLoader_SSL_com_20777293799EA323C639A82A8612FD86 {
 
       hash                = "4c57be15f581c8ad23b416d7036b89fcfa37a5544e8e53163c0488f5e9af9073"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Digital Promotions Sdn. Bhd."
       cert_issuer_short   = "SSL.com"
@@ -2530,8 +2530,8 @@ rule MAL_Compromised_Cert_BaoLoader_SSL_com_28C7E66012DAB05A4A953D88F185ED2C {
 
       hash                = "71edb9f9f757616fe62a49f2d5b55441f91618904517337abd9d0725b07c2a51"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "GLINT SOFTWARE SDN. BHD."
       cert_issuer_short   = "SSL.com"
@@ -2565,8 +2565,8 @@ rule MAL_Compromised_Cert_BaoLoader_SSL_com_3474143F285FC35B0B1AE6AB407160D1 {
 
       hash                = "cf5194e7f63de52903b5d61109fd0d898b73dd3a07512e151077fba23cdf4800"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "ECHO INFINI SDN. BHD."
       cert_issuer_short   = "SSL.com"
@@ -2600,8 +2600,8 @@ rule MAL_Compromised_Cert_BaoLoader_SSL_com_3FEBAE41896885E91FDB20E0950C6054 {
 
       hash                = "1ac61435e8a508647724c7796406107b43c3c1e546782a9bcf14db88ddd5f75d"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "ECHO INFINI SDN. BHD."
       cert_issuer_short   = "SSL.com"
@@ -2635,8 +2635,8 @@ rule MAL_Compromised_Cert_BaoLoader_SSL_com_58C7A40E98E998758DC4D2A84C7DA9D3 {
 
       hash                = "7fe1b5d86fa46d225f75c41b10420d1d4fc7ae4441a593b17a4e2a2a632e0495"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Interlink Media Inc."
       cert_issuer_short   = "SSL.com"
@@ -2670,8 +2670,8 @@ rule MAL_Compromised_Cert_BaoLoader_SSL_com_5D9B7E3724B3222A7E0265E0636D62F0 {
 
       hash                = "f7fb16a3b5ca5a4970b8fc1866849162707a5a65a15d1498728ce27277c9ad52"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Digital Promotions Sdn. Bhd."
       cert_issuer_short   = "SSL.com"
@@ -2705,8 +2705,8 @@ rule MAL_Compromised_Cert_BaoLoader_SSL_com_624771AEE10682BDCE5A9AFCC194C951 {
 
       hash                = "d54b18f88cb3ee55b6175d5fb46ba395897a44dad543b0a95105b910b3318057"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Digital Promotions Sdn. Bhd."
       cert_issuer_short   = "SSL.com"
@@ -2740,8 +2740,8 @@ rule MAL_Compromised_Cert_BaoLoader_SSL_com_6D96912D6E0A85EC4E8EA02F304461FD {
 
       hash                = "3276154a7f2ea64e43cf6dbec33bfb20ee0d46b2ca03d5d0c7f51ec803f7101d"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Astral Media Inc"
       cert_issuer_short   = "SSL.com"
@@ -2775,8 +2775,8 @@ rule MAL_Compromised_Cert_BaoLoader_SSL_com_7DE8123E2B4CB350291ED602EDBC4592 {
 
       hash                = "9703d2f237c6e57dd71898dc41fb20a86da8c9a34ebd9cfb1d93a929dc8f1624"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Apollo Technologies Inc"
       cert_issuer_short   = "SSL.com"
@@ -2810,8 +2810,8 @@ rule MAL_Compromised_Cert_BaoLoader_Sectigo_00EF8847BDBB45210B4215C99F8FED229E {
 
       hash                = "8dab0c6c0afcf6e1d07b0379f2487f62df7e644a8fad771387fc03e2bdf9db85"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Byte Media Sdn Bhd"
       cert_issuer_short   = "Sectigo"
@@ -2845,8 +2845,8 @@ rule MAL_Compromised_Cert_BaoLoader_Sectigo_2AB1D3C61B8A9960D12F06A8EBED525E {
 
       hash                = "e06c05b3e19e78108a4f4174219862c4680dd1ee4b5dbef18b9295fc846eda98"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "ECLIPSE MEDIA INC."
       cert_issuer_short   = "Sectigo"
@@ -2880,8 +2880,8 @@ rule MAL_Compromised_Cert_BaoLoader_Sectigo_313CA9C838CDDB21E4E354E6DBF0216A {
 
       hash                = "7c86ebc6bb775b6b35c4f70140f6e18908b7f3a15f9bffe33da96fee4601d74d"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Native Click Marketing LLC"
       cert_issuer_short   = "Sectigo"
@@ -2916,7 +2916,7 @@ rule MAL_Compromised_Cert_BatLoader_Certum_0FBD475F796001B1B63F15AD08841422 {
       hash                = "1c64bc2911b32ede634aba9e44dedd8d0897cc5d234a95cb0af715381ac6a24c"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Tax In Cloud sp. z o.o."
       cert_issuer_short   = "Certum"
@@ -2951,7 +2951,7 @@ rule MAL_Compromised_Cert_BatLoader_Certum_218A79C93C595847559394CCE196B383 {
       hash                = "7565bd4a85a95a5789d47e7c74756c38490c4ed5a6432bf7bab4fb4c289024c5"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Guangzhou Yongwu Network Technology Co., Ltd."
       cert_issuer_short   = "Certum"
@@ -2985,7 +2985,7 @@ rule MAL_Compromised_Cert_BatLoader_Certum_35B49EE870AEA532E6EF0A4987105C8F {
 
       hash                = "e8492d0af0f44af35b753e7f75242da53c27b089bb11d44520724ae74428c48e"
       malware             = "BatLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Kancelaria Adwokacka Adwokat Aleksandra Krzemińska"
@@ -3021,7 +3021,7 @@ rule MAL_Compromised_Cert_BatLoader_Certum_5044BD6320C1B4CC47D56CC56C1E36D8 {
       hash                = "4b2557cf1e0fa54051631931fd164edbfc5e1c0986aa8e776d3fe446a670c10a"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Dalian Tester Software Technology Co., Ltd."
       cert_issuer_short   = "Certum"
@@ -3056,7 +3056,7 @@ rule MAL_Compromised_Cert_BatLoader_Certum_5CBF86C06CF360D5F8A1133C2C93CB55 {
       hash                = "d1dff8d1451bb6787f2abec3944deb060c05424fca4831c2c199f5706b7975b3"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Shenzhen Jingwei Electronic Technology Co., Ltd."
       cert_issuer_short   = "Certum"
@@ -3091,7 +3091,7 @@ rule MAL_Compromised_Cert_BatLoader_Entrust_67309D6FE835407B91D62F6216437790 {
       hash                = "fddf36adfee67f1deb84c18a800f847c182c15fe21e03268bbb0f0b489640dac"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Pinesville Ltd"
       cert_issuer_short   = "Entrust"
@@ -3126,7 +3126,7 @@ rule MAL_Compromised_Cert_BatLoader_GlobalSign_1D9FAB7FB929C704E9205EBB {
       hash                = "1c93d7e99ad24f2f4550859cdd3a1d785ad70a7c05b216b1d18a34bd569947ef"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Buicrosr Monerrka Network Technology Co., Ltd."
       cert_issuer_short   = "GlobalSign"
@@ -3161,7 +3161,7 @@ rule MAL_Compromised_Cert_BatLoader_GlobalSign_365A71D953A7E1B3A59FD64D {
       hash                = "15c39d2084e399b4a0126c0b1026bd2342f8dc5d812cf0d0caae8e35ee689407"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "MK Investment Properties Inc."
       cert_issuer_short   = "GlobalSign"
@@ -3196,7 +3196,7 @@ rule MAL_Compromised_Cert_BatLoader_GlobalSign_7FAC4E218B3327DC2A1DE2A9 {
       hash                = "7a11299b01c06a9ae30db6c51e59d9a5b8ab69e15db8f757718e5b52ce3184ed"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Provizan Business Solutions, Inc."
       cert_issuer_short   = "GlobalSign"
@@ -3231,7 +3231,7 @@ rule MAL_Compromised_Cert_BatLoader_SSL_com_0AD3EC95833032EEBF53B660984CC67D {
       hash                = "413cd9af982a04a8eff61e66860582f3236b2f8523b88b9330eccdd5ffc58348"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "Initial access tool dropped by ClearFake: https://blog.sekoia.io/clearfake-a-newcomer-to-the-fake-updates-threats-landscape/"
+      malware_notes       = ""
 
       signer              = "STECH CONSULTANCY LIMITED"
       cert_issuer_short   = "SSL.com"
@@ -3266,7 +3266,7 @@ rule MAL_Compromised_Cert_BatLoader_SSL_com_1F5F6C8F6F37E026CE572643B6BB3BBD {
       hash                = "a88a61b2dab40e651798aa312d069dac8085f9e7a2e5bffb6ef42360b7f775b0"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "AJM It Services Limited"
       cert_issuer_short   = "SSL.com"
@@ -3301,7 +3301,7 @@ rule MAL_Compromised_Cert_BatLoader_SSL_com_24F14D582A5476DECB49D9C910F064A4 {
       hash                = "97ac5e537d38415ccc56bd114e7b6f0053e894032c506eea37896779b6c68caf"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Ivosaq Ltd"
       cert_issuer_short   = "SSL.com"
@@ -3336,7 +3336,7 @@ rule MAL_Compromised_Cert_BatLoader_SSL_com_3E723D32CB1BDD13DF58B0A04C675AB9 {
       hash                = "2e65cfebde138e4dd816d3e8b8105e796c4eb38cfa27015938c0445ee5be8331"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Agilable Consulting Inc."
       cert_issuer_short   = "SSL.com"
@@ -3371,7 +3371,7 @@ rule MAL_Compromised_Cert_BatLoader_SSL_com_5E00AA573FDF345515C83BF346C4EE22 {
       hash                = "8d1f6fac51e8130f9b769f77220a7d142aa0458cf51677375967015c7a29f8f4"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "LMC BIOPOLYMERS LIMITED"
       cert_issuer_short   = "SSL.com"
@@ -3405,7 +3405,7 @@ rule MAL_Compromised_Cert_BatLoader_SSL_com_5E65623207A0F5322CEDC57005E5CB41 {
 
       hash                = "470a322864eb9fb96afc1eb64db7a39200df1b6f58bcdfc0138304ccd63b8963"
       malware             = "BatLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "JM CRYPTO PTY LTD"
@@ -3440,7 +3440,7 @@ rule MAL_Compromised_Cert_BatLoader_SSL_com_6033E9E272BCA9961C424D5AF7258E62 {
 
       hash                = "b1c9d857b8c56f6c1cf164e0a521e96ec1f48ddb818f6172b66223ad42829299"
       malware             = "BatLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Nuotio IT Oy"
@@ -3476,7 +3476,7 @@ rule MAL_Compromised_Cert_BatLoader_Sectigo_00B7F06400392000C6CF7EFAC7BD78D83B {
       hash                = "2727a418f31e8c0841f8c3e79455067798a1c11c2b83b5c74d2de4fb3476b654"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Zhuzhou ZHUOER-TECH Co., Ltd."
       cert_issuer_short   = "Sectigo"
@@ -4000,7 +4000,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_073B9B32FE16B00A4268F97B {
 
       hash                = "76ea5c5bd76941aae78a9212929db83a8975260265c58dea38ddf20e3c35ce10"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "LLC Invest Center"
@@ -4035,7 +4035,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_1044DC08D7A1CEAD020B97EC {
 
       hash                = "bd9767ccf80f530171bddbfccd73f25679d67a34e3290f230245270ea45f02d7"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "LLC Best Consult"
@@ -4070,7 +4070,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_21CB6632DCF06D4F01CEA430 {
 
       hash                = "bd4a1d110e65697620272aa573ed4e49eb9c236ce4b90a039bcde5a9f222cb35"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "LLC Vector"
@@ -4105,7 +4105,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_2495E333DCE11D0EC448ADDB {
 
       hash                = "a67bae3dd73789e892b5114a157d992424d367aae11c5fbaa80be639d6dec798"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Dongguan Shunkaitong Technology Co., Ltd."
@@ -4140,7 +4140,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_337636E3766AF9939462F2EE {
 
       hash                = "839e3f4dc441578019dc33c43bc918ad7e6022baa3770f45c6eccfe1239d79c1"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "LLC Ellada Comfort"
@@ -4175,7 +4175,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_3805DC7EA4CD84151C90FFAF {
 
       hash                = "cd454d80b75cbd4b23f9ec4a3e5746e53552f5a2a30c3ea1d5d3215cf41484aa"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "LLC Resource+"
@@ -4210,7 +4210,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_39111D565C62321E447F9B5E {
 
       hash                = "e5e8a24a628b99b2172fee5d53f003ff097739dc5c23b4374d328d72f45813cd"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "LLC Alliance"
@@ -4245,7 +4245,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_398A54E22351662D5BF28FA0 {
 
       hash                = "1ba85af9be3e263befdaac86084f96b014684c8d3a85d0572ca1113e52a4fa4d"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "LLC Leighton"
@@ -4280,7 +4280,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_5550E7366660417E8F144A5C {
 
       hash                = "a14506c6fb92a5af88a6a44d273edafe10d69ee3d85c8b2a7ac458a22edf68d2"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "LLC Ugurmana"
@@ -4315,7 +4315,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_5C37013893858BA3EFBBED44 {
 
       hash                = "29e1bc115d78c7e98e6dbc3577d24a75effda6d25f191cf32503f65922e3c281"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "LLC Vector"
@@ -4350,7 +4350,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_669F5C8918D3B19E81282765 {
 
       hash                = "281e07af77e1ff21140a7102c3cf8802dff96e670c8c3c73b8250d487a5196ed"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "CanDllerWhale Electronic Studios Technology Co., Ltd."
@@ -4385,7 +4385,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_694485FC3754D759163719A3 {
 
       hash                = "ad415a5fe368e89c4b00337b00baf6ed8b77c83d27d8f9e0628f1217a6082740"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "LLC Onixgroup"
@@ -4420,7 +4420,7 @@ rule MAL_Compromised_Cert_BumbleBee_SSL_com_5143CF38D5FD26858830826632BE9FDA {
 
       hash                = "cab63e05a4a6f0b825acb077ba6a1bbb3657488c584882124a31c45dfb39515d"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "DIGI CORP MEDIA LLC"
@@ -4490,7 +4490,7 @@ rule MAL_Compromised_Cert_BumbleBee_Sectigo_65CFD8419D70CE4011D97BC79D18315E {
 
       hash                = "35f2ec59313bbe5b78e4b043f06f8961f6f3e77b870544d15ee7cc1fca987d8c"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "FACE AESTHETICS LTD"
@@ -4525,7 +4525,7 @@ rule MAL_Compromised_Cert_BumbleBee_Sectigo_67BEA002D62E1831CC2612ADB8E1B2CE {
 
       hash                = "640c518ff312e024c1e3bb198a2240c59b2205ab562053a1e644276592a5c07d"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Xiamen Xisu Technology Co., Ltd."
@@ -4771,7 +4771,7 @@ rule MAL_Compromised_Cert_CastleLoader_Certum_6FE1CA02563A3BBED8D2D0E978A09C49 {
       hash                = "c413b2e2c71ea31bc366c95b3554a36ff1d662b365c7f06768d53d44e441f7d5"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This is an initial access tool that is frequenty used to load infostealers or remote access tools, sold as Malware-as-a-Service: https://www.ibm.com/think/x-force/dissecting-castlebot-maas-operation"
+      malware_notes       = ""
 
       signer              = "Soft Insanity Oy"
       cert_issuer_short   = "Certum"
@@ -4805,8 +4805,8 @@ rule MAL_Compromised_Cert_CastleLoader_DigiCert_0D5713F88E9AFE9B0D1CECA05E0C3532
 
       hash                = "5f55c1e837b6fbe5d81d93983166f34f3471a7f20af28ff527b9f140a601ce2d"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: totpwill[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "Dahan David Marketing Ltd."
       cert_issuer_short   = "DigiCert"
@@ -4840,8 +4840,8 @@ rule MAL_Compromised_Cert_CastleLoader_DigiCert_0D7AA26068DDDAF9CF05D412C8DFCEB8
 
       hash                = "5441e3aaf800ec7a5a4dae946a8173537b140a850a5002ab9fa1903c1e0fa125"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: koshei[.]icu"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "LASSFERA s.r.o."
       cert_issuer_short   = "DigiCert"
@@ -4851,11 +4851,11 @@ rule MAL_Compromised_Cert_CastleLoader_DigiCert_0D7AA26068DDDAF9CF05D412C8DFCEB8
       cert_valid_from     = "2026-03-12"
       cert_valid_to       = "2027-03-09"
 
-      country             = "???"
+      country             = "CZ"
       state               = "???"
-      locality            = "???"
+      locality            = "Prague"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "21743347"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -4875,8 +4875,8 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_00995B7EFE49137D33BD8C10 {
 
       hash                = "e4ccb3da7bfdf816ae16790859255647322655502ac4e18e1e52ba5967230be6"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: dallasgeneratorshop[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "CONG TY TNHH TIEN PHONG THAI BINH"
       cert_issuer_short   = "GlobalSign"
@@ -4946,7 +4946,7 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_0CB676A4F14B02E1FCEE433B {
       hash                = "9c8d22a4d79060a227f71842a2b20fa545c7b2bb87f58e3364781cf943342608"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This is an initial access tool that is frequenty used to load infostealers or remote access tools, sold as Malware-as-a-Service: https://www.ibm.com/think/x-force/dissecting-castlebot-maas-operation"
+      malware_notes       = ""
 
       signer              = "SURANA ENTERTAINMENT PARADISE LLP"
       cert_issuer_short   = "GlobalSign"
@@ -4981,7 +4981,7 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_185A90B51B36D502B56E73E1 {
       hash                = "376856afa1fbb89426d78f35a22816dc5ad8ff78810420046076a87caf3b0691"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This is an initial access tool that is frequenty used to load infostealers or remote access tools, sold as Malware-as-a-Service: https://www.ibm.com/think/x-force/dissecting-castlebot-maas-operation"
+      malware_notes       = ""
 
       signer              = "MARKUS LLC"
       cert_issuer_short   = "GlobalSign"
@@ -5016,7 +5016,7 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_1916747D5AC1ABEC2D20DB84 {
       hash                = "ce6068417aeeb4d1379e58322d8cbcc1ebbacd5c1bef7de5b3e17be725c281a6"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This is an initial access tool that is frequenty used to load infostealers or remote access tools, sold as Malware-as-a-Service: https://www.ibm.com/think/x-force/dissecting-castlebot-maas-operation"
+      malware_notes       = ""
 
       signer              = "STALKER LLC"
       cert_issuer_short   = "GlobalSign"
@@ -5050,8 +5050,8 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_1D050F8E6F39C00C585367F2 {
 
       hash                = "61882e8813e03a91adb06a282118ac522d7f8490a9995a57ca37bb71abc2a716"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: franksinatra[.]icu"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "LLC Innovative Technologies"
       cert_issuer_short   = "GlobalSign"
@@ -5086,7 +5086,7 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_23CA2FC2A588B52B7D70E96B {
       hash                = "05d2d06143d363c1e41546f14c1d99b082402460ba4e8598667614de996d2fbc"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This version of the malware was a trojanized Advanced IP Scanner."
+      malware_notes       = ""
 
       signer              = "ANVIA LLC"
       cert_issuer_short   = "GlobalSign"
@@ -5121,7 +5121,7 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_2C204F0654E5D1D07E9E09B7 {
       hash                = "8f3fc820def7b492876b38d021c904aafc60c379e8ad58cac81eee05bf41ee77"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This is an initial access tool that is frequenty used to load infostealers or remote access tools, sold as Malware-as-a-Service: https://www.ibm.com/think/x-force/dissecting-castlebot-maas-operation"
+      malware_notes       = ""
 
       signer              = "LLC Company Magnon"
       cert_issuer_short   = "GlobalSign"
@@ -5156,7 +5156,7 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_349AAC4383C298D91670D69E {
       hash                = "64562a0f1eabfcfb754426020021da69fe31bb551a653d143d75649252c61050"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This is an initial access tool that is frequenty used to load infostealers or remote access tools, sold as Malware-as-a-Service: https://www.ibm.com/think/x-force/dissecting-castlebot-maas-operation"
+      malware_notes       = ""
 
       signer              = "TENDENCE LLC"
       cert_issuer_short   = "GlobalSign"
@@ -5190,7 +5190,7 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_3BC6960C1395678BD09FD48A {
 
       hash                = "977d7959330af8cb27a5dba1b96cb8ecd8b6c48ec809516465d6ada057fcfcd6"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "IMAGINATION369 CO., LTD."
@@ -5225,8 +5225,8 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_55E10866AA01B582A37E1CF7 {
 
       hash                = "15f848dfe1797a6356ea510a4cc46985be164ef15e25a0496ff0882726ead4cc"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: johnmacroskgf[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "LLC MK Grand Stroy"
       cert_issuer_short   = "GlobalSign"
@@ -5236,11 +5236,11 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_55E10866AA01B582A37E1CF7 {
       cert_valid_from     = "2026-04-08"
       cert_valid_to       = "2027-04-09"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "KG"
+      state               = "Osh"
+      locality            = "Osh"
+      email               = "mkgrandstroy@outlook.com"
+      rdn_serial_number   = "168457-3310-OOO"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -5261,7 +5261,7 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_5641E6878B4E49FA1E6B22F6 {
       hash                = "d9df71bce0b1037709a0732b7a53d4bacd0455a6abf1b7abe6fba74b6039a5a3"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This is an initial access tool that is frequenty used to load infostealers or remote access tools, sold as Malware-as-a-Service: https://www.ibm.com/think/x-force/dissecting-castlebot-maas-operation"
+      malware_notes       = ""
 
       signer              = "LLC Importer"
       cert_issuer_short   = "GlobalSign"
@@ -5296,7 +5296,7 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_5C1C54F72BCC4DB6079023BA {
       hash                = "7ce399ae92c3e79a25e9013b2c81fe0add119bda0a65336d1e5c231654db01a5"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This copy was a trojanized Advanced IP scanner installer."
+      malware_notes       = ""
 
       signer              = "NOMAC LLC"
       cert_issuer_short   = "GlobalSign"
@@ -5331,7 +5331,7 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_601EAD2413898A3EDBFE37D6 {
       hash                = "2a040d0bb9f335c12e7dd809d66b328e9114445eccfc79f5d797cc9636b6c72d"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This is an initial access tool that is frequenty used to load infostealers or remote access tools, sold as Malware-as-a-Service: https://www.ibm.com/think/x-force/dissecting-castlebot-maas-operation"
+      malware_notes       = ""
 
       signer              = "LLC KHD GROUP"
       cert_issuer_short   = "GlobalSign"
@@ -5366,7 +5366,7 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_737C5C461D3864AC4F089E26 {
       hash                = "770007f02a48fe4b445af19c07a4f3a2131fcdd53d68e20c8345eafae5843974"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This is an initial access tool that is frequenty used to load infostealers or remote access tools, sold as Malware-as-a-Service: https://www.ibm.com/think/x-force/dissecting-castlebot-maas-operation"
+      malware_notes       = ""
 
       signer              = "GAUAMRIT NUTRICARE PRIVATE LIMITED"
       cert_issuer_short   = "GlobalSign"
@@ -5400,8 +5400,8 @@ rule MAL_Compromised_Cert_CastleLoader_GoGetSSL_0C00AB5BFC8328FB8AAAD01F48DB8DD2
 
       hash                = "bc8cb64c089415ccc2bfd9d29bf74fe06ae5e3b0493a336412184d20ac774604"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: briskbeverage[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "TECHNOLOGY APPRAISALS LIMITED"
       cert_issuer_short   = "GoGetSSL"
@@ -5505,8 +5505,8 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_330000721DB1BB9DED4AE9044600000
 
       hash                = "0dc0e160c1898c94e4cbda8d2a6b4d8334a423894cb1e5838195b905f22fdda4"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: bmwservicebestik[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "SHYANNE COLLINS"
       cert_issuer_short   = "Microsoft"
@@ -5516,11 +5516,11 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_330000721DB1BB9DED4AE9044600000
       cert_valid_from     = "2026-04-23"
       cert_valid_to       = "2026-04-26"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Arkansas"
+      locality            = "MORRILTON"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -5540,7 +5540,7 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_330006DF515A14FE3748416FE200000
 
       hash                = "2b7d8a519f44d3105e9fde2770c75efb933994c658855dca7d48c8b4897f81e6"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Amy Cherne"
@@ -5575,7 +5575,7 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_33000725FEA86DD19E8571B26C00000
 
       hash                = "a8c380b57cb7c381ca6ba845bd7af7333f52ee4dc4e935e98b48bb81facad72b"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Donald Gay"
@@ -5610,8 +5610,8 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_3300073381959ADEFA5D30FAAB00000
 
       hash                = "87f1d74617e1654644ad2e49b4bb471d0026a7552a5ae8bc9e281f3f3b1dc97f"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2 - donttouchpleasemodaf[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "Jerry Hayes"
       cert_issuer_short   = "Microsoft"
@@ -5645,8 +5645,8 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_3300074243FF56B1E8C3BF551C00000
 
       hash                = "ca87d3d53290557dce61c193cdff308f3db400c011999470c371724cc171e9eb"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2 - dangeonbest[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "Jerry Hayes"
       cert_issuer_short   = "Microsoft"
@@ -5680,8 +5680,8 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_330007929266E02AB4FEC3E46C00000
 
       hash                = "9183078ffc982bf226231ac8de4844b06e1daba5a2006b44068dd570d9881020"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: strangury[.]icu"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "MIGUEL GUTIERREZLUPERCIO"
       cert_issuer_short   = "Microsoft"
@@ -5715,8 +5715,8 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_3300079E8643F87B3C63BDF56100000
 
       hash                = "82b4cfac54ef2fcfa51c4418aad3acea5577a4e64f6145137576063e9af029c8"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: strangury[.]icu"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "MIGUEL GUTIERREZLUPERCIO"
       cert_issuer_short   = "Microsoft"
@@ -5750,8 +5750,8 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_330007F426F21F52410471D61800000
 
       hash                = "6348d325ce76dc22c01ba6d3f5f4302cea960c98e196918dce098dfa12b17e4b"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2 - dangeonbest[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "Jerry Hayes"
       cert_issuer_short   = "Microsoft"
@@ -5820,7 +5820,7 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_33000839C40044B3E475E0C61900000
 
       hash                = "82a21a9d92666d3fb6d776e8135ad0e63401f524579e111410eba7f7532f7be0"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Teresa Boswell"
@@ -5855,7 +5855,7 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_33000882A36F2FF4A04720A3E700000
 
       hash                = "f8e78a1a7a6a6b6c40ad5f2d72d2eac1814af01efe96a13e4b9bf7dce2ed438f"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Teresa Boswell"
@@ -5890,8 +5890,8 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_3300089A0D4ACA6FD9F156502C00000
 
       hash                = "24bcbe18745c1ba65c68f9c55e1208fb0b5ef9f4702ef4165fcb98818d4adcc7"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "godblessaids[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "MIGUEL GUTIERREZLUPERCIO"
       cert_issuer_short   = "Microsoft"
@@ -5926,7 +5926,7 @@ rule MAL_Compromised_Cert_CastleLoader_SSL_com_0F01EA3DC8215BA041F881869416788F 
       hash                = "27f24adab8c696069e22233860851dd8654a846700483f6c4a9a8aa05f1b27db"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This is an initial access tool that is frequenty used to load infostealers or remote access tools, sold as Malware-as-a-Service: https://www.ibm.com/think/x-force/dissecting-castlebot-maas-operation"
+      malware_notes       = ""
 
       signer              = "FORMES CONSTRUCTION LTD"
       cert_issuer_short   = "SSL.com"
@@ -5961,7 +5961,7 @@ rule MAL_Compromised_Cert_CastleLoader_SSL_com_1AB29E886DBAF6A0942AA73DA480DD91 
       hash                = "24fb4e14f8e2f2b663e3221132aec06f30eae68aea9ad4e927407ce6049a9ac1"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This is an initial access tool that is frequenty used to load infostealers or remote access tools, sold as Malware-as-a-Service: https://www.ibm.com/think/x-force/dissecting-castlebot-maas-operation"
+      malware_notes       = ""
 
       signer              = "INTYNA EXIM PRIVATE LIMITED"
       cert_issuer_short   = "SSL.com"
@@ -5996,7 +5996,7 @@ rule MAL_Compromised_Cert_CastleLoader_SSL_com_511CD84EA13903383B6D752F8AD73B7D 
       hash                = "169f1204aed49ec40813b0df5f39232971c74cde1f89f045ad033451710b5c9d"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This is an initial access tool that is frequenty used to load infostealers or remote access tools, sold as Malware-as-a-Service: https://www.ibm.com/think/x-force/dissecting-castlebot-maas-operation"
+      malware_notes       = ""
 
       signer              = "Code Staff B.V."
       cert_issuer_short   = "SSL.com"
@@ -6031,7 +6031,7 @@ rule MAL_Compromised_Cert_CastleLoader_SSL_com_63F98070213489715A8D224F58E1C1D5 
       hash                = "02a2b2af427a65e85e44575ebfbc088d5972a689fd1e7e025ee5d229f3e0ace9"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This is an initial access tool that is frequenty used to load infostealers or remote access tools, sold as Malware-as-a-Service: https://www.ibm.com/think/x-force/dissecting-castlebot-maas-operation"
+      malware_notes       = ""
 
       signer              = "BRACKET-SOFT SP Z O O"
       cert_issuer_short   = "SSL.com"
@@ -6065,8 +6065,8 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_00825FF994DC68446E998A6F20F122561
 
       hash                = "068e34ef7cb67e5a8d34b4d6977cd69be00d52b12d119413fb00d9b68dbc63b6"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: newmemorystarter[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "Xiamen Kangchu Technology Co., Ltd."
       cert_issuer_short   = "Sectigo"
@@ -6100,7 +6100,7 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_00A2C875FDD0D6FA22A2261813DEF8A56
 
       hash                = "4ba0d3ae41a0ae3143e8c2c3307c24b0d548593f97c79a30c0387b3d62504c31"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "SERPENTINE SOLAR LIMITED"
@@ -6135,7 +6135,7 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_00A8F8379EE21B6B3859DA93953251200
 
       hash                = "b38c9f871dc4735320464bb80219372a0ffe2b4f8750942b550576ace9b012b8"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Xiamen Yufeng Tiantai Network Co., Ltd."
@@ -6171,7 +6171,7 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_00C4C826993B825CA050C82622E1D698C
       hash                = "aaf8b6441e239acade66d3f60fae59ef4f426dc14768ee7530ccbdcd61ef6e4e"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This is an initial access tool that is frequenty used to load infostealers or remote access tools, sold as Malware-as-a-Service: https://www.ibm.com/think/x-force/dissecting-castlebot-maas-operation"
+      malware_notes       = ""
 
       signer              = "Flight 041 LLC"
       cert_issuer_short   = "Sectigo"
@@ -6205,8 +6205,8 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_03C2DE2572AEE65EF1A2009CD0853040 
 
       hash                = "11875de4d8789bc95ba00bc040b8160549252dae2fb18f948d9380fb0d297c32"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: mazafakadadscomeone[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "CULTURE AND EDUCATION INTERNATIONAL LIMITED"
       cert_issuer_short   = "Sectigo"
@@ -6240,7 +6240,7 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_11FC7C80473F272CED037319E717F948 
 
       hash                = "876a04d0f76dc14f68248e0b4498e3b710740e1447bcc6be6fd746b9c01276de"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Chengdu Yizhifeng Technology Co., Ltd."
@@ -6275,7 +6275,7 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_3D750F9AC0E074D810BCF82573950AF3 
 
       hash                = "e913b436fe3debd25ed0fa24e84e313f104490be66687a584f9cc15e0b23d9c8"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Xiamen Longhu Sanlu E-commerce Co., Ltd."
@@ -6310,8 +6310,8 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_5447CA4779903CBA0128612D312425D6 
 
       hash                = "001a10b946d41f8794c110f97cd46b961fea0c0d50c92efaef1d166adaffe8b8"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: fillenmore[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "Lway Firmware"
       cert_issuer_short   = "Sectigo"
@@ -6321,11 +6321,11 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_5447CA4779903CBA0128612D312425D6 
       cert_valid_from     = "2026-03-19"
       cert_valid_to       = "2027-06-17"
 
-      country             = "???"
-      state               = "???"
+      country             = "FI"
+      state               = "Uusimaa"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "3462375-9"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -6345,8 +6345,8 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_5A7260B535C87EAB8C60DC791FBADBA0 
 
       hash                = "dc06cf3983981f0996b24f8724a292bb2a401c7a57c33dff0ed88fb737dc54c9"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: bmwservicebestik[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "ENGINEERING AND TECHNICAL PROCUREMENT SERVICES LTD"
       cert_issuer_short   = "Sectigo"
@@ -6356,11 +6356,11 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_5A7260B535C87EAB8C60DC791FBADBA0 
       cert_valid_from     = "2026-04-01"
       cert_valid_to       = "2027-04-01"
 
-      country             = "???"
-      state               = "???"
+      country             = "GB"
+      state               = "Essex"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "07993399"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -18035,8 +18035,8 @@ rule MAL_Compromised_Cert_FakeRMM_Certum_055A00A5DC820FDA8DBB754490B4BACF {
 
       hash                = "cf85a4816715b8fa6c1eb5b50d1c70cfef116522742f6f1c77cb8689166b9f40"
       malware             = "FakeRMM"
-      malware_type        = "Remote access tool"
-      malware_notes       = "This malware is being distributed by phishing. The software appears to be designed to be an RMM but is also brand new, all indicators point to malicious."
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "TrustConnect Software PTY LTD"
       cert_issuer_short   = "Certum"
@@ -18070,8 +18070,8 @@ rule MAL_Compromised_Cert_FakeRMM_DigiCert_047655211EB5C269B88F4DCEBA4AE762 {
 
       hash                = "dee3b88825ea12734b4d537c15d7d2d177e9f869e7d6ea43642e316c9f4f9970"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
-      malware_notes       = "Malicious installers posing as a fake RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "TRUSTCONNECT SOFTWARE"
       cert_issuer_short   = "DigiCert"
@@ -18105,7 +18105,7 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_33000014F122445605D78886DC0000000014
 
       hash                = "2eac72a04860eb435310bf03ffbf475e5468b251b9eb5e0ae6fabd2d4ca3447e"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Frank Farris"
@@ -18140,7 +18140,7 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_3300001596B905221D86BD8F760000000015
 
       hash                = "76f7ed2906cc0d6fdccecefda3a1e004dd2d9bcf47e908c786c67c27ea00e100"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Frank Farris"
@@ -18175,7 +18175,7 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_3300001D099986F3B1F6209D43000000001D
 
       hash                = "d68bfbe6e957ae3189533534c3408f2991bd18bdb5601278f6250509714d51df"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Frank Farris"
@@ -18210,7 +18210,7 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_33000023311910DDBBFB8386B20000000023
 
       hash                = "f7720759f5979b2181d85432730edafac64ab5b9e74a2fedd6bf7bbe22afa06b"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Frank Farris"
@@ -18245,8 +18245,8 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_3300003ED76A78FF208BF50426000000003E
 
       hash                = "88a45b1f6489eed1f9470e8671da6389724154d887f58b59ed467dad0149d091"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
-      malware_notes       = "Fake DocuSign setup. From the makers of TrustConnect"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "Frank Farris"
       cert_issuer_short   = "Microsoft"
@@ -18280,7 +18280,7 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330006F7BF3100D927BDFF629B00000006F7
 
       hash                = "8b2b511a7f68f20a5a200a9b28adec1e45ef0b5ebbc901485d17916c348a4489"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "PERRY CHANG"
@@ -18315,8 +18315,8 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_33000701EEBA0F73D66E4CEA800000000701
 
       hash                = "827a08808e1729b8f6711b522e0c572a7997b1c48ae2dc64fabc81ceab69183f"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
-      malware_notes       = "Malicious installers posing as a fake RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "MELISSA LEHMAN"
       cert_issuer_short   = "Microsoft"
@@ -18350,8 +18350,8 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_3300070CE19C11C380B63372C3000000070C
 
       hash                = "b24cd241b4f39d65a521b580dccd67ee702ad905d8f955f1b6f3e4c3ca476202"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
-      malware_notes       = "Malicious installers posing as a RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "NICHOLAS HALL"
       cert_issuer_short   = "Microsoft"
@@ -18385,8 +18385,8 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_3300071A845B6BA727FE6BDEF2000000071A
 
       hash                = "ca1730909d5f4d75dca58e0e7ba0340cbf2a16bbb60f8a76fd37a45d8e216f8b"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
-      malware_notes       = "Malicious installers posing as a fake RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "NICHOLAS HALL"
       cert_issuer_short   = "Microsoft"
@@ -18420,8 +18420,8 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330007438AEF232CA91040F0190000000743
 
       hash                = "14c62111879e9c9d738ed901db6533da38846454ed3b001ddbb3ad64840683f0"
       malware             = "FakeRMM"
-      malware_type        = "Remote access tool"
-      malware_notes       = "From the makers of TrustConnect."
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "DAWN MALLORY"
       cert_issuer_short   = "Microsoft"
@@ -18490,7 +18490,7 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330007D4E2A923E5F22C2A519000000007D4
 
       hash                = "8d2f71d02a8cf5fabb29f2e25b02bf1916c6547d9934d01eb1580b746fdaecfc"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "DAWN RENEE"
@@ -18525,8 +18525,8 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330007DD8DF1C1AF342CDF84D300000007DD
 
       hash                = "dee64b39920c45f3f833185178a6490e9f35c2229a3ab911b4c1698e03bad8a9"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
-      malware_notes       = "Malicious installers posing as a fake RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "Khyree Woodberry"
       cert_issuer_short   = "Microsoft"
@@ -18560,8 +18560,8 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330007E159397E8634FE81A78200000007E1
 
       hash                = "7303a95893caaf748406a1931d062f5b64320c96852fedefd0a6f6291f29caa3"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
-      malware_notes       = "Malicious installers posing as a fake RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "PERRY CHANG"
       cert_issuer_short   = "Microsoft"
@@ -18595,8 +18595,8 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330007E678B2E9E6A09C386D6E00000007E6
 
       hash                = "63450bf8e4abe98ba2b27b17d8da918848b466c0e38249ed4a71dc663f102172"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
-      malware_notes       = "Malicious installers posing as a fake RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "Khyree Woodberry"
       cert_issuer_short   = "Microsoft"
@@ -18630,7 +18630,7 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330007E88C865C39C4C86DF29800000007E8
 
       hash                = "f0fd766df65ac4e2a2b2dc6417513dfd20fb97db5ad8f6957f94e76ef49a0dbf"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "DAWN RENEE"
@@ -18665,8 +18665,8 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330007EC424A6EF1E456B9D7F300000007EC
 
       hash                = "28cc12c092e331809e92dd20604ee1f646cbb96f8426f3944214605f590fe7df"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
-      malware_notes       = "Malicious installers posing as a RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "NICHOLAS HALL"
       cert_issuer_short   = "Microsoft"
@@ -18700,7 +18700,7 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330008BB04FE247CAAC9FADC7300000008BB
 
       hash                = "f30a0cb14d8bf231f56f9e0ad63de7e9fff2a02003ce36649e8a7c8924ea080d"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "DAWN RENEE"
@@ -18735,7 +18735,7 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330008F14B653BF56DB14D28A300000008F1
 
       hash                = "f48a433d7eac6c4eb0f008468719bd0b7d653d1eca155b8a78dc17516fce5bf2"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "DAWN RENEE"
@@ -20006,11 +20006,11 @@ rule MAL_Compromised_Cert_FiveModsLoader_GoGetSSL_0439B3B542C9E5DAAB59C635114453
       cert_valid_from     = "2026-03-21"
       cert_valid_to       = "2027-03-20"
 
-      country             = "???"
+      country             = "UA"
       state               = "???"
-      locality            = "???"
+      locality            = "Kyiv"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -21710,7 +21710,7 @@ rule MAL_Compromised_Cert_Gh0stRAT_Certum_46C6C62207C137E628861568419977EE {
 
       hash                = "968e5b0abc123f1f2097b5064637a1ab5779205682988880910e3c2d11d51f31"
       malware             = "Gh0stRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "北京谷云达吉商贸有限公司"
@@ -21745,7 +21745,7 @@ rule MAL_Compromised_Cert_Gh0stRAT_Certum_5F737E82330734C32297EF89B72FB607 {
 
       hash                = "349b54f136e63904ed5a1b3921d8744d3815592690f9167aedd3ead075ced9a4"
       malware             = "Gh0stRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Keroro Technology Co., Ltd."
@@ -21781,7 +21781,7 @@ rule MAL_Compromised_Cert_Gh0stRAT_Certum_76E2ACF0F2F39C06A0B34E4309A8EAF2 {
       hash                = "779272fd234deb25d4275715eb9e72e58492a149ed48c8ab1819b710864d29ed"
       malware             = "Gh0stRAT"
       malware_type        = "Remote access tool"
-      malware_notes       = "The malware appears to be a newer version of GhostRAT. Disguised as a fake invoice."
+      malware_notes       = ""
 
       signer              = "北京谷云达吉商贸有限公司"
       cert_issuer_short   = "Certum"
@@ -21815,7 +21815,7 @@ rule MAL_Compromised_Cert_Gh0stRAT_Certum_7ABFE16530E58B737042EE3B6BFB1801 {
 
       hash                = "e60b7e51420c59d34acd455907654dd2fdf9fc13d303f33e642b5da499fa7fb7"
       malware             = "Gh0stRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "烟台卡姆云信息科技有限公司"
@@ -21850,7 +21850,7 @@ rule MAL_Compromised_Cert_Gh0stRAT_GlobalSign_470CAD1AA6A9B8F934140B10 {
 
       hash                = "847f95f561958adb3475d70ba927c806e6e7a9f288e1e9bc90e84aad43d01ae1"
       malware             = "Gh0stRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "重庆昱泽科技有限公司"
@@ -21885,7 +21885,7 @@ rule MAL_Compromised_Cert_Gh0stRAT_GlobalSign_56AEB8269A0FE8ADF9D1BBD8 {
 
       hash                = "d8655cb920dff79d3fc2006247925cf66c198595ed3e496218a5b24c2bb1080f"
       malware             = "Gh0stRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "UCon Technology Co., Ltd."
@@ -21920,7 +21920,7 @@ rule MAL_Compromised_Cert_Gh0stRAT_Sectigo_00FEF386AC9C1D8636CB370C8C247F44FA {
 
       hash                = "8071c7b74e7ca2769f3746ec8cc007caee65474bb77808b7a84c84f877452605"
       malware             = "Gh0stRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "DAVINCI VISION LIMITED"
@@ -21955,7 +21955,7 @@ rule MAL_Compromised_Cert_Gh0stRAT_Sectigo_2F38DE4CED0B070973B9E9B9B1DCFA7F {
 
       hash                = "dfa35440cfd1f31f25414561d49989f7e92d87275f2451c0132fc8398ff8e4c9"
       malware             = "Gh0stRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Fahad Malik"
@@ -37005,7 +37005,7 @@ rule MAL_Compromised_Cert_PDFast_GlobalSign_08B4249EC5131AE0856893BB {
 
       hash                = "4f3a8d56a20474eb3962457689614d2360b99f6d034a60d207550abac99896a2"
       malware             = "PDFast"
-      malware_type        = "Unknown"
+      malware_type        = "Trojan"
       malware_notes       = ""
 
       signer              = "Called Sparkline LLC"
@@ -37040,7 +37040,7 @@ rule MAL_Compromised_Cert_PDFast_GlobalSign_36CC39AA22030F7FA71592F8 {
 
       hash                = "103c8764f8af476e8801c03a03969f388133b8586de93b13fcba52bf1772c8e5"
       malware             = "PDFast"
-      malware_type        = "Unknown"
+      malware_type        = "Trojan"
       malware_notes       = ""
 
       signer              = "SEELIV (SMC-PRIVATE) LIMITED"
@@ -37075,7 +37075,7 @@ rule MAL_Compromised_Cert_PDFast_GlobalSign_36CCA0554D1130A8455DE146 {
 
       hash                = "6ef80b596195ac002f072811bb2c73e6d45b8f914ada6d1e613ad9abe14bc09c"
       malware             = "PDFast"
-      malware_type        = "Unknown"
+      malware_type        = "Trojan"
       malware_notes       = ""
 
       signer              = "IBRAHIM MANNAN LLC"
@@ -37110,7 +37110,7 @@ rule MAL_Compromised_Cert_PDFast_GlobalSign_448B91A86A90F9E0E585A032 {
 
       hash                = "2ef67a07ced37631e6984f98a8ee249164a25da79358e0a0461ab50ac0b02f8f"
       malware             = "PDFast"
-      malware_type        = "Unknown"
+      malware_type        = "Trojan"
       malware_notes       = ""
 
       signer              = "HOTEL FATAZ (PRIVATE) LIMITED"
@@ -37145,7 +37145,7 @@ rule MAL_Compromised_Cert_PDFast_GlobalSign_6F967286B3DB0B954F9A84E7 {
 
       hash                = "efea4b2f5df566c507e96f11a8a74b00724015cac86e5d08b85f6c31d2284413"
       malware             = "PDFast"
-      malware_type        = "Unknown"
+      malware_type        = "Trojan"
       malware_notes       = ""
 
       signer              = "SHINE YOUR GUTS (SMC-PRIVATE) LIMITED"
@@ -37180,7 +37180,7 @@ rule MAL_Compromised_Cert_PDFast_GlobalSign_7492A1D8A6E9489CA1872F02 {
 
       hash                = "f87f43af104abbb84208b97877eaa5e34b657ab1c381c458bcb805801ff3cc03"
       malware             = "PDFast"
-      malware_type        = "Unknown"
+      malware_type        = "Trojan"
       malware_notes       = ""
 
       signer              = "THE-SHOP STOP LLC"
@@ -37215,7 +37215,7 @@ rule MAL_Compromised_Cert_PDFast_GlobalSign_7D3626E63E3516AB22116D1E {
 
       hash                = "a7f0794872bc5d0fedcf6161c7002e0d9fc7e23cd8d390e0327db7c010dd7a1a"
       malware             = "PDFast"
-      malware_type        = "Unknown"
+      malware_type        = "Trojan"
       malware_notes       = ""
 
       signer              = "AL STARE LLC"
@@ -43855,6 +43855,41 @@ rule MAL_Compromised_Cert_RUS_53_GlobalSign_10C33F009B54F66A849B4C90 {
       )
 }
 
+rule MAL_Compromised_Cert_RUS_53_GlobalSign_5201CD9AFB0D56EC78F86942 {
+   meta:
+      description         = "Detects RUS-53 with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-24"
+      version             = "1.0"
+
+      hash                = "df9fefadf7012452f597602f84a31f6e40637004260c1457f819ce1ceb89b7d2"
+      malware             = "RUS-53"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "厦门鑫美泰网络科技有限公司"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "52:01:cd:9a:fb:0d:56:ec:78:f8:69:42"
+      cert_thumbprint     = "6DB27770FBDC3F77439BBDCAE27E8646B545549C"
+      cert_valid_from     = "2026-04-24"
+      cert_valid_to       = "2027-04-25"
+
+      country             = "CN"
+      state               = "福建"
+      locality            = "厦门"
+      email               = "???"
+      rdn_serial_number   = "91350203093262877K"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "52:01:cd:9a:fb:0d:56:ec:78:f8:69:42"
+      )
+}
+
 rule MAL_Compromised_Cert_RUS_53_Sectigo_009545C5CE89F001DB71C519825BB6E464 {
    meta:
       description         = "Detects RUS-53 with compromised cert (Sectigo)"
@@ -49161,11 +49196,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000015BF49C00E94FDC31E
       cert_valid_from     = "2026-04-14"
       cert_valid_to       = "2026-04-17"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Hawaii"
+      locality            = "Wailuku"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -49231,11 +49266,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300005148694B37DCDA9E19
       cert_valid_from     = "2026-04-19"
       cert_valid_to       = "2026-04-22"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Tennessee"
+      locality            = "nashville"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -49266,11 +49301,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300005E046E3329FE185C47
       cert_valid_from     = "2026-04-20"
       cert_valid_to       = "2026-04-23"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Tennessee"
+      locality            = "nashville"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -49336,11 +49371,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300006AFD78815D7CD8EB85
       cert_valid_from     = "2026-04-22"
       cert_valid_to       = "2026-04-25"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Tennessee"
+      locality            = "nashville"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -49371,11 +49406,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300006C03E05B593A61954D
       cert_valid_from     = "2026-04-22"
       cert_valid_to       = "2026-04-25"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Hawaii"
+      locality            = "Wailuku"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -53175,7 +53210,7 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_0291C35AB6F0EC2F79C8F1CE5F37E776 {
 
       hash                = "8447b77cc4b708ed9f68d0d71dd79f5e66fe27fedd081dcc1339b6d35c387725"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "OOO Ruvents"
@@ -53210,7 +53245,7 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_092A8190ED1DEA673F505593BED137D4 {
 
       hash                = "bbfae2ab644c8d0f1ba82b01032b1962c43855cc6716193ce872ac16cda166df"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "SMARTYUNITI OOO"
@@ -53245,7 +53280,7 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_22B71B4E1DFFAF027DAD91DE93DD4E00 {
 
       hash                = "18aeff0a97dfd33b6f0664f43ecafd18511af559002072f680a4e5929a9c7e4f"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "APPS HORIZON"
@@ -53280,7 +53315,7 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_2782171DABF21DBB7C0A155C38BC1FFB {
 
       hash                = "5af99cfc85db7d386c951c76581433cf9bf82eafa775daef93d8bde38a5d6afc"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Bauder Ltd"
@@ -53315,7 +53350,7 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_36FF674EB305E99C35565FA301D5C4B0 {
 
       hash                = "8e06c31285911c936425921ccf9f20107160174acd602cc7f2dd8ca677e8956d"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "OOO Sistema"
@@ -53350,7 +53385,7 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_3CDBD09436B29CB127FCFB1823EE9A9A {
 
       hash                = "28b41fbae3fec855c2f4779dde8d4e990d3e5ceede80a89bcf420a59459d84b8"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "FORMICA Solution a.s."
@@ -53385,7 +53420,7 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_5A364C4957D93406F76321C2316F42F0 {
 
       hash                = "4e7f9e963408d0744d58a933d904996d43aa5f065fe12a6b9cbace6a527932a7"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Board Game Bucket Ltd"
@@ -53420,7 +53455,7 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_5EBFBF4B22271CE3E174938BBA664980 {
 
       hash                = "b10e90ffd7b0bec744d7de5d65e1c71a213aafae0c9fb897ce97c8496725af2b"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "A13 Software Ltd"
@@ -53455,7 +53490,7 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_61B237AEF2F478344BB2DFF63A6368A2 {
 
       hash                = "5da219f776810a42d8c8e26989f420ece92e87b6279e3bb39dc9627ad0b7f909"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Crowded Out Limited"
@@ -53490,7 +53525,7 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_69FDC58EC3C51276598AE539541FE236 {
 
       hash                = "336e2f4cd131ca8c6ebf87fe23ac876a119992e24b5f84d5bbf7b6fcf5c43a5d"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "DataIntegra s.r.o."
@@ -53525,7 +53560,7 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_6BE642576DDB9D7631CF2DFCE425CC9F {
 
       hash                = "2d3dcb25a63f0df5a3033bea79cffce04e748133c3f80722033eb8adccc6d13d"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Cloud Estates London Limited"
@@ -53560,7 +53595,7 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_6CE7A0C62F27FA98F78853E1AD11173F {
 
       hash                = "e531f0ecc9731fc8ffc22f8bc24d7ef1f09a3d8cff3f1369e0010ea173eb593a"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "D&K ENGINEERING"
@@ -53595,7 +53630,7 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_6E44FCEDD49F22F7A28CECC99104F61A {
 
       hash                = "373b8a34d4dc77de66e36f69cbf2cd2e232b78606092961bc59bfd6a70fbf565"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "M-Trans Maciej Caban"
@@ -53630,7 +53665,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_029331118B3CBFFD93410BCE02AC3211 
 
       hash                = "add7cdf9d10a61d354f6235cc5b8576208df03afc67df767687092b6cee66df7"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Lunar Industrial Software, Inc."
@@ -53665,7 +53700,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_03AD977571E5079C2AD3846D61CE6E54 
 
       hash                = "96512386ea92612cd3c09c377f6a62e1df7a940ce4e46ca5562d75a1017413c9"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Plus 5 XP Corporation"
@@ -53700,7 +53735,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_04926FF6AAC88D45447E23ADC38D34E5 
 
       hash                = "ab7489ecce8cbd41191d4e63e741d679d95bfb77b01a55285abf65f3337918f8"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Dynamic Digital Marketing Ltd."
@@ -53735,7 +53770,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_04C57B9205B4533656B302990A86D113 
 
       hash                = "9c699540819d96bfe614049cf31abc8b850bc3f74b19654a06db75fc0ac6db8f"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Tevora Business Solutions, Inc."
@@ -53770,7 +53805,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0524906F41BB30C9FEA7C91CECDF5BFA 
 
       hash                = "7c213efd427bc3a594a4d794cbb40b63ce8a3e3dc19312011cb7ddbf60811da1"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Snowi Tech Inc."
@@ -53805,7 +53840,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_055561A0C693BE9239850D8053149DF5 
 
       hash                = "057aa4a06395c384a2a9d29f499b410ac1da6fc2c10aa61908eea3e67a32b872"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "TOV \"SELT MOTO\""
@@ -53840,7 +53875,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_055C02563838CEA7452A07111BBA010D 
 
       hash                = "29014a3438c174c2e7377168adf62080e7566e1664c1b639e454a9ad961b5fde"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Verbtronic Digital Inc."
@@ -53875,7 +53910,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_05634456DBEDB3556CA8415E64815C5D 
 
       hash                = "1d4ab34baa9e5c2cc73ec2788ca8d849befe8c0ef5d8fdd5b7a4bed5de6ebaff"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Walden Intertech Inc."
@@ -53910,7 +53945,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_05BB162F6EFE852B7BD4712FD737A61E 
 
       hash                = "770658cdc73ef874c0f4daedb014daea71b5c179c1474ecd6d373d89ac45b48c"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Wellpro Impact Solutions Oy"
@@ -53945,7 +53980,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_061051FF2A8AFAB10347A6F1FF08ECB6 
 
       hash                = "1197067d50dd5dd5af12e715e2cc00c0ba1ff738173928bbcfbbad1ee0a52f21"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "TACHOPARTS SP Z O O"
@@ -53980,7 +54015,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0636769AA66BF4317A772F5FE23CE085 
 
       hash                = "f1974ba6905ffb380edf9bad7c799b31c4d3668fd80d87691ca885ee18d551dc"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "IDS-Software Limited"
@@ -54015,7 +54050,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_06487A92B1D912B79F2291C0D3820F2C 
 
       hash                = "a8b1ff391ff0937a12b63d34b6a8326bf5058e0a2ac9ae5306ed8d708f1e6e44"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Soto Manufacturing SRL"
@@ -54050,7 +54085,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_064893F1B9414DCA47F5B83A018D938D 
 
       hash                = "f61f2dc8346f3777b4210ecc84ec55a909666a38796124172317007041a17030"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Stratos Digital Limited"
@@ -54085,7 +54120,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_065C065ABC9FF9A3C719AD656ABEC485 
 
       hash                = "08e055a874ff5c2dcd27eb973b991fcbcd20d2ab6e3baa183f004f5f22c4f9e8"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "SijuThomas Consulting Inc."
@@ -54120,7 +54155,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_068D0AB0A8356C79919FE07391362873 
 
       hash                = "0404db80657a603605b3c0128269a1d7eea2b4e0a17b7a3f48ddc0640248f2c0"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Vespero s. r. o."
@@ -54155,7 +54190,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_06FA27A121CC82230C3013EE634B6C62 
 
       hash                = "2f7287a8b0c612801e77de6c2f37e22e0a67579f203a0aaf40095bf6ff70e6ee"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Zimmi Consulting Inc"
@@ -54190,7 +54225,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_075D421B06BDB8CF2E01A79D07F094F1 
 
       hash                = "92279e087fea81889e228bf4032ff3765ecfbb9231ffb8e8d63662e22300599b"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Stream Synergy Inc."
@@ -54225,7 +54260,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_08063F7043D2981C5A9A8E7769875262 
 
       hash                = "5e2d71794b574e880880b771fd2011f16a5eb1346b731caacdac0d80bfc0c0a1"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Hillcoe Software Inc."
@@ -54260,7 +54295,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0839DC3E884FD7B0F441F0A5378ACFC0 
 
       hash                = "b1620fbd2194bc09812c01134b7f60292cfbabd26f1360ecb04c1f66cb2dd4f5"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "SN Pelletier Consulting Inc."
@@ -54295,7 +54330,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0883DB137021B51F3A2A08A76A4BC066 
 
       hash                = "11543f09c416237d92090cebbefafdb2f03cec72a6f3fdedf8afe3c315181b5a"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Divertida Creative Limited"
@@ -54330,7 +54365,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0A54C60487D8384EDCE981814BE767CB 
 
       hash                = "0abe73a746671028db3ef2ba3ea8bea059888fc177d76a11e34cd1f075b24b69"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Decapolis Consulting Inc."
@@ -54365,7 +54400,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0B446CBB7D80181261507B59A57D35B8 
 
       hash                = "0c8d4cfd455bf5f799b4b4bf748eefc7cabe940363fe55dd71f881f7607c3bf3"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "MD Management SARL"
@@ -54400,7 +54435,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0BE38632E9FB3C60CD21B13DDAE65AAD 
 
       hash                = "9fcdb329122b918110be82e8040386798f1a0c28ad1d103bf06e5df6ec820aca"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Ameri Mode Inc."
@@ -54435,7 +54470,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0C6B875DE4F598244A6D6751ABFBDFBD 
 
       hash                = "f268491d2f7e9ab562a239ec56c4b38d669a7bd88181efb0bd89e450c68dd421"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Full Stack s. r. o."
@@ -54470,7 +54505,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0C761FB29DA396BDCCE9850E32EEB8D9 
 
       hash                = "6c59f4f268f1ce1d85cdf9169e81464bb950ec572ea1e3ab9cc4ff4a75589435"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Table Ronde 1155 Inc."
@@ -54505,7 +54540,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0D6D1BA122C0E6586352D55D246D07A0 
 
       hash                = "6d1a637ee2263dc7918b886a8a1878fb73a000510bc6f42e0c59669487c46e82"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "G & D Consulting, LLC."
@@ -54540,7 +54575,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0DD8B5184BF2BD3342498F8AFCF78FD9 
 
       hash                = "b3d5baeef9ba35109bd270f5ec27e15cf691217dd591b29ae83ebd07989af947"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Aero IT ApS"
@@ -54575,7 +54610,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0E6A6A2DF3B07B2438A0C96EF4413167 
 
       hash                = "e99896598b6c6df29735f4c0f08c99ff49275cba850c81c1249e865b6f4f8ba8"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Trinode Software Oy"
@@ -54610,7 +54645,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0E9D7A2348CE1EB34FF6D61A86244DEE 
 
       hash                = "2d72b1e256c6b483684ff9268be5318a7294490c7f05a07e025f54a4cadd2f2e"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "BizIncorp Online Limited"
@@ -54645,7 +54680,7 @@ rule MAL_Compromised_Cert_SolarMarker_Entrust_192776242ED08D537676143D67B5D23A {
 
       hash                = "5bccb6950b0aad0956ab9a0eb02e503fc613d4744b9f396fdbcb2fd965e69542"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Gurung Solutions Ltd"
@@ -54680,7 +54715,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_0CF35922B751266769123CB9 {
 
       hash                = "315d36da6305f267f36216733590babcbcb405c4fc88935d2f3a7bf610cf98fe"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "SMART AC VIET NAM TM & DV JOINT STOCK COMPANY"
@@ -54715,7 +54750,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_1139DBB02776FA0F0C0DF30B {
 
       hash                = "62cc290842868cf7de7c9e75c150ac58acc33e33cd26f12e4fa614408453c549"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ITM LLC"
@@ -54750,7 +54785,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_11B61750E45083AE450F8EC7 {
 
       hash                = "be1d635e6325a67ea4cbab84066e56e76a28c7c5ca26abdf466860cf11010e1f"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Jiazhou Education & Consulting Inc."
@@ -54785,7 +54820,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_16BA6FBAAF80A4239EB27A18 {
 
       hash                = "5abc14737cb65a1e645bd5a2e3301b0e3e1e861a184034a6cc67ce57ee38f448"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "SCHPITZE ApS"
@@ -54820,7 +54855,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_182010E6F30A0FDCC3F1BD44 {
 
       hash                = "59b1140b830a98ad213d6e92abd8329d3485cb530143c2ad7cff70362c4c181d"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "LAABAI LTD"
@@ -54855,7 +54890,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_1D36C4F439D651503589318F {
 
       hash                = "cce973b40f864284f2226213f1989c45861d89fd62eb0e311e880f5d017e23b2"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "REDWOOD MARKETING SOLUTIONS INC."
@@ -54890,7 +54925,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_20758F91D61AA738C7D8C03D {
 
       hash                = "e89360d7d77e6979d54dc567cee54ac6128b8ed9250bc3164c5e77c43cd8a647"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "RUBEZH LLC"
@@ -54925,7 +54960,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_34D1F82D6B7BAE4075CEEEB7 {
 
       hash                = "834c6ba26f460e98e9abad308eb261e2f23125d006573ec67b438d62eeabee60"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "JYL Business Solutions Inc."
@@ -54960,7 +54995,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_3FAC2FCD5CDFBDE7E9EF0C51 {
 
       hash                = "90a377b69113082ec2789371e02043277fbf8595a6f1f7cd1c6a70493381ab80"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "FASTIDIOUS ACCOUNTANTS LTD"
@@ -54995,7 +55030,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_52F5172C4B2C258F5E33B71C {
 
       hash                = "c6fda8a049ebd7872358acfa2505f226e931e0f71090c19412e7b6d0a1c6e129"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "CHILL ANAESTHESIA LTD."
@@ -55030,7 +55065,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_59BAF421EC167DA76C9ADE31 {
 
       hash                = "1160da03685be4abedafa4f03b02cdf3f3242bc1d6985187acf281f5c7e46168"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Repeat Business Ltd"
@@ -55065,7 +55100,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_65654FEAF83C48513D968826 {
 
       hash                = "3e99b59df79d1ab9ff7386e209d9135192661042bcdf44dde85ff4687ff57d01"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "PRIVATE SECURITY ORGANIZATION BARK LLC"
@@ -55100,7 +55135,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_6C4ED4D7E425DD681FA71F59 {
 
       hash                = "a13278be27e4b0c38d7102496f3d4fcfb31cf710389edee244a4c5dd40055c4f"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "MORYS LLC"
@@ -55135,7 +55170,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_0915E7AD8C2B57E11D65AFC9E497D252 {
 
       hash                = "b55b93ec2e7b962840adfacb4e6007c620f6e7fc9a1289825b44b1376a5cc081"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"Ветох\""
@@ -55170,7 +55205,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_0EF9DCEF244E302160FEB44B41E24F1F {
 
       hash                = "55da66e72382877954b3d050a9ca5e4daad614d5b0c788e61187184b7352e768"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "TRACK PROJECT SP Z O O"
@@ -55205,7 +55240,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_11BB96AF61D33B7097E13E0C41DCF747 {
 
       hash                = "48d7f595d98bbe45cf34f1ba7280a89c27e59de9b17fdfd8bc5d6d1cf817c321"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "D&J BROWN IDIOMAS LTDA"
@@ -55240,7 +55275,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_14ECD44C98C3DF27FCC699DC70E32C7A {
 
       hash                = "f799e7e81b66cf7d787abc864ed82c3dc5fd2aa95c9f3d24a39c79a3741d37c1"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Daxon Digital Services Inc"
@@ -55275,7 +55310,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_1550D13FAFBA5857AA657751CCFB6BEC {
 
       hash                = "4f349e005eb9cebef10044b3f4aa181ea75cf9c107fb0683931397b2ea06a86d"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "BAAAD KITTY LIMITED"
@@ -55310,7 +55345,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_157EF6D6D74883FE50765D9DA9E11C69 {
 
       hash                = "6c89c09213a79a917a97f4531b9ef01da8feee805d2d3b7de92a831dbec9a7e6"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"Тотоп\""
@@ -55345,7 +55380,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_19C82A677E106CC31FC9BA4B660CECFB {
 
       hash                = "c249477d921abc7aefb41f46c489c215f807a5d9a9aa68c426295304895eaf10"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Gajanan Consulting Ltd."
@@ -55380,7 +55415,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_1C633276C70754EEE95F71369090E72E {
 
       hash                = "250fe7be536bb8674dd7e0e7c4de2ca1e3311ed657181d950dda6590a3bded51"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"Айтипути\""
@@ -55415,7 +55450,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_1F53605ED1F00A604E5FEB198FE3C4CC {
 
       hash                = "8f536b3f85b999cf0a899de83523c8fea56647e6be6880fbbc7856e1cb802902"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "AAA AUTO SERVICES LIMITED"
@@ -55450,7 +55485,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_2151496E74F30C019E232B48369F3F1D {
 
       hash                = "4cb0a000097880a2e0a945005f4acba541df8d2ffd7a34afcbd88e404dcbba71"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"ЛефІ\""
@@ -55485,7 +55520,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_2352CE593F487633E8C7C819FABF9C74 {
 
       hash                = "e38b838995dfe3df7419264d3a02877fe8239e691b2bcd18b843afe8c7f9961e"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"ТОРГОВИЙ ДІМ КБ СТІЛ\""
@@ -55520,7 +55555,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_235A083100CDC9C67691B31B1E958A0E {
 
       hash                = "a2ebd484b939b5c5bd273de83e56e46b56d250e144b6d467e89d1df4a26c4ee8"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Databytes Software Ltd"
@@ -55555,7 +55590,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_27987C7E3C455F499B18AFD03B3CBBDF {
 
       hash                = "ce8c2fc7e49bc791f10b5022a0d353debb620d11b4f7add4c2215771250b34eb"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"Блу Сейл Комодіті\""
@@ -55590,7 +55625,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_295C8F66D4D6F2FE513D4800A88A00D2 {
 
       hash                = "b68a65e9f8cb6aff77c8d1973e60063de53ca052ee6c98919c96decf5ef705a8"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"Трейдинг Комфорт\""
@@ -55625,7 +55660,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_29B93DF5BD68A809F5C81D223A03C8EF {
 
       hash                = "32e0c3db78cdeaa026b8b9ed9c3e4f599eb5d9cb4184aaacae8ec94a0c1be438"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"Чеб\""
@@ -55660,7 +55695,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_2A17239F25F18AA969D76DEC4722598D {
 
       hash                = "a24bc1178a53b6afb67d802a2adb2ab48a9f203e9c6da756323a3178b0b6d02c"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"Гемінг сапорт\""
@@ -55695,7 +55730,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_2A57BA9291CC7575CB304870EACDF208 {
 
       hash                = "f88a27309d2915e04cd8ccac850db250f214ade9ce0fe38029f0214283ebb5c4"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"локкерс\""
@@ -55730,7 +55765,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_2C18DB497B7FB347A85769E628C4DD00 {
 
       hash                = "a75819503eadb1816eee8884801d11ea7e8d1257ead704bca2aea42afe5edada"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"Дефи\""
@@ -55765,7 +55800,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_4313DE25D720C619AE59B4A612947FE2 {
 
       hash                = "0dc32f351d59be068455286148d1c654287e5538e5429d12a014b0a6f9970efd"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "SPECIALIST TECHNICIANS LIMITED"
@@ -55800,7 +55835,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_4331B82FB98E900AAFE89579EF607E6E {
 
       hash                = "bd6d8c48c1faad08dc110393275243acb0f5c7c8884d8c6663d2538cced4ad8e"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Bau Yannis GmbH"
@@ -55835,7 +55870,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_43D0D946C75986936AE17F987E429BC0 {
 
       hash                = "dd2e32461bc4ee417a49566db06f29cf84aef11577c9648f4b3f62ac0edf354e"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"Гого\""
@@ -55870,7 +55905,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_45948EF79A0B586E27414708C0BDDD2A {
 
       hash                = "817debed45f7f3e0e95da4df3476b58ba0dc3ff7552473c66abd94646fddc962"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "R J DATSON LIMITED"
@@ -55905,7 +55940,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_46C453AF07ED90364AEF8EB7EA959CFA {
 
       hash                = "4788925332fc6128c895b0e0736a1d7d90e3891f2abb456523cbf0c1ced7d1e2"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Heart Craft Brewery s. r. o."
@@ -55940,7 +55975,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_4949E243E0DFC150577BFEB9D722C185 {
 
       hash                = "a0114420ff98f4f09df676527add4ccaaf4326b4bd0c87b153d1ea71adf50022"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "LAABAI LTD"
@@ -55975,7 +56010,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_4A8EDE8C9A2A4D6E4E715914F57625FE {
 
       hash                = "9d215743885b4f6d937deb0975c1b4b7a771d2d1c67a958b18f28383756bafc2"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"Ред Драгон Девелоп\""
@@ -56010,7 +56045,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_50940364ABB9A9A36B3D76920AE4BA99 {
 
       hash                = "a82a9e1f6667350808a19219d586d10bcea85cf73b67024d8c58366981fe4993"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Game Warriors Limited"
@@ -56045,7 +56080,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_582754520B29E5E364C2EA504C4E33FF {
 
       hash                = "a31d955304360eade30679137269659a9c7b1e53aecb2eb7e616a4ad0f91c655"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"Гейм Трейд\""
@@ -56080,7 +56115,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_58367738B9503A2AA9CFC771B3C19E11 {
 
       hash                = "fbef401c6a7ad24640f6b6583aa0d0fa02aa895c47ab08e68b0e6e312d1b42a5"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "SLIM DOG SP Z O O"
@@ -56115,7 +56150,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_5A472CA5C4DDFFA6493FAFDCF135F4B0 {
 
       hash                = "2db7438e5b4298ce068006ef96f729fd0bb4863e856425215ad9e77f807562e0"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "HOLDING MEDICAL GROUP KATOWICE SP Z O O"
@@ -56150,7 +56185,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_5A76082854191C938CCF735EDD4CF55A {
 
       hash                = "af1f2b516ede83cf2699ba54113ce7a7d81d17040588746a19a1fa2ea41175d6"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Softindex Limited"
@@ -56185,7 +56220,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_5BA900D7A761EE27C27998C8B9B4FA70 {
 
       hash                = "394fa8af1348cbcf3d9beae6dc8b6afb24c6b96bcc3be52601a5b84f9adf007c"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "OOO LEVELAP"
@@ -56220,7 +56255,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_610D58E503B2328D6CB6DF7BA7606F98 {
 
       hash                = "21646416f656f7b4da74214f2a33bc19733bdd30525381ceb66bb87a6ceb32d6"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "BELLANN BOARD & PACKAGING CO.LIMITED"
@@ -56255,7 +56290,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_6ADA64000BBAF0497538A2BF1938F2BA {
 
       hash                = "9dc4e8a0d45b04b1b4bc2df2a16aa37e5597624feed3b53a9c5ca2929a2fb6c3"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"Оноп\""
@@ -56290,7 +56325,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_6CDA1A0D2917A790C24B0F3FBDD9F7EB {
 
       hash                = "d4debb62f43fb37f8ad0968499d2d48d3cfad20f4ed20d8b3fe9e4759fd95d68"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Austin Software Company LLC"
@@ -56325,7 +56360,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_6FE721C3DDBD2774D03DCEA44A26A78A {
 
       hash                = "1e7914f799371cbc8560bc52203d3531bb20cb4f6092158c76a4842dbf85dabc"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "OOO ENDI"
@@ -56360,7 +56395,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_71B5F261CB3D4563B9C7119FF093C098 {
 
       hash                = "1252f2bf3817714a8303f7e448930d6d4f797a70ec7effc80f2b1db5e49b9077"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Optimus"
@@ -56395,7 +56430,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_74FFF77F8BEB817FD3826F6EFF8F0C7A {
 
       hash                = "777cb8aae1e77e841b4981965198f62e60e55a4f910120980dc5ad997ab71fb5"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"РЕОВГУЦ\""
@@ -56430,7 +56465,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_77AE3B91E2B86DE3D5929B8AEC1C83DC {
 
       hash                = "820eda2078723e7f1c09d0e6d3641ea822c2b36c981cb5bfa4e445733664c087"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"Софт Енжін юа\""
@@ -56465,7 +56500,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_7A885053853B73FAC66797D4DA68E94E {
 
       hash                = "65569db0dceb1c06be2a2cccedfef1447d14ec6d6f3d5ce28c4997c45c4991a8"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "TOV RT RUNA"
@@ -56500,7 +56535,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_7C8A13BFC595B0DCE94BD5A1B390BA99 {
 
       hash                = "39102fb7bb6a74a9c8cb6d46419f9015b381199ea8524c1376672b30fffd69d2"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"Трафік Девелоп ЮА\""
@@ -56535,7 +56570,7 @@ rule MAL_Compromised_Cert_SolarMarker_Sectigo_00B66CF27F736D8CE85BEB1EBF0CA7DEE3
 
       hash                = "278ec8f7a0cd969ebb84e72f60f19bb6f6fd6f7268ebe68245c46e6de2a43cf1"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "九江绿洲环境技术有限公司"
@@ -56570,7 +56605,7 @@ rule MAL_Compromised_Cert_SolarMarker_Sectigo_2D88C0AF1FE2609961C171213C03BD23 {
 
       hash                = "42788ef63efc2e74f7695cc618706e9f149a713b3241458503bf81290d8163ac"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Zhuzhou Lizhong Precision Manufacturing Technology Co., Ltd."
@@ -56605,7 +56640,7 @@ rule MAL_Compromised_Cert_SolarMarker_Sectigo_3821DCACA66A5C5176B921B4D9ED4C97 {
 
       hash                = "7853518d97bf86211ce0193fcdc8e484615204e97d417386651aa6bbfe686eea"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "BUL D'EVASION"
@@ -56640,7 +56675,7 @@ rule MAL_Compromised_Cert_SolarMarker_Sectigo_5DD4A4D405BE799614F437693B0F2929 {
 
       hash                = "13a1bead1187cbc6072c410501a417b812e82f1bbbf6a93deaab26ae5ea67628"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Changzhou Daqian Freighting Service Co., Ltd."
@@ -56675,7 +56710,7 @@ rule MAL_Compromised_Cert_SolarMarker_Sectigo_7E68FA2E528364E694D06200A418EF68 {
 
       hash                = "5ef62c7d66c9f9470658e647afd257cbc087056ec07b4eafd7879682701cd05a"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "C.T.M. d.o.o."
@@ -73405,7 +73440,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_0582253D22D291481B75770C1556C56F {
 
       hash                = "4ceb4a501721f0277072a14220ff435eecedee9930b150adf11057603cf08842"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Open Source Developer, Hao Chen"
@@ -73440,7 +73475,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_05E39C93D531D6E0DDDCC6774C003F3C {
 
       hash                = "46149a4e6bd7f01e816ff0e98d10e2248f6560b8dc075a2bd00a48d7095c51d5"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "湖南蒂角企业管理服务有限公司"
@@ -73475,7 +73510,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_097B634740A6CF3A61F0AA5A62E940A6 {
 
       hash                = "731a144baa1d2bd6b316a3b4408fe280a15d39c6998374169e5cec803ff0729a"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "武汉市领曼盾数字科技有限公司"
@@ -73510,7 +73545,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_12248CFBA203C55278C33B413A81FFB3 {
 
       hash                = "fce7f7ad1d7b17e7106639ca23cc49d2cf642bcea024d8ba838f3f559c99e34c"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Open Source Developer, Yu Zeng"
@@ -73580,7 +73615,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_1C8307F5D992FECE41129D7C5153A17F {
 
       hash                = "9c1a85f711fb500d70760d40e9e57854555dfc225fae68bb035f4a0167324e29"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "陕西斯慧嘉网络科技有限公司"
@@ -73615,7 +73650,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_4C4C225E13B1CBEA59C3A9B50AE2B94D {
 
       hash                = "1107160996aad02e3d44572030599713712db1e7538a346d5bd885f1ff88fdaa"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "合肥高好频商贸有限公司"
@@ -73650,7 +73685,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_4C4C9F16877C6C8508A12BDD7C94607D {
 
       hash                = "43130df9d6c99e0d01470a57e0a21215a9afbb1c9b191e1b86fcb046316de6d1"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Xiangyang Dianjue Trading Store (Sole Proprietorship)"
@@ -73685,7 +73720,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_4DDD9F79FFA78EB06C8C638334836ACF {
 
       hash                = "bcbb74f7b54f471f5d98ef24ae9b472f2cbe3efe04d6c6ff1088c63ddce290cf"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "成都金源启铭网络有限公司"
@@ -73756,7 +73791,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_52AF7661636C0C9BEF328C7F13A32230 {
       hash                = "84363809a16939c41a6766373a033c9ddb257c719b9ca59abe79e68dcfe80ae6"
       malware             = "ValleyRAT"
       malware_type        = "Remote access tool"
-      malware_notes       = "This same signer name was used to sign ZhongStealer. More about ValleyRAT can be learned here: https://research.checkpoint.com/2025/cracking-valleyrat-from-builder-secrets-to-kernel-rootkits/"
+      malware_notes       = ""
 
       signer              = "RichQuest Network Technology Ltd."
       cert_issuer_short   = "Certum"
@@ -73825,7 +73860,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_5E0016A3D3E00463E5BF0753D80CDED2 {
 
       hash                = "232d2526c54d5e0795bc7bd077362de5f18d9089d4ae25d6e9a709f2f3ef940a"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Gucheng County Qizhishang Trading Co., Ltd."
@@ -73860,7 +73895,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_5EAC92D72A8D601A4E4833703F78001D {
 
       hash                = "65537499abd5e2915a79d1df00fcf6adb9d17628f9cb5ae26d8b45303333c523"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "成都航迈源动科技有限公司"
@@ -73930,7 +73965,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_7365D3835BB5D34BD1A3F9EE0B8E728C {
 
       hash                = "877dadf7ce4684878ea086cbd4c111d5dfb87c2659366f6df5079047fbea13db"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Yangzhou Bai'ao Information Technology Co., Ltd."
@@ -73965,8 +74000,8 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_7368E399E2ED75794AFA87CB933DF778 {
 
       hash                = "930fd881cec8867db13d789dd138441cdf2df2a05df8804baa93c267b5934940"
       malware             = "ValleyRAT"
-      malware_type        = "Remote access trojan"
-      malware_notes       = "See this recent blogpost to learn about ValleyRAT: https://research.checkpoint.com/2025/cracking-valleyrat-from-builder-secrets-to-kernel-rootkits/. This was identified as ValleyRAT by multiple sandboxes."
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "泉州浩英科技有限公司"
       cert_issuer_short   = "Certum"
@@ -74000,7 +74035,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_7491B67258319908F62F222370446CD5 {
 
       hash                = "d8ec7795909f69b8e4945c38bd362d321f3041a71d2d6cd98d146f6bd47a1e0c"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Zhijiang Tangqin Technology Co., Ltd."
@@ -74035,7 +74070,7 @@ rule MAL_Compromised_Cert_ValleyRAT_DigiCert_0B88E4D595E84A1C9D96733EF7DE5546 {
 
       hash                = "37d27fc9336fd3f8cfe7aa2250f00e4e61320aef8a39542c8eb79a853150e692"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "DONGQI TRADE LIMITED"
@@ -74070,7 +74105,7 @@ rule MAL_Compromised_Cert_ValleyRAT_DigiCert_0D62A5672BBBCE5A3B7441F3A33426B3 {
 
       hash                = "3f78ec4bd0a0ccff1c5e0fda4f47531abb343a9835682c40f538bebab5b770e8"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "咸宁创翼互联网科技有限公司"
@@ -74140,7 +74175,7 @@ rule MAL_Compromised_Cert_ValleyRAT_DigiCert_0F4B2115767EFD289B85292362B118AE {
 
       hash                = "123baf5762064dac90572c7d7815f47ad4dc930b0ee2f14939cac54378cb25d9"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "咸宁创翼互联网科技有限公司"
@@ -74175,7 +74210,7 @@ rule MAL_Compromised_Cert_ValleyRAT_GlobalSign_05B4BC293E3AC7D14DAEBF6E {
 
       hash                = "2b2363d3759ef8b676f398fc413c56a1058b8bc9c5633f24c55538e5ba501afb"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Nanjing Yueyue Kunkun Technology Co., Ltd."
@@ -74210,7 +74245,7 @@ rule MAL_Compromised_Cert_ValleyRAT_GlobalSign_0CBAF79465EBF8404FBF0EAA {
 
       hash                = "7ffd77507493be9e2370139ae1116a8175ca7358378e121d6cb2ccdc27fe6912"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Xi'an Vanci Electronic Technology Co., Ltd."
@@ -74281,7 +74316,7 @@ rule MAL_Compromised_Cert_ValleyRAT_GlobalSign_54920428011B1572DC58F84D {
       hash                = "1c46675149b0f4d926783c855e860b20548568849cdec941a62abb72534d1e68"
       malware             = "ValleyRAT"
       malware_type        = "Remote access tool"
-      malware_notes       = "This version was disguised as a flash player installer. Read more about ValleyRAT here: https://research.checkpoint.com/2025/cracking-valleyrat-from-builder-secrets-to-kernel-rootkits/"
+      malware_notes       = ""
 
       signer              = "哈尔滨瑚板颂电子科技有限公司"
       cert_issuer_short   = "GlobalSign"
@@ -74315,7 +74350,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Sectigo_009CF337C12EFC4445ECAFCB35D02D64BE {
 
       hash                = "124e8f7ca958fd8cb2a3baf91681513f93f73d9cfa4efea6f4a1f165d8cbc8d9"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Weihai Mingjun Information Technology Co., Ltd."
@@ -74350,7 +74385,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Sectigo_00ADC445B14C3C850CC30C6C0007EA9920 {
 
       hash                = "1a0fcd81af6b14b367f1ac93aa7a7b650450405f7652a17e667604e681d457b0"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Acoustica, Inc"
@@ -74385,7 +74420,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Sectigo_00B73548A6B5D65D00DFE76D49555D4DD1 {
 
       hash                = "7e9078fd8654028df65a47ccba18f25fd3bdfb1b7716495e063b95b9ff1fd06e"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Yiwu Liangheng Technology Co., Ltd."
@@ -74420,7 +74455,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Verokey_0CBA02A32BEAB6BFAC34A7511A8B0E22 {
 
       hash                = "8b83e7a8abe5779edde1bf8b753cb1aec232d31c1c25e4df69510cf36110bdfe"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "山西荣升源科贸有限公司"
@@ -77255,8 +77290,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Certum_30F927F04880D925FB28775A412E8C13 
 
       hash                = "b2ef6a86983e15d0f70e5941b79d03419d4c7bcd4b1c58223f6b8334ed800deb"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "Loads payloads from AWS S3 bucket. downloads 503 JPG from bucket as decoy: https://tria.ge/251129-r55s4szpem/behavioral1"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Shanghai Baiyang Information Technology Development Co., Ltd."
       cert_issuer_short   = "Certum"
@@ -77290,8 +77325,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Certum_418A597765E84F03F07933EFA3CC39D4 
 
       hash                = "14d374ea0604f70e6f39306efd948e7962fdd21cdb3e187ba461312027ebd3f5"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Taiyuan Chenyun Trading Co., Ltd."
       cert_issuer_short   = "Certum"
@@ -77325,8 +77360,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Certum_4380B3CDE17D335114FF3E21D2A50637 
 
       hash                = "a1a114fd875bd6f96d2ceeac2b98596c0ac56d727e4bb970becb2466cec40086"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware is distributed disguised as screenshots or photos. The malware downloads secondary stages from legitimate CDN."
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Taiyuan Feizhe Trading Co., Ltd."
       cert_issuer_short   = "Certum"
@@ -77360,8 +77395,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Certum_44E16F602A8BBC60E52ADFFBDA35ED09 
 
       hash                = "af982b9e203d5023b61f0a3758b1b1c1295ffa157d189a9eec3499f508d0e71d"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Wuhan Liansitong Technology Co., Ltd."
       cert_issuer_short   = "Certum"
@@ -77395,7 +77430,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Certum_5AE3A3B23CFA63ADFCED9BA9EF9A263C 
 
       hash                = "179b8af13000463b87f74c99828671f0069126fc4cf65d862c223e67991ff75b"
       malware             = "Zhong Stealer"
-      malware_type        = "Stealer"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Jinhua Suyu Intelligent Technology Co., Ltd."
@@ -77430,7 +77465,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Certum_5BE7B13F587B8850573257DF55E5E39E 
 
       hash                = "873ea83b3507d8391b1b66f0f3d57cefff4307463b018eec09abbff601c83d30"
       malware             = "Zhong Stealer"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Shandong Saibo Information Technology Co., Ltd."
@@ -77465,8 +77500,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Certum_5CCC14BFA5980319E17B16F0360684FF 
 
       hash                = "f0373871da028119a2726637859014eb63d2c7770924fe17b47199a6e6255aa6"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Changdu Wopu Technology Co., Ltd."
       cert_issuer_short   = "Certum"
@@ -77500,7 +77535,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_01AF6469365C81AD7222E60FB131706
 
       hash                = "00ed464e867fdc31ac4eb4e18757fe4b79b2f79ff63cc469cfcfeb205df20af0"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "深圳市优品投资顾问有限公司"
@@ -77535,7 +77570,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_02ED93FDB6CFB33A477E218531F3292
 
       hash                = "56541af54c5b4ad7de32560f780f0e606e5bf67170ad3bc241c9e2d75ea3f760"
       malware             = "Zhong Stealer"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "MobSoft Co., Ltd"
@@ -77605,7 +77640,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_049209454DB22190C7697285C3D5AD9
 
       hash                = "c918dded298b0d76d4ac51f23b391f62a95f58b3fa2488202ecbbc9c7ce8e785"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "DigiFors GmbH"
@@ -77640,8 +77675,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0497D45997C350D2867A7764017C3F3
 
       hash                = "d62dfb0d94b292d6fbedbe98757e796f886c32e8d29d347b7b0cee06e863fccb"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Eugene Investment & Securities Co.,Ltd"
       cert_issuer_short   = "DigiCert"
@@ -77675,7 +77710,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_06500EE65FFBFB6EA4F4B16AB6F910C
 
       hash                = "5e841260983954da60716b99306a410898bca4d30c14626553205753f60a6d2f"
       malware             = "Zhong Stealer"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "INNOVATIVE CONNECTING PTE. LIMITED"
@@ -77710,7 +77745,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0654CDA3DEFAF29DC152EF189C11E33
 
       hash                = "02f95352c8d55f41f53339283ffed6f1cf548b2c5040aa9d1e37bafcd9fa55b4"
       malware             = "Zhong Stealer"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Shuttle Inc."
@@ -77745,7 +77780,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_09186DCA3667374ADBD63A2F4FD9636
 
       hash                = "8509af4802dd79fc503c425c9dda035d9b636f22ffac81a8f04e6a9d080fdcc3"
       malware             = "Zhong Stealer"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "BlockCerts Blockchain Canada, Inc."
@@ -77780,7 +77815,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0A04CAF1BB3BC17A33C6E155EC4F588
 
       hash                = "945d0516c078c0255dfb8476056580daee0309bf6cc4bb1542671686e42d85ff"
       malware             = "Zhong Stealer"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Keroro Software LLC"
@@ -77815,7 +77850,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0AE04FFA7B23CC3F7395B25F4125515
 
       hash                = "c08a59750b5a72761d457e7b9875aa251f71c64d0c6bf7e391bb5c5f35cefc3c"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Luxvisions Innovation Technology Corp. Limited"
@@ -77850,7 +77885,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0AF316CB4E5D9BAF35B35E85677B17E
 
       hash                = "f76c31ecdafb59279833f17f350d9c2b1317da269823097e8dd1736c72449c88"
       malware             = "Zhong Stealer"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "PALIT MICROSYSTEMS LTD. TAIWAN BRANCH (BELIZE)"
@@ -77885,7 +77920,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0CAE428F1BDCBEBAF284EEE9A643B1D
 
       hash                = "9ae8388b6bc4043a49573a617927cabbd61c254014e0ceb4223cf50431841b2c"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Brunner Informatik AG"
@@ -77920,7 +77955,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0D2AD57B10B7472BAE03D3DEFF05F54
 
       hash                = "93d458ce6ebc98b2884e4a76c026d731a9f793cfcc6d514d4952ad6bf28fe8ac"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "LENOVO (UNITED STATES) INC."
@@ -77955,7 +77990,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0E53B99068FF7BF9C1BBBB025ECEDB5
 
       hash                = "4ba01f317dd469c6ce5fb5333828ea5faf6761c263431ebcd0a5c17c06b00868"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "SoftStory G.Zielinski, K.Jez s.c."
@@ -77990,8 +78025,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_07CD057EFB53D6F2C5C839FC {
 
       hash                = "7a2adf0acbc37d870138bb65551e258a3d1bd4ab6bf50df0a7c66d770cc0f787"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Klimine Far Year Electronic Commerce Co., Ltd."
       cert_issuer_short   = "GlobalSign"
@@ -78025,8 +78060,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_172C26AE164BCD6BEFEC180E {
 
       hash                = "3a338725967f6bb7fc3d5245bc40371742f46caae99f0db23e52f81c748091ab"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Shenzhen Xiangyou Network Technology Co., Ltd."
       cert_issuer_short   = "GlobalSign"
@@ -78060,8 +78095,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_29494FD2ACB61616AAEAA470 {
 
       hash                = "d19ca1798eaa49f3a803294d240c7bcf121b8c1f0f261aa7d7a30011fafb2385"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Taiyuan Jiedong Trading Co., Ltd."
       cert_issuer_short   = "GlobalSign"
@@ -78095,8 +78130,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_2F93FA58F00445EEDC313273 {
 
       hash                = "16e01dd4c60462c0a870bf55ec987514e122f27b306858e73f71a8ca4b896423"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Chengdu Nuoxin Times Technology Co., Ltd."
       cert_issuer_short   = "GlobalSign"
@@ -78165,8 +78200,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_424E89A44FF616A6183251F7 {
 
       hash                = "1f0f5173c6aae129e6cd5994da53b510497be2ba7f2ebf50fb0cb298314b0c8a"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "PrimeSnap Technologies Network Company"
       cert_issuer_short   = "GlobalSign"
@@ -78200,8 +78235,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_5076171603477D5BD6AEB984 {
 
       hash                = "33a942276ace165ccbc9db4966b18d0a767e2e78f4a09d2bf0845bcd2c8a356c"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "GZ.PurestJone Network Technology Co., Ltd."
       cert_issuer_short   = "GlobalSign"
@@ -78235,8 +78270,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_623D84F3FD52F1A872E1BF83 {
 
       hash                = "ee4589553dadaae174dce6ce9b62804186717f24e9d01c8a41ed8643cc8024e9"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Shanghai Linyao Network Technology Co., Ltd."
       cert_issuer_short   = "GlobalSign"
@@ -78270,8 +78305,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_648B06C27B37237B6D204BB5 {
 
       hash                = "97a2d5e70f82ba56cdc8e7180c63d1fcd165704389e7362ed142f968c5b1ccaa"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Hoozoou Leeser Smart Technology Co., Ltd."
       cert_issuer_short   = "GlobalSign"
@@ -78305,8 +78340,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_74B936AB655DB6CA62761A5C {
 
       hash                = "4de8a71b4e5e37f040532aaf31908311910f449c1a64db9141a485960bbae534"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "合肥亲爱的译官信息科技有限公司"
       cert_issuer_short   = "GlobalSign"
@@ -78340,8 +78375,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_7EAD677A7DD7F660379D116A {
 
       hash                = "d58859ddc52f98e48d32f47b000970ad03e807b8eeb3a1aae7d4af2721b43ecf"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Hena Luxion Network Technology Co., Ltd."
       cert_issuer_short   = "GlobalSign"
@@ -78375,7 +78410,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_GoGetSSL_0B416CA38FFA8579C017C0311CCD8D8
 
       hash                = "99b7658dc52cedff3403e0df0b392828baa3344571593115b2349579c2b840ca"
       malware             = "Zhong Stealer"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Heyi Siwei Software Development Studio"
@@ -78585,8 +78620,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_008B3F8F725F80DECBDB4920ADA8817F
 
       hash                = "f9ebdee82173f0cd71a90d189d89947952e23756651da241d675328616a35ea2"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "BLOOMTECHNOLOGY.INC"
       cert_issuer_short   = "Sectigo"
@@ -78620,8 +78655,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_008CA703D6A6A9FDFCD920C62316723E
 
       hash                = "1d2f9b6680d3df883dceac3eb5dd35c13a9862ef0ba6f40603df5a1e54408c6e"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "Malware is frequently disguised as a image or screenshot. Pulls second stages from legitimate CDN."
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Luanchuan County Qiangsheng Information Engineering Co., Ltd."
       cert_issuer_short   = "Sectigo"
@@ -78655,8 +78690,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_0098280C64F0D7F06696998673AC08F8
 
       hash                = "cb7793147566cb0cbd2d60918e4825389c549d8a9b89cec611c12ecb028593f5"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This is a malware we track as Zhong Stealer; it is frequently delivered disguised as a image or a screenshot; it then pulls its second stage off of legitimate CDN."
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Jieyang Santian E-commerce Technology Co., Ltd."
       cert_issuer_short   = "Sectigo"
@@ -78760,7 +78795,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00C30AE522FF59DD703FF3F27A2A9BCC
 
       hash                = "3f049dd0ef4d209cce7ac081c093d51bcf2c5c3e515d8c124c63b31c8310e1d2"
       malware             = "Zhong Stealer"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Xiamen Yaolun Network Technology Co., Ltd."
@@ -78795,8 +78830,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00C86D943E4E146E5FDF9694F06DA41F
 
       hash                = "a04f1e64fd7e2ef6decbfd2e26ad2a3066862fbe039a3bbed5cc9b6eacd4edf9"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Harman International Industries, Incorporated"
       cert_issuer_short   = "Sectigo"
@@ -78830,8 +78865,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00E3CFD617A941C74853AC65890BB6C4
 
       hash                = "4cf973d3c8985c32572680203bc01121cf18342f75c139ec0fb202900809917c"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "The malware file is named similar to a screenshot or image, pulls second stage contents off of legitimate CDN."
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "RichQuest Network Technology Ltd."
       cert_issuer_short   = "Sectigo"
@@ -78865,8 +78900,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00EE3A88EF4AB47D8617E4EDC56736C7
 
       hash                = "441ef8aa13409660cedb9a557619f60cbf90c3f0d28f7191b8385a6d147acf46"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "邢台鸭梨智能科技有限公司"
       cert_issuer_short   = "Sectigo"
@@ -79040,8 +79075,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_191E24F6C98E31D04F876A2E26E0CC71
 
       hash                = "1a80f721ab125b88e5baf77dd2bf01be92ff5299665356621b21306a71c86672"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Meizhou Fisherman Network Technology Co., Ltd."
       cert_issuer_short   = "Sectigo"
@@ -79110,8 +79145,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_22705DBF157ED535146911BAADB3B64A
 
       hash                = "a508358a0786ddf2ad9496bb9374d54e71c5044df9c10fe686d43fc70484e54c"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "The malware was downloaded via storage[.]googleapis[.]com/hongkongwork1/ and is disguised as a  image using the filename photo202512176896m.pif, but is an executable."
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Weihai Mingjun Information Technology Co., Ltd."
       cert_issuer_short   = "Sectigo"
@@ -79215,8 +79250,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_34E947F11A0DA31561875BFC5FBCC5AB
 
       hash                = "06663c82d1e6df0eff9712b4250e4a189a076e2592feae7753485c1dd97c6bf6"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "海口市勤莱佳科技有限公司"
       cert_issuer_short   = "Sectigo"
@@ -79250,7 +79285,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_38BF78674DA7DED94863D622BA150FDB
 
       hash                = "7c995c884d4e3b0d38157c510bcc37cd7a8ca35ae24eb1ea0c7e52d76b8a7dca"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Xiamen Dahonghuo Technology Co., Ltd."
@@ -79320,8 +79355,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_4A5F625C9BACBAE47C16B016D58EF875
 
       hash                = "962615e17eca365d80c31dd02f2a6c757c073cb24d31d60a1c7818284bd6ca00"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "Malware masquerades as a screenshot, pulls additional stages from legitimate CDN."
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Henan Jiyanzhong Information Technology Co., Ltd."
       cert_issuer_short   = "Sectigo"
@@ -79355,8 +79390,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_4C3EDBD0B6450CB8BF2B506032A5B7B2
 
       hash                = "1718b2f1372dbbe9df071205fe749bcefe8857af7e376c812168f2590e1dcb27"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware often hosts secondary payloads on CDNs. This signer name is \"Kingston Technology Company, Inc\"; but was confirmed not to be a legitimate certificate used by Kingston."
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Kingston Technology Company, Inc"
       cert_issuer_short   = "Sectigo"
@@ -79390,8 +79425,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_4FA68807EFBBD22B25622E60F2EF3041
 
       hash                = "be5d6c4aa4b27548a06c2afaef3b4035abf65566e9a8bfd642b4a2032729656e"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "运城市盐湖区风颜商贸有限公司"
       cert_issuer_short   = "Sectigo"
@@ -79425,8 +79460,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_6559999436BD29785FBF07D0F472E994
 
       hash                = "1052924f914229325270e7cc862ab1ef6fcc73da22dd9afff222f7168b3f8343"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "RichQuest Network Technology Ltd."
       cert_issuer_short   = "Sectigo"
@@ -79460,7 +79495,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_66220DA9448F87F52007149619EA4B37
 
       hash                = "4d8c02745ed4c2bcd9bdb425d5763ebd1e6da459c1877fe9d0005e477622aa6a"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Xiamen Xianghe Information Technology Co., Ltd."
@@ -79495,8 +79530,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_67E44E108CF60C941B913A00A7F5C290
 
       hash                = "778f20d1c46f2427238c3e8c38fb3825fd3af80a022d03aa56be0dca2a1a593a"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Gemini Technologies Co., Ltd."
       cert_issuer_short   = "Sectigo"
@@ -79530,8 +79565,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_70205E32FEFDB3E3D948AF5E67472901
 
       hash                = "749edc4ed6c6e9c861dcdf452c7acc7ec521cd1b4ac91ffee4158ab53ec57730"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Ventis Media, Inc."
       cert_issuer_short   = "Sectigo"
@@ -79565,8 +79600,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_754022596DA5B16478C5E880ED2D730F
 
       hash                = "36d4a0c46a0b9613b7f4ab38a9bf1a8ee3d54e059f2451f20e999a7b49b9af56"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Yongji Xiaodong Network Technology Co., Ltd."
       cert_issuer_short   = "Sectigo"
@@ -79600,8 +79635,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Verokey_04EB8615F356CF0F5BF4DBCD08238DA4
 
       hash                = "b5fb40289c795be46e746bce7cfb8641bd4d619e49fae62f4998c7915f831e5e"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware relies on CDNs to pull down second stage components. See https://x.com/malwrhunterteam/status/1997368057702842676?s=20"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "山西荣升源科贸有限公司"
       cert_issuer_short   = "Verokey"

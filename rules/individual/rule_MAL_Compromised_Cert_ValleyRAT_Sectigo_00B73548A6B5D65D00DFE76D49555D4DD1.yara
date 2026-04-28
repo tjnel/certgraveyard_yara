@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Sectigo_00B73548A6B5D65D00DFE76D49555D4DD1 {
 
       hash                = "7e9078fd8654028df65a47ccba18f25fd3bdfb1b7716495e063b95b9ff1fd06e"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Yiwu Liangheng Technology Co., Ltd."

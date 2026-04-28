@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_02ED93FDB6CFB33A477E218531F3292
 
       hash                = "56541af54c5b4ad7de32560f780f0e606e5bf67170ad3bc241c9e2d75ea3f760"
       malware             = "Zhong Stealer"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "MobSoft Co., Ltd"

@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_12248CFBA203C55278C33B413A81FFB3 {
 
       hash                = "fce7f7ad1d7b17e7106639ca23cc49d2cf642bcea024d8ba838f3f559c99e34c"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Open Source Developer, Yu Zeng"

@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_BatLoader_Certum_218A79C93C595847559394CCE196B383 {
       hash                = "7565bd4a85a95a5789d47e7c74756c38490c4ed5a6432bf7bab4fb4c289024c5"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Guangzhou Yongwu Network Technology Co., Ltd."
       cert_issuer_short   = "Certum"

@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_BatLoader_SSL_com_24F14D582A5476DECB49D9C910F064A4 {
       hash                = "97ac5e537d38415ccc56bd114e7b6f0053e894032c506eea37896779b6c68caf"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Ivosaq Ltd"
       cert_issuer_short   = "SSL.com"

@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_11BB96AF61D33B7097E13E0C41DCF747 {
 
       hash                = "48d7f595d98bbe45cf34f1ba7280a89c27e59de9b17fdfd8bc5d6d1cf817c321"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "D&J BROWN IDIOMAS LTDA"

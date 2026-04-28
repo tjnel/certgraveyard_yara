@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_5447CA4779903CBA0128612D312425D6 
 
       hash                = "001a10b946d41f8794c110f97cd46b961fea0c0d50c92efaef1d166adaffe8b8"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: fillenmore[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "Lway Firmware"
       cert_issuer_short   = "Sectigo"
@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_5447CA4779903CBA0128612D312425D6 
       cert_valid_from     = "2026-03-19"
       cert_valid_to       = "2027-06-17"
 
-      country             = "???"
-      state               = "???"
+      country             = "FI"
+      state               = "Uusimaa"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "3462375-9"
 
    condition:
       uint16(0) == 0x5a4d and

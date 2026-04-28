@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330006F7BF3100D927BDFF629B00000006F7
 
       hash                = "8b2b511a7f68f20a5a200a9b28adec1e45ef0b5ebbc901485d17916c348a4489"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "PERRY CHANG"

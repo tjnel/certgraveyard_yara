@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_CastleLoader_DigiCert_0D5713F88E9AFE9B0D1CECA05E0C3532
 
       hash                = "5f55c1e837b6fbe5d81d93983166f34f3471a7f20af28ff527b9f140a601ce2d"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: totpwill[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "Dahan David Marketing Ltd."
       cert_issuer_short   = "DigiCert"

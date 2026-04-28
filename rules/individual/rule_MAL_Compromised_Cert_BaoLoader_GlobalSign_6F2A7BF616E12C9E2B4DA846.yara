@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_BaoLoader_GlobalSign_6F2A7BF616E12C9E2B4DA846 {
 
       hash                = "00151cc770d6add3501a7b8cd7815858637d3fe6a0cb7a78fe98a1487cae2f83"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "ASTRAL MEDIA INC."
       cert_issuer_short   = "GlobalSign"

@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_3D750F9AC0E074D810BCF82573950AF3 
 
       hash                = "e913b436fe3debd25ed0fa24e84e313f104490be66687a584f9cc15e0b23d9c8"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Xiamen Longhu Sanlu E-commerce Co., Ltd."

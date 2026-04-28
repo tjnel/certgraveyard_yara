@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_669F5C8918D3B19E81282765 {
 
       hash                = "281e07af77e1ff21140a7102c3cf8802dff96e670c8c3c73b8250d487a5196ed"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "CanDllerWhale Electronic Studios Technology Co., Ltd."

@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_00825FF994DC68446E998A6F20F122561
 
       hash                = "068e34ef7cb67e5a8d34b4d6977cd69be00d52b12d119413fb00d9b68dbc63b6"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: newmemorystarter[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "Xiamen Kangchu Technology Co., Ltd."
       cert_issuer_short   = "Sectigo"

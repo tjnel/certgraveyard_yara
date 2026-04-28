@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0CAE428F1BDCBEBAF284EEE9A643B1D
 
       hash                = "9ae8388b6bc4043a49573a617927cabbd61c254014e0ceb4223cf50431841b2c"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Brunner Informatik AG"

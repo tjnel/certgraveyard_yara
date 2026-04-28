@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00C30AE522FF59DD703FF3F27A2A9BCC
 
       hash                = "3f049dd0ef4d209cce7ac081c093d51bcf2c5c3e515d8c124c63b31c8310e1d2"
       malware             = "Zhong Stealer"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Xiamen Yaolun Network Technology Co., Ltd."

@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_06500EE65FFBFB6EA4F4B16AB6F910C
 
       hash                = "5e841260983954da60716b99306a410898bca4d30c14626553205753f60a6d2f"
       malware             = "Zhong Stealer"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "INNOVATIVE CONNECTING PTE. LIMITED"

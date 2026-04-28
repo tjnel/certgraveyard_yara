@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_BatLoader_SSL_com_1F5F6C8F6F37E026CE572643B6BB3BBD {
       hash                = "a88a61b2dab40e651798aa312d069dac8085f9e7a2e5bffb6ef42360b7f775b0"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "AJM It Services Limited"
       cert_issuer_short   = "SSL.com"

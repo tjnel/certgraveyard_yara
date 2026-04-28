@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_3BC6960C1395678BD09FD48A {
 
       hash                = "977d7959330af8cb27a5dba1b96cb8ecd8b6c48ec809516465d6ada057fcfcd6"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "IMAGINATION369 CO., LTD."

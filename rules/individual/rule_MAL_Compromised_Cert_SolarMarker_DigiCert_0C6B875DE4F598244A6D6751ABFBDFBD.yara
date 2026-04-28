@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0C6B875DE4F598244A6D6751ABFBDFBD 
 
       hash                = "f268491d2f7e9ab562a239ec56c4b38d669a7bd88181efb0bd89e450c68dd421"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Full Stack s. r. o."

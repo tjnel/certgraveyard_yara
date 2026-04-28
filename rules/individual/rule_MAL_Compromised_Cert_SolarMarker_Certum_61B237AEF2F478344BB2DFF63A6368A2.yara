@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_61B237AEF2F478344BB2DFF63A6368A2 {
 
       hash                = "5da219f776810a42d8c8e26989f420ece92e87b6279e3bb39dc9627ad0b7f909"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Crowded Out Limited"

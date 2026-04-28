@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_BatLoader_SSL_com_0AD3EC95833032EEBF53B660984CC67D {
       hash                = "413cd9af982a04a8eff61e66860582f3236b2f8523b88b9330eccdd5ffc58348"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "Initial access tool dropped by ClearFake: https://blog.sekoia.io/clearfake-a-newcomer-to-the-fake-updates-threats-landscape/"
+      malware_notes       = ""
 
       signer              = "STECH CONSULTANCY LIMITED"
       cert_issuer_short   = "SSL.com"

@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_Gh0stRAT_Certum_76E2ACF0F2F39C06A0B34E4309A8EAF2 {
       hash                = "779272fd234deb25d4275715eb9e72e58492a149ed48c8ab1819b710864d29ed"
       malware             = "Gh0stRAT"
       malware_type        = "Remote access tool"
-      malware_notes       = "The malware appears to be a newer version of GhostRAT. Disguised as a fake invoice."
+      malware_notes       = ""
 
       signer              = "北京谷云达吉商贸有限公司"
       cert_issuer_short   = "Certum"

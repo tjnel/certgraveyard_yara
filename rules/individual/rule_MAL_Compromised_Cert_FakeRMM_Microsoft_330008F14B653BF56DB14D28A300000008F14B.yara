@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330008F14B653BF56DB14D28A300000008F1
 
       hash                = "f48a433d7eac6c4eb0f008468719bd0b7d653d1eca155b8a78dc17516fce5bf2"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "DAWN RENEE"

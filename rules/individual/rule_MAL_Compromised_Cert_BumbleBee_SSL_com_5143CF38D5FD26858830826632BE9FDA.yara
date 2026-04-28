@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_BumbleBee_SSL_com_5143CF38D5FD26858830826632BE9FDA {
 
       hash                = "cab63e05a4a6f0b825acb077ba6a1bbb3657488c584882124a31c45dfb39515d"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "DIGI CORP MEDIA LLC"

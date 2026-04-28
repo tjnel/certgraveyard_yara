@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_CastleLoader_DigiCert_0D7AA26068DDDAF9CF05D412C8DFCEB8
 
       hash                = "5441e3aaf800ec7a5a4dae946a8173537b140a850a5002ab9fa1903c1e0fa125"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: koshei[.]icu"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "LASSFERA s.r.o."
       cert_issuer_short   = "DigiCert"
@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_CastleLoader_DigiCert_0D7AA26068DDDAF9CF05D412C8DFCEB8
       cert_valid_from     = "2026-03-12"
       cert_valid_to       = "2027-03-09"
 
-      country             = "???"
+      country             = "CZ"
       state               = "???"
-      locality            = "???"
+      locality            = "Prague"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "21743347"
 
    condition:
       uint16(0) == 0x5a4d and

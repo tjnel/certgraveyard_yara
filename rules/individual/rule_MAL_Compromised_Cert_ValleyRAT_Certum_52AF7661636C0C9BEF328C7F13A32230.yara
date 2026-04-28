@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_52AF7661636C0C9BEF328C7F13A32230 {
       hash                = "84363809a16939c41a6766373a033c9ddb257c719b9ca59abe79e68dcfe80ae6"
       malware             = "ValleyRAT"
       malware_type        = "Remote access tool"
-      malware_notes       = "This same signer name was used to sign ZhongStealer. More about ValleyRAT can be learned here: https://research.checkpoint.com/2025/cracking-valleyrat-from-builder-secrets-to-kernel-rootkits/"
+      malware_notes       = ""
 
       signer              = "RichQuest Network Technology Ltd."
       cert_issuer_short   = "Certum"

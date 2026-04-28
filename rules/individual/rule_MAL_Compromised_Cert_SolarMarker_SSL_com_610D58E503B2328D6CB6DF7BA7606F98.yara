@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_610D58E503B2328D6CB6DF7BA7606F98 {
 
       hash                = "21646416f656f7b4da74214f2a33bc19733bdd30525381ceb66bb87a6ceb32d6"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "BELLANN BOARD & PACKAGING CO.LIMITED"

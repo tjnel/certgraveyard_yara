@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0D2AD57B10B7472BAE03D3DEFF05F54
 
       hash                = "93d458ce6ebc98b2884e4a76c026d731a9f793cfcc6d514d4952ad6bf28fe8ac"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "LENOVO (UNITED STATES) INC."

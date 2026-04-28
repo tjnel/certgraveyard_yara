@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Certum_5BE7B13F587B8850573257DF55E5E39E 
 
       hash                = "873ea83b3507d8391b1b66f0f3d57cefff4307463b018eec09abbff601c83d30"
       malware             = "Zhong Stealer"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Shandong Saibo Information Technology Co., Ltd."

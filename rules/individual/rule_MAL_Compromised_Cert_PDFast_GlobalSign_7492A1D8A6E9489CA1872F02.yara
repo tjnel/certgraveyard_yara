@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_PDFast_GlobalSign_7492A1D8A6E9489CA1872F02 {
 
       hash                = "f87f43af104abbb84208b97877eaa5e34b657ab1c381c458bcb805801ff3cc03"
       malware             = "PDFast"
-      malware_type        = "Unknown"
+      malware_type        = "Trojan"
       malware_notes       = ""
 
       signer              = "THE-SHOP STOP LLC"

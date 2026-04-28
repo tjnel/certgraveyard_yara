@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_4DDD9F79FFA78EB06C8C638334836ACF {
 
       hash                = "bcbb74f7b54f471f5d98ef24ae9b472f2cbe3efe04d6c6ff1088c63ddce290cf"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "成都金源启铭网络有限公司"

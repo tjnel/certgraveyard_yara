@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_00A2C875FDD0D6FA22A2261813DEF8A56
 
       hash                = "4ba0d3ae41a0ae3143e8c2c3307c24b0d548593f97c79a30c0387b3d62504c31"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "SERPENTINE SOLAR LIMITED"

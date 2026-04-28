@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0AE04FFA7B23CC3F7395B25F4125515
 
       hash                = "c08a59750b5a72761d457e7b9875aa251f71c64d0c6bf7e391bb5c5f35cefc3c"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Luxvisions Innovation Technology Corp. Limited"

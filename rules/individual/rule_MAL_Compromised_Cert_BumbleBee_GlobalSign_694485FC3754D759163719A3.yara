@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_694485FC3754D759163719A3 {
 
       hash                = "ad415a5fe368e89c4b00337b00baf6ed8b77c83d27d8f9e0628f1217a6082740"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "LLC Onixgroup"

@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_11FC7C80473F272CED037319E717F948 
 
       hash                = "876a04d0f76dc14f68248e0b4498e3b710740e1447bcc6be6fd746b9c01276de"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Chengdu Yizhifeng Technology Co., Ltd."

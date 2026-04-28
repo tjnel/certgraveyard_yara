@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_33000701EEBA0F73D66E4CEA800000000701
 
       hash                = "827a08808e1729b8f6711b522e0c572a7997b1c48ae2dc64fabc81ceab69183f"
       malware             = "FakeRMM"
-      malware_type        = "Unknown"
-      malware_notes       = "Malicious installers posing as a fake RMM tool. Ref: https://www.proofpoint.com/us/blog/threat-insight/dont-trustconnect-its-a-rat"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "MELISSA LEHMAN"
       cert_issuer_short   = "Microsoft"

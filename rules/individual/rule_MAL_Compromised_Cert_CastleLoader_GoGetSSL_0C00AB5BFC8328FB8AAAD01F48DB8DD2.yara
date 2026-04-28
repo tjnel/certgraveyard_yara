@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_CastleLoader_GoGetSSL_0C00AB5BFC8328FB8AAAD01F48DB8DD2
 
       hash                = "bc8cb64c089415ccc2bfd9d29bf74fe06ae5e3b0493a336412184d20ac774604"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: briskbeverage[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "TECHNOLOGY APPRAISALS LIMITED"
       cert_issuer_short   = "GoGetSSL"

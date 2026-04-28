@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_14ECD44C98C3DF27FCC699DC70E32C7A {
 
       hash                = "f799e7e81b66cf7d787abc864ed82c3dc5fd2aa95c9f3d24a39c79a3741d37c1"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Daxon Digital Services Inc"

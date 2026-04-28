@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_PDFast_GlobalSign_36CC39AA22030F7FA71592F8 {
 
       hash                = "103c8764f8af476e8801c03a03969f388133b8586de93b13fcba52bf1772c8e5"
       malware             = "PDFast"
-      malware_type        = "Unknown"
+      malware_type        = "Trojan"
       malware_notes       = ""
 
       signer              = "SEELIV (SMC-PRIVATE) LIMITED"

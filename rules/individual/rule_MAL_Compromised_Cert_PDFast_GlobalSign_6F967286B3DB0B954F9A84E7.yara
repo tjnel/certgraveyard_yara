@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_PDFast_GlobalSign_6F967286B3DB0B954F9A84E7 {
 
       hash                = "efea4b2f5df566c507e96f11a8a74b00724015cac86e5d08b85f6c31d2284413"
       malware             = "PDFast"
-      malware_type        = "Unknown"
+      malware_type        = "Trojan"
       malware_notes       = ""
 
       signer              = "SHINE YOUR GUTS (SMC-PRIVATE) LIMITED"

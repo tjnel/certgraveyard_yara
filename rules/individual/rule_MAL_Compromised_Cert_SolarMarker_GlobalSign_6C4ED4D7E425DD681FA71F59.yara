@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_6C4ED4D7E425DD681FA71F59 {
 
       hash                = "a13278be27e4b0c38d7102496f3d4fcfb31cf710389edee244a4c5dd40055c4f"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "MORYS LLC"

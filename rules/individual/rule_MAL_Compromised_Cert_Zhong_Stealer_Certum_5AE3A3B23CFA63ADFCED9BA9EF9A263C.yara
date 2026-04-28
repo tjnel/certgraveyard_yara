@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Certum_5AE3A3B23CFA63ADFCED9BA9EF9A263C 
 
       hash                = "179b8af13000463b87f74c99828671f0069126fc4cf65d862c223e67991ff75b"
       malware             = "Zhong Stealer"
-      malware_type        = "Stealer"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Jinhua Suyu Intelligent Technology Co., Ltd."

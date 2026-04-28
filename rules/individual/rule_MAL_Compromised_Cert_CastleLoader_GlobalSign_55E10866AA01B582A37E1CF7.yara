@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_55E10866AA01B582A37E1CF7 {
 
       hash                = "15f848dfe1797a6356ea510a4cc46985be164ef15e25a0496ff0882726ead4cc"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: johnmacroskgf[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "LLC MK Grand Stroy"
       cert_issuer_short   = "GlobalSign"
@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_55E10866AA01B582A37E1CF7 {
       cert_valid_from     = "2026-04-08"
       cert_valid_to       = "2027-04-09"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "KG"
+      state               = "Osh"
+      locality            = "Osh"
+      email               = "mkgrandstroy@outlook.com"
+      rdn_serial_number   = "168457-3310-OOO"
 
    condition:
       uint16(0) == 0x5a4d and

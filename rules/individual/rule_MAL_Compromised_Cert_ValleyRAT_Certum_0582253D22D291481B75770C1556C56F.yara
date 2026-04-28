@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_0582253D22D291481B75770C1556C56F {
 
       hash                = "4ceb4a501721f0277072a14220ff435eecedee9930b150adf11057603cf08842"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Open Source Developer, Hao Chen"

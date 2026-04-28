@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Gh0stRAT_Certum_46C6C62207C137E628861568419977EE {
 
       hash                = "968e5b0abc123f1f2097b5064637a1ab5779205682988880910e3c2d11d51f31"
       malware             = "Gh0stRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "北京谷云达吉商贸有限公司"

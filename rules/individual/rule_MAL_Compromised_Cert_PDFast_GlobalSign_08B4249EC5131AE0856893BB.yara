@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_PDFast_GlobalSign_08B4249EC5131AE0856893BB {
 
       hash                = "4f3a8d56a20474eb3962457689614d2360b99f6d034a60d207550abac99896a2"
       malware             = "PDFast"
-      malware_type        = "Unknown"
+      malware_type        = "Trojan"
       malware_notes       = ""
 
       signer              = "Called Sparkline LLC"

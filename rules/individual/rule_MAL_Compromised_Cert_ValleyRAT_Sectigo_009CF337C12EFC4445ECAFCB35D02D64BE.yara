@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Sectigo_009CF337C12EFC4445ECAFCB35D02D64BE {
 
       hash                = "124e8f7ca958fd8cb2a3baf91681513f93f73d9cfa4efea6f4a1f165d8cbc8d9"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Weihai Mingjun Information Technology Co., Ltd."

@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_22B71B4E1DFFAF027DAD91DE93DD4E00 {
 
       hash                = "18aeff0a97dfd33b6f0664f43ecafd18511af559002072f680a4e5929a9c7e4f"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "APPS HORIZON"

@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_055561A0C693BE9239850D8053149DF5 
 
       hash                = "057aa4a06395c384a2a9d29f499b410ac1da6fc2c10aa61908eea3e67a32b872"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "TOV \"SELT MOTO\""

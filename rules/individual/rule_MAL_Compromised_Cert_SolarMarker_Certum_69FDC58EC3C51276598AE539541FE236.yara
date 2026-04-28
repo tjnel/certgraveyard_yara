@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_Certum_69FDC58EC3C51276598AE539541FE236 {
 
       hash                = "336e2f4cd131ca8c6ebf87fe23ac876a119992e24b5f84d5bbf7b6fcf5c43a5d"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "DataIntegra s.r.o."

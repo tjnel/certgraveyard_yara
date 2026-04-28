@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_2352CE593F487633E8C7C819FABF9C74 {
 
       hash                = "e38b838995dfe3df7419264d3a02877fe8239e691b2bcd18b843afe8c7f9961e"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "ТОВ \"ТОРГОВИЙ ДІМ КБ СТІЛ\""

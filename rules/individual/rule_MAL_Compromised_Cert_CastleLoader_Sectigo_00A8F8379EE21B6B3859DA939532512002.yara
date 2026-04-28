@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_00A8F8379EE21B6B3859DA93953251200
 
       hash                = "b38c9f871dc4735320464bb80219372a0ffe2b4f8750942b550576ace9b012b8"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Xiamen Yufeng Tiantai Network Co., Ltd."

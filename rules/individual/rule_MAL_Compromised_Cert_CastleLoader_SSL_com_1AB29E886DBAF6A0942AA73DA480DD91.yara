@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_CastleLoader_SSL_com_1AB29E886DBAF6A0942AA73DA480DD91 
       hash                = "24fb4e14f8e2f2b663e3221132aec06f30eae68aea9ad4e927407ce6049a9ac1"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This is an initial access tool that is frequenty used to load infostealers or remote access tools, sold as Malware-as-a-Service: https://www.ibm.com/think/x-force/dissecting-castlebot-maas-operation"
+      malware_notes       = ""
 
       signer              = "INTYNA EXIM PRIVATE LIMITED"
       cert_issuer_short   = "SSL.com"

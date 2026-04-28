@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_BaoLoader_SSL_com_1709C0F1042395431C1283C6412C4BA5 {
 
       hash                = "7022b6b2caa7ecfc1a9575b74cce793336fc5fe4571955b1240716d9ab4b9e84"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Eclipse Media Inc"
       cert_issuer_short   = "SSL.com"

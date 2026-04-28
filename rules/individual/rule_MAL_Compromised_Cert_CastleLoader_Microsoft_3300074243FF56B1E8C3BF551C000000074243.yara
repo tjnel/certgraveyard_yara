@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_3300074243FF56B1E8C3BF551C00000
 
       hash                = "ca87d3d53290557dce61c193cdff308f3db400c011999470c371724cc171e9eb"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2 - dangeonbest[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "Jerry Hayes"
       cert_issuer_short   = "Microsoft"

@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_CastleLoader_Certum_6FE1CA02563A3BBED8D2D0E978A09C49 {
       hash                = "c413b2e2c71ea31bc366c95b3554a36ff1d662b365c7f06768d53d44e441f7d5"
       malware             = "CastleLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "This is an initial access tool that is frequenty used to load infostealers or remote access tools, sold as Malware-as-a-Service: https://www.ibm.com/think/x-force/dissecting-castlebot-maas-operation"
+      malware_notes       = ""
 
       signer              = "Soft Insanity Oy"
       cert_issuer_short   = "Certum"

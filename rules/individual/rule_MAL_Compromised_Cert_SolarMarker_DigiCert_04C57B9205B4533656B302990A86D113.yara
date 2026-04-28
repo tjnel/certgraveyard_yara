@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_04C57B9205B4533656B302990A86D113 
 
       hash                = "9c699540819d96bfe614049cf31abc8b850bc3f74b19654a06db75fc0ac6db8f"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Tevora Business Solutions, Inc."

@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_SSL_com_50940364ABB9A9A36B3D76920AE4BA99 {
 
       hash                = "a82a9e1f6667350808a19219d586d10bcea85cf73b67024d8c58366981fe4993"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Game Warriors Limited"

@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Gh0stRAT_Certum_5F737E82330734C32297EF89B72FB607 {
 
       hash                = "349b54f136e63904ed5a1b3921d8744d3815592690f9167aedd3ead075ced9a4"
       malware             = "Gh0stRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Keroro Technology Co., Ltd."

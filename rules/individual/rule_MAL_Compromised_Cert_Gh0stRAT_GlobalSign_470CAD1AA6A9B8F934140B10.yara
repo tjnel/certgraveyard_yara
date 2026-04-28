@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Gh0stRAT_GlobalSign_470CAD1AA6A9B8F934140B10 {
 
       hash                = "847f95f561958adb3475d70ba927c806e6e7a9f288e1e9bc90e84aad43d01ae1"
       malware             = "Gh0stRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "重庆昱泽科技有限公司"

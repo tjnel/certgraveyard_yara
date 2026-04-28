@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_DigiCert_0A04CAF1BB3BC17A33C6E155EC4F588
 
       hash                = "945d0516c078c0255dfb8476056580daee0309bf6cc4bb1542671686e42d85ff"
       malware             = "Zhong Stealer"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Keroro Software LLC"

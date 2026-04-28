@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_BaoLoader_DigiCert_0F493BE626DF58694E1875FA9155D40C {
 
       hash                = "35ab1c46e0341e6cda9ba1db61e8d8c0496df90ee758ed02d15f564a62b35da8"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Astral Media Inc."
       cert_issuer_short   = "DigiCert"

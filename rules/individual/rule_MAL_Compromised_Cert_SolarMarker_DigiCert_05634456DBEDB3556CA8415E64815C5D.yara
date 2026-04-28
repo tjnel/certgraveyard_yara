@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_05634456DBEDB3556CA8415E64815C5D 
 
       hash                = "1d4ab34baa9e5c2cc73ec2788ca8d849befe8c0ef5d8fdd5b7a4bed5de6ebaff"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Walden Intertech Inc."

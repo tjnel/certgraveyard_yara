@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_7491B67258319908F62F222370446CD5 {
 
       hash                = "d8ec7795909f69b8e4945c38bd362d321f3041a71d2d6cd98d146f6bd47a1e0c"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Zhijiang Tangqin Technology Co., Ltd."

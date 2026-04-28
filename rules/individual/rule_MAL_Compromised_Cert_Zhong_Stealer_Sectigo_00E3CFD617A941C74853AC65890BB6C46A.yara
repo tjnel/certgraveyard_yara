@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00E3CFD617A941C74853AC65890BB6C4
 
       hash                = "4cf973d3c8985c32572680203bc01121cf18342f75c139ec0fb202900809917c"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "The malware file is named similar to a screenshot or image, pulls second stage contents off of legitimate CDN."
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "RichQuest Network Technology Ltd."
       cert_issuer_short   = "Sectigo"

@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_2495E333DCE11D0EC448ADDB {
 
       hash                = "a67bae3dd73789e892b5114a157d992424d367aae11c5fbaa80be639d6dec798"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Dongguan Shunkaitong Technology Co., Ltd."

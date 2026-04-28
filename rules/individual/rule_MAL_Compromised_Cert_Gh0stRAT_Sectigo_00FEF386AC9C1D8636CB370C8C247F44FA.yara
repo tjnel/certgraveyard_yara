@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Gh0stRAT_Sectigo_00FEF386AC9C1D8636CB370C8C247F44FA {
 
       hash                = "8071c7b74e7ca2769f3746ec8cc007caee65474bb77808b7a84c84f877452605"
       malware             = "Gh0stRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "DAVINCI VISION LIMITED"

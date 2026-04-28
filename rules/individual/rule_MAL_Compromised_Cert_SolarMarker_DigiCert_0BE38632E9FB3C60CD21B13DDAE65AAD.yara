@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0BE38632E9FB3C60CD21B13DDAE65AAD 
 
       hash                = "9fcdb329122b918110be82e8040386798f1a0c28ad1d103bf06e5df6ec820aca"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Ameri Mode Inc."

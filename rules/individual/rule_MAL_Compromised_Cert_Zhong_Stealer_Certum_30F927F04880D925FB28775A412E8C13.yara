@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Certum_30F927F04880D925FB28775A412E8C13 
 
       hash                = "b2ef6a86983e15d0f70e5941b79d03419d4c7bcd4b1c58223f6b8334ed800deb"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "Loads payloads from AWS S3 bucket. downloads 503 JPG from bucket as decoy: https://tria.ge/251129-r55s4szpem/behavioral1"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Shanghai Baiyang Information Technology Development Co., Ltd."
       cert_issuer_short   = "Certum"

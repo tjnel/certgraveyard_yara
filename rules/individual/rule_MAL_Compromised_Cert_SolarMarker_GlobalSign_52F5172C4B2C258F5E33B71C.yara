@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_52F5172C4B2C258F5E33B71C {
 
       hash                = "c6fda8a049ebd7872358acfa2505f226e931e0f71090c19412e7b6d0a1c6e129"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "CHILL ANAESTHESIA LTD."

@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_424E89A44FF616A6183251F7 {
 
       hash                = "1f0f5173c6aae129e6cd5994da53b510497be2ba7f2ebf50fb0cb298314b0c8a"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "This malware leverages cloud hosting to hold additional components. The components are TASLogin and its associated DLL: medium.com/@anyrun/zhong-stealer-analysis-new-malware-targeting-fintech-and-cryptocurrency-71d4a3cce42c"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "PrimeSnap Technologies Network Company"
       cert_issuer_short   = "GlobalSign"

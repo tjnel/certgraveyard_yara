@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Gh0stRAT_Sectigo_2F38DE4CED0B070973B9E9B9B1DCFA7F {
 
       hash                = "dfa35440cfd1f31f25414561d49989f7e92d87275f2451c0132fc8398ff8e4c9"
       malware             = "Gh0stRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Fahad Malik"

@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_65654FEAF83C48513D968826 {
 
       hash                = "3e99b59df79d1ab9ff7386e209d9135192661042bcdf44dde85ff4687ff57d01"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "PRIVATE SECURITY ORGANIZATION BARK LLC"

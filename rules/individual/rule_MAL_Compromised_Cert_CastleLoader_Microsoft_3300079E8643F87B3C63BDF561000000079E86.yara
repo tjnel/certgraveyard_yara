@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_3300079E8643F87B3C63BDF56100000
 
       hash                = "82b4cfac54ef2fcfa51c4418aad3acea5577a4e64f6145137576063e9af029c8"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: strangury[.]icu"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "MIGUEL GUTIERREZLUPERCIO"
       cert_issuer_short   = "Microsoft"

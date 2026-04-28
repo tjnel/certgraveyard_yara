@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_BatLoader_SSL_com_5E65623207A0F5322CEDC57005E5CB41 {
 
       hash                = "470a322864eb9fb96afc1eb64db7a39200df1b6f58bcdfc0138304ccd63b8963"
       malware             = "BatLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "JM CRYPTO PTY LTD"

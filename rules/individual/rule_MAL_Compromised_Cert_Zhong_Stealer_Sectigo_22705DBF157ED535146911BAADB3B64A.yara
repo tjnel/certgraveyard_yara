@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_22705DBF157ED535146911BAADB3B64A
 
       hash                = "a508358a0786ddf2ad9496bb9374d54e71c5044df9c10fe686d43fc70484e54c"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "The malware was downloaded via storage[.]googleapis[.]com/hongkongwork1/ and is disguised as a  image using the filename photo202512176896m.pif, but is an executable."
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "Weihai Mingjun Information Technology Co., Ltd."
       cert_issuer_short   = "Sectigo"

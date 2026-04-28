@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_GlobalSign_20758F91D61AA738C7D8C03D {
 
       hash                = "e89360d7d77e6979d54dc567cee54ac6128b8ed9250bc3164c5e77c43cd8a647"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "RUBEZH LLC"

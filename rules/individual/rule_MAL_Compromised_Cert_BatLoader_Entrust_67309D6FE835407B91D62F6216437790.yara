@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_BatLoader_Entrust_67309D6FE835407B91D62F6216437790 {
       hash                = "fddf36adfee67f1deb84c18a800f847c182c15fe21e03268bbb0f0b489640dac"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Pinesville Ltd"
       cert_issuer_short   = "Entrust"

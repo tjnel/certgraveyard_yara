@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_BatLoader_Certum_0FBD475F796001B1B63F15AD08841422 {
       hash                = "1c64bc2911b32ede634aba9e44dedd8d0897cc5d234a95cb0af715381ac6a24c"
       malware             = "BatLoader"
       malware_type        = "Initial access tool"
-      malware_notes       = "See this article to learn more about Batloader: https://blogs.vmware.com/security/2022/11/batloader-the-evasive-downloader-malware.html"
+      malware_notes       = ""
 
       signer              = "Tax In Cloud sp. z o.o."
       cert_issuer_short   = "Certum"

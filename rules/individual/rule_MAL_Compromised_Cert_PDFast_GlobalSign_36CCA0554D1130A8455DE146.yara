@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_PDFast_GlobalSign_36CCA0554D1130A8455DE146 {
 
       hash                = "6ef80b596195ac002f072811bb2c73e6d45b8f914ada6d1e613ad9abe14bc09c"
       malware             = "PDFast"
-      malware_type        = "Unknown"
+      malware_type        = "Trojan"
       malware_notes       = ""
 
       signer              = "IBRAHIM MANNAN LLC"

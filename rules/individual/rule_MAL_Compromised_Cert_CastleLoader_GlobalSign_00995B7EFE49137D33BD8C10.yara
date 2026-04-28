@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_00995B7EFE49137D33BD8C10 {
 
       hash                = "e4ccb3da7bfdf816ae16790859255647322655502ac4e18e1e52ba5967230be6"
       malware             = "CastleLoader"
-      malware_type        = "Unknown"
-      malware_notes       = "C2: dallasgeneratorshop[.]com"
+      malware_type        = "Initial access tool"
+      malware_notes       = ""
 
       signer              = "CONG TY TNHH TIEN PHONG THAI BINH"
       cert_issuer_short   = "GlobalSign"

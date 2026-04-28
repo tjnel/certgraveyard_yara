@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_BaoLoader_GlobalSign_5499B3DF6966C9151EF0135D {
 
       hash                = "bbee7d6beb0b1fc2f19bbda5a0765c00af7ec16642f7b4ad6f7bc8f6d43a2cc7"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Eclipse Media Inc."
       cert_issuer_short   = "GlobalSign"

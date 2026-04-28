@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_SolarMarker_DigiCert_0D6D1BA122C0E6586352D55D246D07A0 
 
       hash                = "6d1a637ee2263dc7918b886a8a1878fb73a000510bc6f42e0c59669487c46e82"
       malware             = "SolarMarker"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "G & D Consulting, LLC."

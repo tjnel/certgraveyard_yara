@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_BumbleBee_GlobalSign_337636E3766AF9939462F2EE {
 
       hash                = "839e3f4dc441578019dc33c43bc918ad7e6022baa3770f45c6eccfe1239d79c1"
       malware             = "BumbleBee"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "LLC Ellada Comfort"

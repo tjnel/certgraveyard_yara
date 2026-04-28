@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_BaoLoader_Sectigo_313CA9C838CDDB21E4E354E6DBF0216A {
 
       hash                = "7c86ebc6bb775b6b35c4f70140f6e18908b7f3a15f9bffe33da96fee4601d74d"
       malware             = "BaoLoader"
-      malware_type        = "Backdoor"
-      malware_notes       = "This malware was originally used for adfraud but is a risk due to an arbitrary backdoor. For more information see https://expel.com/blog/the-history-of-appsuite-the-certs-of-the-baoloader-developer/ and https://www.gdatasoftware.com/blog/2025/08/38257-appsuite-pdf-editor-backdoor-analysis"
+      malware_type        = "Trojan"
+      malware_notes       = ""
 
       signer              = "Native Click Marketing LLC"
       cert_issuer_short   = "Sectigo"

@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_ValleyRAT_DigiCert_0B88E4D595E84A1C9D96733EF7DE5546 {
 
       hash                = "37d27fc9336fd3f8cfe7aa2250f00e4e61320aef8a39542c8eb79a853150e692"
       malware             = "ValleyRAT"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "DONGQI TRADE LIMITED"

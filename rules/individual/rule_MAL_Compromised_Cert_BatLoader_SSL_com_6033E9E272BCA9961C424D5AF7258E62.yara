@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_BatLoader_SSL_com_6033E9E272BCA9961C424D5AF7258E62 {
 
       hash                = "b1c9d857b8c56f6c1cf164e0a521e96ec1f48ddb818f6172b66223ad42829299"
       malware             = "BatLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Initial access tool"
       malware_notes       = ""
 
       signer              = "Nuotio IT Oy"
