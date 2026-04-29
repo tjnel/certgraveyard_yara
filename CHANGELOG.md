@@ -4,6 +4,13 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.04.29] - 2026-04-29
+
+### Added
+- MAL_Compromised_Cert_Remcos_RAT_Microsoft_330000843F3A83AD6D5353199400000000843F (Remcos RAT - Microsoft)
+- MAL_Compromised_Cert_RUS_53_GlobalSign_287C387257A3BFA89A473C33 (RUS-53 - GlobalSign)
+- MAL_Compromised_Cert_RUS_53_Sectigo_0082FAAA1D55081C3DED58AE3311D04F55 (RUS-53 - Sectigo)
+
 ## [2026.04.28] - 2026-04-28
 
 ### Added

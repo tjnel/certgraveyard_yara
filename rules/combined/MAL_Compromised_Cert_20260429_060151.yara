@@ -43855,6 +43855,41 @@ rule MAL_Compromised_Cert_RUS_53_GlobalSign_10C33F009B54F66A849B4C90 {
       )
 }
 
+rule MAL_Compromised_Cert_RUS_53_GlobalSign_287C387257A3BFA89A473C33 {
+   meta:
+      description         = "Detects RUS-53 with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-06"
+      version             = "1.0"
+
+      hash                = "163cf00168d6fd28366db6c88a1216f95b10b8bb71359d161b542a67c40bffc0"
+      malware             = "RUS-53"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "PHOTON architect design lab Limited Liability Company"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "28:7c:38:72:57:a3:bf:a8:9a:47:3c:33"
+      cert_thumbprint     = "45B5F071148C8D4439E94A4ED3875C128DD46809"
+      cert_valid_from     = "2026-04-06"
+      cert_valid_to       = "2027-04-07"
+
+      country             = "KG"
+      state               = "Bishkek"
+      locality            = "Bishkek"
+      email               = "info@softdlp.com"
+      rdn_serial_number   = "125615-3301-OOO"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "28:7c:38:72:57:a3:bf:a8:9a:47:3c:33"
+      )
+}
+
 rule MAL_Compromised_Cert_RUS_53_GlobalSign_5201CD9AFB0D56EC78F86942 {
    meta:
       description         = "Detects RUS-53 with compromised cert (GlobalSign)"
@@ -43887,6 +43922,41 @@ rule MAL_Compromised_Cert_RUS_53_GlobalSign_5201CD9AFB0D56EC78F86942 {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "52:01:cd:9a:fb:0d:56:ec:78:f8:69:42"
+      )
+}
+
+rule MAL_Compromised_Cert_RUS_53_Sectigo_0082FAAA1D55081C3DED58AE3311D04F55 {
+   meta:
+      description         = "Detects RUS-53 with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-04"
+      version             = "1.0"
+
+      hash                = "b55744aae0b02269036f9c4d21a363fdc82409bbd3c462c8b2bc179574f64bbc"
+      malware             = "RUS-53"
+      malware_type        = "Loader"
+      malware_notes       = "Disguised as PDF load txt decoy."
+
+      signer              = "Xiamen Chike Network Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:82:fa:aa:1d:55:08:1c:3d:ed:58:ae:33:11:d0:4f:55"
+      cert_thumbprint     = "C6ED7CEC3B00501F292A15A2130336084A1D044D"
+      cert_valid_from     = "2026-02-04"
+      cert_valid_to       = "2027-02-04"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350206302884593A"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:82:fa:aa:1d:55:08:1c:3d:ed:58:ae:33:11:d0:4f:55"
       )
 }
 
@@ -46022,6 +46092,41 @@ rule MAL_Compromised_Cert_Remcos_RAT_Microsoft_33000026767F84C965E42A11360000000
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
          sig.serial == "33:00:00:26:76:7f:84:c9:65:e4:2a:11:36:00:00:00:00:26:76"
+      )
+}
+
+rule MAL_Compromised_Cert_Remcos_RAT_Microsoft_330000843F3A83AD6D5353199400000000843F {
+   meta:
+      description         = "Detects Remcos RAT with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-26"
+      version             = "1.0"
+
+      hash                = "f6f7d15736d0b0dbb3e6f3fabafd28ccfdb300466d4337781b8a2542221dc71d"
+      malware             = "Remcos RAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "ENGINEERING AND TECHNICAL PROCUREMENT SERVICES LTD"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:00:84:3f:3a:83:ad:6d:53:53:19:94:00:00:00:00:84:3f"
+      cert_thumbprint     = "E2E96A73DDE8E076FCBF98E6ACCBD80E4A9B4244"
+      cert_valid_from     = "2026-04-26"
+      cert_valid_to       = "2026-04-29"
+
+      country             = "GB"
+      state               = "Essex"
+      locality            = "Hadleigh"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:00:84:3f:3a:83:ad:6d:53:53:19:94:00:00:00:00:84:3f"
       )
 }
 
