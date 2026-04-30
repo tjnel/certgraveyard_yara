@@ -6090,6 +6090,41 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_00825FF994DC68446E998A6F20F122561
       )
 }
 
+rule MAL_Compromised_Cert_CastleLoader_Sectigo_008E4CF3C751EA91CFBDB64A8A1E6320AB {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-03"
+      version             = "1.0"
+
+      hash                = "edea1565c4c0fde5a036fbe73525e180983bb0a67d1fed6bb846b9ab8cecd7db"
+      malware             = "CastleLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: shopretailbmw[.]com"
+
+      signer              = "Frozen Assets Ice Company, LLC"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:8e:4c:f3:c7:51:ea:91:cf:bd:b6:4a:8a:1e:63:20:ab"
+      cert_thumbprint     = "FD8D2F469DCC232281FFD4AC6B3C0A088DA1ACE8"
+      cert_valid_from     = "2026-04-03"
+      cert_valid_to       = "2027-04-03"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:8e:4c:f3:c7:51:ea:91:cf:bd:b6:4a:8a:1e:63:20:ab"
+      )
+}
+
 rule MAL_Compromised_Cert_CastleLoader_Sectigo_00A2C875FDD0D6FA22A2261813DEF8A56E {
    meta:
       description         = "Detects CastleLoader with compromised cert (Sectigo)"
@@ -26713,7 +26748,7 @@ rule MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_33000061B367BF2AAE2472836D0
       date                = "2026-04-21"
       version             = "1.0"
 
-      hash                = "a7dfe696c8c5b2c0fe8ac4d525e0fe13173af727204a0727a4014199c64bab11"
+      hash                = "045b76fa552dbfdfb7e5de66c9c599fe91151384be6a9849ec8965aa7251b818"
       malware             = "LoremIpsumLoader"
       malware_type        = "Initial access tool"
       malware_notes       = ""
@@ -26726,11 +26761,11 @@ rule MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_33000061B367BF2AAE2472836D0
       cert_valid_from     = "2026-04-21"
       cert_valid_to       = "2026-04-24"
 
-      country             = "US"
-      state               = "Arkansas"
-      locality            = "MORRILTON"
+      country             = "???"
+      state               = "???"
+      locality            = "???"
       email               = "???"
-      rdn_serial_number   = "Not Specified"
+      rdn_serial_number   = ""
 
    condition:
       uint16(0) == 0x5a4d and
@@ -59640,6 +59675,636 @@ rule MAL_Compromised_Cert_Traffer_GlobalSign_7FE807E8EDAF5EF32235D7C2 {
       )
 }
 
+rule MAL_Compromised_Cert_Traffer_Microsoft_3300008109F2DA80987535BD74000000008109 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-25"
+      version             = "1.0"
+
+      hash                = "5007f2d2919401ea0e67933f0c00f09cc56d153f6e93a3fe0fc840b42b2375b8"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Marker Hill Construction Inc"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:00:81:09:f2:da:80:98:75:35:bd:74:00:00:00:00:81:09"
+      cert_thumbprint     = "14B09BFB289DAEDB6B1C83F72790AF2C288F4550"
+      cert_valid_from     = "2026-04-25"
+      cert_valid_to       = "2026-04-28"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:00:81:09:f2:da:80:98:75:35:bd:74:00:00:00:00:81:09"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Microsoft_33000559EC04F8F0531F1F232B0000000559EC {
+   meta:
+      description         = "Detects Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-18"
+      version             = "1.0"
+
+      hash                = "a7871d21014e279fe6232c744227b2112a52ec7e829c45001122e85715f6d436"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Marker Hill Construction Inc"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:05:59:ec:04:f8:f0:53:1f:1f:23:2b:00:00:00:05:59:ec"
+      cert_thumbprint     = "D31348FD51332366C4903F98C6B8510F9B256660"
+      cert_valid_from     = "2025-11-18"
+      cert_valid_to       = "2025-11-21"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:05:59:ec:04:f8:f0:53:1f:1f:23:2b:00:00:00:05:59:ec"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Microsoft_330005639B7F8EE84875A4851500000005639B {
+   meta:
+      description         = "Detects Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-22"
+      version             = "1.0"
+
+      hash                = "83322f93f2b3489c9414317e11e66927d35475ba77a537c012180f3b55a85e1c"
+      malware             = "Traffer"
+      malware_type        = "Infostealer"
+      malware_notes       = "A popular and customizable infostealler that can also function as a loader: https://blog.sekoia.io/stealc-a-copycat-of-vidar-and-raccoon-infostealers-gaining-in-popularity-part-1/"
+
+      signer              = "Marker Hill Construction Inc"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:05:63:9b:7f:8e:e8:48:75:a4:85:15:00:00:00:05:63:9b"
+      cert_thumbprint     = "35F6DEED2594DF4FAAD2CD664EEEEBC00BC181A6"
+      cert_valid_from     = "2025-11-22"
+      cert_valid_to       = "2025-11-25"
+
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:05:63:9b:7f:8e:e8:48:75:a4:85:15:00:00:00:05:63:9b"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Microsoft_3300059886F858BD0AB8E36907000000059886 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-05"
+      version             = "1.0"
+
+      hash                = "7ee03083416ea73e004b75a389fb5c1f55e7bc00d305222b0756f1a8ea1135ab"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Marker Hill Construction Inc"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:05:98:86:f8:58:bd:0a:b8:e3:69:07:00:00:00:05:98:86"
+      cert_thumbprint     = "9234E5373B70B1C396637D71864AB5D09147B6DC"
+      cert_valid_from     = "2025-12-05"
+      cert_valid_to       = "2025-12-08"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:05:98:86:f8:58:bd:0a:b8:e3:69:07:00:00:00:05:98:86"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Microsoft_33000618B57FE2CCF0CDC3A0600000000618B5 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-30"
+      version             = "1.0"
+
+      hash                = "d6834a0435dda706850af146ff9d0ea98993958ee401c526e19dafbc507efee0"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Marker Hill Construction Inc"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:06:18:b5:7f:e2:cc:f0:cd:c3:a0:60:00:00:00:06:18:b5"
+      cert_thumbprint     = "8FDE8810C855361EAEB72CF390B4B1B9531ABAF4"
+      cert_valid_from     = "2025-12-30"
+      cert_valid_to       = "2026-01-02"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:06:18:b5:7f:e2:cc:f0:cd:c3:a0:60:00:00:00:06:18:b5"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Microsoft_330006775D9BB106BEC33FA81800000006775D {
+   meta:
+      description         = "Detects Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-28"
+      version             = "1.0"
+
+      hash                = "d3204724a4519d0609b1b9831083c6c7cdd931d9b04dbf4d013d67e166222d7c"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Marker Hill Construction Inc"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:06:77:5d:9b:b1:06:be:c3:3f:a8:18:00:00:00:06:77:5d"
+      cert_thumbprint     = "E6E8FD22544A9159044B4B92E085158E252C4A6D"
+      cert_valid_from     = "2025-11-28"
+      cert_valid_to       = "2025-12-01"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:06:77:5d:9b:b1:06:be:c3:3f:a8:18:00:00:00:06:77:5d"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Microsoft_330006A011DA0B3E7233A75C1300000006A011 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-09"
+      version             = "1.0"
+
+      hash                = "49345d593cbce3d26fc4f400754c7da5d6f509a8470c3e5f0ad8429f9cb704f3"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Marker Hill Construction Inc"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:06:a0:11:da:0b:3e:72:33:a7:5c:13:00:00:00:06:a0:11"
+      cert_thumbprint     = "F9BFF1C00522F8963ADC9B1DB3A3F1E39ECF793A"
+      cert_valid_from     = "2025-12-09"
+      cert_valid_to       = "2025-12-12"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:06:a0:11:da:0b:3e:72:33:a7:5c:13:00:00:00:06:a0:11"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Microsoft_330006C56649E15C5FCAE048AD00000006C566 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-04"
+      version             = "1.0"
+
+      hash                = "4d7f1aa56d46ba6b94ab0fc6007cba67561d7be96687bfb18264cbc4d3d3fa6b"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Marker Hill Construction Inc"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:06:c5:66:49:e1:5c:5f:ca:e0:48:ad:00:00:00:06:c5:66"
+      cert_thumbprint     = "E4A5CEFE56DE01654DD43D5DB32631B9B66794BC"
+      cert_valid_from     = "2026-01-04"
+      cert_valid_to       = "2026-01-07"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:06:c5:66:49:e1:5c:5f:ca:e0:48:ad:00:00:00:06:c5:66"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Microsoft_330006EA51793FF5220B6E51FB00000006EA51 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-02"
+      version             = "1.0"
+
+      hash                = "4990878b7ee547b3bb4678aaf83f9b2036d7661fa19b5cfa5f1765f3d4fec097"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Marker Hill Construction Inc"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:06:ea:51:79:3f:f5:22:0b:6e:51:fb:00:00:00:06:ea:51"
+      cert_thumbprint     = "D2B431F77BFC43DE62BE20444DC5ADC612624379"
+      cert_valid_from     = "2026-01-02"
+      cert_valid_to       = "2026-01-05"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:06:ea:51:79:3f:f5:22:0b:6e:51:fb:00:00:00:06:ea:51"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Microsoft_330007226D3CD4D81E71D103CB00000007226D {
+   meta:
+      description         = "Detects Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-28"
+      version             = "1.0"
+
+      hash                = "46f59eb0dc68d4e5511446bd2ae7fb723a04dce72322f0786b43463c53bd1f64"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Marker Hill Construction Inc"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:07:22:6d:3c:d4:d8:1e:71:d1:03:cb:00:00:00:07:22:6d"
+      cert_thumbprint     = "F257123388DD089DEF50AED28D913DD606F0EC76"
+      cert_valid_from     = "2026-02-28"
+      cert_valid_to       = "2026-03-03"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:07:22:6d:3c:d4:d8:1e:71:d1:03:cb:00:00:00:07:22:6d"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Microsoft_3300073C691D8617DD0B49268E000000073C69 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-05"
+      version             = "1.0"
+
+      hash                = "6a4839a9ab9ea77d36c25955c39b28aa6602fce3489c21a674edf81f9ec2a7f9"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Marker Hill Construction Inc"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:07:3c:69:1d:86:17:dd:0b:49:26:8e:00:00:00:07:3c:69"
+      cert_thumbprint     = "99B6558FF48DAE39804931051034E90B1951DE48"
+      cert_valid_from     = "2026-03-05"
+      cert_valid_to       = "2026-03-08"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:07:3c:69:1d:86:17:dd:0b:49:26:8e:00:00:00:07:3c:69"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Microsoft_33000753F56F20E0A506B08C9F0000000753F5 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-09"
+      version             = "1.0"
+
+      hash                = "fc1de9abdfe9a31a30aed6c10e6cb2e3226afc8fd50c66b139d0851676f71927"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Marker Hill Construction Inc"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:07:53:f5:6f:20:e0:a5:06:b0:8c:9f:00:00:00:07:53:f5"
+      cert_thumbprint     = "F8EEC41B25A56F996E51595B56551251399EE1B0"
+      cert_valid_from     = "2026-03-09"
+      cert_valid_to       = "2026-03-12"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:07:53:f5:6f:20:e0:a5:06:b0:8c:9f:00:00:00:07:53:f5"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Microsoft_33000768CE314BBD4D1F503B9A0000000768CE {
+   meta:
+      description         = "Detects Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-12"
+      version             = "1.0"
+
+      hash                = "106803719e4aaf7439378baa6a6400d7b40ea0e71fa0f0d5199a7037a6e1a470"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Marker Hill Construction Inc"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:07:68:ce:31:4b:bd:4d:1f:50:3b:9a:00:00:00:07:68:ce"
+      cert_thumbprint     = "E42BB5C169FAA21020172E954BC875A8644155D8"
+      cert_valid_from     = "2026-03-12"
+      cert_valid_to       = "2026-03-15"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:07:68:ce:31:4b:bd:4d:1f:50:3b:9a:00:00:00:07:68:ce"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Microsoft_3300076EFDC3268155C7392DD3000000076EFD {
+   meta:
+      description         = "Detects Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-15"
+      version             = "1.0"
+
+      hash                = "9e6230c0ce510686d92ce9b866c9448349bccdd20418a6b11e828fdb88de59f4"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Marker Hill Construction Inc"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:07:6e:fd:c3:26:81:55:c7:39:2d:d3:00:00:00:07:6e:fd"
+      cert_thumbprint     = "7653EDCD83E70D7FEB2D30A99378B9ABA8680AD7"
+      cert_valid_from     = "2026-03-15"
+      cert_valid_to       = "2026-03-18"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:07:6e:fd:c3:26:81:55:c7:39:2d:d3:00:00:00:07:6e:fd"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Microsoft_33000771609E6AB5C9E594E776000000077160 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-16"
+      version             = "1.0"
+
+      hash                = "a74cbcfdadc1bcef61373536e4139d8221e6d3da57a3dd8960113263c57c97ee"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Marker Hill Construction Inc"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:07:71:60:9e:6a:b5:c9:e5:94:e7:76:00:00:00:07:71:60"
+      cert_thumbprint     = "360D80385925F2D0BD5039EFCCF1AB0DB3B3D690"
+      cert_valid_from     = "2026-03-16"
+      cert_valid_to       = "2026-03-19"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:07:71:60:9e:6a:b5:c9:e5:94:e7:76:00:00:00:07:71:60"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Microsoft_330007EE11DAE1E4AAA0899D5C00000007EE11 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-22"
+      version             = "1.0"
+
+      hash                = "e6b847a3cfeae0e63cd47d25e79e40fea5c53cccd11193b0282b42dd53d80378"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Marker Hill Construction Inc"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:07:ee:11:da:e1:e4:aa:a0:89:9d:5c:00:00:00:07:ee:11"
+      cert_thumbprint     = "AC12217249131C14A62060E102790EBECB64CE27"
+      cert_valid_from     = "2026-02-22"
+      cert_valid_to       = "2026-02-25"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:07:ee:11:da:e1:e4:aa:a0:89:9d:5c:00:00:00:07:ee:11"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Microsoft_33000873E57D43D08C63CBBB970000000873E5 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-24"
+      version             = "1.0"
+
+      hash                = "6e44ac52d6fccd54bcd9e86f60ae8a17de58d69a1e0168042773c78ebd76e745"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Marker Hill Construction Inc"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:08:73:e5:7d:43:d0:8c:63:cb:bb:97:00:00:00:08:73:e5"
+      cert_thumbprint     = "F1A776A6B3A772E8A6CB5A196C47928DE7056FF5"
+      cert_valid_from     = "2026-03-24"
+      cert_valid_to       = "2026-03-27"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:08:73:e5:7d:43:d0:8c:63:cb:bb:97:00:00:00:08:73:e5"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Microsoft_33000898DCD27E0B07276CB3680000000898DC {
+   meta:
+      description         = "Detects Traffer with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-20"
+      version             = "1.0"
+
+      hash                = "5202a88b6257d8532fce5cfac36957434839040e2257570025bdc99cad9a4532"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Marker Hill Construction Inc"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:08:98:dc:d2:7e:0b:07:27:6c:b3:68:00:00:00:08:98:dc"
+      cert_thumbprint     = "5DE524C8E79C25C28F35D696F753963AE83DAFC2"
+      cert_valid_from     = "2026-03-20"
+      cert_valid_to       = "2026-03-23"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:08:98:dc:d2:7e:0b:07:27:6c:b3:68:00:00:00:08:98:dc"
+      )
+}
+
 rule MAL_Compromised_Cert_Traffer_Mystix_SSL_com_084374CC276E43AC90AFFA80B1EF7C38 {
    meta:
       description         = "Detects Traffer (Mystix) with compromised cert (SSL.com)"
@@ -59742,6 +60407,41 @@ rule MAL_Compromised_Cert_Traffer_Mystix_SSL_com_5A556CE629496645BC608E4ED4D8C39
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "5a:55:6c:e6:29:49:66:45:bc:60:8e:4e:d4:d8:c3:92"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_SSL_com_02958156F19AA308A752AA21334CEB5C {
+   meta:
+      description         = "Detects Traffer with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-14"
+      version             = "1.0"
+
+      hash                = "e0b089598582d3a4ab3831a54203ec39526bd12ff10e5709056cf854280d4800"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Fast Home Group LLC"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "02:95:81:56:f1:9a:a3:08:a7:52:aa:21:33:4c:eb:5c"
+      cert_thumbprint     = "9F4C05AC53A52D9645E2E295ADD7AC6315AFFAB5"
+      cert_valid_from     = "2026-04-14"
+      cert_valid_to       = "2027-04-14"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "02:95:81:56:f1:9a:a3:08:a7:52:aa:21:33:4c:eb:5c"
       )
 }
 
@@ -60057,6 +60757,41 @@ rule MAL_Compromised_Cert_Traffer_Sectigo_00AF14E42F5DF730547AEF8E581C0DB316 {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "00:af:14:e4:2f:5d:f7:30:54:7a:ef:8e:58:1c:0d:b3:16"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Sectigo_00CC4C1F1DB6D23A9248EB60A5E7F237DD {
+   meta:
+      description         = "Detects Traffer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-27"
+      version             = "1.0"
+
+      hash                = "7b643b230e42e3a2b9a7c03a23331ce39c377b501738d043a868a0620170ce84"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake meeting app"
+
+      signer              = "Shenzhen Xinfeng E-commerce Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:cc:4c:1f:1d:b6:d2:3a:92:48:eb:60:a5:e7:f2:37:dd"
+      cert_thumbprint     = "44073ED8F28F78191FF1A5A2A6EF7F1A228F7ECD"
+      cert_valid_from     = "2026-01-27"
+      cert_valid_to       = "2027-01-27"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:cc:4c:1f:1d:b6:d2:3a:92:48:eb:60:a5:e7:f2:37:dd"
       )
 }
 
@@ -74442,6 +75177,41 @@ rule MAL_Compromised_Cert_ValleyRAT_GlobalSign_54920428011B1572DC58F84D {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "54:92:04:28:01:1b:15:72:dc:58:f8:4d"
+      )
+}
+
+rule MAL_Compromised_Cert_ValleyRAT_Sectigo_0099D8974C1EAA7BE996585FF2DE10D3AD {
+   meta:
+      description         = "Detects ValleyRAT with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-27"
+      version             = "1.0"
+
+      hash                = "e17d12a3cb758a7cd55d9e0305bc1471d30a7125cb14f3574d47f1bb91216fc4"
+      malware             = "ValleyRAT"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: 7799[.]5oo[.]im"
+
+      signer              = "MiniTool Software Limited"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV E36"
+      cert_serial         = "00:99:d8:97:4c:1e:aa:7b:e9:96:58:5f:f2:de:10:d3:ad"
+      cert_thumbprint     = "AF86A6BF744DCD8EF77FF4A4C8BFCDB099323A51"
+      cert_valid_from     = "2026-03-27"
+      cert_valid_to       = "2027-03-26"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV E36" and
+         sig.serial == "00:99:d8:97:4c:1e:aa:7b:e9:96:58:5f:f2:de:10:d3:ad"
       )
 }
 

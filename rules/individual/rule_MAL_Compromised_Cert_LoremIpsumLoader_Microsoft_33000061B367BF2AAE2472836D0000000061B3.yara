@@ -8,7 +8,7 @@ rule MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_33000061B367BF2AAE2472836D0
       date                = "2026-04-21"
       version             = "1.0"
 
-      hash                = "a7dfe696c8c5b2c0fe8ac4d525e0fe13173af727204a0727a4014199c64bab11"
+      hash                = "045b76fa552dbfdfb7e5de66c9c599fe91151384be6a9849ec8965aa7251b818"
       malware             = "LoremIpsumLoader"
       malware_type        = "Initial access tool"
       malware_notes       = ""
@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_33000061B367BF2AAE2472836D0
       cert_valid_from     = "2026-04-21"
       cert_valid_to       = "2026-04-24"
 
-      country             = "US"
-      state               = "Arkansas"
-      locality            = "MORRILTON"
+      country             = "???"
+      state               = "???"
+      locality            = "???"
       email               = "???"
-      rdn_serial_number   = "Not Specified"
+      rdn_serial_number   = ""
 
    condition:
       uint16(0) == 0x5a4d and
