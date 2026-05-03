@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_ValleyRAT_Sectigo_0099D8974C1EAA7BE996585FF2DE10D3AD {
       cert_valid_from     = "2026-03-27"
       cert_valid_to       = "2027-03-26"
 
-      country             = "???"
-      state               = "???"
+      country             = "HK"
+      state               = "Hong Kong"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "66345010"
 
    condition:
       uint16(0) == 0x5a4d and

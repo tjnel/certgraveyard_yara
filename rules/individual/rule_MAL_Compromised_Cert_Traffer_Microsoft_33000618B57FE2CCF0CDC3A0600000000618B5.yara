@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Traffer_Microsoft_33000618B57FE2CCF0CDC3A0600000000618
       cert_valid_from     = "2025-12-30"
       cert_valid_to       = "2026-01-02"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

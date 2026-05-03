@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_33000061B367BF2AAE2472836D0
       cert_valid_from     = "2026-04-21"
       cert_valid_to       = "2026-04-24"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Arkansas"
+      locality            = "MORRILTON"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

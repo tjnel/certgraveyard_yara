@@ -4,6 +4,37 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.05.03] - 2026-05-03
+
+### Added
+- MAL_Compromised_Cert_Unknown_SSL_com_41FC5D610B8907BD08584D356598097D (Unknown - SSL.com)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_3300003254BF12C3217BAC1310000000003254 (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_33000005A5D3114AD4FC964B140000000005A5 (CastleLoader - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_Traffer_Microsoft_3300076EFDC3268155C7392DD3000000076EFD (Updated metadata for Traffer)
+- MAL_Compromised_Cert_Traffer_Microsoft_33000768CE314BBD4D1F503B9A0000000768CE (Updated metadata for Traffer)
+- MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_33000061B367BF2AAE2472836D0000000061B3 (Updated metadata for LoremIpsumLoader)
+- MAL_Compromised_Cert_Traffer_Microsoft_33000898DCD27E0B07276CB3680000000898DC (Updated metadata for Traffer)
+- MAL_Compromised_Cert_Traffer_Microsoft_330006775D9BB106BEC33FA81800000006775D (Updated metadata for Traffer)
+- MAL_Compromised_Cert_Traffer_Microsoft_3300073C691D8617DD0B49268E000000073C69 (Updated metadata for Traffer)
+- MAL_Compromised_Cert_Traffer_Microsoft_330007226D3CD4D81E71D103CB00000007226D (Updated metadata for Traffer)
+- MAL_Compromised_Cert_Traffer_Microsoft_33000873E57D43D08C63CBBB970000000873E5 (Updated metadata for Traffer)
+- MAL_Compromised_Cert_Traffer_SSL_com_02958156F19AA308A752AA21334CEB5C (Updated metadata for Traffer)
+- MAL_Compromised_Cert_Traffer_Microsoft_3300059886F858BD0AB8E36907000000059886 (Updated metadata for Traffer)
+- MAL_Compromised_Cert_Traffer_Microsoft_33000771609E6AB5C9E594E776000000077160 (Updated metadata for Traffer)
+- MAL_Compromised_Cert_Traffer_Microsoft_33000753F56F20E0A506B08C9F0000000753F5 (Updated metadata for Traffer)
+- MAL_Compromised_Cert_Traffer_Microsoft_330006C56649E15C5FCAE048AD00000006C566 (Updated metadata for Traffer)
+- MAL_Compromised_Cert_Traffer_Sectigo_00CC4C1F1DB6D23A9248EB60A5E7F237DD (Updated metadata for Traffer)
+- MAL_Compromised_Cert_CastleLoader_Sectigo_008E4CF3C751EA91CFBDB64A8A1E6320AB (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_Traffer_Microsoft_3300008109F2DA80987535BD74000000008109 (Updated metadata for Traffer)
+- MAL_Compromised_Cert_Traffer_Microsoft_33000618B57FE2CCF0CDC3A0600000000618B5 (Updated metadata for Traffer)
+- MAL_Compromised_Cert_Traffer_Microsoft_330006EA51793FF5220B6E51FB00000006EA51 (Updated metadata for Traffer)
+- MAL_Compromised_Cert_Traffer_Microsoft_33000559EC04F8F0531F1F232B0000000559EC (Updated metadata for Traffer)
+- MAL_Compromised_Cert_Traffer_Microsoft_330006A011DA0B3E7233A75C1300000006A011 (Updated metadata for Traffer)
+- MAL_Compromised_Cert_Traffer_Microsoft_330007EE11DAE1E4AAA0899D5C00000007EE11 (Updated metadata for Traffer)
+- MAL_Compromised_Cert_ValleyRAT_Sectigo_0099D8974C1EAA7BE996585FF2DE10D3AD (Updated metadata for ValleyRAT)
+
 ## [2026.04.30] - 2026-04-30
 
 ### Added

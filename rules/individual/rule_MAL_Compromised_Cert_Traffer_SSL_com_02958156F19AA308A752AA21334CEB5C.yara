@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Traffer_SSL_com_02958156F19AA308A752AA21334CEB5C {
       cert_valid_from     = "2026-04-14"
       cert_valid_to       = "2027-04-14"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "KG"
+      state               = "Osh Region"
+      locality            = "Osh"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "163230-3310-OOO"
 
    condition:
       uint16(0) == 0x5a4d and

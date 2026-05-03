@@ -5425,6 +5425,41 @@ rule MAL_Compromised_Cert_CastleLoader_GoGetSSL_0C00AB5BFC8328FB8AAAD01F48DB8DD2
       )
 }
 
+rule MAL_Compromised_Cert_CastleLoader_Microsoft_33000005A5D3114AD4FC964B140000000005A5 {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-09"
+      version             = "1.0"
+
+      hash                = "018591f165b83247db10620d5b45a31ba406c10a5f85a6c2c30d297b530774ee"
+      malware             = "CastleLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "LEXYL EPSILON"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:00:05:a5:d3:11:4a:d4:fc:96:4b:14:00:00:00:00:05:a5"
+      cert_thumbprint     = "A4AAA29CAABB5D0ED723EDEFD164FAEB059383F6"
+      cert_valid_from     = "2026-04-09"
+      cert_valid_to       = "2026-04-12"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:00:05:a5:d3:11:4a:d4:fc:96:4b:14:00:00:00:00:05:a5"
+      )
+}
+
 rule MAL_Compromised_Cert_CastleLoader_Microsoft_3300001A0A0DA6F871B03A582B000000001A0A {
    meta:
       description         = "Detects CastleLoader with compromised cert (Microsoft)"
@@ -5457,6 +5492,41 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_3300001A0A0DA6F871B03A582B00000
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
          sig.serial == "33:00:00:1a:0a:0d:a6:f8:71:b0:3a:58:2b:00:00:00:00:1a:0a"
+      )
+}
+
+rule MAL_Compromised_Cert_CastleLoader_Microsoft_3300003254BF12C3217BAC1310000000003254 {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-11"
+      version             = "1.0"
+
+      hash                = "94f2f31632d8f38a816f3999305d41b6356258c0df1634a1eb2f992c3963fb76"
+      malware             = "CastleLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "LEXYL EPSILON"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:00:32:54:bf:12:c3:21:7b:ac:13:10:00:00:00:00:32:54"
+      cert_thumbprint     = "ED784352B39F0543BEBB7E5196C353342760272F"
+      cert_valid_from     = "2026-04-11"
+      cert_valid_to       = "2026-04-14"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:00:32:54:bf:12:c3:21:7b:ac:13:10:00:00:00:00:32:54"
       )
 }
 
@@ -6111,11 +6181,11 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_008E4CF3C751EA91CFBDB64A8A1E6320A
       cert_valid_from     = "2026-04-03"
       cert_valid_to       = "2027-04-03"
 
-      country             = "???"
-      state               = "???"
+      country             = "US"
+      state               = "Arizona"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "L12101683"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -26761,11 +26831,11 @@ rule MAL_Compromised_Cert_LoremIpsumLoader_Microsoft_33000061B367BF2AAE2472836D0
       cert_valid_from     = "2026-04-21"
       cert_valid_to       = "2026-04-24"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Arkansas"
+      locality            = "MORRILTON"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -59696,11 +59766,11 @@ rule MAL_Compromised_Cert_Traffer_Microsoft_3300008109F2DA80987535BD740000000081
       cert_valid_from     = "2026-04-25"
       cert_valid_to       = "2026-04-28"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -59731,11 +59801,11 @@ rule MAL_Compromised_Cert_Traffer_Microsoft_33000559EC04F8F0531F1F232B0000000559
       cert_valid_from     = "2025-11-18"
       cert_valid_to       = "2025-11-21"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -59801,11 +59871,11 @@ rule MAL_Compromised_Cert_Traffer_Microsoft_3300059886F858BD0AB8E369070000000598
       cert_valid_from     = "2025-12-05"
       cert_valid_to       = "2025-12-08"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -59836,11 +59906,11 @@ rule MAL_Compromised_Cert_Traffer_Microsoft_33000618B57FE2CCF0CDC3A0600000000618
       cert_valid_from     = "2025-12-30"
       cert_valid_to       = "2026-01-02"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -59871,11 +59941,11 @@ rule MAL_Compromised_Cert_Traffer_Microsoft_330006775D9BB106BEC33FA8180000000677
       cert_valid_from     = "2025-11-28"
       cert_valid_to       = "2025-12-01"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -59906,11 +59976,11 @@ rule MAL_Compromised_Cert_Traffer_Microsoft_330006A011DA0B3E7233A75C1300000006A0
       cert_valid_from     = "2025-12-09"
       cert_valid_to       = "2025-12-12"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -59941,11 +60011,11 @@ rule MAL_Compromised_Cert_Traffer_Microsoft_330006C56649E15C5FCAE048AD00000006C5
       cert_valid_from     = "2026-01-04"
       cert_valid_to       = "2026-01-07"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -59976,11 +60046,11 @@ rule MAL_Compromised_Cert_Traffer_Microsoft_330006EA51793FF5220B6E51FB00000006EA
       cert_valid_from     = "2026-01-02"
       cert_valid_to       = "2026-01-05"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -60011,11 +60081,11 @@ rule MAL_Compromised_Cert_Traffer_Microsoft_330007226D3CD4D81E71D103CB0000000722
       cert_valid_from     = "2026-02-28"
       cert_valid_to       = "2026-03-03"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -60046,11 +60116,11 @@ rule MAL_Compromised_Cert_Traffer_Microsoft_3300073C691D8617DD0B49268E000000073C
       cert_valid_from     = "2026-03-05"
       cert_valid_to       = "2026-03-08"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -60081,11 +60151,11 @@ rule MAL_Compromised_Cert_Traffer_Microsoft_33000753F56F20E0A506B08C9F0000000753
       cert_valid_from     = "2026-03-09"
       cert_valid_to       = "2026-03-12"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -60116,11 +60186,11 @@ rule MAL_Compromised_Cert_Traffer_Microsoft_33000768CE314BBD4D1F503B9A0000000768
       cert_valid_from     = "2026-03-12"
       cert_valid_to       = "2026-03-15"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -60151,11 +60221,11 @@ rule MAL_Compromised_Cert_Traffer_Microsoft_3300076EFDC3268155C7392DD3000000076E
       cert_valid_from     = "2026-03-15"
       cert_valid_to       = "2026-03-18"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -60186,11 +60256,11 @@ rule MAL_Compromised_Cert_Traffer_Microsoft_33000771609E6AB5C9E594E7760000000771
       cert_valid_from     = "2026-03-16"
       cert_valid_to       = "2026-03-19"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -60221,11 +60291,11 @@ rule MAL_Compromised_Cert_Traffer_Microsoft_330007EE11DAE1E4AAA0899D5C00000007EE
       cert_valid_from     = "2026-02-22"
       cert_valid_to       = "2026-02-25"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -60256,11 +60326,11 @@ rule MAL_Compromised_Cert_Traffer_Microsoft_33000873E57D43D08C63CBBB970000000873
       cert_valid_from     = "2026-03-24"
       cert_valid_to       = "2026-03-27"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -60291,11 +60361,11 @@ rule MAL_Compromised_Cert_Traffer_Microsoft_33000898DCD27E0B07276CB3680000000898
       cert_valid_from     = "2026-03-20"
       cert_valid_to       = "2026-03-23"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -60431,11 +60501,11 @@ rule MAL_Compromised_Cert_Traffer_SSL_com_02958156F19AA308A752AA21334CEB5C {
       cert_valid_from     = "2026-04-14"
       cert_valid_to       = "2027-04-14"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "KG"
+      state               = "Osh Region"
+      locality            = "Osh"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "163230-3310-OOO"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -60781,11 +60851,11 @@ rule MAL_Compromised_Cert_Traffer_Sectigo_00CC4C1F1DB6D23A9248EB60A5E7F237DD {
       cert_valid_from     = "2026-01-27"
       cert_valid_to       = "2027-01-27"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Guangdong Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91440300MA5F7E1TXW"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -71400,6 +71470,41 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_4071BFD40B15020A57FAD20E1A50D3A7 {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_SSL_com_41FC5D610B8907BD08584D356598097D {
+   meta:
+      description         = "Detects Unknown with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-01"
+      version             = "1.0"
+
+      hash                = "a2d9d1ad3d8a618ca7c0125a3cd8e1afe36759f9ccfb4965aa48358408e9d051"
+      malware             = "Unknown"
+      malware_type        = "Loader"
+      malware_notes       = "Binary written in Nim used infra-telemetry[.]com for C2"
+
+      signer              = "X Grup Technology Tesis Yonetim Hizmetleri Ltd. Sti."
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "41:fc:5d:61:0b:89:07:bd:08:58:4d:35:65:98:09:7d"
+      cert_thumbprint     = "FAC94EADD346B79B562A1870F76C0DFBDAA3D3BD"
+      cert_valid_from     = "2026-04-01"
+      cert_valid_to       = "2027-03-31"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "41:fc:5d:61:0b:89:07:bd:08:58:4d:35:65:98:09:7d"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_SSL_com_4304E2AAAACA01BD7729407785C161B2 {
    meta:
       description         = "Detects Unknown with compromised cert (SSL.com)"
@@ -75201,11 +75306,11 @@ rule MAL_Compromised_Cert_ValleyRAT_Sectigo_0099D8974C1EAA7BE996585FF2DE10D3AD {
       cert_valid_from     = "2026-03-27"
       cert_valid_to       = "2027-03-26"
 
-      country             = "???"
-      state               = "???"
+      country             = "HK"
+      state               = "Hong Kong"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "66345010"
 
    condition:
       uint16(0) == 0x5a4d and

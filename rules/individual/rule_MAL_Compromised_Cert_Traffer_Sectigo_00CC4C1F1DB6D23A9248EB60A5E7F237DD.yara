@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Traffer_Sectigo_00CC4C1F1DB6D23A9248EB60A5E7F237DD {
       cert_valid_from     = "2026-01-27"
       cert_valid_to       = "2027-01-27"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Guangdong Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91440300MA5F7E1TXW"
 
    condition:
       uint16(0) == 0x5a4d and

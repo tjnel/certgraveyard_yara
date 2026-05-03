@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_008E4CF3C751EA91CFBDB64A8A1E6320A
       cert_valid_from     = "2026-04-03"
       cert_valid_to       = "2027-04-03"
 
-      country             = "???"
-      state               = "???"
+      country             = "US"
+      state               = "Arizona"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "L12101683"
 
    condition:
       uint16(0) == 0x5a4d and
