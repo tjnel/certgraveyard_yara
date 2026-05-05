@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_41FC5D610B8907BD08584D356598097D {
       cert_valid_from     = "2026-04-01"
       cert_valid_to       = "2027-03-31"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "TR"
+      state               = "Istanbul"
+      locality            = "Kâğıthane"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "1117672"
 
    condition:
       uint16(0) == 0x5a4d and

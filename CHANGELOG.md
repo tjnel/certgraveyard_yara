@@ -4,6 +4,19 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.05.05] - 2026-05-05
+
+### Added
+- MAL_Compromised_Cert_FakeVPN_GlobalSign_45A1D1FB2C2DF910EB190A8C (FakeVPN - GlobalSign)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300001CF70654DAD728BA5763000000001CF7 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_330000A9113A4BD177B9718F7C00000000A911 (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_Unknown_GoGetSSL_0DB0CB5C25BC7AF916078B05A5902AED (Unknown - GoGetSSL)
+
+### Modified
+- MAL_Compromised_Cert_CastleLoader_Microsoft_3300003254BF12C3217BAC1310000000003254 (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_Unknown_SSL_com_41FC5D610B8907BD08584D356598097D (Updated metadata for Unknown)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_33000005A5D3114AD4FC964B140000000005A5 (Updated metadata for CastleLoader)
+
 ## [2026.05.03] - 2026-05-03
 
 ### Added
