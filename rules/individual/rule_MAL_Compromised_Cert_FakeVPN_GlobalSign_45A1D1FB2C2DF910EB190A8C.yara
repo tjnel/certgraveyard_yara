@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeVPN_GlobalSign_45A1D1FB2C2DF910EB190A8C {
       cert_valid_from     = "2026-04-01"
       cert_valid_to       = "2027-04-02"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "RU"
+      state               = "Sankt-Peterburg"
+      locality            = "Sankt-Peterburg"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "1147847027074"
 
    condition:
       uint16(0) == 0x5a4d and

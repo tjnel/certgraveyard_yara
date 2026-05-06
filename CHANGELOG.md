@@ -4,6 +4,25 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.05.06] - 2026-05-06
+
+### Added
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000B83E914519B69B73723100000000B83E (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_330000BD0688942C3496656E1200000000BD06 (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_VariantLoader_Microsoft_330000B194F757CFE96A2702FC00000000B194 (VariantLoader - Microsoft)
+- MAL_Compromised_Cert_VariantLoader_Microsoft_330000BF23570CDE3B2895388700000000BF23 (VariantLoader - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_3300009960EB1964A5ABD95DC7000000009960 (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000BFC90192D2AED4F201B800000000BFC9 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_FakeNordpass_Sectigo_14F4300AE3958280A2DE8FD70726BC57 (FakeNordpass - Sectigo)
+- MAL_Compromised_Cert_VariantLoader_Microsoft_3300009AC5222ECE0F58876B41000000009AC5 (VariantLoader - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_DigiCert_09BAD6F035789BF34EFA23620A2A34DF (CastleLoader - DigiCert)
+- MAL_Compromised_Cert_T_21_Microsoft_3300008B04822781012CEC21B6000000008B04 (T-21 - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_Sectigo_00D1620859D4F734A6D02B05C9170AAE49 (CastleLoader - Sectigo)
+- MAL_Compromised_Cert_FakeRVTools_Sectigo_00A80D45D8AC1F17837FA46C66DDE70057 (FakeRVTools - Sectigo)
+
+### Modified
+- MAL_Compromised_Cert_FakeVPN_GlobalSign_45A1D1FB2C2DF910EB190A8C (Updated metadata for FakeVPN)
+
 ## [2026.05.05] - 2026-05-05
 
 ### Added
