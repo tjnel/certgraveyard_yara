@@ -4,6 +4,24 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.05.07] - 2026-05-07
+
+### Added
+- MAL_Compromised_Cert_APXLoader_Microsoft_330008E3A4F7EE379FAAF43FAE00000008E3A4 (APXLoader - Microsoft)
+- MAL_Compromised_Cert_APXLoader_Microsoft_330000484D2FBB5849C4C7B24A00000000484D (APXLoader - Microsoft)
+- MAL_Compromised_Cert_APXLoader_Microsoft_33000059130546DBB59522E267000000005913 (APXLoader - Microsoft)
+- MAL_Compromised_Cert_APXLoader_Microsoft_33000030CF1933736F82D0432F0000000030CF (APXLoader - Microsoft)
+- MAL_Compromised_Cert_APXLoader_Microsoft_3300005CCB507827A61A7DEDCB000000005CCB (APXLoader - Microsoft)
+- MAL_Compromised_Cert_APXLoader_Microsoft_33000062B8AAEAC98C2824DD500000000062B8 (APXLoader - Microsoft)
+- MAL_Compromised_Cert_APXLoader_Microsoft_330000323A0A0BBD4CA335567800000000323A (APXLoader - Microsoft)
+- MAL_Compromised_Cert_APXLoader_Microsoft_33000021B084687BDD5B9E89A20000000021B0 (APXLoader - Microsoft)
+- MAL_Compromised_Cert_APXLoader_Microsoft_330007DAC579B145A0CA17626100000007DAC5 (APXLoader - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_FakeRVTools_Sectigo_00A80D45D8AC1F17837FA46C66DDE70057 (Updated metadata for FakeRVTools)
+- MAL_Compromised_Cert_APXLoader_Sectigo_14F4300AE3958280A2DE8FD70726BC57 (Updated metadata for APXLoader)
+- MAL_Compromised_Cert_APXLoader_Microsoft_330007EB2EFDF089C1D4B0FADC00000007EB2E (Updated metadata for APXLoader)
+
 ## [2026.05.06] - 2026-05-06
 
 ### Added

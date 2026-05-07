@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeRVTools_Sectigo_00A80D45D8AC1F17837FA46C66DDE70057
       cert_valid_from     = "2026-02-06"
       cert_valid_to       = "2027-02-06"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Fujian Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91350211MAE1BFAD45"
 
    condition:
       uint16(0) == 0x5a4d and

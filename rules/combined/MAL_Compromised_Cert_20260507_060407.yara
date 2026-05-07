@@ -1,5 +1,390 @@
 import "pe"
 
+rule MAL_Compromised_Cert_APXLoader_Microsoft_33000021B084687BDD5B9E89A20000000021B0 {
+   meta:
+      description         = "Detects APXLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-09"
+      version             = "1.0"
+
+      hash                = "abc14ea855a5d5bb17d965f377e791280939de147afde1f08ec2ea2da97fe31d"
+      malware             = "APXLoader"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "Vic Thadhani"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:00:21:b0:84:68:7b:dd:5b:9e:89:a2:00:00:00:00:21:b0"
+      cert_thumbprint     = "945614CA0D89E59D38EF73F56A4A8A56CA679D1B"
+      cert_valid_from     = "2026-04-09"
+      cert_valid_to       = "2026-04-12"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:00:21:b0:84:68:7b:dd:5b:9e:89:a2:00:00:00:00:21:b0"
+      )
+}
+
+rule MAL_Compromised_Cert_APXLoader_Microsoft_33000030CF1933736F82D0432F0000000030CF {
+   meta:
+      description         = "Detects APXLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-17"
+      version             = "1.0"
+
+      hash                = "52be7c85eb9545866782209d7b2a6e0ba23111ca03285ff1eab0fe2878c29d6e"
+      malware             = "APXLoader"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "SOPHIA MONGILLO"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:00:30:cf:19:33:73:6f:82:d0:43:2f:00:00:00:00:30:cf"
+      cert_thumbprint     = "964EC367FAE8447C332A9CC3BE37B31D9B435C9E"
+      cert_valid_from     = "2026-04-17"
+      cert_valid_to       = "2026-04-20"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:00:30:cf:19:33:73:6f:82:d0:43:2f:00:00:00:00:30:cf"
+      )
+}
+
+rule MAL_Compromised_Cert_APXLoader_Microsoft_330000323A0A0BBD4CA335567800000000323A {
+   meta:
+      description         = "Detects APXLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-17"
+      version             = "1.0"
+
+      hash                = "b35e09bb090cbd52310e98b9bbbb303eea24eb8d468af00d8a55f8a38cecccd8"
+      malware             = "APXLoader"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "Phillips Mcwilliams"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:00:32:3a:0a:0b:bd:4c:a3:35:56:78:00:00:00:00:32:3a"
+      cert_thumbprint     = "6B6A029A3AC80296796B22EB7B9788A32E9368D6"
+      cert_valid_from     = "2026-04-17"
+      cert_valid_to       = "2026-04-20"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:00:32:3a:0a:0b:bd:4c:a3:35:56:78:00:00:00:00:32:3a"
+      )
+}
+
+rule MAL_Compromised_Cert_APXLoader_Microsoft_330000484D2FBB5849C4C7B24A00000000484D {
+   meta:
+      description         = "Detects APXLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-13"
+      version             = "1.0"
+
+      hash                = "61aca585687ec21a182342a40de3eaa12d3fc0d92577456cae0df37c3ed28e99"
+      malware             = "APXLoader"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "Vic Thadhani"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:00:48:4d:2f:bb:58:49:c4:c7:b2:4a:00:00:00:00:48:4d"
+      cert_thumbprint     = "80DB2376BBDC456B28A48CF2C0D4B29871A7EF9D"
+      cert_valid_from     = "2026-04-13"
+      cert_valid_to       = "2026-04-16"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:00:48:4d:2f:bb:58:49:c4:c7:b2:4a:00:00:00:00:48:4d"
+      )
+}
+
+rule MAL_Compromised_Cert_APXLoader_Microsoft_33000059130546DBB59522E267000000005913 {
+   meta:
+      description         = "Detects APXLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-20"
+      version             = "1.0"
+
+      hash                = "d56b30a373b68dbba914fd63ae619565c51ad94a7865d64584ab425343b4a107"
+      malware             = "APXLoader"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "Phillips Mcwilliams"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:00:59:13:05:46:db:b5:95:22:e2:67:00:00:00:00:59:13"
+      cert_thumbprint     = "463651FD85F0BE1A0D0836558608CB0149216B20"
+      cert_valid_from     = "2026-04-20"
+      cert_valid_to       = "2026-04-23"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:00:59:13:05:46:db:b5:95:22:e2:67:00:00:00:00:59:13"
+      )
+}
+
+rule MAL_Compromised_Cert_APXLoader_Microsoft_3300005CCB507827A61A7DEDCB000000005CCB {
+   meta:
+      description         = "Detects APXLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-15"
+      version             = "1.0"
+
+      hash                = "6fc1d441c8cc9d3208ea36750f311704a2f4c40ef7bcb29eae2712622b382c8e"
+      malware             = "APXLoader"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "Vic Thadhani"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:00:5c:cb:50:78:27:a6:1a:7d:ed:cb:00:00:00:00:5c:cb"
+      cert_thumbprint     = "C3DC3CAF8E959810A96E12FFD0C9C045080E99FA"
+      cert_valid_from     = "2026-04-15"
+      cert_valid_to       = "2026-04-18"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:00:5c:cb:50:78:27:a6:1a:7d:ed:cb:00:00:00:00:5c:cb"
+      )
+}
+
+rule MAL_Compromised_Cert_APXLoader_Microsoft_33000062B8AAEAC98C2824DD500000000062B8 {
+   meta:
+      description         = "Detects APXLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-21"
+      version             = "1.0"
+
+      hash                = "2452052f577dac4719bde7e02cbfd69aa0d3bebf21a14ccb93c0cd6e7ac1c94c"
+      malware             = "APXLoader"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "SOPHIA MONGILLO"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:00:62:b8:aa:ea:c9:8c:28:24:dd:50:00:00:00:00:62:b8"
+      cert_thumbprint     = "0E6AB06DB5363F5194EE867E5F8A66C9B0FF973C"
+      cert_valid_from     = "2026-04-21"
+      cert_valid_to       = "2026-04-24"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:00:62:b8:aa:ea:c9:8c:28:24:dd:50:00:00:00:00:62:b8"
+      )
+}
+
+rule MAL_Compromised_Cert_APXLoader_Microsoft_330007DAC579B145A0CA17626100000007DAC5 {
+   meta:
+      description         = "Detects APXLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-04"
+      version             = "1.0"
+
+      hash                = "6efda8849ca8afc2849448764c283bb1e3f1f1e56d406eb9a8a831c5701cc9b0"
+      malware             = "APXLoader"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "Vic Thadhani"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:07:da:c5:79:b1:45:a0:ca:17:62:61:00:00:00:07:da:c5"
+      cert_thumbprint     = "89B85BC28B6CEB366AC2EB64AF380D578BABD54E"
+      cert_valid_from     = "2026-04-04"
+      cert_valid_to       = "2026-04-07"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:07:da:c5:79:b1:45:a0:ca:17:62:61:00:00:00:07:da:c5"
+      )
+}
+
+rule MAL_Compromised_Cert_APXLoader_Microsoft_330007EB2EFDF089C1D4B0FADC00000007EB2E {
+   meta:
+      description         = "Detects APXLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-06"
+      version             = "1.0"
+
+      hash                = "e68dcf3bb3741524ae1c5849bb201ce1abf4a1e92ce74aae8c18a04e7678e31c"
+      malware             = "APXLoader"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "Vic Thadhani"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:07:eb:2e:fd:f0:89:c1:d4:b0:fa:dc:00:00:00:07:eb:2e"
+      cert_thumbprint     = "3518742D86893CEA9B44E35DBBC50B536BA20496"
+      cert_valid_from     = "2026-04-06"
+      cert_valid_to       = "2026-04-09"
+
+      country             = "US"
+      state               = "California"
+      locality            = "PALO ALTO"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:07:eb:2e:fd:f0:89:c1:d4:b0:fa:dc:00:00:00:07:eb:2e"
+      )
+}
+
+rule MAL_Compromised_Cert_APXLoader_Microsoft_330008E3A4F7EE379FAAF43FAE00000008E3A4 {
+   meta:
+      description         = "Detects APXLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-01"
+      version             = "1.0"
+
+      hash                = "82aa6df2aa34091240de8dbb98d2e16bbf71b340a6d2e93cc97ce1fd3838e192"
+      malware             = "APXLoader"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "Vic Thadhani"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:08:e3:a4:f7:ee:37:9f:aa:f4:3f:ae:00:00:00:08:e3:a4"
+      cert_thumbprint     = "582FB85A07481819B757C374FB7E9995F761705B"
+      cert_valid_from     = "2026-04-01"
+      cert_valid_to       = "2026-04-04"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:08:e3:a4:f7:ee:37:9f:aa:f4:3f:ae:00:00:00:08:e3:a4"
+      )
+}
+
+rule MAL_Compromised_Cert_APXLoader_Sectigo_14F4300AE3958280A2DE8FD70726BC57 {
+   meta:
+      description         = "Detects APXLoader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-08"
+      version             = "1.0"
+
+      hash                = "c21004a37adf77147a2e53cec7fd2b21a1e47da538f8868f0b4865d0d8aff629"
+      malware             = "APXLoader"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "INFOTECK SOLUTIONS PRIVATE LIMITED"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "14:f4:30:0a:e3:95:82:80:a2:de:8f:d7:07:26:bc:57"
+      cert_thumbprint     = "DC7F37E4DCE75CC7CDD18857AFE9415AB39266AF"
+      cert_valid_from     = "2026-04-08"
+      cert_valid_to       = "2027-03-17"
+
+      country             = "GB"
+      state               = "London"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "09731596"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "14:f4:30:0a:e3:95:82:80:a2:de:8f:d7:07:26:bc:57"
+      )
+}
+
 rule MAL_Compromised_Cert_Adware_Win32_Tnega_Sectigo_4B48B8FDD2B4D70D135278B06BEFFDFE {
    meta:
       description         = "Detects Adware:Win32/Tnega with compromised cert (Sectigo)"
@@ -19096,11 +19481,11 @@ rule MAL_Compromised_Cert_FakeRVTools_Sectigo_00A80D45D8AC1F17837FA46C66DDE70057
       cert_valid_from     = "2026-02-06"
       cert_valid_to       = "2027-02-06"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Fujian Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91350211MAE1BFAD45"
 
    condition:
       uint16(0) == 0x5a4d and
