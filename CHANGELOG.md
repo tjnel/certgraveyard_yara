@@ -4,6 +4,30 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.05.08] - 2026-05-08
+
+### Added
+- MAL_Compromised_Cert_CastleLoader_Microsoft_330000CC616BCCEF86E7D7ABA400000000CC61 (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_Certificate_warming_Microsoft_330000B80523BEB847F3BD8D4900000000B805 (Certificate warming - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000CBA85784F7176318EEAA00000000CBA8 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_Certificate_warming_Microsoft_330000CA09BE8AA0DE1BE28F1300000000CA09 (Certificate warming - Microsoft)
+- MAL_Compromised_Cert_Certificate_warming_Microsoft_330000DAABB7037904910E9B5400000000DAAB (Certificate warming - Microsoft)
+- MAL_Compromised_Cert_Certificate_warming_Microsoft_3300009C296BFCAA0CBF8BC811000000009C29 (Certificate warming - Microsoft)
+- MAL_Compromised_Cert_Certificate_warming_Microsoft_330000CAF3CE18DF8269256DE000000000CAF3 (Certificate warming - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000D7F83CBC2D5D9D3272DA00000000D7F8 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_APXLoader_Microsoft_330000BE4129FAB1C1B414D19700000000BE41 (APXLoader - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_APXLoader_Microsoft_33000030CF1933736F82D0432F0000000030CF (Updated metadata for APXLoader)
+- MAL_Compromised_Cert_APXLoader_Microsoft_3300005CCB507827A61A7DEDCB000000005CCB (Updated metadata for APXLoader)
+- MAL_Compromised_Cert_APXLoader_Microsoft_33000059130546DBB59522E267000000005913 (Updated metadata for APXLoader)
+- MAL_Compromised_Cert_APXLoader_Microsoft_33000062B8AAEAC98C2824DD500000000062B8 (Updated metadata for APXLoader)
+- MAL_Compromised_Cert_APXLoader_Microsoft_330000484D2FBB5849C4C7B24A00000000484D (Updated metadata for APXLoader)
+- MAL_Compromised_Cert_APXLoader_Microsoft_33000021B084687BDD5B9E89A20000000021B0 (Updated metadata for APXLoader)
+- MAL_Compromised_Cert_APXLoader_Microsoft_330007DAC579B145A0CA17626100000007DAC5 (Updated metadata for APXLoader)
+- MAL_Compromised_Cert_APXLoader_Microsoft_330000323A0A0BBD4CA335567800000000323A (Updated metadata for APXLoader)
+- MAL_Compromised_Cert_APXLoader_Microsoft_330008E3A4F7EE379FAAF43FAE00000008E3A4 (Updated metadata for APXLoader)
+
 ## [2026.05.07] - 2026-05-07
 
 ### Added

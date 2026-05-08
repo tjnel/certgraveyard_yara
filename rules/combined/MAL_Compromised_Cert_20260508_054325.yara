@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_APXLoader_Microsoft_33000021B084687BDD5B9E89A200000000
       cert_valid_from     = "2026-04-09"
       cert_valid_to       = "2026-04-12"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "California"
+      locality            = "PALO ALTO"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -56,11 +56,11 @@ rule MAL_Compromised_Cert_APXLoader_Microsoft_33000030CF1933736F82D0432F00000000
       cert_valid_from     = "2026-04-17"
       cert_valid_to       = "2026-04-20"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Connecticut"
+      locality            = "GROTON"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -91,11 +91,11 @@ rule MAL_Compromised_Cert_APXLoader_Microsoft_330000323A0A0BBD4CA335567800000000
       cert_valid_from     = "2026-04-17"
       cert_valid_to       = "2026-04-20"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "South Carolina"
+      locality            = "Columbia"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -126,11 +126,11 @@ rule MAL_Compromised_Cert_APXLoader_Microsoft_330000484D2FBB5849C4C7B24A00000000
       cert_valid_from     = "2026-04-13"
       cert_valid_to       = "2026-04-16"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "California"
+      locality            = "PALO ALTO"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -161,11 +161,11 @@ rule MAL_Compromised_Cert_APXLoader_Microsoft_33000059130546DBB59522E26700000000
       cert_valid_from     = "2026-04-20"
       cert_valid_to       = "2026-04-23"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "South Carolina"
+      locality            = "Columbia"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -196,11 +196,11 @@ rule MAL_Compromised_Cert_APXLoader_Microsoft_3300005CCB507827A61A7DEDCB00000000
       cert_valid_from     = "2026-04-15"
       cert_valid_to       = "2026-04-18"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "California"
+      locality            = "PALO ALTO"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -231,17 +231,52 @@ rule MAL_Compromised_Cert_APXLoader_Microsoft_33000062B8AAEAC98C2824DD5000000000
       cert_valid_from     = "2026-04-21"
       cert_valid_to       = "2026-04-24"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Connecticut"
+      locality            = "GROTON"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
          sig.serial == "33:00:00:62:b8:aa:ea:c9:8c:28:24:dd:50:00:00:00:00:62:b8"
+      )
+}
+
+rule MAL_Compromised_Cert_APXLoader_Microsoft_330000BE4129FAB1C1B414D19700000000BE41 {
+   meta:
+      description         = "Detects APXLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-04"
+      version             = "1.0"
+
+      hash                = "69eaaa0e2f0b414b96b50b088d978cfe56a074a626d7179a67a5ee02b1830662"
+      malware             = "APXLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Minh Tran"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:00:be:41:29:fa:b1:c1:b4:14:d1:97:00:00:00:00:be:41"
+      cert_thumbprint     = "BA42908FAC35DC94F72FE80C84837A1B9777B2B6"
+      cert_valid_from     = "2026-05-04"
+      cert_valid_to       = "2026-05-07"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "Grand Prairie"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:00:be:41:29:fa:b1:c1:b4:14:d1:97:00:00:00:00:be:41"
       )
 }
 
@@ -266,11 +301,11 @@ rule MAL_Compromised_Cert_APXLoader_Microsoft_330007DAC579B145A0CA17626100000007
       cert_valid_from     = "2026-04-04"
       cert_valid_to       = "2026-04-07"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "California"
+      locality            = "PALO ALTO"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -336,11 +371,11 @@ rule MAL_Compromised_Cert_APXLoader_Microsoft_330008E3A4F7EE379FAAF43FAE00000008
       cert_valid_from     = "2026-04-01"
       cert_valid_to       = "2026-04-04"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "California"
+      locality            = "PALO ALTO"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -6125,6 +6160,41 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_330000BD0688942C3496656E1200000
       )
 }
 
+rule MAL_Compromised_Cert_CastleLoader_Microsoft_330000CC616BCCEF86E7D7ABA400000000CC61 {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-05"
+      version             = "1.0"
+
+      hash                = "8ac502f5e918da028a00e72c1e34f8a5ff96449810b1bac0f08bf63d8dc19840"
+      malware             = "CastleLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: elvaronexkas[.]com"
+
+      signer              = "Nicky Jaramillo Jr"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:00:cc:61:6b:cc:ef:86:e7:d7:ab:a4:00:00:00:00:cc:61"
+      cert_thumbprint     = "03751A7514DD209AA26E9240551F653F9BE484BA"
+      cert_valid_from     = "2026-05-05"
+      cert_valid_to       = "2026-05-08"
+
+      country             = "US"
+      state               = "Washington"
+      locality            = "Milton"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:00:cc:61:6b:cc:ef:86:e7:d7:ab:a4:00:00:00:00:cc:61"
+      )
+}
+
 rule MAL_Compromised_Cert_CastleLoader_Microsoft_330006DF515A14FE3748416FE200000006DF51 {
    meta:
       description         = "Detects CastleLoader with compromised cert (Microsoft)"
@@ -7242,6 +7312,181 @@ rule MAL_Compromised_Cert_Cert_Only_GlobalSign_5D3422FD4AFCF7D012D60C25 {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "5d:34:22:fd:4a:fc:f7:d0:12:d6:0c:25"
+      )
+}
+
+rule MAL_Compromised_Cert_Certificate_warming_Microsoft_3300009C296BFCAA0CBF8BC811000000009C29 {
+   meta:
+      description         = "Detects Certificate warming with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-29"
+      version             = "1.0"
+
+      hash                = "9d9f128f61aec17af6a955b4577e1e6af493b3c4b6dfc5be5a4976f6f644ea05"
+      malware             = "Certificate warming"
+      malware_type        = "Unknown"
+      malware_notes       = "This certificate is being 'warmed', being used to sign benign files before deploying malware."
+
+      signer              = "Mark Boitel"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:00:9c:29:6b:fc:aa:0c:bf:8b:c8:11:00:00:00:00:9c:29"
+      cert_thumbprint     = "19DF54453CFEF1DDD8016C611575FDE47565F32B"
+      cert_valid_from     = "2026-04-29"
+      cert_valid_to       = "2026-05-02"
+
+      country             = "US"
+      state               = "Ohio"
+      locality            = "Dublin"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:00:9c:29:6b:fc:aa:0c:bf:8b:c8:11:00:00:00:00:9c:29"
+      )
+}
+
+rule MAL_Compromised_Cert_Certificate_warming_Microsoft_330000B80523BEB847F3BD8D4900000000B805 {
+   meta:
+      description         = "Detects Certificate warming with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-03"
+      version             = "1.0"
+
+      hash                = "6d844f31ce6fa601e701d76887f7308ca4dda629fd4ed7189d9d43b1e397529c"
+      malware             = "Certificate warming"
+      malware_type        = "Unknown"
+      malware_notes       = "This certificate is being 'warmed' by being used to sign benign things before signing malware."
+
+      signer              = "Minh Tran"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:00:b8:05:23:be:b8:47:f3:bd:8d:49:00:00:00:00:b8:05"
+      cert_thumbprint     = "A0EFCB3B300530E92DBBEE253A5834D110E96715"
+      cert_valid_from     = "2026-05-03"
+      cert_valid_to       = "2026-05-06"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "Grand Prairie"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:00:b8:05:23:be:b8:47:f3:bd:8d:49:00:00:00:00:b8:05"
+      )
+}
+
+rule MAL_Compromised_Cert_Certificate_warming_Microsoft_330000CA09BE8AA0DE1BE28F1300000000CA09 {
+   meta:
+      description         = "Detects Certificate warming with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-07"
+      version             = "1.0"
+
+      hash                = "4231e803c2e0189984d0aea505d6f82bb55cc48096b78a7755739a8f4ff14cce"
+      malware             = "Certificate warming"
+      malware_type        = "Unknown"
+      malware_notes       = "This file is being distributed with the certificate to 'warm' the certificate, increasing the certificate's reputation with Microsoft before using it to sign malware."
+
+      signer              = "TERESA ANN BOSWELL"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:00:ca:09:be:8a:a0:de:1b:e2:8f:13:00:00:00:00:ca:09"
+      cert_thumbprint     = "119DD81D412363BB088787E7571A0FA7F1E1EE4E"
+      cert_valid_from     = "2026-05-07"
+      cert_valid_to       = "2026-05-10"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:00:ca:09:be:8a:a0:de:1b:e2:8f:13:00:00:00:00:ca:09"
+      )
+}
+
+rule MAL_Compromised_Cert_Certificate_warming_Microsoft_330000CAF3CE18DF8269256DE000000000CAF3 {
+   meta:
+      description         = "Detects Certificate warming with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-05"
+      version             = "1.0"
+
+      hash                = "c632ac50aaea1b3243b6d630e8a54ec30881c375b67a9b2eb838f1edf0a9a4c5"
+      malware             = "Certificate warming"
+      malware_type        = "Unknown"
+      malware_notes       = "This certificate is being 'warmed' by signing benign files before signing malware."
+
+      signer              = "Thomas Sullivan"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:00:ca:f3:ce:18:df:82:69:25:6d:e0:00:00:00:00:ca:f3"
+      cert_thumbprint     = "C8D4B037ED40917A7C96C6C090436023501C95F0"
+      cert_valid_from     = "2026-05-05"
+      cert_valid_to       = "2026-05-08"
+
+      country             = "US"
+      state               = "California"
+      locality            = "San Anselmo"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:00:ca:f3:ce:18:df:82:69:25:6d:e0:00:00:00:00:ca:f3"
+      )
+}
+
+rule MAL_Compromised_Cert_Certificate_warming_Microsoft_330000DAABB7037904910E9B5400000000DAAB {
+   meta:
+      description         = "Detects Certificate warming with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-07"
+      version             = "1.0"
+
+      hash                = "9b1880fd0160bdc71d2d23b4170c637af9259fd439a8f8f054b8d5c94ad095ad"
+      malware             = "Certificate warming"
+      malware_type        = "Unknown"
+      malware_notes       = "This file was signed for certificate warming, that is, signing benign files to increase the reputation of the certificate before signing malware."
+
+      signer              = "SONYA MAIZE"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:00:da:ab:b7:03:79:04:91:0e:9b:54:00:00:00:00:da:ab"
+      cert_thumbprint     = "EEAF1B8889CFFDC23134634A97FD2CD06F7B13BB"
+      cert_valid_from     = "2026-05-07"
+      cert_valid_to       = "2026-05-10"
+
+      country             = "US"
+      state               = "Arizona"
+      locality            = "TUBA CITY"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:00:da:ab:b7:03:79:04:91:0e:9b:54:00:00:00:00:da:ab"
       )
 }
 
@@ -50432,6 +50677,76 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000BFC90192D2AED4F201
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
          sig.serial == "33:00:00:bf:c9:01:92:d2:ae:d4:f2:01:b8:00:00:00:00:bf:c9"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000CBA85784F7176318EEAA00000000CBA8 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-05"
+      version             = "1.0"
+
+      hash                = "dbd71bb5a28bdef71119d467d685a00a88d84ff925f43b87330a0152259fb784"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "CHRISTIAN TORRES"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:00:cb:a8:57:84:f7:17:63:18:ee:aa:00:00:00:00:cb:a8"
+      cert_thumbprint     = "1AD393169FAE0D4A2B6BF5A027E75246FFC60DED"
+      cert_valid_from     = "2026-05-05"
+      cert_valid_to       = "2026-05-08"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:00:cb:a8:57:84:f7:17:63:18:ee:aa:00:00:00:00:cb:a8"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000D7F83CBC2D5D9D3272DA00000000D7F8 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-06"
+      version             = "1.0"
+
+      hash                = "40a12372d27db4939d748357f2cdca526c71da11ecc893ba115556ccf5118332"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "CHRISTIAN TORRES"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:00:d7:f8:3c:bc:2d:5d:9d:32:72:da:00:00:00:00:d7:f8"
+      cert_thumbprint     = "30B63B62CDCC40D85623F5C9CF1E31CE4DB4B7C3"
+      cert_valid_from     = "2026-05-06"
+      cert_valid_to       = "2026-05-09"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:00:d7:f8:3c:bc:2d:5d:9d:32:72:da:00:00:00:00:d7:f8"
       )
 }
 

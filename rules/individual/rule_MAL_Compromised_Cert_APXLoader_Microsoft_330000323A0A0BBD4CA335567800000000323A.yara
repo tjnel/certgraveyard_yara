@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_APXLoader_Microsoft_330000323A0A0BBD4CA335567800000000
       cert_valid_from     = "2026-04-17"
       cert_valid_to       = "2026-04-20"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "South Carolina"
+      locality            = "Columbia"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

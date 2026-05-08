@@ -1,29 +1,29 @@
 import "pe"
 
-rule MAL_Compromised_Cert_APXLoader_Microsoft_33000030CF1933736F82D0432F0000000030CF {
+rule MAL_Compromised_Cert_APXLoader_Microsoft_330000BE4129FAB1C1B414D19700000000BE41 {
    meta:
       description         = "Detects APXLoader with compromised cert (Microsoft)"
       author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
-      date                = "2026-04-17"
+      date                = "2026-05-04"
       version             = "1.0"
 
-      hash                = "52be7c85eb9545866782209d7b2a6e0ba23111ca03285ff1eab0fe2878c29d6e"
+      hash                = "69eaaa0e2f0b414b96b50b088d978cfe56a074a626d7179a67a5ee02b1830662"
       malware             = "APXLoader"
-      malware_type        = "Loader"
+      malware_type        = "Unknown"
       malware_notes       = ""
 
-      signer              = "SOPHIA MONGILLO"
+      signer              = "Minh Tran"
       cert_issuer_short   = "Microsoft"
       cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
-      cert_serial         = "33:00:00:30:cf:19:33:73:6f:82:d0:43:2f:00:00:00:00:30:cf"
-      cert_thumbprint     = "964EC367FAE8447C332A9CC3BE37B31D9B435C9E"
-      cert_valid_from     = "2026-04-17"
-      cert_valid_to       = "2026-04-20"
+      cert_serial         = "33:00:00:be:41:29:fa:b1:c1:b4:14:d1:97:00:00:00:00:be:41"
+      cert_thumbprint     = "BA42908FAC35DC94F72FE80C84837A1B9777B2B6"
+      cert_valid_from     = "2026-05-04"
+      cert_valid_to       = "2026-05-07"
 
       country             = "US"
-      state               = "Connecticut"
-      locality            = "GROTON"
+      state               = "Texas"
+      locality            = "Grand Prairie"
       email               = "???"
       rdn_serial_number   = "Not Specified"
 
@@ -31,6 +31,6 @@ rule MAL_Compromised_Cert_APXLoader_Microsoft_33000030CF1933736F82D0432F00000000
       uint16(0) == 0x5a4d and
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
-         sig.serial == "33:00:00:30:cf:19:33:73:6f:82:d0:43:2f:00:00:00:00:30:cf"
+         sig.serial == "33:00:00:be:41:29:fa:b1:c1:b4:14:d1:97:00:00:00:00:be:41"
       )
 }
