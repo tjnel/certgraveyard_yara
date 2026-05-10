@@ -4,6 +4,19 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.05.10] - 2026-05-10
+
+### Added
+- MAL_Compromised_Cert_BR_04_Sectigo_6C5EFE09CD24511FDDD320DD409C2D03 (BR-04 - Sectigo)
+- MAL_Compromised_Cert_Traffer_Certum_666477706E045D6558E91366A71B2803 (Traffer - Certum)
+- MAL_Compromised_Cert_Traffer_Verokey_01BEAED9A69D5F7E38D72C9747A1E315 (Traffer - Verokey)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330000CFC2E61113D904B9F9AC00000000CFC2 (Forever Botnet,BR-01 - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000D7F83CBC2D5D9D3272DA00000000D7F8 (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_Certificate_warming_Microsoft_330000CA09BE8AA0DE1BE28F1300000000CA09 (Updated metadata for Certificate warming)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000CBA85784F7176318EEAA00000000CBA8 (Updated metadata for ScreenConnectLoader)
+
 ## [2026.05.08] - 2026-05-08
 
 ### Added

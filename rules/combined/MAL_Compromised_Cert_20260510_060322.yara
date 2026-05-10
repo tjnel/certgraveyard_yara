@@ -2170,6 +2170,41 @@ rule MAL_Compromised_Cert_BR_02_Sectigo_500D712788CEC6D67E88B9469D9E8284 {
       )
 }
 
+rule MAL_Compromised_Cert_BR_04_Sectigo_6C5EFE09CD24511FDDD320DD409C2D03 {
+   meta:
+      description         = "Detects BR-04 with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-12"
+      version             = "1.0"
+
+      hash                = "6210caacd4c7a3219ad6327b714c53d286443104ba06e3c4270f7e9a5d25ecee"
+      malware             = "BR-04"
+      malware_type        = "Backdoor"
+      malware_notes       = ""
+
+      signer              = "Pingxiang De'a Zhiyun Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "6c:5e:fe:09:cd:24:51:1f:dd:d3:20:dd:40:9c:2d:03"
+      cert_thumbprint     = "6CC658B759643E211DDEEC44C6EAEF52BA7CA0A2"
+      cert_valid_from     = "2026-03-12"
+      cert_valid_to       = "2027-03-12"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "6c:5e:fe:09:cd:24:51:1f:dd:d3:20:dd:40:9c:2d:03"
+      )
+}
+
 rule MAL_Compromised_Cert_Babadeda_Sectigo_00967CB0898680D1C174B2BAAE5FA332DB {
    meta:
       description         = "Detects Babadeda with compromised cert (Sectigo)"
@@ -7406,11 +7441,11 @@ rule MAL_Compromised_Cert_Certificate_warming_Microsoft_330000CA09BE8AA0DE1BE28F
       cert_valid_from     = "2026-05-07"
       cert_valid_to       = "2026-05-10"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Arizona"
+      locality            = "Mesa"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -21102,6 +21137,41 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300006FF9CD5A481848CFF
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
          sig.serial == "33:00:00:6f:f9:cd:5a:48:18:48:cf:f1:30:00:00:00:00:6f:f9"
+      )
+}
+
+rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330000CFC2E61113D904B9F9AC00000000CFC2 {
+   meta:
+      description         = "Detects Forever Botnet,BR-01 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-08"
+      version             = "1.0"
+
+      hash                = "25d18a2bf31ff3ce40f2d042cbba8dc5a6cd4f680adcacc763c62d2e64168729"
+      malware             = "Forever Botnet,BR-01"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "OC Agro ApS"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:00:cf:c2:e6:11:13:d9:04:b9:f9:ac:00:00:00:00:cf:c2"
+      cert_thumbprint     = "599E7ABA5E0586E43EB7D0E3777BC9B8E1AB7E3D"
+      cert_valid_from     = "2026-05-08"
+      cert_valid_to       = "2026-05-11"
+
+      country             = "DK"
+      state               = "Central Jutland"
+      locality            = "Hammel"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:00:cf:c2:e6:11:13:d9:04:b9:f9:ac:00:00:00:00:cf:c2"
       )
 }
 
@@ -50701,11 +50771,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000CBA85784F7176318EE
       cert_valid_from     = "2026-05-05"
       cert_valid_to       = "2026-05-08"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Texas"
+      locality            = "UNIVERSAL CITY"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -50736,11 +50806,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000D7F83CBC2D5D9D3272
       cert_valid_from     = "2026-05-06"
       cert_valid_to       = "2026-05-09"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Texas"
+      locality            = "UNIVERSAL CITY"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -60550,6 +60620,41 @@ rule MAL_Compromised_Cert_Traffer_Certum_53FDE4C245E86ABDF6194CA2EBBFB35F {
       )
 }
 
+rule MAL_Compromised_Cert_Traffer_Certum_666477706E045D6558E91366A71B2803 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-24"
+      version             = "1.0"
+
+      hash                = "d59d3443120c77b1cf524a1926074dccbe9fa0ce2054f4b7962ec1301b8ca4c5"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "OC Agro ApS"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "66:64:77:70:6e:04:5d:65:58:e9:13:66:a7:1b:28:03"
+      cert_thumbprint     = "0A02E02B09ABF83FEA7C9FEE6DC8CDE4202FA88D"
+      cert_valid_from     = "2026-04-24"
+      cert_valid_to       = "2027-04-24"
+
+      country             = "DK"
+      state               = "Midtjylland"
+      locality            = "Hammel"
+      email               = "???"
+      rdn_serial_number   = "36932813"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "66:64:77:70:6e:04:5d:65:58:e9:13:66:a7:1b:28:03"
+      )
+}
+
 rule MAL_Compromised_Cert_Traffer_Certum_675C35F927E99898778AA81BC0A9104A {
    meta:
       description         = "Detects Traffer with compromised cert (Certum)"
@@ -62122,6 +62227,41 @@ rule MAL_Compromised_Cert_Traffer_Sectigo_60C9A3E24ACBE0213443A16196701206 {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "60:c9:a3:e2:4a:cb:e0:21:34:43:a1:61:96:70:12:06"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Verokey_01BEAED9A69D5F7E38D72C9747A1E315 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Verokey)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-17"
+      version             = "1.0"
+
+      hash                = "9062c792d28b5dcabbb5c523bbf2a98a2c7994f5c9daad87940b7068ebb65ce8"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "OC Agro ApS"
+      cert_issuer_short   = "Verokey"
+      cert_issuer         = "Verokey High Assurance Secure Code EV"
+      cert_serial         = "01:be:ae:d9:a6:9d:5f:7e:38:d7:2c:97:47:a1:e3:15"
+      cert_thumbprint     = "682F6D38026107F36729D6D2AF183C19E0B5DAAC"
+      cert_valid_from     = "2026-04-17"
+      cert_valid_to       = "2027-04-16"
+
+      country             = "DK"
+      state               = "???"
+      locality            = "Hammel"
+      email               = "???"
+      rdn_serial_number   = "36932813"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Verokey High Assurance Secure Code EV" and
+         sig.serial == "01:be:ae:d9:a6:9d:5f:7e:38:d7:2c:97:47:a1:e3:15"
       )
 }
 

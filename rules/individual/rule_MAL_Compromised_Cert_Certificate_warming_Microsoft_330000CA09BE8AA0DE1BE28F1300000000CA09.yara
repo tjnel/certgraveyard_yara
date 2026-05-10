@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Certificate_warming_Microsoft_330000CA09BE8AA0DE1BE28F
       cert_valid_from     = "2026-05-07"
       cert_valid_to       = "2026-05-10"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Arizona"
+      locality            = "Mesa"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
