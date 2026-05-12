@@ -2191,11 +2191,11 @@ rule MAL_Compromised_Cert_BR_04_Sectigo_6C5EFE09CD24511FDDD320DD409C2D03 {
       cert_valid_from     = "2026-03-12"
       cert_valid_to       = "2027-03-12"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Jiangxi Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91360300MA7AXL3487"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -7490,6 +7490,41 @@ rule MAL_Compromised_Cert_Certificate_warming_Microsoft_330000CAF3CE18DF8269256D
       )
 }
 
+rule MAL_Compromised_Cert_Certificate_warming_Microsoft_330000D4903D6B02DB936F150100000000D490 {
+   meta:
+      description         = "Detects Certificate warming with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-09"
+      version             = "1.0"
+
+      hash                = "2c38a3a0ffada9e1b029df2d22551c340f9dd67b7e7d2aab9bd293cdd602846e"
+      malware             = "Certificate warming"
+      malware_type        = "Unknown"
+      malware_notes       = "This file is benign but is being signed to increase trust in the certificate."
+
+      signer              = "MARKE SOLUTIONS LIMITED"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:00:d4:90:3d:6b:02:db:93:6f:15:01:00:00:00:00:d4:90"
+      cert_thumbprint     = "F18246DE9A62E236242E5EDB2BEA1D63FFCAC1F8"
+      cert_valid_from     = "2026-05-09"
+      cert_valid_to       = "2026-05-12"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:00:d4:90:3d:6b:02:db:93:6f:15:01:00:00:00:00:d4:90"
+      )
+}
+
 rule MAL_Compromised_Cert_Certificate_warming_Microsoft_330000DAABB7037904910E9B5400000000DAAB {
    meta:
       description         = "Detects Certificate warming with compromised cert (Microsoft)"
@@ -7522,6 +7557,41 @@ rule MAL_Compromised_Cert_Certificate_warming_Microsoft_330000DAABB7037904910E9B
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
          sig.serial == "33:00:00:da:ab:b7:03:79:04:91:0e:9b:54:00:00:00:00:da:ab"
+      )
+}
+
+rule MAL_Compromised_Cert_Certificate_warming_Microsoft_330000EB76AF81A96ABE3D945E00000000EB76 {
+   meta:
+      description         = "Detects Certificate warming with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-09"
+      version             = "1.0"
+
+      hash                = "de560f54deb9e7f1ca4930836b78b4d470add3886b8fd41cf8295c43c034075e"
+      malware             = "Certificate warming"
+      malware_type        = "Unknown"
+      malware_notes       = "This file is benign but is being distributed to increase trust in the certificate."
+
+      signer              = "ELISA M OLEA"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:00:eb:76:af:81:a9:6a:be:3d:94:5e:00:00:00:00:eb:76"
+      cert_thumbprint     = "C9FB34FBDB07E1366CDD86D473D5216AD2838AA4"
+      cert_valid_from     = "2026-05-09"
+      cert_valid_to       = "2026-05-12"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:00:eb:76:af:81:a9:6a:be:3d:94:5e:00:00:00:00:eb:76"
       )
 }
 

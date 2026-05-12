@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_BR_04_Sectigo_6C5EFE09CD24511FDDD320DD409C2D03 {
       cert_valid_from     = "2026-03-12"
       cert_valid_to       = "2027-03-12"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Jiangxi Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91360300MA7AXL3487"
 
    condition:
       uint16(0) == 0x5a4d and

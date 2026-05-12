@@ -4,6 +4,15 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.05.12] - 2026-05-12
+
+### Added
+- MAL_Compromised_Cert_Certificate_warming_Microsoft_330000EB76AF81A96ABE3D945E00000000EB76 (Certificate warming - Microsoft)
+- MAL_Compromised_Cert_Certificate_warming_Microsoft_330000D4903D6B02DB936F150100000000D490 (Certificate warming - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_BR_04_Sectigo_6C5EFE09CD24511FDDD320DD409C2D03 (Updated metadata for BR-04)
+
 ## [2026.05.10] - 2026-05-10
 
 ### Added
