@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Certificate_warming_Microsoft_330000D4903D6B02DB936F15
       cert_valid_from     = "2026-05-09"
       cert_valid_to       = "2026-05-12"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "GB"
+      state               = "Warwickshire"
+      locality            = "ALCESTER"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
