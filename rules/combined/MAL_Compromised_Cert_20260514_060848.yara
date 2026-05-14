@@ -7560,6 +7560,41 @@ rule MAL_Compromised_Cert_Certificate_warming_Microsoft_330000DAABB7037904910E9B
       )
 }
 
+rule MAL_Compromised_Cert_Certificate_warming_Microsoft_330000E03A2F778C95763A452600000000E03A {
+   meta:
+      description         = "Detects Certificate warming with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-10"
+      version             = "1.0"
+
+      hash                = "9220a494d3d719a46de8c93994ed386e88457df3db7d87ab89644453eab0cf24"
+      malware             = "Certificate warming"
+      malware_type        = "Unknown"
+      malware_notes       = "This certificate is being prepared for a campaign by using it for benign installs."
+
+      signer              = "TERESA ANN BOSWELL"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:00:e0:3a:2f:77:8c:95:76:3a:45:26:00:00:00:00:e0:3a"
+      cert_thumbprint     = "87F04635728905F88BB1F6A44CAADE1289037B1A"
+      cert_valid_from     = "2026-05-10"
+      cert_valid_to       = "2026-05-13"
+
+      country             = "US"
+      state               = "Arizona"
+      locality            = "Mesa"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:00:e0:3a:2f:77:8c:95:76:3a:45:26:00:00:00:00:e0:3a"
+      )
+}
+
 rule MAL_Compromised_Cert_Certificate_warming_Microsoft_330000EB76AF81A96ABE3D945E00000000EB76 {
    meta:
       description         = "Detects Certificate warming with compromised cert (Microsoft)"
@@ -47425,6 +47460,41 @@ rule MAL_Compromised_Cert_RemoteManipulator_Sectigo_00ECE6CBF67DC41635A5E5D075F2
       )
 }
 
+rule MAL_Compromised_Cert_RemoteManipulator_Sectigo_46AE0713B1973AFD7EFEAAC19B815B06 {
+   meta:
+      description         = "Detects RemoteManipulator with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-02"
+      version             = "1.0"
+
+      hash                = "acae87a39faff99d12c7bd853c2f7cd74380f253a5c87770b9f7e13a4bd6a425"
+      malware             = "RemoteManipulator"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Hefei Xuxuan New Energy Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "46:ae:07:13:b1:97:3a:fd:7e:fe:aa:c1:9b:81:5b:06"
+      cert_thumbprint     = "1906BB377C48CE7CE094952AF13CADECF3FC1230"
+      cert_valid_from     = "2026-02-02"
+      cert_valid_to       = "2027-02-02"
+
+      country             = "CN"
+      state               = "Anhui Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91340100MA2W494F4P"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "46:ae:07:13:b1:97:3a:fd:7e:fe:aa:c1:9b:81:5b:06"
+      )
+}
+
 rule MAL_Compromised_Cert_RemoteManipulator_Sectigo_7DDD3796A427B42F2E52D7C7AF0CA54F {
    meta:
       description         = "Detects RemoteManipulator with compromised cert (Sectigo)"
@@ -65695,6 +65765,76 @@ rule MAL_Compromised_Cert_UNK_52_Akira_related_following_Teams_malvertising_Sect
       )
 }
 
+rule MAL_Compromised_Cert_UNK_53_Certum_4916AD68D1B4EC438EB47B6BEE0F6183 {
+   meta:
+      description         = "Detects UNK-53 with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-24"
+      version             = "1.0"
+
+      hash                = "22a3ed2d3721450f884f4c219e3afd7a36c571d65392534f38787fca605e328c"
+      malware             = "UNK-53"
+      malware_type        = "Remote access tool"
+      malware_notes       = "Telegram based rat, with C2 idantre[.]com"
+
+      signer              = "Huizhou Ningda Times Supply Chain Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "49:16:ad:68:d1:b4:ec:43:8e:b4:7b:6b:ee:0f:61:83"
+      cert_thumbprint     = "391044793C1A58620417CAC1B7E38BD84C6AD69A"
+      cert_valid_from     = "2026-04-24"
+      cert_valid_to       = "2027-04-24"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "49:16:ad:68:d1:b4:ec:43:8e:b4:7b:6b:ee:0f:61:83"
+      )
+}
+
+rule MAL_Compromised_Cert_UNK_53_Microsoft_330000CC0E1DB7A3B7EC1F637800000000CC0E {
+   meta:
+      description         = "Detects UNK-53 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-07"
+      version             = "1.0"
+
+      hash                = "63a552f1683cdaf569b1d72c565524a3d783da996fa0d37076a6018c6a256e7f"
+      malware             = "UNK-53"
+      malware_type        = "Remote access tool"
+      malware_notes       = "Telegram based rat, with C2 idantre[.]com"
+
+      signer              = "Benjamin Tillinger"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:00:cc:0e:1d:b7:a3:b7:ec:1f:63:78:00:00:00:00:cc:0e"
+      cert_thumbprint     = "EB6EF95EE5EB587CC2A4FA605443E0CAF6E1DA5B"
+      cert_valid_from     = "2026-05-07"
+      cert_valid_to       = "2026-05-10"
+
+      country             = "US"
+      state               = "Florida"
+      locality            = "Merritt Island"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:00:cc:0e:1d:b7:a3:b7:ec:1f:63:78:00:00:00:00:cc:0e"
+      )
+}
+
 rule MAL_Compromised_Cert_UnknownLoader_SSL_com_11E603B92A63487D692AD9519A0382FE {
    meta:
       description         = "Detects UnknownLoader with compromised cert (SSL.com)"
@@ -71036,11 +71176,11 @@ rule MAL_Compromised_Cert_Unknown_Microsoft_330000DDE6FFDEA03305B7485A00000000DD
       cert_valid_from     = "2026-05-10"
       cert_valid_to       = "2026-05-13"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "DK"
+      state               = "Central Jutland"
+      locality            = "Hammel"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
