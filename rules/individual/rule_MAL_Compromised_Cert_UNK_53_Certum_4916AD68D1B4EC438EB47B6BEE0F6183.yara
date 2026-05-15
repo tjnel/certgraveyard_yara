@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_UNK_53_Certum_4916AD68D1B4EC438EB47B6BEE0F6183 {
       cert_valid_from     = "2026-04-24"
       cert_valid_to       = "2027-04-24"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "CN"
+      state               = "Guangdong"
+      locality            = "Huizhou"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
