@@ -4,6 +4,11 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.05.16] - 2026-05-16
+
+### Modified
+- MAL_Compromised_Cert_RUS_53_Sectigo_578B8A96C9A5126336695EDF73FC3F51 (Updated metadata for RUS-53)
+
 ## [2026.05.15] - 2026-05-15
 
 ### Added

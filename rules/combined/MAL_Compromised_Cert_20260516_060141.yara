@@ -45381,11 +45381,11 @@ rule MAL_Compromised_Cert_RUS_53_Sectigo_578B8A96C9A5126336695EDF73FC3F51 {
       cert_valid_from     = "2026-04-27"
       cert_valid_to       = "2027-04-27"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Gansu Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91620102MA74H77T7D"
 
    condition:
       uint16(0) == 0x5a4d and
