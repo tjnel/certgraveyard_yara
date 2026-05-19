@@ -4,6 +4,16 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.05.19] - 2026-05-19
+
+### Added
+- MAL_Compromised_Cert_CastleLoader_Microsoft_33000103F3FBFD07A739F5D8360000000103F3 (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_Unknown_Sectigo_139E4375C99FC46A535D52A8550F1A19 (Unknown - Sectigo)
+- MAL_Compromised_Cert_Unknown_Sectigo_00A4CC216FDD5C1571E0182589D6BE6B69 (Unknown - Sectigo)
+
+### Modified
+- MAL_Compromised_Cert_ValleyRAT_Certum_16E2CE36A3379CBF4103780925D01952 (Updated metadata for ValleyRAT)
+
 ## [2026.05.18] - 2026-05-18
 
 ### Added
