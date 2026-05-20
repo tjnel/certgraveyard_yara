@@ -4,6 +4,25 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.05.20] - 2026-05-20
+
+### Added
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000128FA7E99282F7FFF914C0000000128FA (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300010036E66660B03E5DC1FD000000010036 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_FakeYoutube_Certum_39E7B0AE055C78D84A58B68A124A9346 (FakeYoutube - Certum)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300010C4BF29E544FB162191D000000010C4B (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_VariantLoader_Microsoft_33000028B0809900E9D48C32E90000000028B0 (VariantLoader - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_330000FC2DE97791B766B900ED00000000FC2D (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300011EA5F3D157F1A06BD1D2000000011EA5 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_33000110CB37960120F559138F0000000110CB (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_VariantLoader_Microsoft_330007EB5E04CA0E6EBDA0E14100000007EB5E (VariantLoader - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_3300010B7B99A22E1C8B3C74BC000000010B7B (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000F3EE004F312E93BED98000000000F3EE (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_SmokeLoader_SSL_com_279D96E8E4827C806A3FCEE7D39A05D6 (SmokeLoader - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_CastleLoader_Microsoft_33000103F3FBFD07A739F5D8360000000103F3 (Updated metadata for CastleLoader)
+
 ## [2026.05.19] - 2026-05-19
 
 ### Added
