@@ -4,6 +4,29 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.05.22] - 2026-05-22
+
+### Added
+- MAL_Compromised_Cert_UNK_50_Microsoft_33000097951006B29BE3C91846000000009795 (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_Unknown_Sectigo_00C311BB931EE237BC5EDB1FC6469D8777 (Unknown - Sectigo)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000BC1CB8A93346B0E6763700000000BC1C (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnect_Phishing_Microsoft_33000134CBF38FAAA2C101914E0000000134CB (ScreenConnect Phishing - Microsoft)
+- MAL_Compromised_Cert_UNK_50_Microsoft_33000061E04B44D21456EE2E430000000061E0 (UNK-50 - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_VariantLoader_Microsoft_330007EB5E04CA0E6EBDA0E14100000007EB5E (Updated metadata for VariantLoader)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300011EA5F3D157F1A06BD1D2000000011EA5 (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_VariantLoader_Microsoft_33000028B0809900E9D48C32E90000000028B0 (Updated metadata for VariantLoader)
+- MAL_Compromised_Cert_FakeYoutube_Certum_39E7B0AE055C78D84A58B68A124A9346 (Updated metadata for FakeYoutube)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_33000110CB37960120F559138F0000000110CB (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_3300010B7B99A22E1C8B3C74BC000000010B7B (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300010036E66660B03E5DC1FD000000010036 (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000F3EE004F312E93BED98000000000F3EE (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300010C4BF29E544FB162191D000000010C4B (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_330000FC2DE97791B766B900ED00000000FC2D (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000128FA7E99282F7FFF914C0000000128FA (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_SmokeLoader_SSL_com_279D96E8E4827C806A3FCEE7D39A05D6 (Updated metadata for SmokeLoader)
+
 ## [2026.05.20] - 2026-05-20
 
 ### Added

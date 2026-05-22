@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeYoutube_Certum_39E7B0AE055C78D84A58B68A124A9346 {
       cert_valid_from     = "2026-03-10"
       cert_valid_to       = "2027-03-10"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "GB"
+      state               = "Greater London"
+      locality            = "London"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "01850356"
 
    condition:
       uint16(0) == 0x5a4d and

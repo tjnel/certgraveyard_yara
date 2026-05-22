@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_SmokeLoader_SSL_com_279D96E8E4827C806A3FCEE7D39A05D6 {
       cert_valid_from     = "2026-03-16"
       cert_valid_to       = "2027-03-16"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "TR"
+      state               = "İstanbul"
+      locality            = "Umraniye"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "1034460"
 
    condition:
       uint16(0) == 0x5a4d and

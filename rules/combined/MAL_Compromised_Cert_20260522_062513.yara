@@ -6356,11 +6356,11 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_330000FC2DE97791B766B900ED00000
       cert_valid_from     = "2026-05-11"
       cert_valid_to       = "2026-05-14"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "GB"
+      state               = "Midlothian"
+      locality            = "TWICKENHAM"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -6426,11 +6426,11 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_3300010B7B99A22E1C8B3C74BC00000
       cert_valid_from     = "2026-05-14"
       cert_valid_to       = "2026-05-17"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "GB"
+      state               = "Midlothian"
+      locality            = "TWICKENHAM"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -6461,11 +6461,11 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_33000110CB37960120F559138F00000
       cert_valid_from     = "2026-05-15"
       cert_valid_to       = "2026-05-18"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "NL"
+      state               = "Zeeland"
+      locality            = "Hengstdijk"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -21266,11 +21266,11 @@ rule MAL_Compromised_Cert_FakeYoutube_Certum_39E7B0AE055C78D84A58B68A124A9346 {
       cert_valid_from     = "2026-03-10"
       cert_valid_to       = "2027-03-10"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "GB"
+      state               = "Greater London"
+      locality            = "London"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "01850356"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -51240,6 +51240,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000B83E914519B69B7372
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000BC1CB8A93346B0E6763700000000BC1C {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-04"
+      version             = "1.0"
+
+      hash                = "85ddec4a2c2d0d894356b98a4985241720e366eb53241a9df90724d4232dbc20"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Avery Benavidez"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:00:bc:1c:b8:a9:33:46:b0:e6:76:37:00:00:00:00:bc:1c"
+      cert_thumbprint     = "94E2041E572611F7475398735391F2840811E981"
+      cert_valid_from     = "2026-05-04"
+      cert_valid_to       = "2026-05-07"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:00:bc:1c:b8:a9:33:46:b0:e6:76:37:00:00:00:00:bc:1c"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000BFC90192D2AED4F201B800000000BFC9 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
@@ -51401,11 +51436,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000F3EE004F312E93BED9
       cert_valid_from     = "2026-05-13"
       cert_valid_to       = "2026-05-16"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Texas"
+      locality            = "converse"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -51436,11 +51471,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300010036E66660B03E5DC1
       cert_valid_from     = "2026-05-14"
       cert_valid_to       = "2026-05-17"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Texas"
+      locality            = "converse"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -51471,11 +51506,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300010C4BF29E544FB16219
       cert_valid_from     = "2026-05-15"
       cert_valid_to       = "2026-05-18"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Texas"
+      locality            = "converse"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -51506,11 +51541,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300011EA5F3D157F1A06BD1
       cert_valid_from     = "2026-05-17"
       cert_valid_to       = "2026-05-20"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Texas"
+      locality            = "converse"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -51541,11 +51576,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000128FA7E99282F7FFF91
       cert_valid_from     = "2026-05-18"
       cert_valid_to       = "2026-05-21"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Texas"
+      locality            = "converse"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -52885,6 +52920,41 @@ rule MAL_Compromised_Cert_ScreenConnect_Phishing_GlobalSign_60D16EC97ED649E7E625
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnect_Phishing_Microsoft_33000134CBF38FAAA2C101914E0000000134CB {
+   meta:
+      description         = "Detects ScreenConnect Phishing with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-20"
+      version             = "1.0"
+
+      hash                = "e957dd4a5dcdef4dbee5c9a2d4e7a421805e0a9019b615308e5e393d607da8d1"
+      malware             = "ScreenConnect Phishing"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Chaunesey Morrison"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:01:34:cb:f3:8f:aa:a2:c1:01:91:4e:00:00:00:01:34:cb"
+      cert_thumbprint     = "664010A73455F1920D382DD418DAADB7753FCEEC"
+      cert_valid_from     = "2026-05-20"
+      cert_valid_to       = "2026-05-23"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "converse"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:01:34:cb:f3:8f:aa:a2:c1:01:91:4e:00:00:00:01:34:cb"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnect_Phishing_Verokey_0126669732ACEC9B2FD03AE3C0C4F6D0 {
    meta:
       description         = "Detects ScreenConnect Phishing with compromised cert (Verokey)"
@@ -53746,11 +53816,11 @@ rule MAL_Compromised_Cert_SmokeLoader_SSL_com_279D96E8E4827C806A3FCEE7D39A05D6 {
       cert_valid_from     = "2026-03-16"
       cert_valid_to       = "2027-03-16"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "TR"
+      state               = "İstanbul"
+      locality            = "Umraniye"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "1034460"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -64327,6 +64397,76 @@ rule MAL_Compromised_Cert_UNK_50_GlobalSign_7DF689782340B9095FC6A73D {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "7d:f6:89:78:23:40:b9:09:5f:c6:a7:3d"
+      )
+}
+
+rule MAL_Compromised_Cert_UNK_50_Microsoft_33000061E04B44D21456EE2E430000000061E0 {
+   meta:
+      description         = "Detects UNK-50 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-21"
+      version             = "1.0"
+
+      hash                = "7ab839e9a3acbf09288c9272e0df6606c747df4ad689985b4afd11998b5facd1"
+      malware             = "UNK-50"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "A&A Interactive Media Group"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:00:61:e0:4b:44:d2:14:56:ee:2e:43:00:00:00:00:61:e0"
+      cert_thumbprint     = "ADE1F5F138F2A4656DA10457CCE1412AD2048931"
+      cert_valid_from     = "2026-04-21"
+      cert_valid_to       = "2026-04-24"
+
+      country             = "NL"
+      state               = "Noord-Brabant"
+      locality            = "Helmond"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:00:61:e0:4b:44:d2:14:56:ee:2e:43:00:00:00:00:61:e0"
+      )
+}
+
+rule MAL_Compromised_Cert_UNK_50_Microsoft_33000097951006B29BE3C91846000000009795 {
+   meta:
+      description         = "Detects UNK-50 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-29"
+      version             = "1.0"
+
+      hash                = "de8c50e8ccd240ef9d10ec26c26eeb37a4d1cad7c1e0edf3bb6e5689ec2dde78"
+      malware             = "UNK-50"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "A&A Interactive Media Group"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:00:97:95:10:06:b2:9b:e3:c9:18:46:00:00:00:00:97:95"
+      cert_thumbprint     = "EA917C96BFA6421586FA48BBAD39783FE0719E91"
+      cert_valid_from     = "2026-04-29"
+      cert_valid_to       = "2026-05-02"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:00:97:95:10:06:b2:9b:e3:c9:18:46:00:00:00:00:97:95"
       )
 }
 
@@ -75145,6 +75285,41 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_00C01E41FF29078E6626A640C5A19A8D80 {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Sectigo_00C311BB931EE237BC5EDB1FC6469D8777 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-19"
+      version             = "1.0"
+
+      hash                = "b03f5eba41b74cef1ac2926d4ac13c0b7b36e3df414796b11920bb89a077de77"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Lway Firmware"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:c3:11:bb:93:1e:e2:37:bc:5e:db:1f:c6:46:9d:87:77"
+      cert_thumbprint     = "134EB01A66CB8D51861907FD416F3A8686E76AB4"
+      cert_valid_from     = "2026-03-19"
+      cert_valid_to       = "2027-06-17"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:c3:11:bb:93:1e:e2:37:bc:5e:db:1f:c6:46:9d:87:77"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_Sectigo_00C79F817F082986BEF3209F6723C8DA97 {
    meta:
       description         = "Detects Unknown with compromised cert (Sectigo)"
@@ -77826,11 +78001,11 @@ rule MAL_Compromised_Cert_VariantLoader_Microsoft_33000028B0809900E9D48C32E90000
       cert_valid_from     = "2026-04-10"
       cert_valid_to       = "2026-04-13"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "GB"
+      state               = "Midlothian"
+      locality            = "TWICKENHAM"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -78106,11 +78281,11 @@ rule MAL_Compromised_Cert_VariantLoader_Microsoft_330007EB5E04CA0E6EBDA0E1410000
       cert_valid_from     = "2026-04-06"
       cert_valid_to       = "2026-04-09"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "GB"
+      state               = "Midlothian"
+      locality            = "TWICKENHAM"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
