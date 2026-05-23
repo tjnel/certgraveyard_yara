@@ -30940,6 +30940,41 @@ rule MAL_Compromised_Cert_MacSync_Stealer_Apple_4E1615B174DC487B {
       )
 }
 
+rule MAL_Compromised_Cert_Mach_O_Man_Apple_FBC67AF4451BA8F4E7C55D2C35FFA2 {
+   meta:
+      description         = "Detects Mach-O Man with compromised cert (Apple)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-14"
+      version             = "1.0"
+
+      hash                = "5d67f810bea19b9c3489e0981559af4340be39f188460938c7b11fea854ed06e"
+      malware             = "Mach-O Man"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Alex Lopez"
+      cert_issuer_short   = "Apple"
+      cert_issuer         = "Apple Inc."
+      cert_serial         = "fb:c6:7a:f4:45:1b:a8:f4:e7:c5:5d:2c:35:ff:a2"
+      cert_thumbprint     = "E082EF46583BFDFA3DB1D45173863E2CBB73F72E"
+      cert_valid_from     = "2025-11-14"
+      cert_valid_to       = "2026-11-14"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Apple Inc." and
+         sig.serial == "fb:c6:7a:f4:45:1b:a8:f4:e7:c5:5d:2c:35:ff:a2"
+      )
+}
+
 rule MAL_Compromised_Cert_MarkiRAT_SSL_com_12CA4926152D33A0EEEB8E9C30A49A1D {
    meta:
       description         = "Detects MarkiRAT with compromised cert (SSL.com)"
@@ -64456,11 +64491,11 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_33000097951006B29BE3C9184600000000979
       cert_valid_from     = "2026-04-29"
       cert_valid_to       = "2026-05-02"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "NL"
+      state               = "Noord-Brabant"
+      locality            = "Helmond"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -65937,6 +65972,41 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_330007FEC703614EE8690370C200000007FEC
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
          sig.serial == "33:00:07:fe:c7:03:61:4e:e8:69:03:70:c2:00:00:00:07:fe:c7"
+      )
+}
+
+rule MAL_Compromised_Cert_UNK_50_Microsoft_33000820B3CD4E8E8E726F0C4C0000000820B3 {
+   meta:
+      description         = "Detects UNK-50 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-02"
+      version             = "1.0"
+
+      hash                = "c9e0e6985dca3a179c9bdea4e7b38f7dc57fe00ecedc2fd634256fc53bf2de2d"
+      malware             = "UNK-50"
+      malware_type        = "Unknown"
+      malware_notes       = "Was disguised as ChatGPT desktop installer. Reported as deploying NetSupport RAT"
+
+      signer              = "NETWORK CONNECTIONS PROJECT SRL"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:08:20:b3:cd:4e:8e:8e:72:6f:0c:4c:00:00:00:08:20:b3"
+      cert_thumbprint     = "CB1FC111EDBF6D56C6F2DFB959039A1A2A5F80FF"
+      cert_valid_from     = "2026-03-02"
+      cert_valid_to       = "2026-03-05"
+
+      country             = "RO"
+      state               = "Arges"
+      locality            = "Pitesti"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:08:20:b3:cd:4e:8e:8e:72:6f:0c:4c:00:00:00:08:20:b3"
       )
 }
 
@@ -75306,11 +75376,11 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_00C311BB931EE237BC5EDB1FC6469D8777 {
       cert_valid_from     = "2026-03-19"
       cert_valid_to       = "2027-06-17"
 
-      country             = "???"
-      state               = "???"
+      country             = "FI"
+      state               = "Uusimaa"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "3462375-9"
 
    condition:
       uint16(0) == 0x5a4d and

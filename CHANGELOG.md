@@ -4,6 +4,16 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.05.23] - 2026-05-23
+
+### Added
+- MAL_Compromised_Cert_UNK_50_Microsoft_33000820B3CD4E8E8E726F0C4C0000000820B3 (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_Mach_O_Man_Apple_FBC67AF4451BA8F4E7C55D2C35FFA2 (Mach-O Man - Apple)
+
+### Modified
+- MAL_Compromised_Cert_UNK_50_Microsoft_33000097951006B29BE3C91846000000009795 (Updated metadata for UNK-50)
+- MAL_Compromised_Cert_Unknown_Sectigo_00C311BB931EE237BC5EDB1FC6469D8777 (Updated metadata for Unknown)
+
 ## [2026.05.22] - 2026-05-22
 
 ### Added
