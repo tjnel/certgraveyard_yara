@@ -4,6 +4,14 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.05.24] - 2026-05-24
+
+### Added
+- MAL_Compromised_Cert_Gh0stRAT_DigiCert_08ACB08347D8976BDB47A62A203C8B16 (Gh0stRAT - DigiCert)
+
+### Modified
+- MAL_Compromised_Cert_FakeTelegram_Sectigo_00C311BB931EE237BC5EDB1FC6469D8777 (Updated metadata for FakeTelegram)
+
 ## [2026.05.23] - 2026-05-23
 
 ### Added

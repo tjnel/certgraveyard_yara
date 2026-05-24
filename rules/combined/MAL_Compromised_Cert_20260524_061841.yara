@@ -20265,6 +20265,41 @@ rule MAL_Compromised_Cert_FakeStatement_SSL_com_45DF3961393196E00E5F001A73DF9964
       )
 }
 
+rule MAL_Compromised_Cert_FakeTelegram_Sectigo_00C311BB931EE237BC5EDB1FC6469D8777 {
+   meta:
+      description         = "Detects FakeTelegram with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-19"
+      version             = "1.0"
+
+      hash                = "b03f5eba41b74cef1ac2926d4ac13c0b7b36e3df414796b11920bb89a077de77"
+      malware             = "FakeTelegram"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Lway Firmware"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:c3:11:bb:93:1e:e2:37:bc:5e:db:1f:c6:46:9d:87:77"
+      cert_thumbprint     = "134EB01A66CB8D51861907FD416F3A8686E76AB4"
+      cert_valid_from     = "2026-03-19"
+      cert_valid_to       = "2027-06-17"
+
+      country             = "FI"
+      state               = "Uusimaa"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "3462375-9"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:c3:11:bb:93:1e:e2:37:bc:5e:db:1f:c6:46:9d:87:77"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeTrading_Certum_5C1BC02A08E7A473C3A1F7246DCF5E25 {
    meta:
       description         = "Detects FakeTrading with compromised cert (Certum)"
@@ -23342,6 +23377,41 @@ rule MAL_Compromised_Cert_Gh0stRAT_Certum_7ABFE16530E58B737042EE3B6BFB1801 {
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
          sig.serial == "7a:bf:e1:65:30:e5:8b:73:70:42:ee:3b:6b:fb:18:01"
+      )
+}
+
+rule MAL_Compromised_Cert_Gh0stRAT_DigiCert_08ACB08347D8976BDB47A62A203C8B16 {
+   meta:
+      description         = "Detects Gh0stRAT with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-05"
+      version             = "1.0"
+
+      hash                = "68508736c04c34fd3ed97b5d7ca86cbb4ec12e2ae118fe1854f6813aa7706cf5"
+      malware             = "Gh0stRAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "北京宏芯互联网销售有限公司"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "08:ac:b0:83:47:d8:97:6b:db:47:a6:2a:20:3c:8b:16"
+      cert_thumbprint     = "CE18742F500BCF3BB448568DE8E38E8211DB591E"
+      cert_valid_from     = "2025-09-05"
+      cert_valid_to       = "2028-12-01"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "08:ac:b0:83:47:d8:97:6b:db:47:a6:2a:20:3c:8b:16"
       )
 }
 
