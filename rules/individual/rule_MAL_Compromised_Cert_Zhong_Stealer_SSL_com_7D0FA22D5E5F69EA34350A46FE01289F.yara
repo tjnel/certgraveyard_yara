@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_SSL_com_7D0FA22D5E5F69EA34350A46FE01289F
       hash                = "f7d133a1fe5febb0e3fafaade59310a20f60e38f17331f1043956e8e3a3ca770"
       malware             = "Zhong Stealer"
       malware_type        = "Unknown"
-      malware_notes       = "An infostealer used by a Chinese cybercrime group tracked as Golden eye dog. Pulls second stage from legitimate CDN."
+      malware_notes       = ""
 
       signer              = "Fuet Corp."
       cert_issuer_short   = "SSL.com"

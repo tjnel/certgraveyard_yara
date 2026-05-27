@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_1B9C25D3C04716F1FE4A7F61DB7D1758
 
       hash                = "70a20ad7ed0d8fbea9d82b585094d58e9113e8e3669ffefd89f5e291bcbedebe"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "Malware masquerades as a photo or screenshot. It then pulls a second stage from legitimate CDN."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Xiamen Boyue Zhiyan Information Technology Co., Ltd."
       cert_issuer_short   = "Sectigo"

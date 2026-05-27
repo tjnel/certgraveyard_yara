@@ -4,6 +4,34 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.05.27] - 2026-05-27
+
+### Added
+- MAL_Compromised_Cert_MiniFast_SSL_com_20F3685DB7E46221F636A23E51E23A64 (MiniFast - SSL.com)
+- MAL_Compromised_Cert_MiniFast_SSL_com_37D7A8335ECDAA62E6A4E709CA43ADD8 (MiniFast - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_191E24F6C98E31D04F876A2E26E0CC71 (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Gh0stRAT_DigiCert_08ACB08347D8976BDB47A62A203C8B16 (Updated metadata for Gh0stRAT)
+- MAL_Compromised_Cert_UNK_50_Microsoft_330001460049B94EDFDB424A61000000014600 (Updated metadata for UNK-50)
+- MAL_Compromised_Cert_UNK_50_Microsoft_33000130CF5049CB9B7FF882BA0000000130CF (Updated metadata for UNK-50)
+- MAL_Compromised_Cert_Zhong_Stealer_SSL_com_1144335932C394E43644A300BF7A746F (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00F085B0DB24FFD0E1E9998566D79E8342 (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_1B9C25D3C04716F1FE4A7F61DB7D1758 (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330001296E15184BF489D0C34600000001296E (Updated metadata for Forever Botnet,BR-01)
+- MAL_Compromised_Cert_ValleyRAT_GlobalSign_49A710D6C41DA0A7CAC7F97A (Updated metadata for ValleyRAT)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_008AF45AAD3F1E2DB7B6598AB02E8BFF35 (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00A5DFA3D16E72E4B9CA5FA3B9665C2805 (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_ValleyRAT_DigiCert_0DB8378E7C5F330A988848572F290434 (Updated metadata for ValleyRAT)
+- MAL_Compromised_Cert_FakeUtility_Sectigo_281CCA56F214F9E84B03992BA076E318 (Updated metadata for FakeUtility)
+- MAL_Compromised_Cert_ValleyRAT_Certum_134216E462B8FC279A7AF7382F45F3D3 (Updated metadata for ValleyRAT)
+- MAL_Compromised_Cert_ValleyRAT_Certum_51EC6208C20191DB2EC825969E857A68 (Updated metadata for ValleyRAT)
+- MAL_Compromised_Cert_Zhong_Stealer_SSL_com_7D0FA22D5E5F69EA34350A46FE01289F (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330001026437EB365C1DF23CC4000000010264 (Updated metadata for Forever Botnet,BR-01)
+- MAL_Compromised_Cert_VariantLoader_Microsoft_3300008DF37D365E4B10910708000000008DF3 (Updated metadata for VariantLoader)
+- MAL_Compromised_Cert_ValleyRAT_Certum_1D0AB4F108CE8496648853FA1A7BA839 (Updated metadata for ValleyRAT)
+- MAL_Compromised_Cert_Zhong_Stealer_SSL_com_6FC27F0BBACFAA99807405016341540A (Updated metadata for Zhong Stealer)
+
 ## [2026.05.26] - 2026-05-26
 
 ### Added

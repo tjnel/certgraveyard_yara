@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_ValleyRAT_GlobalSign_49A710D6C41DA0A7CAC7F97A {
       hash                = "bddd6923f088a7a6847237b420c118473ab418d4de2772a35991402d5b0ab0e8"
       malware             = "ValleyRAT"
       malware_type        = "Unknown"
-      malware_notes       = "Valley RAT impersonating WPS Office. C2 - 108.187.7.232:6666"
+      malware_notes       = ""
 
       signer              = "武汉市芙樾琳网络科技有限公司"
       cert_issuer_short   = "GlobalSign"

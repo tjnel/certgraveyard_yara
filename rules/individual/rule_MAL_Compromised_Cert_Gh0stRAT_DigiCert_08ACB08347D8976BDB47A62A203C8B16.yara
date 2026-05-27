@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Gh0stRAT_DigiCert_08ACB08347D8976BDB47A62A203C8B16 {
       cert_valid_from     = "2025-09-05"
       cert_valid_to       = "2028-12-01"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Beijing"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91110117MABMFHHX3C"
 
    condition:
       uint16(0) == 0x5a4d and

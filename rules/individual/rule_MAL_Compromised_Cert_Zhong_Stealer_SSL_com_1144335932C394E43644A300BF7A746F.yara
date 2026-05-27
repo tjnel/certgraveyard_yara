@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_SSL_com_1144335932C394E43644A300BF7A746F
 
       hash                = "03262ae553984199273d81204e270bc9ec267e3f072154ac708e542665b58a8c"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Unknown"
       malware_notes       = ""
 
       signer              = "SIMPLE S.A."

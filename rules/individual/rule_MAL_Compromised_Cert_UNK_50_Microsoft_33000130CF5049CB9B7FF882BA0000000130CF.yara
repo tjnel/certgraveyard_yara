@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_33000130CF5049CB9B7FF882BA0000000130C
       cert_valid_from     = "2026-05-20"
       cert_valid_to       = "2026-05-23"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "RO"
+      state               = "Bucharest"
+      locality            = "Bucuresti"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

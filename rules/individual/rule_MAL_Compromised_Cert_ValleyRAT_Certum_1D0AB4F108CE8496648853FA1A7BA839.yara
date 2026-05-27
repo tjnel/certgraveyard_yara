@@ -21,10 +21,10 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_1D0AB4F108CE8496648853FA1A7BA839 {
       cert_valid_from     = "2026-03-06"
       cert_valid_to       = "2027-03-06"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:

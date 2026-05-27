@@ -20671,11 +20671,11 @@ rule MAL_Compromised_Cert_FakeUtility_Sectigo_281CCA56F214F9E84B03992BA076E318 {
       cert_valid_from     = "2026-04-17"
       cert_valid_to       = "2027-04-17"
 
-      country             = "???"
-      state               = "???"
+      country             = "DK"
+      state               = "Midtjylland"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "36932813"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -21686,11 +21686,11 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330001026437EB365C1DF23
       cert_valid_from     = "2026-05-14"
       cert_valid_to       = "2026-05-17"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "DK"
+      state               = "Central Jutland"
+      locality            = "Hammel"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -21721,11 +21721,11 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330001296E15184BF489D0C
       cert_valid_from     = "2026-05-19"
       cert_valid_to       = "2026-05-22"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "DK"
+      state               = "Central Jutland"
+      locality            = "Hammel"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -23506,11 +23506,11 @@ rule MAL_Compromised_Cert_Gh0stRAT_DigiCert_08ACB08347D8976BDB47A62A203C8B16 {
       cert_valid_from     = "2025-09-05"
       cert_valid_to       = "2028-12-01"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Beijing"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91110117MABMFHHX3C"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -31777,6 +31777,76 @@ rule MAL_Compromised_Cert_Meterpreter_DigiCert_03B50181EBBAD1AB42C7D901FB1A932A 
       for any sig in pe.signatures : (
          sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
          sig.serial == "03:b5:01:81:eb:ba:d1:ab:42:c7:d9:01:fb:1a:93:2a"
+      )
+}
+
+rule MAL_Compromised_Cert_MiniFast_SSL_com_20F3685DB7E46221F636A23E51E23A64 {
+   meta:
+      description         = "Detects MiniFast with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-21"
+      version             = "1.0"
+
+      hash                = "d4a7e9f107fe40c1a5d0139c6c6e25bf6bf57f61feff090bee28f476bb3cc3c2"
+      malware             = "MiniFast"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Gray Matter Software S.R.L."
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "20:f3:68:5d:b7:e4:62:21:f6:36:a2:3e:51:e2:3a:64"
+      cert_thumbprint     = "26542462CE31BE0FE2905967562C733DCC0BE667"
+      cert_valid_from     = "2025-10-21"
+      cert_valid_to       = "2026-10-21"
+
+      country             = "RO"
+      state               = "Bucharest"
+      locality            = "Bucharest"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "20:f3:68:5d:b7:e4:62:21:f6:36:a2:3e:51:e2:3a:64"
+      )
+}
+
+rule MAL_Compromised_Cert_MiniFast_SSL_com_37D7A8335ECDAA62E6A4E709CA43ADD8 {
+   meta:
+      description         = "Detects MiniFast with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-26"
+      version             = "1.0"
+
+      hash                = "2c214494fd0bad31473ca8adce78a4f50847876584571e66aadeae70827ec2dc"
+      malware             = "MiniFast"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Kirubel Kerie Negeya"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "37:d7:a8:33:5e:cd:aa:62:e6:a4:e7:09:ca:43:ad:d8"
+      cert_thumbprint     = "A7B7D27448F4B248FDDCB3E2635077AF00B5C7D1"
+      cert_valid_from     = "2026-03-26"
+      cert_valid_to       = "2027-03-25"
+
+      country             = "ET"
+      state               = "Addis Ababa"
+      locality            = "Addis Ababa"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "37:d7:a8:33:5e:cd:aa:62:e6:a4:e7:09:ca:43:ad:d8"
       )
 }
 
@@ -64701,11 +64771,11 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_33000130CF5049CB9B7FF882BA0000000130C
       cert_valid_from     = "2026-05-20"
       cert_valid_to       = "2026-05-23"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "RO"
+      state               = "Bucharest"
+      locality            = "Bucuresti"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -64736,11 +64806,11 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_330001460049B94EDFDB424A6100000001460
       cert_valid_from     = "2026-05-22"
       cert_valid_to       = "2026-05-25"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "RO"
+      state               = "Bucharest"
+      locality            = "Bucuresti"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -77255,8 +77325,8 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_134216E462B8FC279A7AF7382F45F3D3 {
 
       hash                = "f8d5e36ae7af535acd72982e1b5f745adb2b39b83d522709c4c18630bdc87d1c"
       malware             = "ValleyRAT"
-      malware_type        = "Remote access tool"
-      malware_notes       = "An open source RAT heavily used by Golden Eye Dog. Reaches out to pull down payload: https[:]//microsoft001[.]oss-cn-hangzhou.aliyuncs[.]com/Microsoft/shellcode_encrypted.bin"
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Jin Chen"
       cert_issuer_short   = "Certum"
@@ -77371,10 +77441,10 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_1D0AB4F108CE8496648853FA1A7BA839 {
       cert_valid_from     = "2026-03-06"
       cert_valid_to       = "2027-03-06"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:
@@ -77500,8 +77570,8 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_51EC6208C20191DB2EC825969E857A68 {
 
       hash                = "ed868c0bbf654880d014f954e935039c5d3a4ad7d615912277c4502bf67964cf"
       malware             = "ValleyRAT"
-      malware_type        = "Remote access tool"
-      malware_notes       = "Identified as ValleyRAT by multiple sandboxes: https://tria.ge/260106-1yj3hacp2t/behavioral2"
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "福州大顿商贸有限公司"
       cert_issuer_short   = "Certum"
@@ -77886,7 +77956,7 @@ rule MAL_Compromised_Cert_ValleyRAT_DigiCert_0DB8378E7C5F330A988848572F290434 {
       hash                = "a8a42814c253ca5e93e81be5bd69149ff71b9ac3024420614fba37fb0834b3c0"
       malware             = "ValleyRAT"
       malware_type        = "Unknown"
-      malware_notes       = "Second-stage payloads of ValleyRAT. Context: https://apophis133.medium.com/valleyrat-s2-chinese-campaign-4504b890f416"
+      malware_notes       = ""
 
       signer              = "Hangzhou Saifan Technology Co., Ltd."
       cert_issuer_short   = "DigiCert"
@@ -78026,7 +78096,7 @@ rule MAL_Compromised_Cert_ValleyRAT_GlobalSign_49A710D6C41DA0A7CAC7F97A {
       hash                = "bddd6923f088a7a6847237b420c118473ab418d4de2772a35991402d5b0ab0e8"
       malware             = "ValleyRAT"
       malware_type        = "Unknown"
-      malware_notes       = "Valley RAT impersonating WPS Office. C2 - 108.187.7.232:6666"
+      malware_notes       = ""
 
       signer              = "武汉市芙樾琳网络科技有限公司"
       cert_issuer_short   = "GlobalSign"
@@ -78386,11 +78456,11 @@ rule MAL_Compromised_Cert_VariantLoader_Microsoft_3300008DF37D365E4B109107080000
       cert_valid_from     = "2026-04-27"
       cert_valid_to       = "2026-04-30"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "DK"
+      state               = "Central Jutland"
+      locality            = "Hammel"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -82435,7 +82505,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_SSL_com_1144335932C394E43644A300BF7A746F
 
       hash                = "03262ae553984199273d81204e270bc9ec267e3f072154ac708e542665b58a8c"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Unknown"
       malware_notes       = ""
 
       signer              = "SIMPLE S.A."
@@ -82505,8 +82575,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_SSL_com_6FC27F0BBACFAA99807405016341540A
 
       hash                = "6650052939aa7e4fe49c9d1aff74319c46506efe341f6d9e6d9900cdb7e40c91"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "An infostealer used by a Chinese cybercrime group tracked as Golden eye dog. Pulls second stage from legitimate CDN."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Schäfer Informatik GmbH"
       cert_issuer_short   = "SSL.com"
@@ -82541,7 +82611,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_SSL_com_7D0FA22D5E5F69EA34350A46FE01289F
       hash                = "f7d133a1fe5febb0e3fafaade59310a20f60e38f17331f1043956e8e3a3ca770"
       malware             = "Zhong Stealer"
       malware_type        = "Unknown"
-      malware_notes       = "An infostealer used by a Chinese cybercrime group tracked as Golden eye dog. Pulls second stage from legitimate CDN."
+      malware_notes       = ""
 
       signer              = "Fuet Corp."
       cert_issuer_short   = "SSL.com"
@@ -82621,11 +82691,11 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_008AF45AAD3F1E2DB7B6598AB02E8BFF
       cert_valid_from     = "2026-03-23"
       cert_valid_to       = "2027-03-23"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Fujian Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91350200MA349M0219"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -82785,7 +82855,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00A5DFA3D16E72E4B9CA5FA3B9665C28
 
       hash                = "a8d911dd10c0abac0de077868ab455f1869f63cda456ecab048a1572c8d35e7f"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Unknown"
       malware_notes       = ""
 
       signer              = "Xiamen Lede Song Information Technology Co., Ltd."
@@ -82995,7 +83065,7 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_00F085B0DB24FFD0E1E9998566D79E83
 
       hash                = "f042b510f67620272140417df73d16136b2b0b15fb28145cd1f058ea40c282fc"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
+      malware_type        = "Unknown"
       malware_notes       = ""
 
       signer              = "Xiamen Renxing Information Technology Co., Ltd."
@@ -83135,8 +83205,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_1B9C25D3C04716F1FE4A7F61DB7D1758
 
       hash                = "70a20ad7ed0d8fbea9d82b585094d58e9113e8e3669ffefd89f5e291bcbedebe"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "Malware masquerades as a photo or screenshot. It then pulls a second stage from legitimate CDN."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Xiamen Boyue Zhiyan Information Technology Co., Ltd."
       cert_issuer_short   = "Sectigo"

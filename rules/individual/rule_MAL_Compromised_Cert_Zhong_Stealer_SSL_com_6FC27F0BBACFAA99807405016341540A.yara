@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Zhong_Stealer_SSL_com_6FC27F0BBACFAA99807405016341540A
 
       hash                = "6650052939aa7e4fe49c9d1aff74319c46506efe341f6d9e6d9900cdb7e40c91"
       malware             = "Zhong Stealer"
-      malware_type        = "Infostealer"
-      malware_notes       = "An infostealer used by a Chinese cybercrime group tracked as Golden eye dog. Pulls second stage from legitimate CDN."
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Schäfer Informatik GmbH"
       cert_issuer_short   = "SSL.com"

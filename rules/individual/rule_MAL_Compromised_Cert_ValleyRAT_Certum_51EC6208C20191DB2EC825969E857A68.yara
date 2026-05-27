@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_51EC6208C20191DB2EC825969E857A68 {
 
       hash                = "ed868c0bbf654880d014f954e935039c5d3a4ad7d615912277c4502bf67964cf"
       malware             = "ValleyRAT"
-      malware_type        = "Remote access tool"
-      malware_notes       = "Identified as ValleyRAT by multiple sandboxes: https://tria.ge/260106-1yj3hacp2t/behavioral2"
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "福州大顿商贸有限公司"
       cert_issuer_short   = "Certum"

@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_134216E462B8FC279A7AF7382F45F3D3 {
 
       hash                = "f8d5e36ae7af535acd72982e1b5f745adb2b39b83d522709c4c18630bdc87d1c"
       malware             = "ValleyRAT"
-      malware_type        = "Remote access tool"
-      malware_notes       = "An open source RAT heavily used by Golden Eye Dog. Reaches out to pull down payload: https[:]//microsoft001[.]oss-cn-hangzhou.aliyuncs[.]com/Microsoft/shellcode_encrypted.bin"
+      malware_type        = "Unknown"
+      malware_notes       = ""
 
       signer              = "Jin Chen"
       cert_issuer_short   = "Certum"

@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_ValleyRAT_DigiCert_0DB8378E7C5F330A988848572F290434 {
       hash                = "a8a42814c253ca5e93e81be5bd69149ff71b9ac3024420614fba37fb0834b3c0"
       malware             = "ValleyRAT"
       malware_type        = "Unknown"
-      malware_notes       = "Second-stage payloads of ValleyRAT. Context: https://apophis133.medium.com/valleyrat-s2-chinese-campaign-4504b890f416"
+      malware_notes       = ""
 
       signer              = "Hangzhou Saifan Technology Co., Ltd."
       cert_issuer_short   = "DigiCert"
