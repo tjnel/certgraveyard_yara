@@ -51870,6 +51870,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000128FA7E99282F7FFF91
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300013A239614F0EEDC008261000000013A23 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-20"
+      version             = "1.0"
+
+      hash                = "601f4ae850e192bc76300f3851f4b421ba2e05313cb3f1ace0a0c98301e237bb"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Alysen Mendez"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:01:3a:23:96:14:f0:ee:dc:00:82:61:00:00:00:01:3a:23"
+      cert_thumbprint     = "6EA39ED2E1954F1148DE2CA2A68F2C256F71C8FD"
+      cert_valid_from     = "2026-05-20"
+      cert_valid_to       = "2026-05-23"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:01:3a:23:96:14:f0:ee:dc:00:82:61:00:00:00:01:3a:23"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007227525ABC3F117376B2E000000072275 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
@@ -83402,6 +83437,41 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_38BF78674DA7DED94863D622BA150FDB
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "38:bf:78:67:4d:a7:de:d9:48:63:d6:22:ba:15:0f:db"
+      )
+}
+
+rule MAL_Compromised_Cert_Zhong_Stealer_Sectigo_3EAA4BD40D5DA98036B33023E0052869 {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-26"
+      version             = "1.0"
+
+      hash                = "b1e6036407ac561deebf5a4885fda4d63686bdfbf808524e7554ea339a7bbe39"
+      malware             = "Zhong Stealer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Xiamen Shunhuitong E-commerce Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "3e:aa:4b:d4:0d:5d:a9:80:36:b3:30:23:e0:05:28:69"
+      cert_thumbprint     = "E579AB4491E4C3B9FCA255D36A7B269E14DB36A2"
+      cert_valid_from     = "2026-03-26"
+      cert_valid_to       = "2027-03-26"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "3e:aa:4b:d4:0d:5d:a9:80:36:b3:30:23:e0:05:28:69"
       )
 }
 
