@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300013A239614F0EEDC0082
       cert_valid_from     = "2026-05-20"
       cert_valid_to       = "2026-05-23"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "New Jersey"
+      locality            = "LITTLE FERRY"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
