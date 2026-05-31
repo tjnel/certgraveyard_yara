@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_75E94AE5DFB761F53B22F808 {
       cert_valid_from     = "2026-04-07"
       cert_valid_to       = "2027-04-08"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "EE"
+      state               = "Harjumaa"
+      locality            = "Leppneeme kula"
+      email               = "chris@karusoft.com"
+      rdn_serial_number   = "11960789"
 
    condition:
       uint16(0) == 0x5a4d and

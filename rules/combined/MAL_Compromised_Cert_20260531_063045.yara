@@ -5901,11 +5901,11 @@ rule MAL_Compromised_Cert_CastleLoader_GlobalSign_75E94AE5DFB761F53B22F808 {
       cert_valid_from     = "2026-04-07"
       cert_valid_to       = "2027-04-08"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "EE"
+      state               = "Harjumaa"
+      locality            = "Leppneeme kula"
+      email               = "chris@karusoft.com"
+      rdn_serial_number   = "11960789"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -6531,11 +6531,11 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_33000121F2301080A346D2284100000
       cert_valid_from     = "2026-05-18"
       cert_valid_to       = "2026-05-21"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "NL"
+      state               = "Flevoland"
+      locality            = "Swifterbant"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -6566,11 +6566,11 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_3300013112252751AFCC0D248200000
       cert_valid_from     = "2026-05-19"
       cert_valid_to       = "2026-05-22"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "NL"
+      state               = "Flevoland"
+      locality            = "Swifterbant"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -52031,11 +52031,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000158E1B4982495366534
       cert_valid_from     = "2026-05-25"
       cert_valid_to       = "2026-05-28"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "hi"
+      locality            = "Wailuku"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -52066,11 +52066,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300016CD7820660D28582E2
       cert_valid_from     = "2026-05-26"
       cert_valid_to       = "2026-05-29"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "hi"
+      locality            = "Wailuku"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
