@@ -10150,6 +10150,41 @@ rule MAL_Compromised_Cert_CobaltStrike_TrustOcean_7A6D30A6EB2FA0C3369283725704AC
       )
 }
 
+rule MAL_Compromised_Cert_CobaltStrike_Verokey_08BA1580C92FB867CE8F24EC9A47A884 {
+   meta:
+      description         = "Detects CobaltStrike with compromised cert (Verokey)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-05-18"
+      version             = "1.0"
+
+      hash                = "956c90138d34d0fb5d32037354ba0256c8a15a15fedcf99898af340979306df1"
+      malware             = "CobaltStrike"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "山西荣升源科贸有限公司"
+      cert_issuer_short   = "Verokey"
+      cert_issuer         = "Verokey High Assurance Secure Code EV"
+      cert_serial         = "08:ba:15:80:c9:2f:b8:67:ce:8f:24:ec:9a:47:a8:84"
+      cert_thumbprint     = "799317C21A820F3354BB1502E36765A490DE0979"
+      cert_valid_from     = "2025-05-18"
+      cert_valid_to       = "2026-06-18"
+
+      country             = "CN"
+      state               = "山西省"
+      locality            = "太原市"
+      email               = "???"
+      rdn_serial_number   = "91140105MA0LK0WH8B"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Verokey High Assurance Secure Code EV" and
+         sig.serial == "08:ba:15:80:c9:2f:b8:67:ce:8f:24:ec:9a:47:a8:84"
+      )
+}
+
 rule MAL_Compromised_Cert_CoinLurker_DigiCert_08FD49B1A5ECA2283F3E0971754D2ED4 {
    meta:
       description         = "Detects CoinLurker with compromised cert (DigiCert)"
@@ -20192,6 +20227,41 @@ rule MAL_Compromised_Cert_FakeRMM_Microsoft_330008F14B653BF56DB14D28A300000008F1
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
          sig.serial == "33:00:08:f1:4b:65:3b:f5:6d:b1:4d:28:a3:00:00:00:08:f1:4b"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeRMM_SSL_com_09867A82C28DB37CDBEC2A426D6B528E {
+   meta:
+      description         = "Detects FakeRMM with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-01"
+      version             = "1.0"
+
+      hash                = "d8a4361786c81cb9fdf83140bbb1e09500f8bfee9c3193935347ce574a5c71f2"
+      malware             = "FakeRMM"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake MSTeams and Docusign leading to \"VoidDrift\" RMM tool"
+
+      signer              = "Laservue Eye Center, Medical Corporation"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "09:86:7a:82:c2:8d:b3:7c:db:ec:2a:42:6d:6b:52:8e"
+      cert_thumbprint     = "9C55811B381A2C9128FA4D80D8E1C5A1BE9459D6"
+      cert_valid_from     = "2025-12-01"
+      cert_valid_to       = "2026-11-30"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "09:86:7a:82:c2:8d:b3:7c:db:ec:2a:42:6d:6b:52:8e"
       )
 }
 
@@ -51275,6 +51345,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000015BF49C00E94FDC31E
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000018732C019E6B37903913000000001873 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-08"
+      version             = "1.0"
+
+      hash                = "9fe60d0ab8215cda561798f4ce4e502d4fca8c68eaca31dded3c2b66fa8e5fc5"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Palacios Edgar"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:00:18:73:2c:01:9e:6b:37:90:39:13:00:00:00:00:18:73"
+      cert_thumbprint     = "4683710F0B5647D9C1D6DFAE15D6909448246BD1"
+      cert_valid_from     = "2026-04-08"
+      cert_valid_to       = "2026-04-11"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:00:18:73:2c:01:9e:6b:37:90:39:13:00:00:00:00:18:73"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300001CF70654DAD728BA5763000000001CF7 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
@@ -51307,6 +51412,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300001CF70654DAD728BA57
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
          sig.serial == "33:00:00:1c:f7:06:54:da:d7:28:ba:57:63:00:00:00:00:1c:f7"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300001D53DB71F6B6F02C3FCA000000001D53 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-15"
+      version             = "1.0"
+
+      hash                = "4ba5791fa688cebc92062dbd0e9b1c02d7f44e0e49648349516b37f5455309d8"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Palacios Edgar"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:00:1d:53:db:71:f6:b6:f0:2c:3f:ca:00:00:00:00:1d:53"
+      cert_thumbprint     = "4F20647E9DE362951C9370E57354E62F71E03138"
+      cert_valid_from     = "2026-04-15"
+      cert_valid_to       = "2026-04-18"
+
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:00:1d:53:db:71:f6:b6:f0:2c:3f:ca:00:00:00:00:1d:53"
       )
 }
 
@@ -51345,6 +51485,76 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300004428428678F9C72CCD
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300004A1AA28F6A7AA7838750000000004A1A {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-13"
+      version             = "1.0"
+
+      hash                = "024c5039cb69288955269253d845f87ed495bd6163392e0426d5780970786b48"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Palacios Edgar"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:00:4a:1a:a2:8f:6a:7a:a7:83:87:50:00:00:00:00:4a:1a"
+      cert_thumbprint     = "5EA715F74A23DE32F4797304C0F24A21AE4E2BDE"
+      cert_valid_from     = "2026-04-13"
+      cert_valid_to       = "2026-04-16"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:00:4a:1a:a2:8f:6a:7a:a7:83:87:50:00:00:00:00:4a:1a"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300004B5A1497859C78919AA1000000004B5A {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-19"
+      version             = "1.0"
+
+      hash                = "cced80f9cfb2b9f67658d50fa4e45312ca2ed620bb981481177e434ee9acb984"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Avery Benavidez"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:00:4b:5a:14:97:85:9c:78:91:9a:a1:00:00:00:00:4b:5a"
+      cert_thumbprint     = "88660C18B3BEA8277A0F00F385792734880D733D"
+      cert_valid_from     = "2026-04-19"
+      cert_valid_to       = "2026-04-22"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:00:4b:5a:14:97:85:9c:78:91:9a:a1:00:00:00:00:4b:5a"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300005148694B37DCDA9E19CE000000005148 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
@@ -51377,6 +51587,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300005148694B37DCDA9E19
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
          sig.serial == "33:00:00:51:48:69:4b:37:dc:da:9e:19:ce:00:00:00:00:51:48"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000575ED570C039EBC1588500000000575E {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-14"
+      version             = "1.0"
+
+      hash                = "af521794c124350f97d719b0892e8ac2c932b03b895b50293b600f765ad58260"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Palacios Edgar"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:00:57:5e:d5:70:c0:39:eb:c1:58:85:00:00:00:00:57:5e"
+      cert_thumbprint     = "DF13E386C60AABEE8EC4F14124B7AC251EDA7F1A"
+      cert_valid_from     = "2026-04-14"
+      cert_valid_to       = "2026-04-17"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:00:57:5e:d5:70:c0:39:eb:c1:58:85:00:00:00:00:57:5e"
       )
 }
 
@@ -51450,6 +51695,76 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000660EF0961CCA2028E6
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000068EB6233BBCBA1C5390A0000000068EB {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-22"
+      version             = "1.0"
+
+      hash                = "a4a2b849bee2f077985590a8127d9f0ebd64c067371c32585e2553d0628ce039"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Avery Benavidez"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:00:68:eb:62:33:bb:cb:a1:c5:39:0a:00:00:00:00:68:eb"
+      cert_thumbprint     = "EE2C1D2A3B3E06BE9EAB53463694745D9488062D"
+      cert_valid_from     = "2026-04-22"
+      cert_valid_to       = "2026-04-25"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:00:68:eb:62:33:bb:cb:a1:c5:39:0a:00:00:00:00:68:eb"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300006A24D0310773536D9115000000006A24 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-22"
+      version             = "1.0"
+
+      hash                = "62e6cc9a6531be22315cc4387fd67936d02630e2de1d024ce357d9d1fc53e49a"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Palacios Edgar"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:00:6a:24:d0:31:07:73:53:6d:91:15:00:00:00:00:6a:24"
+      cert_thumbprint     = "D7F7F1170A97F237F22AB3AB36CDF0A65ABCFBB1"
+      cert_valid_from     = "2026-04-22"
+      cert_valid_to       = "2026-04-25"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:00:6a:24:d0:31:07:73:53:6d:91:15:00:00:00:00:6a:24"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300006AFD78815D7CD8EB8537000000006AFD {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
@@ -51520,6 +51835,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300006C03E05B593A61954D
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000728BA9BD808F4CC33EFD00000000728B {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-23"
+      version             = "1.0"
+
+      hash                = "4717927ba7136c7149215bda25513aacdecef883242a98d2574ea385d4112c02"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Blanchard Nivell"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:00:72:8b:a9:bd:80:8f:4c:c3:3e:fd:00:00:00:00:72:8b"
+      cert_thumbprint     = "4C7E351C0606D2AECF5E008FA694E9AFCA9FC026"
+      cert_valid_from     = "2026-04-23"
+      cert_valid_to       = "2026-04-26"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "SAN ANTONIO"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:00:72:8b:a9:bd:80:8f:4c:c3:3e:fd:00:00:00:00:72:8b"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000073F4ACB16D687DDB584B0000000073F4 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
@@ -51555,6 +51905,146 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000073F4ACB16D687DDB58
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000076865EC3D2B2B9D9152B000000007686 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-24"
+      version             = "1.0"
+
+      hash                = "93be0f5ed2c41520974374da3533c9146e10f4269fc01cf4d25390449dc54878"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Avery Benavidez"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:00:76:86:5e:c3:d2:b2:b9:d9:15:2b:00:00:00:00:76:86"
+      cert_thumbprint     = "B7531714F5AF44F9972F85C50A7D4FDF9162AC99"
+      cert_valid_from     = "2026-04-24"
+      cert_valid_to       = "2026-04-27"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:00:76:86:5e:c3:d2:b2:b9:d9:15:2b:00:00:00:00:76:86"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000085FD7E5774C1404D1D5B0000000085FD {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-26"
+      version             = "1.0"
+
+      hash                = "ce0aed3ced478e254471405546d2325d473d2feb4ff51b3f352e79cb8ac2036e"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Ana leticia Lazcon"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:00:85:fd:7e:57:74:c1:40:4d:1d:5b:00:00:00:00:85:fd"
+      cert_thumbprint     = "272DF1213990FDDD777A0688225C2DB468C9C91D"
+      cert_valid_from     = "2026-04-26"
+      cert_valid_to       = "2026-04-29"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:00:85:fd:7e:57:74:c1:40:4d:1d:5b:00:00:00:00:85:fd"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300008720524A68406CFC8DFF000000008720 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-27"
+      version             = "1.0"
+
+      hash                = "b6df612bb7d5ace42dde016306c210b819d90df44424548a2ac174e0e1c80fa3"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Sharp Tavyn"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:00:87:20:52:4a:68:40:6c:fc:8d:ff:00:00:00:00:87:20"
+      cert_thumbprint     = "FCD128FE78334BDFFFBF215EEB2DED1ED30C5308"
+      cert_valid_from     = "2026-04-27"
+      cert_valid_to       = "2026-04-30"
+
+      country             = "US"
+      state               = "Oklahoma"
+      locality            = "Ringling"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:00:87:20:52:4a:68:40:6c:fc:8d:ff:00:00:00:00:87:20"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300008EF0D48C2B55E1BADA67000000008EF0 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-27"
+      version             = "1.0"
+
+      hash                = "d856006daeaa66492b526f7ed0f11c79c06d756b6fbdf3e72161c48a1ed0a7a0"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Palacios Edgar"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:00:8e:f0:d4:8c:2b:55:e1:ba:da:67:00:00:00:00:8e:f0"
+      cert_thumbprint     = "A4DBE6906EECA6AEA18C14A226E6B43568776EA5"
+      cert_valid_from     = "2026-04-27"
+      cert_valid_to       = "2026-04-30"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:00:8e:f0:d4:8c:2b:55:e1:ba:da:67:00:00:00:00:8e:f0"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000AE8CFBA7A14E8C43258A00000000AE8C {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
@@ -51587,6 +52077,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000AE8CFBA7A14E8C4325
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
          sig.serial == "33:00:00:ae:8c:fb:a7:a1:4e:8c:43:25:8a:00:00:00:00:ae:8c"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000B74A0EAFF4538188D4EE00000000B74A {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-03"
+      version             = "1.0"
+
+      hash                = "560469da7632d5282c925b68a3cc2ce0d3d0c52b332d8340dd9c8588554193ac"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Palacios Edgar"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:00:b7:4a:0e:af:f4:53:81:88:d4:ee:00:00:00:00:b7:4a"
+      cert_thumbprint     = "2C9BC6BDA57D3C3700FC59DC2C6EB88F2E16A905"
+      cert_valid_from     = "2026-05-03"
+      cert_valid_to       = "2026-05-06"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:00:b7:4a:0e:af:f4:53:81:88:d4:ee:00:00:00:00:b7:4a"
       )
 }
 
@@ -51695,6 +52220,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000BFC90192D2AED4F201
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000CB523D58454AD844FBB300000000CB52 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-07"
+      version             = "1.0"
+
+      hash                = "c5579ebb5ccf8b3de0be128ac56384dc5a2ca26cafa5cb389ef7b234537578b7"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Morrison Chaunesey"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:00:cb:52:3d:58:45:4a:d8:44:fb:b3:00:00:00:00:cb:52"
+      cert_thumbprint     = "C1AF406AC082B9C65EAAF212D77F15FDBCA4340A"
+      cert_valid_from     = "2026-05-07"
+      cert_valid_to       = "2026-05-10"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "Converse"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:00:cb:52:3d:58:45:4a:d8:44:fb:b3:00:00:00:00:cb:52"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000CBA85784F7176318EEAA00000000CBA8 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
@@ -51727,6 +52287,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000CBA85784F7176318EE
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
          sig.serial == "33:00:00:cb:a8:57:84:f7:17:63:18:ee:aa:00:00:00:00:cb:a8"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000D2D7D71FE608C242E81500000000D2D7 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-08"
+      version             = "1.0"
+
+      hash                = "ba6fb57e93fbb3fb7d3556173f262b05ff738961dda228b5f3fe451bdce4eeb8"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Morrison Chaunesey"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:00:d2:d7:d7:1f:e6:08:c2:42:e8:15:00:00:00:00:d2:d7"
+      cert_thumbprint     = "FE8DB03F4F35D807EBCC03250B8B9C56A23E53E2"
+      cert_valid_from     = "2026-05-08"
+      cert_valid_to       = "2026-05-11"
+
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:00:d2:d7:d7:1f:e6:08:c2:42:e8:15:00:00:00:00:d2:d7"
       )
 }
 
@@ -51835,6 +52430,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000F3EE004F312E93BED9
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000F3FF728495423D777C0600000000F3FF {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-10"
+      version             = "1.0"
+
+      hash                = "f9f0d0f11592a03814f1df78e799244ea4231804fb9968484bcb79ad12eec611"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Palacios Edgar"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:00:f3:ff:72:84:95:42:3d:77:7c:06:00:00:00:00:f3:ff"
+      cert_thumbprint     = "2789FCCDA8E27E1ED353DFAFA9F5037AD41C5A58"
+      cert_valid_from     = "2026-05-10"
+      cert_valid_to       = "2026-05-13"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:00:f3:ff:72:84:95:42:3d:77:7c:06:00:00:00:00:f3:ff"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300010036E66660B03E5DC1FD000000010036 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
@@ -51870,6 +52500,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300010036E66660B03E5DC1
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000102B8A574785692B617390000000102B8 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-14"
+      version             = "1.0"
+
+      hash                = "6777bf31fcecd2c073b27cbef8af264bc4b51b43695c98712f66af47be283598"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Avery Benavidez"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:01:02:b8:a5:74:78:56:92:b6:17:39:00:00:00:01:02:b8"
+      cert_thumbprint     = "59C5A40C971AC49E3CE48CA6D5C9CF37D6CA3CD7"
+      cert_valid_from     = "2026-05-14"
+      cert_valid_to       = "2026-05-17"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:01:02:b8:a5:74:78:56:92:b6:17:39:00:00:00:01:02:b8"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300010C4BF29E544FB162191D000000010C4B {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
@@ -51902,6 +52567,76 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300010C4BF29E544FB16219
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
          sig.serial == "33:00:01:0c:4b:f2:9e:54:4f:b1:62:19:1d:00:00:00:01:0c:4b"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001133FCF9D196F711DACCF00000001133F {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-15"
+      version             = "1.0"
+
+      hash                = "c896efb44e5373135057d13d6c77bba1342bc509b3774faec6c6f8faa6709c28"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Morrison Chaunesey"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:01:13:3f:cf:9d:19:6f:71:1d:ac:cf:00:00:00:01:13:3f"
+      cert_thumbprint     = "48FC2B7F4FDE6588E3E968A86A36BDE322D80913"
+      cert_valid_from     = "2026-05-15"
+      cert_valid_to       = "2026-05-18"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "Converse"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:01:13:3f:cf:9d:19:6f:71:1d:ac:cf:00:00:00:01:13:3f"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300011B1054854F398E3C441B000000011B10 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-16"
+      version             = "1.0"
+
+      hash                = "762c57c87ed6901c1a27beacf548ea5272e2b87e40a90eed2b9ad2576be42f41"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Morrison Chaunesey"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:01:1b:10:54:85:4f:39:8e:3c:44:1b:00:00:00:01:1b:10"
+      cert_thumbprint     = "3EE519A095396CC81B9E55FA0A81B528029754FB"
+      cert_valid_from     = "2026-05-16"
+      cert_valid_to       = "2026-05-19"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "Converse"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:01:1b:10:54:85:4f:39:8e:3c:44:1b:00:00:00:01:1b:10"
       )
 }
 
@@ -51975,6 +52710,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000128FA7E99282F7FFF91
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300012E4C6BA0B3FEB1135E87000000012E4C {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-19"
+      version             = "1.0"
+
+      hash                = "37484cf418468097d4a1dc6588f310a08d4779462b551d29a19fd336fbe7e83e"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Palacios Edgar"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:01:2e:4c:6b:a0:b3:fe:b1:13:5e:87:00:00:00:01:2e:4c"
+      cert_thumbprint     = "CF63DB28A6F8F9BA3EB72947C36B9B60519907A7"
+      cert_valid_from     = "2026-05-19"
+      cert_valid_to       = "2026-05-22"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:01:2e:4c:6b:a0:b3:fe:b1:13:5e:87:00:00:00:01:2e:4c"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300013A239614F0EEDC008261000000013A23 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
@@ -52007,6 +52777,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300013A239614F0EEDC0082
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
          sig.serial == "33:00:01:3a:23:96:14:f0:ee:dc:00:82:61:00:00:00:01:3a:23"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300013FFDBFF5E4FDB8FFBC3E000000013FFD {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-21"
+      version             = "1.0"
+
+      hash                = "4faf038a0900962f06e8d20f9db26358bad631f2467f23b9bf707167208d357b"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Ana leticia Lazcon"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:01:3f:fd:bf:f5:e4:fd:b8:ff:bc:3e:00:00:00:01:3f:fd"
+      cert_thumbprint     = "2D35C2699DFC1260005234143017C654CEB94D89"
+      cert_valid_from     = "2026-05-21"
+      cert_valid_to       = "2026-05-24"
+
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:01:3f:fd:bf:f5:e4:fd:b8:ff:bc:3e:00:00:00:01:3f:fd"
       )
 }
 
@@ -52045,6 +52850,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000158E1B4982495366534
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001679C0711E6A6714F3DBD00000001679C {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-28"
+      version             = "1.0"
+
+      hash                = "b5d8d81fe4264d9b32a8a9c148ff342e4583d62a2b4bd6781a01145669babd38"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Sabrina Perry"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:01:67:9c:07:11:e6:a6:71:4f:3d:bd:00:00:00:01:67:9c"
+      cert_thumbprint     = "6DEE979BB5D8B181343965DAF5D5E68A33EBBFC1"
+      cert_valid_from     = "2026-05-28"
+      cert_valid_to       = "2026-05-31"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:01:67:9c:07:11:e6:a6:71:4f:3d:bd:00:00:00:01:67:9c"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300016CD7820660D28582E2BC000000016CD7 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
@@ -52077,6 +52917,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300016CD7820660D28582E2
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
          sig.serial == "33:00:01:6c:d7:82:06:60:d2:85:82:e2:bc:00:00:00:01:6c:d7"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000179102F5D5C8325585C99000000017910 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-27"
+      version             = "1.0"
+
+      hash                = "98ecad514221b45797cf98ba928644233cc259790889243b6cdbbfcb4a4eb557"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Sabrina Perry"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:01:79:10:2f:5d:5c:83:25:58:5c:99:00:00:00:01:79:10"
+      cert_thumbprint     = "EC28061B6151FE3ACA1FBFBCC83BA0D1C2F55323"
+      cert_valid_from     = "2026-05-27"
+      cert_valid_to       = "2026-05-30"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:01:79:10:2f:5d:5c:83:25:58:5c:99:00:00:00:01:79:10"
       )
 }
 
@@ -52290,6 +53165,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300078BBEED7D75E6661215
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007918348954D80D6573A7D000000079183 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-22"
+      version             = "1.0"
+
+      hash                = "7ee9ca0d9e78bed5fee51205f037c9f5c82440405624928433770c85389e0851"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Palacios Edgar"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:07:91:83:48:95:4d:80:d6:57:3a:7d:00:00:00:07:91:83"
+      cert_thumbprint     = "02B9410C6FAD1175A225C3D2A997BCAE29DE3973"
+      cert_valid_from     = "2026-03-22"
+      cert_valid_to       = "2026-03-25"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:07:91:83:48:95:4d:80:d6:57:3a:7d:00:00:00:07:91:83"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007918F39FB07238374052B00000007918F {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
@@ -52427,6 +53337,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007A2006AFF3E68DB3F14
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
          sig.serial == "33:00:07:a2:00:6a:ff:3e:68:db:3f:14:a5:00:00:00:07:a2:00"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007A2A9A2E81F1D2E3801D200000007A2A9 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-27"
+      version             = "1.0"
+
+      hash                = "5cc85f92128951bcabb7e2df82a33bac882b634d1960dd88248cf5010bc391f4"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Sharp Tavyn"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:07:a2:a9:a2:e8:1f:1d:2e:38:01:d2:00:00:00:07:a2:a9"
+      cert_thumbprint     = "B1B09F9894EE7AEF14900C0E36058C9FB4427058"
+      cert_valid_from     = "2026-03-27"
+      cert_valid_to       = "2026-03-30"
+
+      country             = "US"
+      state               = "Oklahoma"
+      locality            = "Ringling"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:07:a2:a9:a2:e8:1f:1d:2e:38:01:d2:00:00:00:07:a2:a9"
       )
 }
 
@@ -52637,6 +53582,251 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330008568D4A72F36727C136
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
          sig.serial == "33:00:08:56:8d:4a:72:f3:67:27:c1:36:00:00:00:00:08:56:8d"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330008571C4D9BD73DE55E534600000008571C {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-19"
+      version             = "1.0"
+
+      hash                = "06a29c82cf8cdafab4f3f4feb1d4946db660da95f0faebcf1925deaec7faba5d"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Johnson Tredaytrin Keyshawn"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:08:57:1c:4d:9b:d7:3d:e5:5e:53:46:00:00:00:08:57:1c"
+      cert_thumbprint     = "AD970CA9D0B0C9FAE560739C512289D7FBB5C2A4"
+      cert_valid_from     = "2026-03-19"
+      cert_valid_to       = "2026-03-22"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "Taylor"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:08:57:1c:4d:9b:d7:3d:e5:5e:53:46:00:00:00:08:57:1c"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330008662D5D7BE110387308A000000008662D {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-22"
+      version             = "1.0"
+
+      hash                = "4834845a41a26479e00660c0e2ca85d751e7be0162aca908b75d8ac59e4a5125"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "GUERRERO DEBRA"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:08:66:2d:5d:7b:e1:10:38:73:08:a0:00:00:00:08:66:2d"
+      cert_thumbprint     = "A20F695C01A7017703E07373D48D821F9C648AE1"
+      cert_valid_from     = "2026-03-22"
+      cert_valid_to       = "2026-03-25"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "SAN ANTONIO"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:08:66:2d:5d:7b:e1:10:38:73:08:a0:00:00:00:08:66:2d"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330008685344CE9B2825DC601D000000086853 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-23"
+      version             = "1.0"
+
+      hash                = "c11cfc997c91a180307e5a4f8b2ec614efb8284df146e465c97e91186e5035b0"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Johnson Tredaytrin Keyshawn"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:08:68:53:44:ce:9b:28:25:dc:60:1d:00:00:00:08:68:53"
+      cert_thumbprint     = "13507B501DB562A438C7E7ADE26AF51E52FCAB62"
+      cert_valid_from     = "2026-03-23"
+      cert_valid_to       = "2026-03-26"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "Taylor"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:08:68:53:44:ce:9b:28:25:dc:60:1d:00:00:00:08:68:53"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330008949836546D9A34F18763000000089498 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-19"
+      version             = "1.0"
+
+      hash                = "6061306ac9b67a07e27359d0c0f25155ef2fc55d383815b6a348124ede7bdefc"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Palacios Edgar"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:08:94:98:36:54:6d:9a:34:f1:87:63:00:00:00:08:94:98"
+      cert_thumbprint     = "613B01965F16D5ECD5C15DB7A854BC861F9BAA30"
+      cert_valid_from     = "2026-03-19"
+      cert_valid_to       = "2026-03-22"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:08:94:98:36:54:6d:9a:34:f1:87:63:00:00:00:08:94:98"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300089D5796BFE3672150359D000000089D57 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-31"
+      version             = "1.0"
+
+      hash                = "883d9209b1f866445944debeb56bd6b6f4f0baa3088768b7dd5c18878c898f8b"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Sharp Tavyn"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:08:9d:57:96:bf:e3:67:21:50:35:9d:00:00:00:08:9d:57"
+      cert_thumbprint     = "A7308C1589FD9B2149254C32BA2A1FF58BA895BC"
+      cert_valid_from     = "2026-03-31"
+      cert_valid_to       = "2026-04-03"
+
+      country             = "US"
+      state               = "Oklahoma"
+      locality            = "Ringling"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:08:9d:57:96:bf:e3:67:21:50:35:9d:00:00:00:08:9d:57"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330008B0AB187518E226CBC1AF00000008B0AB {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-24"
+      version             = "1.0"
+
+      hash                = "f25ca888d6345c4fcae707af9255297f10113592ed360f9a790d3b6f2ceefc50"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Palacios Edgar"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:08:b0:ab:18:75:18:e2:26:cb:c1:af:00:00:00:08:b0:ab"
+      cert_thumbprint     = "B3236A4C4B20F4028ED7635E7EA489A712870ED3"
+      cert_valid_from     = "2026-03-24"
+      cert_valid_to       = "2026-03-27"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:08:b0:ab:18:75:18:e2:26:cb:c1:af:00:00:00:08:b0:ab"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330008C821DB63CCCBAD133D9400000008C821 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-28"
+      version             = "1.0"
+
+      hash                = "56d46f34948f322312e9a150800cc5b9c947f2ccc82a5b96568be4b50b30e551"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Sharp Tavyn"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:08:c8:21:db:63:cc:cb:ad:13:3d:94:00:00:00:08:c8:21"
+      cert_thumbprint     = "0110B90610A1C021448DEF930897456B50CDDC24"
+      cert_valid_from     = "2026-03-28"
+      cert_valid_to       = "2026-03-31"
+
+      country             = "US"
+      state               = "Oklahoma"
+      locality            = "Ringling"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:08:c8:21:db:63:cc:cb:ad:13:3d:94:00:00:00:08:c8:21"
       )
 }
 
@@ -63382,6 +64572,41 @@ rule MAL_Compromised_Cert_Traffer_Sectigo_00AF14E42F5DF730547AEF8E581C0DB316 {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "00:af:14:e4:2f:5d:f7:30:54:7a:ef:8e:58:1c:0d:b3:16"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Sectigo_00C9F72B34ACD7B6FAA6A1F6BA17013CFC {
+   meta:
+      description         = "Detects Traffer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-06"
+      version             = "1.0"
+
+      hash                = "714ffc4698d8933240c43a1cf995038f32a29d6cd55b76a4c34710c264248bc0"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Xiamen Yichen Information Technology Co., Ltd"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:c9:f7:2b:34:ac:d7:b6:fa:a6:a1:f6:ba:17:01:3c:fc"
+      cert_thumbprint     = "6F494D5408344F028BA211CD20FDFE35A2677D6E"
+      cert_valid_from     = "2026-02-06"
+      cert_valid_to       = "2027-02-06"
+
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:c9:f7:2b:34:ac:d7:b6:fa:a6:a1:f6:ba:17:01:3c:fc"
       )
 }
 
