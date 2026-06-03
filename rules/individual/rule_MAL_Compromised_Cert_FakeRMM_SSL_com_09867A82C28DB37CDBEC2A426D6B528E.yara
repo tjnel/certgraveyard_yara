@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeRMM_SSL_com_09867A82C28DB37CDBEC2A426D6B528E {
       cert_valid_from     = "2025-12-01"
       cert_valid_to       = "2026-11-30"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "California"
+      locality            = "San Francisco"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

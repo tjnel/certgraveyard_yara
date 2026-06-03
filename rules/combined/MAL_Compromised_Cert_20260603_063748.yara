@@ -20251,11 +20251,11 @@ rule MAL_Compromised_Cert_FakeRMM_SSL_com_09867A82C28DB37CDBEC2A426D6B528E {
       cert_valid_from     = "2025-12-01"
       cert_valid_to       = "2026-11-30"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "California"
+      locality            = "San Francisco"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -52871,11 +52871,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001679C0711E6A6714F3D
       cert_valid_from     = "2026-05-28"
       cert_valid_to       = "2026-05-31"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "hi"
+      locality            = "Wailuku"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -52941,11 +52941,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000179102F5D5C8325585C
       cert_valid_from     = "2026-05-27"
       cert_valid_to       = "2026-05-30"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "hi"
+      locality            = "Wailuku"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
