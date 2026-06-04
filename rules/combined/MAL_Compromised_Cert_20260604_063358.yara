@@ -6965,6 +6965,41 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_3300089A0D4ACA6FD9F156502C00000
       )
 }
 
+rule MAL_Compromised_Cert_CastleLoader_Microsoft_330008E899C483597477738F5700000008E899 {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-02"
+      version             = "1.0"
+
+      hash                = "a23404d697356773f2a970c190d2025c2aba7737dc12ccaab012fbd6cf19921f"
+      malware             = "CastleLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Elisa Olea"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:08:e8:99:c4:83:59:74:77:73:8f:57:00:00:00:08:e8:99"
+      cert_thumbprint     = "F3A3B7B587D2538898B2ABD66739167387F4B283"
+      cert_valid_from     = "2026-04-02"
+      cert_valid_to       = "2026-04-05"
+
+      country             = "US"
+      state               = "Arizona"
+      locality            = "gilbert"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:08:e8:99:c4:83:59:74:77:73:8f:57:00:00:00:08:e8:99"
+      )
+}
+
 rule MAL_Compromised_Cert_CastleLoader_SSL_com_0F01EA3DC8215BA041F881869416788F {
    meta:
       description         = "Detects CastleLoader with compromised cert (SSL.com)"
@@ -52955,6 +52990,76 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000179102F5D5C8325585C
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001919FF8EC44E5DE87320B00000001919F {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-31"
+      version             = "1.0"
+
+      hash                = "de551de5d6e0f9d7bcf4b72312449eb57ca33aa3c43ecd0219721a104431d00f"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Danielle Hale"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:01:91:9f:f8:ec:44:e5:de:87:32:0b:00:00:00:01:91:9f"
+      cert_thumbprint     = "CF545B86807A346F88C5EF9EAC43C3F9FF20EA9C"
+      cert_valid_from     = "2026-05-31"
+      cert_valid_to       = "2026-06-03"
+
+      country             = "US"
+      state               = "oh"
+      locality            = "Cleveland"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:01:91:9f:f8:ec:44:e5:de:87:32:0b:00:00:00:01:91:9f"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000193EA01241DAE51BF86090000000193EA {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-01"
+      version             = "1.0"
+
+      hash                = "cd7aae015992ac841411fd6743f3d0e6c500fd432a9b282c7bbb4e0d151dd8fa"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Danielle Hale"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:01:93:ea:01:24:1d:ae:51:bf:86:09:00:00:00:01:93:ea"
+      cert_thumbprint     = "BCBEEA59A52D084DC7883374ABB41E39396E2A44"
+      cert_valid_from     = "2026-06-01"
+      cert_valid_to       = "2026-06-04"
+
+      country             = "US"
+      state               = "oh"
+      locality            = "Cleveland"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:01:93:ea:01:24:1d:ae:51:bf:86:09:00:00:00:01:93:ea"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007227525ABC3F117376B2E000000072275 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
@@ -73780,6 +73885,41 @@ rule MAL_Compromised_Cert_Unknown_Microsoft_330000DDE6FFDEA03305B7485A00000000DD
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Microsoft_33000197A4D121A613084F72570000000197A4 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-01"
+      version             = "1.0"
+
+      hash                = "1768cd3d250cdf365e7242707fe8864eb054f9446789f9928324c3133773ca57"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "OC Agro ApS"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:01:97:a4:d1:21:a6:13:08:4f:72:57:00:00:00:01:97:a4"
+      cert_thumbprint     = "6CACD059D76FADE6EB982B50779B34BB7BDE50BB"
+      cert_valid_from     = "2026-06-01"
+      cert_valid_to       = "2026-06-04"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:01:97:a4:d1:21:a6:13:08:4f:72:57:00:00:00:01:97:a4"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_Microsoft_330001B66C239653B84C37EA0900000001B66C {
    meta:
       description         = "Detects Unknown with compromised cert (Microsoft)"
@@ -79520,6 +79660,41 @@ rule MAL_Compromised_Cert_ValleyRAT_GlobalSign_0CBAF79465EBF8404FBF0EAA {
       )
 }
 
+rule MAL_Compromised_Cert_ValleyRAT_GlobalSign_2686B9982E46DA7E3E0A1D56 {
+   meta:
+      description         = "Detects ValleyRAT with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-05-16"
+      version             = "1.0"
+
+      hash                = "532e97b35149db5010be30f6619d76e1e987c29133416f87a860ff886b141d3c"
+      malware             = "ValleyRAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Morning Leap & Cazo Electronics Technology Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "26:86:b9:98:2e:46:da:7e:3e:0a:1d:56"
+      cert_thumbprint     = "69E050F63735CA4A1BCF5A21D3D64BDAB9C0BF42"
+      cert_valid_from     = "2024-05-16"
+      cert_valid_to       = "2025-05-16"
+
+      country             = "CN"
+      state               = "Hebei"
+      locality            = "Cangzhou"
+      email               = "???"
+      rdn_serial_number   = "91130922MA0G8AN920"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "26:86:b9:98:2e:46:da:7e:3e:0a:1d:56"
+      )
+}
+
 rule MAL_Compromised_Cert_ValleyRAT_GlobalSign_49A710D6C41DA0A7CAC7F97A {
    meta:
       description         = "Detects ValleyRAT with compromised cert (GlobalSign)"
@@ -82950,6 +83125,41 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Certum_5AE3A3B23CFA63ADFCED9BA9EF9A263C 
       )
 }
 
+rule MAL_Compromised_Cert_Zhong_Stealer_Certum_5BD368336404058DA643D99A3BBEB530 {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-18"
+      version             = "1.0"
+
+      hash                = "a60f58618c8548ff60978d7c50176bebb38486690d87ba24a8581b62dd478228"
+      malware             = "Zhong Stealer"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Biao Zhao"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "5b:d3:68:33:64:04:05:8d:a6:43:d9:9a:3b:be:b5:30"
+      cert_thumbprint     = "90E412614B391AB2F0CAF9C2D91761B79BAE1505"
+      cert_valid_from     = "2026-03-18"
+      cert_valid_to       = "2027-03-18"
+
+      country             = "CN"
+      state               = "Sichuan"
+      locality            = "Nanchong"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "5b:d3:68:33:64:04:05:8d:a6:43:d9:9a:3b:be:b5:30"
+      )
+}
+
 rule MAL_Compromised_Cert_Zhong_Stealer_Certum_5BE7B13F587B8850573257DF55E5E39E {
    meta:
       description         = "Detects Zhong Stealer with compromised cert (Certum)"
@@ -83577,6 +83787,41 @@ rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_172C26AE164BCD6BEFEC180E {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "17:2c:26:ae:16:4b:cd:6b:ef:ec:18:0e"
+      )
+}
+
+rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_2686B9982E46DA7E3E0A1D56 {
+   meta:
+      description         = "Detects Zhong Stealer with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-05-16"
+      version             = "1.0"
+
+      hash                = "02244934046333f45bc22abe6185e6ddda033342836062afb681a583aa7d827f"
+      malware             = "Zhong Stealer"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Morning Leap & Cazo Electronics Technology Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "26:86:b9:98:2e:46:da:7e:3e:0a:1d:56"
+      cert_thumbprint     = "69E050F63735CA4A1BCF5A21D3D64BDAB9C0BF42"
+      cert_valid_from     = "2024-05-16"
+      cert_valid_to       = "2025-05-16"
+
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "26:86:b9:98:2e:46:da:7e:3e:0a:1d:56"
       )
 }
 
