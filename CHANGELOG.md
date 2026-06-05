@@ -2796,6 +2796,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Checked 2026-06-05
+- No new certificates detected
+
 ### Checked 2026-06-01
 - No new certificates detected
 
