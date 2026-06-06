@@ -4,6 +4,23 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.06.06] - 2026-06-06
+
+### Added
+- MAL_Compromised_Cert_FlutterShell_Apple_226070572ABFE05A (FlutterShell - Apple)
+- MAL_Compromised_Cert_FakeImage_Microsoft_330001A978A8D1BA8AFF24C6CC00000001A978 (FakeImage - Microsoft)
+- MAL_Compromised_Cert_Zhong_Stealer_Certum_33DB6C7028FCF6AFB84646806433D226 (Zhong Stealer - Certum)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_330001A3692361E00C57592E6500000001A369 (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_330001947154EBD4D00B970D4B000000019471 (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001AB0BBD1EB7605E30A77B00000001AB0B (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_FlutterShell_Apple_36A88C562EDD9237 (FlutterShell - Apple)
+- MAL_Compromised_Cert_FlutterShell_Apple_5F8CBFC848CF43C8 (FlutterShell - Apple)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_3300017A654DACE6330E0EC768000000017A65 (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300019D62D75E65B0EA64315C000000019D62 (ScreenConnectLoader - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_33000197A4D121A613084F72570000000197A4 (Updated metadata for Forever Botnet,BR-01)
+
 ## [2026.06.04] - 2026-06-04
 
 ### Added
