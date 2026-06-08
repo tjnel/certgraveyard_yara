@@ -4,6 +4,19 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.06.08] - 2026-06-08
+
+### Added
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000A2CB903C49A97F5EC2C800000000A2CB (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_UNK_50_Microsoft_330000FAEBD8DAC050411720EB00000000FAEB (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000126ABA61EE120CD7D0C500000000126AB (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000126ABA61EE120CD7D0C500000000126AB (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001A5A3233B73269302AECF00000001A5A3 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_Traffer_SSL_com_29DBCFC33537EF7B80629968F00391E6 (Traffer - SSL.com)
+- MAL_Compromised_Cert_FakeTrading_Microsoft_330000EBF2267F501774231D3600000000EBF2 (FakeTrading - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000B14DC5F4E098BC6D1A1600000000B14D (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_Unknown_Microsoft_33000193EA01241DAE51BF86090000000193EA (Unknown - Microsoft)
+
 ## [2026.06.06] - 2026-06-06
 
 ### Added
