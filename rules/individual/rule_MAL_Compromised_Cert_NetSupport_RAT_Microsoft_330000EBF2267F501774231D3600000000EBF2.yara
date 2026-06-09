@@ -1,17 +1,17 @@
 import "pe"
 
-rule MAL_Compromised_Cert_FakeTrading_Microsoft_330000EBF2267F501774231D3600000000EBF2 {
+rule MAL_Compromised_Cert_NetSupport_RAT_Microsoft_330000EBF2267F501774231D3600000000EBF2 {
    meta:
-      description         = "Detects FakeTrading with compromised cert (Microsoft)"
+      description         = "Detects NetSupport RAT with compromised cert (Microsoft)"
       author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2026-05-09"
       version             = "1.0"
 
-      hash                = "c68c7a04aab27cc5bc39ed5f98f41ad3a0a6cb93f1b99288400cdc9d68afea88"
-      malware             = "FakeTrading"
-      malware_type        = "Unknown"
-      malware_notes       = "Fake TradingView loading further payloads from 212.86.114.171/webdav/update.dat"
+      hash                = "2fe7b6aeeea82a71d754d61bd2e0edf592248d01e0f81c7bd3e7b1a5be1da2ab"
+      malware             = "NetSupport RAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
 
       signer              = "A&A Interactive Media Group"
       cert_issuer_short   = "Microsoft"

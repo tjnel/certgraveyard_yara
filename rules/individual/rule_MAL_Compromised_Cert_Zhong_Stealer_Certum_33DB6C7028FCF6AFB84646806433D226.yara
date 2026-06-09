@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Zhong_Stealer_Certum_33DB6C7028FCF6AFB84646806433D226 
       cert_valid_from     = "2025-11-17"
       cert_valid_to       = "2026-11-17"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "CN"
+      state               = "四川"
+      locality            = "达州"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -8,7 +8,7 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000193EA01241DAE51BF86
       date                = "2026-06-01"
       version             = "1.0"
 
-      hash                = "cd7aae015992ac841411fd6743f3d0e6c500fd432a9b282c7bbb4e0d151dd8fa"
+      hash                = "90744f72236554fb7a1f1c218f42c55e16d6d1460fd364656c7cada554282fb7"
       malware             = "ScreenConnectLoader"
       malware_type        = "Unknown"
       malware_notes       = ""

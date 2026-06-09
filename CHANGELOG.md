@@ -4,6 +4,32 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.06.09] - 2026-06-09
+
+### Added
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001BF9DE4F0EA4ABA4E192200000001BF9D (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_NetSupport_RAT_Microsoft_330000EBF2267F501774231D3600000000EBF2 (NetSupport RAT - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001984FEB3E194FF4551C6F00000001984F (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_60353AC688FD82A02C36C9043C8CEB09 (ScreenConnectLoader - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000193EA01241DAE51BF86090000000193EA (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300019D62D75E65B0EA64315C000000019D62 (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001A5A3233B73269302AECF00000001A5A3 (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000B14DC5F4E098BC6D1A1600000000B14D (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_FakeTrading_Microsoft_330000EBF2267F501774231D3600000000EBF2 (Updated metadata for FakeTrading)
+- MAL_Compromised_Cert_UNK_50_Microsoft_330000FAEBD8DAC050411720EB00000000FAEB (Updated metadata for UNK-50)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000126ABA61EE120CD7D0C500000000126AB (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_3300017A654DACE6330E0EC768000000017A65 (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001AB0BBD1EB7605E30A77B00000001AB0B (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_330001947154EBD4D00B970D4B000000019471 (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000A2CB903C49A97F5EC2C800000000A2CB (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_Traffer_SSL_com_29DBCFC33537EF7B80629968F00391E6 (Updated metadata for Traffer)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_330001A3692361E00C57592E6500000001A369 (Updated metadata for CastleLoader)
+- MAL_Compromised_Cert_FakeImage_Microsoft_330001A978A8D1BA8AFF24C6CC00000001A978 (Updated metadata for FakeImage)
+- MAL_Compromised_Cert_Zhong_Stealer_Certum_33DB6C7028FCF6AFB84646806433D226 (Updated metadata for Zhong Stealer)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000126ABA61EE120CD7D0C500000000126AB (Updated metadata for ScreenConnectLoader)
+
 ## [2026.06.08] - 2026-06-08
 
 ### Added

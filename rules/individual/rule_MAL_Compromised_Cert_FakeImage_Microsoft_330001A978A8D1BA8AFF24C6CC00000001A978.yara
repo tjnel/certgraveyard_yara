@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeImage_Microsoft_330001A978A8D1BA8AFF24C6CC00000001
       cert_valid_from     = "2026-06-03"
       cert_valid_to       = "2026-06-06"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "NL"
+      state               = "Groningen"
+      locality            = "Groningen"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
