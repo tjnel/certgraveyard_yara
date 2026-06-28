@@ -66,7 +66,7 @@ async def download_csv(
         try:
             logger.info(f"Downloading CSV from {url} (attempt {attempt + 1}/{max_retries})")
 
-            async with httpx.AsyncClient(timeout=timeout, headers=DEFAULT_HEADERS) as client:
+            async with httpx.AsyncClient(timeout=timeout, headers=DEFAULT_HEADERS, follow_redirects=True) as client:
                 response = await client.get(url)
                 response.raise_for_status()
 
