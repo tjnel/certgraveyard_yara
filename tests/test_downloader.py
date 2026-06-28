@@ -8,6 +8,7 @@ import httpx
 import pytest
 
 from cert_graveyard_yara.downloader import (
+    DEFAULT_HEADERS,
     DownloadError,
     calculate_hash,
     download_csv,
@@ -152,6 +153,11 @@ class TestDownloadCsv:
                 output_path=output_path,
             )
 
+            mock_client.assert_called_once_with(
+                timeout=60.0,
+                headers=DEFAULT_HEADERS,
+                follow_redirects=True,
+            )
             assert result == output_path
             assert output_path.exists()
             assert output_path.read_bytes() == csv_content
