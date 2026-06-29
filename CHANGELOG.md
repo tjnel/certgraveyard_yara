@@ -4,6 +4,62 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.06.29] - 2026-06-29
+
+### Added
+- MAL_Compromised_Cert_Traffer_Sectigo_00E0303C66BF1DA01986FB6B0BF85ED7D1 (Traffer - Sectigo)
+- MAL_Compromised_Cert_SoftHub_GlobalSign_1A68E8AEFBDBD2B972F8D6BD (SoftHub - GlobalSign)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300011491D79A16E0F1F5064F000000011491 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_T_21_Microsoft_33000031DA2EB5CA724935B3670000000031DA (T-21 - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_330001BAD6B5201F995E297C3700000001BAD6 (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000EACC8C1FE72D2498E15600000000EACC (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_T_21_Microsoft_330008B848DE58FB7275A382FF00000008B848 (T-21 - Microsoft)
+- MAL_Compromised_Cert_Certificate_warming_SSL_com_74FC5C06D52C787D6CECFF46BB4EF584 (Certificate warming - SSL.com)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001AA4D046B2F3152C2188E00000001AA4D (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_Certificate_warming_SSL_com_186B7247D7FA9CA90D69DF0918114F9C (Certificate warming - SSL.com)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001E7B7B507DE1DE039761F00000001E7B7 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_Pulse_Browser_Sectigo_00E96F42F8386E061B97F3611CA55BD23F (Pulse Browser - Sectigo)
+- MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_00EA351A91002323088C3B25ACB951C549 (ScreenConnectLoader - Sectigo)
+- MAL_Compromised_Cert_FakeImage_Certum_4C1D66965222EDE4519CB068D9C93B28 (FakeImage - Certum)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001AD2263A3A2726335266700000001AD22 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_0E8A201CD9D72CF63D9F0F238E9EE6E6 (ScreenConnectLoader - SSL.com)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_3300020496CBE521F8C86D8E40000000020496 (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_Unknown_high_risk_Sectigo_464C3DB5145EF83C753F8757F35F34FA (Unknown, high risk - Sectigo)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001DF2958597AC92236D1CC00000001DF29 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_33000274D5AE030461145F7EC20000000274D5 (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_SoftHub_GlobalSign_7A3DA17E80BD536BF7341730 (SoftHub - GlobalSign)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300001E009F74F8FF433C7F1D000000001E00 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_FakeImage_Certum_4D15DAA84E9D51E5C129313D13528FFA (FakeImage - Certum)
+- MAL_Compromised_Cert_T_21_GlobalSign_7A9A0EDE87BF4EBE884BCCD6 (T-21 - GlobalSign)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_33000228C933B5DFD616416FCD0000000228C9 (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_CobaltStrike_Sectigo_0091A4DB367C7F2D092A4E73D72E2EF5BD (CobaltStrike - Sectigo)
+- MAL_Compromised_Cert_Gh0stRAT_Certum_7FDABB90421A3F81B7EA70A22C68E9FD (Gh0stRAT - Certum)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001BA2C1A18BB42874A20A600000001BA2C (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330002791C2981497B55F8C69300000002791C (Forever Botnet,BR-01 - Microsoft)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_33000250AEE0BFC17AD9B037100000000250AE (Forever Botnet,BR-01 - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001D1FC7AD23F039C2FD47F00000001D1FC (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001B5CB08F350B0E209B7E700000001B5CB (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001D9296D14E1F12F56473900000001D929 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_FakeRMM_GlobalSign_3AB8F2A0FD69A9852BB9B04C (FakeRMM - GlobalSign)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001752A8AC7262C3D52F48E00000001752A (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001CC4F247D95E6984F96FD00000001CC4F (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_FakeUpdate_SSL_com_3D58E340CB254E85AD66D07B10B2C9FB (FakeUpdate - SSL.com)
+- MAL_Compromised_Cert_CastleLoader_SSL_com_552DE4EEFE565E6FF45A10D51455FBD1 (CastleLoader - SSL.com)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_330001C1A1C7BC994094C9C2B300000001C1A1 (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_T_21_Microsoft_33000059E1806B33EE40FADEA60000000059E1 (T-21 - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_72FFA5EF5A1DB3273777C11F4E6EE11D (ScreenConnectLoader - SSL.com)
+- MAL_Compromised_Cert_Zhong_Stealer_Certum_4C7F6FF1482D879279B36DB214E57525 (Zhong Stealer - Certum)
+- MAL_Compromised_Cert_Unknown_Certum_37DEECE43A9618E6A1CF93F48FA1FD33 (Unknown - Certum)
+- MAL_Compromised_Cert_UNK_50_Microsoft_3300017BDB4B06B0CD1F392EC8000000017BDB (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_Pulse_Browser_Sectigo_00B7F4B4B2DE3E01482E7244E5D80542DA (Pulse Browser - Sectigo)
+- MAL_Compromised_Cert_Unknown_SSL_com_6876C6381FB4AF26E496DF7724B96056 (Unknown - SSL.com)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001C004CA57B4479ABBB29100000001C004 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_33000201F689BFE72DC78D3CCC0000000201F6 (CastleLoader - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_5076171603477D5BD6AEB984 (Updated metadata for Crazy Evil Traffer Team)
+- MAL_Compromised_Cert_PlugX_DigiCert_0C0999179801B46B92911B8B671018A8 (Updated metadata for PlugX)
+
 ## [2026.06.09] - 2026-06-09
 
 ### Added
