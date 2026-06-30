@@ -6755,6 +6755,41 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_330001C1A1C7BC994094C9C2B300000
       )
 }
 
+rule MAL_Compromised_Cert_CastleLoader_Microsoft_330001F91CBDF05FDC2E6DC63C00000001F91C {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-15"
+      version             = "1.0"
+
+      hash                = "891e821627a7dc6450cda47c0164fa90f63312484f8e603ed50d8e029b917852"
+      malware             = "CastleLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "OC Agro ApS"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:01:f9:1c:bd:f0:5f:dc:2e:6d:c6:3c:00:00:00:01:f9:1c"
+      cert_thumbprint     = "D401EB4B8956E0D2B4B200036A16C764B6EDE463"
+      cert_valid_from     = "2026-06-15"
+      cert_valid_to       = "2026-06-18"
+
+      country             = "DK"
+      state               = "Central Jutland"
+      locality            = "Hammel"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:01:f9:1c:bd:f0:5f:dc:2e:6d:c6:3c:00:00:00:01:f9:1c"
+      )
+}
+
 rule MAL_Compromised_Cert_CastleLoader_Microsoft_33000201F689BFE72DC78D3CCC0000000201F6 {
    meta:
       description         = "Detects CastleLoader with compromised cert (Microsoft)"
@@ -6881,11 +6916,11 @@ rule MAL_Compromised_Cert_CastleLoader_Microsoft_33000274D5AE030461145F7EC200000
       cert_valid_from     = "2026-06-25"
       cert_valid_to       = "2026-06-28"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "PT"
+      state               = "Évora"
+      locality            = "SILVEIRAS"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -22330,6 +22365,41 @@ rule MAL_Compromised_Cert_Fake_F5Updater_SSL_com_4FF0CAF9735335B3C10FABF14821458
       )
 }
 
+rule MAL_Compromised_Cert_Fake_anti_cheat_GlobalSign_2D676645247129B89455A7C2 {
+   meta:
+      description         = "Detects Fake anti-cheat with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-02-13"
+      version             = "1.0"
+
+      hash                = "9c9fd1ab06198b6d0aa3222006a7f97e2cb29c5ea3ab1d5f408784c008a32515"
+      malware             = "Fake anti-cheat"
+      malware_type        = "Backdoor"
+      malware_notes       = "The capability of the backdoor was described here: https://www.bilibili.com/opus/1217047827404816392"
+
+      signer              = "湖南江玩科技有限公司"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "2d:67:66:45:24:71:29:b8:94:55:a7:c2"
+      cert_thumbprint     = "7AD9CF2C0AC0C6B5753DEA9D566C4D8D54F8DA00"
+      cert_valid_from     = "2025-02-13"
+      cert_valid_to       = "2026-02-14"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "2d:67:66:45:24:71:29:b8:94:55:a7:c2"
+      )
+}
+
 rule MAL_Compromised_Cert_Fakebat_Certificate_SSL_com_6CD23039DFDA4B9363F3666113C2CBC8 {
    meta:
       description         = "Detects Fakebat_Certificate with compromised cert (SSL.com)"
@@ -22806,6 +22876,41 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_33000250AEE0BFC17AD9B03
       cert_valid_from     = "2026-06-24"
       cert_valid_to       = "2026-06-27"
 
+      country             = "FI"
+      state               = "Uusimaa"
+      locality            = "Loviisa"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:02:50:ae:e0:bf:c1:7a:d9:b0:37:10:00:00:00:02:50:ae"
+      )
+}
+
+rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300026E27169C11BF11A87D48000000026E27 {
+   meta:
+      description         = "Detects Forever Botnet,BR-01 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-27"
+      version             = "1.0"
+
+      hash                = "57dac1b0fa9e682d746a942301e285c8cf030e42a00ec79aac16400eb65bce64"
+      malware             = "Forever Botnet,BR-01"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "TMP-Ohjelmatuotanto Oy"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:02:6e:27:16:9c:11:bf:11:a8:7d:48:00:00:00:02:6e:27"
+      cert_thumbprint     = "915C2EA2BC19CF2027B11B786BD5B8DCE77CE98B"
+      cert_valid_from     = "2026-06-27"
+      cert_valid_to       = "2026-06-30"
+
       country             = "???"
       state               = "???"
       locality            = "???"
@@ -22816,7 +22921,7 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_33000250AEE0BFC17AD9B03
       uint16(0) == 0x5a4d and
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
-         sig.serial == "33:00:02:50:ae:e0:bf:c1:7a:d9:b0:37:10:00:00:00:02:50:ae"
+         sig.serial == "33:00:02:6e:27:16:9c:11:bf:11:a8:7d:48:00:00:00:02:6e:27"
       )
 }
 
@@ -22841,11 +22946,11 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330002791C2981497B55F8C
       cert_valid_from     = "2026-06-25"
       cert_valid_to       = "2026-06-28"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "PT"
+      state               = "Évora"
+      locality            = "SILVEIRAS"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

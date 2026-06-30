@@ -4,6 +4,18 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.06.30] - 2026-06-30
+
+### Added
+- MAL_Compromised_Cert_CastleLoader_Microsoft_330001F91CBDF05FDC2E6DC63C00000001F91C (CastleLoader - Microsoft)
+- MAL_Compromised_Cert_Fake_anti_cheat_GlobalSign_2D676645247129B89455A7C2 (Fake anti-cheat - GlobalSign)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300026E27169C11BF11A87D48000000026E27 (Forever Botnet,BR-01 - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_33000250AEE0BFC17AD9B037100000000250AE (Updated metadata for Forever Botnet,BR-01)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330002791C2981497B55F8C69300000002791C (Updated metadata for Forever Botnet,BR-01)
+- MAL_Compromised_Cert_CastleLoader_Microsoft_33000274D5AE030461145F7EC20000000274D5 (Updated metadata for CastleLoader)
+
 ## [2026.06.29] - 2026-06-29
 
 ### Added
