@@ -7840,6 +7840,41 @@ rule MAL_Compromised_Cert_CastleLoader_Sectigo_3D750F9AC0E074D810BCF82573950AF3 
       )
 }
 
+rule MAL_Compromised_Cert_CastleLoader_Sectigo_5168CE37CEED23752B869467676FC30D {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-05"
+      version             = "1.0"
+
+      hash                = "80a88e46054917be370301563491447e43a8b8a7229983a1ff534dff30c7979e"
+      malware             = "CastleLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Osh Spetsstroy LLC"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "51:68:ce:37:ce:ed:23:75:2b:86:94:67:67:6f:c3:0d"
+      cert_thumbprint     = "AB46CF19EDCCF2357D9F5D7696DD24ECA52EC3ED"
+      cert_valid_from     = "2026-06-05"
+      cert_valid_to       = "2027-06-05"
+
+      country             = "KG"
+      state               = "Osh"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "163181-3306-OOO"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "51:68:ce:37:ce:ed:23:75:2b:86:94:67:67:6f:c3:0d"
+      )
+}
+
 rule MAL_Compromised_Cert_CastleLoader_Sectigo_5447CA4779903CBA0128612D312425D6 {
    meta:
       description         = "Detects CastleLoader with compromised cert (Sectigo)"
@@ -22386,10 +22421,10 @@ rule MAL_Compromised_Cert_Fake_anti_cheat_GlobalSign_2D676645247129B89455A7C2 {
       cert_valid_from     = "2025-02-13"
       cert_valid_to       = "2026-02-14"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:
@@ -22911,11 +22946,11 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_3300026E27169C11BF11A87
       cert_valid_from     = "2026-06-27"
       cert_valid_to       = "2026-06-30"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "FI"
+      state               = "Uusimaa"
+      locality            = "Loviisa"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -79132,6 +79167,41 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_740833F89CC52CAE8CEA1984A66DBB66 {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "74:08:33:f8:9c:c5:2c:ae:8c:ea:19:84:a6:6d:bb:66"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_SSL_com_74FC5C06D52C787D6CECFF46BB4EF584 {
+   meta:
+      description         = "Detects Unknown with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-19"
+      version             = "1.0"
+
+      hash                = "2143baefd0b108fa1f6cfcfa3eb31d87578c6014117768f06bd8544dd02c8adf"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = "Downloads python, execute arbitrary payloads retrieved from insharedata[.]org/check.php/api/launcher/14/payload?direct=1"
+
+      signer              = "F & P PARTNERS LIMITED"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "74:fc:5c:06:d5:2c:78:7d:6c:ec:ff:46:bb:4e:f5:84"
+      cert_thumbprint     = "F052A5F675315F7A0412E8652DFECA9842760518"
+      cert_valid_from     = "2026-05-19"
+      cert_valid_to       = "2027-04-30"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "74:fc:5c:06:d5:2c:78:7d:6c:ec:ff:46:bb:4e:f5:84"
       )
 }
 
