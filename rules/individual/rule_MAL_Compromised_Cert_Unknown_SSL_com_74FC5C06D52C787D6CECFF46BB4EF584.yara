@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_74FC5C06D52C787D6CECFF46BB4EF584 {
       cert_valid_from     = "2026-05-19"
       cert_valid_to       = "2027-04-30"
 
-      country             = "???"
+      country             = "GB"
       state               = "???"
-      locality            = "???"
+      locality            = "Stamford"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "09832903"
 
    condition:
       uint16(0) == 0x5a4d and

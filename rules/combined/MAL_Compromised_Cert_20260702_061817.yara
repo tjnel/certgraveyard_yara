@@ -26320,6 +26320,41 @@ rule MAL_Compromised_Cert_HijackLoader_GlobalSign_5B5D9C65E0953B3F15D0D5DE {
       )
 }
 
+rule MAL_Compromised_Cert_HijackLoader_Microsoft_330001385332BA26BC619362AB000000013853 {
+   meta:
+      description         = "Detects HijackLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-20"
+      version             = "1.0"
+
+      hash                = "9c0a88ea53c4e0324157542385a1d342101feb51cf7b8cf76e9441376f1f522a"
+      malware             = "HijackLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = "This malware uses a fake telegram URL for C2. In this instance, the malware was disguised as a Franz messenger app installer. A previous version was disguised as Telegram."
+
+      signer              = "ELH Palkehituse OÜ"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:01:38:53:32:ba:26:bc:61:93:62:ab:00:00:00:01:38:53"
+      cert_thumbprint     = "725523E6EB27771128C94B14D846277261042A16"
+      cert_valid_from     = "2026-05-20"
+      cert_valid_to       = "2026-05-23"
+
+      country             = "EE"
+      state               = "Põlvamaa"
+      locality            = "Valgjärve"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:01:38:53:32:ba:26:bc:61:93:62:ab:00:00:00:01:38:53"
+      )
+}
+
 rule MAL_Compromised_Cert_HijackLoader_Microsoft_330003033B96D04AB9ED3A8D9F00000003033B {
    meta:
       description         = "Detects HijackLoader with compromised cert (Microsoft)"
@@ -55055,6 +55090,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001E7B7B507DE1DE03976
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330002809DC34A10A47E8DBBFE00000002809D {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-29"
+      version             = "1.0"
+
+      hash                = "c972dd09d07972230bfc3282a82494c8a9ca29b48532038af8966f9c3d98564d"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Dennis Miller"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:02:80:9d:c3:4a:10:a4:7e:8d:bb:fe:00:00:00:02:80:9d"
+      cert_thumbprint     = "A62F4D7E93DE08F9676E489CD0FD9FDD134D53A6"
+      cert_valid_from     = "2026-06-29"
+      cert_valid_to       = "2026-07-02"
+
+      country             = "US"
+      state               = "mi"
+      locality            = "Westland"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:02:80:9d:c3:4a:10:a4:7e:8d:bb:fe:00:00:00:02:80:9d"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007227525ABC3F117376B2E000000072275 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
@@ -79191,11 +79261,11 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_74FC5C06D52C787D6CECFF46BB4EF584 {
       cert_valid_from     = "2026-05-19"
       cert_valid_to       = "2027-04-30"
 
-      country             = "???"
+      country             = "GB"
       state               = "???"
-      locality            = "???"
+      locality            = "Stamford"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "09832903"
 
    condition:
       uint16(0) == 0x5a4d and
