@@ -4,6 +4,11 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.07.03] - 2026-07-03
+
+### Added
+- MAL_Compromised_Cert_Gh0stRAT_Certum_2D85A7A16D1EB86DFD92B00F6267733D (Gh0stRAT - Certum)
+
 ## [2026.07.02] - 2026-07-02
 
 ### Added
