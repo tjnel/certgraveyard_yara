@@ -1,0 +1,36 @@
+import "pe"
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_008B3F8F725F80DECBDB4920ADA8817F3A {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2023-03-21"
+      version             = "1.0"
+
+      hash                = "f9ebdee82173f0cd71a90d189d89947952e23756651da241d675328616a35ea2"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "BLOOMTECHNOLOGY.INC"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA R36"
+      cert_serial         = "00:8b:3f:8f:72:5f:80:de:cb:db:49:20:ad:a8:81:7f:3a"
+      cert_thumbprint     = "70C5CF27162A4EE6305CE63E53C948411C3EDC28"
+      cert_valid_from     = "2023-03-21"
+      cert_valid_to       = "2026-03-20"
+
+      country             = "KR"
+      state               = "Gyeonggi-do"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA R36" and
+         sig.serial == "00:8b:3f:8f:72:5f:80:de:cb:db:49:20:ad:a8:81:7f:3a"
+      )
+}

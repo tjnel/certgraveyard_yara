@@ -25200,6 +25200,2631 @@ rule MAL_Compromised_Cert_GodRAT_GlobalSign_476687EF336E88504E5ECE57 {
       )
 }
 
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_30F927F04880D925FB28775A412E8C13 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-21"
+      version             = "1.0"
+
+      hash                = "b2ef6a86983e15d0f70e5941b79d03419d4c7bcd4b1c58223f6b8334ed800deb"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Shanghai Baiyang Information Technology Development Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "30:f9:27:f0:48:80:d9:25:fb:28:77:5a:41:2e:8c:13"
+      cert_thumbprint     = "CC2172E282D7443E956F090A6795E33BF817A927"
+      cert_valid_from     = "2025-11-21"
+      cert_valid_to       = "2026-11-21"
+
+      country             = "CN"
+      state               = "上海市"
+      locality            = "上海市"
+      email               = "???"
+      rdn_serial_number   = "91310000MADNJP1G00"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "30:f9:27:f0:48:80:d9:25:fb:28:77:5a:41:2e:8c:13"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_33DB6C7028FCF6AFB84646806433D226 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-17"
+      version             = "1.0"
+
+      hash                = "900eac9aac32dce2f1acba2e8f8462edf6bfd59d642c4701428e84e9aa08d25a"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Shi Hu"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "33:db:6c:70:28:fc:f6:af:b8:46:46:80:64:33:d2:26"
+      cert_thumbprint     = "8159AA348C4476640C89827C166BD2FFF41697FE"
+      cert_valid_from     = "2025-11-17"
+      cert_valid_to       = "2026-11-17"
+
+      country             = "CN"
+      state               = "四川"
+      locality            = "达州"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "33:db:6c:70:28:fc:f6:af:b8:46:46:80:64:33:d2:26"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_418A597765E84F03F07933EFA3CC39D4 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-11"
+      version             = "1.0"
+
+      hash                = "14d374ea0604f70e6f39306efd948e7962fdd21cdb3e187ba461312027ebd3f5"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Taiyuan Chenyun Trading Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "41:8a:59:77:65:e8:4f:03:f0:79:33:ef:a3:cc:39:d4"
+      cert_thumbprint     = "6AA164C42049C428431BDD9377D813AB259780A8"
+      cert_valid_from     = "2025-12-11"
+      cert_valid_to       = "2026-12-11"
+
+      country             = "CN"
+      state               = "Shanxi"
+      locality            = "Taiyuan"
+      email               = "???"
+      rdn_serial_number   = "91140105MADD0BH943"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "41:8a:59:77:65:e8:4f:03:f0:79:33:ef:a3:cc:39:d4"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_4380B3CDE17D335114FF3E21D2A50637 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-04"
+      version             = "1.0"
+
+      hash                = "a1a114fd875bd6f96d2ceeac2b98596c0ac56d727e4bb970becb2466cec40086"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Taiyuan Feizhe Trading Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "43:80:b3:cd:e1:7d:33:51:14:ff:3e:21:d2:a5:06:37"
+      cert_thumbprint     = "7ABB2B0F49378F5D53FAF8F804D0B26C1DE9D2B0"
+      cert_valid_from     = "2025-12-04"
+      cert_valid_to       = "2026-12-04"
+
+      country             = "CN"
+      state               = "Shanxi"
+      locality            = "Taiyuan"
+      email               = "???"
+      rdn_serial_number   = "91140105MADCLAGY31"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "43:80:b3:cd:e1:7d:33:51:14:ff:3e:21:d2:a5:06:37"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_44E16F602A8BBC60E52ADFFBDA35ED09 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-27"
+      version             = "1.0"
+
+      hash                = "af982b9e203d5023b61f0a3758b1b1c1295ffa157d189a9eec3499f508d0e71d"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Wuhan Liansitong Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "44:e1:6f:60:2a:8b:bc:60:e5:2a:df:fb:da:35:ed:09"
+      cert_thumbprint     = "3F5EF573974902B64A70A6A6A6E030752E8E4086"
+      cert_valid_from     = "2025-10-27"
+      cert_valid_to       = "2026-10-27"
+
+      country             = "CN"
+      state               = "湖北省"
+      locality            = "武汉市"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "44:e1:6f:60:2a:8b:bc:60:e5:2a:df:fb:da:35:ed:09"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_4C7F6FF1482D879279B36DB214E57525 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-26"
+      version             = "1.0"
+
+      hash                = "e8afbf1004ae40d87fb25005117f692b97e889a4393cc790fbd7a5e8ffea46cb"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "广州栩冠科技有限公司"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "4c:7f:6f:f1:48:2d:87:92:79:b3:6d:b2:14:e5:75:25"
+      cert_thumbprint     = "56B676ED29FA650555B6E49043FAFA4B4BADE56F"
+      cert_valid_from     = "2026-01-26"
+      cert_valid_to       = "2027-01-26"
+
+      country             = "CN"
+      state               = "广东"
+      locality            = "广州"
+      email               = "???"
+      rdn_serial_number   = "91440114MAD3CJDX3Q"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "4c:7f:6f:f1:48:2d:87:92:79:b3:6d:b2:14:e5:75:25"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_5AE3A3B23CFA63ADFCED9BA9EF9A263C {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-21"
+      version             = "1.0"
+
+      hash                = "179b8af13000463b87f74c99828671f0069126fc4cf65d862c223e67991ff75b"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Jinhua Suyu Intelligent Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "5a:e3:a3:b2:3c:fa:63:ad:fc:ed:9b:a9:ef:9a:26:3c"
+      cert_thumbprint     = "63813F758626A4071E571FA846955DF793961D7B"
+      cert_valid_from     = "2025-11-21"
+      cert_valid_to       = "2026-11-21"
+
+      country             = "CN"
+      state               = "浙江省"
+      locality            = "金华市"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "5a:e3:a3:b2:3c:fa:63:ad:fc:ed:9b:a9:ef:9a:26:3c"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_5BD368336404058DA643D99A3BBEB530 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-18"
+      version             = "1.0"
+
+      hash                = "a60f58618c8548ff60978d7c50176bebb38486690d87ba24a8581b62dd478228"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Biao Zhao"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "5b:d3:68:33:64:04:05:8d:a6:43:d9:9a:3b:be:b5:30"
+      cert_thumbprint     = "90E412614B391AB2F0CAF9C2D91761B79BAE1505"
+      cert_valid_from     = "2026-03-18"
+      cert_valid_to       = "2027-03-18"
+
+      country             = "CN"
+      state               = "Sichuan"
+      locality            = "Nanchong"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "5b:d3:68:33:64:04:05:8d:a6:43:d9:9a:3b:be:b5:30"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_5BE7B13F587B8850573257DF55E5E39E {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-18"
+      version             = "1.0"
+
+      hash                = "873ea83b3507d8391b1b66f0f3d57cefff4307463b018eec09abbff601c83d30"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Shandong Saibo Information Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "5b:e7:b1:3f:58:7b:88:50:57:32:57:df:55:e5:e3:9e"
+      cert_thumbprint     = "9604C61D97B1AF3BF1E5C00E707DF524E1491678"
+      cert_valid_from     = "2025-11-18"
+      cert_valid_to       = "2026-11-18"
+
+      country             = "CN"
+      state               = "Shandong"
+      locality            = "Taian"
+      email               = "???"
+      rdn_serial_number   = "91370902MAC7ANU62H"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "5b:e7:b1:3f:58:7b:88:50:57:32:57:df:55:e5:e3:9e"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_5CCC14BFA5980319E17B16F0360684FF {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-07"
+      version             = "1.0"
+
+      hash                = "f0373871da028119a2726637859014eb63d2c7770924fe17b47199a6e6255aa6"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Changdu Wopu Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "5c:cc:14:bf:a5:98:03:19:e1:7b:16:f0:36:06:84:ff"
+      cert_thumbprint     = "E5A604EE112216277E35FA9536A2E9086991EDC8"
+      cert_valid_from     = "2025-11-07"
+      cert_valid_to       = "2026-11-07"
+
+      country             = "CN"
+      state               = "西藏自治区"
+      locality            = "昌都市"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "5c:cc:14:bf:a5:98:03:19:e1:7b:16:f0:36:06:84:ff"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_DigiCert_01AF6469365C81AD7222E60FB1317062 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-02"
+      version             = "1.0"
+
+      hash                = "00ed464e867fdc31ac4eb4e18757fe4b79b2f79ff63cc469cfcfeb205df20af0"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "深圳市优品投资顾问有限公司"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "01:af:64:69:36:5c:81:ad:72:22:e6:0f:b1:31:70:62"
+      cert_thumbprint     = "4CF40F13CC4B8209FE56D8E9B1FD277C6E9D1ED7"
+      cert_valid_from     = "2026-04-02"
+      cert_valid_to       = "2027-07-04"
+
+      country             = "CN"
+      state               = "广东省"
+      locality            = "深圳市"
+      email               = "???"
+      rdn_serial_number   = "9144030013299983XL"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "01:af:64:69:36:5c:81:ad:72:22:e6:0f:b1:31:70:62"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_DigiCert_02ED93FDB6CFB33A477E218531F32922 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-02"
+      version             = "1.0"
+
+      hash                = "56541af54c5b4ad7de32560f780f0e606e5bf67170ad3bc241c9e2d75ea3f760"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "MobSoft Co., Ltd"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "02:ed:93:fd:b6:cf:b3:3a:47:7e:21:85:31:f3:29:22"
+      cert_thumbprint     = "ED445CC41A622A74F000D04FA74A60BD846E0B1C"
+      cert_valid_from     = "2026-04-02"
+      cert_valid_to       = "2027-04-02"
+
+      country             = "KR"
+      state               = "Seoul"
+      locality            = "Guro District"
+      email               = "???"
+      rdn_serial_number   = "110111-8502117"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "02:ed:93:fd:b6:cf:b3:3a:47:7e:21:85:31:f3:29:22"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_DigiCert_03A4E330B16DED8C61AD0FB23ECB2E1A {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-02"
+      version             = "1.0"
+
+      hash                = "d7121915d643fb80745bbfa0ab9425edcc9bc451e7117ec9a7be3b101af50d0a"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Beijing 263 Enterprise Correspondence Co., Ltd."
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "03:a4:e3:30:b1:6d:ed:8c:61:ad:0f:b2:3e:cb:2e:1a"
+      cert_thumbprint     = "736523909A3402F7A93DFC8841B2BCAD562196D0"
+      cert_valid_from     = "2026-04-02"
+      cert_valid_to       = "2027-04-30"
+
+      country             = "CN"
+      state               = "北京市"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91110114585817189X"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "03:a4:e3:30:b1:6d:ed:8c:61:ad:0f:b2:3e:cb:2e:1a"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_DigiCert_049209454DB22190C7697285C3D5AD9B {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-10"
+      version             = "1.0"
+
+      hash                = "c918dded298b0d76d4ac51f23b391f62a95f58b3fa2488202ecbbc9c7ce8e785"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "DigiFors GmbH"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA256 2021 CA1"
+      cert_serial         = "04:92:09:45:4d:b2:21:90:c7:69:72:85:c3:d5:ad:9b"
+      cert_thumbprint     = "77945AAE69E08A7DBF173ED45F857CF79BA36B04"
+      cert_valid_from     = "2026-04-10"
+      cert_valid_to       = "2027-04-09"
+
+      country             = "DE"
+      state               = "Sachsen"
+      locality            = "Leipzig"
+      email               = "???"
+      rdn_serial_number   = "HRB 26934"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA256 2021 CA1" and
+         sig.serial == "04:92:09:45:4d:b2:21:90:c7:69:72:85:c3:d5:ad:9b"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_DigiCert_0497D45997C350D2867A7764017C3F3F {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2023-05-02"
+      version             = "1.0"
+
+      hash                = "d62dfb0d94b292d6fbedbe98757e796f886c32e8d29d347b7b0cee06e863fccb"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Eugene Investment & Securities Co.,Ltd"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "04:97:d4:59:97:c3:50:d2:86:7a:77:64:01:7c:3f:3f"
+      cert_thumbprint     = "9CB771C734F6C0BF6371B2B2E7B1C3C494DA6FAD"
+      cert_valid_from     = "2023-05-02"
+      cert_valid_to       = "2026-05-04"
+
+      country             = "KR"
+      state               = "Seoul"
+      locality            = "Yeongdeungpo-gu"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "04:97:d4:59:97:c3:50:d2:86:7a:77:64:01:7c:3f:3f"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_DigiCert_06500EE65FFBFB6EA4F4B16AB6F910C6 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-04"
+      version             = "1.0"
+
+      hash                = "5e841260983954da60716b99306a410898bca4d30c14626553205753f60a6d2f"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "INNOVATIVE CONNECTING PTE. LIMITED"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "06:50:0e:e6:5f:fb:fb:6e:a4:f4:b1:6a:b6:f9:10:c6"
+      cert_thumbprint     = "743D976C8A09F830CCBAD9AA1FEBCA18F315F49A"
+      cert_valid_from     = "2026-04-04"
+      cert_valid_to       = "2027-04-02"
+
+      country             = "SG"
+      state               = "???"
+      locality            = "Singapore"
+      email               = "???"
+      rdn_serial_number   = "201812738K"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "06:50:0e:e6:5f:fb:fb:6e:a4:f4:b1:6a:b6:f9:10:c6"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_DigiCert_0654CDA3DEFAF29DC152EF189C11E337 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-10"
+      version             = "1.0"
+
+      hash                = "02f95352c8d55f41f53339283ffed6f1cf548b2c5040aa9d1e37bafcd9fa55b4"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Shuttle Inc."
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "06:54:cd:a3:de:fa:f2:9d:c1:52:ef:18:9c:11:e3:37"
+      cert_thumbprint     = "62E64E8159B28E092DA95048ED6A525B738460E6"
+      cert_valid_from     = "2026-04-10"
+      cert_valid_to       = "2027-04-14"
+
+      country             = "TW"
+      state               = "Taipei City"
+      locality            = "Neihu District"
+      email               = "???"
+      rdn_serial_number   = "20980880"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "06:54:cd:a3:de:fa:f2:9d:c1:52:ef:18:9c:11:e3:37"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_DigiCert_09186DCA3667374ADBD63A2F4FD96365 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-13"
+      version             = "1.0"
+
+      hash                = "8509af4802dd79fc503c425c9dda035d9b636f22ffac81a8f04e6a9d080fdcc3"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "BlockCerts Blockchain Canada, Inc."
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "09:18:6d:ca:36:67:37:4a:db:d6:3a:2f:4f:d9:63:65"
+      cert_thumbprint     = "40E56C6EE3E38EB86C7449C7DD58654B5D7FA24F"
+      cert_valid_from     = "2026-04-13"
+      cert_valid_to       = "2027-04-12"
+
+      country             = "CA"
+      state               = "British Columbia"
+      locality            = "Victoria"
+      email               = "???"
+      rdn_serial_number   = "BC1197266"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "09:18:6d:ca:36:67:37:4a:db:d6:3a:2f:4f:d9:63:65"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_DigiCert_0A04CAF1BB3BC17A33C6E155EC4F5883 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-07-10"
+      version             = "1.0"
+
+      hash                = "945d0516c078c0255dfb8476056580daee0309bf6cc4bb1542671686e42d85ff"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Keroro Software LLC"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Global G3 Code Signing ECC SHA384 2021 CA1"
+      cert_serial         = "0a:04:ca:f1:bb:3b:c1:7a:33:c6:e1:55:ec:4f:58:83"
+      cert_thumbprint     = "07AAE8AA3A5356061AC23E963CA76156351737D2"
+      cert_valid_from     = "2025-07-10"
+      cert_valid_to       = "2028-09-26"
+
+      country             = "CN"
+      state               = "广东省"
+      locality            = "深圳市"
+      email               = "???"
+      rdn_serial_number   = "91440300MA5FAR1W6E"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Global G3 Code Signing ECC SHA384 2021 CA1" and
+         sig.serial == "0a:04:ca:f1:bb:3b:c1:7a:33:c6:e1:55:ec:4f:58:83"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_DigiCert_0AE04FFA7B23CC3F7395B25F41255157 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-04"
+      version             = "1.0"
+
+      hash                = "c08a59750b5a72761d457e7b9875aa251f71c64d0c6bf7e391bb5c5f35cefc3c"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Luxvisions Innovation Technology Corp. Limited"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "0a:e0:4f:fa:7b:23:cc:3f:73:95:b2:5f:41:25:51:57"
+      cert_thumbprint     = "D569373B0DE55B737BAFB92656E5E3FFD1C47FEE"
+      cert_valid_from     = "2026-04-04"
+      cert_valid_to       = "2027-04-03"
+
+      country             = "CN"
+      state               = "Guangdong Province"
+      locality            = "Guangzhou"
+      email               = "???"
+      rdn_serial_number   = "91440101MA5AQWN78F"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "0a:e0:4f:fa:7b:23:cc:3f:73:95:b2:5f:41:25:51:57"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_DigiCert_0AF316CB4E5D9BAF35B35E85677B17EE {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-11"
+      version             = "1.0"
+
+      hash                = "f76c31ecdafb59279833f17f350d9c2b1317da269823097e8dd1736c72449c88"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "PALIT MICROSYSTEMS LTD. TAIWAN BRANCH (BELIZE)"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "0a:f3:16:cb:4e:5d:9b:af:35:b3:5e:85:67:7b:17:ee"
+      cert_thumbprint     = "FBA16B68994972218252024AA5623A784E32D7AA"
+      cert_valid_from     = "2026-04-11"
+      cert_valid_to       = "2027-04-10"
+
+      country             = "TW"
+      state               = "Taipei City"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "28437291"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "0a:f3:16:cb:4e:5d:9b:af:35:b3:5e:85:67:7b:17:ee"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_DigiCert_0CAE428F1BDCBEBAF284EEE9A643B1D8 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-08"
+      version             = "1.0"
+
+      hash                = "9ae8388b6bc4043a49573a617927cabbd61c254014e0ceb4223cf50431841b2c"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Brunner Informatik AG"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "0c:ae:42:8f:1b:dc:be:ba:f2:84:ee:e9:a6:43:b1:d8"
+      cert_thumbprint     = "EC4960102B57FD7966DEAB52AA97A8F33223A430"
+      cert_valid_from     = "2026-04-08"
+      cert_valid_to       = "2027-07-10"
+
+      country             = "CH"
+      state               = "Bern"
+      locality            = "Ittigen"
+      email               = "???"
+      rdn_serial_number   = "CHE-103.742.564"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "0c:ae:42:8f:1b:dc:be:ba:f2:84:ee:e9:a6:43:b1:d8"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_DigiCert_0D2AD57B10B7472BAE03D3DEFF05F54F {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-10"
+      version             = "1.0"
+
+      hash                = "93d458ce6ebc98b2884e4a76c026d731a9f793cfcc6d514d4952ad6bf28fe8ac"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "LENOVO (UNITED STATES) INC."
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "0d:2a:d5:7b:10:b7:47:2b:ae:03:d3:de:ff:05:f5:4f"
+      cert_thumbprint     = "7C0AF30E97249F78CDDF66E47D65EEECB34BA2B8"
+      cert_valid_from     = "2026-04-10"
+      cert_valid_to       = "2027-04-11"
+
+      country             = "US"
+      state               = "North Carolina"
+      locality            = "Morrisville"
+      email               = "???"
+      rdn_serial_number   = "3912990"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "0d:2a:d5:7b:10:b7:47:2b:ae:03:d3:de:ff:05:f5:4f"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_DigiCert_0E53B99068FF7BF9C1BBBB025ECEDB58 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-17"
+      version             = "1.0"
+
+      hash                = "4ba01f317dd469c6ce5fb5333828ea5faf6761c263431ebcd0a5c17c06b00868"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "SoftStory G.Zielinski, K.Jez s.c."
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "0e:53:b9:90:68:ff:7b:f9:c1:bb:bb:02:5e:ce:db:58"
+      cert_thumbprint     = "5675D2723A91F4BC5180A0C112187297F3D58F29"
+      cert_valid_from     = "2026-04-17"
+      cert_valid_to       = "2027-04-16"
+
+      country             = "PL"
+      state               = "???"
+      locality            = "Tarnów"
+      email               = "???"
+      rdn_serial_number   = "852721168"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "0e:53:b9:90:68:ff:7b:f9:c1:bb:bb:02:5e:ce:db:58"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_07CD057EFB53D6F2C5C839FC {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-05-28"
+      version             = "1.0"
+
+      hash                = "7a2adf0acbc37d870138bb65551e258a3d1bd4ab6bf50df0a7c66d770cc0f787"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Klimine Far Year Electronic Commerce Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "07:cd:05:7e:fb:53:d6:f2:c5:c8:39:fc"
+      cert_thumbprint     = "FCAEEA9A9EBEC63DCC5E393DEB77DA0A2305166B"
+      cert_valid_from     = "2024-05-28"
+      cert_valid_to       = "2025-05-29"
+
+      country             = "CN"
+      state               = "Yunnan"
+      locality            = "Kunming"
+      email               = "???"
+      rdn_serial_number   = "91530111MACH7ART91"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "07:cd:05:7e:fb:53:d6:f2:c5:c8:39:fc"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_172C26AE164BCD6BEFEC180E {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-01-03"
+      version             = "1.0"
+
+      hash                = "3a338725967f6bb7fc3d5245bc40371742f46caae99f0db23e52f81c748091ab"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Shenzhen Xiangyou Network Technology Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "17:2c:26:ae:16:4b:cd:6b:ef:ec:18:0e"
+      cert_thumbprint     = "da71e8a37f0f99dd7652d95fec40361409dd16ed"
+      cert_valid_from     = "2025-01-03"
+      cert_valid_to       = "2026-01-04"
+
+      country             = "CN"
+      state               = "Guangdong"
+      locality            = "Shenzhen"
+      email               = "???"
+      rdn_serial_number   = "91440300MA5EFLM089"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "17:2c:26:ae:16:4b:cd:6b:ef:ec:18:0e"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_2686B9982E46DA7E3E0A1D56 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-05-16"
+      version             = "1.0"
+
+      hash                = "02244934046333f45bc22abe6185e6ddda033342836062afb681a583aa7d827f"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Morning Leap & Cazo Electronics Technology Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "26:86:b9:98:2e:46:da:7e:3e:0a:1d:56"
+      cert_thumbprint     = "69E050F63735CA4A1BCF5A21D3D64BDAB9C0BF42"
+      cert_valid_from     = "2024-05-16"
+      cert_valid_to       = "2025-05-16"
+
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "26:86:b9:98:2e:46:da:7e:3e:0a:1d:56"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_29494FD2ACB61616AAEAA470 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-05-20"
+      version             = "1.0"
+
+      hash                = "d19ca1798eaa49f3a803294d240c7bcf121b8c1f0f261aa7d7a30011fafb2385"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Taiyuan Jiedong Trading Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "29:49:4f:d2:ac:b6:16:16:aa:ea:a4:70"
+      cert_thumbprint     = "3B0BB0BB9C0B9E86454C6D2EBE5A8D93E7D8DD92"
+      cert_valid_from     = "2025-05-20"
+      cert_valid_to       = "2026-05-21"
+
+      country             = "CN"
+      state               = "Shanxi"
+      locality            = "Taiyuan"
+      email               = "???"
+      rdn_serial_number   = "91140105MADBJG4W5A"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "29:49:4f:d2:ac:b6:16:16:aa:ea:a4:70"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_2F93FA58F00445EEDC313273 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-04-22"
+      version             = "1.0"
+
+      hash                = "16e01dd4c60462c0a870bf55ec987514e122f27b306858e73f71a8ca4b896423"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Chengdu Nuoxin Times Technology Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "2f:93:fa:58:f0:04:45:ee:dc:31:32:73"
+      cert_thumbprint     = "3CF1146EDC6B0C3595D5C8C015BF52E77BA1C74C"
+      cert_valid_from     = "2025-04-22"
+      cert_valid_to       = "2026-08-14"
+
+      country             = "CN"
+      state               = "Sichuan"
+      locality            = "Chengdu"
+      email               = "???"
+      rdn_serial_number   = "91510100MA65214R21"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "2f:93:fa:58:f0:04:45:ee:dc:31:32:73"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_32A51E44B13F18E80C4C3D5F {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-26"
+      version             = "1.0"
+
+      hash                = "862230807f82b8828b07f2f1c1ab1f7cc5a03a8efa428976d0b13415888ad3dc"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Taiyuan Yuansu E-commerce Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "32:a5:1e:44:b1:3f:18:e8:0c:4c:3d:5f"
+      cert_thumbprint     = "DAEF347ACA15BA4F621AE75C767867397FF0F67F"
+      cert_valid_from     = "2025-06-26"
+      cert_valid_to       = "2026-06-27"
+
+      country             = "CN"
+      state               = "Shanxi"
+      locality            = "Taiyuan"
+      email               = "???"
+      rdn_serial_number   = "91140105MAD80PPM5E"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "32:a5:1e:44:b1:3f:18:e8:0c:4c:3d:5f"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_424E89A44FF616A6183251F7 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-11-11"
+      version             = "1.0"
+
+      hash                = "1f0f5173c6aae129e6cd5994da53b510497be2ba7f2ebf50fb0cb298314b0c8a"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "PrimeSnap Technologies Network Company"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "42:4e:89:a4:4f:f6:16:a6:18:32:51:f7"
+      cert_thumbprint     = "FF9B29C594ECC88BDE9AB852D7195CAFECFB2060"
+      cert_valid_from     = "2024-11-11"
+      cert_valid_to       = "2025-11-12"
+
+      country             = "CN"
+      state               = "Guangdong"
+      locality            = "Guangzhou"
+      email               = "???"
+      rdn_serial_number   = "91440101078418722E"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "42:4e:89:a4:4f:f6:16:a6:18:32:51:f7"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_5076171603477D5BD6AEB984 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-04-11"
+      version             = "1.0"
+
+      hash                = "33a942276ace165ccbc9db4966b18d0a767e2e78f4a09d2bf0845bcd2c8a356c"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "GZ.PurestJone Network Technology Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "50:76:17:16:03:47:7d:5b:d6:ae:b9:84"
+      cert_thumbprint     = "8C53168E668EF0CB2F20C3D7770830EF3CB73077"
+      cert_valid_from     = "2024-04-11"
+      cert_valid_to       = "2025-04-12"
+
+      country             = "CN"
+      state               = "Guangdong"
+      locality            = "Guangzhou"
+      email               = "???"
+      rdn_serial_number   = "91440114MACL0TN54Q"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "50:76:17:16:03:47:7d:5b:d6:ae:b9:84"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_623D84F3FD52F1A872E1BF83 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-12-24"
+      version             = "1.0"
+
+      hash                = "ee4589553dadaae174dce6ce9b62804186717f24e9d01c8a41ed8643cc8024e9"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Shanghai Linyao Network Technology Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "62:3d:84:f3:fd:52:f1:a8:72:e1:bf:83"
+      cert_thumbprint     = "E565FD587547A22B363100369D6265E2E83842DF"
+      cert_valid_from     = "2024-12-24"
+      cert_valid_to       = "2025-12-24"
+
+      country             = "CN"
+      state               = "Shanghai"
+      locality            = "Shanghai"
+      email               = "???"
+      rdn_serial_number   = "91310120MA1HY6532E"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "62:3d:84:f3:fd:52:f1:a8:72:e1:bf:83"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_648B06C27B37237B6D204BB5 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-03-12"
+      version             = "1.0"
+
+      hash                = "97a2d5e70f82ba56cdc8e7180c63d1fcd165704389e7362ed142f968c5b1ccaa"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Hoozoou Leeser Smart Technology Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "64:8b:06:c2:7b:37:23:7b:6d:20:4b:b5"
+      cert_thumbprint     = "4B9D36A0525303CC0F97567BC8755E9A61DA6C78"
+      cert_valid_from     = "2025-03-12"
+      cert_valid_to       = "2026-03-13"
+
+      country             = "CN"
+      state               = "Zhejiang"
+      locality            = "Hangzhou"
+      email               = "???"
+      rdn_serial_number   = "91330108MA2B16Q83M"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "64:8b:06:c2:7b:37:23:7b:6d:20:4b:b5"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_74B936AB655DB6CA62761A5C {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-07-09"
+      version             = "1.0"
+
+      hash                = "4de8a71b4e5e37f040532aaf31908311910f449c1a64db9141a485960bbae534"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "合肥亲爱的译官信息科技有限公司"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "74:b9:36:ab:65:5d:b6:ca:62:76:1a:5c"
+      cert_thumbprint     = "25745917F9D93F19CF8C796B660A9A27E3FA3833"
+      cert_valid_from     = "2024-07-09"
+      cert_valid_to       = "2025-08-14"
+
+      country             = "CN"
+      state               = "安徽"
+      locality            = "合肥"
+      email               = "???"
+      rdn_serial_number   = "91340100MA8PA6TBXY"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "74:b9:36:ab:65:5d:b6:ca:62:76:1a:5c"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_7EAD677A7DD7F660379D116A {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-11-01"
+      version             = "1.0"
+
+      hash                = "d58859ddc52f98e48d32f47b000970ad03e807b8eeb3a1aae7d4af2721b43ecf"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Hena Luxion Network Technology Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "7e:ad:67:7a:7d:d7:f6:60:37:9d:11:6a"
+      cert_thumbprint     = "6DEC33D0A800435FB16E222F8F48D6F0BD650F0D"
+      cert_valid_from     = "2024-11-01"
+      cert_valid_to       = "2025-11-02"
+
+      country             = "CN"
+      state               = "Henan"
+      locality            = "Zhengzhou"
+      email               = "???"
+      rdn_serial_number   = "91410104MA447T3JX7"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "7e:ad:67:7a:7d:d7:f6:60:37:9d:11:6a"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GoGetSSL_0B416CA38FFA8579C017C0311CCD8D8A {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (GoGetSSL)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-16"
+      version             = "1.0"
+
+      hash                = "99b7658dc52cedff3403e0df0b392828baa3344571593115b2349579c2b840ca"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Heyi Siwei Software Development Studio"
+      cert_issuer_short   = "GoGetSSL"
+      cert_issuer         = "GoGetSSL G4 CS RSA4096 SHA256 2022 CA-1"
+      cert_serial         = "0b:41:6c:a3:8f:fa:85:79:c0:17:c0:31:1c:cd:8d:8a"
+      cert_thumbprint     = "A16812811F22E0DF257295E6BE6E96AFE3A44BE9"
+      cert_valid_from     = "2026-04-16"
+      cert_valid_to       = "2027-04-15"
+
+      country             = "CN"
+      state               = "Shanghai"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "92310101MAK49UUU4R"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GoGetSSL G4 CS RSA4096 SHA256 2022 CA-1" and
+         sig.serial == "0b:41:6c:a3:8f:fa:85:79:c0:17:c0:31:1c:cd:8d:8a"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_SSL_com_1144335932C394E43644A300BF7A746F {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-12"
+      version             = "1.0"
+
+      hash                = "03262ae553984199273d81204e270bc9ec267e3f072154ac708e542665b58a8c"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "SIMPLE S.A."
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "11:44:33:59:32:c3:94:e4:36:44:a3:00:bf:7a:74:6f"
+      cert_thumbprint     = "F9CAAEDF059D7620303D5633E6EBF33E4733E419"
+      cert_valid_from     = "2026-01-12"
+      cert_valid_to       = "2027-11-19"
+
+      country             = "PL"
+      state               = "Mazowieckie"
+      locality            = "Warszawa"
+      email               = "???"
+      rdn_serial_number   = "0000065743"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "11:44:33:59:32:c3:94:e4:36:44:a3:00:bf:7a:74:6f"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_SSL_com_4824B75744F606DCEEF3A06D638FFDA2 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2023-12-18"
+      version             = "1.0"
+
+      hash                = "f1a9b7ca2235fc2c7642fff339782a184835ed6ab0d971690c079bbefc9a85c5"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Portier Global Pty Ltd"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "48:24:b7:57:44:f6:06:dc:ee:f3:a0:6d:63:8f:fd:a2"
+      cert_thumbprint     = "61D8BED5A5007F3DA29EB18ABB18CF75EB102FD1"
+      cert_valid_from     = "2023-12-18"
+      cert_valid_to       = "2026-12-17"
+
+      country             = "AU"
+      state               = "Queensland"
+      locality            = "Little Mountain"
+      email               = "???"
+      rdn_serial_number   = "86 672 385 661"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "48:24:b7:57:44:f6:06:dc:ee:f3:a0:6d:63:8f:fd:a2"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_SSL_com_6FC27F0BBACFAA99807405016341540A {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-12-20"
+      version             = "1.0"
+
+      hash                = "6650052939aa7e4fe49c9d1aff74319c46506efe341f6d9e6d9900cdb7e40c91"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Schäfer Informatik GmbH"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "6f:c2:7f:0b:ba:cf:aa:99:80:74:05:01:63:41:54:0a"
+      cert_thumbprint     = "37F65607307BA60C409086FFDA3070A39A470905"
+      cert_valid_from     = "2024-12-20"
+      cert_valid_to       = "2027-12-20"
+
+      country             = "DE"
+      state               = "North Rhine-Westphalia"
+      locality            = "Düsseldorf"
+      email               = "???"
+      rdn_serial_number   = "HRB 85646"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "6f:c2:7f:0b:ba:cf:aa:99:80:74:05:01:63:41:54:0a"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_SSL_com_7D0FA22D5E5F69EA34350A46FE01289F {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-07-25"
+      version             = "1.0"
+
+      hash                = "f7d133a1fe5febb0e3fafaade59310a20f60e38f17331f1043956e8e3a3ca770"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Fuet Corp."
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "7d:0f:a2:2d:5e:5f:69:ea:34:35:0a:46:fe:01:28:9f"
+      cert_thumbprint     = "1D72DDC626E38C73D88D8843F7B4DE28623B729D"
+      cert_valid_from     = "2025-07-25"
+      cert_valid_to       = "2026-07-25"
+
+      country             = "US"
+      state               = "New York"
+      locality            = "New York City"
+      email               = "???"
+      rdn_serial_number   = "10255002"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "7d:0f:a2:2d:5e:5f:69:ea:34:35:0a:46:fe:01:28:9f"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_00831A7B254D0681288BEB3797AA141B77 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-19"
+      version             = "1.0"
+
+      hash                = "04f4dde250db15de247e67ecd25134ab7e4512a77859589f4e979905685316c0"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Xiamen Liuyong Information Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:83:1a:7b:25:4d:06:81:28:8b:eb:37:97:aa:14:1b:77"
+      cert_thumbprint     = "B7C2421E3A96AD5615E13844710A7BE0E74802D5"
+      cert_valid_from     = "2026-03-19"
+      cert_valid_to       = "2027-03-19"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350206MACPMBLY32"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:83:1a:7b:25:4d:06:81:28:8b:eb:37:97:aa:14:1b:77"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_008AF45AAD3F1E2DB7B6598AB02E8BFF35 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-23"
+      version             = "1.0"
+
+      hash                = "e5a0289fa38bbbf958ebc57cee082111b55f7b8aa20aa9f2e52a38fd66011e80"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Xiamen Baoding Software Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:8a:f4:5a:ad:3f:1e:2d:b7:b6:59:8a:b0:2e:8b:ff:35"
+      cert_thumbprint     = "4A118F3C82A19201C0C017F632D43FBC8D5E89CA"
+      cert_valid_from     = "2026-03-23"
+      cert_valid_to       = "2027-03-23"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350200MA349M0219"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:8a:f4:5a:ad:3f:1e:2d:b7:b6:59:8a:b0:2e:8b:ff:35"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_008B3F8F725F80DECBDB4920ADA8817F3A {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2023-03-21"
+      version             = "1.0"
+
+      hash                = "f9ebdee82173f0cd71a90d189d89947952e23756651da241d675328616a35ea2"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "BLOOMTECHNOLOGY.INC"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA R36"
+      cert_serial         = "00:8b:3f:8f:72:5f:80:de:cb:db:49:20:ad:a8:81:7f:3a"
+      cert_thumbprint     = "70C5CF27162A4EE6305CE63E53C948411C3EDC28"
+      cert_valid_from     = "2023-03-21"
+      cert_valid_to       = "2026-03-20"
+
+      country             = "KR"
+      state               = "Gyeonggi-do"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA R36" and
+         sig.serial == "00:8b:3f:8f:72:5f:80:de:cb:db:49:20:ad:a8:81:7f:3a"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_008CA703D6A6A9FDFCD920C62316723EAC {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-12"
+      version             = "1.0"
+
+      hash                = "1d2f9b6680d3df883dceac3eb5dd35c13a9862ef0ba6f40603df5a1e54408c6e"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Luanchuan County Qiangsheng Information Engineering Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:8c:a7:03:d6:a6:a9:fd:fc:d9:20:c6:23:16:72:3e:ac"
+      cert_thumbprint     = "4C489977809BB6A54E528532862CF1D9E4FA9990"
+      cert_valid_from     = "2025-12-12"
+      cert_valid_to       = "2026-12-12"
+
+      country             = "CN"
+      state               = "Henan Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91410324MACLJTXD7T"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:8c:a7:03:d6:a6:a9:fd:fc:d9:20:c6:23:16:72:3e:ac"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_0098280C64F0D7F06696998673AC08F8A7 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-17"
+      version             = "1.0"
+
+      hash                = "cb7793147566cb0cbd2d60918e4825389c549d8a9b89cec611c12ecb028593f5"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Jieyang Santian E-commerce Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:98:28:0c:64:f0:d7:f0:66:96:99:86:73:ac:08:f8:a7"
+      cert_thumbprint     = "769CE5E5558DA6C60F6829E66A1F5DB12151C636"
+      cert_valid_from     = "2025-12-17"
+      cert_valid_to       = "2026-12-17"
+
+      country             = "CN"
+      state               = "Guangdong Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91445221MAD886Y555"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:98:28:0c:64:f0:d7:f0:66:96:99:86:73:ac:08:f8:a7"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_009C32E4F7CE30CE6283084B355EC9FBAF {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-20"
+      version             = "1.0"
+
+      hash                = "848507853b02e04494a7a3086a9cd01da038f4cea8ae1729cc6ed1297cbd1a4a"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Xiamen Tuochao Software Development Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:9c:32:e4:f7:ce:30:ce:62:83:08:4b:35:5e:c9:fb:af"
+      cert_thumbprint     = "CA7CC1E79BDD0BB5C189385EAEC7BA022A9EF215"
+      cert_valid_from     = "2026-01-20"
+      cert_valid_to       = "2027-01-20"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350203MA31LTE57B"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:9c:32:e4:f7:ce:30:ce:62:83:08:4b:35:5e:c9:fb:af"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_00A5DFA3D16E72E4B9CA5FA3B9665C2805 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-23"
+      version             = "1.0"
+
+      hash                = "a8d911dd10c0abac0de077868ab455f1869f63cda456ecab048a1572c8d35e7f"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Xiamen Lede Song Information Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:a5:df:a3:d1:6e:72:e4:b9:ca:5f:a3:b9:66:5c:28:05"
+      cert_thumbprint     = "FEC827C25EF8D92D9647E0BC10A5B444C94F2901"
+      cert_valid_from     = "2026-01-23"
+      cert_valid_to       = "2027-01-23"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350203302946627U"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:a5:df:a3:d1:6e:72:e4:b9:ca:5f:a3:b9:66:5c:28:05"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_00C30AE522FF59DD703FF3F27A2A9BCCCD {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-30"
+      version             = "1.0"
+
+      hash                = "3f049dd0ef4d209cce7ac081c093d51bcf2c5c3e515d8c124c63b31c8310e1d2"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Xiamen Yaolun Network Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:c3:0a:e5:22:ff:59:dd:70:3f:f3:f2:7a:2a:9b:cc:cd"
+      cert_thumbprint     = "9A85F613AE304BF80A85ADBEF5C30D72FB484840"
+      cert_valid_from     = "2026-03-30"
+      cert_valid_to       = "2027-03-30"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350205MA3218P27M"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:c3:0a:e5:22:ff:59:dd:70:3f:f3:f2:7a:2a:9b:cc:cd"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_00C86D943E4E146E5FDF9694F06DA41F2B {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-05-16"
+      version             = "1.0"
+
+      hash                = "a04f1e64fd7e2ef6decbfd2e26ad2a3066862fbe039a3bbed5cc9b6eacd4edf9"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Harman International Industries, Incorporated"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV E36"
+      cert_serial         = "00:c8:6d:94:3e:4e:14:6e:5f:df:96:94:f0:6d:a4:1f:2b"
+      cert_thumbprint     = "7DD79011F697349E20682B25CFD670EACF1CED73"
+      cert_valid_from     = "2025-05-16"
+      cert_valid_to       = "2026-04-28"
+
+      country             = "US"
+      state               = "Connecticut"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "1080291"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV E36" and
+         sig.serial == "00:c8:6d:94:3e:4e:14:6e:5f:df:96:94:f0:6d:a4:1f:2b"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_00E3CFD617A941C74853AC65890BB6C46A {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-08-11"
+      version             = "1.0"
+
+      hash                = "4cf973d3c8985c32572680203bc01121cf18342f75c139ec0fb202900809917c"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "RichQuest Network Technology Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:e3:cf:d6:17:a9:41:c7:48:53:ac:65:89:0b:b6:c4:6a"
+      cert_thumbprint     = "0C4CF82C6D22B8A57A2EC4B475A4C8E9D0BBA092"
+      cert_valid_from     = "2025-08-11"
+      cert_valid_to       = "2026-08-11"
+
+      country             = "CN"
+      state               = "Jilin Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91220702MABPBBD61L"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:e3:cf:d6:17:a9:41:c7:48:53:ac:65:89:0b:b6:c4:6a"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_00EE3A88EF4AB47D8617E4EDC56736C75F {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-11-28"
+      version             = "1.0"
+
+      hash                = "441ef8aa13409660cedb9a557619f60cbf90c3f0d28f7191b8385a6d147acf46"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "邢台鸭梨智能科技有限公司"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:ee:3a:88:ef:4a:b4:7d:86:17:e4:ed:c5:67:36:c7:5f"
+      cert_thumbprint     = "1F4036E52F236004A8229D7AD0E18024423044B9"
+      cert_valid_from     = "2024-11-28"
+      cert_valid_to       = "2025-11-28"
+
+      country             = "CN"
+      state               = "河北省"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91130503MA0G685G99"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:ee:3a:88:ef:4a:b4:7d:86:17:e4:ed:c5:67:36:c7:5f"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_00EFCDE65B00EF4F8F30A7D043BAE2AE88 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-19"
+      version             = "1.0"
+
+      hash                = "551006be1d93d5c26f5eb7596b471756350d31fad728c708d52a88b6bc3f82f3"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Xiamen Wuan Network Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:ef:cd:e6:5b:00:ef:4f:8f:30:a7:d0:43:ba:e2:ae:88"
+      cert_thumbprint     = "0261E2909D75EA34D54D97993136243A8D7081EA"
+      cert_valid_from     = "2026-01-19"
+      cert_valid_to       = "2027-01-19"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350206MA8UDHPB5L"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:ef:cd:e6:5b:00:ef:4f:8f:30:a7:d0:43:ba:e2:ae:88"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_00F085B0DB24FFD0E1E9998566D79E8342 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-27"
+      version             = "1.0"
+
+      hash                = "f042b510f67620272140417df73d16136b2b0b15fb28145cd1f058ea40c282fc"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Xiamen Renxing Information Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:f0:85:b0:db:24:ff:d0:e1:e9:99:85:66:d7:9e:83:42"
+      cert_thumbprint     = "F03A8D3792D36F2572CDC3F230347F5F0C87959D"
+      cert_valid_from     = "2026-01-27"
+      cert_valid_to       = "2027-01-27"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350206303142401U"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:f0:85:b0:db:24:ff:d0:e1:e9:99:85:66:d7:9e:83:42"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_00FA10235BA9E3446F612686DADCA79596 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-01"
+      version             = "1.0"
+
+      hash                = "7860dd085d9db6ff2fb594d9bbca23095779dc2bc7d9a201f76d5e0a285549ef"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Xiamen Senxing Shengxuan Network Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:fa:10:23:5b:a9:e3:44:6f:61:26:86:da:dc:a7:95:96"
+      cert_thumbprint     = "D626074CB387F1DEA516E5F2CE99842C85E0A983"
+      cert_valid_from     = "2026-04-01"
+      cert_valid_to       = "2027-04-01"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350205MAE56T5274"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:fa:10:23:5b:a9:e3:44:6f:61:26:86:da:dc:a7:95:96"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_00FE609B027105AECAB13FBDAC0DCAC73A {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-28"
+      version             = "1.0"
+
+      hash                = "35aaa4ff2a335d4cdea859fc7402cceb9c261dcd1e9b0542308b51a3033a37ed"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Xiamen Renxing Information Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:fe:60:9b:02:71:05:ae:ca:b1:3f:bd:ac:0d:ca:c7:3a"
+      cert_thumbprint     = "B0D9EB9B19A9200B68F94ABBE531F283AF6F3689"
+      cert_valid_from     = "2026-01-28"
+      cert_valid_to       = "2027-01-28"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350206303142401U"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:fe:60:9b:02:71:05:ae:ca:b1:3f:bd:ac:0d:ca:c7:3a"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_191E24F6C98E31D04F876A2E26E0CC71 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-05-21"
+      version             = "1.0"
+
+      hash                = "1a80f721ab125b88e5baf77dd2bf01be92ff5299665356621b21306a71c86672"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Meizhou Fisherman Network Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "19:1e:24:f6:c9:8e:31:d0:4f:87:6a:2e:26:e0:cc:71"
+      cert_thumbprint     = "90AB62209A3C3CDF63229669BBF1EE3546C7D34B"
+      cert_valid_from     = "2025-05-21"
+      cert_valid_to       = "2026-05-21"
+
+      country             = "CN"
+      state               = "Guangdong Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "19:1e:24:f6:c9:8e:31:d0:4f:87:6a:2e:26:e0:cc:71"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_1B9C25D3C04716F1FE4A7F61DB7D1758 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-23"
+      version             = "1.0"
+
+      hash                = "70a20ad7ed0d8fbea9d82b585094d58e9113e8e3669ffefd89f5e291bcbedebe"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Xiamen Boyue Zhiyan Information Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "1b:9c:25:d3:c0:47:16:f1:fe:4a:7f:61:db:7d:17:58"
+      cert_thumbprint     = "22B188A6F3ADC342FBA9F813A626402070F92026"
+      cert_valid_from     = "2025-12-23"
+      cert_valid_to       = "2026-12-23"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350211MA32PW8L0X"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "1b:9c:25:d3:c0:47:16:f1:fe:4a:7f:61:db:7d:17:58"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_22705DBF157ED535146911BAADB3B64A {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-27"
+      version             = "1.0"
+
+      hash                = "a508358a0786ddf2ad9496bb9374d54e71c5044df9c10fe686d43fc70484e54c"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Weihai Mingjun Information Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "22:70:5d:bf:15:7e:d5:35:14:69:11:ba:ad:b3:b6:4a"
+      cert_thumbprint     = "A947B270081E9E496FF347F4F89FBE3EC9CB2B72"
+      cert_valid_from     = "2025-11-27"
+      cert_valid_to       = "2026-11-27"
+
+      country             = "CN"
+      state               = "Shandong Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91371000MA3WAC7627"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "22:70:5d:bf:15:7e:d5:35:14:69:11:ba:ad:b3:b6:4a"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_24C1C7BD23D4D568C91241E510602337 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-14"
+      version             = "1.0"
+
+      hash                = "a769eaa070125ad38353b41c7afa3eff42d8df87e88051c9b1bf8b09c6f602cd"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Xiamen Limi Network Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "24:c1:c7:bd:23:d4:d5:68:c9:12:41:e5:10:60:23:37"
+      cert_thumbprint     = "A929E6183548BAFA72E5674BF24A53644775F664"
+      cert_valid_from     = "2026-01-14"
+      cert_valid_to       = "2027-01-14"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350206MA8RF03H6U"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "24:c1:c7:bd:23:d4:d5:68:c9:12:41:e5:10:60:23:37"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_24FF6639953E1D1161AF670E86177EF0 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-01"
+      version             = "1.0"
+
+      hash                = "1f8fbdce2b257b817f8a1c6a8e8703fc3ebbab49df8bc4b41cd12cd76eaf2288"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Xiamen Jisou Network Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "24:ff:66:39:95:3e:1d:11:61:af:67:0e:86:17:7e:f0"
+      cert_thumbprint     = "4F45BBAF6E9446E44D925C504E8336A9D298E82A"
+      cert_valid_from     = "2026-04-01"
+      cert_valid_to       = "2027-04-01"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350206MA32BAWT2M"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "24:ff:66:39:95:3e:1d:11:61:af:67:0e:86:17:7e:f0"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_2D6390A227DB381F5D8930952F2324A0 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-21"
+      version             = "1.0"
+
+      hash                = "72c229baf23a09579a66f3121ced7038e1653158370ef0a4648cbc1a44c9d8a4"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Xinsiyi (Ningbo) Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "2d:63:90:a2:27:db:38:1f:5d:89:30:95:2f:23:24:a0"
+      cert_thumbprint     = "095354EE18F97620800877656C8685C73091EE91"
+      cert_valid_from     = "2026-01-21"
+      cert_valid_to       = "2027-01-21"
+
+      country             = "CN"
+      state               = "Zhejiang Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91330212MA2CK3JC8D"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "2d:63:90:a2:27:db:38:1f:5d:89:30:95:2f:23:24:a0"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_34E947F11A0DA31561875BFC5FBCC5AB {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-04-08"
+      version             = "1.0"
+
+      hash                = "06663c82d1e6df0eff9712b4250e4a189a076e2592feae7753485c1dd97c6bf6"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "海口市勤莱佳科技有限公司"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "34:e9:47:f1:1a:0d:a3:15:61:87:5b:fc:5f:bc:c5:ab"
+      cert_thumbprint     = "9042ED33AEA56BC28C4CF03E8D03036EB8BFCF6A"
+      cert_valid_from     = "2025-04-08"
+      cert_valid_to       = "2026-04-08"
+
+      country             = "CN"
+      state               = "海南省"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91460000MABXCETU0T"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "34:e9:47:f1:1a:0d:a3:15:61:87:5b:fc:5f:bc:c5:ab"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_38BF78674DA7DED94863D622BA150FDB {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-19"
+      version             = "1.0"
+
+      hash                = "7c995c884d4e3b0d38157c510bcc37cd7a8ca35ae24eb1ea0c7e52d76b8a7dca"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Xiamen Dahonghuo Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "38:bf:78:67:4d:a7:de:d9:48:63:d6:22:ba:15:0f:db"
+      cert_thumbprint     = "6330EC795E2B93B4A2221A78C25CFCD578A04A02"
+      cert_valid_from     = "2026-03-19"
+      cert_valid_to       = "2027-03-19"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350206MA34UAC54C"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "38:bf:78:67:4d:a7:de:d9:48:63:d6:22:ba:15:0f:db"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_3EAA4BD40D5DA98036B33023E0052869 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-26"
+      version             = "1.0"
+
+      hash                = "b1e6036407ac561deebf5a4885fda4d63686bdfbf808524e7554ea339a7bbe39"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Xiamen Shunhuitong E-commerce Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "3e:aa:4b:d4:0d:5d:a9:80:36:b3:30:23:e0:05:28:69"
+      cert_thumbprint     = "E579AB4491E4C3B9FCA255D36A7B269E14DB36A2"
+      cert_valid_from     = "2026-03-26"
+      cert_valid_to       = "2027-03-26"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350203MA2YCK984W"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "3e:aa:4b:d4:0d:5d:a9:80:36:b3:30:23:e0:05:28:69"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_45D3E97BAEE6E4057EF4FA680CAF010D {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-27"
+      version             = "1.0"
+
+      hash                = "82447740e38310f28c47a61c7cb743dfa075d4194bb5588812a08895e02c89ea"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Xiamen Sihai Rongchuang Network Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "45:d3:e9:7b:ae:e6:e4:05:7e:f4:fa:68:0c:af:01:0d"
+      cert_thumbprint     = "4ECD789457499B7C0080A9CAA5A78FD18FDB618F"
+      cert_valid_from     = "2026-01-27"
+      cert_valid_to       = "2027-01-27"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350203MA31DMTN7N"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "45:d3:e9:7b:ae:e6:e4:05:7e:f4:fa:68:0c:af:01:0d"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_4A5F625C9BACBAE47C16B016D58EF875 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-04"
+      version             = "1.0"
+
+      hash                = "962615e17eca365d80c31dd02f2a6c757c073cb24d31d60a1c7818284bd6ca00"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Henan Jiyanzhong Information Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "4a:5f:62:5c:9b:ac:ba:e4:7c:16:b0:16:d5:8e:f8:75"
+      cert_thumbprint     = "25069239F52911C80E429AFFA16A7D4FCD65EE54"
+      cert_valid_from     = "2025-12-04"
+      cert_valid_to       = "2026-12-04"
+
+      country             = "CN"
+      state               = "Henan Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91410103MACL9D58X6"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "4a:5f:62:5c:9b:ac:ba:e4:7c:16:b0:16:d5:8e:f8:75"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_4C3EDBD0B6450CB8BF2B506032A5B7B2 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-07"
+      version             = "1.0"
+
+      hash                = "1718b2f1372dbbe9df071205fe749bcefe8857af7e376c812168f2590e1dcb27"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Kingston Technology Company, Inc"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA E36"
+      cert_serial         = "4c:3e:db:d0:b6:45:0c:b8:bf:2b:50:60:32:a5:b7:b2"
+      cert_thumbprint     = "8A99A90A9B2095B52AD670B1BF5CAC68A9784FF8"
+      cert_valid_from     = "2025-06-07"
+      cert_valid_to       = "2026-05-25"
+
+      country             = "US"
+      state               = "California"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA E36" and
+         sig.serial == "4c:3e:db:d0:b6:45:0c:b8:bf:2b:50:60:32:a5:b7:b2"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_4FA68807EFBBD22B25622E60F2EF3041 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-02-11"
+      version             = "1.0"
+
+      hash                = "be5d6c4aa4b27548a06c2afaef3b4035abf65566e9a8bfd642b4a2032729656e"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "运城市盐湖区风颜商贸有限公司"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "4f:a6:88:07:ef:bb:d2:2b:25:62:2e:60:f2:ef:30:41"
+      cert_thumbprint     = "A176736F8B6462141E4BFDFC1FEB5EC11663D684"
+      cert_valid_from     = "2025-02-11"
+      cert_valid_to       = "2026-05-12"
+
+      country             = "CN"
+      state               = "山西省"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91140802MADALQC44B"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "4f:a6:88:07:ef:bb:d2:2b:25:62:2e:60:f2:ef:30:41"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_6559999436BD29785FBF07D0F472E994 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-08-11"
+      version             = "1.0"
+
+      hash                = "1052924f914229325270e7cc862ab1ef6fcc73da22dd9afff222f7168b3f8343"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "RichQuest Network Technology Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "65:59:99:94:36:bd:29:78:5f:bf:07:d0:f4:72:e9:94"
+      cert_thumbprint     = "59B7B2C37523F7CA057C2CDCC0C6C0482740E9A1"
+      cert_valid_from     = "2025-08-11"
+      cert_valid_to       = "2026-08-11"
+
+      country             = "CN"
+      state               = "Jilin Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "65:59:99:94:36:bd:29:78:5f:bf:07:d0:f4:72:e9:94"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_66220DA9448F87F52007149619EA4B37 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-01"
+      version             = "1.0"
+
+      hash                = "4d8c02745ed4c2bcd9bdb425d5763ebd1e6da459c1877fe9d0005e477622aa6a"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Xiamen Xianghe Information Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "66:22:0d:a9:44:8f:87:f5:20:07:14:96:19:ea:4b:37"
+      cert_thumbprint     = "67BCBFBD0D412E47C0E70F85778F69C6BFBBD7AF"
+      cert_valid_from     = "2026-04-01"
+      cert_valid_to       = "2027-04-01"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91350205MAE1741T6H"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "66:22:0d:a9:44:8f:87:f5:20:07:14:96:19:ea:4b:37"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_67E44E108CF60C941B913A00A7F5C290 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-31"
+      version             = "1.0"
+
+      hash                = "778f20d1c46f2427238c3e8c38fb3825fd3af80a022d03aa56be0dca2a1a593a"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Gemini Technologies Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "67:e4:4e:10:8c:f6:0c:94:1b:91:3a:00:a7:f5:c2:90"
+      cert_thumbprint     = "D0C56580D299E65612564CBE9D875E5EAA470AB6"
+      cert_valid_from     = "2025-10-31"
+      cert_valid_to       = "2026-10-31"
+
+      country             = "CN"
+      state               = "Sichuan Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "67:e4:4e:10:8c:f6:0c:94:1b:91:3a:00:a7:f5:c2:90"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_70205E32FEFDB3E3D948AF5E67472901 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-05-23"
+      version             = "1.0"
+
+      hash                = "749edc4ed6c6e9c861dcdf452c7acc7ec521cd1b4ac91ffee4158ab53ec57730"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Ventis Media, Inc."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA E36"
+      cert_serial         = "70:20:5e:32:fe:fd:b3:e3:d9:48:af:5e:67:47:29:01"
+      cert_thumbprint     = "758253C0037839EBAAFEA8EAC9AAD6311399E8B3"
+      cert_valid_from     = "2025-05-23"
+      cert_valid_to       = "2026-01-01"
+
+      country             = "CA"
+      state               = "Quebec"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA E36" and
+         sig.serial == "70:20:5e:32:fe:fd:b3:e3:d9:48:af:5e:67:47:29:01"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_754022596DA5B16478C5E880ED2D730F {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-16"
+      version             = "1.0"
+
+      hash                = "36d4a0c46a0b9613b7f4ab38a9bf1a8ee3d54e059f2451f20e999a7b49b9af56"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Yongji Xiaodong Network Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "75:40:22:59:6d:a5:b1:64:78:c5:e8:80:ed:2d:73:0f"
+      cert_thumbprint     = "3148D6576C067EE43DAACBFD3B34C033EEE1DB53"
+      cert_valid_from     = "2025-09-16"
+      cert_valid_to       = "2026-09-16"
+
+      country             = "CN"
+      state               = "Shanxi Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "75:40:22:59:6d:a5:b1:64:78:c5:e8:80:ed:2d:73:0f"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Verokey_04EB8615F356CF0F5BF4DBCD08238DA4 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Verokey)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-10-24"
+      version             = "1.0"
+
+      hash                = "b5fb40289c795be46e746bce7cfb8641bd4d619e49fae62f4998c7915f831e5e"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "山西荣升源科贸有限公司"
+      cert_issuer_short   = "Verokey"
+      cert_issuer         = "Verokey High Assurance Secure Code EV"
+      cert_serial         = "04:eb:86:15:f3:56:cf:0f:5b:f4:db:cd:08:23:8d:a4"
+      cert_thumbprint     = "428FEE9B772BD7E56987E864AD8C83B5721E717F"
+      cert_valid_from     = "2024-10-24"
+      cert_valid_to       = "2026-06-18"
+
+      country             = "CN"
+      state               = "山西省"
+      locality            = "太原市"
+      email               = "???"
+      rdn_serial_number   = "91140105MA0LK0WH8B"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Verokey High Assurance Secure Code EV" and
+         sig.serial == "04:eb:86:15:f3:56:cf:0f:5b:f4:db:cd:08:23:8d:a4"
+      )
+}
+
 rule MAL_Compromised_Cert_GoreloRMM_GlobalSign_7CEF117D5B3C634C182E1479 {
    meta:
       description         = "Detects GoreloRMM with compromised cert (GlobalSign)"
@@ -49662,6 +52287,41 @@ rule MAL_Compromised_Cert_RemoteManipulator_Sectigo_7DDD3796A427B42F2E52D7C7AF0C
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo RSA Code Signing CA" and
          sig.serial == "7d:dd:37:96:a4:27:b4:2f:2e:52:d7:c7:af:0c:a5:4f"
+      )
+}
+
+rule MAL_Compromised_Cert_RemotePulse_SSL_com_61775783BCC5FCB64BF773CA177BB99D {
+   meta:
+      description         = "Detects RemotePulse with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-26"
+      version             = "1.0"
+
+      hash                = "bd14c4f23f597ced87a2a57cc0b360d50fe916267b2878727ed1bbbd7b751f41"
+      malware             = "RemotePulse"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "EIKON S.A."
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "61:77:57:83:bc:c5:fc:b6:4b:f7:73:ca:17:7b:b9:9d"
+      cert_thumbprint     = "AD4213CD9F8A4210959D036078B7FBD6777E7FF6"
+      cert_valid_from     = "2025-09-26"
+      cert_valid_to       = "2026-09-26"
+
+      country             = "EC"
+      state               = "Guayas Province"
+      locality            = "Guayaquil"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "61:77:57:83:bc:c5:fc:b6:4b:f7:73:ca:17:7b:b9:9d"
       )
 }
 

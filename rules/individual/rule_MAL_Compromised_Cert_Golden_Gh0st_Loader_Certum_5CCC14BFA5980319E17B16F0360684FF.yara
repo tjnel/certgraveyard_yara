@@ -1,0 +1,36 @@
+import "pe"
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_5CCC14BFA5980319E17B16F0360684FF {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-07"
+      version             = "1.0"
+
+      hash                = "f0373871da028119a2726637859014eb63d2c7770924fe17b47199a6e6255aa6"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Changdu Wopu Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "5c:cc:14:bf:a5:98:03:19:e1:7b:16:f0:36:06:84:ff"
+      cert_thumbprint     = "E5A604EE112216277E35FA9536A2E9086991EDC8"
+      cert_valid_from     = "2025-11-07"
+      cert_valid_to       = "2026-11-07"
+
+      country             = "CN"
+      state               = "西藏自治区"
+      locality            = "昌都市"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "5c:cc:14:bf:a5:98:03:19:e1:7b:16:f0:36:06:84:ff"
+      )
+}
