@@ -4,6 +4,11 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.07.08] - 2026-07-08
+
+### Added
+- MAL_Compromised_Cert_Traffer_SSL_com_6E35C09D6FBFE2E0D4A2B1741B6CD5BD (Traffer - SSL.com)
+
 ## [2026.07.07] - 2026-07-07
 
 ### Added
