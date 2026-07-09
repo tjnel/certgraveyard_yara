@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Traffer_SSL_com_6E35C09D6FBFE2E0D4A2B1741B6CD5BD {
       cert_valid_from     = "2026-06-18"
       cert_valid_to       = "2027-06-18"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "FI"
+      state               = "Pohjois-savo"
+      locality            = "Kuopio"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

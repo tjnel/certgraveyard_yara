@@ -4,6 +4,17 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.07.09] - 2026-07-09
+
+### Added
+- MAL_Compromised_Cert_Certificate_warming_Certum_2D6873822EEB8CAC36592A8F3C3FD634 (Certificate warming - Certum)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_GlobalSign_23B4D5276B68C9EA136DF5E3 (Forever Botnet,BR-01 - GlobalSign)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330002AEDDB32C4491322056BA00000002AEDD (Forever Botnet,BR-01 - Microsoft)
+- MAL_Compromised_Cert_Fake_PDF_tool_Polaris_PDF_Sectigo_00AEBC5D3B74B21FAEAD747CD572EA8042 (Fake PDF tool, Polaris PDF - Sectigo)
+
+### Modified
+- MAL_Compromised_Cert_Traffer_SSL_com_6E35C09D6FBFE2E0D4A2B1741B6CD5BD (Updated metadata for Traffer)
+
 ## [2026.07.08] - 2026-07-08
 
 ### Added
