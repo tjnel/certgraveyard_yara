@@ -22771,11 +22771,11 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_GlobalSign_23B4D5276B68C9EA136DF5
       cert_valid_from     = "2026-05-29"
       cert_valid_to       = "2027-04-23"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "NO"
+      state               = "Trøndelag"
+      locality            = "Trondheim"
+      email               = "firmapost@tradeconsult-as.no"
+      rdn_serial_number   = "975 374 351"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -23121,11 +23121,11 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330002AEDDB32C449132205
       cert_valid_from     = "2026-07-02"
       cert_valid_to       = "2026-07-05"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Delaware"
+      locality            = "Lewes"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -23692,6 +23692,41 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Sectigo_011E9B8CCD60D504B4130D90D
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "01:1e:9b:8c:cd:60:d5:04:b4:13:0d:90:d1:4a:4b:a7"
+      )
+}
+
+rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Sectigo_16878C94E69665A0CF308DDB789EADDC {
+   meta:
+      description         = "Detects Forever Botnet,BR-01 with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-12"
+      version             = "1.0"
+
+      hash                = "bfc632e5040adbec76ae73c182be3910fc314bde743ca2a69c2a0c8e95c0fdc2"
+      malware             = "Forever Botnet,BR-01"
+      malware_type        = "Infostealer"
+      malware_notes       = ""
+
+      signer              = "Jinan Baolian Deng Network Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "16:87:8c:94:e6:96:65:a0:cf:30:8d:db:78:9e:ad:dc"
+      cert_thumbprint     = "D11104E441C420125081180A718D1763DFF4D265"
+      cert_valid_from     = "2026-03-12"
+      cert_valid_to       = "2027-03-12"
+
+      country             = "CN"
+      state               = "Shandong Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91370100069009206W"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "16:87:8c:94:e6:96:65:a0:cf:30:8d:db:78:9e:ad:dc"
       )
 }
 
@@ -52427,6 +52462,41 @@ rule MAL_Compromised_Cert_RemoteManipulator_Sectigo_7DDD3796A427B42F2E52D7C7AF0C
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo RSA Code Signing CA" and
          sig.serial == "7d:dd:37:96:a4:27:b4:2f:2e:52:d7:c7:af:0c:a5:4f"
+      )
+}
+
+rule MAL_Compromised_Cert_RemotePulse_SSL_com_0AC60807A6B008E837BC464791B07E72 {
+   meta:
+      description         = "Detects RemotePulse with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-08"
+      version             = "1.0"
+
+      hash                = "2f6b84a90d8b9440dfd465f79d59f9581835f4e46143f16243b348cb3ac53f2d"
+      malware             = "RemotePulse"
+      malware_type        = "Remote access tool"
+      malware_notes       = "Fake RMM tool being sold via Telegram."
+
+      signer              = "VESALII COMPUTER SYSTEMS"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "0a:c6:08:07:a6:b0:08:e8:37:bc:46:47:91:b0:7e:72"
+      cert_thumbprint     = "CE09B25F94D9C4C966812C5E2A608EC3437DE1DF"
+      cert_valid_from     = "2026-04-08"
+      cert_valid_to       = "2027-01-08"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "0a:c6:08:07:a6:b0:08:e8:37:bc:46:47:91:b0:7e:72"
       )
 }
 

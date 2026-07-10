@@ -4,6 +4,16 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.07.10] - 2026-07-10
+
+### Added
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Sectigo_16878C94E69665A0CF308DDB789EADDC (Forever Botnet,BR-01 - Sectigo)
+- MAL_Compromised_Cert_RemotePulse_SSL_com_0AC60807A6B008E837BC464791B07E72 (RemotePulse - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_GlobalSign_23B4D5276B68C9EA136DF5E3 (Updated metadata for Forever Botnet,BR-01)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330002AEDDB32C4491322056BA00000002AEDD (Updated metadata for Forever Botnet,BR-01)
+
 ## [2026.07.09] - 2026-07-09
 
 ### Added

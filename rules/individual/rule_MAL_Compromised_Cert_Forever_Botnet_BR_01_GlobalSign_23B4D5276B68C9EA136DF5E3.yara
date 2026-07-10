@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_GlobalSign_23B4D5276B68C9EA136DF5
       cert_valid_from     = "2026-05-29"
       cert_valid_to       = "2027-04-23"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "NO"
+      state               = "Trøndelag"
+      locality            = "Trondheim"
+      email               = "firmapost@tradeconsult-as.no"
+      rdn_serial_number   = "975 374 351"
 
    condition:
       uint16(0) == 0x5a4d and
