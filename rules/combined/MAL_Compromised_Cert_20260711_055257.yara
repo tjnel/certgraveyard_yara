@@ -23100,6 +23100,41 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330002791C2981497B55F8C
       )
 }
 
+rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_33000293D1AC43D03B9AAD13810000000293D1 {
+   meta:
+      description         = "Detects Forever Botnet,BR-01 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-01"
+      version             = "1.0"
+
+      hash                = "3600a7ce118dbf9950ac2734abcb8648408b3638085397b94e0c19c193cae3b4"
+      malware             = "Forever Botnet,BR-01"
+      malware_type        = "Infostealer"
+      malware_notes       = ""
+
+      signer              = "Xryus Technologies LLC"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:02:93:d1:ac:43:d0:3b:9a:ad:13:81:00:00:00:02:93:d1"
+      cert_thumbprint     = "6017ADAC0F83566A455B25095BF9D29F18968B05"
+      cert_valid_from     = "2026-07-01"
+      cert_valid_to       = "2026-07-04"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:02:93:d1:ac:43:d0:3b:9a:ad:13:81:00:00:00:02:93:d1"
+      )
+}
+
 rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_330002AEDDB32C4491322056BA00000002AEDD {
    meta:
       description         = "Detects Forever Botnet,BR-01 with compromised cert (Microsoft)"
@@ -52486,11 +52521,11 @@ rule MAL_Compromised_Cert_RemotePulse_SSL_com_0AC60807A6B008E837BC464791B07E72 {
       cert_valid_from     = "2026-04-08"
       cert_valid_to       = "2027-01-08"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "AE"
+      state               = "Dubai"
+      locality            = "Dubai"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "BL3396"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -74060,6 +74095,41 @@ rule MAL_Compromised_Cert_UnknownLoader_SSL_com_11E603B92A63487D692AD9519A0382FE
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Apple_407FA5247F0B37B7 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Apple)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-29"
+      version             = "1.0"
+
+      hash                = "3a9d703ba7f7564399365db7ab8b04238806ef7a53df0b6822f32b80bf0f5a80"
+      malware             = "Unknown"
+      malware_type        = "Backdoor"
+      malware_notes       = ""
+
+      signer              = "Emil Grigorov"
+      cert_issuer_short   = "Apple"
+      cert_issuer         = "Apple Inc."
+      cert_serial         = "40:7f:a5:24:7f:0b:37:b7"
+      cert_thumbprint     = "9A3CE73387AD7069A0919EF6E09B5D3FCC9B2B31"
+      cert_valid_from     = "2026-06-29"
+      cert_valid_to       = "2027-02-01"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Apple Inc." and
+         sig.serial == "40:7f:a5:24:7f:0b:37:b7"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_Apple_4BFB11FC55E354F5D94157764C93A9 {
    meta:
       description         = "Detects Unknown with compromised cert (Apple)"
@@ -79412,6 +79482,41 @@ rule MAL_Compromised_Cert_Unknown_Microsoft_330000DDE6FFDEA03305B7485A00000000DD
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
          sig.serial == "33:00:00:dd:e6:ff:de:a0:33:05:b7:48:5a:00:00:00:00:dd:e6"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Microsoft_3300010A1FC37D40715BFDAEC9000000010A1F {
+   meta:
+      description         = "Detects Unknown with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-15"
+      version             = "1.0"
+
+      hash                = "450022431a5d5d5589895b878420747c860a85928d560f48355acbc8825ba744"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Xryus Technologies LLC"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:01:0a:1f:c3:7d:40:71:5b:fd:ae:c9:00:00:00:01:0a:1f"
+      cert_thumbprint     = "53E8C772728EA5CF88CBFBD07485F73BA9E6BBEC"
+      cert_valid_from     = "2026-05-15"
+      cert_valid_to       = "2026-05-18"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:01:0a:1f:c3:7d:40:71:5b:fd:ae:c9:00:00:00:01:0a:1f"
       )
 }
 

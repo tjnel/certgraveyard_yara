@@ -4,6 +4,16 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.07.11] - 2026-07-11
+
+### Added
+- MAL_Compromised_Cert_Unknown_Microsoft_3300010A1FC37D40715BFDAEC9000000010A1F (Unknown - Microsoft)
+- MAL_Compromised_Cert_Unknown_Apple_407FA5247F0B37B7 (Unknown - Apple)
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_33000293D1AC43D03B9AAD13810000000293D1 (Forever Botnet,BR-01 - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_RemotePulse_SSL_com_0AC60807A6B008E837BC464791B07E72 (Updated metadata for RemotePulse)
+
 ## [2026.07.10] - 2026-07-10
 
 ### Added

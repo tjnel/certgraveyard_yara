@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_RemotePulse_SSL_com_0AC60807A6B008E837BC464791B07E72 {
       cert_valid_from     = "2026-04-08"
       cert_valid_to       = "2027-01-08"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "AE"
+      state               = "Dubai"
+      locality            = "Dubai"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "BL3396"
 
    condition:
       uint16(0) == 0x5a4d and
