@@ -1120,6 +1120,41 @@ rule MAL_Compromised_Cert_Arechclient2_GlobalSign_7E9054290FC79CAAFE9E5EC6 {
       )
 }
 
+rule MAL_Compromised_Cert_AsyncRAT_Certum_46AC21EE5A3954DBF704AD93C8035A6B {
+   meta:
+      description         = "Detects AsyncRAT with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-06"
+      version             = "1.0"
+
+      hash                = "ae3811913d691d0327fb5a3dd0ee0c7918bc163fcc7aeda31da319fa7978ec14"
+      malware             = "AsyncRAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Open Source Developer Eman Ibrahim"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "46:ac:21:ee:5a:39:54:db:f7:04:ad:93:c8:03:5a:6b"
+      cert_thumbprint     = "673309F97BE9610F9717FA16FF2B273A464DB621"
+      cert_valid_from     = "2026-05-06"
+      cert_valid_to       = "2027-05-06"
+
+      country             = "EG"
+      state               = "Cairo"
+      locality            = "Cairo"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "46:ac:21:ee:5a:39:54:db:f7:04:ad:93:c8:03:5a:6b"
+      )
+}
+
 rule MAL_Compromised_Cert_AsyncRAT_Certum_66971145CC7A0E871D14717B0A041FF4 {
    meta:
       description         = "Detects AsyncRAT with compromised cert (Certum)"
@@ -14805,6 +14840,41 @@ rule MAL_Compromised_Cert_EvilAI_Certum_3FF2B6872A6D7018078C820704F95028 {
       )
 }
 
+rule MAL_Compromised_Cert_EvilAI_GlobalSign_75CFED98ACF1D361FBFF156B {
+   meta:
+      description         = "Detects EvilAI with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-28"
+      version             = "1.0"
+
+      hash                = "6451eb28eb29c067d8ca421b7a73462b669562ef5e06c447d13914c5d4116150"
+      malware             = "EvilAI"
+      malware_type        = "Unknown"
+      malware_notes       = "Installer for a stager masquerading as a fake productivity utility named “TXTconverter”."
+
+      signer              = "KALIM LIMITED"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "75:cf:ed:98:ac:f1:d3:61:fb:ff:15:6b"
+      cert_thumbprint     = "2860AA08C990BFA2436094132D98FC0B4638F2E9"
+      cert_valid_from     = "2026-04-28"
+      cert_valid_to       = "2027-04-29"
+
+      country             = "CY"
+      state               = "Nicosia"
+      locality            = "Tseri"
+      email               = "andri@UpKalim.com"
+      rdn_serial_number   = "HE484332"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "75:cf:ed:98:ac:f1:d3:61:fb:ff:15:6b"
+      )
+}
+
 rule MAL_Compromised_Cert_EvilAI_Sectigo_0094FAEF953FFD84F5CAC6C77E45247A68 {
    meta:
       description         = "Detects EvilAI with compromised cert (Sectigo)"
@@ -23121,11 +23191,11 @@ rule MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_33000293D1AC43D03B9AAD1
       cert_valid_from     = "2026-07-01"
       cert_valid_to       = "2026-07-04"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Delaware"
+      locality            = "Lewes"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -58065,6 +58135,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330002809DC34A10A47E8DBB
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330002D632873502C7E30B0B6100000002D632 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-08"
+      version             = "1.0"
+
+      hash                = "de63e613dee432601f67650b0fdd2d4cebe88838b6ba180fe5702686585c17a1"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "jasmine mosby"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:02:d6:32:87:35:02:c7:e3:0b:0b:61:00:00:00:02:d6:32"
+      cert_thumbprint     = "CECFDF7E23E6DD65DC0D06EE6D0D48BD3C117D6B"
+      cert_valid_from     = "2026-07-08"
+      cert_valid_to       = "2026-07-11"
+
+      country             = "US"
+      state               = "ar"
+      locality            = "Little Rock"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:02:d6:32:87:35:02:c7:e3:0b:0b:61:00:00:00:02:d6:32"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330007227525ABC3F117376B2E000000072275 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
@@ -61457,6 +61562,41 @@ rule MAL_Compromised_Cert_SoftHub_GlobalSign_1A68E8AEFBDBD2B972F8D6BD {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "1a:68:e8:ae:fb:db:d2:b9:72:f8:d6:bd"
+      )
+}
+
+rule MAL_Compromised_Cert_SoftHub_GlobalSign_2AB9C710228A53FF499CBDB3 {
+   meta:
+      description         = "Detects SoftHub with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-19"
+      version             = "1.0"
+
+      hash                = "ee18394f83bf2d83c44ae79bc1ef297ab172de6461b6ab2dc364eae096f75181"
+      malware             = "SoftHub"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Osh Spetsstroy LLC"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "2a:b9:c7:10:22:8a:53:ff:49:9c:bd:b3"
+      cert_thumbprint     = "CA2165E0F8DB97900D679B6D821CBC3D87D4AC32"
+      cert_valid_from     = "2026-06-19"
+      cert_valid_to       = "2027-06-20"
+
+      country             = "KG"
+      state               = "Osh"
+      locality            = "Kara-Suu"
+      email               = "Oshstroy@protonmail.com"
+      rdn_serial_number   = "163181-3306-OOO"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "2a:b9:c7:10:22:8a:53:ff:49:9c:bd:b3"
       )
 }
 
@@ -69857,6 +69997,41 @@ rule MAL_Compromised_Cert_Traffer_SSL_com_29DBCFC33537EF7B80629968F00391E6 {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "29:db:cf:c3:35:37:ef:7b:80:62:99:68:f0:03:91:e6"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_SSL_com_3A33265796F807181E9FDD677AFE786A {
+   meta:
+      description         = "Detects Traffer with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-06"
+      version             = "1.0"
+
+      hash                = "1162457ce6539b56e7784f961db4d4f7cef42f9ac1b3232c1656b6534fed9917"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Avento Software OU"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "3a:33:26:57:96:f8:07:18:1e:9f:dd:67:7a:fe:78:6a"
+      cert_thumbprint     = "732461225693C36AECDC721F0204933D1D3ADC4D"
+      cert_valid_from     = "2026-07-06"
+      cert_valid_to       = "2027-07-06"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "3a:33:26:57:96:f8:07:18:1e:9f:dd:67:7a:fe:78:6a"
       )
 }
 
@@ -79506,11 +79681,11 @@ rule MAL_Compromised_Cert_Unknown_Microsoft_3300010A1FC37D40715BFDAEC9000000010A
       cert_valid_from     = "2026-05-15"
       cert_valid_to       = "2026-05-18"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Delaware"
+      locality            = "Lewes"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

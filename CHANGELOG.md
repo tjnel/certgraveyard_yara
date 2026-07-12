@@ -4,6 +4,19 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.07.12] - 2026-07-12
+
+### Added
+- MAL_Compromised_Cert_AsyncRAT_Certum_46AC21EE5A3954DBF704AD93C8035A6B (AsyncRAT - Certum)
+- MAL_Compromised_Cert_EvilAI_GlobalSign_75CFED98ACF1D361FBFF156B (EvilAI - GlobalSign)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330002D632873502C7E30B0B6100000002D632 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_SoftHub_GlobalSign_2AB9C710228A53FF499CBDB3 (SoftHub - GlobalSign)
+- MAL_Compromised_Cert_Traffer_SSL_com_3A33265796F807181E9FDD677AFE786A (Traffer - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_Forever_Botnet_BR_01_Microsoft_33000293D1AC43D03B9AAD13810000000293D1 (Updated metadata for Forever Botnet,BR-01)
+- MAL_Compromised_Cert_Unknown_Microsoft_3300010A1FC37D40715BFDAEC9000000010A1F (Updated metadata for Unknown)
+
 ## [2026.07.11] - 2026-07-11
 
 ### Added
