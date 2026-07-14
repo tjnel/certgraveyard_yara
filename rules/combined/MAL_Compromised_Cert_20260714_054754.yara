@@ -59920,6 +59920,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_7E0D2428F8B3793BE0947AB4DA
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnect_GlobalSign_247DF4F340735BEFACC958F3 {
+   meta:
+      description         = "Detects ScreenConnect with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-13"
+      version             = "1.0"
+
+      hash                = "5238b57ce76064b977a6d5800f00f4120d795381f12fab93c7491997de6cfe67"
+      malware             = "ScreenConnect"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "STEPHEN WHANG, CPA, INC."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "24:7d:f4:f3:40:73:5b:ef:ac:c9:58:f3"
+      cert_thumbprint     = "A1E395A1317DC918673E3E63CA6F5EE51B321AF6"
+      cert_valid_from     = "2026-02-13"
+      cert_valid_to       = "2027-02-14"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "24:7d:f4:f3:40:73:5b:ef:ac:c9:58:f3"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnect_Phishing_GlobalSign_60D16EC97ED649E7E625BAE7 {
    meta:
       description         = "Detects ScreenConnect Phishing with compromised cert (GlobalSign)"
@@ -70021,11 +70056,11 @@ rule MAL_Compromised_Cert_Traffer_SSL_com_3A33265796F807181E9FDD677AFE786A {
       cert_valid_from     = "2026-07-06"
       cert_valid_to       = "2027-07-06"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "EE"
+      state               = "Harju County"
+      locality            = "Haabneeme"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -84977,6 +85012,41 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_1D0AB4F108CE8496648853FA1A7BA839 {
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Code Signing 2021 CA" and
          sig.serial == "1d:0a:b4:f1:08:ce:84:96:64:88:53:fa:1a:7b:a8:39"
+      )
+}
+
+rule MAL_Compromised_Cert_ValleyRAT_Certum_1F614124E11DE641C7D2C7D0A3C6100C {
+   meta:
+      description         = "Detects ValleyRAT with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-09"
+      version             = "1.0"
+
+      hash                = "1c82635c29f40e971971e150ebee6f36dabdd2a156f51214f20425315abb413f"
+      malware             = "ValleyRAT"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: 103.118.243.73"
+
+      signer              = "成都拾屋理铭酒店管理有限公司"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "1f:61:41:24:e1:1d:e6:41:c7:d2:c7:d0:a3:c6:10:0c"
+      cert_thumbprint     = "A962F3592C72311BC617453102AA8AE2294BEA11"
+      cert_valid_from     = "2026-02-09"
+      cert_valid_to       = "2027-02-09"
+
+      country             = "CN"
+      state               = "四川"
+      locality            = "成都"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "1f:61:41:24:e1:1d:e6:41:c7:d2:c7:d0:a3:c6:10:0c"
       )
 }
 

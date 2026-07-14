@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Traffer_SSL_com_3A33265796F807181E9FDD677AFE786A {
       cert_valid_from     = "2026-07-06"
       cert_valid_to       = "2027-07-06"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "EE"
+      state               = "Harju County"
+      locality            = "Haabneeme"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
