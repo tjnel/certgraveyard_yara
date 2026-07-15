@@ -25830,6 +25830,41 @@ rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_5CCC14BFA5980319E17B16F0360
       )
 }
 
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_5DF273A440E188CFD64188D1EF1E5931 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-27"
+      version             = "1.0"
+
+      hash                = "a5516a25bc40eb74359b74dccbf7309ffdc173c4a2d44a47f09d62da45f566c8"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "杭州思维宇宙科技有限公司"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "5d:f2:73:a4:40:e1:88:cf:d6:41:88:d1:ef:1e:59:31"
+      cert_thumbprint     = "14E0FCA3F0F656D1AF6EA66E1B2B7C6B4ACD8E2D"
+      cert_valid_from     = "2026-04-27"
+      cert_valid_to       = "2027-03-03"
+
+      country             = "CN"
+      state               = "浙江"
+      locality            = "杭州"
+      email               = "???"
+      rdn_serial_number   = "91330108MACPWGQM5F"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "5d:f2:73:a4:40:e1:88:cf:d6:41:88:d1:ef:1e:59:31"
+      )
+}
+
 rule MAL_Compromised_Cert_Golden_Gh0st_Loader_DigiCert_01AF6469365C81AD7222E60FB1317062 {
    meta:
       description         = "Detects Golden Gh0st Loader with compromised cert (DigiCert)"
@@ -52675,6 +52710,41 @@ rule MAL_Compromised_Cert_ResidentialProxyInstaller_DigiCert_0A8AAD8C6E69D0EA307
       )
 }
 
+rule MAL_Compromised_Cert_ResidentialProxyInstaller_GlobalSign_03A9188AA510C0F8343426BF {
+   meta:
+      description         = "Detects ResidentialProxyInstaller with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2023-04-26"
+      version             = "1.0"
+
+      hash                = "f5111a55125fcc4223805a676963852e9cf238287a51e4caad46791331127a24"
+      malware             = "ResidentialProxyInstaller"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "WEILAI NETWORK TECHNOLOGY CO., LIMITED"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "03:a9:18:8a:a5:10:c0:f8:34:34:26:bf"
+      cert_thumbprint     = "5CCC0717179EBC7C6165253405840FE33518E5D6"
+      cert_valid_from     = "2023-04-26"
+      cert_valid_to       = "2026-04-26"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "03:a9:18:8a:a5:10:c0:f8:34:34:26:bf"
+      )
+}
+
 rule MAL_Compromised_Cert_ResidentialProxyInstaller_GoGetSSL_0B902CA1B6CA4C44CF6D10B8BBAD35B2 {
    meta:
       description         = "Detects ResidentialProxyInstaller with compromised cert (GoGetSSL)"
@@ -59080,6 +59150,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_087711DDF512753346533330D4
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_0E4842A69FD35DC87F25E6411F2272D4 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-08"
+      version             = "1.0"
+
+      hash                = "39030298332d4ad0b3b3cb987a4bb9501f19d8ba48b393f187cf560db6b60a79"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Edgar Palacios"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "0e:48:42:a6:9f:d3:5d:c8:7f:25:e6:41:1f:22:72:d4"
+      cert_thumbprint     = "E82F69496E03A61ACCBE806484FC5F320231120E"
+      cert_valid_from     = "2026-07-08"
+      cert_valid_to       = "2027-07-08"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "0e:48:42:a6:9f:d3:5d:c8:7f:25:e6:41:1f:22:72:d4"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_0E8A201CD9D72CF63D9F0F238E9EE6E6 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (SSL.com)"
@@ -59941,11 +60046,11 @@ rule MAL_Compromised_Cert_ScreenConnect_GlobalSign_247DF4F340735BEFACC958F3 {
       cert_valid_from     = "2026-02-13"
       cert_valid_to       = "2027-02-14"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "California"
+      locality            = "Los Angeles"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "2300041"
 
    condition:
       uint16(0) == 0x5a4d and
