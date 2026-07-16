@@ -21,10 +21,10 @@ rule MAL_Compromised_Cert_ResidentialProxyInstaller_GlobalSign_03A9188AA510C0F83
       cert_valid_from     = "2023-04-26"
       cert_valid_to       = "2026-04-26"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "---"
+      state               = "---"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:

@@ -4,6 +4,16 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.07.16] - 2026-07-16
+
+### Added
+- MAL_Compromised_Cert_CrocoRAT_Certum_38415A82BCDED4B2A8A4D8394F7EBB55 (CrocoRAT - Certum)
+
+### Modified
+- MAL_Compromised_Cert_Unknown_GlobalSign_709FBBDC5826F66B39F4E670 (Updated metadata for Unknown)
+- MAL_Compromised_Cert_ResidentialProxyInstaller_GlobalSign_03A9188AA510C0F8343426BF (Updated metadata for ResidentialProxyInstaller)
+- MAL_Compromised_Cert_Unknown_EE_0452205181790702B219BCE761B5C52C (Updated metadata for Unknown)
+
 ## [2026.07.15] - 2026-07-15
 
 ### Added
