@@ -24,8 +24,8 @@ rule MAL_Compromised_Cert_CrocoRAT_Certum_38415A82BCDED4B2A8A4D8394F7EBB55 {
       country             = "FI"
       state               = "Keski-Suomi"
       locality            = "Jyväskylä"
-      email               = ""
-      rdn_serial_number   = ""
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
