@@ -12390,6 +12390,41 @@ rule MAL_Compromised_Cert_CrocoRAT_Certum_38415A82BCDED4B2A8A4D8394F7EBB55 {
       )
 }
 
+rule MAL_Compromised_Cert_CrocoRAT_SSL_com_2BFF385A538994844803B05524BFFBB0 {
+   meta:
+      description         = "Detects CrocoRAT with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-10"
+      version             = "1.0"
+
+      hash                = "907da6987c3fd2115fd62c8dbcba9837cbdeb8dd00851265c601a93261184343"
+      malware             = "CrocoRAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "JB Alpha Digital"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "2b:ff:38:5a:53:89:94:84:48:03:b0:55:24:bf:fb:b0"
+      cert_thumbprint     = ""
+      cert_valid_from     = "2025-09-10"
+      cert_valid_to       = "2026-09-09"
+
+      country             = "SE"
+      state               = "Stockholm County"
+      locality            = "Danderyds Kommun"
+      email               = ""
+      rdn_serial_number   = "---"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "2b:ff:38:5a:53:89:94:84:48:03:b0:55:24:bf:fb:b0"
+      )
+}
+
 rule MAL_Compromised_Cert_CryptoWalletChromeExtension_GlobalSign_382D0BDD4B9AB0C19F034D2C {
    meta:
       description         = "Detects CryptoWalletChromeExtension with compromised cert (GlobalSign)"
@@ -58296,11 +58331,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330002E1F623C7F826E7FF28
       cert_valid_from     = "2026-07-09"
       cert_valid_to       = "2026-07-12"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "ar"
+      locality            = "Little Rock"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -58331,11 +58366,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330003106289EC454C445593
       cert_valid_from     = "2026-07-11"
       cert_valid_to       = "2026-07-14"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
-      email               = "---"
-      rdn_serial_number   = ""
+      country             = "US"
+      state               = "ar"
+      locality            = "Little Rock"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -77417,6 +77452,41 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_2A074CF080DFCB5586832383 {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "2a:07:4c:f0:80:df:cb:55:86:83:23:83"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_GlobalSign_2C769FFF67EFF3BFEC23E9AE {
+   meta:
+      description         = "Detects Unknown with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-31"
+      version             = "1.0"
+
+      hash                = "46b426b6e25231d731d7cb2822f1435f65778f168c9d838568e9012d3507abda"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Legacy Roots Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "2c:76:9f:ff:67:ef:f3:bf:ec:23:e9:ae"
+      cert_thumbprint     = "BB0DE6119150388409296D8BEE662EC5F9E4B973"
+      cert_valid_from     = "2026-03-31"
+      cert_valid_to       = "2027-04-01"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "2c:76:9f:ff:67:ef:f3:bf:ec:23:e9:ae"
       )
 }
 
