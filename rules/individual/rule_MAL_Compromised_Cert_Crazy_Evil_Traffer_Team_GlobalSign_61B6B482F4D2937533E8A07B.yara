@@ -17,14 +17,14 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_61B6B482F4D2937533E
       cert_issuer_short   = "GlobalSign"
       cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
       cert_serial         = "61:b6:b4:82:f4:d2:93:75:33:e8:a0:7b"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "7606613cfdac15fb05eda34e250cbf28c38594b3"
       cert_valid_from     = "2025-10-03"
       cert_valid_to       = "2026-10-04"
 
       country             = "RO"
       state               = "Timiș"
       locality            = "Biled"
-      email               = ""
+      email               = "---"
       rdn_serial_number   = "J35/1100/2022"
 
    condition:

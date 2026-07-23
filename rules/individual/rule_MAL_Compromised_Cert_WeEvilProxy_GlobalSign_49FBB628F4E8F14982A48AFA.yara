@@ -17,15 +17,15 @@ rule MAL_Compromised_Cert_WeEvilProxy_GlobalSign_49FBB628F4E8F14982A48AFA {
       cert_issuer_short   = "GlobalSign"
       cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
       cert_serial         = "49:fb:b6:28:f4:e8:f1:49:82:a4:8a:fa"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "3b14310ad7309b43405b3b8c94bdb977a4ad84e8"
       cert_valid_from     = "2025-04-15"
       cert_valid_to       = "2026-04-16"
 
       country             = "RU"
       state               = "Moscow"
       locality            = "Moscow"
-      email               = ""
-      rdn_serial_number   = "???"
+      email               = "---"
+      rdn_serial_number   = "1027700529559"
 
    condition:
       uint16(0) == 0x5a4d and

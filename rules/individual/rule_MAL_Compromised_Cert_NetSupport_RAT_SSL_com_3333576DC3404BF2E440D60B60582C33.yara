@@ -17,15 +17,15 @@ rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_3333576DC3404BF2E440D60B60582C3
       cert_issuer_short   = "SSL.com"
       cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
       cert_serial         = "33:33:57:6d:c3:40:4b:f2:e4:40:d6:0b:60:58:2c:33"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "d1e45a856ddaa5e2a95b3513b230fe5935fc3867"
       cert_valid_from     = "2024-12-23"
       cert_valid_to       = "2025-12-23"
 
       country             = "FR"
       state               = "Nouvelle-Aquitaine"
       locality            = "Le Bouscat"
-      email               = ""
-      rdn_serial_number   = "???"
+      email               = "---"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

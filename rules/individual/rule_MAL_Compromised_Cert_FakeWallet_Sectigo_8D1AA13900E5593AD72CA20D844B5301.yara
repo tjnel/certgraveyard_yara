@@ -17,14 +17,14 @@ rule MAL_Compromised_Cert_FakeWallet_Sectigo_8D1AA13900E5593AD72CA20D844B5301 {
       cert_issuer_short   = "Sectigo"
       cert_issuer         = "Sectigo Public Code Signing CA EV R36"
       cert_serial         = "8d:1a:a1:39:00:e5:59:3a:d7:2c:a2:0d:84:4b:53:01"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "4531c216c38b6aa4f63927d7ef3e5039e06a4fae"
       cert_valid_from     = "2026-01-27"
       cert_valid_to       = "2027-01-07"
 
       country             = "CN"
       state               = "Shandong Sheng"
-      locality            = "???"
-      email               = "???"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = "91370785MA3TA0Q097"
 
    condition:

@@ -17,14 +17,14 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_Microsoft_3300061F6D63594C7D87
       cert_issuer_short   = "Microsoft"
       cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
       cert_serial         = "33:00:06:1f:6d:63:59:4c:7d:87:bc:04:0b:00:00:00:06:1f:6d"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "f5e6701c59d541310dd165dfff41ed29e6cbcfaa"
       cert_valid_from     = "2025-12-31"
       cert_valid_to       = "2026-01-03"
 
       country             = "PL"
       state               = "Pomorskie"
       locality            = "GDYNIA"
-      email               = "???"
+      email               = "---"
       rdn_serial_number   = "Not Specified"
 
    condition:

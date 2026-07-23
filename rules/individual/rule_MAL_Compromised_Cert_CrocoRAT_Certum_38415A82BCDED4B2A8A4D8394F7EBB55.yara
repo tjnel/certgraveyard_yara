@@ -17,14 +17,14 @@ rule MAL_Compromised_Cert_CrocoRAT_Certum_38415A82BCDED4B2A8A4D8394F7EBB55 {
       cert_issuer_short   = "Certum"
       cert_issuer         = "Certum Code Signing 2021 CA"
       cert_serial         = "38:41:5a:82:bc:de:d4:b2:a8:a4:d8:39:4f:7e:bb:55"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "ce018a156bcafeaff7740c9bbb93e45788e3a31d"
       cert_valid_from     = "2026-04-23"
       cert_valid_to       = "2027-04-23"
 
       country             = "FI"
       state               = "Keski-Suomi"
       locality            = "Jyväskylä"
-      email               = "???"
+      email               = "---"
       rdn_serial_number   = "Not Specified"
 
    condition:

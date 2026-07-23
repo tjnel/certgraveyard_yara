@@ -17,14 +17,14 @@ rule MAL_Compromised_Cert_RuRAT_Sectigo_1A88479AE02BEC4FB5F67E44BD6C83EE {
       cert_issuer_short   = "Sectigo"
       cert_issuer         = "Sectigo Public Code Signing CA EV R36"
       cert_serial         = "1a:88:47:9a:e0:2b:ec:4f:b5:f6:7e:44:bd:6c:83:ee"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "a33a30e2831d610b7e661dc22e00cb4c9ccf7d53"
       cert_valid_from     = "2026-01-12"
       cert_valid_to       = "2027-01-12"
 
       country             = "CN"
       state               = "Jiangsu Sheng"
-      locality            = "???"
-      email               = "???"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = "91320281MA20B1986E"
 
    condition:

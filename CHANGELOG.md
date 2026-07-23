@@ -4,6 +4,28 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.07.23] - 2026-07-23
+
+### Added
+- MAL_Compromised_Cert_CrocoRAT_SSL_com_2BFF385A538994844803B05524BFFBB0 (CrocoRAT - SSL.com)
+- MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_320F566C4A48D5133D628A72 (Golden Gh0st Loader - GlobalSign)
+
+### Modified
+- MAL_Compromised_Cert_CrocoRAT_Certum_38415A82BCDED4B2A8A4D8394F7EBB55 (Updated metadata for CrocoRAT)
+- MAL_Compromised_Cert_FakeWallet_Sectigo_8D1AA13900E5593AD72CA20D844B5301 (Updated metadata for FakeWallet)
+- MAL_Compromised_Cert_FakeBat_Certum_4A29544A73CF3715B71E1482033FA811 (Updated metadata for FakeBat)
+- MAL_Compromised_Cert_Unknown_SSL_com_6876C6381FB4AF26E496DF7724B96056 (Updated metadata for Unknown)
+- MAL_Compromised_Cert_WeEvilProxy_GlobalSign_49FBB628F4E8F14982A48AFA (Updated metadata for WeEvilProxy)
+- MAL_Compromised_Cert_Wagmi_Traffer_Team_SSL_com_1D4EF724D40A79B6CCA06EB1076CBFF9 (Updated metadata for Wagmi Traffer Team)
+- MAL_Compromised_Cert_RuRAT_Sectigo_1A88479AE02BEC4FB5F67E44BD6C83EE (Updated metadata for RuRAT)
+- MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_61B6B482F4D2937533E8A07B (Updated metadata for Crazy Evil Traffer Team)
+- MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_Microsoft_3300061F6D63594C7D87BC040B000000061F6D (Updated metadata for Crazy Evil Traffer Team)
+- MAL_Compromised_Cert_NetSupport_RAT_SSL_com_3333576DC3404BF2E440D60B60582C33 (Updated metadata for NetSupport RAT)
+- MAL_Compromised_Cert_Unknown_GlobalSign_2C769FFF67EFF3BFEC23E9AE (Updated metadata for Unknown)
+
+### Removed
+- MAL_Compromised_Cert_CrocoRAT_SSL_com_2BFF385A538994844803B05524BFFBB0 (Removed CrocoRAT rule)
+
 ## [2026.07.22] - 2026-07-22
 
 ### Added

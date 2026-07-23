@@ -17,15 +17,15 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_6876C6381FB4AF26E496DF7724B96056 {
       cert_issuer_short   = "SSL.com"
       cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
       cert_serial         = "68:76:c6:38:1f:b4:af:26:e4:96:df:77:24:b9:60:56"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "6522811bf5eb39f1fe99a4ff9d3f6432561f6fc4"
       cert_valid_from     = "2026-05-28"
       cert_valid_to       = "2027-05-28"
 
       country             = "NO"
       state               = "Trondelag"
       locality            = "Klaebu"
-      email               = ""
-      rdn_serial_number   = "---"
+      email               = "---"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

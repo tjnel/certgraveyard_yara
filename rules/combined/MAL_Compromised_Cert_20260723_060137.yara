@@ -11777,14 +11777,14 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_61B6B482F4D2937533E
       cert_issuer_short   = "GlobalSign"
       cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
       cert_serial         = "61:b6:b4:82:f4:d2:93:75:33:e8:a0:7b"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "7606613cfdac15fb05eda34e250cbf28c38594b3"
       cert_valid_from     = "2025-10-03"
       cert_valid_to       = "2026-10-04"
 
       country             = "RO"
       state               = "Timiș"
       locality            = "Biled"
-      email               = ""
+      email               = "---"
       rdn_serial_number   = "J35/1100/2022"
 
    condition:
@@ -11952,14 +11952,14 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_Microsoft_3300061F6D63594C7D87
       cert_issuer_short   = "Microsoft"
       cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
       cert_serial         = "33:00:06:1f:6d:63:59:4c:7d:87:bc:04:0b:00:00:00:06:1f:6d"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "f5e6701c59d541310dd165dfff41ed29e6cbcfaa"
       cert_valid_from     = "2025-12-31"
       cert_valid_to       = "2026-01-03"
 
       country             = "PL"
       state               = "Pomorskie"
       locality            = "GDYNIA"
-      email               = "???"
+      email               = "---"
       rdn_serial_number   = "Not Specified"
 
    condition:
@@ -12372,14 +12372,14 @@ rule MAL_Compromised_Cert_CrocoRAT_Certum_38415A82BCDED4B2A8A4D8394F7EBB55 {
       cert_issuer_short   = "Certum"
       cert_issuer         = "Certum Code Signing 2021 CA"
       cert_serial         = "38:41:5a:82:bc:de:d4:b2:a8:a4:d8:39:4f:7e:bb:55"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "ce018a156bcafeaff7740c9bbb93e45788e3a31d"
       cert_valid_from     = "2026-04-23"
       cert_valid_to       = "2027-04-23"
 
       country             = "FI"
       state               = "Keski-Suomi"
       locality            = "Jyväskylä"
-      email               = "???"
+      email               = "---"
       rdn_serial_number   = "Not Specified"
 
    condition:
@@ -12398,7 +12398,7 @@ rule MAL_Compromised_Cert_CrocoRAT_SSL_com_2BFF385A538994844803B05524BFFBB0 {
       date                = "2025-09-10"
       version             = "1.0"
 
-      hash                = "907da6987c3fd2115fd62c8dbcba9837cbdeb8dd00851265c601a93261184343"
+      hash                = "98939c94abb5a8db0dcee4bd319b399f8410ebc837c935b9706751244fdf610c"
       malware             = "CrocoRAT"
       malware_type        = "Unknown"
       malware_notes       = ""
@@ -12407,15 +12407,15 @@ rule MAL_Compromised_Cert_CrocoRAT_SSL_com_2BFF385A538994844803B05524BFFBB0 {
       cert_issuer_short   = "SSL.com"
       cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
       cert_serial         = "2b:ff:38:5a:53:89:94:84:48:03:b0:55:24:bf:fb:b0"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "430c80cb1e18d0f3f2a230c3db5b363130c152b0"
       cert_valid_from     = "2025-09-10"
       cert_valid_to       = "2026-09-09"
 
       country             = "SE"
       state               = "Stockholm County"
       locality            = "Danderyds Kommun"
-      email               = ""
-      rdn_serial_number   = "---"
+      email               = "---"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -15977,15 +15977,15 @@ rule MAL_Compromised_Cert_FakeBat_Certum_4A29544A73CF3715B71E1482033FA811 {
       cert_issuer_short   = "Certum"
       cert_issuer         = "Certum Code Signing 2021 CA"
       cert_serial         = "4a:29:54:4a:73:cf:37:15:b7:1e:14:82:03:3f:a8:11"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "06dc3610202815fc6a2d32f0e6acfbfc87c7f7d7"
       cert_valid_from     = "2024-11-25"
       cert_valid_to       = "2025-11-25"
 
       country             = "FI"
-      state               = "???"
+      state               = "---"
       locality            = "Espoo"
-      email               = ""
-      rdn_serial_number   = "???"
+      email               = "---"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -22452,14 +22452,14 @@ rule MAL_Compromised_Cert_FakeWallet_Sectigo_8D1AA13900E5593AD72CA20D844B5301 {
       cert_issuer_short   = "Sectigo"
       cert_issuer         = "Sectigo Public Code Signing CA EV R36"
       cert_serial         = "8d:1a:a1:39:00:e5:59:3a:d7:2c:a2:0d:84:4b:53:01"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "4531c216c38b6aa4f63927d7ef3e5039e06a4fae"
       cert_valid_from     = "2026-01-27"
       cert_valid_to       = "2027-01-07"
 
       country             = "CN"
       state               = "Shandong Sheng"
-      locality            = "???"
-      email               = "???"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = "91370785MA3TA0Q097"
 
    condition:
@@ -26597,6 +26597,41 @@ rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_2F93FA58F00445EEDC31327
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "2f:93:fa:58:f0:04:45:ee:dc:31:32:73"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_320F566C4A48D5133D628A72 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-04"
+      version             = "1.0"
+
+      hash                = "26fba07c17efbb6c48a2e746e42df1ee26405c6aa557039492553e5bc27598a1"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Unknown"
+      malware_notes       = "This was used in the second stage. It is a resigned Tencent Browser application."
+
+      signer              = "Feidelai (Chengdu) Home Co., Ltd."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "32:0f:56:6c:4a:48:d5:13:3d:62:8a:72"
+      cert_thumbprint     = "6321EF70EB324B04C664B6BEF2A6613BA6E8218D"
+      cert_valid_from     = "2026-06-04"
+      cert_valid_to       = "2027-06-05"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "32:0f:56:6c:4a:48:d5:13:3d:62:8a:72"
       )
 }
 
@@ -38867,15 +38902,15 @@ rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_3333576DC3404BF2E440D60B60582C3
       cert_issuer_short   = "SSL.com"
       cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
       cert_serial         = "33:33:57:6d:c3:40:4b:f2:e4:40:d6:0b:60:58:2c:33"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "d1e45a856ddaa5e2a95b3513b230fe5935fc3867"
       cert_valid_from     = "2024-12-23"
       cert_valid_to       = "2025-12-23"
 
       country             = "FR"
       state               = "Nouvelle-Aquitaine"
       locality            = "Le Bouscat"
-      email               = ""
-      rdn_serial_number   = "???"
+      email               = "---"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -54617,14 +54652,14 @@ rule MAL_Compromised_Cert_RuRAT_Sectigo_1A88479AE02BEC4FB5F67E44BD6C83EE {
       cert_issuer_short   = "Sectigo"
       cert_issuer         = "Sectigo Public Code Signing CA EV R36"
       cert_serial         = "1a:88:47:9a:e0:2b:ec:4f:b5:f6:7e:44:bd:6c:83:ee"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "a33a30e2831d610b7e661dc22e00cb4c9ccf7d53"
       cert_valid_from     = "2026-01-12"
       cert_valid_to       = "2027-01-12"
 
       country             = "CN"
       state               = "Jiangsu Sheng"
-      locality            = "???"
-      email               = "???"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = "91320281MA20B1986E"
 
    condition:
@@ -77476,11 +77511,11 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_2C769FFF67EFF3BFEC23E9AE {
       cert_valid_from     = "2026-03-31"
       cert_valid_to       = "2027-04-01"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "TH"
+      state               = "Phuket"
+      locality            = "Kathu"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "0835566021673"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -82547,15 +82582,15 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_6876C6381FB4AF26E496DF7724B96056 {
       cert_issuer_short   = "SSL.com"
       cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
       cert_serial         = "68:76:c6:38:1f:b4:af:26:e4:96:df:77:24:b9:60:56"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "6522811bf5eb39f1fe99a4ff9d3f6432561f6fc4"
       cert_valid_from     = "2026-05-28"
       cert_valid_to       = "2027-05-28"
 
       country             = "NO"
       state               = "Trondelag"
       locality            = "Klaebu"
-      email               = ""
-      rdn_serial_number   = "---"
+      email               = "---"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -87613,7 +87648,7 @@ rule MAL_Compromised_Cert_Wagmi_Traffer_Team_SSL_com_1D4EF724D40A79B6CCA06EB1076
       date                = "2026-01-10"
       version             = "1.0"
 
-      hash                = "5a5d7eb08e963c140cba3e4176c1fbc59031ff195452f0068641427c388f257b"
+      hash                = "5a5d7eb08e963c140cba3e4176c1fbc59031ff195452f0068641427c388f257bv"
       malware             = "Wagmi Traffer Team"
       malware_type        = "Unknown"
       malware_notes       = ""
@@ -87622,14 +87657,14 @@ rule MAL_Compromised_Cert_Wagmi_Traffer_Team_SSL_com_1D4EF724D40A79B6CCA06EB1076
       cert_issuer_short   = "SSL.com"
       cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
       cert_serial         = "1d:4e:f7:24:d4:0a:79:b6:cc:a0:6e:b1:07:6c:bf:f9"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "219e8cf93f5cefe53041564762528c10468dbaaf"
       cert_valid_from     = "2026-01-10"
       cert_valid_to       = "2027-01-09"
 
       country             = "IN"
       state               = "West Bengal"
       locality            = "Kolkata"
-      email               = ""
+      email               = "---"
       rdn_serial_number   = "UDYAM-WB-10-0169920"
 
    condition:
@@ -88077,15 +88112,15 @@ rule MAL_Compromised_Cert_WeEvilProxy_GlobalSign_49FBB628F4E8F14982A48AFA {
       cert_issuer_short   = "GlobalSign"
       cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
       cert_serial         = "49:fb:b6:28:f4:e8:f1:49:82:a4:8a:fa"
-      cert_thumbprint     = ""
+      cert_thumbprint     = "3b14310ad7309b43405b3b8c94bdb977a4ad84e8"
       cert_valid_from     = "2025-04-15"
       cert_valid_to       = "2026-04-16"
 
       country             = "RU"
       state               = "Moscow"
       locality            = "Moscow"
-      email               = ""
-      rdn_serial_number   = "???"
+      email               = "---"
+      rdn_serial_number   = "1027700529559"
 
    condition:
       uint16(0) == 0x5a4d and
