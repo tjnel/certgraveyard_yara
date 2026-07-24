@@ -17,15 +17,15 @@ rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_320F566C4A48D5133D628A7
       cert_issuer_short   = "GlobalSign"
       cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
       cert_serial         = "32:0f:56:6c:4a:48:d5:13:3d:62:8a:72"
-      cert_thumbprint     = "6321EF70EB324B04C664B6BEF2A6613BA6E8218D"
+      cert_thumbprint     = "6321ef70eb324b04c664b6bef2a6613ba6e8218d"
       cert_valid_from     = "2026-06-04"
       cert_valid_to       = "2027-06-05"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "CN"
+      state               = "Sichuan"
+      locality            = "Chengdu"
+      email               = "---"
+      rdn_serial_number   = "91510107MACA8G9A46"
 
    condition:
       uint16(0) == 0x5a4d and
