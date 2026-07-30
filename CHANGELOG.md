@@ -4,6 +4,13 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.07.30] - 2026-07-30
+
+### Added
+- MAL_Compromised_Cert_CrashStealer_Apple_757524A42FCCB2F3 (CrashStealer - Apple)
+- MAL_Compromised_Cert_CrashStealer_Apple_557348C6E8FFBFB9 (CrashStealer - Apple)
+- MAL_Compromised_Cert_Traffer_SSL_com_4D6ABBFC7C052CBAFAA53659971AC471 (Traffer - SSL.com)
+
 ## [2026.07.24] - 2026-07-24
 
 ### Added
