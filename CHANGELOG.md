@@ -4,6 +4,11 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.07.31] - 2026-07-31
+
+### Added
+- MAL_Compromised_Cert_CrocoRAT_SSL_com_2BFF385A538994844803B05524BFFBB0 (CrocoRAT - SSL.com)
+
 ## [2026.07.30] - 2026-07-30
 
 ### Added
