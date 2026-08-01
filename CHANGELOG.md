@@ -4,6 +4,13 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.08.01] - 2026-08-01
+
+### Modified
+- MAL_Compromised_Cert_ValleyRAT_Sectigo_0099D8974C1EAA7BE996585FF2DE10D3AD (Updated metadata for ValleyRAT)
+- MAL_Compromised_Cert_ValleyRAT_Certum_1F614124E11DE641C7D2C7D0A3C6100C (Updated metadata for ValleyRAT)
+- MAL_Compromised_Cert_CrocoRAT_SSL_com_2BFF385A538994844803B05524BFFBB0 (Updated metadata for CrocoRAT)
+
 ## [2026.07.31] - 2026-07-31
 
 ### Added

@@ -85481,7 +85481,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_1F614124E11DE641C7D2C7D0A3C6100C {
       hash                = "1c82635c29f40e971971e150ebee6f36dabdd2a156f51214f20425315abb413f"
       malware             = "ValleyRAT"
       malware_type        = "Unknown"
-      malware_notes       = "C2: 103.118.243.73"
+      malware_notes       = ""
 
       signer              = "成都拾屋理铭酒店管理有限公司"
       cert_issuer_short   = "Certum"
@@ -86251,7 +86251,7 @@ rule MAL_Compromised_Cert_ValleyRAT_Sectigo_0099D8974C1EAA7BE996585FF2DE10D3AD {
       hash                = "e17d12a3cb758a7cd55d9e0305bc1471d30a7125cb14f3574d47f1bb91216fc4"
       malware             = "ValleyRAT"
       malware_type        = "Unknown"
-      malware_notes       = "C2: 7799[.]5oo[.]im"
+      malware_notes       = ""
 
       signer              = "MiniTool Software Limited"
       cert_issuer_short   = "Sectigo"
