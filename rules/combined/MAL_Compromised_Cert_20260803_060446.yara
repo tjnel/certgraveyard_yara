@@ -12477,15 +12477,15 @@ rule MAL_Compromised_Cert_CrocoRAT_SSL_com_2BFF385A538994844803B05524BFFBB0 {
       cert_issuer_short   = "SSL.com"
       cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
       cert_serial         = "2b:ff:38:5a:53:89:94:84:48:03:b0:55:24:bf:fb:b0"
-      cert_thumbprint     = "430C80CB1E18D0F3F2A230C3DB5B363130C152B0"
+      cert_thumbprint     = "430c80cb1e18d0f3f2a230c3db5b363130c152b0"
       cert_valid_from     = "2025-09-10"
       cert_valid_to       = "2026-09-09"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = ""
-      rdn_serial_number   = ""
+      country             = "SE"
+      state               = "Stockholm County"
+      locality            = "Danderyds Kommun"
+      email               = "---"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -39302,6 +39302,41 @@ rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_4F0E9913D60904BC7917AE8CBFA11DF
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
          sig.serial == "4f:0e:99:13:d6:09:04:bc:79:17:ae:8c:bf:a1:1d:f6"
+      )
+}
+
+rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_50B4A05EC90AB6364EAB2C1924F9908A {
+   meta:
+      description         = "Detects NetSupport RAT with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-09"
+      version             = "1.0"
+
+      hash                = "2dbd8280bf1faa923b4537d9342d6a69d7f56bde3e1b5559bd4f483af38dce1d"
+      malware             = "NetSupport RAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Sobitas Software GmbH"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "50:b4:a0:5e:c9:0a:b6:36:4e:ab:2c:19:24:f9:90:8a"
+      cert_thumbprint     = "0825f3614b524d1f86664041d4ae21818b3c6cbc"
+      cert_valid_from     = "2025-09-09"
+      cert_valid_to       = "2026-09-08"
+
+      country             = "AT"
+      state               = "Vienna"
+      locality            = "Vienna"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "50:b4:a0:5e:c9:0a:b6:36:4e:ab:2c:19:24:f9:90:8a"
       )
 }
 
@@ -70507,15 +70542,15 @@ rule MAL_Compromised_Cert_Traffer_SSL_com_4D6ABBFC7C052CBAFAA53659971AC471 {
       cert_issuer_short   = "SSL.com"
       cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
       cert_serial         = "4d:6a:bb:fc:7c:05:2c:ba:fa:a5:36:59:97:1a:c4:71"
-      cert_thumbprint     = "12730A7DD9AF98F14441D476C10EB346708C1194"
+      cert_thumbprint     = "12730a7dd9af98f14441d476c10eb346708c1194"
       cert_valid_from     = "2026-07-13"
       cert_valid_to       = "2027-07-13"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "NO"
+      state               = "Vågan"
+      locality            = "Svolvær"
+      email               = "---"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -76332,6 +76367,41 @@ rule MAL_Compromised_Cert_Unknown_DigiCert_0E5909036A53A3F72552067E888B8239 {
       for any sig in pe.signatures : (
          sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
          sig.serial == "0e:59:09:03:6a:53:a3:f7:25:52:06:7e:88:8b:82:39"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_DigiCert_BA8762BC2DFC682CA35F2E24100918F {
+   meta:
+      description         = "Detects Unknown with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-05"
+      version             = "1.0"
+
+      hash                = "25787f5541566d193f35b220b4953a6057aabc05a54bf9b7cf903fb8fdf26912"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Tencent Technology (Shenzhen) Company Limited"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "ba:87:62:bc:2d:fc:68:2c:a3:5f:2e:24:10:09:18:f"
+      cert_thumbprint     = "67de1a4fb2174930244b306b14e2d7bf67cd05f0"
+      cert_valid_from     = "2026-04-05"
+      cert_valid_to       = "2027-04-04"
+
+      country             = "CN"
+      state               = "Guangdong Province"
+      locality            = "Shenzhen"
+      email               = "---"
+      rdn_serial_number   = "9144030071526726XG"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "ba:87:62:bc:2d:fc:68:2c:a3:5f:2e:24:10:09:18:f"
       )
 }
 

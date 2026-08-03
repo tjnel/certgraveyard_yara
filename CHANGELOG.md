@@ -4,6 +4,19 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.08.03] - 2026-08-03
+
+### Added
+- MAL_Compromised_Cert_Unknown_DigiCert_BA8762BC2DFC682CA35F2E24100918F (Unknown - DigiCert)
+- MAL_Compromised_Cert_NetSupport_RAT_SSL_com_50B4A05EC90AB6364EAB2C1924F9908A (NetSupport RAT - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_Traffer_SSL_com_4D6ABBFC7C052CBAFAA53659971AC471 (Updated metadata for Traffer)
+- MAL_Compromised_Cert_CrocoRAT_SSL_com_2BFF385A538994844803B05524BFFBB0 (Updated metadata for CrocoRAT)
+
+### Removed
+- MAL_Compromised_Cert_Golden_Gh0st_Loader_DigiCert_0BA8762BC2DFC682CA35F2E24100918F (Removed Golden Gh0st Loader rule)
+
 ## [2026.08.01] - 2026-08-01
 
 ### Modified

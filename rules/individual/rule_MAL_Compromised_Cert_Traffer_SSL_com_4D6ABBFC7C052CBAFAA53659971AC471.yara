@@ -17,15 +17,15 @@ rule MAL_Compromised_Cert_Traffer_SSL_com_4D6ABBFC7C052CBAFAA53659971AC471 {
       cert_issuer_short   = "SSL.com"
       cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
       cert_serial         = "4d:6a:bb:fc:7c:05:2c:ba:fa:a5:36:59:97:1a:c4:71"
-      cert_thumbprint     = "12730A7DD9AF98F14441D476C10EB346708C1194"
+      cert_thumbprint     = "12730a7dd9af98f14441d476c10eb346708c1194"
       cert_valid_from     = "2026-07-13"
       cert_valid_to       = "2027-07-13"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "NO"
+      state               = "Vågan"
+      locality            = "Svolvær"
+      email               = "---"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

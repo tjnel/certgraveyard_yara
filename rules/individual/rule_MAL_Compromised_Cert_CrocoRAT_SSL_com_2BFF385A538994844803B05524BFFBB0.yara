@@ -17,15 +17,15 @@ rule MAL_Compromised_Cert_CrocoRAT_SSL_com_2BFF385A538994844803B05524BFFBB0 {
       cert_issuer_short   = "SSL.com"
       cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
       cert_serial         = "2b:ff:38:5a:53:89:94:84:48:03:b0:55:24:bf:fb:b0"
-      cert_thumbprint     = "430C80CB1E18D0F3F2A230C3DB5B363130C152B0"
+      cert_thumbprint     = "430c80cb1e18d0f3f2a230c3db5b363130c152b0"
       cert_valid_from     = "2025-09-10"
       cert_valid_to       = "2026-09-09"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = ""
-      rdn_serial_number   = ""
+      country             = "SE"
+      state               = "Stockholm County"
+      locality            = "Danderyds Kommun"
+      email               = "---"
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
