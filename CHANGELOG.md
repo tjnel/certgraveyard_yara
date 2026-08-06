@@ -4,6 +4,12 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.08.06] - 2026-08-06
+
+### Added
+- MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_2BC27BDCF2944112BBEFFC1EF59F3A7F (Golden Gh0st Loader - Certum)
+- MAL_Compromised_Cert_Remus_Stealer_GlobalSign_687AE2E8C47785DBCA414133 (Remus Stealer - GlobalSign)
+
 ## [2026.08.03] - 2026-08-03
 
 ### Added
