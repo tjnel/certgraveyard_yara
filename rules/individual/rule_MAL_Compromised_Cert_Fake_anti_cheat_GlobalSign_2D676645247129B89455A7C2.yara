@@ -17,13 +17,13 @@ rule MAL_Compromised_Cert_Fake_anti_cheat_GlobalSign_2D676645247129B89455A7C2 {
       cert_issuer_short   = "GlobalSign"
       cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
       cert_serial         = "2d:67:66:45:24:71:29:b8:94:55:a7:c2"
-      cert_thumbprint     = "7AD9CF2C0AC0C6B5753DEA9D566C4D8D54F8DA00"
+      cert_thumbprint     = "7ad9cf2c0ac0c6b5753dea9d566c4d8d54f8da00"
       cert_valid_from     = "2025-02-13"
       cert_valid_to       = "2026-02-14"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
+      country             = "CN"
+      state               = "湖南"
+      locality            = "衡阳"
       email               = "---"
       rdn_serial_number   = ""
 

@@ -22697,13 +22697,13 @@ rule MAL_Compromised_Cert_Fake_anti_cheat_GlobalSign_2D676645247129B89455A7C2 {
       cert_issuer_short   = "GlobalSign"
       cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
       cert_serial         = "2d:67:66:45:24:71:29:b8:94:55:a7:c2"
-      cert_thumbprint     = "7AD9CF2C0AC0C6B5753DEA9D566C4D8D54F8DA00"
+      cert_thumbprint     = "7ad9cf2c0ac0c6b5753dea9d566c4d8d54f8da00"
       cert_valid_from     = "2025-02-13"
       cert_valid_to       = "2026-02-14"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
+      country             = "CN"
+      state               = "湖南"
+      locality            = "衡阳"
       email               = "---"
       rdn_serial_number   = ""
 
@@ -25617,6 +25617,41 @@ rule MAL_Compromised_Cert_GodRAT_GlobalSign_476687EF336E88504E5ECE57 {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "47:66:87:ef:33:6e:88:50:4e:5e:ce:57"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_222A7EF10B49297BA094CC38E127FC25 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-14"
+      version             = "1.0"
+
+      hash                = "2edb7c1f064cbfc7883f6a4be65134c8a27fba74413d9ed800b4e3ad192e8426"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Chengdu Yongyingli Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "22:2a:7e:f1:0b:49:29:7b:a0:94:cc:38:e1:27:fc:25"
+      cert_thumbprint     = "d22c9f999bfb7315dd0d33f55594cdba49c3731a"
+      cert_valid_from     = "2026-07-14"
+      cert_valid_to       = "2027-07-14"
+
+      country             = "CN"
+      state               = "Sichuan"
+      locality            = "Chengdu"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "22:2a:7e:f1:0b:49:29:7b:a0:94:cc:38:e1:27:fc:25"
       )
 }
 
@@ -45920,6 +45955,41 @@ rule MAL_Compromised_Cert_Pulse_Browser_Sectigo_00E96F42F8386E061B97F3611CA55BD2
       )
 }
 
+rule MAL_Compromised_Cert_Pulse_Browser_Sectigo_B7F4B4B2DE3E01482E7244E5D80542DA {
+   meta:
+      description         = "Detects Pulse Browser with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-24"
+      version             = "1.0"
+
+      hash                = "8d62f5858473ad6b917b190260263b7d1991693a83602b4f6b0972dae03df6fd"
+      malware             = "Pulse Browser"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Alabama Technology USA, LLC"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "b7:f4:b4:b2:de:3e:01:48:2e:72:44:e5:d8:05:42:da"
+      cert_thumbprint     = "08a802ff1ef56fe63075a6d99cac10c5a3398c42"
+      cert_valid_from     = "2025-09-24"
+      cert_valid_to       = "2026-09-24"
+
+      country             = "US"
+      state               = "New Mexico"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "b7:f4:b4:b2:de:3e:01:48:2e:72:44:e5:d8:05:42:da"
+      )
+}
+
 rule MAL_Compromised_Cert_PureHVNC_Certum_65F02736623718993AC28B6B704ED42F {
    meta:
       description         = "Detects PureHVNC with compromised cert (Certum)"
@@ -53060,6 +53130,41 @@ rule MAL_Compromised_Cert_ResidentialProxyInstaller_GlobalSign_03A9188AA510C0F83
       )
 }
 
+rule MAL_Compromised_Cert_ResidentialProxyInstaller_GlobalSign_3A9188AA510C0F8343426BF {
+   meta:
+      description         = "Detects ResidentialProxyInstaller with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2023-04-26"
+      version             = "1.0"
+
+      hash                = "f5111a55125fcc4223805a676963852e9cf238287a51e4caad46791331127a24"
+      malware             = "ResidentialProxyInstaller"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "WEILAI NETWORK TECHNOLOGY CO., LIMITED"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "3a:91:88:aa:51:0c:0f:83:43:42:6b:f"
+      cert_thumbprint     = "5ccc0717179ebc7c6165253405840fe33518e5d6"
+      cert_valid_from     = "2023-04-26"
+      cert_valid_to       = "2026-04-26"
+
+      country             = "GB"
+      state               = "London"
+      locality            = "London"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "3a:91:88:aa:51:0c:0f:83:43:42:6b:f"
+      )
+}
+
 rule MAL_Compromised_Cert_ResidentialProxyInstaller_GoGetSSL_0B902CA1B6CA4C44CF6D10B8BBAD35B2 {
    meta:
       description         = "Detects ResidentialProxyInstaller with compromised cert (GoGetSSL)"
@@ -58397,13 +58502,13 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001D9296D14E1F12F5647
       cert_issuer_short   = "Microsoft"
       cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
       cert_serial         = "33:00:01:d9:29:6d:14:e1:f1:2f:56:47:39:00:00:00:01:d9:29"
-      cert_thumbprint     = "8FF32A2F092A1DF0188D3964F616C4A99921395A"
+      cert_thumbprint     = "8ff32a2f092a1df0188d3964f616c4a99921395a"
       cert_valid_from     = "2026-06-08"
       cert_valid_to       = "2026-06-11"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
+      country             = "US"
+      state               = "tx"
+      locality            = "San Antonio"
       email               = "---"
       rdn_serial_number   = ""
 
@@ -75600,6 +75705,41 @@ rule MAL_Compromised_Cert_Unknown_Certum_4FB69AAF484B6AB16D120318552ABC33 {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Certum_4FF695828A8ED5C859714DC9F20D6D3 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-03"
+      version             = "1.0"
+
+      hash                = "c459fdd1f0a39b4de680a45f20a822b204ca897437b4aff99f088f0067a11327"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake cursor install."
+
+      signer              = "杭州思维宇宙科技有限公司"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "4f:f6:95:82:8a:8e:d5:c8:59:71:4d:c9:f2:0d:6d:3"
+      cert_thumbprint     = "31e7b45373da3201b5dbf16c1047d0fa0302143d"
+      cert_valid_from     = "2026-03-03"
+      cert_valid_to       = "2027-03-03"
+
+      country             = "CN"
+      state               = "浙江"
+      locality            = "杭州"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "4f:f6:95:82:8a:8e:d5:c8:59:71:4d:c9:f2:0d:6d:3"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_Certum_502F183B00B497DFC821D09DEB30526B {
    meta:
       description         = "Detects Unknown with compromised cert (Certum)"
@@ -76437,6 +76577,41 @@ rule MAL_Compromised_Cert_Unknown_DigiCert_0E5909036A53A3F72552067E888B8239 {
       for any sig in pe.signatures : (
          sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
          sig.serial == "0e:59:09:03:6a:53:a3:f7:25:52:06:7e:88:8b:82:39"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_DigiCert_1BDC9C2C1A1922C5A71C2575CF61317 {
+   meta:
+      description         = "Detects Unknown with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-08"
+      version             = "1.0"
+
+      hash                = "ba3d3301734d31d36ff25bbe2ada1180fc4357c03b9cba21d3e18445b76b6f7e"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Monarch Innovation Private Limited"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "1b:dc:9c:2c:1a:19:22:c5:a7:1c:25:75:cf:61:31:7"
+      cert_thumbprint     = "3ba886534b93aeba82132e4056f96a2310a663c7"
+      cert_valid_from     = "2026-07-08"
+      cert_valid_to       = "2027-07-07"
+
+      country             = "IN"
+      state               = "Gujarat"
+      locality            = "Ahmedabad"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "1b:dc:9c:2c:1a:19:22:c5:a7:1c:25:75:cf:61:31:7"
       )
 }
 

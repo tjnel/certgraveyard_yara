@@ -4,6 +4,23 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.08.07] - 2026-08-07
+
+### Added
+- MAL_Compromised_Cert_ResidentialProxyInstaller_GlobalSign_3A9188AA510C0F8343426BF (ResidentialProxyInstaller - GlobalSign)
+- MAL_Compromised_Cert_Pulse_Browser_Sectigo_B7F4B4B2DE3E01482E7244E5D80542DA (Pulse Browser - Sectigo)
+- MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_222A7EF10B49297BA094CC38E127FC25 (Golden Gh0st Loader - Certum)
+- MAL_Compromised_Cert_Unknown_DigiCert_1BDC9C2C1A1922C5A71C2575CF61317 (Unknown - DigiCert)
+- MAL_Compromised_Cert_Unknown_Certum_4FF695828A8ED5C859714DC9F20D6D3 (Unknown - Certum)
+
+### Modified
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001D9296D14E1F12F56473900000001D929 (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_Fake_anti_cheat_GlobalSign_2D676645247129B89455A7C2 (Updated metadata for Fake anti-cheat)
+
+### Removed
+- MAL_Compromised_Cert_ResidentialProxyInstaller_GlobalSign_03A9188AA510C0F8343426BF (Removed ResidentialProxyInstaller rule)
+- MAL_Compromised_Cert_Pulse_Browser_Sectigo_00B7F4B4B2DE3E01482E7244E5D80542DA (Removed Pulse Browser rule)
+
 ## [2026.08.06] - 2026-08-06
 
 ### Added
