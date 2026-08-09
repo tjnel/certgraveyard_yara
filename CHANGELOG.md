@@ -4,6 +4,19 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.08.09] - 2026-08-09
+
+### Added
+- MAL_Compromised_Cert_Trojan_Win32_DefenderPlug_Keylogger_SSL_com_3D7B3B375FE1434665CBF43EF2119168 (Trojan:Win32/DefenderPlug.Keylogger - SSL.com)
+- MAL_Compromised_Cert_Traffer_Sectigo_E0303C66BF1DA01986FB6B0BF85ED7D1 (Traffer - Sectigo)
+
+### Modified
+- MAL_Compromised_Cert_ValleyRAT_Certum_16E2CE36A3379CBF4103780925D01952 (Updated metadata for ValleyRAT)
+- MAL_Compromised_Cert_ValleyRAT_Certum_1D0AB4F108CE8496648853FA1A7BA839 (Updated metadata for ValleyRAT)
+
+### Removed
+- MAL_Compromised_Cert_Traffer_Sectigo_00E0303C66BF1DA01986FB6B0BF85ED7D1 (Removed Traffer rule)
+
 ## [2026.08.07] - 2026-08-07
 
 ### Added

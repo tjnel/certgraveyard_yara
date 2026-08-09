@@ -17,13 +17,13 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_16E2CE36A3379CBF4103780925D01952 {
       cert_issuer_short   = "Certum"
       cert_issuer         = "Certum Code Signing 2021 CA"
       cert_serial         = "16:e2:ce:36:a3:37:9c:bf:41:03:78:09:25:d0:19:52"
-      cert_thumbprint     = "CDE01B581313FA22901FB3672F4DA9D5D956C9C7"
+      cert_thumbprint     = "cde01b581313fa22901fb3672f4da9d5d956c9c7"
       cert_valid_from     = "2026-02-18"
       cert_valid_to       = "2027-02-18"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
+      country             = "CN"
+      state               = "湖北省"
+      locality            = "武汉市"
       email               = "---"
       rdn_serial_number   = ""
 

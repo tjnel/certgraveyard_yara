@@ -71190,6 +71190,41 @@ rule MAL_Compromised_Cert_Traffer_Sectigo_60C9A3E24ACBE0213443A16196701206 {
       )
 }
 
+rule MAL_Compromised_Cert_Traffer_Sectigo_E0303C66BF1DA01986FB6B0BF85ED7D1 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-06"
+      version             = "1.0"
+
+      hash                = "fcf48487c4ef55ee78f9dafb61231b0573c5bc17cec5aa52b980d8b7f72be9a2"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Slack workspace"
+
+      signer              = "Xiamen Jueyi Dazhan Network Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "e0:30:3c:66:bf:1d:a0:19:86:fb:6b:0b:f8:5e:d7:d1"
+      cert_thumbprint     = "77496d47e230e82df9dac60229eb137205f8bfb3"
+      cert_valid_from     = "2026-02-06"
+      cert_valid_to       = "2027-02-06"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "e0:30:3c:66:bf:1d:a0:19:86:fb:6b:0b:f8:5e:d7:d1"
+      )
+}
+
 rule MAL_Compromised_Cert_Traffer_Verokey_01BEAED9A69D5F7E38D72C9747A1E315 {
    meta:
       description         = "Detects Traffer with compromised cert (Verokey)"
@@ -71992,6 +72027,41 @@ rule MAL_Compromised_Cert_Trojan_EmEditor_download_link_supply_chain_Microsoft_3
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
          sig.serial == "33:00:06:1f:ca:4d:5f:66:7d:cb:02:b9:e7:00:00:00:06:1f:ca"
+      )
+}
+
+rule MAL_Compromised_Cert_Trojan_Win32_DefenderPlug_Keylogger_SSL_com_3D7B3B375FE1434665CBF43EF2119168 {
+   meta:
+      description         = "Detects Trojan:Win32/DefenderPlug.Keylogger with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-08"
+      version             = "1.0"
+
+      hash                = "5f80100560c0422cfd71a5138d65f1124287d2bf9f941c33add56ee9626b071b"
+      malware             = "Trojan:Win32/DefenderPlug.Keylogger"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Osh Spetsstroy LLC"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "3d:7b:3b:37:5f:e1:43:46:65:cb:f4:3e:f2:11:91:68"
+      cert_thumbprint     = "22C8E30DE6CC2F32514967C2D12E18ADBD8315DA"
+      cert_valid_from     = "2026-07-08"
+      cert_valid_to       = "2027-07-08"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "3d:7b:3b:37:5f:e1:43:46:65:cb:f4:3e:f2:11:91:68"
       )
 }
 
@@ -85697,13 +85767,13 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_16E2CE36A3379CBF4103780925D01952 {
       cert_issuer_short   = "Certum"
       cert_issuer         = "Certum Code Signing 2021 CA"
       cert_serial         = "16:e2:ce:36:a3:37:9c:bf:41:03:78:09:25:d0:19:52"
-      cert_thumbprint     = "CDE01B581313FA22901FB3672F4DA9D5D956C9C7"
+      cert_thumbprint     = "cde01b581313fa22901fb3672f4da9d5d956c9c7"
       cert_valid_from     = "2026-02-18"
       cert_valid_to       = "2027-02-18"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
+      country             = "CN"
+      state               = "湖北省"
+      locality            = "武汉市"
       email               = "---"
       rdn_serial_number   = ""
 
@@ -85767,13 +85837,13 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_1D0AB4F108CE8496648853FA1A7BA839 {
       cert_issuer_short   = "Certum"
       cert_issuer         = "Certum Code Signing 2021 CA"
       cert_serial         = "1d:0a:b4:f1:08:ce:84:96:64:88:53:fa:1a:7b:a8:39"
-      cert_thumbprint     = "E0850B39B69DDAA0CC604E54BAABD03D6FF16A09"
+      cert_thumbprint     = "e0850b39b69ddaa0cc604e54baabd03d6ff16a09"
       cert_valid_from     = "2026-03-06"
       cert_valid_to       = "2027-03-06"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
+      country             = "CN"
+      state               = "Hubei"
+      locality            = "Wuhan"
       email               = "---"
       rdn_serial_number   = ""
 
