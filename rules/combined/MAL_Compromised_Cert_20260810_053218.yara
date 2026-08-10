@@ -59745,6 +59745,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_0F8DC8622C70E54B356DACB17F
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_1110B32029ED01AEC9767F2FA49A2132 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-08"
+      version             = "1.0"
+
+      hash                = "af3c15aaf209ad95c33f36170cd7685f306010e0e425966fb7cbab64a5e6d536"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Christian Torres"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "11:10:b3:20:29:ed:01:ae:c9:76:7f:2f:a4:9a:21:32"
+      cert_thumbprint     = "ed0b41ec7b7f9e271ebebd9e75985326ebd98711"
+      cert_valid_from     = "2026-07-08"
+      cert_valid_to       = "2027-07-08"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "Universal City"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "11:10:b3:20:29:ed:01:ae:c9:76:7f:2f:a4:9a:21:32"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_1452A7543159FF8B16C659C26435CD11 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (SSL.com)"
@@ -60022,6 +60057,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_779D697C260E9987B6A6C4121D
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "77:9d:69:7c:26:0e:99:87:b6:a6:c4:12:1d:ac:80:8a"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_95C9553E4983E0227A267E14A4C1011 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-29"
+      version             = "1.0"
+
+      hash                = "04b5b38b7720cc502d4ea901830f8f50516c16ead65ab50b173af083e41c180d"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Christian Torres"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "95:c9:55:3e:49:83:e0:22:7a:26:7e:14:a4:c1:01:1"
+      cert_thumbprint     = "6f0a39bb615326099c01118093a17f2e09388506"
+      cert_valid_from     = "2026-06-29"
+      cert_valid_to       = "2027-06-29"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "Universal City"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "95:c9:55:3e:49:83:e0:22:7a:26:7e:14:a4:c1:01:1"
       )
 }
 
@@ -72047,14 +72117,14 @@ rule MAL_Compromised_Cert_Trojan_Win32_DefenderPlug_Keylogger_SSL_com_3D7B3B375F
       cert_issuer_short   = "SSL.com"
       cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
       cert_serial         = "3d:7b:3b:37:5f:e1:43:46:65:cb:f4:3e:f2:11:91:68"
-      cert_thumbprint     = "22C8E30DE6CC2F32514967C2D12E18ADBD8315DA"
+      cert_thumbprint     = "22c8e30de6cc2f32514967c2d12e18adbd8315da"
       cert_valid_from     = "2026-07-08"
       cert_valid_to       = "2027-07-08"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "KG"
+      state               = "Osh Region"
+      locality            = "Jylkeldi"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:

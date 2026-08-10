@@ -17,14 +17,14 @@ rule MAL_Compromised_Cert_Trojan_Win32_DefenderPlug_Keylogger_SSL_com_3D7B3B375F
       cert_issuer_short   = "SSL.com"
       cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
       cert_serial         = "3d:7b:3b:37:5f:e1:43:46:65:cb:f4:3e:f2:11:91:68"
-      cert_thumbprint     = "22C8E30DE6CC2F32514967C2D12E18ADBD8315DA"
+      cert_thumbprint     = "22c8e30de6cc2f32514967c2d12e18adbd8315da"
       cert_valid_from     = "2026-07-08"
       cert_valid_to       = "2027-07-08"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "KG"
+      state               = "Osh Region"
+      locality            = "Jylkeldi"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:

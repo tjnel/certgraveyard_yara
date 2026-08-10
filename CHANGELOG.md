@@ -4,6 +4,15 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.08.10] - 2026-08-10
+
+### Added
+- MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_1110B32029ED01AEC9767F2FA49A2132 (ScreenConnectLoader - SSL.com)
+- MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_95C9553E4983E0227A267E14A4C1011 (ScreenConnectLoader - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_Trojan_Win32_DefenderPlug_Keylogger_SSL_com_3D7B3B375FE1434665CBF43EF2119168 (Updated metadata for Trojan:Win32/DefenderPlug.Keylogger)
+
 ## [2026.08.09] - 2026-08-09
 
 ### Added
