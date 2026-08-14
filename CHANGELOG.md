@@ -4,6 +4,24 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.08.14] - 2026-08-14
+
+### Added
+- MAL_Compromised_Cert_PythonRAT_Sectigo_1CEF4325C48F68B9632A621F01EA8E0A (PythonRAT - Sectigo)
+- MAL_Compromised_Cert_Traffer_Sectigo_C9F72B34ACD7B6FAA6A1F6BA17013CFC (Traffer - Sectigo)
+
+### Modified
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000D2D7D71FE608C242E81500000000D2D7 (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300001D53DB71F6B6F02C3FCA000000001D53 (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300013FFDBFF5E4FDB8FFBC3E000000013FFD (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_2686B9982E46DA7E3E0A1D56 (Updated metadata for Golden Gh0st Loader)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001A5A3233B73269302AECF00000001A5A3 (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001BF9DE4F0EA4ABA4E192200000001BF9D (Updated metadata for ScreenConnectLoader)
+
+### Removed
+- MAL_Compromised_Cert_Traffer_Sectigo_00C9F72B34ACD7B6FAA6A1F6BA17013CFC (Removed Traffer rule)
+- MAL_Compromised_Cert_SecTopRAT_ArechClient2_Certum_529DA3EA8D3FDD03C4BA1ACF5729E0CE (Removed SecTopRAT,ArechClient2 rule)
+
 ## [2026.08.10] - 2026-08-10
 
 ### Added

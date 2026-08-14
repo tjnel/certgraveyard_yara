@@ -17,13 +17,13 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001A5A3233B73269302AE
       cert_issuer_short   = "Microsoft"
       cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
       cert_serial         = "33:00:01:a5:a3:23:3b:73:26:93:02:ae:cf:00:00:00:01:a5:a3"
-      cert_thumbprint     = "D9FAC2F21B57244DBE8AA434F9A8A2D63C8D96D9"
+      cert_thumbprint     = "d9fac2f21b57244dbe8aa434f9a8a2d63c8d96d9"
       cert_valid_from     = "2026-06-03"
       cert_valid_to       = "2026-06-06"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
+      country             = "US"
+      state               = "fl"
+      locality            = "Saint James City"
       email               = "---"
       rdn_serial_number   = ""
 

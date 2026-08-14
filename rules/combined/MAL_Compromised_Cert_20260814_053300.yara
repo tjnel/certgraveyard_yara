@@ -26687,13 +26687,13 @@ rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_2686B9982E46DA7E3E0A1D5
       cert_issuer_short   = "GlobalSign"
       cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
       cert_serial         = "26:86:b9:98:2e:46:da:7e:3e:0a:1d:56"
-      cert_thumbprint     = "69E050F63735CA4A1BCF5A21D3D64BDAB9C0BF42"
+      cert_thumbprint     = "69e050f63735ca4a1bcf5a21d3d64bdab9c0bf42"
       cert_valid_from     = "2024-05-16"
       cert_valid_to       = "2025-05-16"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
+      country             = "CN"
+      state               = "Hebei"
+      locality            = "Cangzhou"
       email               = "---"
       rdn_serial_number   = ""
 
@@ -46095,6 +46095,41 @@ rule MAL_Compromised_Cert_PureLogstealer_Xworm_SSL_com_18C1F0E7CAC9039CAFF80EADD
       )
 }
 
+rule MAL_Compromised_Cert_PythonRAT_Sectigo_1CEF4325C48F68B9632A621F01EA8E0A {
+   meta:
+      description         = "Detects PythonRAT with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-19"
+      version             = "1.0"
+
+      hash                = "524266500e8341c5c20a548d1f96c55b3696422e761a9c22044f60254d777a8b"
+      malware             = "PythonRAT"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Advanced IP Scanner from malvertising, executes malicious Python code from third hosts"
+
+      signer              = "Lway Firmware"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "1c:ef:43:25:c4:8f:68:b9:63:2a:62:1f:01:ea:8e:0a"
+      cert_thumbprint     = "300cf9210060a44a3e2d76fcf1040452ea4cb1b0"
+      cert_valid_from     = "2026-03-19"
+      cert_valid_to       = "2027-06-17"
+
+      country             = "FI"
+      state               = "Uusimaa"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "1c:ef:43:25:c4:8f:68:b9:63:2a:62:1f:01:ea:8e:0a"
+      )
+}
+
 rule MAL_Compromised_Cert_QuakBot_Sectigo_45245EEF53FCF38169C715CF68F44452 {
    meta:
       description         = "Detects QuakBot with compromised cert (Sectigo)"
@@ -56227,13 +56262,13 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300001D53DB71F6B6F02C3F
       cert_issuer_short   = "Microsoft"
       cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
       cert_serial         = "33:00:00:1d:53:db:71:f6:b6:f0:2c:3f:ca:00:00:00:00:1d:53"
-      cert_thumbprint     = "4F20647E9DE362951C9370E57354E62F71E03138"
+      cert_thumbprint     = "4f20647e9de362951c9370e57354e62f71e03138"
       cert_valid_from     = "2026-04-15"
       cert_valid_to       = "2026-04-18"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
       email               = "---"
       rdn_serial_number   = ""
 
@@ -57207,13 +57242,13 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330000D2D7D71FE608C242E8
       cert_issuer_short   = "Microsoft"
       cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
       cert_serial         = "33:00:00:d2:d7:d7:1f:e6:08:c2:42:e8:15:00:00:00:00:d2:d7"
-      cert_thumbprint     = "FE8DB03F4F35D807EBCC03250B8B9C56A23E53E2"
+      cert_thumbprint     = "fe8db03f4f35d807ebcc03250b8b9c56a23e53e2"
       cert_valid_from     = "2026-05-08"
       cert_valid_to       = "2026-05-11"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
+      country             = "US"
+      state               = "Texas"
+      locality            = "Converse"
       email               = "---"
       rdn_serial_number   = ""
 
@@ -57802,13 +57837,13 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_3300013FFDBFF5E4FDB8FFBC
       cert_issuer_short   = "Microsoft"
       cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
       cert_serial         = "33:00:01:3f:fd:bf:f5:e4:fd:b8:ff:bc:3e:00:00:00:01:3f:fd"
-      cert_thumbprint     = "2D35C2699DFC1260005234143017C654CEB94D89"
+      cert_thumbprint     = "2d35c2699dfc1260005234143017c654ceb94d89"
       cert_valid_from     = "2026-05-21"
       cert_valid_to       = "2026-05-24"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
+      country             = "US"
+      state               = "Texas"
+      locality            = "San Antonio"
       email               = "---"
       rdn_serial_number   = ""
 
@@ -58152,13 +58187,13 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001A5A3233B73269302AE
       cert_issuer_short   = "Microsoft"
       cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
       cert_serial         = "33:00:01:a5:a3:23:3b:73:26:93:02:ae:cf:00:00:00:01:a5:a3"
-      cert_thumbprint     = "D9FAC2F21B57244DBE8AA434F9A8A2D63C8D96D9"
+      cert_thumbprint     = "d9fac2f21b57244dbe8aa434f9a8a2d63c8d96d9"
       cert_valid_from     = "2026-06-03"
       cert_valid_to       = "2026-06-06"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
+      country             = "US"
+      state               = "fl"
+      locality            = "Saint James City"
       email               = "---"
       rdn_serial_number   = ""
 
@@ -58362,13 +58397,13 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330001BF9DE4F0EA4ABA4E19
       cert_issuer_short   = "Microsoft"
       cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
       cert_serial         = "33:00:01:bf:9d:e4:f0:ea:4a:ba:4e:19:22:00:00:00:01:bf:9d"
-      cert_thumbprint     = "089D44F17F17B3AFF91342CD8D5E880E62590C34"
+      cert_thumbprint     = "089d44f17f17b3aff91342cd8d5e880e62590c34"
       cert_valid_from     = "2026-06-06"
       cert_valid_to       = "2026-06-09"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
+      country             = "US"
+      state               = "fl"
+      locality            = "Saint James City"
       email               = "---"
       rdn_serial_number   = ""
 
@@ -71257,6 +71292,41 @@ rule MAL_Compromised_Cert_Traffer_Sectigo_60C9A3E24ACBE0213443A16196701206 {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "60:c9:a3:e2:4a:cb:e0:21:34:43:a1:61:96:70:12:06"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Sectigo_C9F72B34ACD7B6FAA6A1F6BA17013CFC {
+   meta:
+      description         = "Detects Traffer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-06"
+      version             = "1.0"
+
+      hash                = "714ffc4698d8933240c43a1cf995038f32a29d6cd55b76a4c34710c264248bc0"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Xiamen Yichen Information Technology Co., Ltd"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "c9:f7:2b:34:ac:d7:b6:fa:a6:a1:f6:ba:17:01:3c:fc"
+      cert_thumbprint     = "6f494d5408344f028ba211cd20fdfe35a2677d6e"
+      cert_valid_from     = "2026-02-06"
+      cert_valid_to       = "2027-02-06"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "c9:f7:2b:34:ac:d7:b6:fa:a6:a1:f6:ba:17:01:3c:fc"
       )
 }
 
