@@ -8540,6 +8540,41 @@ rule MAL_Compromised_Cert_Certificate_warming_SSL_com_186B7247D7FA9CA90D69DF0918
       )
 }
 
+rule MAL_Compromised_Cert_Certificate_warming_SSL_com_4CE56A1FAD8F3678CF465B32174E5A9F {
+   meta:
+      description         = "Detects Certificate warming with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-29"
+      version             = "1.0"
+
+      hash                = "cc4190819ca8193faab7b0852e7e65a065f4968448d88b706aa297fb1d1505c1"
+      malware             = "Certificate warming"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "OsOO \"BAGYT MEYKIN\""
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "4c:e5:6a:1f:ad:8f:36:78:cf:46:5b:32:17:4e:5a:9f"
+      cert_thumbprint     = "b186a7dd63355ffa3635b80658ab7ddf85346ede"
+      cert_valid_from     = "2026-06-29"
+      cert_valid_to       = "2027-06-29"
+
+      country             = "KG"
+      state               = "Osh Region"
+      locality            = "Kara Suu"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "4c:e5:6a:1f:ad:8f:36:78:cf:46:5b:32:17:4e:5a:9f"
+      )
+}
+
 rule MAL_Compromised_Cert_Certificate_warming_SSL_com_74FC5C06D52C787D6CECFF46BB4EF584 {
    meta:
       description         = "Detects Certificate warming with compromised cert (SSL.com)"
@@ -12460,6 +12495,41 @@ rule MAL_Compromised_Cert_CrocoRAT_Certum_38415A82BCDED4B2A8A4D8394F7EBB55 {
       )
 }
 
+rule MAL_Compromised_Cert_CrocoRAT_Certum_51026BEBC877E3FD0A00F6670C780B5A {
+   meta:
+      description         = "Detects CrocoRAT with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-30"
+      version             = "1.0"
+
+      hash                = "7b2d729e6912e4374298cdf92ac5ae5e1160f12ad80e852dabd4f9db75cfbda5"
+      malware             = "CrocoRAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "RUBIN - CZ s.r.o."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "51:02:6b:eb:c8:77:e3:fd:0a:00:f6:67:0c:78:0b:5a"
+      cert_thumbprint     = "9356cced940d3d9e26b99084c7994c23b62b5cb3"
+      cert_valid_from     = "2026-07-30"
+      cert_valid_to       = "2027-07-30"
+
+      country             = "CZ"
+      state               = "Středočeský kraj"
+      locality            = "Běleč"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "51:02:6b:eb:c8:77:e3:fd:0a:00:f6:67:0c:78:0b:5a"
+      )
+}
+
 rule MAL_Compromised_Cert_CrocoRAT_SSL_com_2BFF385A538994844803B05524BFFBB0 {
    meta:
       description         = "Detects CrocoRAT with compromised cert (SSL.com)"
@@ -15505,6 +15575,41 @@ rule MAL_Compromised_Cert_FakeAIApp_Sectigo_59794F360FE3921612C9697D5E7D0756 {
       )
 }
 
+rule MAL_Compromised_Cert_FakeAITrading_Certum_1B289187F974E8F854F1CE87C1200AF3 {
+   meta:
+      description         = "Detects FakeAITrading with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-19"
+      version             = "1.0"
+
+      hash                = "97019c044e5448c083ea0b4c77797d228d1e982f29d604a6d261a2c0d86e41df"
+      malware             = "FakeAITrading"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Ziyan Zeng"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "1b:28:91:87:f9:74:e8:f8:54:f1:ce:87:c1:20:0a:f3"
+      cert_thumbprint     = "832b6d8ed7d4dc3042bcc8ca91f73bf4a2843f57"
+      cert_valid_from     = "2026-01-19"
+      cert_valid_to       = "2027-01-19"
+
+      country             = "CN"
+      state               = "Jiangxi"
+      locality            = "Zhangshu"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "1b:28:91:87:f9:74:e8:f8:54:f1:ce:87:c1:20:0a:f3"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeAITrading_Sectigo_009E4FD3EDA695BDECB946493D67665410 {
    meta:
       description         = "Detects FakeAITrading with compromised cert (Sectigo)"
@@ -15572,6 +15677,76 @@ rule MAL_Compromised_Cert_FakeAITrading_Sectigo_00E5223053369C9DECFB9E00520D2C0E
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "00:e5:22:30:53:36:9c:9d:ec:fb:9e:00:52:0d:2c:0e:11"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeAITrading_Sectigo_2900D40F4C110EDE6C988E42BCE6D313 {
+   meta:
+      description         = "Detects FakeAITrading with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-21"
+      version             = "1.0"
+
+      hash                = "6fdd71d628a82252c86b0efa1f73f8ee14801630b91da47ba42957e4db92d002"
+      malware             = "FakeAITrading"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Handan Beihan Internet Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "29:00:d4:0f:4c:11:0e:de:6c:98:8e:42:bc:e6:d3:13"
+      cert_thumbprint     = "5f5e0f510b9eeaabd5e54d8943e412e8537348b3"
+      cert_valid_from     = "2026-01-21"
+      cert_valid_to       = "2027-01-21"
+
+      country             = "CN"
+      state               = "河北省"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "29:00:d4:0f:4c:11:0e:de:6c:98:8e:42:bc:e6:d3:13"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeAITrading_Verokey_E05254FCB9EA1E9770852E540ED6AE8 {
+   meta:
+      description         = "Detects FakeAITrading with compromised cert (Verokey)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-13"
+      version             = "1.0"
+
+      hash                = "a34d7aaf4a68f906dfaf1e5ce29c92c512e44aff94ca1e19f5542ac7fb3f357d"
+      malware             = "FakeAITrading"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "温江区明宇网络技术服务工作室"
+      cert_issuer_short   = "Verokey"
+      cert_issuer         = "Verokey Secure Code"
+      cert_serial         = "e0:52:54:fc:b9:ea:1e:97:70:85:2e:54:0e:d6:ae:8"
+      cert_thumbprint     = "92f6f5fe1c5bc84cc704f79179a09e6083385d4d"
+      cert_valid_from     = "2025-10-13"
+      cert_valid_to       = "2029-01-08"
+
+      country             = "CN"
+      state               = "四川省"
+      locality            = "成都市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Verokey Secure Code" and
+         sig.serial == "e0:52:54:fc:b9:ea:1e:97:70:85:2e:54:0e:d6:ae:8"
       )
 }
 
@@ -75985,6 +76160,41 @@ rule MAL_Compromised_Cert_Unknown_Certum_502F183B00B497DFC821D09DEB30526B {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Certum_51026BEBC877E3FD0A00F6670C780B5A {
+   meta:
+      description         = "Detects Unknown with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-30"
+      version             = "1.0"
+
+      hash                = "cba149a008d192efcbbaee98fe28255577f420ea29465f990cd38065b5766765"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "RUBIN - CZ s.r.o."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "51:02:6b:eb:c8:77:e3:fd:0a:00:f6:67:0c:78:0b:5a"
+      cert_thumbprint     = "9356cced940d3d9e26b99084c7994c23b62b5cb3"
+      cert_valid_from     = "2026-07-30"
+      cert_valid_to       = "2027-07-30"
+
+      country             = "CZ"
+      state               = "Středočeský kraj"
+      locality            = "Běleč"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "51:02:6b:eb:c8:77:e3:fd:0a:00:f6:67:0c:78:0b:5a"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_Certum_545B84509ABF85E386011CEE69F61882 {
    meta:
       description         = "Detects Unknown with compromised cert (Certum)"
@@ -79937,6 +80147,41 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_727A09742933A54934F8E1DC {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "72:7a:09:74:29:33:a5:49:34:f8:e1:dc"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_GlobalSign_73B4DCCF89567927F848C19B {
+   meta:
+      description         = "Detects Unknown with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-10"
+      version             = "1.0"
+
+      hash                = "1534e8091708e13a24698de848faccac0ccbf82cc625f990bed0c7ec5388c345"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Komers Trading Company LLC"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "73:b4:dc:cf:89:56:79:27:f8:48:c1:9b"
+      cert_thumbprint     = "17580c5867a917d7c107dce479df1b806e609f6b"
+      cert_valid_from     = "2026-04-10"
+      cert_valid_to       = "2027-04-11"
+
+      country             = "PL"
+      state               = "Pomerania"
+      locality            = "Dobrzewino"
+      email               = "komers@komers.eu"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "73:b4:dc:cf:89:56:79:27:f8:48:c1:9b"
       )
 }
 
@@ -86937,6 +87182,41 @@ rule MAL_Compromised_Cert_ValleyRAT_Verokey_0CBA02A32BEAB6BFAC34A7511A8B0E22 {
       for any sig in pe.signatures : (
          sig.issuer contains "Verokey High Assurance Secure Code EV" and
          sig.serial == "0c:ba:02:a3:2b:ea:b6:bf:ac:34:a7:51:1a:8b:0e:22"
+      )
+}
+
+rule MAL_Compromised_Cert_ValleyRAT_Verokey_BCDF5E0DA32D68900B8B7638459D072 {
+   meta:
+      description         = "Detects ValleyRAT with compromised cert (Verokey)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-13"
+      version             = "1.0"
+
+      hash                = "7270d05e8d42a82634ee2ac52b7256557612b22e7e60fc56a05cb5961a9c2f02"
+      malware             = "ValleyRAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "温江区明宇网络技术服务工作室"
+      cert_issuer_short   = "Verokey"
+      cert_issuer         = "Verokey Secure Code"
+      cert_serial         = "bc:df:5e:0d:a3:2d:68:90:0b:8b:76:38:45:9d:07:2"
+      cert_thumbprint     = "18ddaa9c417e4536728d648b9df47a05426d94fc"
+      cert_valid_from     = "2025-10-13"
+      cert_valid_to       = "2029-01-08"
+
+      country             = "CN"
+      state               = "四川省"
+      locality            = "成都市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Verokey Secure Code" and
+         sig.serial == "bc:df:5e:0d:a3:2d:68:90:0b:8b:76:38:45:9d:07:2"
       )
 }
 

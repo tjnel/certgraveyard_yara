@@ -4,6 +4,20 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.08.17] - 2026-08-17
+
+### Added
+- MAL_Compromised_Cert_Unknown_Certum_51026BEBC877E3FD0A00F6670C780B5A (Unknown - Certum)
+- MAL_Compromised_Cert_Certificate_warming_SSL_com_4CE56A1FAD8F3678CF465B32174E5A9F (Certificate warming - SSL.com)
+- MAL_Compromised_Cert_CrocoRAT_Certum_51026BEBC877E3FD0A00F6670C780B5A (CrocoRAT - Certum)
+- MAL_Compromised_Cert_FakeAITrading_Certum_1B289187F974E8F854F1CE87C1200AF3 (FakeAITrading - Certum)
+- MAL_Compromised_Cert_Unknown_GlobalSign_73B4DCCF89567927F848C19B (Unknown - GlobalSign)
+- MAL_Compromised_Cert_Unknown_Certum_51026BEBC877E3FD0A00F6670C780B5A (Unknown - Certum)
+- MAL_Compromised_Cert_ValleyRAT_Verokey_BCDF5E0DA32D68900B8B7638459D072 (ValleyRAT - Verokey)
+- MAL_Compromised_Cert_FakeAITrading_Sectigo_2900D40F4C110EDE6C988E42BCE6D313 (FakeAITrading - Sectigo)
+- MAL_Compromised_Cert_Certificate_warming_SSL_com_4CE56A1FAD8F3678CF465B32174E5A9F (Certificate warming - SSL.com)
+- MAL_Compromised_Cert_FakeAITrading_Verokey_E05254FCB9EA1E9770852E540ED6AE8 (FakeAITrading - Verokey)
+
 ## [2026.08.14] - 2026-08-14
 
 ### Added
