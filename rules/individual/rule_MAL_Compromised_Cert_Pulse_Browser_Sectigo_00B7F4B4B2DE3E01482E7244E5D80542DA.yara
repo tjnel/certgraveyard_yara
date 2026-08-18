@@ -8,7 +8,7 @@ rule MAL_Compromised_Cert_Pulse_Browser_Sectigo_00B7F4B4B2DE3E01482E7244E5D80542
       date                = "2025-09-24"
       version             = "1.0"
 
-      hash                = "8d62f5858473ad6b917b190260263b7d1991693a83602b4f6b0972dae03df6fd"
+      hash                = "85d11e03ed2c9b76334757ea80f61cd5703560cb4180b9e80e2e5ae3cf7e499e"
       malware             = "Pulse Browser"
       malware_type        = "Unknown"
       malware_notes       = ""
@@ -21,10 +21,10 @@ rule MAL_Compromised_Cert_Pulse_Browser_Sectigo_00B7F4B4B2DE3E01482E7244E5D80542
       cert_valid_from     = "2025-09-24"
       cert_valid_to       = "2026-09-24"
 
-      country             = "---"
-      state               = "---"
-      locality            = "---"
-      email               = "---"
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
       rdn_serial_number   = ""
 
    condition:
