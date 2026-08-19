@@ -4,6 +4,17 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.08.19] - 2026-08-19
+
+### Added
+- MAL_Compromised_Cert_FakeSoftware_GlobalSign_57B0E228226CD236DEE9A3A4 (FakeSoftware - GlobalSign)
+- MAL_Compromised_Cert_Pulse_Browser_Sectigo_B7F4B4B2DE3E01482E7244E5D80542DA (Pulse Browser - Sectigo)
+- MAL_Compromised_Cert_OneStart_DigiCert_333EAFBA707AABFD12644AEDC2E8C4E (OneStart - DigiCert)
+
+### Removed
+- MAL_Compromised_Cert_OneStart_DigiCert_0333EAFBA707AABFD12644AEDC2E8C4E (Removed OneStart rule)
+- MAL_Compromised_Cert_Pulse_Browser_Sectigo_00B7F4B4B2DE3E01482E7244E5D80542DA (Removed Pulse Browser rule)
+
 ## [2026.08.18] - 2026-08-18
 
 ### Added

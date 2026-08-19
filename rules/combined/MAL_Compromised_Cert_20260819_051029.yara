@@ -21630,6 +21630,41 @@ rule MAL_Compromised_Cert_FakeSlack_Certum_55905FC78103517BD3088E330EB8B09C {
       )
 }
 
+rule MAL_Compromised_Cert_FakeSoftware_GlobalSign_57B0E228226CD236DEE9A3A4 {
+   meta:
+      description         = "Detects FakeSoftware with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-30"
+      version             = "1.0"
+
+      hash                = "51bc148112dd41973b750315d51fa8365c3d293a32b945a5f927aba9f03b47b6"
+      malware             = "FakeSoftware"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: gitgubusercontnet[.]com -> RustDesk 138.226.237.167:21114"
+
+      signer              = "CODE LOFTS d.o.o."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "57:b0:e2:28:22:6c:d2:36:de:e9:a3:a4"
+      cert_thumbprint     = "a21220ccdcf4a6c2a38ef235f26b75a7a05f4624"
+      cert_valid_from     = "2026-07-30"
+      cert_valid_to       = "2027-07-31"
+
+      country             = "HR"
+      state               = "Split-Dalmatia"
+      locality            = "Split"
+      email               = "info@codelofts.com"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "57:b0:e2:28:22:6c:d2:36:de:e9:a3:a4"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeStatement_SSL_com_45DF3961393196E00E5F001A73DF9964 {
    meta:
       description         = "Detects FakeStatement with compromised cert (SSL.com)"
@@ -40705,6 +40740,41 @@ rule MAL_Compromised_Cert_OneStart_DigiCert_09561E1A16C2BE16570AC674712B56F1 {
       )
 }
 
+rule MAL_Compromised_Cert_OneStart_DigiCert_333EAFBA707AABFD12644AEDC2E8C4E {
+   meta:
+      description         = "Detects OneStart with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-10"
+      version             = "1.0"
+
+      hash                = "065b386addf06337ad1d40f7b05cbb137c6c4ee7589c1ea22e4e18c0cefe850c"
+      malware             = "OneStart"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "OneStart Technologies LLC"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "33:3e:af:ba:70:7a:ab:fd:12:64:4a:ed:c2:e8:c4:e"
+      cert_thumbprint     = "bcbaa4f693051d69280d19d69de73832b77b1c25"
+      cert_valid_from     = "2025-06-10"
+      cert_valid_to       = "2026-06-09"
+
+      country             = "US"
+      state               = "Delaware"
+      locality            = "Dover"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "33:3e:af:ba:70:7a:ab:fd:12:64:4a:ed:c2:e8:c4:e"
+      )
+}
+
 rule MAL_Compromised_Cert_OneStart_GlobalSign_7209B6BCFD61AFA5A476DBF0 {
    meta:
       description         = "Detects OneStart with compromised cert (GlobalSign)"
@@ -46243,7 +46313,7 @@ rule MAL_Compromised_Cert_Pulse_Browser_Sectigo_B7F4B4B2DE3E01482E7244E5D80542DA
       date                = "2025-09-24"
       version             = "1.0"
 
-      hash                = "8d62f5858473ad6b917b190260263b7d1991693a83602b4f6b0972dae03df6fd"
+      hash                = "85d11e03ed2c9b76334757ea80f61cd5703560cb4180b9e80e2e5ae3cf7e499e"
       malware             = "Pulse Browser"
       malware_type        = "Unknown"
       malware_notes       = ""
