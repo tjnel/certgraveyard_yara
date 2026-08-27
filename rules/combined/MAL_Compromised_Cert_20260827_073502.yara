@@ -21676,7 +21676,7 @@ rule MAL_Compromised_Cert_FakeSoftware_GlobalSign_57B0E228226CD236DEE9A3A4 {
       hash                = "51bc148112dd41973b750315d51fa8365c3d293a32b945a5f927aba9f03b47b6"
       malware             = "FakeSoftware"
       malware_type        = "Unknown"
-      malware_notes       = "C2: gitgubusercontnet[.]com -> RustDesk 138.226.237.167:21114"
+      malware_notes       = "C2:  167.253.157.132"
 
       signer              = "CODE LOFTS d.o.o."
       cert_issuer_short   = "GlobalSign"
@@ -76755,6 +76755,41 @@ rule MAL_Compromised_Cert_Traffer_Sectigo_00E0303C66BF1DA01986FB6B0BF85ED7D1 {
       )
 }
 
+rule MAL_Compromised_Cert_Traffer_Sectigo_2480ADFCAEF3FFECD368D261F0F83FA {
+   meta:
+      description         = "Detects Traffer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-24"
+      version             = "1.0"
+
+      hash                = "6107d0c501722579516c9046671e46b8d708af87b9b95eda5c76d16d44baf0ae"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Streamyard"
+
+      signer              = "Xiamen Weixiang Animation Design Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "24:80:ad:fc:ae:f3:ff:ec:d3:68:d2:61:f0:f8:3f:a"
+      cert_thumbprint     = "3ed3a17061faabe8ce35767cf9990eb5df6d2bdb"
+      cert_valid_from     = "2026-03-24"
+      cert_valid_to       = "2027-03-24"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "24:80:ad:fc:ae:f3:ff:ec:d3:68:d2:61:f0:f8:3f:a"
+      )
+}
+
 rule MAL_Compromised_Cert_Traffer_Sectigo_29612758EEBEF8B08BE2BF7D866555B2 {
    meta:
       description         = "Detects Traffer with compromised cert (Sectigo)"
@@ -91207,6 +91242,41 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_7D36CBB64BC9ADD17BA71737D3ECCECA {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo RSA Code Signing CA" and
          sig.serial == "7d:36:cb:b6:4b:c9:ad:d1:7b:a7:17:37:d3:ec:ce:ca"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Sectigo_CC4C1F1DB6D23A9248EB60A5E7F237DD {
+   meta:
+      description         = "Detects Unknown with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-27"
+      version             = "1.0"
+
+      hash                = "3c90a389afe27e34d76ead6419314337e27c18c0de17745c2c7dba2b939f92da"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Shenzhen Xinfeng E-commerce Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "cc:4c:1f:1d:b6:d2:3a:92:48:eb:60:a5:e7:f2:37:dd"
+      cert_thumbprint     = "44073ed8f28f78191ff1a5a2a6ef7f1a228f7ecd"
+      cert_valid_from     = "2026-01-27"
+      cert_valid_to       = "2027-01-27"
+
+      country             = "CN"
+      state               = "Guangdong Sheng"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "cc:4c:1f:1d:b6:d2:3a:92:48:eb:60:a5:e7:f2:37:dd"
       )
 }
 

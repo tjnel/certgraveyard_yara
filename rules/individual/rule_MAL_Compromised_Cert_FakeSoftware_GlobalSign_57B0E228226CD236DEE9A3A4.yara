@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_FakeSoftware_GlobalSign_57B0E228226CD236DEE9A3A4 {
       hash                = "51bc148112dd41973b750315d51fa8365c3d293a32b945a5f927aba9f03b47b6"
       malware             = "FakeSoftware"
       malware_type        = "Unknown"
-      malware_notes       = "C2: gitgubusercontnet[.]com -> RustDesk 138.226.237.167:21114"
+      malware_notes       = "C2:  167.253.157.132"
 
       signer              = "CODE LOFTS d.o.o."
       cert_issuer_short   = "GlobalSign"
