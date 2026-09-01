@@ -21525,6 +21525,41 @@ rule MAL_Compromised_Cert_FakeRMM_SSL_com_09867A82C28DB37CDBEC2A426D6B528E {
       )
 }
 
+rule MAL_Compromised_Cert_FakeRVTools_Certum_5768DFBE1503EE4F524283EAB21065B8 {
+   meta:
+      description         = "Detects FakeRVTools with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-14"
+      version             = "1.0"
+
+      hash                = "83e297cd50a7076d445707cb91812d432a039a2721aae31088dd3913bcdbd781"
+      malware             = "FakeRVTools"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "SAN SOFTWARE, TOO"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "57:68:df:be:15:03:ee:4f:52:42:83:ea:b2:10:65:b8"
+      cert_thumbprint     = "ce437f63c51a434b604c63d412f0b046ba3b3f35"
+      cert_valid_from     = "2026-04-14"
+      cert_valid_to       = "2027-04-14"
+
+      country             = "KZ"
+      state               = "Aktobe Region"
+      locality            = "Aktobe"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "57:68:df:be:15:03:ee:4f:52:42:83:ea:b2:10:65:b8"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeRVTools_Sectigo_00A80D45D8AC1F17837FA46C66DDE70057 {
    meta:
       description         = "Detects FakeRVTools with compromised cert (Sectigo)"
@@ -21697,6 +21732,41 @@ rule MAL_Compromised_Cert_FakeSoftware_GlobalSign_57B0E228226CD236DEE9A3A4 {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "57:b0:e2:28:22:6c:d2:36:de:e9:a3:a4"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeSoftware_Sectigo_A571641AA9CF5DED05D1E4AD27DB6F0 {
+   meta:
+      description         = "Detects FakeSoftware with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-19"
+      version             = "1.0"
+
+      hash                = "ab14e1cd7f89587dafffb74fdb5005a89a7d02c52905aa4c110b2190d35bb3ce"
+      malware             = "FakeSoftware"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Rust RMM, C2 stored in blockchain, executes JS received remotely"
+
+      signer              = "Lway Firmware"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "a5:71:64:1a:a9:cf:5d:ed:05:d1:e4:ad:27:db:6f:0"
+      cert_thumbprint     = "94534dfa980037b87d48fea0a41bd38133693fcc"
+      cert_valid_from     = "2026-03-19"
+      cert_valid_to       = "2027-06-17"
+
+      country             = "FI"
+      state               = "Uusimaa"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "a5:71:64:1a:a9:cf:5d:ed:05:d1:e4:ad:27:db:6f:0"
       )
 }
 

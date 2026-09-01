@@ -4,6 +4,12 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.09.01] - 2026-09-01
+
+### Added
+- MAL_Compromised_Cert_FakeSoftware_Sectigo_A571641AA9CF5DED05D1E4AD27DB6F0 (FakeSoftware - Sectigo)
+- MAL_Compromised_Cert_FakeRVTools_Certum_5768DFBE1503EE4F524283EAB21065B8 (FakeRVTools - Certum)
+
 ## [2026.08.28] - 2026-08-28
 
 ### Added
