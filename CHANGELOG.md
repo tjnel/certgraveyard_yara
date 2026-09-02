@@ -4,6 +4,21 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.09.02] - 2026-09-02
+
+### Added
+- MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_5A3800D6D04832BF3F856392 (Golden Gh0st Loader - GlobalSign)
+- MAL_Compromised_Cert_Gh0stRAT_GlobalSign_5800BB414C3F683B564E3FCA (Gh0stRAT - GlobalSign)
+- MAL_Compromised_Cert_FakeWechat_Certum_38BBD0C34F52599BBE3B99551E867459 (FakeWechat - Certum)
+- MAL_Compromised_Cert_Traffer_SSL_com_170DEE78275C48655F88921E51C692BD (Traffer - SSL.com)
+- MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_D22FE89B211BDB42E270569FD24DA30A (Golden Gh0st Loader - Sectigo)
+- MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_1243A41EDEA4961447B63A9181C6FDAA (Golden Gh0st Loader - Certum)
+- MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_1B1F4B77CD1513FAFBF557FD5FF4897C (Golden Gh0st Loader - Certum)
+- MAL_Compromised_Cert_Gh0stRAT_GlobalSign_20562D7111A4E76BF78CD0C3 (Gh0stRAT - GlobalSign)
+
+### Modified
+- MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_2BC27BDCF2944112BBEFFC1EF59F3A7F (Updated metadata for Golden Gh0st Loader)
+
 ## [2026.09.01] - 2026-09-01
 
 ### Added

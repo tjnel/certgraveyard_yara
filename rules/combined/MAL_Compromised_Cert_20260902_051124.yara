@@ -22925,6 +22925,41 @@ rule MAL_Compromised_Cert_FakeWallet_Sectigo_8D1AA13900E5593AD72CA20D844B5301 {
       )
 }
 
+rule MAL_Compromised_Cert_FakeWechat_Certum_38BBD0C34F52599BBE3B99551E867459 {
+   meta:
+      description         = "Detects FakeWechat with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-19"
+      version             = "1.0"
+
+      hash                = "1da8f4e1ce5896277bfee5b9f6628f29a7534ae830108387b6aabeb4204c7039"
+      malware             = "FakeWechat"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Jiangxi Jinpin Environmental Protection Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "38:bb:d0:c3:4f:52:59:9b:be:3b:99:55:1e:86:74:59"
+      cert_thumbprint     = "5d33dc09d27a2e5912868f7413e083c91b84b5b0"
+      cert_valid_from     = "2026-08-19"
+      cert_valid_to       = "2027-08-19"
+
+      country             = "CN"
+      state               = "Jiangxi"
+      locality            = "Ganzhou"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "38:bb:d0:c3:4f:52:59:9b:be:3b:99:55:1e:86:74:59"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeYoutube_Certum_39E7B0AE055C78D84A58B68A124A9346 {
    meta:
       description         = "Detects FakeYoutube with compromised cert (Certum)"
@@ -25655,6 +25690,41 @@ rule MAL_Compromised_Cert_Gh0stRAT_DigiCert_08ACB08347D8976BDB47A62A203C8B16 {
       )
 }
 
+rule MAL_Compromised_Cert_Gh0stRAT_GlobalSign_20562D7111A4E76BF78CD0C3 {
+   meta:
+      description         = "Detects Gh0stRAT with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-22"
+      version             = "1.0"
+
+      hash                = "2ac8a1f38889ab3d80f71399cbdc509e1cb3ca8b687fb4a9ee96f3d9c81f3bf1"
+      malware             = "Gh0stRAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "上海相椿科技中心"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "20:56:2d:71:11:a4:e7:6b:f7:8c:d0:c3"
+      cert_thumbprint     = "0fcc703146b5a41c2c6ad14b6667c73ed8b20342"
+      cert_valid_from     = "2026-06-22"
+      cert_valid_to       = "2027-06-19"
+
+      country             = "CN"
+      state               = "上海"
+      locality            = "上海"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "20:56:2d:71:11:a4:e7:6b:f7:8c:d0:c3"
+      )
+}
+
 rule MAL_Compromised_Cert_Gh0stRAT_GlobalSign_470CAD1AA6A9B8F934140B10 {
    meta:
       description         = "Detects Gh0stRAT with compromised cert (GlobalSign)"
@@ -25722,6 +25792,41 @@ rule MAL_Compromised_Cert_Gh0stRAT_GlobalSign_56AEB8269A0FE8ADF9D1BBD8 {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "56:ae:b8:26:9a:0f:e8:ad:f9:d1:bb:d8"
+      )
+}
+
+rule MAL_Compromised_Cert_Gh0stRAT_GlobalSign_5800BB414C3F683B564E3FCA {
+   meta:
+      description         = "Detects Gh0stRAT with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-29"
+      version             = "1.0"
+
+      hash                = "c51c121f3b387a7c38efdc406fb1be58a08bf95c49753091d4fd3b965008a3c0"
+      malware             = "Gh0stRAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "合肥集凯电子商务有限公司"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "58:00:bb:41:4c:3f:68:3b:56:4e:3f:ca"
+      cert_thumbprint     = "09faa6aa8f16684987cd733ed7410e43b86666db"
+      cert_valid_from     = "2026-05-29"
+      cert_valid_to       = "2027-05-30"
+
+      country             = "CN"
+      state               = "安徽"
+      locality            = "合肥"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "58:00:bb:41:4c:3f:68:3b:56:4e:3f:ca"
       )
 }
 
@@ -26005,6 +26110,76 @@ rule MAL_Compromised_Cert_GodRAT_GlobalSign_476687EF336E88504E5ECE57 {
       )
 }
 
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_1243A41EDEA4961447B63A9181C6FDAA {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-04"
+      version             = "1.0"
+
+      hash                = "9a60b23dea48bf8ae6db72a845788c7c714c2ac82ba5a6e5a3e4c2833e198d8f"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Chongqing Meinuoxi Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "12:43:a4:1e:de:a4:96:14:47:b6:3a:91:81:c6:fd:aa"
+      cert_thumbprint     = "7e220cb13e0bd7caf755b54d8e85625cb98bb527"
+      cert_valid_from     = "2026-08-04"
+      cert_valid_to       = "2027-08-04"
+
+      country             = "CN"
+      state               = "Chongqing"
+      locality            = "Chongqing"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "12:43:a4:1e:de:a4:96:14:47:b6:3a:91:81:c6:fd:aa"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_1B1F4B77CD1513FAFBF557FD5FF4897C {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-16"
+      version             = "1.0"
+
+      hash                = "02d3ad426de6498186e159a577c771f8fcb61604cf62a378deef982dead505d4"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Shaanxi Chifeng Pinhe Agricultural Technology Co., Ltd"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "1b:1f:4b:77:cd:15:13:fa:fb:f5:57:fd:5f:f4:89:7c"
+      cert_thumbprint     = "1820b749b89bd201d3bdddbb802973a43876e44e"
+      cert_valid_from     = "2026-07-16"
+      cert_valid_to       = "2027-07-16"
+
+      country             = "CN"
+      state               = "Shaanxi"
+      locality            = "Xianyang"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "1b:1f:4b:77:cd:15:13:fa:fb:f5:57:fd:5f:f4:89:7c"
+      )
+}
+
 rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_222A7EF10B49297BA094CC38E127FC25 {
    meta:
       description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
@@ -26050,7 +26225,7 @@ rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_2BC27BDCF2944112BBEFFC1EF59
 
       hash                = "5ef6019fb6ee1db1201ee479a68669b47eb0d5d82770dbd30b05f46ccbc68f4f"
       malware             = "Golden Gh0st Loader"
-      malware_type        = "Unknown"
+      malware_type        = "Remote access tool"
       malware_notes       = ""
 
       signer              = "Dongguan Jieshan Technology Co., Ltd"
@@ -27297,6 +27472,41 @@ rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_5076171603477D5BD6AEB98
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "50:76:17:16:03:47:7d:5b:d6:ae:b9:84"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_GlobalSign_5A3800D6D04832BF3F856392 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-30"
+      version             = "1.0"
+
+      hash                = "0b37b477af11ec41fb6edbdeb6d9fecaa7b6e95636e036767fe64b029bbcb392"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Sichuan Quantianxia Furniture Co., Ltd"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "5a:38:00:d6:d0:48:32:bf:3f:85:63:92"
+      cert_thumbprint     = "c450b64c66ecb65468f76cc68426d1de8af7a1fb"
+      cert_valid_from     = "2026-07-30"
+      cert_valid_to       = "2027-07-31"
+
+      country             = "CN"
+      state               = "Sichuan"
+      locality            = "Chengdu"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "5a:38:00:d6:d0:48:32:bf:3f:85:63:92"
       )
 }
 
@@ -28767,6 +28977,41 @@ rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_754022596DA5B16478C5E880ED
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "75:40:22:59:6d:a5:b1:64:78:c5:e8:80:ed:2d:73:0f"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Sectigo_D22FE89B211BDB42E270569FD24DA30A {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-15"
+      version             = "1.0"
+
+      hash                = "4ca3a0088c63497d7fce4a305c3fd98646badb2278cbca85571b0831f915adde"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Tongliao Chuangfa Education Consulting Service Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "d2:2f:e8:9b:21:1b:db:42:e2:70:56:9f:d2:4d:a3:0a"
+      cert_thumbprint     = "f87df6d29dbe9c87ab66568a2db834752c28e86a"
+      cert_valid_from     = "2026-07-15"
+      cert_valid_to       = "2027-07-15"
+
+      country             = "CN"
+      state               = "Nei Mongol Zizhiqu"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "d2:2f:e8:9b:21:1b:db:42:e2:70:56:9f:d2:4d:a3:0a"
       )
 }
 
@@ -76332,6 +76577,41 @@ rule MAL_Compromised_Cert_Traffer_SSL_com_16E9DC8270A3A9AC9B58DE5EC7B056CB {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "16:e9:dc:82:70:a3:a9:ac:9b:58:de:5e:c7:b0:56:cb"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_SSL_com_170DEE78275C48655F88921E51C692BD {
+   meta:
+      description         = "Detects Traffer with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-03"
+      version             = "1.0"
+
+      hash                = "cbdeb451713f76acef172a93809ac16cbfdfcaf61d39093d204b84dfa772b4c1"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "AirTiki ApS"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "17:0d:ee:78:27:5c:48:65:5f:88:92:1e:51:c6:92:bd"
+      cert_thumbprint     = "f1929acdfbfc64787a7e35d659c9b70aa7d99d6c"
+      cert_valid_from     = "2026-08-03"
+      cert_valid_to       = "2027-08-03"
+
+      country             = "DK"
+      state               = "Sjælland"
+      locality            = "Nysted"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "17:0d:ee:78:27:5c:48:65:5f:88:92:1e:51:c6:92:bd"
       )
 }
 
