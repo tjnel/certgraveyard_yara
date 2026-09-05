@@ -4,6 +4,14 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.09.05] - 2026-09-05
+
+### Added
+- MAL_Compromised_Cert_FakeAdvancedIPScanner_GlobalSign_756644768CDFC34FD79A60CD (FakeAdvancedIPScanner - GlobalSign)
+- MAL_Compromised_Cert_Traffer_Certum_269E0446274BE9FB84A828EFA3DB84F8 (Traffer - Certum)
+- MAL_Compromised_Cert_Certificate_warming_GlobalSign_D17C66A5507ABFAA3B70C38 (Certificate warming - GlobalSign)
+- MAL_Compromised_Cert_Certificate_warming_Certum_19DBCE4E308A2479A8796E6AFAB9B7D8 (Certificate warming - Certum)
+
 ## [2026.09.02] - 2026-09-02
 
 ### Added

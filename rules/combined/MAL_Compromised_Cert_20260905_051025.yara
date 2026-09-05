@@ -8225,6 +8225,41 @@ rule MAL_Compromised_Cert_Cert_Only_GlobalSign_5D3422FD4AFCF7D012D60C25 {
       )
 }
 
+rule MAL_Compromised_Cert_Certificate_warming_Certum_19DBCE4E308A2479A8796E6AFAB9B7D8 {
+   meta:
+      description         = "Detects Certificate warming with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-13"
+      version             = "1.0"
+
+      hash                = "1a54e8eaba82f1c52bbccb8e37078d14291204f7732e24ba8b2449f24853e9a0"
+      malware             = "Certificate warming"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Code Beyond d.o.o."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "19:db:ce:4e:30:8a:24:79:a8:79:6e:6a:fa:b9:b7:d8"
+      cert_thumbprint     = "4f0e771c06c76b919e13c3770fc78e2a9f05c9bc"
+      cert_valid_from     = "2026-08-13"
+      cert_valid_to       = "2027-08-13"
+
+      country             = "HR"
+      state               = "Grad Zagreb"
+      locality            = "Zagreb"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "19:db:ce:4e:30:8a:24:79:a8:79:6e:6a:fa:b9:b7:d8"
+      )
+}
+
 rule MAL_Compromised_Cert_Certificate_warming_Certum_2D6873822EEB8CAC36592A8F3C3FD634 {
    meta:
       description         = "Detects Certificate warming with compromised cert (Certum)"
@@ -8257,6 +8292,41 @@ rule MAL_Compromised_Cert_Certificate_warming_Certum_2D6873822EEB8CAC36592A8F3C3
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
          sig.serial == "2d:68:73:82:2e:eb:8c:ac:36:59:2a:8f:3c:3f:d6:34"
+      )
+}
+
+rule MAL_Compromised_Cert_Certificate_warming_GlobalSign_D17C66A5507ABFAA3B70C38 {
+   meta:
+      description         = "Detects Certificate warming with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-19"
+      version             = "1.0"
+
+      hash                = "56b6a194031b8403b7ff166187783d51acc7fe66cf930d9a0777ab1d9bb592c3"
+      malware             = "Certificate warming"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "MINERALS GROUP AS"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "d1:7c:66:a5:50:7a:bf:aa:3b:70:c3:8"
+      cert_thumbprint     = "8c33f0d44f550406927d9b6c805d930a36d3a5f5"
+      cert_valid_from     = "2026-08-19"
+      cert_valid_to       = "2027-06-25"
+
+      country             = "NO"
+      state               = "Rogaland"
+      locality            = "Stavanger"
+      email               = "mads.grinrod@mineralsgropup.no"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "d1:7c:66:a5:50:7a:bf:aa:3b:70:c3:8"
       )
 }
 
@@ -15992,6 +16062,41 @@ rule MAL_Compromised_Cert_FakeAdvancedIPScanner_GlobalSign_5C1C54F72BCC4DB607902
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "5c:1c:54:f7:2b:cc:4d:b6:07:90:23:ba"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeAdvancedIPScanner_GlobalSign_756644768CDFC34FD79A60CD {
+   meta:
+      description         = "Detects FakeAdvancedIPScanner with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-06"
+      version             = "1.0"
+
+      hash                = "7e3ebe3a7431860023fdaf0944347f76db0879c98cb4f80659a8b7172a2c8965"
+      malware             = "FakeAdvancedIPScanner"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Code Beyond d.o.o."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "75:66:44:76:8c:df:c3:4f:d7:9a:60:cd"
+      cert_thumbprint     = "e84366084ada4746bde5ff3c9a086737ecd2d7bc"
+      cert_valid_from     = "2026-08-06"
+      cert_valid_to       = "2027-08-07"
+
+      country             = "HR"
+      state               = "Grad Zagreb"
+      locality            = "Zagreb"
+      email               = "filip@codebeyond.io"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "75:66:44:76:8c:df:c3:4f:d7:9a:60:cd"
       )
 }
 
@@ -75282,6 +75387,41 @@ rule MAL_Compromised_Cert_Traffer_Certum_068403F633568879E1E7CBB5F64E130B {
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
          sig.serial == "06:84:03:f6:33:56:88:79:e1:e7:cb:b5:f6:4e:13:0b"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Certum_269E0446274BE9FB84A828EFA3DB84F8 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-10"
+      version             = "1.0"
+
+      hash                = "3d02e5e1dedd63ec855b2d42869a5f891b0015e025b53d2fabd16be83deabba3"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake docusign"
+
+      signer              = "CODE LOFTS d.o.o."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "26:9e:04:46:27:4b:e9:fb:84:a8:28:ef:a3:db:84:f8"
+      cert_thumbprint     = "9f7b5c633187b88735a6a861b4730f9e16424045"
+      cert_valid_from     = "2026-08-10"
+      cert_valid_to       = "2027-08-10"
+
+      country             = "HR"
+      state               = "Splitsko-dalmatinska županija"
+      locality            = "Split"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "26:9e:04:46:27:4b:e9:fb:84:a8:28:ef:a3:db:84:f8"
       )
 }
 
