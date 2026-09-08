@@ -4,6 +4,16 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.09.08] - 2026-09-08
+
+### Added
+- MAL_Compromised_Cert_Wailsloader_SSL_com_5A793EC60B4A264A5938C093CB42DAAD (Wailsloader - SSL.com)
+- MAL_Compromised_Cert_Wailsloader_GlobalSign_56259CB3A6446C770938D076 (Wailsloader - GlobalSign)
+
+### Modified
+- MAL_Compromised_Cert_Wailsloader_Certum_269E0446274BE9FB84A828EFA3DB84F8 (Updated metadata for Wailsloader)
+- MAL_Compromised_Cert_Wailsloader_GlobalSign_D17C66A5507ABFAA3B70C38 (Updated metadata for Wailsloader)
+
 ## [2026.09.06] - 2026-09-06
 
 ### Added

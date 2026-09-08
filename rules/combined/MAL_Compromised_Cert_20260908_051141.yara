@@ -94675,6 +94675,146 @@ rule MAL_Compromised_Cert_Wagmi_Traffer_Team_SSL_com_1D4EF724D40A79B6CCA06EB1076
       )
 }
 
+rule MAL_Compromised_Cert_Wailsloader_Certum_269E0446274BE9FB84A828EFA3DB84F8 {
+   meta:
+      description         = "Detects Wailsloader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-10"
+      version             = "1.0"
+
+      hash                = "3d02e5e1dedd63ec855b2d42869a5f891b0015e025b53d2fabd16be83deabba3"
+      malware             = "Wailsloader"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake docusign"
+
+      signer              = "CODE LOFTS d.o.o."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "26:9e:04:46:27:4b:e9:fb:84:a8:28:ef:a3:db:84:f8"
+      cert_thumbprint     = "9f7b5c633187b88735a6a861b4730f9e16424045"
+      cert_valid_from     = "2026-08-10"
+      cert_valid_to       = "2027-08-10"
+
+      country             = "HR"
+      state               = "Splitsko-dalmatinska županija"
+      locality            = "Split"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "26:9e:04:46:27:4b:e9:fb:84:a8:28:ef:a3:db:84:f8"
+      )
+}
+
+rule MAL_Compromised_Cert_Wailsloader_GlobalSign_56259CB3A6446C770938D076 {
+   meta:
+      description         = "Detects Wailsloader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-08"
+      version             = "1.0"
+
+      hash                = "9ba0779e868f29ffb1738ff2f95b9bb18951527ff3283b8dff20ef2896448259"
+      malware             = "Wailsloader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Fast Home Group Limited Liability Company"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "56:25:9c:b3:a6:44:6c:77:09:38:d0:76"
+      cert_thumbprint     = "b2b039cbf48d8edece4d9b4ae8a0dc436447d0a8"
+      cert_valid_from     = "2026-04-08"
+      cert_valid_to       = "2027-03-24"
+
+      country             = "KG"
+      state               = "Osh"
+      locality            = "Osh"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "56:25:9c:b3:a6:44:6c:77:09:38:d0:76"
+      )
+}
+
+rule MAL_Compromised_Cert_Wailsloader_GlobalSign_D17C66A5507ABFAA3B70C38 {
+   meta:
+      description         = "Detects Wailsloader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-19"
+      version             = "1.0"
+
+      hash                = "56b6a194031b8403b7ff166187783d51acc7fe66cf930d9a0777ab1d9bb592c3"
+      malware             = "Wailsloader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "MINERALS GROUP AS"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "d1:7c:66:a5:50:7a:bf:aa:3b:70:c3:8"
+      cert_thumbprint     = "8c33f0d44f550406927d9b6c805d930a36d3a5f5"
+      cert_valid_from     = "2026-08-19"
+      cert_valid_to       = "2027-06-25"
+
+      country             = "NO"
+      state               = "Rogaland"
+      locality            = "Stavanger"
+      email               = "mads.grinrod@mineralsgropup.no"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "d1:7c:66:a5:50:7a:bf:aa:3b:70:c3:8"
+      )
+}
+
+rule MAL_Compromised_Cert_Wailsloader_SSL_com_5A793EC60B4A264A5938C093CB42DAAD {
+   meta:
+      description         = "Detects Wailsloader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-22"
+      version             = "1.0"
+
+      hash                = "9714e527b424152df7391a7c9dc5b3a537c77ccfcb299d85d31f48771897c52b"
+      malware             = "Wailsloader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Osauhing Karusoftware"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "5a:79:3e:c6:0b:4a:26:4a:59:38:c0:93:cb:42:da:ad"
+      cert_thumbprint     = "2a9053d8b158dde9c2f944e8d6372071f2575052"
+      cert_valid_from     = "2026-06-22"
+      cert_valid_to       = "2027-06-22"
+
+      country             = "EE"
+      state               = "---"
+      locality            = "Leppneeme kula"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "5a:79:3e:c6:0b:4a:26:4a:59:38:c0:93:cb:42:da:ad"
+      )
+}
+
 rule MAL_Compromised_Cert_WarmCookie_SSL_com_7AD3A37E018A0708865FBA3EF5EFC572 {
    meta:
       description         = "Detects WarmCookie with compromised cert (SSL.com)"
