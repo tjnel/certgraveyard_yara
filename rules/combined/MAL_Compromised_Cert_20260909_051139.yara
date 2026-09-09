@@ -94675,6 +94675,76 @@ rule MAL_Compromised_Cert_Wagmi_Traffer_Team_SSL_com_1D4EF724D40A79B6CCA06EB1076
       )
 }
 
+rule MAL_Compromised_Cert_Wailsloader_Certum_106DB41DF2381F3858ACD9809B904F02 {
+   meta:
+      description         = "Detects Wailsloader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-21"
+      version             = "1.0"
+
+      hash                = "a66c01c55a294a773c5a98b9f286b6ad32055668eb9fe8d77f1f0f55f1a481b1"
+      malware             = "Wailsloader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Darko Parun"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "10:6d:b4:1d:f2:38:1f:38:58:ac:d9:80:9b:90:4f:02"
+      cert_thumbprint     = "B2E8FF7E86B892826A64D0AD067B6FE42CF66A58"
+      cert_valid_from     = "2026-08-21"
+      cert_valid_to       = "2027-08-21"
+
+      country             = "HR"
+      state               = "Grad Zagreb"
+      locality            = "Zagreb"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "10:6d:b4:1d:f2:38:1f:38:58:ac:d9:80:9b:90:4f:02"
+      )
+}
+
+rule MAL_Compromised_Cert_Wailsloader_Certum_19DBCE4E308A2479A8796E6AFAB9B7D8 {
+   meta:
+      description         = "Detects Wailsloader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-13"
+      version             = "1.0"
+
+      hash                = "1a54e8eaba82f1c52bbccb8e37078d14291204f7732e24ba8b2449f24853e9a0"
+      malware             = "Wailsloader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Code Beyond d.o.o."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "19:db:ce:4e:30:8a:24:79:a8:79:6e:6a:fa:b9:b7:d8"
+      cert_thumbprint     = "4f0e771c06c76b919e13c3770fc78e2a9f05c9bc"
+      cert_valid_from     = "2026-08-13"
+      cert_valid_to       = "2027-08-13"
+
+      country             = "HR"
+      state               = "Grad Zagreb"
+      locality            = "Zagreb"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "19:db:ce:4e:30:8a:24:79:a8:79:6e:6a:fa:b9:b7:d8"
+      )
+}
+
 rule MAL_Compromised_Cert_Wailsloader_Certum_269E0446274BE9FB84A828EFA3DB84F8 {
    meta:
       description         = "Detects Wailsloader with compromised cert (Certum)"
