@@ -4,6 +4,11 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.09.12] - 2026-09-12
+
+### Added
+- MAL_Compromised_Cert_Golden_Gh0st_Loader_DigiCert_65A52C21A339B9FA1AD1845EC5852DF (Golden Gh0st Loader - DigiCert)
+
 ## [2026.09.09] - 2026-09-09
 
 ### Added
