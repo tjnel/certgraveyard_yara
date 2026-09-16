@@ -26740,6 +26740,41 @@ rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_5DF273A440E188CFD64188D1EF1
       )
 }
 
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_EF30B4B7836C2878CF5DE50D1C4791C {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-28"
+      version             = "1.0"
+
+      hash                = "91dfe3049b9de072378178064f2a248efa13dcdc23e0b51e578a5f4378e2b827"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Meisi Software Development (Guangxi) Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "ef:30:b4:b7:83:6c:28:78:cf:5d:e5:0d:1c:47:91:c"
+      cert_thumbprint     = "d5c3b2e0c181f27bbcf830f83e0248dcb81a823c"
+      cert_valid_from     = "2026-07-28"
+      cert_valid_to       = "2027-07-28"
+
+      country             = "CN"
+      state               = "广西壮族自治区"
+      locality            = "玉林市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "ef:30:b4:b7:83:6c:28:78:cf:5d:e5:0d:1c:47:91:c"
+      )
+}
+
 rule MAL_Compromised_Cert_Golden_Gh0st_Loader_DigiCert_01AF6469365C81AD7222E60FB1317062 {
    meta:
       description         = "Detects Golden Gh0st Loader with compromised cert (DigiCert)"
@@ -68387,6 +68422,41 @@ rule MAL_Compromised_Cert_SoftHub_GlobalSign_7A3DA17E80BD536BF7341730 {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "7a:3d:a1:7e:80:bd:53:6b:f7:34:17:30"
+      )
+}
+
+rule MAL_Compromised_Cert_SoftHub_Tauri_Rust_Based_Installer_Malware_Campaign_Sectigo_0531FC09129AB7E3F36F0DFC92333EDE {
+   meta:
+      description         = "Detects SoftHub, Tauri/Rust-Based Installer Malware Campaign with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-31"
+      version             = "1.0"
+
+      hash                = "767e1e9ae6dc49ffc44bf11b4d984cb4590730063b175de6a8e7bb1b49346a82"
+      malware             = "SoftHub, Tauri/Rust-Based Installer Malware Campaign"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "AirTiki ApS"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "05:31:fc:09:12:9a:b7:e3:f3:6f:0d:fc:92:33:3e:de"
+      cert_thumbprint     = "B7926D0C892D93D1F3864960B16074F858866B7A"
+      cert_valid_from     = "2026-07-31"
+      cert_valid_to       = "2027-07-31"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "05:31:fc:09:12:9a:b7:e3:f3:6f:0d:fc:92:33:3e:de"
       )
 }
 

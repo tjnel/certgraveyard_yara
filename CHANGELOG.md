@@ -4,6 +4,12 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.09.16] - 2026-09-16
+
+### Added
+- MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_EF30B4B7836C2878CF5DE50D1C4791C (Golden Gh0st Loader - Certum)
+- MAL_Compromised_Cert_SoftHub_Tauri_Rust_Based_Installer_Malware_Campaign_Sectigo_0531FC09129AB7E3F36F0DFC92333EDE (SoftHub, Tauri/Rust-Based Installer Malware Campaign - Sectigo)
+
 ## [2026.09.12] - 2026-09-12
 
 ### Added
