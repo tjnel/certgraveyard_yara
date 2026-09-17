@@ -26740,6 +26740,41 @@ rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_5DF273A440E188CFD64188D1EF1
       )
 }
 
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_62F7C75FF5903A746F370DE8F943CE11 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-12"
+      version             = "1.0"
+
+      hash                = "036f32eb1efeda24d24aed500992461301a8fab1d672833ef15f85b7b6171d11"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Xi 'an Yuerui Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "62:f7:c7:5f:f5:90:3a:74:6f:37:0d:e8:f9:43:ce:11"
+      cert_thumbprint     = "6127732aefc01ab6c33c8b36416b5f60169ebe8f"
+      cert_valid_from     = "2026-08-12"
+      cert_valid_to       = "2027-08-12"
+
+      country             = "CN"
+      state               = "陕西省"
+      locality            = "西安市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "62:f7:c7:5f:f5:90:3a:74:6f:37:0d:e8:f9:43:ce:11"
+      )
+}
+
 rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_EF30B4B7836C2878CF5DE50D1C4791C {
    meta:
       description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
@@ -91945,6 +91980,41 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_CC4C1F1DB6D23A9248EB60A5E7F237DD {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Sectigo_D0B158D6CAA58F79E9DAE3B3F97A49FF {
+   meta:
+      description         = "Detects Unknown with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-01"
+      version             = "1.0"
+
+      hash                = "5a8b794b9aece519ddbfeab8bec50bc40922f107f24ce143e571762a8c5446da"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Xiamen Shengdakai Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "d0:b1:58:d6:ca:a5:8f:79:e9:da:e3:b3:f9:7a:49:ff"
+      cert_thumbprint     = "f63d37d988f79fc8edb2992d0ac5efacafcb0868"
+      cert_valid_from     = "2026-04-01"
+      cert_valid_to       = "2027-04-01"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "d0:b1:58:d6:ca:a5:8f:79:e9:da:e3:b3:f9:7a:49:ff"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_Sectigo_E9AAD8A3D342FEE128133E0B0A3C51D0 {
    meta:
       description         = "Detects Unknown with compromised cert (Sectigo)"
@@ -92747,6 +92817,41 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_65620C1D74A8FD9630E9F2BF6281A61A {
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
          sig.serial == "65:62:0c:1d:74:a8:fd:96:30:e9:f2:bf:62:81:a6:1a"
+      )
+}
+
+rule MAL_Compromised_Cert_ValleyRAT_Certum_666B914A0E24DBE5775B9A69A3FB7CFB {
+   meta:
+      description         = "Detects ValleyRAT with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-23"
+      version             = "1.0"
+
+      hash                = "f231eb3b69bc197480b26779893f313d12267cb15f052475d0bcd097bd9feb4c"
+      malware             = "ValleyRAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Wei Liu"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "66:6b:91:4a:0e:24:db:e5:77:5b:9a:69:a3:fb:7c:fb"
+      cert_thumbprint     = "f6b2516cbb27722842233bcce8f512542d8d938b"
+      cert_valid_from     = "2026-03-23"
+      cert_valid_to       = "2027-03-23"
+
+      country             = "CN"
+      state               = "辽宁"
+      locality            = "庄河"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "66:6b:91:4a:0e:24:db:e5:77:5b:9a:69:a3:fb:7c:fb"
       )
 }
 

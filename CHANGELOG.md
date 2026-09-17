@@ -4,6 +4,13 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.09.17] - 2026-09-17
+
+### Added
+- MAL_Compromised_Cert_ValleyRAT_Certum_666B914A0E24DBE5775B9A69A3FB7CFB (ValleyRAT - Certum)
+- MAL_Compromised_Cert_Unknown_Sectigo_D0B158D6CAA58F79E9DAE3B3F97A49FF (Unknown - Sectigo)
+- MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_62F7C75FF5903A746F370DE8F943CE11 (Golden Gh0st Loader - Certum)
+
 ## [2026.09.16] - 2026-09-16
 
 ### Added
