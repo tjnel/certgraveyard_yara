@@ -11,7 +11,7 @@ rule MAL_Compromised_Cert_RUS_51_GlobalSign_44B8667357BB95651D61D061 {
       hash                = "9ebfe694914d337304edded8b6406bd3fbff1d4ee110ef3a8bf95c3fb5de7c38"
       malware             = "RUS-51"
       malware_type        = "Unknown"
-      malware_notes       = ""
+      malware_notes       = "Tool specifically written in German and used to steal credentials during fake IT support case"
 
       signer              = "Cascade Tech-Trek Inc."
       cert_issuer_short   = "GlobalSign"

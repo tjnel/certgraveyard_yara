@@ -51251,7 +51251,7 @@ rule MAL_Compromised_Cert_RUS_51_GlobalSign_40A362E350689119F52EC34C {
       hash                = "1da91d2570329f9e214f51bc633283f10bd55a145b7b3d254e03175fd86292d9"
       malware             = "RUS-51"
       malware_type        = "Unknown"
-      malware_notes       = ""
+      malware_notes       = "Tool specifically written in German and used to steal credentials during fake IT support case"
 
       signer              = "AM MISBAH Tech Inc."
       cert_issuer_short   = "GlobalSign"
@@ -51286,7 +51286,7 @@ rule MAL_Compromised_Cert_RUS_51_GlobalSign_44B8667357BB95651D61D061 {
       hash                = "9ebfe694914d337304edded8b6406bd3fbff1d4ee110ef3a8bf95c3fb5de7c38"
       malware             = "RUS-51"
       malware_type        = "Unknown"
-      malware_notes       = ""
+      malware_notes       = "Tool specifically written in German and used to steal credentials during fake IT support case"
 
       signer              = "Cascade Tech-Trek Inc."
       cert_issuer_short   = "GlobalSign"
@@ -51321,7 +51321,7 @@ rule MAL_Compromised_Cert_RUS_51_GlobalSign_4F2343D96154B941DB0A26B2 {
       hash                = "ff82c4c679c5486aed2d66a802682245a1e9cd7d6ceb65fa0e7b222f902998e8"
       malware             = "RUS-51"
       malware_type        = "Unknown"
-      malware_notes       = ""
+      malware_notes       = "Tool specifically written in German and used to steal credentials during fake IT support case"
 
       signer              = "KouisMoa MegaByte Information Technolog Co., Ltd."
       cert_issuer_short   = "GlobalSign"
@@ -51342,6 +51342,41 @@ rule MAL_Compromised_Cert_RUS_51_GlobalSign_4F2343D96154B941DB0A26B2 {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "4f:23:43:d9:61:54:b9:41:db:0a:26:b2"
+      )
+}
+
+rule MAL_Compromised_Cert_RUS_51_SSL_com_66096FE6AAB808036B840F230F5606A5 {
+   meta:
+      description         = "Detects RUS-51 with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-25"
+      version             = "1.0"
+
+      hash                = "88fce5bc260870ef6296c4c5967449d0dc38e83b3fcfea5a971446e8dfd1f5ff"
+      malware             = "RUS-51"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake IT Support tool written in German used to steal credentials."
+
+      signer              = "YOUR CHANCE j.d.o.o"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "66:09:6f:e6:aa:b8:08:03:6b:84:0f:23:0f:56:06:a5"
+      cert_thumbprint     = "D65441BCFFBBBB28A38F7244CA7744ED91E6F93F"
+      cert_valid_from     = "2026-08-25"
+      cert_valid_to       = "2027-08-25"
+
+      country             = "HR"
+      state               = "Zagreb"
+      locality            = "Zagreb"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "66:09:6f:e6:aa:b8:08:03:6b:84:0f:23:0f:56:06:a5"
       )
 }
 

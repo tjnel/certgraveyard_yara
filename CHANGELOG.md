@@ -4,6 +4,16 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.09.18] - 2026-09-18
+
+### Added
+- MAL_Compromised_Cert_RUS_51_SSL_com_66096FE6AAB808036B840F230F5606A5 (RUS-51 - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_RUS_51_GlobalSign_4F2343D96154B941DB0A26B2 (Updated metadata for RUS-51)
+- MAL_Compromised_Cert_RUS_51_GlobalSign_44B8667357BB95651D61D061 (Updated metadata for RUS-51)
+- MAL_Compromised_Cert_RUS_51_GlobalSign_40A362E350689119F52EC34C (Updated metadata for RUS-51)
+
 ## [2026.09.17] - 2026-09-17
 
 ### Added
