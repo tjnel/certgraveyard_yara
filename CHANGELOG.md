@@ -4,6 +4,11 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.09.20] - 2026-09-20
+
+### Added
+- MAL_Compromised_Cert_FakeRMM_DigiCert_DBA9FA359F36A77D30F57A683DD8064 (FakeRMM - DigiCert)
+
 ## [2026.09.19] - 2026-09-19
 
 ### Added
