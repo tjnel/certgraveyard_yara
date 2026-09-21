@@ -10360,6 +10360,76 @@ rule MAL_Compromised_Cert_CobaltStrike_Microsoft_330002F7CCDB893ECB3CBB70F500000
       )
 }
 
+rule MAL_Compromised_Cert_CobaltStrike_Microsoft_330003F19DEB0E829A5D2DA77D00000003F19D {
+   meta:
+      description         = "Detects CobaltStrike with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-05"
+      version             = "1.0"
+
+      hash                = "cc1004e7d470a657ff05f3363f2ee03cddb9342bc98091ceeabff40ef8fa331e"
+      malware             = "CobaltStrike"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Alysen Mendez"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:03:f1:9d:eb:0e:82:9a:5d:2d:a7:7d:00:00:00:03:f1:9d"
+      cert_thumbprint     = "36056f9bf9f822009cb3979053bb848e01f55ed4"
+      cert_valid_from     = "2026-08-05"
+      cert_valid_to       = "2026-08-08"
+
+      country             = "US"
+      state               = "New Jersey"
+      locality            = "LITTLE FERRY"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:03:f1:9d:eb:0e:82:9a:5d:2d:a7:7d:00:00:00:03:f1:9d"
+      )
+}
+
+rule MAL_Compromised_Cert_CobaltStrike_Microsoft_330005C28F431E6ECA7DDD375F00000005C28F {
+   meta:
+      description         = "Detects CobaltStrike with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-01"
+      version             = "1.0"
+
+      hash                = "37dc4b90367a8a655b0337d561ab6e1ca97c0d1b1b9598c08288d940e380780e"
+      malware             = "CobaltStrike"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Alysen Mendez"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:05:c2:8f:43:1e:6e:ca:7d:dd:37:5f:00:00:00:05:c2:8f"
+      cert_thumbprint     = "917eb32056350952015533f340398c4771e69247"
+      cert_valid_from     = "2026-09-01"
+      cert_valid_to       = "2026-09-04"
+
+      country             = "US"
+      state               = "New Jersey"
+      locality            = "LITTLE FERRY"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:05:c2:8f:43:1e:6e:ca:7d:dd:37:5f:00:00:00:05:c2:8f"
+      )
+}
+
 rule MAL_Compromised_Cert_CobaltStrike_SSL_com_70AACF510F5C8A893C5104B2DB315633 {
    meta:
       description         = "Detects CobaltStrike with compromised cert (SSL.com)"
@@ -41755,6 +41825,41 @@ rule MAL_Compromised_Cert_Ousaban_GlobalSign_0B98FD483EA0DD6E7C6A6317 {
       )
 }
 
+rule MAL_Compromised_Cert_OverlordRAT_Certum_4C4593AB032C0A92CDB5439DB561EB99 {
+   meta:
+      description         = "Detects OverlordRAT with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-16"
+      version             = "1.0"
+
+      hash                = "0ee2f1a6c88a725bac0211cb1df1e62412e08c4c28364cb28e2dcaa5991cb1dd"
+      malware             = "OverlordRAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "WANG BING"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "4c:45:93:ab:03:2c:0a:92:cd:b5:43:9d:b5:61:eb:99"
+      cert_thumbprint     = "fb5a434ff16f9f89ff6298121ecfd2339384dd7f"
+      cert_valid_from     = "2026-06-16"
+      cert_valid_to       = "2027-06-16"
+
+      country             = "CN"
+      state               = "HEBEI"
+      locality            = "HANDAN"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "4c:45:93:ab:03:2c:0a:92:cd:b5:43:9d:b5:61:eb:99"
+      )
+}
+
 rule MAL_Compromised_Cert_OysterLoader_DigiCert_05E4DF61BA3ED3493ACC12C5AAF7F04B {
    meta:
       description         = "Detects OysterLoader with compromised cert (DigiCert)"
@@ -67687,6 +67792,146 @@ rule MAL_Compromised_Cert_Shiotob_Sectigo_0085E1AF2BE0F380E5A5D11513DDF45FC6 {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo RSA Code Signing CA" and
          sig.serial == "00:85:e1:af:2b:e0:f3:80:e5:a5:d1:15:13:dd:f4:5f:c6"
+      )
+}
+
+rule MAL_Compromised_Cert_SideWinder_Microsoft_3300056D6B60EFE3C97DCB2369000000056D6B {
+   meta:
+      description         = "Detects SideWinder with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-03"
+      version             = "1.0"
+
+      hash                = "9c692a0bf6d9d784e705dbd5f8fe8089d31eeab6fe196f9288573fd4aa3c5fa6"
+      malware             = "SideWinder"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Alysen Mendez"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:05:6d:6b:60:ef:e3:c9:7d:cb:23:69:00:00:00:05:6d:6b"
+      cert_thumbprint     = "ff3fc87d2d327b6cfeae83ae3da1a9e50caf6bd4"
+      cert_valid_from     = "2026-09-03"
+      cert_valid_to       = "2026-09-06"
+
+      country             = "US"
+      state               = "New Jersey"
+      locality            = "LITTLE FERRY"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:05:6d:6b:60:ef:e3:c9:7d:cb:23:69:00:00:00:05:6d:6b"
+      )
+}
+
+rule MAL_Compromised_Cert_SideWinder_Microsoft_3300057B15E98CC17DA4396B66000000057B15 {
+   meta:
+      description         = "Detects SideWinder with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-04"
+      version             = "1.0"
+
+      hash                = "4e73e140243fbaa9d1213e6f0acd6f9029c0891fac92cdee3d9a1a70891f3dc8"
+      malware             = "SideWinder"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Alysen Mendez"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:05:7b:15:e9:8c:c1:7d:a4:39:6b:66:00:00:00:05:7b:15"
+      cert_thumbprint     = "9169cce13558d3d7ae13bd873d048ace7316e880"
+      cert_valid_from     = "2026-09-04"
+      cert_valid_to       = "2026-09-07"
+
+      country             = "US"
+      state               = "New Jersey"
+      locality            = "LITTLE FERRY"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:05:7b:15:e9:8c:c1:7d:a4:39:6b:66:00:00:00:05:7b:15"
+      )
+}
+
+rule MAL_Compromised_Cert_SideWinder_Microsoft_330005B76B073C59FD6D7793C100000005B76B {
+   meta:
+      description         = "Detects SideWinder with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-08"
+      version             = "1.0"
+
+      hash                = "b6900314a090193140f85e698ef523d1c64769064c46aa2471ffc482a59f1f02"
+      malware             = "SideWinder"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Alysen Mendez"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:05:b7:6b:07:3c:59:fd:6d:77:93:c1:00:00:00:05:b7:6b"
+      cert_thumbprint     = "2256420b9a569477acd6dec04e6ff68b1dadbc8f"
+      cert_valid_from     = "2026-09-08"
+      cert_valid_to       = "2026-09-11"
+
+      country             = "US"
+      state               = "New Jersey"
+      locality            = "LITTLE FERRY"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:05:b7:6b:07:3c:59:fd:6d:77:93:c1:00:00:00:05:b7:6b"
+      )
+}
+
+rule MAL_Compromised_Cert_SideWinder_Microsoft_3300063FA6F31FEAB00FE68F9E000000063FA6 {
+   meta:
+      description         = "Detects SideWinder with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-10"
+      version             = "1.0"
+
+      hash                = "54d95a19a2ce05b1d8c66c21f2863658960f609fa809cdce43b6a0192a8eda6e"
+      malware             = "SideWinder"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Alysen Mendez"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:06:3f:a6:f3:1f:ea:b0:0f:e6:8f:9e:00:00:00:06:3f:a6"
+      cert_thumbprint     = "65aefb8b2b04c84db1cb9e7255cd88e8c1794b67"
+      cert_valid_from     = "2026-09-10"
+      cert_valid_to       = "2026-09-13"
+
+      country             = "US"
+      state               = "New Jersey"
+      locality            = "LITTLE FERRY"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:06:3f:a6:f3:1f:ea:b0:0f:e6:8f:9e:00:00:00:06:3f:a6"
       )
 }
 

@@ -4,6 +4,17 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.09.21] - 2026-09-21
+
+### Added
+- MAL_Compromised_Cert_CobaltStrike_Microsoft_330005C28F431E6ECA7DDD375F00000005C28F (CobaltStrike - Microsoft)
+- MAL_Compromised_Cert_SideWinder_Microsoft_3300056D6B60EFE3C97DCB2369000000056D6B (SideWinder - Microsoft)
+- MAL_Compromised_Cert_SideWinder_Microsoft_330005B76B073C59FD6D7793C100000005B76B (SideWinder - Microsoft)
+- MAL_Compromised_Cert_CobaltStrike_Microsoft_330003F19DEB0E829A5D2DA77D00000003F19D (CobaltStrike - Microsoft)
+- MAL_Compromised_Cert_SideWinder_Microsoft_3300063FA6F31FEAB00FE68F9E000000063FA6 (SideWinder - Microsoft)
+- MAL_Compromised_Cert_SideWinder_Microsoft_3300057B15E98CC17DA4396B66000000057B15 (SideWinder - Microsoft)
+- MAL_Compromised_Cert_OverlordRAT_Certum_4C4593AB032C0A92CDB5439DB561EB99 (OverlordRAT - Certum)
+
 ## [2026.09.20] - 2026-09-20
 
 ### Added
