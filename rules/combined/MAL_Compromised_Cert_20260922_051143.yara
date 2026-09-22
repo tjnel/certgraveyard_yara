@@ -18095,6 +18095,41 @@ rule MAL_Compromised_Cert_FakeDocument_Certum_64065DA5F28814E1470536854F7D0162 {
       )
 }
 
+rule MAL_Compromised_Cert_FakeDocument_Certum_7836FC681AAE72E82815B7A3654DBF01 {
+   meta:
+      description         = "Detects FakeDocument with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-25"
+      version             = "1.0"
+
+      hash                = "6161c1e746b8e29297917c72f93652a137691a3b9d4c6d6fbce38f80f7732d34"
+      malware             = "FakeDocument"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Xidao E-commerce Studio, Yishui County"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "78:36:fc:68:1a:ae:72:e8:28:15:b7:a3:65:4d:bf:01"
+      cert_thumbprint     = "ec371bcba3e1d42f1126bd8562d7b07022b9d9eb"
+      cert_valid_from     = "2026-08-25"
+      cert_valid_to       = "2027-08-25"
+
+      country             = "CN"
+      state               = "山东省"
+      locality            = "临沂市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "78:36:fc:68:1a:ae:72:e8:28:15:b7:a3:65:4d:bf:01"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeDocument_DigiCert_0FA698D92B3420800CFD2C72E766AE53 {
    meta:
       description         = "Detects FakeDocument with compromised cert (DigiCert)"
@@ -18792,6 +18827,41 @@ rule MAL_Compromised_Cert_FakeDocument_StealC_SSL_com_4770710B7DD24AB39CD5547476
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "47:70:71:0b:7d:d2:4a:b3:9c:d5:54:74:76:fb:16:5c"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeDocument_Verokey_75924EC04701076D5180391BB009169 {
+   meta:
+      description         = "Detects FakeDocument with compromised cert (Verokey)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-13"
+      version             = "1.0"
+
+      hash                = "9641288403abfd42853ee3a9d22900604e3e84810b53313bf1dda35bb2444b62"
+      malware             = "FakeDocument"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "温江区明宇网络技术服务工作室"
+      cert_issuer_short   = "Verokey"
+      cert_issuer         = "Verokey Secure Code"
+      cert_serial         = "75:92:4e:c0:47:01:07:6d:51:80:39:1b:b0:09:16:9"
+      cert_thumbprint     = "97e0a5c80c54513714521a372d2c985927795bf5"
+      cert_valid_from     = "2025-10-13"
+      cert_valid_to       = "2029-01-08"
+
+      country             = "CN"
+      state               = "四川省"
+      locality            = "成都市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Verokey Secure Code" and
+         sig.serial == "75:92:4e:c0:47:01:07:6d:51:80:39:1b:b0:09:16:9"
       )
 }
 
@@ -21732,6 +21802,41 @@ rule MAL_Compromised_Cert_FakeRMM_SSL_com_09867A82C28DB37CDBEC2A426D6B528E {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
          sig.serial == "09:86:7a:82:c2:8d:b3:7c:db:ec:2a:42:6d:6b:52:8e"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeRMM_SSL_com_31618F4DCEC27DC87917A80F27A84C00 {
+   meta:
+      description         = "Detects FakeRMM with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-01"
+      version             = "1.0"
+
+      hash                = "b1ad3ec73c70425ad1a2ff8ea40e7045f86e9c0c14e45c032743fa80906ad3e7"
+      malware             = "FakeRMM"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Laservue Eye Center, Medical Corporation"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "31:61:8f:4d:ce:c2:7d:c8:79:17:a8:0f:27:a8:4c:00"
+      cert_thumbprint     = "ec6029d5eda8045f4a96105ee618df5e10cf078e"
+      cert_valid_from     = "2025-12-01"
+      cert_valid_to       = "2026-12-01"
+
+      country             = "US"
+      state               = "California"
+      locality            = "San Francisco"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "31:61:8f:4d:ce:c2:7d:c8:79:17:a8:0f:27:a8:4c:00"
       )
 }
 
@@ -25652,6 +25757,41 @@ rule MAL_Compromised_Cert_GalacticPDF_Trojan_DigiCert_0F62A61D298FFBC5A426F165BB
       for any sig in pe.signatures : (
          sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
          sig.serial == "0f:62:a6:1d:29:8f:fb:c5:a4:26:f1:65:bb:63:e4:77"
+      )
+}
+
+rule MAL_Compromised_Cert_Gh0stRAT_Certum_22BE38B4365EA6E7A0775704C5E37B29 {
+   meta:
+      description         = "Detects Gh0stRAT with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-12"
+      version             = "1.0"
+
+      hash                = "cd74c3950fb8efc4d6571a2be00a68c22886fecca49887c638d7886c20ea73dc"
+      malware             = "Gh0stRAT"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: 103.145.191.136"
+
+      signer              = "泉州登尚文化传播有限公司"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "22:be:38:b4:36:5e:a6:e7:a0:77:57:04:c5:e3:7b:29"
+      cert_thumbprint     = "4a58f4702de3274cccb9e34d5d5fe88921f6a744"
+      cert_valid_from     = "2026-06-12"
+      cert_valid_to       = "2027-06-12"
+
+      country             = "CN"
+      state               = "福建省"
+      locality            = "石狮市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "22:be:38:b4:36:5e:a6:e7:a0:77:57:04:c5:e3:7b:29"
       )
 }
 
@@ -67932,6 +68072,76 @@ rule MAL_Compromised_Cert_SideWinder_Microsoft_3300063FA6F31FEAB00FE68F9E0000000
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
          sig.serial == "33:00:06:3f:a6:f3:1f:ea:b0:0f:e6:8f:9e:00:00:00:06:3f:a6"
+      )
+}
+
+rule MAL_Compromised_Cert_SideWinder_Microsoft_33000682143D3EC85DC73AC83D000000068214 {
+   meta:
+      description         = "Detects SideWinder with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-15"
+      version             = "1.0"
+
+      hash                = "c096e92e58774622c527dd69f4aafb14f4d0bdfdda7599c6023dc2da43935eba"
+      malware             = "SideWinder"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Brittany Ann Martin"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:06:82:14:3d:3e:c8:5d:c7:3a:c8:3d:00:00:00:06:82:14"
+      cert_thumbprint     = "ffdfee0fca6a184e7289edccf8a2d25485664e8f"
+      cert_valid_from     = "2026-09-15"
+      cert_valid_to       = "2026-09-18"
+
+      country             = "US"
+      state               = "fl"
+      locality            = "riverview"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:06:82:14:3d:3e:c8:5d:c7:3a:c8:3d:00:00:00:06:82:14"
+      )
+}
+
+rule MAL_Compromised_Cert_SideWinder_Microsoft_330006A547D3085EB78AEAC52200000006A547 {
+   meta:
+      description         = "Detects SideWinder with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-17"
+      version             = "1.0"
+
+      hash                = "763ac38c6373a4d5bd820b904e934c459e57bee6016b5325368a45f7f5b8753e"
+      malware             = "SideWinder"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Brittany Ann Martin"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:06:a5:47:d3:08:5e:b7:8a:ea:c5:22:00:00:00:06:a5:47"
+      cert_thumbprint     = "9326ffc3b61a1186f1611712ef27efd5aa65144f"
+      cert_valid_from     = "2026-09-17"
+      cert_valid_to       = "2026-09-20"
+
+      country             = "US"
+      state               = "fl"
+      locality            = "riverview"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:06:a5:47:d3:08:5e:b7:8a:ea:c5:22:00:00:00:06:a5:47"
       )
 }
 
