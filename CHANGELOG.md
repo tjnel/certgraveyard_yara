@@ -4,6 +4,11 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.09.23] - 2026-09-23
+
+### Added
+- MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_5C99E3BDF1C7F4C5613F4E4A42488A0C (Golden Gh0st Loader - Certum)
+
 ## [2026.09.22] - 2026-09-22
 
 ### Added
