@@ -4,6 +4,12 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.09.25] - 2026-09-25
+
+### Added
+- MAL_Compromised_Cert_FakeWallet_Sectigo_5382FA015F08A3697822BB087488B3ED (FakeWallet - Sectigo)
+- MAL_Compromised_Cert_MacSync_Stealer_Apple_7A_69_69_70_46_17_0B_24 (MacSync Stealer - Apple)
+
 ## [2026.09.24] - 2026-09-24
 
 ### Added
