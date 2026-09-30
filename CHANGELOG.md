@@ -4,6 +4,15 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.09.30] - 2026-09-30
+
+### Added
+- MAL_Compromised_Cert_Unknown_SSL_com_D62CEC85F515804B93F2E36A6BB6591 (Unknown - SSL.com)
+- MAL_Compromised_Cert_RdWieverLoader_Certum_33FFF9010D45494AF610A8B78626493B (RdWieverLoader - Certum)
+
+### Modified
+- MAL_Compromised_Cert_RdWieverLoader_Certum_666B914A0E24DBE5775B9A69A3FB7CFB (Updated metadata for RdWieverLoader)
+
 ## [2026.09.25] - 2026-09-25
 
 ### Added

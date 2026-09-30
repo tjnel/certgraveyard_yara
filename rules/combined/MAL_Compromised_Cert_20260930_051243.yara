@@ -52290,6 +52290,76 @@ rule MAL_Compromised_Cert_RaccoonStealer_Sectigo_7709D2DF39E9A4F7DB2F3CBC29B4974
       )
 }
 
+rule MAL_Compromised_Cert_RdWieverLoader_Certum_33FFF9010D45494AF610A8B78626493B {
+   meta:
+      description         = "Detects RdWieverLoader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-18"
+      version             = "1.0"
+
+      hash                = "9045187c20f7e54e8045f5285b76b0d2615412dc7b963374e2edbbb1418af2f2"
+      malware             = "RdWieverLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Liu Juan"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "33:ff:f9:01:0d:45:49:4a:f6:10:a8:b7:86:26:49:3b"
+      cert_thumbprint     = "9701e27995f04314a9ab16bd85b951e5b877a783"
+      cert_valid_from     = "2026-09-18"
+      cert_valid_to       = "2027-09-18"
+
+      country             = "CN"
+      state               = "辽宁省"
+      locality            = "庄河市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "33:ff:f9:01:0d:45:49:4a:f6:10:a8:b7:86:26:49:3b"
+      )
+}
+
+rule MAL_Compromised_Cert_RdWieverLoader_Certum_666B914A0E24DBE5775B9A69A3FB7CFB {
+   meta:
+      description         = "Detects RdWieverLoader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-23"
+      version             = "1.0"
+
+      hash                = "f231eb3b69bc197480b26779893f313d12267cb15f052475d0bcd097bd9feb4c"
+      malware             = "RdWieverLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Wei Liu"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "66:6b:91:4a:0e:24:db:e5:77:5b:9a:69:a3:fb:7c:fb"
+      cert_thumbprint     = "f6b2516cbb27722842233bcce8f512542d8d938b"
+      cert_valid_from     = "2026-03-23"
+      cert_valid_to       = "2027-03-23"
+
+      country             = "CN"
+      state               = "辽宁"
+      locality            = "庄河"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "66:6b:91:4a:0e:24:db:e5:77:5b:9a:69:a3:fb:7c:fb"
+      )
+}
+
 rule MAL_Compromised_Cert_RealPeopleLoader_GlobalSign_630FDDE61C01FA9713DE135B {
    meta:
       description         = "Detects RealPeopleLoader with compromised cert (GlobalSign)"
@@ -90822,6 +90892,41 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_7D0CDDA8F234B4F4B00E0D5448B72675 {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "7d:0c:dd:a8:f2:34:b4:f4:b0:0e:0d:54:48:b7:26:75"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_SSL_com_D62CEC85F515804B93F2E36A6BB6591 {
+   meta:
+      description         = "Detects Unknown with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-03"
+      version             = "1.0"
+
+      hash                = "0c3fecbafbce9a394f539243edaf39c6e73e60c46147aafd4d1007f0776618a8"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "X G.K."
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "d6:2c:ec:85:f5:15:80:4b:93:f2:e3:6a:6b:b6:59:1"
+      cert_thumbprint     = "94b67d19b3c28610bdddd61746d91bc371a3bf21"
+      cert_valid_from     = "2026-06-03"
+      cert_valid_to       = "2027-06-03"
+
+      country             = "JP"
+      state               = "Tokyo"
+      locality            = "Minato-ku"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "d6:2c:ec:85:f5:15:80:4b:93:f2:e3:6a:6b:b6:59:1"
       )
 }
 
