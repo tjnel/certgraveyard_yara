@@ -4,6 +4,11 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.10.02] - 2026-10-02
+
+### Added
+- MAL_Compromised_Cert_Unknown_Microsoft_3300075FB851691FE5365BADB3000000075FB8 (Unknown - Microsoft)
+
 ## [2026.10.01] - 2026-10-01
 
 ### Added
