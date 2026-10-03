@@ -4,6 +4,11 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.10.03] - 2026-10-03
+
+### Added
+- MAL_Compromised_Cert_Unknown_Sectigo_7AF487B9452C297BFA92808051E5BB69 (Unknown - Sectigo)
+
 ## [2026.10.02] - 2026-10-02
 
 ### Added
