@@ -4,6 +4,22 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.10.04] - 2026-10-04
+
+### Added
+- MAL_Compromised_Cert_FakeWallet_SSL_com_78F6806032F20A0DCA87F716D8E026EA (FakeWallet - SSL.com)
+- MAL_Compromised_Cert_ProRAM_Microsoft_3300059D69DF50103817F95953000000059D69 (ProRAM - Microsoft)
+- MAL_Compromised_Cert_UpdateLogger_GlobalSign_59C8300386BC1A0639324509 (UpdateLogger - GlobalSign)
+- MAL_Compromised_Cert_UpdateLogger_Sectigo_A7DF46AF2D897FF91B38C5DE7EFBC331 (UpdateLogger - Sectigo)
+- MAL_Compromised_Cert_FakeWallet_Sectigo_1346C21BBF5ADFFAB1BF6D3A13008893 (FakeWallet - Sectigo)
+- MAL_Compromised_Cert_UpdateLogger_GlobalSign_481C460436F5FCAE70171C7C (UpdateLogger - GlobalSign)
+- MAL_Compromised_Cert_FakeRSSGuard_SSL_com_5387706609BB5AD3F52BCAFE1D73F849 (FakeRSSGuard - SSL.com)
+- MAL_Compromised_Cert_SoftHub_Sectigo_902A296FB59BC86E29055F3C000FDC2A (SoftHub - Sectigo)
+
+### Modified
+- MAL_Compromised_Cert_UpdateLogger_Sectigo_7AF487B9452C297BFA92808051E5BB69 (Updated metadata for UpdateLogger)
+- MAL_Compromised_Cert_UpdateLogger_SSL_com_66096FE6AAB808036B840F230F5606A5 (Updated metadata for UpdateLogger)
+
 ## [2026.10.03] - 2026-10-03
 
 ### Added
