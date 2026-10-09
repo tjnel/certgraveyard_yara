@@ -21910,6 +21910,41 @@ rule MAL_Compromised_Cert_FakeRVTools_Certum_5768DFBE1503EE4F524283EAB21065B8 {
       )
 }
 
+rule MAL_Compromised_Cert_FakeRVTools_GlobalSign_152BE2DC6D8F554095868AB6 {
+   meta:
+      description         = "Detects FakeRVTools with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-29"
+      version             = "1.0"
+
+      hash                = "27e1594334eabcf7d927fb444dabc1f4221a36a8faf13b741ac65a9b1a23c87b"
+      malware             = "FakeRVTools"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Allsoft Systems OÜ"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "15:2b:e2:dc:6d:8f:55:40:95:86:8a:b6"
+      cert_thumbprint     = "d863686040411c1a54ae488c6dcf5ddd6c75824d"
+      cert_valid_from     = "2026-06-29"
+      cert_valid_to       = "2027-06-30"
+
+      country             = "EE"
+      state               = "Harjumaa"
+      locality            = "Tallin"
+      email               = "info@allsoftsystems.com"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "15:2b:e2:dc:6d:8f:55:40:95:86:8a:b6"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeRVTools_Sectigo_00A80D45D8AC1F17837FA46C66DDE70057 {
    meta:
       description         = "Detects FakeRVTools with compromised cert (Sectigo)"
@@ -68460,6 +68495,76 @@ rule MAL_Compromised_Cert_SideWinder_Microsoft_330006A547D3085EB78AEAC5220000000
       )
 }
 
+rule MAL_Compromised_Cert_SideWinder_Microsoft_330007865479C3D892B4E4EDA7000000078654 {
+   meta:
+      description         = "Detects SideWinder with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-10-03"
+      version             = "1.0"
+
+      hash                = "50d674ab3d7f1fd98e436cf7d324ddb79ab0386911d1c47b3323190bf4d3a54e"
+      malware             = "SideWinder"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Ashley Marie Boynton"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:07:86:54:79:c3:d8:92:b4:e4:ed:a7:00:00:00:07:86:54"
+      cert_thumbprint     = "9fb89c4839282183e21f3adae0a405193ac0aaea"
+      cert_valid_from     = "2026-10-03"
+      cert_valid_to       = "2026-10-06"
+
+      country             = "US"
+      state               = "nv"
+      locality            = "SPARKS"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:07:86:54:79:c3:d8:92:b4:e4:ed:a7:00:00:00:07:86:54"
+      )
+}
+
+rule MAL_Compromised_Cert_SideWinder_Microsoft_330007994E3AC7660B30A2086000000007994E {
+   meta:
+      description         = "Detects SideWinder with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-10-04"
+      version             = "1.0"
+
+      hash                = "2fe66bca36b205525244d27fd040f2c894ecaafcf84d25d0865451b5d25266c8"
+      malware             = "SideWinder"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Ashley Marie Boynton"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:07:99:4e:3a:c7:66:0b:30:a2:08:60:00:00:00:07:99:4e"
+      cert_thumbprint     = "07e677a110c9fe6f180933bb1354af9046740b49"
+      cert_valid_from     = "2026-10-04"
+      cert_valid_to       = "2026-10-07"
+
+      country             = "US"
+      state               = "nv"
+      locality            = "SPARKS"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:07:99:4e:3a:c7:66:0b:30:a2:08:60:00:00:00:07:99:4e"
+      )
+}
+
 rule MAL_Compromised_Cert_Silence_Sectigo_7D27332C3CB3A382A4FD232C5C66A2 {
    meta:
       description         = "Detects Silence with compromised cert (Sectigo)"
@@ -83335,6 +83440,41 @@ rule MAL_Compromised_Cert_Unknown_Certum_6116881CBADD579E680B600873B3A8E3 {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Certum_748C413CBC2B00678EBA0E038B765A2D {
+   meta:
+      description         = "Detects Unknown with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-31"
+      version             = "1.0"
+
+      hash                = "7ec51b173c7d313164fc0603cf8e234e52e0d708abd0b73a9175f26913bf72a8"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "PengXueWu"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "74:8c:41:3c:bc:2b:00:67:8e:ba:0e:03:8b:76:5a:2d"
+      cert_thumbprint     = "e6c90fb3a49f994119c2b90a4cc1dc32c417ab44"
+      cert_valid_from     = "2026-07-31"
+      cert_valid_to       = "2027-07-31"
+
+      country             = "CN"
+      state               = "云南省"
+      locality            = "普洱市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "74:8c:41:3c:bc:2b:00:67:8e:ba:0e:03:8b:76:5a:2d"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_Certum_77185BFDFD072CE4944A6123C38C8001 {
    meta:
       description         = "Detects Unknown with compromised cert (Certum)"
@@ -92992,6 +93132,41 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_7D36CBB64BC9ADD17BA71737D3ECCECA {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo RSA Code Signing CA" and
          sig.serial == "7d:36:cb:b6:4b:c9:ad:d1:7b:a7:17:37:d3:ec:ce:ca"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Sectigo_92202D290290ED999923B2B060009503 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-13"
+      version             = "1.0"
+
+      hash                = "3759759137cf730b7046c49c3c85bafa8cf6102b81d3920fdc1930d9735706e6"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Lway Firmware"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "92:20:2d:29:02:90:ed:99:99:23:b2:b0:60:00:95:03"
+      cert_thumbprint     = "76f6ffcc3f27898297f2b2f506c14b128cb1429c"
+      cert_valid_from     = "2026-09-13"
+      cert_valid_to       = "2027-09-13"
+
+      country             = "FI"
+      state               = "Uusimaa"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "92:20:2d:29:02:90:ed:99:99:23:b2:b0:60:00:95:03"
       )
 }
 
