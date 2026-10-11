@@ -4,6 +4,16 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.10.11] - 2026-10-11
+
+### Added
+- MAL_Compromised_Cert_Fake_Wallet_SSL_com_72DD01789CFF9BC1371FCED4F797913D (Fake Wallet - SSL.com)
+- MAL_Compromised_Cert_BlackCrypt_RMM_DigiCert_DBA9FA359F36A77D30F57A683DD8064 (BlackCrypt RMM - DigiCert)
+- MAL_Compromised_Cert_ScreenConnect_DigiCert_DBA9FA359F36A77D30F57A683DD8064 (ScreenConnect - DigiCert)
+
+### Modified
+- MAL_Compromised_Cert_Unknown_Sectigo_1B56CB4E99FB9444645A1CE7FFC0A46B (Updated metadata for Unknown)
+
 ## [2026.10.10] - 2026-10-10
 
 ### Added

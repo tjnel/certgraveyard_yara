@@ -4305,6 +4305,41 @@ rule MAL_Compromised_Cert_BitRAT_Sectigo_00D9E834182DEC62C654E775E809AC1D1B {
       )
 }
 
+rule MAL_Compromised_Cert_BlackCrypt_RMM_DigiCert_DBA9FA359F36A77D30F57A683DD8064 {
+   meta:
+      description         = "Detects BlackCrypt RMM with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-26"
+      version             = "1.0"
+
+      hash                = "bb5c49eaa94615f7d75cfa80afb8e79b12da2defc47d9b9c53d7602e7171b668"
+      malware             = "BlackCrypt RMM"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "C&P Global Investors LLC"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "db:a9:fa:35:9f:36:a7:7d:30:f5:7a:68:3d:d8:06:4"
+      cert_thumbprint     = "17ac77612f471dcddb47b4d1169c2f4e746f7833"
+      cert_valid_from     = "2026-04-26"
+      cert_valid_to       = "2027-04-27"
+
+      country             = "US"
+      state               = "California"
+      locality            = "Fresno"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "db:a9:fa:35:9f:36:a7:7d:30:f5:7a:68:3d:d8:06:4"
+      )
+}
+
 rule MAL_Compromised_Cert_BlackSanta_Sectigo_9E0433AB8DD97C709FF850DDAB967C87 {
    meta:
       description         = "Detects BlackSanta with compromised cert (Sectigo)"
@@ -23587,6 +23622,41 @@ rule MAL_Compromised_Cert_Fake_PDF_tool_Polaris_PDF_Sectigo_00AEBC5D3B74B21FAEAD
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "00:ae:bc:5d:3b:74:b2:1f:ae:ad:74:7c:d5:72:ea:80:42"
+      )
+}
+
+rule MAL_Compromised_Cert_Fake_Wallet_SSL_com_72DD01789CFF9BC1371FCED4F797913D {
+   meta:
+      description         = "Detects Fake Wallet with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-16"
+      version             = "1.0"
+
+      hash                = "6ba5e05fe22f32863e2421df26ca03af54205d03b8d401a70e67c860d3722989"
+      malware             = "Fake Wallet"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Kirsten Brown"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "72:dd:01:78:9c:ff:9b:c1:37:1f:ce:d4:f7:97:91:3d"
+      cert_thumbprint     = "94abaf5dcde700e796bcae149fe11a36b91b4964"
+      cert_valid_from     = "2026-09-16"
+      cert_valid_to       = "2027-09-16"
+
+      country             = "US"
+      state               = "Iowa"
+      locality            = "Pleasant Hill"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "72:dd:01:78:9c:ff:9b:c1:37:1f:ce:d4:f7:97:91:3d"
       )
 }
 
@@ -62195,6 +62265,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_7E0D2428F8B3793BE0947AB4DA
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnect_DigiCert_DBA9FA359F36A77D30F57A683DD8064 {
+   meta:
+      description         = "Detects ScreenConnect with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-26"
+      version             = "1.0"
+
+      hash                = "e4076202903148372737fc2dd4156f4f2d13c21bbc3411ef9c729bb6fecfe5ee"
+      malware             = "ScreenConnect"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "C&P Global Investors LLC"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "db:a9:fa:35:9f:36:a7:7d:30:f5:7a:68:3d:d8:06:4"
+      cert_thumbprint     = "17ac77612f471dcddb47b4d1169c2f4e746f7833"
+      cert_valid_from     = "2026-04-26"
+      cert_valid_to       = "2027-04-27"
+
+      country             = "US"
+      state               = "California"
+      locality            = "Fresno"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "db:a9:fa:35:9f:36:a7:7d:30:f5:7a:68:3d:d8:06:4"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnect_GlobalSign_247DF4F340735BEFACC958F3 {
    meta:
       description         = "Detects ScreenConnect with compromised cert (GlobalSign)"
@@ -92382,14 +92487,14 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_1B56CB4E99FB9444645A1CE7FFC0A46B {
       cert_issuer_short   = "Sectigo"
       cert_issuer         = "Sectigo Public Code Signing CA EV R36"
       cert_serial         = "1b:56:cb:4e:99:fb:94:44:64:5a:1c:e7:ff:c0:a4:6b"
-      cert_thumbprint     = "61DBDAD36F650A8F47C5068578F7EC9ED3A222FB"
+      cert_thumbprint     = "61dbdad36f650a8f47c5068578f7ec9ed3a222fb"
       cert_valid_from     = "2026-04-01"
       cert_valid_to       = "2027-04-01"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "CN"
+      state               = "Guangdong Sheng"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:

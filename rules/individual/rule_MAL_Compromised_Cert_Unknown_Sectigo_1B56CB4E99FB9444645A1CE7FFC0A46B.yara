@@ -17,14 +17,14 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_1B56CB4E99FB9444645A1CE7FFC0A46B {
       cert_issuer_short   = "Sectigo"
       cert_issuer         = "Sectigo Public Code Signing CA EV R36"
       cert_serial         = "1b:56:cb:4e:99:fb:94:44:64:5a:1c:e7:ff:c0:a4:6b"
-      cert_thumbprint     = "61DBDAD36F650A8F47C5068578F7EC9ED3A222FB"
+      cert_thumbprint     = "61dbdad36f650a8f47c5068578f7ec9ed3a222fb"
       cert_valid_from     = "2026-04-01"
       cert_valid_to       = "2027-04-01"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
+      country             = "CN"
+      state               = "Guangdong Sheng"
+      locality            = "---"
+      email               = "---"
       rdn_serial_number   = ""
 
    condition:
