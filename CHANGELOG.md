@@ -4,6 +4,24 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.10.12] - 2026-10-12
+
+### Added
+- MAL_Compromised_Cert_EtherRAT_Sectigo_92202D290290ED999923B2B060009503 (EtherRAT - Sectigo)
+- MAL_Compromised_Cert_BlackCrypt_RMM_Sectigo_9001F32AF788D990FBFF26198BB6C437 (BlackCrypt RMM - Sectigo)
+- MAL_Compromised_Cert_ChainScript_SSL_com_470613F0D1D9F36168DACDF8AE8C4D24 (ChainScript - SSL.com)
+- MAL_Compromised_Cert_Unknown_Sectigo_009001F32AF788D990FBFF26198BB6C437 (Unknown - Sectigo)
+- MAL_Compromised_Cert_WingsLab_SSL_com_2FE4486D9B0541102A11F02F58A28755 (WingsLab - SSL.com)
+- MAL_Compromised_Cert_Unknown_Malware_SSL_com_5CC9536F1FF542098250B6643CABC039 (Unknown Malware - SSL.com)
+- MAL_Compromised_Cert_Certificate_warming_GoGetSSL_68D2D2FA79B283FE8E193CAE31CB5A3 (Certificate warming - GoGetSSL)
+- MAL_Compromised_Cert_ChainScript_Certum_1575AA28624E4EE4704303DD356D8ED1 (ChainScript - Certum)
+- MAL_Compromised_Cert_Wailsloader_SSL_com_5B3B0290D22D9D181DD3183AAB39ACBE (Wailsloader - SSL.com)
+- MAL_Compromised_Cert_WingsLab_GlobalSign_28357E2527944E5B7D3D2635 (WingsLab - GlobalSign)
+- MAL_Compromised_Cert_Unknown_Malware_SSL_com_446FDD354A9312C3422ED2A21083A7B5 (Unknown Malware - SSL.com)
+
+### Removed
+- MAL_Compromised_Cert_Unknown_Sectigo_92202D290290ED999923B2B060009503 (Removed Unknown rule)
+
 ## [2026.10.11] - 2026-10-11
 
 ### Added
