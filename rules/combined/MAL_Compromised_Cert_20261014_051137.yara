@@ -88305,6 +88305,41 @@ rule MAL_Compromised_Cert_Unknown_Malware_DigiCert_0DB771512AC47C37E2D0F5258177F
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Malware_Microsoft_33000004B34C722AB01E55E91C0000000004B3 {
+   meta:
+      description         = "Detects Unknown Malware with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-08"
+      version             = "1.0"
+
+      hash                = "eddd65e1156513894bead38dc88a77bf7b39d3665015878334cbf49f81ddde08"
+      malware             = "Unknown Malware"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "KATHRYN BANNER"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:00:04:b3:4c:72:2a:b0:1e:55:e9:1c:00:00:00:00:04:b3"
+      cert_thumbprint     = "b8fc6de062cd46c9f825c9ccb5fb8e192c0d0dfe"
+      cert_valid_from     = "2026-04-08"
+      cert_valid_to       = "2026-04-11"
+
+      country             = "US"
+      state               = "Alaska"
+      locality            = "ANCHORAGE"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:00:04:b3:4c:72:2a:b0:1e:55:e9:1c:00:00:00:00:04:b3"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_Malware_SSL_com_446FDD354A9312C3422ED2A21083A7B5 {
    meta:
       description         = "Detects Unknown Malware with compromised cert (SSL.com)"
