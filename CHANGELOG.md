@@ -4,6 +4,20 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.10.15] - 2026-10-15
+
+### Added
+- MAL_Compromised_Cert_Spyder_Certum_23C462C35AFF4789FF24599B0EBC6BE9 (Spyder - Certum)
+- MAL_Compromised_Cert_Spyder_SSL_com_2F95071FCAC926220A4A1B6E534CF92A (Spyder - SSL.com)
+- MAL_Compromised_Cert_Unknown_Microsoft_33000854EE38BDA872C785056D0000000854EE (Unknown - Microsoft)
+- MAL_Compromised_Cert_Zalmoxis_GlobalSign_3EE3C576E8E3F8B46E85C62C (Zalmoxis - GlobalSign)
+- MAL_Compromised_Cert_Unknown_Certum_2379CCA1DCB22080C62EB8B6F292C94 (Unknown - Certum)
+- MAL_Compromised_Cert_EtherRAT_Sectigo_6F590EA642E8303A8B91D10A54942FCF (EtherRAT - Sectigo)
+- MAL_Compromised_Cert_StealC_GoGetSSL_1A0BB9DA5A046D14516A52F512FBFD9 (StealC - GoGetSSL)
+
+### Modified
+- MAL_Compromised_Cert_Unknown_Certum_748C413CBC2B00678EBA0E038B765A2D (Updated metadata for Unknown)
+
 ## [2026.10.14] - 2026-10-14
 
 ### Added

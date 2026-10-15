@@ -10,8 +10,8 @@ rule MAL_Compromised_Cert_Unknown_Certum_748C413CBC2B00678EBA0E038B765A2D {
 
       hash                = "7ec51b173c7d313164fc0603cf8e234e52e0d708abd0b73a9175f26913bf72a8"
       malware             = "Unknown"
-      malware_type        = "Unknown"
-      malware_notes       = ""
+      malware_type        = "Remote access tool"
+      malware_notes       = "Malware deploys ManageEngine RMM targeting Chinese users."
 
       signer              = "PengXueWu"
       cert_issuer_short   = "Certum"
