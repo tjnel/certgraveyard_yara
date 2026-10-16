@@ -4,6 +4,16 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.10.16] - 2026-10-16
+
+### Added
+- MAL_Compromised_Cert_Unknown_Certum_4A2D7E6FC1A8B27198364CD067F22B58 (Unknown - Certum)
+- MAL_Compromised_Cert_Wailsloader_SSL_com_2F593037D00B5679008051871A365CA4 (Wailsloader - SSL.com)
+- MAL_Compromised_Cert_Quartzline_Sectigo_D25F883C5D74CE4399BFC29D85EF3263 (Quartzline - Sectigo)
+- MAL_Compromised_Cert_Zalmoxis_Certum_78A86CAAFDD6F6DE0DC5CF2A0C128265 (Zalmoxis - Certum)
+- MAL_Compromised_Cert_Wailsloader_SSL_com_D32810A0BAC3D7066AC23E508D36145 (Wailsloader - SSL.com)
+- MAL_Compromised_Cert_Wailsloader_SSL_com_1F2F4DDC5D24A208DF6D068654F265BB (Wailsloader - SSL.com)
+
 ## [2026.10.15] - 2026-10-15
 
 ### Added

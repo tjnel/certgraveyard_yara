@@ -51765,6 +51765,41 @@ rule MAL_Compromised_Cert_Quakbot_TrustOcean_00BC6C43D206A360F2D6B58537C456B709 
       )
 }
 
+rule MAL_Compromised_Cert_Quartzline_Sectigo_D25F883C5D74CE4399BFC29D85EF3263 {
+   meta:
+      description         = "Detects Quartzline with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-09"
+      version             = "1.0"
+
+      hash                = "7e71e072fbf39e4aaebad71c0e9e3443f9a4455faf687eb87264019cac342c31"
+      malware             = "Quartzline"
+      malware_type        = "Backdoor"
+      malware_notes       = ""
+
+      signer              = "Xiamen Jinduoduo Technology Consulting Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "d2:5f:88:3c:5d:74:ce:43:99:bf:c2:9d:85:ef:32:63"
+      cert_thumbprint     = "5c0180432cdd93605d1ec2350a0f5b65978e2e22"
+      cert_valid_from     = "2026-03-09"
+      cert_valid_to       = "2027-03-09"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "d2:5f:88:3c:5d:74:ce:43:99:bf:c2:9d:85:ef:32:63"
+      )
+}
+
 rule MAL_Compromised_Cert_QuasarRAT_Certum_621BB34996258258F752A174D473FE1D {
    meta:
       description         = "Detects QuasarRAT with compromised cert (Certum)"
@@ -83580,6 +83615,41 @@ rule MAL_Compromised_Cert_Unknown_Certum_42BC236A8370D6E230B726E0D4FB16C6 {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Certum_4A2D7E6FC1A8B27198364CD067F22B58 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-18"
+      version             = "1.0"
+
+      hash                = "9b43bb4e22b438ef28ea41f29c755d71a825950c70a11fa9c569dd02bca91129"
+      malware             = "Unknown"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "SOFTWARE DYNAMICS AS"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "4a:2d:7e:6f:c1:a8:b2:71:98:36:4c:d0:67:f2:2b:58"
+      cert_thumbprint     = "eb98fddcd2c03d47f861e379538373f7d9f0d6be"
+      cert_valid_from     = "2026-03-18"
+      cert_valid_to       = "2027-03-18"
+
+      country             = "NO"
+      state               = "Trøndelag"
+      locality            = "Inderøy"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "4a:2d:7e:6f:c1:a8:b2:71:98:36:4c:d0:67:f2:2b:58"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_Certum_4B4E50838A7D85CA0C5EA67AE3FAAD05 {
    meta:
       description         = "Detects Unknown with compromised cert (Certum)"
@@ -97230,6 +97300,76 @@ rule MAL_Compromised_Cert_Wailsloader_GlobalSign_D17C66A5507ABFAA3B70C38 {
       )
 }
 
+rule MAL_Compromised_Cert_Wailsloader_SSL_com_1F2F4DDC5D24A208DF6D068654F265BB {
+   meta:
+      description         = "Detects Wailsloader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-07"
+      version             = "1.0"
+
+      hash                = "73cb8ff57d809fe1042ef02ba5571d8ad7ee871cadf01a9bbc609f69f8d407ed"
+      malware             = "Wailsloader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Adelise Zoe Hernandez Melendez"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "1f:2f:4d:dc:5d:24:a2:08:df:6d:06:86:54:f2:65:bb"
+      cert_thumbprint     = "012548818EBF113E6101E7EA96F122D982F85189"
+      cert_valid_from     = "2026-09-07"
+      cert_valid_to       = "2027-09-07"
+
+      country             = "US"
+      state               = "Florida"
+      locality            = "Oldsmar"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "1f:2f:4d:dc:5d:24:a2:08:df:6d:06:86:54:f2:65:bb"
+      )
+}
+
+rule MAL_Compromised_Cert_Wailsloader_SSL_com_2F593037D00B5679008051871A365CA4 {
+   meta:
+      description         = "Detects Wailsloader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-07"
+      version             = "1.0"
+
+      hash                = "e27d133c3b29c1a0c0eca19b56dbb1db2f731db5c7b6dd3e7acacfdf49615cd3"
+      malware             = "Wailsloader"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake MFA tool used in fake support scams: https://x.com/wbmmfq/status/2110788845268795495?s=20"
+
+      signer              = "FILIP KOZJAK"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "2f:59:30:37:d0:0b:56:79:00:80:51:87:1a:36:5c:a4"
+      cert_thumbprint     = "213e6698e8b0964934908dda361e085ce4d0e102"
+      cert_valid_from     = "2026-09-07"
+      cert_valid_to       = "2027-09-07"
+
+      country             = "HR"
+      state               = "Zagreb"
+      locality            = "Zagreb"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "2f:59:30:37:d0:0b:56:79:00:80:51:87:1a:36:5c:a4"
+      )
+}
+
 rule MAL_Compromised_Cert_Wailsloader_SSL_com_5A793EC60B4A264A5938C093CB42DAAD {
    meta:
       description         = "Detects Wailsloader with compromised cert (SSL.com)"
@@ -97297,6 +97437,41 @@ rule MAL_Compromised_Cert_Wailsloader_SSL_com_5B3B0290D22D9D181DD3183AAB39ACBE {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
          sig.serial == "5b:3b:02:90:d2:2d:9d:18:1d:d3:18:3a:ab:39:ac:be"
+      )
+}
+
+rule MAL_Compromised_Cert_Wailsloader_SSL_com_D32810A0BAC3D7066AC23E508D36145 {
+   meta:
+      description         = "Detects Wailsloader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-27"
+      version             = "1.0"
+
+      hash                = "0bcf272d8f22fa30d327d7c0233b7eae7d50df1ebd95472aae59aef19c8e23bf"
+      malware             = "Wailsloader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "KIROPRAKTOR GUSTAV SELLERGREN ANS"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "d3:28:10:a0:ba:c3:d7:06:6a:c2:3e:50:8d:36:14:5"
+      cert_thumbprint     = "8ec984534c70415202b9cf60bc1793f0c9260e53"
+      cert_valid_from     = "2026-08-27"
+      cert_valid_to       = "2027-08-27"
+
+      country             = "NO"
+      state               = "Vestfold"
+      locality            = "Tønsberg"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "d3:28:10:a0:ba:c3:d7:06:6a:c2:3e:50:8d:36:14:5"
       )
 }
 
@@ -98942,6 +99117,41 @@ rule MAL_Compromised_Cert_ZLoader_Sectigo_4797D7B279BE40DE071A6D59B2D7B8D4 {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo RSA Code Signing CA" and
          sig.serial == "47:97:d7:b2:79:be:40:de:07:1a:6d:59:b2:d7:b8:d4"
+      )
+}
+
+rule MAL_Compromised_Cert_Zalmoxis_Certum_78A86CAAFDD6F6DE0DC5CF2A0C128265 {
+   meta:
+      description         = "Detects Zalmoxis with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-11"
+      version             = "1.0"
+
+      hash                = "25389448ceaa92b3133c26e4fe2cc34cfc908f32cf44d93cc886a2d62deb06e1"
+      malware             = "Zalmoxis"
+      malware_type        = "Infostealer"
+      malware_notes       = "https://rogueauthority.org/signed-crash-handler-name-gate-zalmoxis-stealer"
+
+      signer              = "Teapot Software Oy"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "78:a8:6c:aa:fd:d6:f6:de:0d:c5:cf:2a:0c:12:82:65"
+      cert_thumbprint     = "f126870365a648a13d07e907d80bb77173af79cf"
+      cert_valid_from     = "2026-08-11"
+      cert_valid_to       = "2027-08-11"
+
+      country             = "FI"
+      state               = "Uusimaa"
+      locality            = "Vantaa"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "78:a8:6c:aa:fd:d6:f6:de:0d:c5:cf:2a:0c:12:82:65"
       )
 }
 
