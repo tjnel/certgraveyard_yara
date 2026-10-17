@@ -52780,6 +52780,41 @@ rule MAL_Compromised_Cert_RaccoonStealer_Sectigo_7709D2DF39E9A4F7DB2F3CBC29B4974
       )
 }
 
+rule MAL_Compromised_Cert_RdViewer_Verokey_1A2322D9E1A42430DFB85B8143EE735 {
+   meta:
+      description         = "Detects RdViewer with compromised cert (Verokey)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-13"
+      version             = "1.0"
+
+      hash                = "2f92aa2df9cd99c432bcc12481177682d843b99ee07ef98b50b978ebbc6e5df8"
+      malware             = "RdViewer"
+      malware_type        = "Remote access tool"
+      malware_notes       = "https://rogueauthority.org/signed-disk-manager-installs-rdviewer-backdoor"
+
+      signer              = "温江区明宇网络技术服务工作室"
+      cert_issuer_short   = "Verokey"
+      cert_issuer         = "Verokey Secure Code"
+      cert_serial         = "1a:23:22:d9:e1:a4:24:30:df:b8:5b:81:43:ee:73:5"
+      cert_thumbprint     = "b54ff8566e8d816561f7c96a15395e2de91de83b"
+      cert_valid_from     = "2025-10-13"
+      cert_valid_to       = "2029-01-08"
+
+      country             = "CN"
+      state               = "四川省"
+      locality            = "成都市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Verokey Secure Code" and
+         sig.serial == "1a:23:22:d9:e1:a4:24:30:df:b8:5b:81:43:ee:73:5"
+      )
+}
+
 rule MAL_Compromised_Cert_RdWieverLoader_Certum_33FFF9010D45494AF610A8B78626493B {
    meta:
       description         = "Detects RdWieverLoader with compromised cert (Certum)"
@@ -84735,6 +84770,41 @@ rule MAL_Compromised_Cert_Unknown_DigiCert_BA8762BC2DFC682CA35F2E24100918F {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_DigiCert_E6852643D4986F08A4EF725A3C5E16A {
+   meta:
+      description         = "Detects Unknown with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-07-31"
+      version             = "1.0"
+
+      hash                = "26646cd038fad9dbc2c2e5988043516b3f2fbc03e1f197a7cef8380e3499ba7d"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Keroro Software LLC"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert G5 CS RSA4096 SHA384 2021 CA1"
+      cert_serial         = "e6:85:26:43:d4:98:6f:08:a4:ef:72:5a:3c:5e:16:a"
+      cert_thumbprint     = "2669886f9e03a472630625da11b5ce084445bd03"
+      cert_valid_from     = "2025-07-31"
+      cert_valid_to       = "2028-09-26"
+
+      country             = "CN"
+      state               = "广东省"
+      locality            = "深圳市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert G5 CS RSA4096 SHA384 2021 CA1" and
+         sig.serial == "e6:85:26:43:d4:98:6f:08:a4:ef:72:5a:3c:5e:16:a"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_EE_0452205181790702B219BCE761B5C52C {
    meta:
       description         = "Detects Unknown with compromised cert (EE)"
@@ -94710,6 +94780,41 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_367ED53E788F0A17FDFC5D47FD784914 {
       )
 }
 
+rule MAL_Compromised_Cert_ValleyRAT_Certum_4369F1615CA645FDD9D03B6652AA55A3 {
+   meta:
+      description         = "Detects ValleyRAT with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-28"
+      version             = "1.0"
+
+      hash                = "ca47e13a2980817e7849ddfef70312542ed11efaeba7b1b583161c06a440baf2"
+      malware             = "ValleyRAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Zhengzhou Xiaoye Network Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "43:69:f1:61:5c:a6:45:fd:d9:d0:3b:66:52:aa:55:a3"
+      cert_thumbprint     = "4d398ec6f1cd4d00b3e35a85a8cf739b09b015de"
+      cert_valid_from     = "2026-01-28"
+      cert_valid_to       = "2027-01-28"
+
+      country             = "CN"
+      state               = "河南"
+      locality            = "郑州"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "43:69:f1:61:5c:a6:45:fd:d9:d0:3b:66:52:aa:55:a3"
+      )
+}
+
 rule MAL_Compromised_Cert_ValleyRAT_Certum_4C4C225E13B1CBEA59C3A9B50AE2B94D {
    meta:
       description         = "Detects ValleyRAT with compromised cert (Certum)"
@@ -97122,6 +97227,76 @@ rule MAL_Compromised_Cert_Wagmi_Traffer_Team_SSL_com_1D4EF724D40A79B6CCA06EB1076
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "1d:4e:f7:24:d4:0a:79:b6:cc:a0:6e:b1:07:6c:bf:f9"
+      )
+}
+
+rule MAL_Compromised_Cert_WailsLoader_Certum_1575AA28624E4EE4704303DD356D8ED1 {
+   meta:
+      description         = "Detects WailsLoader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-25"
+      version             = "1.0"
+
+      hash                = "d4bb1f9cc14e1a27aa5d4f5ec397247b06cc5b0ae0b8fd4067a2b10f6223e2ef"
+      malware             = "WailsLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Pelican Finland Holding Oy"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "15:75:aa:28:62:4e:4e:e4:70:43:03:dd:35:6d:8e:d1"
+      cert_thumbprint     = "2c1b0ba0a2d0eccd7554fb53a7e80d223b156c28dff8185f362e88a63b362c15"
+      cert_valid_from     = "2026-08-25"
+      cert_valid_to       = "2027-08-25"
+
+      country             = "FI"
+      state               = "Uusimaa"
+      locality            = "Helsinki"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "15:75:aa:28:62:4e:4e:e4:70:43:03:dd:35:6d:8e:d1"
+      )
+}
+
+rule MAL_Compromised_Cert_WailsLoader_Certum_184AF3D177711EAC2C281DE26E44F41B {
+   meta:
+      description         = "Detects WailsLoader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-24"
+      version             = "1.0"
+
+      hash                = "89c1bb04e296b0084b118a07f80316b5f694d7460ab13afc216c5bacc787d236"
+      malware             = "WailsLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "PROGRAMVARE PARTNER ANS"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "18:4a:f3:d1:77:71:1e:ac:2c:28:1d:e2:6e:44:f4:1b"
+      cert_thumbprint     = "b44af76f283b8761cee957375e610933f42c4a13c2559d0c506298206295597f"
+      cert_valid_from     = "2026-08-24"
+      cert_valid_to       = "2027-08-24"
+
+      country             = "NO"
+      state               = "???"
+      locality            = "Manger"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "18:4a:f3:d1:77:71:1e:ac:2c:28:1d:e2:6e:44:f4:1b"
       )
 }
 

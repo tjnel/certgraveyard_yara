@@ -4,6 +4,15 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.10.17] - 2026-10-17
+
+### Added
+- MAL_Compromised_Cert_Unknown_DigiCert_E6852643D4986F08A4EF725A3C5E16A (Unknown - DigiCert)
+- MAL_Compromised_Cert_WailsLoader_Certum_184AF3D177711EAC2C281DE26E44F41B (WailsLoader - Certum)
+- MAL_Compromised_Cert_ValleyRAT_Certum_4369F1615CA645FDD9D03B6652AA55A3 (ValleyRAT - Certum)
+- MAL_Compromised_Cert_WailsLoader_Certum_1575AA28624E4EE4704303DD356D8ED1 (WailsLoader - Certum)
+- MAL_Compromised_Cert_RdViewer_Verokey_1A2322D9E1A42430DFB85B8143EE735 (RdViewer - Verokey)
+
 ## [2026.10.16] - 2026-10-16
 
 ### Added
