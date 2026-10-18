@@ -4,6 +4,20 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.10.18] - 2026-10-18
+
+### Added
+- MAL_Compromised_Cert_ManageEngineLoader_Certum_46242CD79DFA679A002B8C39A16C0AA0 (ManageEngineLoader - Certum)
+- MAL_Compromised_Cert_ValleyRAT_Certum_59D3B9552317DED1F08E994F595FD194 (ValleyRAT - Certum)
+- MAL_Compromised_Cert_RdWieverLoader_Certum_2C858B90FCA6B39036B52387E3FF0AA2 (RdWieverLoader - Certum)
+
+### Modified
+- MAL_Compromised_Cert_ManageEngineLoader_Certum_2379CCA1DCB22080C62EB8B6F292C94 (Updated metadata for ManageEngineLoader)
+- MAL_Compromised_Cert_ManageEngineLoader_Verokey_1A2322D9E1A42430DFB85B8143EE735 (Updated metadata for ManageEngineLoader)
+- MAL_Compromised_Cert_WailsLoader_Certum_2D6873822EEB8CAC36592A8F3C3FD634 (Updated metadata for WailsLoader)
+- MAL_Compromised_Cert_EtherRAT_GoGetSSL_1A0BB9DA5A046D14516A52F512FBFD9 (Updated metadata for EtherRAT)
+- MAL_Compromised_Cert_ManageEngineLoader_Certum_748C413CBC2B00678EBA0E038B765A2D (Updated metadata for ManageEngineLoader)
+
 ## [2026.10.17] - 2026-10-17
 
 ### Added

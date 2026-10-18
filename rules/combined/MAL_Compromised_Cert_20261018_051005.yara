@@ -15435,6 +15435,41 @@ rule MAL_Compromised_Cert_ElysiumStealer_Sectigo_6AAA62208A3A78BFAC1443007D031E6
       )
 }
 
+rule MAL_Compromised_Cert_EtherRAT_GoGetSSL_1A0BB9DA5A046D14516A52F512FBFD9 {
+   meta:
+      description         = "Detects EtherRAT with compromised cert (GoGetSSL)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-10-02"
+      version             = "1.0"
+
+      hash                = "37d7a8c504227f9c1986619fd8148f1737cf94e56ac91687f8ba33be7e945f5e"
+      malware             = "EtherRAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "AirTiki ApS"
+      cert_issuer_short   = "GoGetSSL"
+      cert_issuer         = "GoGetSSL G4 CS RSA4096 SHA256 2022 CA-1"
+      cert_serial         = "1a:0b:b9:da:5a:04:6d:14:51:6a:52:f5:12:fb:fd:9"
+      cert_thumbprint     = "8557ed87faf3a242d4f22ef00e97aaf603f8a864"
+      cert_valid_from     = "2026-10-02"
+      cert_valid_to       = "2027-10-01"
+
+      country             = "DK"
+      state               = "---"
+      locality            = "Nysted"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GoGetSSL G4 CS RSA4096 SHA256 2022 CA-1" and
+         sig.serial == "1a:0b:b9:da:5a:04:6d:14:51:6a:52:f5:12:fb:fd:9"
+      )
+}
+
 rule MAL_Compromised_Cert_EtherRAT_Sectigo_6F590EA642E8303A8B91D10A54942FCF {
    meta:
       description         = "Detects EtherRAT with compromised cert (Sectigo)"
@@ -37345,6 +37380,146 @@ rule MAL_Compromised_Cert_Mach_O_Man_Apple_FBC67AF4451BA8F4E7C55D2C35FFA2 {
       )
 }
 
+rule MAL_Compromised_Cert_ManageEngineLoader_Certum_2379CCA1DCB22080C62EB8B6F292C94 {
+   meta:
+      description         = "Detects ManageEngineLoader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-23"
+      version             = "1.0"
+
+      hash                = "bb83d6ffd315a11b24bcb8b65ee946e30f0a64748d30248db25eeda6e17e3d2a"
+      malware             = "ManageEngineLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = "Deploys ManageEngine Remote Management tool. Targeting Chinese users."
+
+      signer              = "Shuai Zhang"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "23:79:cc:a1:dc:b2:20:80:c6:2e:b8:b6:f2:92:c9:4"
+      cert_thumbprint     = "1a55d1ccd1f64f56262b865491b4b4083d1ab95f"
+      cert_valid_from     = "2026-03-23"
+      cert_valid_to       = "2027-03-23"
+
+      country             = "CN"
+      state               = "Hebei"
+      locality            = "Hengshui"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "23:79:cc:a1:dc:b2:20:80:c6:2e:b8:b6:f2:92:c9:4"
+      )
+}
+
+rule MAL_Compromised_Cert_ManageEngineLoader_Certum_46242CD79DFA679A002B8C39A16C0AA0 {
+   meta:
+      description         = "Detects ManageEngineLoader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-01"
+      version             = "1.0"
+
+      hash                = "1d3a8ba207ff46723b5171561ba0e1f99b2f2a0a655a5699c1cf49435f67d7b5"
+      malware             = "ManageEngineLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Wenbiao Long"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "46:24:2c:d7:9d:fa:67:9a:00:2b:8c:39:a1:6c:0a:a0"
+      cert_thumbprint     = "7ebe1191f9cbcd5e7eff4760f8a2761c8cfe9dd5"
+      cert_valid_from     = "2026-04-01"
+      cert_valid_to       = "2027-04-01"
+
+      country             = "CN"
+      state               = "Guangxi"
+      locality            = "Luzhai"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "46:24:2c:d7:9d:fa:67:9a:00:2b:8c:39:a1:6c:0a:a0"
+      )
+}
+
+rule MAL_Compromised_Cert_ManageEngineLoader_Certum_748C413CBC2B00678EBA0E038B765A2D {
+   meta:
+      description         = "Detects ManageEngineLoader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-31"
+      version             = "1.0"
+
+      hash                = "7ec51b173c7d313164fc0603cf8e234e52e0d708abd0b73a9175f26913bf72a8"
+      malware             = "ManageEngineLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = "Malware deploys ManageEngine RMM targeting Chinese users."
+
+      signer              = "PengXueWu"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "74:8c:41:3c:bc:2b:00:67:8e:ba:0e:03:8b:76:5a:2d"
+      cert_thumbprint     = "e6c90fb3a49f994119c2b90a4cc1dc32c417ab44"
+      cert_valid_from     = "2026-07-31"
+      cert_valid_to       = "2027-07-31"
+
+      country             = "CN"
+      state               = "云南省"
+      locality            = "普洱市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "74:8c:41:3c:bc:2b:00:67:8e:ba:0e:03:8b:76:5a:2d"
+      )
+}
+
+rule MAL_Compromised_Cert_ManageEngineLoader_Verokey_1A2322D9E1A42430DFB85B8143EE735 {
+   meta:
+      description         = "Detects ManageEngineLoader with compromised cert (Verokey)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-13"
+      version             = "1.0"
+
+      hash                = "2f92aa2df9cd99c432bcc12481177682d843b99ee07ef98b50b978ebbc6e5df8"
+      malware             = "ManageEngineLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "温江区明宇网络技术服务工作室"
+      cert_issuer_short   = "Verokey"
+      cert_issuer         = "Verokey Secure Code"
+      cert_serial         = "1a:23:22:d9:e1:a4:24:30:df:b8:5b:81:43:ee:73:5"
+      cert_thumbprint     = "b54ff8566e8d816561f7c96a15395e2de91de83b"
+      cert_valid_from     = "2025-10-13"
+      cert_valid_to       = "2029-01-08"
+
+      country             = "CN"
+      state               = "四川省"
+      locality            = "成都市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Verokey Secure Code" and
+         sig.serial == "1a:23:22:d9:e1:a4:24:30:df:b8:5b:81:43:ee:73:5"
+      )
+}
+
 rule MAL_Compromised_Cert_MarkiRAT_SSL_com_12CA4926152D33A0EEEB8E9C30A49A1D {
    meta:
       description         = "Detects MarkiRAT with compromised cert (SSL.com)"
@@ -52812,6 +52987,41 @@ rule MAL_Compromised_Cert_RdViewer_Verokey_1A2322D9E1A42430DFB85B8143EE735 {
       for any sig in pe.signatures : (
          sig.issuer contains "Verokey Secure Code" and
          sig.serial == "1a:23:22:d9:e1:a4:24:30:df:b8:5b:81:43:ee:73:5"
+      )
+}
+
+rule MAL_Compromised_Cert_RdWieverLoader_Certum_2C858B90FCA6B39036B52387E3FF0AA2 {
+   meta:
+      description         = "Detects RdWieverLoader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-10-09"
+      version             = "1.0"
+
+      hash                = "e71149d889cc558e6328ea7ce3498cd858c26ab282cda9410ccc51f6275f7da6"
+      malware             = "RdWieverLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: 1.14.146.76"
+
+      signer              = "邓凯友"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "2c:85:8b:90:fc:a6:b3:90:36:b5:23:87:e3:ff:0a:a2"
+      cert_thumbprint     = "b90539c313ea3ae0f0aff70f4729d17040e88327"
+      cert_valid_from     = "2026-10-09"
+      cert_valid_to       = "2027-10-09"
+
+      country             = "CN"
+      state               = "湖南省"
+      locality            = "洪江市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "2c:85:8b:90:fc:a6:b3:90:36:b5:23:87:e3:ff:0a:a2"
       )
 }
 
@@ -95060,6 +95270,41 @@ rule MAL_Compromised_Cert_ValleyRAT_Certum_567E1FA7B741E453DEE4CBFAAD7D8062 {
       )
 }
 
+rule MAL_Compromised_Cert_ValleyRAT_Certum_59D3B9552317DED1F08E994F595FD194 {
+   meta:
+      description         = "Detects ValleyRAT with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-16"
+      version             = "1.0"
+
+      hash                = "f211eb4e9b7cfab20d5e4b747a8b4b5a1a1f4aade39621a559c5715ec4fcea86"
+      malware             = "ValleyRAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "海口市柳楠商贸有限公司"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "59:d3:b9:55:23:17:de:d1:f0:8e:99:4f:59:5f:d1:94"
+      cert_thumbprint     = "6d7df3a5be1043ec3d29b557f60ac3c369c136d4"
+      cert_valid_from     = "2026-03-16"
+      cert_valid_to       = "2027-03-16"
+
+      country             = "CN"
+      state               = "海南"
+      locality            = "海口"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "59:d3:b9:55:23:17:de:d1:f0:8e:99:4f:59:5f:d1:94"
+      )
+}
+
 rule MAL_Compromised_Cert_ValleyRAT_Certum_5E0016A3D3E00463E5BF0753D80CDED2 {
    meta:
       description         = "Detects ValleyRAT with compromised cert (Certum)"
@@ -97297,6 +97542,41 @@ rule MAL_Compromised_Cert_WailsLoader_Certum_184AF3D177711EAC2C281DE26E44F41B {
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Code Signing 2021 CA" and
          sig.serial == "18:4a:f3:d1:77:71:1e:ac:2c:28:1d:e2:6e:44:f4:1b"
+      )
+}
+
+rule MAL_Compromised_Cert_WailsLoader_Certum_2D6873822EEB8CAC36592A8F3C3FD634 {
+   meta:
+      description         = "Detects WailsLoader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-18"
+      version             = "1.0"
+
+      hash                = "e8ee48d5a7c6f7773aafa2350ec4c07502efc5201ac6a2949f505d243f7308da"
+      malware             = "WailsLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "HORECA tech d.o.o."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "2d:68:73:82:2e:eb:8c:ac:36:59:2a:8f:3c:3f:d6:34"
+      cert_thumbprint     = "C488A1827E068000BA35FCA01465E8BD49FA7C05"
+      cert_valid_from     = "2026-06-18"
+      cert_valid_to       = "2027-06-18"
+
+      country             = "HR"
+      state               = "Grad Zagreb"
+      locality            = "Zagreb"
+      email               = "???"
+      rdn_serial_number   = "081408314"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "2d:68:73:82:2e:eb:8c:ac:36:59:2a:8f:3c:3f:d6:34"
       )
 }
 
