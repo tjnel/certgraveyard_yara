@@ -4,6 +4,23 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.10.20] - 2026-10-20
+
+### Added
+- MAL_Compromised_Cert_Cloudhaze_Microsoft_3300074983034F347F09C0E3B0000000074983 (Cloudhaze - Microsoft)
+- MAL_Compromised_Cert_BlackMoon_Certum_3FC0EC5B90F9AA2F2C5F762F41C9E8C3 (BlackMoon - Certum)
+- MAL_Compromised_Cert_BlackMoon_Certum_2D04350A580D7734D89F471FB36CCE06 (BlackMoon - Certum)
+- MAL_Compromised_Cert_Cloudhaze_Microsoft_330007EAF871AF62C43CBE0CA000000007EAF8 (Cloudhaze - Microsoft)
+- MAL_Compromised_Cert_MeshAgent_SSL_com_A9FF55228926F50BD47C72A9CFFA41D (MeshAgent - SSL.com)
+- MAL_Compromised_Cert_Cloudhaze_Microsoft_330003B9A0291CB60C6158E9C400000003B9A0 (Cloudhaze - Microsoft)
+- MAL_Compromised_Cert_Cloudhaze_Microsoft_330001788B3E825C8401C7B2A200000001788B (Cloudhaze - Microsoft)
+- MAL_Compromised_Cert_Cloudhaze_Microsoft_330004252C9B0A92CA2B28637D00000004252C (Cloudhaze - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_Cloudhaze_Sectigo_464C3DB5145EF83C753F8757F35F34FA (Updated metadata for Cloudhaze)
+- MAL_Compromised_Cert_Cloudhaze_Sectigo_D25F883C5D74CE4399BFC29D85EF3263 (Updated metadata for Cloudhaze)
+- MAL_Compromised_Cert_Cloudhaze_Sectigo_1B56CB4E99FB9444645A1CE7FFC0A46B (Updated metadata for Cloudhaze)
+
 ## [2026.10.18] - 2026-10-18
 
 ### Added

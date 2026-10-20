@@ -4375,6 +4375,76 @@ rule MAL_Compromised_Cert_BlackCrypt_RMM_Sectigo_9001F32AF788D990FBFF26198BB6C43
       )
 }
 
+rule MAL_Compromised_Cert_BlackMoon_Certum_2D04350A580D7734D89F471FB36CCE06 {
+   meta:
+      description         = "Detects BlackMoon with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-23"
+      version             = "1.0"
+
+      hash                = "16be51c61a21d1c3ed859cc959ac6bcb052ce19528d05c1cfe3b7e33440f3bb1"
+      malware             = "BlackMoon"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "强子硕"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "2d:04:35:0a:58:0d:77:34:d8:9f:47:1f:b3:6c:ce:06"
+      cert_thumbprint     = "9de1f68872f49e6c3c5e4cc8f2c256750f6575ab"
+      cert_valid_from     = "2026-07-23"
+      cert_valid_to       = "2027-07-23"
+
+      country             = "CN"
+      state               = "宁夏"
+      locality            = "吴忠"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "2d:04:35:0a:58:0d:77:34:d8:9f:47:1f:b3:6c:ce:06"
+      )
+}
+
+rule MAL_Compromised_Cert_BlackMoon_Certum_3FC0EC5B90F9AA2F2C5F762F41C9E8C3 {
+   meta:
+      description         = "Detects BlackMoon with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-22"
+      version             = "1.0"
+
+      hash                = "8c8dcaf27395fc13e3f7ddb1d23b03715d8f23211619f3283e26ac992e346d8b"
+      malware             = "BlackMoon"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Sichuan Zhongqia Network Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "3f:c0:ec:5b:90:f9:aa:2f:2c:5f:76:2f:41:c9:e8:c3"
+      cert_thumbprint     = "4cabc074583c6f03b8b58168a22113d875cb358f"
+      cert_valid_from     = "2026-08-22"
+      cert_valid_to       = "2027-08-22"
+
+      country             = "CN"
+      state               = "四川省"
+      locality            = "绵阳市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "3f:c0:ec:5b:90:f9:aa:2f:2c:5f:76:2f:41:c9:e8:c3"
+      )
+}
+
 rule MAL_Compromised_Cert_BlackSanta_Sectigo_9E0433AB8DD97C709FF850DDAB967C87 {
    meta:
       description         = "Detects BlackSanta with compromised cert (Sectigo)"
@@ -9902,6 +9972,286 @@ rule MAL_Compromised_Cert_ClearFake_SSL_com_7F71AF692330002E03E1311EB8A8B7E0 {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "7f:71:af:69:23:30:00:2e:03:e1:31:1e:b8:a8:b7:e0"
+      )
+}
+
+rule MAL_Compromised_Cert_Cloudhaze_Microsoft_330001788B3E825C8401C7B2A200000001788B {
+   meta:
+      description         = "Detects Cloudhaze with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-27"
+      version             = "1.0"
+
+      hash                = "5340ac0e58ad432c252c4cbbe486a534dd10013b3bf202adc49c418a0727784b"
+      malware             = "Cloudhaze"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "PULSE TECH INC"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:01:78:8b:3e:82:5c:84:01:c7:b2:a2:00:00:00:01:78:8b"
+      cert_thumbprint     = "c9951db9e38e47a5933f158b4d0f21ed8f6a2101"
+      cert_valid_from     = "2026-05-27"
+      cert_valid_to       = "2026-05-30"
+
+      country             = "US"
+      state               = "California"
+      locality            = "West Hollywood"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:01:78:8b:3e:82:5c:84:01:c7:b2:a2:00:00:00:01:78:8b"
+      )
+}
+
+rule MAL_Compromised_Cert_Cloudhaze_Microsoft_330003B9A0291CB60C6158E9C400000003B9A0 {
+   meta:
+      description         = "Detects Cloudhaze with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-01"
+      version             = "1.0"
+
+      hash                = "683e4f9a4e20475bd2e6f79b35e7e5a1764b47b1e754704cacdc97106f1f8074"
+      malware             = "Cloudhaze"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "TANAGA VENTURES LLC"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:03:b9:a0:29:1c:b6:0c:61:58:e9:c4:00:00:00:03:b9:a0"
+      cert_thumbprint     = "10f205a88023681d277f17f2c23ea712f931762c"
+      cert_valid_from     = "2026-08-01"
+      cert_valid_to       = "2026-08-04"
+
+      country             = "US"
+      state               = "New York"
+      locality            = "Canandaigua"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:03:b9:a0:29:1c:b6:0c:61:58:e9:c4:00:00:00:03:b9:a0"
+      )
+}
+
+rule MAL_Compromised_Cert_Cloudhaze_Microsoft_330004252C9B0A92CA2B28637D00000004252C {
+   meta:
+      description         = "Detects Cloudhaze with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-01"
+      version             = "1.0"
+
+      hash                = "234d8d99629d1dcf9d74b0f9911af86548ff8a2a1bfcaf07a73d80491e53fdd5"
+      malware             = "Cloudhaze"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "PULSE TECH INC"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:04:25:2c:9b:0a:92:ca:2b:28:63:7d:00:00:00:04:25:2c"
+      cert_thumbprint     = "4c42ede35a9c6134da0af8b41ccb2dfed5999174"
+      cert_valid_from     = "2026-08-01"
+      cert_valid_to       = "2026-08-04"
+
+      country             = "US"
+      state               = "California"
+      locality            = "West Hollywood"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:04:25:2c:9b:0a:92:ca:2b:28:63:7d:00:00:00:04:25:2c"
+      )
+}
+
+rule MAL_Compromised_Cert_Cloudhaze_Microsoft_3300074983034F347F09C0E3B0000000074983 {
+   meta:
+      description         = "Detects Cloudhaze with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-30"
+      version             = "1.0"
+
+      hash                = "f9ff28b32522bf4ac0e8f9fa1b392ce43bd26d0b6b70d4c521a2ad67f4a8cbed"
+      malware             = "Cloudhaze"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "CYBERTEK SUPPORT LLC"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:07:49:83:03:4f:34:7f:09:c0:e3:b0:00:00:00:07:49:83"
+      cert_thumbprint     = "f8d2cc5747e0d90006cbf7b6a2b83605ec416d19"
+      cert_valid_from     = "2026-09-30"
+      cert_valid_to       = "2026-10-03"
+
+      country             = "US"
+      state               = "Florida"
+      locality            = "Tamarac"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:07:49:83:03:4f:34:7f:09:c0:e3:b0:00:00:00:07:49:83"
+      )
+}
+
+rule MAL_Compromised_Cert_Cloudhaze_Microsoft_330007EAF871AF62C43CBE0CA000000007EAF8 {
+   meta:
+      description         = "Detects Cloudhaze with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-10-08"
+      version             = "1.0"
+
+      hash                = "e1188168c68818a911d29ff57283a2850e8aad3dc25346426eb169d0a8c2911f"
+      malware             = "Cloudhaze"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "PULSE TECH INC"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:07:ea:f8:71:af:62:c4:3c:be:0c:a0:00:00:00:07:ea:f8"
+      cert_thumbprint     = "5960b7f4c92af6832021a9ee81a297abfcddf7e3"
+      cert_valid_from     = "2026-10-08"
+      cert_valid_to       = "2026-10-11"
+
+      country             = "US"
+      state               = "California"
+      locality            = "West Hollywood"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:07:ea:f8:71:af:62:c4:3c:be:0c:a0:00:00:00:07:ea:f8"
+      )
+}
+
+rule MAL_Compromised_Cert_Cloudhaze_Sectigo_1B56CB4E99FB9444645A1CE7FFC0A46B {
+   meta:
+      description         = "Detects Cloudhaze with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-01"
+      version             = "1.0"
+
+      hash                = "7f1db334fd3302cf98dd4afddf6f90e98e2a496fe7e86bf1832b89d02f3d73c3"
+      malware             = "Cloudhaze"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Guangzhou Guoying Communication Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "1b:56:cb:4e:99:fb:94:44:64:5a:1c:e7:ff:c0:a4:6b"
+      cert_thumbprint     = "61dbdad36f650a8f47c5068578f7ec9ed3a222fb"
+      cert_valid_from     = "2026-04-01"
+      cert_valid_to       = "2027-04-01"
+
+      country             = "CN"
+      state               = "Guangdong Sheng"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "1b:56:cb:4e:99:fb:94:44:64:5a:1c:e7:ff:c0:a4:6b"
+      )
+}
+
+rule MAL_Compromised_Cert_Cloudhaze_Sectigo_464C3DB5145EF83C753F8757F35F34FA {
+   meta:
+      description         = "Detects Cloudhaze with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-26"
+      version             = "1.0"
+
+      hash                = "f4e255dfdf3d23774b0067797cac0f986f1690abbeec217eb60029dcaa7425f8"
+      malware             = "Cloudhaze"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Amir Dow"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA R36"
+      cert_serial         = "46:4c:3d:b5:14:5e:f8:3c:75:3f:87:57:f3:5f:34:fa"
+      cert_thumbprint     = "bab1402518ec594d9c052872c6ab4d1b14a7dbc8"
+      cert_valid_from     = "2025-11-26"
+      cert_valid_to       = "2028-11-25"
+
+      country             = "IL"
+      state               = "Tel Aviv"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA R36" and
+         sig.serial == "46:4c:3d:b5:14:5e:f8:3c:75:3f:87:57:f3:5f:34:fa"
+      )
+}
+
+rule MAL_Compromised_Cert_Cloudhaze_Sectigo_D25F883C5D74CE4399BFC29D85EF3263 {
+   meta:
+      description         = "Detects Cloudhaze with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-09"
+      version             = "1.0"
+
+      hash                = "7e71e072fbf39e4aaebad71c0e9e3443f9a4455faf687eb87264019cac342c31"
+      malware             = "Cloudhaze"
+      malware_type        = "Backdoor"
+      malware_notes       = ""
+
+      signer              = "Xiamen Jinduoduo Technology Consulting Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "d2:5f:88:3c:5d:74:ce:43:99:bf:c2:9d:85:ef:32:63"
+      cert_thumbprint     = "5c0180432cdd93605d1ec2350a0f5b65978e2e22"
+      cert_valid_from     = "2026-03-09"
+      cert_valid_to       = "2027-03-09"
+
+      country             = "CN"
+      state               = "Fujian Sheng"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "d2:5f:88:3c:5d:74:ce:43:99:bf:c2:9d:85:ef:32:63"
       )
 }
 
@@ -38077,6 +38427,41 @@ rule MAL_Compromised_Cert_MeshAgent_GlobalSign_5D35276009EC70A2818D3B24 {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "5d:35:27:60:09:ec:70:a2:81:8d:3b:24"
+      )
+}
+
+rule MAL_Compromised_Cert_MeshAgent_SSL_com_A9FF55228926F50BD47C72A9CFFA41D {
+   meta:
+      description         = "Detects MeshAgent with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-24"
+      version             = "1.0"
+
+      hash                = "76f4053fc0d639591b809faf3d9bdc5758dcdabe8fc4a07ae87008988fbcee81"
+      malware             = "MeshAgent"
+      malware_type        = "Remote access tool"
+      malware_notes       = "https://rogueauthority.org/signed-werkstatt-agent-fake-lock-screen"
+
+      signer              = "ALI YILDIZ"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "a9:ff:55:22:89:26:f5:0b:d4:7c:72:a9:cf:fa:41:d"
+      cert_thumbprint     = "798f0005b7da9ec4cab69996991d249db4a2b7c0"
+      cert_valid_from     = "2026-02-24"
+      cert_valid_to       = "2027-02-23"
+
+      country             = "IT"
+      state               = "Napoli"
+      locality            = "Afragola"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "a9:ff:55:22:89:26:f5:0b:d4:7c:72:a9:cf:fa:41:d"
       )
 }
 
