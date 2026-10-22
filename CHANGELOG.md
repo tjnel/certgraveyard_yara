@@ -4,6 +4,19 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.10.22] - 2026-10-22
+
+### Added
+- MAL_Compromised_Cert_FakeRMM_Sectigo_4A7D05F4B7794921AF0D8CEDE8E1EA09 (FakeRMM - Sectigo)
+- MAL_Compromised_Cert_PackClient_Certum_581F78AE1E23067BAFF8F1A57A73B718 (PackClient - Certum)
+- MAL_Compromised_Cert_CrocoRAT_SSL_com_473D28E38B9BC50ABE922C40C214810C (CrocoRAT - SSL.com)
+- MAL_Compromised_Cert_RdViewer_Certum_307C66616935C754188F8100AE5AFF49 (RdViewer - Certum)
+- MAL_Compromised_Cert_CastleLoader_SSL_com_470613F0D1D9F36168DACDF8AE8C4D24 (CastleLoader - SSL.com)
+- MAL_Compromised_Cert_FakeRVTools_Sectigo_9561C75DBF05C26CB2DFDFF0E8E3ACA9 (FakeRVTools - Sectigo)
+
+### Modified
+- MAL_Compromised_Cert_RdViewer_Loader_Certum_2C858B90FCA6B39036B52387E3FF0AA2 (Updated metadata for RdViewer Loader)
+
 ## [2026.10.20] - 2026-10-20
 
 ### Added

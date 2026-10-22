@@ -7630,6 +7630,41 @@ rule MAL_Compromised_Cert_CastleLoader_SSL_com_1AB29E886DBAF6A0942AA73DA480DD91 
       )
 }
 
+rule MAL_Compromised_Cert_CastleLoader_SSL_com_470613F0D1D9F36168DACDF8AE8C4D24 {
+   meta:
+      description         = "Detects CastleLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-19"
+      version             = "1.0"
+
+      hash                = "ab299c3cf0dddff7283a2a96bd3f4610add08177793a2cb047255a5da5731d1d"
+      malware             = "CastleLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "AQUAMARINE ALLIANCE s.r.o."
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "47:06:13:f0:d1:d9:f3:61:68:da:cd:f8:ae:8c:4d:24"
+      cert_thumbprint     = "7AE605919A7F6C2EA788A1F90814160C222FF984"
+      cert_valid_from     = "2026-02-19"
+      cert_valid_to       = "2027-02-19"
+
+      country             = "CZ"
+      state               = "Jihomoravský kraj"
+      locality            = "Brno"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "47:06:13:f0:d1:d9:f3:61:68:da:cd:f8:ae:8c:4d:24"
+      )
+}
+
 rule MAL_Compromised_Cert_CastleLoader_SSL_com_511CD84EA13903383B6D752F8AD73B7D {
    meta:
       description         = "Detects CastleLoader with compromised cert (SSL.com)"
@@ -13332,6 +13367,41 @@ rule MAL_Compromised_Cert_CrocoRAT_SSL_com_2BFF385A538994844803B05524BFFBB0 {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
          sig.serial == "2b:ff:38:5a:53:89:94:84:48:03:b0:55:24:bf:fb:b0"
+      )
+}
+
+rule MAL_Compromised_Cert_CrocoRAT_SSL_com_473D28E38B9BC50ABE922C40C214810C {
+   meta:
+      description         = "Detects CrocoRAT with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-06-24"
+      version             = "1.0"
+
+      hash                = "de35dd440f4b55682b015290ce207b944b95ea8d4e2ff23023bcbd025c31d9a2"
+      malware             = "CrocoRAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "SOPHISTICATED SOFTWARES (PTY) LTD"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "47:3d:28:e3:8b:9b:c5:0a:be:92:2c:40:c2:14:81:0c"
+      cert_thumbprint     = "3c32afd70432f070d996eaaa946ebe79273f98c8"
+      cert_valid_from     = "2026-06-24"
+      cert_valid_to       = "2027-06-24"
+
+      country             = "ZA"
+      state               = "Free State"
+      locality            = "Virginia"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "47:3d:28:e3:8b:9b:c5:0a:be:92:2c:40:c2:14:81:0c"
       )
 }
 
@@ -22470,6 +22540,41 @@ rule MAL_Compromised_Cert_FakeRMM_SSL_com_31618F4DCEC27DC87917A80F27A84C00 {
       )
 }
 
+rule MAL_Compromised_Cert_FakeRMM_Sectigo_4A7D05F4B7794921AF0D8CEDE8E1EA09 {
+   meta:
+      description         = "Detects FakeRMM with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-03"
+      version             = "1.0"
+
+      hash                = "cbc7daf17c4feded3d25c3116e0c27ceda94268d1eb73ba65299b4fdd9d83ef6"
+      malware             = "FakeRMM"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "El Azab Olivier"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA R36"
+      cert_serial         = "4a:7d:05:f4:b7:79:49:21:af:0d:8c:ed:e8:e1:ea:09"
+      cert_thumbprint     = "7d1fd14eba16d8307b9f85a7b1d8ec426cd9d8f4"
+      cert_valid_from     = "2026-03-03"
+      cert_valid_to       = "2027-06-01"
+
+      country             = "FR"
+      state               = "Occitanie"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA R36" and
+         sig.serial == "4a:7d:05:f4:b7:79:49:21:af:0d:8c:ed:e8:e1:ea:09"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeRSSGuard_SSL_com_5387706609BB5AD3F52BCAFE1D73F849 {
    meta:
       description         = "Detects FakeRSSGuard with compromised cert (SSL.com)"
@@ -22642,6 +22747,41 @@ rule MAL_Compromised_Cert_FakeRVTools_Sectigo_4069675AB7D4E8D61699ABB3745AD415 {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "40:69:67:5a:b7:d4:e8:d6:16:99:ab:b3:74:5a:d4:15"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeRVTools_Sectigo_9561C75DBF05C26CB2DFDFF0E8E3ACA9 {
+   meta:
+      description         = "Detects FakeRVTools with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-06"
+      version             = "1.0"
+
+      hash                = "7281c360399e7124638f35040995dc417f2f6591f01522a9230105831d1d513d"
+      malware             = "FakeRVTools"
+      malware_type        = "Unknown"
+      malware_notes       = "Loads Action1 RMM"
+
+      signer              = "MAA AS"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "95:61:c7:5d:bf:05:c2:6c:b2:df:df:f0:e8:e3:ac:a9"
+      cert_thumbprint     = "a6431a8b9aec82ee20502a73a1a67a31fa73c58d"
+      cert_valid_from     = "2026-08-06"
+      cert_valid_to       = "2027-08-06"
+
+      country             = "NO"
+      state               = "Nordland"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "95:61:c7:5d:bf:05:c2:6c:b2:df:df:f0:e8:e3:ac:a9"
       )
 }
 
@@ -46060,6 +46200,41 @@ rule MAL_Compromised_Cert_PSBackdoor_GlobalSign_12F7A735DF3603B17CDE6352 {
       )
 }
 
+rule MAL_Compromised_Cert_PackClient_Certum_581F78AE1E23067BAFF8F1A57A73B718 {
+   meta:
+      description         = "Detects PackClient with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-04"
+      version             = "1.0"
+
+      hash                = "dc27bb3c16f98f11a2cdb88be7c4d3edf8348ce5b1a9334f5bd2e569f3cbf050"
+      malware             = "PackClient"
+      malware_type        = "Remote access tool"
+      malware_notes       = "https://rogueauthority.org/signed-silentsetup-packclient-rat-driver"
+
+      signer              = "Zaozhuang ZhongStore District HaoYouhao Department"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "58:1f:78:ae:1e:23:06:7b:af:f8:f1:a5:7a:73:b7:18"
+      cert_thumbprint     = "006511f1b0761653407c6720c9f95c4a9c2a7e5a"
+      cert_valid_from     = "2026-09-04"
+      cert_valid_to       = "2027-09-04"
+
+      country             = "CN"
+      state               = "山东省"
+      locality            = "枣庄市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "58:1f:78:ae:1e:23:06:7b:af:f8:f1:a5:7a:73:b7:18"
+      )
+}
+
 rule MAL_Compromised_Cert_ParallaxRAT_Certum_6DAA67498C3A5D8133F28FEFE9CCC20E {
    meta:
       description         = "Detects ParallaxRAT with compromised cert (Certum)"
@@ -53337,6 +53512,76 @@ rule MAL_Compromised_Cert_RaccoonStealer_Sectigo_7709D2DF39E9A4F7DB2F3CBC29B4974
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo RSA Code Signing CA" and
          sig.serial == "77:09:d2:df:39:e9:a4:f7:db:2f:3c:bc:29:b4:97:43"
+      )
+}
+
+rule MAL_Compromised_Cert_RdViewer_Certum_307C66616935C754188F8100AE5AFF49 {
+   meta:
+      description         = "Detects RdViewer with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-10-18"
+      version             = "1.0"
+
+      hash                = "b9115303dd3567ac75104a5a3d2bc0ce4fd7d697ebf258e61283cdf708d50133"
+      malware             = "RdViewer"
+      malware_type        = "Remote access tool"
+      malware_notes       = "https://rogueauthority.org/signed-disk-manager-installs-rdviewer-backdoor"
+
+      signer              = "黄张兴"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "30:7c:66:61:69:35:c7:54:18:8f:81:00:ae:5a:ff:49"
+      cert_thumbprint     = "0fa370c6efc1865dd3a2cc9e3089b969d30a15e4"
+      cert_valid_from     = "2026-10-18"
+      cert_valid_to       = "2027-10-18"
+
+      country             = "CN"
+      state               = "福建省"
+      locality            = "福州市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "30:7c:66:61:69:35:c7:54:18:8f:81:00:ae:5a:ff:49"
+      )
+}
+
+rule MAL_Compromised_Cert_RdViewer_Loader_Certum_2C858B90FCA6B39036B52387E3FF0AA2 {
+   meta:
+      description         = "Detects RdViewer Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-10-09"
+      version             = "1.0"
+
+      hash                = "e71149d889cc558e6328ea7ce3498cd858c26ab282cda9410ccc51f6275f7da6"
+      malware             = "RdViewer Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = "C2: 1.14.146.76   https://rogueauthority.org/signed-disk-manager-installs-rdviewer-backdoor"
+
+      signer              = "邓凯友"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "2c:85:8b:90:fc:a6:b3:90:36:b5:23:87:e3:ff:0a:a2"
+      cert_thumbprint     = "b90539c313ea3ae0f0aff70f4729d17040e88327"
+      cert_valid_from     = "2026-10-09"
+      cert_valid_to       = "2027-10-09"
+
+      country             = "CN"
+      state               = "湖南省"
+      locality            = "洪江市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "2c:85:8b:90:fc:a6:b3:90:36:b5:23:87:e3:ff:0a:a2"
       )
 }
 
