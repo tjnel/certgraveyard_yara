@@ -84840,6 +84840,41 @@ rule MAL_Compromised_Cert_Unknown_Certum_6116881CBADD579E680B600873B3A8E3 {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Certum_71EC769262102D63E053D47269E7E635 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-22"
+      version             = "1.0"
+
+      hash                = "73ab77da60d7196bce61405c615f8cd03a3157abffaf4a2447bd79fb8082da9f"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Code Blue Staffing Inc."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "71:ec:76:92:62:10:2d:63:e0:53:d4:72:69:e7:e6:35"
+      cert_thumbprint     = "f41e02b45eb637079920a49a52187f17c0816c7e"
+      cert_valid_from     = "2026-09-22"
+      cert_valid_to       = "2027-09-22"
+
+      country             = "CA"
+      state               = "Ontario"
+      locality            = "Toronto"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "71:ec:76:92:62:10:2d:63:e0:53:d4:72:69:e7:e6:35"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_Certum_748C413CBC2B00678EBA0E038B765A2D {
    meta:
       description         = "Detects Unknown with compromised cert (Certum)"
@@ -90437,6 +90472,41 @@ rule MAL_Compromised_Cert_Unknown_Microsoft_33000854EE38BDA872C785056D0000000854
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
          sig.serial == "33:00:08:54:ee:38:bd:a8:72:c7:85:05:6d:00:00:00:08:54:ee"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_RAT_Certum_74FB595ABCAEE8784E0437B3B0CB6A5C {
+   meta:
+      description         = "Detects Unknown RAT with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-03"
+      version             = "1.0"
+
+      hash                = "e34942601a91672eb0c9895b5a7a71dd4d7ef19acee1e2d6ec85834549b850f8"
+      malware             = "Unknown RAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "ZhongHaiCheng"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "74:fb:59:5a:bc:ae:e8:78:4e:04:37:b3:b0:cb:6a:5c"
+      cert_thumbprint     = "32c273cac8e320f235575851c489f6067b4cd4b5"
+      cert_valid_from     = "2026-08-03"
+      cert_valid_to       = "2027-08-03"
+
+      country             = "CN"
+      state               = "江西省"
+      locality            = "赣州市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "74:fb:59:5a:bc:ae:e8:78:4e:04:37:b3:b0:cb:6a:5c"
       )
 }
 
