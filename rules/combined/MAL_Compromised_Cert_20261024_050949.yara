@@ -5355,6 +5355,41 @@ rule MAL_Compromised_Cert_Byakugan_Stealer_Sectigo_25070F0FE83DFE736FC2C895DD7B4
       )
 }
 
+rule MAL_Compromised_Cert_CNCMachineRMS_Sectigo_34D898FA7A8CA1EC63FCF8FB76874AD3 {
+   meta:
+      description         = "Detects CNCMachineRMS with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-15"
+      version             = "1.0"
+
+      hash                = "b74b2bfc895f1205dfb389772b201a8e31b7bc4464ff3c4463b417626ecedb1c"
+      malware             = "CNCMachineRMS"
+      malware_type        = "Remote access tool"
+      malware_notes       = "https://rogueauthority.org/signed-teams-installer-calibre-babadeda-rat"
+
+      signer              = "Lway Firmware"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "34:d8:98:fa:7a:8c:a1:ec:63:fc:f8:fb:76:87:4a:d3"
+      cert_thumbprint     = "be76c3a78309a24f024365a6293d09a26adaa978"
+      cert_valid_from     = "2026-09-15"
+      cert_valid_to       = "2027-12-14"
+
+      country             = "FI"
+      state               = "Uusimaa"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "34:d8:98:fa:7a:8c:a1:ec:63:fc:f8:fb:76:87:4a:d3"
+      )
+}
+
 rule MAL_Compromised_Cert_Carbanak_Comodo_1D275376A1DB6BFEC5179E527E1D3A6B {
    meta:
       description         = "Detects Carbanak with compromised cert (Comodo)"
@@ -90475,6 +90510,41 @@ rule MAL_Compromised_Cert_Unknown_Microsoft_33000854EE38BDA872C785056D0000000854
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Microsoft_330008A0F38650BE3ECB9900AC00000008A0F3 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-10-18"
+      version             = "1.0"
+
+      hash                = "a8d7e195089b11db3c3c362a4f81b0eb6dc502f204993b73ef37ae0947306a35"
+      malware             = "Unknown"
+      malware_type        = "Backdoor"
+      malware_notes       = "https://rogueauthority.org/signed-peazip-msi-self-updating-dll-sideload"
+
+      signer              = "Listenmaa Consulting Oy"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:08:a0:f3:86:50:be:3e:cb:99:00:ac:00:00:00:08:a0:f3"
+      cert_thumbprint     = "49c705a25a81c82fe85f86a2379493ebeb93a128"
+      cert_valid_from     = "2026-10-18"
+      cert_valid_to       = "2026-10-21"
+
+      country             = "FI"
+      state               = "Uusimaa"
+      locality            = "Tampere"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:08:a0:f3:86:50:be:3e:cb:99:00:ac:00:00:00:08:a0:f3"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_RAT_Certum_74FB595ABCAEE8784E0437B3B0CB6A5C {
    meta:
       description         = "Detects Unknown RAT with compromised cert (Certum)"
@@ -98277,6 +98347,41 @@ rule MAL_Compromised_Cert_WailsLoader_Certum_2D6873822EEB8CAC36592A8F3C3FD634 {
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
          sig.serial == "2d:68:73:82:2e:eb:8c:ac:36:59:2a:8f:3c:3f:d6:34"
+      )
+}
+
+rule MAL_Compromised_Cert_WailsLoader_Certum_433B32C5980C90C05916CF25EB0DC7A5 {
+   meta:
+      description         = "Detects WailsLoader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-10"
+      version             = "1.0"
+
+      hash                = "a901bb05c72b20363a2f25ba12a2cc67eae0f6acf031d78a2f7f2de389ed84ff"
+      malware             = "WailsLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "YOUR CHANCE j.d.o.o."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "43:3b:32:c5:98:0c:90:c0:59:16:cf:25:eb:0d:c7:a5"
+      cert_thumbprint     = "980a6ccad38404410e319eed96ac32675bb8bfb3f558cbb06fa4c4cc563edb8c"
+      cert_valid_from     = "2026-09-10"
+      cert_valid_to       = "2027-09-10"
+
+      country             = "HR"
+      state               = "Grad Zagreb"
+      locality            = "Zagreb"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "43:3b:32:c5:98:0c:90:c0:59:16:cf:25:eb:0d:c7:a5"
       )
 }
 
