@@ -10080,6 +10080,41 @@ rule MAL_Compromised_Cert_Cloudhaze_Microsoft_330001788B3E825C8401C7B2A200000001
       )
 }
 
+rule MAL_Compromised_Cert_Cloudhaze_Microsoft_3300030C217D23BC4078CAE8F3000000030C21 {
+   meta:
+      description         = "Detects Cloudhaze with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-10"
+      version             = "1.0"
+
+      hash                = "8644bb2ba39ddad352e82cc8fc827986940dec126527ed1cb6fa532e002bea86"
+      malware             = "Cloudhaze"
+      malware_type        = "Remote access tool"
+      malware_notes       = "https://rogueauthority.org/quartzline-signed-pdf-viewer-zenith-backdoor"
+
+      signer              = "ZEPHYR LAWN CARE, LLC"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 03"
+      cert_serial         = "33:00:03:0c:21:7d:23:bc:40:78:ca:e8:f3:00:00:00:03:0c:21"
+      cert_thumbprint     = "59517e26a7a896c68a54d121f04cb156d5860e58"
+      cert_valid_from     = "2026-07-10"
+      cert_valid_to       = "2026-07-13"
+
+      country             = "US"
+      state               = "Florida"
+      locality            = "Zephyrhills"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 03" and
+         sig.serial == "33:00:03:0c:21:7d:23:bc:40:78:ca:e8:f3:00:00:00:03:0c:21"
+      )
+}
+
 rule MAL_Compromised_Cert_Cloudhaze_Microsoft_330003B9A0291CB60C6158E9C400000003B9A0 {
    meta:
       description         = "Detects Cloudhaze with compromised cert (Microsoft)"
@@ -84980,6 +85015,41 @@ rule MAL_Compromised_Cert_Unknown_Certum_77185BFDFD072CE4944A6123C38C8001 {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Certum_774888DF65E533EFAE99F32E0E58AF83 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-18"
+      version             = "1.0"
+
+      hash                = "86fd0662ac051a0bea219d758e49d52a194c0ff40718f59ffa702cba4fce3a8b"
+      malware             = "Unknown"
+      malware_type        = "Backdoor"
+      malware_notes       = "https://rogueauthority.org/signed-windowsdefender-msi-rust-remote-shell"
+
+      signer              = "Kovalainen Software Oy"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "77:48:88:df:65:e5:33:ef:ae:99:f3:2e:0e:58:af:83"
+      cert_thumbprint     = "e1dd5e59029a66b1e6dab589ca0ad5bec5f3a8dc"
+      cert_valid_from     = "2026-08-18"
+      cert_valid_to       = "2027-08-18"
+
+      country             = "FI"
+      state               = "Pirkanmaa"
+      locality            = "Tampere"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "77:48:88:df:65:e5:33:ef:ae:99:f3:2e:0e:58:af:83"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_Certum_7DD8BDEDD9E79593FBE0C25B114670A6 {
    meta:
       description         = "Detects Unknown with compromised cert (Certum)"
@@ -99537,6 +99607,41 @@ rule MAL_Compromised_Cert_WinVnc_GlobalSign_0C800473CA8670527339B6DE {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "0c:80:04:73:ca:86:70:52:73:39:b6:de"
+      )
+}
+
+rule MAL_Compromised_Cert_WinVnc_Sectigo_00F05924EC9773670078009B98FDD4EE8C {
+   meta:
+      description         = "Detects WinVnc with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-16"
+      version             = "1.0"
+
+      hash                = "57234adeec71c84e6dc9d353f4a250d3c8da2e9a05e6f9090045b53c50d01ad6"
+      malware             = "WinVnc"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "ARONEL LTD"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV E36"
+      cert_serial         = "00:f0:59:24:ec:97:73:67:00:78:00:9b:98:fd:d4:ee:8c"
+      cert_thumbprint     = "D57A6E28388CEF0B66D3B30CEBEC3D599122A624"
+      cert_valid_from     = "2026-03-16"
+      cert_valid_to       = "2027-03-09"
+
+      country             = "GB"
+      state               = "England"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV E36" and
+         sig.serial == "00:f0:59:24:ec:97:73:67:00:78:00:9b:98:fd:d4:ee:8c"
       )
 }
 

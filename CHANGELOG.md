@@ -4,6 +4,13 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.10.27] - 2026-10-27
+
+### Added
+- MAL_Compromised_Cert_WinVnc_Sectigo_00F05924EC9773670078009B98FDD4EE8C (WinVnc - Sectigo)
+- MAL_Compromised_Cert_Unknown_Certum_774888DF65E533EFAE99F32E0E58AF83 (Unknown - Certum)
+- MAL_Compromised_Cert_Cloudhaze_Microsoft_3300030C217D23BC4078CAE8F3000000030C21 (Cloudhaze - Microsoft)
+
 ## [2026.10.24] - 2026-10-24
 
 ### Added
