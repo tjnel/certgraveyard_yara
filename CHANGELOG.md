@@ -4,6 +4,11 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.10.28] - 2026-10-28
+
+### Added
+- MAL_Compromised_Cert_cloakguard_agent_SSL_com_414D426BD6F09FC60814AF48F5BB4942 (cloakguard-agent - SSL.com)
+
 ## [2026.10.27] - 2026-10-27
 
 ### Added
