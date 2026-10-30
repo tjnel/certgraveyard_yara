@@ -88620,6 +88620,41 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_69244B6035ED2277724A2F15 {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_GlobalSign_69334CF0DED320F3CD343F3D {
+   meta:
+      description         = "Detects Unknown with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-07"
+      version             = "1.0"
+
+      hash                = "a967b46481f77ce9bdd6e57afe858943dd5c03e8810a95e3223c9b2ccec06ec6"
+      malware             = "Unknown"
+      malware_type        = "Backdoor"
+      malware_notes       = "https://rogueauthority.org/signed-touch-controller-mtls-stager"
+
+      signer              = "AirTiki ApS"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "69:33:4c:f0:de:d3:20:f3:cd:34:3f:3d"
+      cert_thumbprint     = "f8908f37cb07e4324c69d19974ad8f25a1e1cc81"
+      cert_valid_from     = "2026-08-07"
+      cert_valid_to       = "2027-08-08"
+
+      country             = "DK"
+      state               = "Region Zealand"
+      locality            = "Nysted"
+      email               = "ole@airtioki.com"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "69:33:4c:f0:de:d3:20:f3:cd:34:3f:3d"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_GlobalSign_698356C5673C3623754A7B32 {
    meta:
       description         = "Detects Unknown with compromised cert (GlobalSign)"
@@ -95057,6 +95092,41 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_92202D290290ED999923B2B060009503 {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "92:20:2d:29:02:90:ed:99:99:23:b2:b0:60:00:95:03"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Sectigo_B683AFC8350CA6388FFB39194E094B09 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-10-17"
+      version             = "1.0"
+
+      hash                = "698ba27e47db93bf9d0624e42b64037dd0b9e29d5a01e502d6a93dee3f96cb5d"
+      malware             = "Unknown"
+      malware_type        = "Backdoor"
+      malware_notes       = "https://rogueauthority.org/signed-putty-installer-nodejs-loader"
+
+      signer              = "Lille Lykke Gave og Interiør ANS"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "b6:83:af:c8:35:0c:a6:38:8f:fb:39:19:4e:09:4b:09"
+      cert_thumbprint     = "e704929aa80a5eaeed9f88a9b01914735b897533"
+      cert_valid_from     = "2026-10-17"
+      cert_valid_to       = "2027-10-17"
+
+      country             = "NO"
+      state               = "Østfold"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "b6:83:af:c8:35:0c:a6:38:8f:fb:39:19:4e:09:4b:09"
       )
 }
 

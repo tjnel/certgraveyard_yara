@@ -4,6 +4,12 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.10.30] - 2026-10-30
+
+### Added
+- MAL_Compromised_Cert_Unknown_GlobalSign_69334CF0DED320F3CD343F3D (Unknown - GlobalSign)
+- MAL_Compromised_Cert_Unknown_Sectigo_B683AFC8350CA6388FFB39194E094B09 (Unknown - Sectigo)
+
 ## [2026.10.28] - 2026-10-28
 
 ### Added
