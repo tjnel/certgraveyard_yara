@@ -22750,6 +22750,41 @@ rule MAL_Compromised_Cert_FakeRVTools_GlobalSign_152BE2DC6D8F554095868AB6 {
       )
 }
 
+rule MAL_Compromised_Cert_FakeRVTools_SSL_com_2A675AF2BBF9D9477854BE7409A5DA44 {
+   meta:
+      description         = "Detects FakeRVTools with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-16"
+      version             = "1.0"
+
+      hash                = "b25a752117a9f7072929b88771a281fc7a412a2955b087ef6b3741e8a2434343"
+      malware             = "FakeRVTools"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Demarcus Terrell Alexander"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "2a:67:5a:f2:bb:f9:d9:47:78:54:be:74:09:a5:da:44"
+      cert_thumbprint     = "4fde8da58c639e77000df6f7f1fada3061cf0a71"
+      cert_valid_from     = "2026-08-16"
+      cert_valid_to       = "2027-08-16"
+
+      country             = "US"
+      state               = "Georgia"
+      locality            = "Rome"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "2a:67:5a:f2:bb:f9:d9:47:78:54:be:74:09:a5:da:44"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeRVTools_Sectigo_00A80D45D8AC1F17837FA46C66DDE70057 {
    meta:
       description         = "Detects FakeRVTools with compromised cert (Sectigo)"
@@ -27857,6 +27892,41 @@ rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_4C7F6FF1482D879279B36DB214E
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
          sig.serial == "4c:7f:6f:f1:48:2d:87:92:79:b3:6d:b2:14:e5:75:25"
+      )
+}
+
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_5923499141496B67BB7B4687809454B {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-13"
+      version             = "1.0"
+
+      hash                = "21498faad7283839d0b055c618693eb2affe910b6e8d030592d92a94cd266144"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Hangzhou Yueque Li Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "59:23:49:91:41:49:6b:67:bb:7b:46:87:80:94:54:b"
+      cert_thumbprint     = "950cee0cf90d33f1264430fb59dd391ee37b3698"
+      cert_valid_from     = "2026-08-13"
+      cert_valid_to       = "2027-08-13"
+
+      country             = "CN"
+      state               = "Zhejiang"
+      locality            = "Hangzhou"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "59:23:49:91:41:49:6b:67:bb:7b:46:87:80:94:54:b"
       )
 }
 
