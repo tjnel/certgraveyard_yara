@@ -80045,6 +80045,41 @@ rule MAL_Compromised_Cert_Traffer_Sectigo_60C9A3E24ACBE0213443A16196701206 {
       )
 }
 
+rule MAL_Compromised_Cert_Traffer_Sectigo_9A08C56B2270D3359DBACAE4A9F47E02 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-07-20"
+      version             = "1.0"
+
+      hash                = "e5634f9e2668fffdaffe257bbe4d8eee07c02fb9435fe82c753387f544f87cf0"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "CODE LOFTS d.o.o."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "9a:08:c5:6b:22:70:d3:35:9d:ba:ca:e4:a9:f4:7e:02"
+      cert_thumbprint     = "f84036806715099004b1f59802b78c2a97162ec1"
+      cert_valid_from     = "2026-07-20"
+      cert_valid_to       = "2027-07-20"
+
+      country             = "HR"
+      state               = "Splitsko-dalmatinska županija"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "9a:08:c5:6b:22:70:d3:35:9d:ba:ca:e4:a9:f4:7e:02"
+      )
+}
+
 rule MAL_Compromised_Cert_Traffer_Sectigo_C9F72B34ACD7B6FAA6A1F6BA17013CFC {
    meta:
       description         = "Detects Traffer with compromised cert (Sectigo)"
@@ -84382,6 +84417,41 @@ rule MAL_Compromised_Cert_Unknown_Certum_340BA8AB586FC04A7027100037082DC4 {
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Code Signing 2021 CA" and
          sig.serial == "34:0b:a8:ab:58:6f:c0:4a:70:27:10:00:37:08:2d:c4"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Certum_3538CC642D4C910E8EBB661B9B4FE253 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-23"
+      version             = "1.0"
+
+      hash                = "a62c87a28f32b2a2965653f587cd3cfdcc42d13a59bc365261adc7cd342235cc"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "松原市球记网络科技有限公司"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "35:38:cc:64:2d:4c:91:0e:8e:bb:66:1b:9b:4f:e2:53"
+      cert_thumbprint     = "3d50618a104834e84d2f39fde402939558b67299"
+      cert_valid_from     = "2026-03-23"
+      cert_valid_to       = "2027-03-23"
+
+      country             = "CN"
+      state               = "吉林"
+      locality            = "松原"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "35:38:cc:64:2d:4c:91:0e:8e:bb:66:1b:9b:4f:e2:53"
       )
 }
 
