@@ -62615,6 +62615,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_330008C821DB63CCCBAD133D
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000A54CE2086985A71A1681D0000000A54CE {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-11-01"
+      version             = "1.0"
+
+      hash                = "61e6fe15b423177661294e31bf32f9112bfb531a71a79327eb8dbc732278e8c1"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "ITTC"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:0a:54:ce:20:86:98:5a:71:a1:68:1d:00:00:00:0a:54:ce"
+      cert_thumbprint     = "99ee47f4e5f3edfda534fa5626c38c800cddb1cd"
+      cert_valid_from     = "2026-11-01"
+      cert_valid_to       = "2026-11-04"
+
+      country             = "NL"
+      state               = "Utrecht"
+      locality            = "Urecht"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:0a:54:ce:20:86:98:5a:71:a1:68:1d:00:00:00:0a:54:ce"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_087711DDF512753346533330D4E96B11 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (SSL.com)"
@@ -92957,6 +92992,41 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_6BEDCE92A6154B7E7E52ECE2FC8D0CC3 {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
          sig.serial == "6b:ed:ce:92:a6:15:4b:7e:7e:52:ec:e2:fc:8d:0c:c3"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_SSL_com_6DBB6DD7243B97569D7EC15DAB2D1A10 {
+   meta:
+      description         = "Detects Unknown with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-10-27"
+      version             = "1.0"
+
+      hash                = "fbdcf1c1ef19a5bef2c9ca43b3685aa5dacd78b7b071a90ced67ead83b736fa7"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Melvin Jackson"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "6d:bb:6d:d7:24:3b:97:56:9d:7e:c1:5d:ab:2d:1a:10"
+      cert_thumbprint     = "6ce6c6213247058b4a7f11ff70d75c7afa218fd8"
+      cert_valid_from     = "2026-10-27"
+      cert_valid_to       = "2027-10-27"
+
+      country             = "US"
+      state               = "Florida"
+      locality            = "Orlando"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "6d:bb:6d:d7:24:3b:97:56:9d:7e:c1:5d:ab:2d:1a:10"
       )
 }
 
