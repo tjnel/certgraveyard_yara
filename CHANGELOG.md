@@ -4,6 +4,11 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.11.06] - 2026-11-06
+
+### Added
+- MAL_Compromised_Cert_CobaltStrike_Microsoft_33000ABE9A8210147FF23E84A50000000ABE9A (CobaltStrike - Microsoft)
+
 ## [2026.11.05] - 2026-11-05
 
 ### Added
