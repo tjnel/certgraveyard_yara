@@ -53795,6 +53795,41 @@ rule MAL_Compromised_Cert_RaccoonStealer_Sectigo_7709D2DF39E9A4F7DB2F3CBC29B4974
       )
 }
 
+rule MAL_Compromised_Cert_RdViewer_Certum_23FF0D00EE80E58892220C95AE8EA33B {
+   meta:
+      description         = "Detects RdViewer with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-11-02"
+      version             = "1.0"
+
+      hash                = "06fc08506f84d43bc1ede3a4c152dd9a6646e65c9901f72d79c7c4d7a834db19"
+      malware             = "RdViewer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "安云鹏"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "23:ff:0d:00:ee:80:e5:88:92:22:0c:95:ae:8e:a3:3b"
+      cert_thumbprint     = "f10ad5627a33cd3b5a3d81a3721f1cab9db62b5d"
+      cert_valid_from     = "2026-11-02"
+      cert_valid_to       = "2027-11-02"
+
+      country             = "CN"
+      state               = "安徽省"
+      locality            = "六安市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "23:ff:0d:00:ee:80:e5:88:92:22:0c:95:ae:8e:a3:3b"
+      )
+}
+
 rule MAL_Compromised_Cert_RdViewer_Certum_307C66616935C754188F8100AE5AFF49 {
    meta:
       description         = "Detects RdViewer with compromised cert (Certum)"
@@ -53827,6 +53862,41 @@ rule MAL_Compromised_Cert_RdViewer_Certum_307C66616935C754188F8100AE5AFF49 {
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Code Signing 2021 CA" and
          sig.serial == "30:7c:66:61:69:35:c7:54:18:8f:81:00:ae:5a:ff:49"
+      )
+}
+
+rule MAL_Compromised_Cert_RdViewer_Certum_5ABB6B22CC40B9A35B7567962A5DF318 {
+   meta:
+      description         = "Detects RdViewer with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-11-05"
+      version             = "1.0"
+
+      hash                = "ff53740f61b315bfd8fe8276b50957ae5523272c1454347bccff4466a04f6d98"
+      malware             = "RdViewer"
+      malware_type        = "Unknown"
+      malware_notes       = "https://rogueauthority.org/signed-disk-manager-installs-rdviewer-backdoor"
+
+      signer              = "尹昌贵"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "5a:bb:6b:22:cc:40:b9:a3:5b:75:67:96:2a:5d:f3:18"
+      cert_thumbprint     = "173e900fecb797e20491936cec92abfa5ccdefdb"
+      cert_valid_from     = "2026-11-05"
+      cert_valid_to       = "2027-11-05"
+
+      country             = "CN"
+      state               = "安徽省"
+      locality            = "泾县"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "5a:bb:6b:22:cc:40:b9:a3:5b:75:67:96:2a:5d:f3:18"
       )
 }
 
@@ -58727,6 +58797,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Certum_6002EF4359609E6BE08215CC40F
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Code Signing 2021 CA" and
          sig.serial == "60:02:ef:43:59:60:9e:6b:e0:82:15:cc:40:f9:b3:77"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Certum_7CE7A642BF5EFBED33B9092AB3F479EB {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-23"
+      version             = "1.0"
+
+      hash                = "4447a7c59c27fcf169ea49a5000749aa6e87f753dba9bf03b26f95538b2185e0"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "儋州森珀网络科技有限公司"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "7c:e7:a6:42:bf:5e:fb:ed:33:b9:09:2a:b3:f4:79:eb"
+      cert_thumbprint     = "c9846658605ac4028cd447c116be0dc8cdd90236"
+      cert_valid_from     = "2026-03-23"
+      cert_valid_to       = "2027-03-23"
+
+      country             = "CN"
+      state               = "海南"
+      locality            = "儋州"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "7c:e7:a6:42:bf:5e:fb:ed:33:b9:09:2a:b3:f4:79:eb"
       )
 }
 
