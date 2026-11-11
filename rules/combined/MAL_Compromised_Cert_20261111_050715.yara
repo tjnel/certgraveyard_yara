@@ -46410,6 +46410,41 @@ rule MAL_Compromised_Cert_PDFizer_SSL_com_5226A47E8A783FB03F836ECB18C746DE {
       )
 }
 
+rule MAL_Compromised_Cert_PDFizer_Sectigo_50B128AE80A9911AAAC467414F5BF51A {
+   meta:
+      description         = "Detects PDFizer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-03"
+      version             = "1.0"
+
+      hash                = "58ef72c97c66fd8385b7e708c9f4f3a47abdb6baf402b821de0d194a5332b3d9"
+      malware             = "PDFizer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Muhammad Ibrahim"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA R36"
+      cert_serial         = "50:b1:28:ae:80:a9:91:1a:aa:c4:67:41:4f:5b:f5:1a"
+      cert_thumbprint     = "f01460af7ee7e12942896401eac47c7162f6dc10"
+      cert_valid_from     = "2026-08-03"
+      cert_valid_to       = "2027-08-03"
+
+      country             = "PK"
+      state               = "Punjab"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA R36" and
+         sig.serial == "50:b1:28:ae:80:a9:91:1a:aa:c4:67:41:4f:5b:f5:1a"
+      )
+}
+
 rule MAL_Compromised_Cert_PDFusion_GlobalSign_538F0DC7777C4F5A602D8A14 {
    meta:
       description         = "Detects PDFusion with compromised cert (GlobalSign)"
@@ -91732,6 +91767,41 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_219611E14FA18CE517821CEFBA2AD1C9 {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "21:96:11:e1:4f:a1:8c:e5:17:82:1c:ef:ba:2a:d1:c9"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_SSL_com_237DD9C69CE233B0CF24AA24AA803DA4 {
+   meta:
+      description         = "Detects Unknown with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-08-07"
+      version             = "1.0"
+
+      hash                = "adf0957559b8914b125ef263959f2882481df3b5dd0472888bf07e4e455a5d34"
+      malware             = "Unknown"
+      malware_type        = "Backdoor"
+      malware_notes       = ""
+
+      signer              = "Barbaros Cetinkaya"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "23:7d:d9:c6:9c:e2:33:b0:cf:24:aa:24:aa:80:3d:a4"
+      cert_thumbprint     = "be64832b8f071014568014727bdfe0e9e4ce6f0b"
+      cert_valid_from     = "2025-08-07"
+      cert_valid_to       = "2026-08-07"
+
+      country             = "DE"
+      state               = "Bavaria"
+      locality            = "Stein"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "23:7d:d9:c6:9c:e2:33:b0:cf:24:aa:24:aa:80:3d:a4"
       )
 }
 
