@@ -4,6 +4,22 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.11.13] - 2026-11-13
+
+### Added
+- MAL_Compromised_Cert_TamperedChef_Sectigo_454981B689399CF22E25587C243C3311 (TamperedChef - Sectigo)
+- MAL_Compromised_Cert_Unknown_Sectigo_8A52C5FFE70C4449C624C47CDC4214DF (Unknown - Sectigo)
+- MAL_Compromised_Cert_TamperedChef_SSL_com_67FBC798B53502F9513295D1CD917B34 (TamperedChef - SSL.com)
+- MAL_Compromised_Cert_FakeWallet_SSL_com_6C3EFF7D65CCF7EDD19774BD3C77F3A7 (FakeWallet - SSL.com)
+- MAL_Compromised_Cert_TamperedChef_GlobalSign_2A9BDB27841077D5B9E63C58 (TamperedChef - GlobalSign)
+- MAL_Compromised_Cert_Unknown_GlobalSign_660397BCD702EFA1C80BD5BC (Unknown - GlobalSign)
+- MAL_Compromised_Cert_TamperedChef_GlobalSign_6D47F754A853EAF42E7FCD02 (TamperedChef - GlobalSign)
+- MAL_Compromised_Cert_TamperedChef_GlobalSign_50BC6F42A2B37812B1273009 (TamperedChef - GlobalSign)
+- MAL_Compromised_Cert_TamperedChef_Sectigo_672D1B6FFC643916AC69BBF4DBAA0B0F (TamperedChef - Sectigo)
+- MAL_Compromised_Cert_TamperedChef_Sectigo_DABB775277835052BC6E8EBBA835AB1 (TamperedChef - Sectigo)
+- MAL_Compromised_Cert_TamperedChef_Certum_5C1A74171954558211ACB8ABC9E16EE (TamperedChef - Certum)
+- MAL_Compromised_Cert_RdViewer_Certum_6174F87754675B7F8454AABB0728A976 (RdViewer - Certum)
+
 ## [2026.11.12] - 2026-11-12
 
 ### Added

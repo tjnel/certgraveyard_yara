@@ -23905,6 +23905,41 @@ rule MAL_Compromised_Cert_FakeWallet_GlobalSign_505112BB8C61117FD1F062FF {
       )
 }
 
+rule MAL_Compromised_Cert_FakeWallet_SSL_com_6C3EFF7D65CCF7EDD19774BD3C77F3A7 {
+   meta:
+      description         = "Detects FakeWallet with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-10-09"
+      version             = "1.0"
+
+      hash                = "e07733f7f88908ff3e0cab4e1c4061221deeb58cfb188d9de4affe79c92a99a2"
+      malware             = "FakeWallet"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Kalkidan Bekele"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "6c:3e:ff:7d:65:cc:f7:ed:d1:97:74:bd:3c:77:f3:a7"
+      cert_thumbprint     = "624d77b7636af52bf0ee5c2b719dc5c4f1e4cb12"
+      cert_valid_from     = "2026-10-09"
+      cert_valid_to       = "2027-10-09"
+
+      country             = "US"
+      state               = "Virginia"
+      locality            = "Alexandria"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "6c:3e:ff:7d:65:cc:f7:ed:d1:97:74:bd:3c:77:f3:a7"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeWallet_SSL_com_74CC097BCA0EBAE54EC126E526AC20DC {
    meta:
       description         = "Detects FakeWallet with compromised cert (SSL.com)"
@@ -53935,6 +53970,41 @@ rule MAL_Compromised_Cert_RdViewer_Certum_5ABB6B22CC40B9A35B7567962A5DF318 {
       )
 }
 
+rule MAL_Compromised_Cert_RdViewer_Certum_6174F87754675B7F8454AABB0728A976 {
+   meta:
+      description         = "Detects RdViewer with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-11-09"
+      version             = "1.0"
+
+      hash                = "d23a2c243743d961741caeb69cd23c42b6f516d081d5f8dfe9e508e467ee3dd7"
+      malware             = "RdViewer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "李维"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "61:74:f8:77:54:67:5b:7f:84:54:aa:bb:07:28:a9:76"
+      cert_thumbprint     = "aa8589abf626710a31b405a6fff15d07bed5bc21"
+      cert_valid_from     = "2026-11-09"
+      cert_valid_to       = "2027-11-09"
+
+      country             = "CN"
+      state               = "湖南省"
+      locality            = "常德市"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "61:74:f8:77:54:67:5b:7f:84:54:aa:bb:07:28:a9:76"
+      )
+}
+
 rule MAL_Compromised_Cert_RdViewer_Certum_75867F08AE0987F7B17CBA1F4083DFAD {
    meta:
       description         = "Detects RdViewer with compromised cert (Certum)"
@@ -78050,6 +78120,76 @@ rule MAL_Compromised_Cert_T_21_Microsoft_330008B848DE58FB7275A382FF00000008B848 
       )
 }
 
+rule MAL_Compromised_Cert_TamperedChef_Certum_5C1A74171954558211ACB8ABC9E16EE {
+   meta:
+      description         = "Detects TamperedChef with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-27"
+      version             = "1.0"
+
+      hash                = "af74f8974df1bff1c938a6f8f585cc8b5f370c98d41e7c5f476a4abda3cbfa2e"
+      malware             = "TamperedChef"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Net Sourcing Experts LLC"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "5c:1a:74:17:19:54:55:82:11:ac:b8:ab:c9:e1:6e:e"
+      cert_thumbprint     = "98c987e4871012eead71cb5f351ce4e2357d9688"
+      cert_valid_from     = "2026-02-27"
+      cert_valid_to       = "2027-02-27"
+
+      country             = "UA"
+      state               = "Kyiv"
+      locality            = "Kyiv"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "5c:1a:74:17:19:54:55:82:11:ac:b8:ab:c9:e1:6e:e"
+      )
+}
+
+rule MAL_Compromised_Cert_TamperedChef_GlobalSign_2A9BDB27841077D5B9E63C58 {
+   meta:
+      description         = "Detects TamperedChef with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-08"
+      version             = "1.0"
+
+      hash                = "227a0c8bf9abc7261971daf865b23fdffb4e63dce9018ab1caef58c36aea342e"
+      malware             = "TamperedChef"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "UTAH TECHNICAL, LLC"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "2a:9b:db:27:84:10:77:d5:b9:e6:3c:58"
+      cert_thumbprint     = "c421630000b4f3001fe831a1f3eb0007e0d69ddb"
+      cert_valid_from     = "2026-05-08"
+      cert_valid_to       = "2027-05-09"
+
+      country             = "US"
+      state               = "Georgia"
+      locality            = "Alpharetta"
+      email               = "devops@utahtechnologylabs.com"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "2a:9b:db:27:84:10:77:d5:b9:e6:3c:58"
+      )
+}
+
 rule MAL_Compromised_Cert_TamperedChef_GlobalSign_3468B8E920EB67F7272B6D59 {
    meta:
       description         = "Detects TamperedChef with compromised cert (GlobalSign)"
@@ -78120,6 +78260,76 @@ rule MAL_Compromised_Cert_TamperedChef_GlobalSign_4BC8E9DA91CB67F9EA1B6079 {
       )
 }
 
+rule MAL_Compromised_Cert_TamperedChef_GlobalSign_50BC6F42A2B37812B1273009 {
+   meta:
+      description         = "Detects TamperedChef with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-16"
+      version             = "1.0"
+
+      hash                = "b73fe3ba92396c2a051619b13b55e8e8f67b0a6b28b9888ced976047e50f5d9e"
+      malware             = "TamperedChef"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Launch Window, LLC"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "50:bc:6f:42:a2:b3:78:12:b1:27:30:09"
+      cert_thumbprint     = "3bef796b3c1d09768f1525e7163d8705ecf21e2f"
+      cert_valid_from     = "2026-02-16"
+      cert_valid_to       = "2027-02-17"
+
+      country             = "US"
+      state               = "North Carolina"
+      locality            = "Raleigh"
+      email               = "adam@launchwindowtech.com"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "50:bc:6f:42:a2:b3:78:12:b1:27:30:09"
+      )
+}
+
+rule MAL_Compromised_Cert_TamperedChef_GlobalSign_6D47F754A853EAF42E7FCD02 {
+   meta:
+      description         = "Detects TamperedChef with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-19"
+      version             = "1.0"
+
+      hash                = "0c19ea5b0e0f646bd0cab476f8b38e57f282399e6489075e1ea66066f5925c9d"
+      malware             = "TamperedChef"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Alternate Financial, LLC"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "6d:47:f7:54:a8:53:ea:f4:2e:7f:cd:02"
+      cert_thumbprint     = "e4f3e398dbe646536d5dacf0f25f14563004b7a2"
+      cert_valid_from     = "2026-03-19"
+      cert_valid_to       = "2027-03-20"
+
+      country             = "US"
+      state               = "Virginia"
+      locality            = "Virginia Beach"
+      email               = "greg@alternatefintech.com"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "6d:47:f7:54:a8:53:ea:f4:2e:7f:cd:02"
+      )
+}
+
 rule MAL_Compromised_Cert_TamperedChef_SSL_com_0126D2B7817E53EB6C540A8E5696EE3D {
    meta:
       description         = "Detects TamperedChef with compromised cert (SSL.com)"
@@ -78152,6 +78362,146 @@ rule MAL_Compromised_Cert_TamperedChef_SSL_com_0126D2B7817E53EB6C540A8E5696EE3D 
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "01:26:d2:b7:81:7e:53:eb:6c:54:0a:8e:56:96:ee:3d"
+      )
+}
+
+rule MAL_Compromised_Cert_TamperedChef_SSL_com_67FBC798B53502F9513295D1CD917B34 {
+   meta:
+      description         = "Detects TamperedChef with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-18"
+      version             = "1.0"
+
+      hash                = "40798b13e16d6a83cf5b828d7eca110b433eaabf8ca5c83511425eb24bbaee4f"
+      malware             = "TamperedChef"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "ROAD MEDIA PASS LIMITED"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA ECC R2"
+      cert_serial         = "67:fb:c7:98:b5:35:02:f9:51:32:95:d1:cd:91:7b:34"
+      cert_thumbprint     = "4b94ac493d0cdf36018f79b16f223bda014e6276"
+      cert_valid_from     = "2026-03-18"
+      cert_valid_to       = "2027-03-18"
+
+      country             = "GB"
+      state               = "---"
+      locality            = "Watford"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA ECC R2" and
+         sig.serial == "67:fb:c7:98:b5:35:02:f9:51:32:95:d1:cd:91:7b:34"
+      )
+}
+
+rule MAL_Compromised_Cert_TamperedChef_Sectigo_454981B689399CF22E25587C243C3311 {
+   meta:
+      description         = "Detects TamperedChef with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-02-13"
+      version             = "1.0"
+
+      hash                = "c37a22fa29e84996d5110d8887ee32905ab318e43d5a785120be5bbe5ea58062"
+      malware             = "TamperedChef"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Binary Wave Innovations LLC"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "45:49:81:b6:89:39:9c:f2:2e:25:58:7c:24:3c:33:11"
+      cert_thumbprint     = "a10776d0715c969ae5fbea057d1271c316705e98"
+      cert_valid_from     = "2026-02-13"
+      cert_valid_to       = "2027-02-13"
+
+      country             = "UA"
+      state               = "Kyiv"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "45:49:81:b6:89:39:9c:f2:2e:25:58:7c:24:3c:33:11"
+      )
+}
+
+rule MAL_Compromised_Cert_TamperedChef_Sectigo_672D1B6FFC643916AC69BBF4DBAA0B0F {
+   meta:
+      description         = "Detects TamperedChef with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-04-04"
+      version             = "1.0"
+
+      hash                = "a7666e5aa3c6ecae0295caa7c3f49714eb561d6e1be6807cf1020b79f1902cd0"
+      malware             = "TamperedChef"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Animated Productions, LLC"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "67:2d:1b:6f:fc:64:39:16:ac:69:bb:f4:db:aa:0b:0f"
+      cert_thumbprint     = "0eeb45e2409b509fcf3021fc7298b877c8cfa5aa"
+      cert_valid_from     = "2024-04-04"
+      cert_valid_to       = "2025-04-04"
+
+      country             = "US"
+      state               = "Kansas"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "67:2d:1b:6f:fc:64:39:16:ac:69:bb:f4:db:aa:0b:0f"
+      )
+}
+
+rule MAL_Compromised_Cert_TamperedChef_Sectigo_DABB775277835052BC6E8EBBA835AB1 {
+   meta:
+      description         = "Detects TamperedChef with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-23"
+      version             = "1.0"
+
+      hash                = "2f4502f29a7c61ebb300849d07b182a8f07efe8f72c2b84b10c74989e851158f"
+      malware             = "TamperedChef"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Serve-o-lution LLC"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "da:bb:77:52:77:83:50:52:bc:6e:8e:bb:a8:35:ab:1"
+      cert_thumbprint     = "913746695bf2ab84c4c648475b25655f933365bc"
+      cert_valid_from     = "2026-03-23"
+      cert_valid_to       = "2027-03-23"
+
+      country             = "UA"
+      state               = "Kyiv"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "da:bb:77:52:77:83:50:52:bc:6e:8e:bb:a8:35:ab:1"
       )
 }
 
@@ -88970,6 +89320,41 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_65B5531094EDC0C5F3A5EB46 {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_GlobalSign_660397BCD702EFA1C80BD5BC {
+   meta:
+      description         = "Detects Unknown with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-17"
+      version             = "1.0"
+
+      hash                = "ffde5fbba662c27dbdf89236b16c80fcef3e5552d8ff98c052dd69b434fadf15"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Virtual Holding Resources, LLC"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "66:03:97:bc:d7:02:ef:a1:c8:0b:d5:bc"
+      cert_thumbprint     = "3fc914b6bc6c682fa9cbb37fe8ab5c5d5672de87"
+      cert_valid_from     = "2026-03-17"
+      cert_valid_to       = "2027-03-18"
+
+      country             = "US"
+      state               = "Texas"
+      locality            = "The Woodlands"
+      email               = "cdunlop@vhrtools.com"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "66:03:97:bc:d7:02:ef:a1:c8:0b:d5:bc"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_GlobalSign_662DA7A7B20493E999DFBDD8 {
    meta:
       description         = "Detects Unknown with compromised cert (GlobalSign)"
@@ -95617,6 +96002,41 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_7D36CBB64BC9ADD17BA71737D3ECCECA {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo RSA Code Signing CA" and
          sig.serial == "7d:36:cb:b6:4b:c9:ad:d1:7b:a7:17:37:d3:ec:ce:ca"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Sectigo_8A52C5FFE70C4449C624C47CDC4214DF {
+   meta:
+      description         = "Detects Unknown with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-08"
+      version             = "1.0"
+
+      hash                = "e7bc65daf98767646cb1a0e8c3d19cf0db0dce4618a9bcd2d287426cfd2c9034"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Pausatech LLC"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "8a:52:c5:ff:e7:0c:44:49:c6:24:c4:7c:dc:42:14:df"
+      cert_thumbprint     = "1b19b26e40686ac2edfc910a5a78d7cb3e9fb7ce"
+      cert_valid_from     = "2026-04-08"
+      cert_valid_to       = "2027-04-08"
+
+      country             = "US"
+      state               = "New Mexico"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "8a:52:c5:ff:e7:0c:44:49:c6:24:c4:7c:dc:42:14:df"
       )
 }
 
