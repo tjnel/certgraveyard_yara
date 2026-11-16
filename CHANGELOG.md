@@ -4,6 +4,17 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.11.16] - 2026-11-16
+
+### Added
+- MAL_Compromised_Cert_PDFizer_Sectigo_8C84952C1834689CEEA5673E18F74A87 (PDFizer - Sectigo)
+- MAL_Compromised_Cert_FakeAdvancedIPScanner_SSL_com_782375605663A3BDDBE66197612689D6 (FakeAdvancedIPScanner - SSL.com)
+- MAL_Compromised_Cert_ScreenConnectLoader_Microsoft_33000A2773209079D95863CCFB0000000A2773 (ScreenConnectLoader - Microsoft)
+- MAL_Compromised_Cert_Unknown_Sectigo_5BB028578EC33AFB0F9454F5E48402D9 (Unknown - Sectigo)
+- MAL_Compromised_Cert_cloakguard_agent_SSL_com_4073F5966EB9E8364CACBBBF581769CE (cloakguard-agent - SSL.com)
+- MAL_Compromised_Cert_Unknown_Sectigo_7BC2A20AD43C05E8D3D7F7DF15996F2F (Unknown - Sectigo)
+- MAL_Compromised_Cert_FakeRDCMan_SSL_com_440A69D530F15313A8CE1CC4A0CD43E5 (FakeRDCMan - SSL.com)
+
 ## [2026.11.14] - 2026-11-14
 
 ### Added
