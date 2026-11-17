@@ -4,6 +4,12 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.11.17] - 2026-11-17
+
+### Added
+- MAL_Compromised_Cert_NetSupport_RAT_Certum_52AD5759DB8B13B015D918CAF77AE355 (NetSupport RAT - Certum)
+- MAL_Compromised_Cert_Unknown_Thawte_190F457E1BE33AF8CD4329DA9E268E21 (Unknown - Thawte)
+
 ## [2026.11.16] - 2026-11-16
 
 ### Added
