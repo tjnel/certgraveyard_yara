@@ -23100,6 +23100,111 @@ rule MAL_Compromised_Cert_FakeSAPConcur_Sectigo_00E399C110BDA97BA3C2635A886F55BA
       )
 }
 
+rule MAL_Compromised_Cert_FakeScreenshot_Certum_4A2D7E6FC1A8B27198364CD067F22B58 {
+   meta:
+      description         = "Detects FakeScreenshot with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-18"
+      version             = "1.0"
+
+      hash                = "9b43bb4e22b438ef28ea41f29c755d71a825950c70a11fa9c569dd02bca91129"
+      malware             = "FakeScreenshot"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "SOFTWARE DYNAMICS AS"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "4a:2d:7e:6f:c1:a8:b2:71:98:36:4c:d0:67:f2:2b:58"
+      cert_thumbprint     = "eb98fddcd2c03d47f861e379538373f7d9f0d6be"
+      cert_valid_from     = "2026-03-18"
+      cert_valid_to       = "2027-03-18"
+
+      country             = "NO"
+      state               = "Trøndelag"
+      locality            = "Inderøy"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "4a:2d:7e:6f:c1:a8:b2:71:98:36:4c:d0:67:f2:2b:58"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeScreenshot_Microsoft_330000C90529C4AA31D6818EEA00000000C905 {
+   meta:
+      description         = "Detects FakeScreenshot with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-05"
+      version             = "1.0"
+
+      hash                = "9911a3452701797899b1ea65a6f1c85ad34f7f672abc3f0e43f87dae9e74ce82"
+      malware             = "FakeScreenshot"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Rha Soft Limited"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:00:c9:05:29:c4:aa:31:d6:81:8e:ea:00:00:00:00:c9:05"
+      cert_thumbprint     = "52b5a4dbe2684e22c4a331832138563b216e49f8"
+      cert_valid_from     = "2026-05-05"
+      cert_valid_to       = "2026-05-08"
+
+      country             = "GB"
+      state               = "Bedford"
+      locality            = "Luton"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:00:c9:05:29:c4:aa:31:d6:81:8e:ea:00:00:00:00:c9:05"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeScreenshot_Microsoft_33000BE45B29BA19D2C8C6A4B80000000BE45B {
+   meta:
+      description         = "Detects FakeScreenshot with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-11-10"
+      version             = "1.0"
+
+      hash                = "a4dc7f6ca11bd07162b43f6c6804927569c97c5640b4c3c6dde0c150402a63e1"
+      malware             = "FakeScreenshot"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "MARQUEE AUDIO VISUAL LIMITED"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:0b:e4:5b:29:ba:19:d2:c8:c6:a4:b8:00:00:00:0b:e4:5b"
+      cert_thumbprint     = "b3a7719d9f0a74b15670bba12348d32ea0058d4e"
+      cert_valid_from     = "2026-11-10"
+      cert_valid_to       = "2026-11-13"
+
+      country             = "IE"
+      state               = "Dublin"
+      locality            = "Dublin"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:0b:e4:5b:29:ba:19:d2:c8:c6:a4:b8:00:00:00:0b:e4:5b"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeSlack_Certum_55905FC78103517BD3088E330EB8B09C {
    meta:
       description         = "Detects FakeSlack with compromised cert (Certum)"
@@ -42802,6 +42907,41 @@ rule MAL_Compromised_Cert_Numando_Sectigo_00F6AD45188E5566AA317BE23B4B8B2C2F {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo RSA Code Signing CA" and
          sig.serial == "00:f6:ad:45:18:8e:55:66:aa:31:7b:e2:3b:4b:8b:2c:2f"
+      )
+}
+
+rule MAL_Compromised_Cert_Nyx_RMM_SSL_com_75402FF115E7C654F4ACA2F322920F10 {
+   meta:
+      description         = "Detects Nyx RMM with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-10-23"
+      version             = "1.0"
+
+      hash                = "51ae32063e291a8401388d8d26c42083f855731cc9de8da024c9067e7b1ec6bf"
+      malware             = "Nyx RMM"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Zero NYX Technologies LLC"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "75:40:2f:f1:15:e7:c6:54:f4:ac:a2:f3:22:92:0f:10"
+      cert_thumbprint     = "9AD2993D7CE987E89AC001C48099BA9829DCC47A"
+      cert_valid_from     = "2026-10-23"
+      cert_valid_to       = "2027-10-23"
+
+      country             = "US"
+      state               = "Colorado"
+      locality            = "Denver"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "75:40:2f:f1:15:e7:c6:54:f4:ac:a2:f3:22:92:0f:10"
       )
 }
 
@@ -96352,6 +96492,41 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_B683AFC8350CA6388FFB39194E094B09 {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "b6:83:af:c8:35:0c:a6:38:8f:fb:39:19:4e:09:4b:09"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Sectigo_C616578BD978935D9FE5B9751D00FFEE {
+   meta:
+      description         = "Detects Unknown with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-10-23"
+      version             = "1.0"
+
+      hash                = "fe9829f1c102a79b4ca33c8c8bda8ef2236dc94c6d1de88249c89e82681adc8c"
+      malware             = "Unknown"
+      malware_type        = "Backdoor"
+      malware_notes       = "https://rogueauthority.org/signed-fake-zscaler-tunnel-go-backdoor"
+
+      signer              = "MARQUEE AUDIO VISUAL LIMITED"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "c6:16:57:8b:d9:78:93:5d:9f:e5:b9:75:1d:00:ff:ee"
+      cert_thumbprint     = "b56b946b2d9fb06ac86b92c83b1d3ad608d6abab"
+      cert_valid_from     = "2026-10-23"
+      cert_valid_to       = "2027-10-23"
+
+      country             = "IE"
+      state               = "Dublin"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "c6:16:57:8b:d9:78:93:5d:9f:e5:b9:75:1d:00:ff:ee"
       )
 }
 

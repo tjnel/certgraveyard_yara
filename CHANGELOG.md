@@ -4,6 +4,17 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.11.18] - 2026-11-18
+
+### Added
+- MAL_Compromised_Cert_Unknown_Sectigo_C616578BD978935D9FE5B9751D00FFEE (Unknown - Sectigo)
+- MAL_Compromised_Cert_FakeScreenshot_Microsoft_330000C90529C4AA31D6818EEA00000000C905 (FakeScreenshot - Microsoft)
+- MAL_Compromised_Cert_Nyx_RMM_SSL_com_75402FF115E7C654F4ACA2F322920F10 (Nyx RMM - SSL.com)
+- MAL_Compromised_Cert_FakeScreenshot_Microsoft_33000BE45B29BA19D2C8C6A4B80000000BE45B (FakeScreenshot - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_FakeScreenshot_Certum_4A2D7E6FC1A8B27198364CD067F22B58 (Updated metadata for FakeScreenshot)
+
 ## [2026.11.17] - 2026-11-17
 
 ### Added
