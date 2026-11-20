@@ -101395,6 +101395,111 @@ rule MAL_Compromised_Cert_Winos_SSL_com_72C9DB722E93A08BF09A00BD7963687C {
       )
 }
 
+rule MAL_Compromised_Cert_Wraith_RAT_Certum_4A2D7E6FC1A8B27198364CD067F22B58 {
+   meta:
+      description         = "Detects Wraith RAT with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-03-18"
+      version             = "1.0"
+
+      hash                = "9b43bb4e22b438ef28ea41f29c755d71a825950c70a11fa9c569dd02bca91129"
+      malware             = "Wraith RAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "SOFTWARE DYNAMICS AS"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "4a:2d:7e:6f:c1:a8:b2:71:98:36:4c:d0:67:f2:2b:58"
+      cert_thumbprint     = "eb98fddcd2c03d47f861e379538373f7d9f0d6be"
+      cert_valid_from     = "2026-03-18"
+      cert_valid_to       = "2027-03-18"
+
+      country             = "NO"
+      state               = "Trøndelag"
+      locality            = "Inderøy"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "4a:2d:7e:6f:c1:a8:b2:71:98:36:4c:d0:67:f2:2b:58"
+      )
+}
+
+rule MAL_Compromised_Cert_Wraith_RAT_Microsoft_330000C90529C4AA31D6818EEA00000000C905 {
+   meta:
+      description         = "Detects Wraith RAT with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-05-05"
+      version             = "1.0"
+
+      hash                = "9911a3452701797899b1ea65a6f1c85ad34f7f672abc3f0e43f87dae9e74ce82"
+      malware             = "Wraith RAT"
+      malware_type        = "Remote access tool"
+      malware_notes       = ""
+
+      signer              = "Rha Soft Limited"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 04"
+      cert_serial         = "33:00:00:c9:05:29:c4:aa:31:d6:81:8e:ea:00:00:00:00:c9:05"
+      cert_thumbprint     = "52b5a4dbe2684e22c4a331832138563b216e49f8"
+      cert_valid_from     = "2026-05-05"
+      cert_valid_to       = "2026-05-08"
+
+      country             = "GB"
+      state               = "Bedford"
+      locality            = "Luton"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 04" and
+         sig.serial == "33:00:00:c9:05:29:c4:aa:31:d6:81:8e:ea:00:00:00:00:c9:05"
+      )
+}
+
+rule MAL_Compromised_Cert_Wraith_RAT_Microsoft_33000BE45B29BA19D2C8C6A4B80000000BE45B {
+   meta:
+      description         = "Detects Wraith RAT with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-11-10"
+      version             = "1.0"
+
+      hash                = "a4dc7f6ca11bd07162b43f6c6804927569c97c5640b4c3c6dde0c150402a63e1"
+      malware             = "Wraith RAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "MARQUEE AUDIO VISUAL LIMITED"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 04"
+      cert_serial         = "33:00:0b:e4:5b:29:ba:19:d2:c8:c6:a4:b8:00:00:00:0b:e4:5b"
+      cert_thumbprint     = "b3a7719d9f0a74b15670bba12348d32ea0058d4e"
+      cert_valid_from     = "2026-11-10"
+      cert_valid_to       = "2026-11-13"
+
+      country             = "IE"
+      state               = "Dublin"
+      locality            = "Dublin"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 04" and
+         sig.serial == "33:00:0b:e4:5b:29:ba:19:d2:c8:c6:a4:b8:00:00:00:0b:e4:5b"
+      )
+}
+
 rule MAL_Compromised_Cert_XMAS_Traffer_Team_GlobalSign_5731AFDC3A41C9A004C5D636 {
    meta:
       description         = "Detects XMAS Traffer Team with compromised cert (GlobalSign)"

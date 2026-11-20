@@ -4,6 +4,13 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.11.20] - 2026-11-20
+
+### Modified
+- MAL_Compromised_Cert_Wraith_RAT_Microsoft_33000BE45B29BA19D2C8C6A4B80000000BE45B (Updated metadata for Wraith RAT)
+- MAL_Compromised_Cert_Wraith_RAT_Certum_4A2D7E6FC1A8B27198364CD067F22B58 (Updated metadata for Wraith RAT)
+- MAL_Compromised_Cert_Wraith_RAT_Microsoft_330000C90529C4AA31D6818EEA00000000C905 (Updated metadata for Wraith RAT)
+
 ## [2026.11.19] - 2026-11-19
 
 ### Added
