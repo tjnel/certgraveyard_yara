@@ -4,6 +4,12 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.11.23] - 2026-11-23
+
+### Added
+- MAL_Compromised_Cert_ScreenConnect_Loader_Certum_75FC85C5802706A4CC78ABFCFED190BB (ScreenConnect Loader - Certum)
+- MAL_Compromised_Cert_FakeAdvancedIPScanner_GlobalSign_5E06193EAEE1F60C7C44E001 (FakeAdvancedIPScanner - GlobalSign)
+
 ## [2026.11.20] - 2026-11-20
 
 ### Modified

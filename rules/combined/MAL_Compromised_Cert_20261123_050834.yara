@@ -16975,6 +16975,41 @@ rule MAL_Compromised_Cert_FakeAdvancedIPScanner_GlobalSign_5C1C54F72BCC4DB607902
       )
 }
 
+rule MAL_Compromised_Cert_FakeAdvancedIPScanner_GlobalSign_5E06193EAEE1F60C7C44E001 {
+   meta:
+      description         = "Detects FakeAdvancedIPScanner with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-30"
+      version             = "1.0"
+
+      hash                = "290d243388e5d690d6142344239602ff7983fb1b8758e1c1f1720f076f482806"
+      malware             = "FakeAdvancedIPScanner"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Listenmaa Consulting Oy"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "5e:06:19:3e:ae:e1:f6:0c:7c:44:e0:01"
+      cert_thumbprint     = "87e7d5cf28ee404dee2a447cf50ff49cdc0c8797"
+      cert_valid_from     = "2026-09-30"
+      cert_valid_to       = "2027-10-01"
+
+      country             = "FI"
+      state               = "Pirkanmaa"
+      locality            = "Tampere"
+      email               = "jani@listenmaa.com"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "5e:06:19:3e:ae:e1:f6:0c:7c:44:e0:01"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeAdvancedIPScanner_GlobalSign_756644768CDFC34FD79A60CD {
    meta:
       description         = "Detects FakeAdvancedIPScanner with compromised cert (GlobalSign)"
@@ -64397,6 +64432,41 @@ rule MAL_Compromised_Cert_ScreenConnect_Loader_Certum_6002EF4359609E6BE08215CC40
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Code Signing 2021 CA" and
          sig.serial == "60:02:ef:43:59:60:9e:6b:e0:82:15:cc:40:f9:b3:77"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnect_Loader_Certum_75FC85C5802706A4CC78ABFCFED190BB {
+   meta:
+      description         = "Detects ScreenConnect Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-22"
+      version             = "1.0"
+
+      hash                = "e11955b675405d310da057af3a5d56da27c1f0da078a907b52d6055dd4e20455"
+      malware             = "ScreenConnect Loader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Hao He"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "75:fc:85:c5:80:27:06:a4:cc:78:ab:fc:fe:d1:90:bb"
+      cert_thumbprint     = "96f7d0216b2abd1da7cbf45f7a0dc67d368a82cc"
+      cert_valid_from     = "2026-04-22"
+      cert_valid_to       = "2027-04-22"
+
+      country             = "CN"
+      state               = "Sichuan"
+      locality            = "Shehong"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "75:fc:85:c5:80:27:06:a4:cc:78:ab:fc:fe:d1:90:bb"
       )
 }
 
