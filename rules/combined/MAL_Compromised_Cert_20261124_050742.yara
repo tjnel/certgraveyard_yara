@@ -22820,6 +22820,41 @@ rule MAL_Compromised_Cert_FakeRMM_SSL_com_31618F4DCEC27DC87917A80F27A84C00 {
       )
 }
 
+rule MAL_Compromised_Cert_FakeRMM_SSL_com_C4645F0F1D8CC36C7E16E9207FC05E4 {
+   meta:
+      description         = "Detects FakeRMM with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-07"
+      version             = "1.0"
+
+      hash                = "d183c675620a9388e2906a81249c502898e5c7cab370265ac39b177aed49ab21"
+      malware             = "FakeRMM"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "PRXY TECHNOLOGIES LLC"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "c4:64:5f:0f:1d:8c:c3:6c:7e:16:e9:20:7f:c0:5e:4"
+      cert_thumbprint     = "6b96647d5b31961ef8119c3ca9b98dbd2fdac58f"
+      cert_valid_from     = "2026-09-07"
+      cert_valid_to       = "2027-09-07"
+
+      country             = "US"
+      state               = "Illinois"
+      locality            = "Decatur"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "c4:64:5f:0f:1d:8c:c3:6c:7e:16:e9:20:7f:c0:5e:4"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeRMM_Sectigo_4A7D05F4B7794921AF0D8CEDE8E1EA09 {
    meta:
       description         = "Detects FakeRMM with compromised cert (Sectigo)"
@@ -22992,6 +23027,41 @@ rule MAL_Compromised_Cert_FakeRVTools_SSL_com_2A675AF2BBF9D9477854BE7409A5DA44 {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
          sig.serial == "2a:67:5a:f2:bb:f9:d9:47:78:54:be:74:09:a5:da:44"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeRVTools_SSL_com_38045E62CCCB2723E049C01C7A8A4B7C {
+   meta:
+      description         = "Detects FakeRVTools with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-10-20"
+      version             = "1.0"
+
+      hash                = "f16bccf97f52eba93d6ad2013520ff578d694c14bfe22953b50b5a54780b1ccb"
+      malware             = "FakeRVTools"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Betty Robinson"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "38:04:5e:62:cc:cb:27:23:e0:49:c0:1c:7a:8a:4b:7c"
+      cert_thumbprint     = "d2bf64e17181e23ac379afd4bd59dc259ed1b19d"
+      cert_valid_from     = "2026-10-20"
+      cert_valid_to       = "2027-10-20"
+
+      country             = "US"
+      state               = "Arkansas"
+      locality            = "Lockesburg"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "38:04:5e:62:cc:cb:27:23:e0:49:c0:1c:7a:8a:4b:7c"
       )
 }
 
@@ -28455,6 +28525,41 @@ rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_5CCC14BFA5980319E17B16F0360
       )
 }
 
+rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_5DCA7CA819A564137A34873F3E86F595 {
+   meta:
+      description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-08-23"
+      version             = "1.0"
+
+      hash                = "3f447a57f2545fa98a222e86046438eb590678189d79f98bc96b67dc892ce9cb"
+      malware             = "Golden Gh0st Loader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Hangzhou Chuang Wen Speed Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "5d:ca:7c:a8:19:a5:64:13:7a:34:87:3f:3e:86:f5:95"
+      cert_thumbprint     = "e29373841f4ca0358770d74d333d232299e5ab85"
+      cert_valid_from     = "2026-08-23"
+      cert_valid_to       = "2027-08-23"
+
+      country             = "CN"
+      state               = "Zhejiang"
+      locality            = "Hangzhou"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "5d:ca:7c:a8:19:a5:64:13:7a:34:87:3f:3e:86:f5:95"
+      )
+}
+
 rule MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_5DF273A440E188CFD64188D1EF1E5931 {
    meta:
       description         = "Detects Golden Gh0st Loader with compromised cert (Certum)"
@@ -32410,6 +32515,41 @@ rule MAL_Compromised_Cert_HijackLoader_Microsoft_330006CE519E7F692CF18F808100000
       )
 }
 
+rule MAL_Compromised_Cert_HijackLoader_SSL_com_2185A35B6F46B7DCD9E4994E71B8EFEA {
+   meta:
+      description         = "Detects HijackLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-10-20"
+      version             = "1.0"
+
+      hash                = "25e0264394fd3fb6ab8a37216b32e394614757c0ba26f2ffd582372fa16296f3"
+      malware             = "HijackLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "C2: randomrandomicanseeyou[.]com"
+
+      signer              = "Iperia Newell"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "21:85:a3:5b:6f:46:b7:dc:d9:e4:99:4e:71:b8:ef:ea"
+      cert_thumbprint     = "a60aae4464b69a0da3518ba49f58b53043afdbf4"
+      cert_valid_from     = "2026-10-20"
+      cert_valid_to       = "2027-10-20"
+
+      country             = "US"
+      state               = "Indiana"
+      locality            = "Fort Wayne"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "21:85:a3:5b:6f:46:b7:dc:d9:e4:99:4e:71:b8:ef:ea"
+      )
+}
+
 rule MAL_Compromised_Cert_HijackLoader_SSL_com_33D83CD7A2AC80605D8A8CA249E95BAB {
    meta:
       description         = "Detects HijackLoader with compromised cert (SSL.com)"
@@ -32582,6 +32722,41 @@ rule MAL_Compromised_Cert_HijackLoader_SSL_com_5BF5E37EE4A4884DE448DD9927225FD5 
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "5b:f5:e3:7e:e4:a4:88:4d:e4:48:dd:99:27:22:5f:d5"
+      )
+}
+
+rule MAL_Compromised_Cert_HijackLoader_SSL_com_65A5EEC5E134C6F9EEE1CD0FAB4D7519 {
+   meta:
+      description         = "Detects HijackLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-10-29"
+      version             = "1.0"
+
+      hash                = "29b848e8f0c4a045cc51ea61d84446f6b5a3ebc48997ef67974b067104d5f3a6"
+      malware             = "HijackLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Christina Carroll"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "65:a5:ee:c5:e1:34:c6:f9:ee:e1:cd:0f:ab:4d:75:19"
+      cert_thumbprint     = "859c784165556e8917901030b1551705de5443b0"
+      cert_valid_from     = "2026-10-29"
+      cert_valid_to       = "2027-10-29"
+
+      country             = "US"
+      state               = "North Carolina"
+      locality            = "Princeton"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "65:a5:ee:c5:e1:34:c6:f9:ee:e1:cd:0f:ab:4d:75:19"
       )
 }
 
@@ -46722,6 +46897,41 @@ rule MAL_Compromised_Cert_PDFizer_SSL_com_5226A47E8A783FB03F836ECB18C746DE {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "52:26:a4:7e:8a:78:3f:b0:3f:83:6e:cb:18:c7:46:de"
+      )
+}
+
+rule MAL_Compromised_Cert_PDFizer_Sectigo_11D997F2C3AE3D81619C384DEAF8F970 {
+   meta:
+      description         = "Detects PDFizer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-10"
+      version             = "1.0"
+
+      hash                = "3650c2a39a90173b234ad04378b2c42cd34ab6a02a6bd6e5c22a79a16e2b89d9"
+      malware             = "PDFizer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Muhammad Awais"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA R36"
+      cert_serial         = "11:d9:97:f2:c3:ae:3d:81:61:9c:38:4d:ea:f8:f9:70"
+      cert_thumbprint     = "52202cf782fa9ed0b95d9e790fe434ab09d7f4ea"
+      cert_valid_from     = "2026-09-10"
+      cert_valid_to       = "2027-09-10"
+
+      country             = "PK"
+      state               = "Punjab"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA R36" and
+         sig.serial == "11:d9:97:f2:c3:ae:3d:81:61:9c:38:4d:ea:f8:f9:70"
       )
 }
 

@@ -4,6 +4,16 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.11.24] - 2026-11-24
+
+### Added
+- MAL_Compromised_Cert_HijackLoader_SSL_com_65A5EEC5E134C6F9EEE1CD0FAB4D7519 (HijackLoader - SSL.com)
+- MAL_Compromised_Cert_HijackLoader_SSL_com_2185A35B6F46B7DCD9E4994E71B8EFEA (HijackLoader - SSL.com)
+- MAL_Compromised_Cert_PDFizer_Sectigo_11D997F2C3AE3D81619C384DEAF8F970 (PDFizer - Sectigo)
+- MAL_Compromised_Cert_FakeRVTools_SSL_com_38045E62CCCB2723E049C01C7A8A4B7C (FakeRVTools - SSL.com)
+- MAL_Compromised_Cert_FakeRMM_SSL_com_C4645F0F1D8CC36C7E16E9207FC05E4 (FakeRMM - SSL.com)
+- MAL_Compromised_Cert_Golden_Gh0st_Loader_Certum_5DCA7CA819A564137A34873F3E86F595 (Golden Gh0st Loader - Certum)
+
 ## [2026.11.23] - 2026-11-23
 
 ### Added
