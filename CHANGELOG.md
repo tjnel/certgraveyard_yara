@@ -4,6 +4,17 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.11.25] - 2026-11-25
+
+### Added
+- MAL_Compromised_Cert_RMMLoader_Sectigo_9A11DB914EBBDADDD77712FDF1349D4A (RMMLoader - Sectigo)
+- MAL_Compromised_Cert_UNK_50_Microsoft_33000B984F3750AC5EDF9E78BA0000000B984F (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_Cloudhaze_Sectigo_4715717AE3C2E72ED180F9D7EA2699BF (Cloudhaze - Sectigo)
+- MAL_Compromised_Cert_CobaltStrike_Microsoft_33000D07F2743808FA2811E8040000000D07F2 (CobaltStrike - Microsoft)
+- MAL_Compromised_Cert_UNK_50_Microsoft_330005CEC613A661D5907B7D8B00000005CEC6 (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_Unknown_DigiCert_DE2263B8807428F67AF91A6FE4FB73C (Unknown - DigiCert)
+- MAL_Compromised_Cert_Unknown_Microsoft_330007509F90B5CF07C51BB38D00000007509F (Unknown - Microsoft)
+
 ## [2026.11.24] - 2026-11-24
 
 ### Added
