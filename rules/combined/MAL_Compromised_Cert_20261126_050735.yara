@@ -32585,6 +32585,41 @@ rule MAL_Compromised_Cert_HijackLoader_Microsoft_330006CE519E7F692CF18F808100000
       )
 }
 
+rule MAL_Compromised_Cert_HijackLoader_Microsoft_33000ADC717B1590B1BD90EB090000000ADC71 {
+   meta:
+      description         = "Detects HijackLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-11-04"
+      version             = "1.0"
+
+      hash                = "dba93a0a010043b6ca620e7bd63f111359832083c14b987c6900eb6b7de1c3b3"
+      malware             = "HijackLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "BG Sound"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 03"
+      cert_serial         = "33:00:0a:dc:71:7b:15:90:b1:bd:90:eb:09:00:00:00:0a:dc:71"
+      cert_thumbprint     = "c36416e38158eecb1014ec504e4f861e0ac3a530"
+      cert_valid_from     = "2026-11-04"
+      cert_valid_to       = "2026-11-07"
+
+      country             = "NL"
+      state               = "Noord-Holland"
+      locality            = "Purmerend"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 03" and
+         sig.serial == "33:00:0a:dc:71:7b:15:90:b1:bd:90:eb:09:00:00:00:0a:dc:71"
+      )
+}
+
 rule MAL_Compromised_Cert_HijackLoader_SSL_com_2185A35B6F46B7DCD9E4994E71B8EFEA {
    meta:
       description         = "Detects HijackLoader with compromised cert (SSL.com)"
@@ -54670,6 +54705,41 @@ rule MAL_Compromised_Cert_RdViewer_Certum_75867F08AE0987F7B17CBA1F4083DFAD {
       )
 }
 
+rule MAL_Compromised_Cert_RdViewer_Certum_758AF88B88D2116ABFA80F2351FD82F2 {
+   meta:
+      description         = "Detects RdViewer with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-11-21"
+      version             = "1.0"
+
+      hash                = "fdc6ffb9ab42d717285e71dca3a5ad9798c385927ca5e59dc41c4caa4219ad23"
+      malware             = "RdViewer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "王正福"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Code Signing 2021 CA"
+      cert_serial         = "75:8a:f8:8b:88:d2:11:6a:bf:a8:0f:23:51:fd:82:f2"
+      cert_thumbprint     = "447154470ded347677bfa03280caab195eb1dcd0"
+      cert_valid_from     = "2026-11-21"
+      cert_valid_to       = "2027-11-21"
+
+      country             = "CN"
+      state               = "云南省"
+      locality            = "大理白族自治州"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Code Signing 2021 CA" and
+         sig.serial == "75:8a:f8:8b:88:d2:11:6a:bf:a8:0f:23:51:fd:82:f2"
+      )
+}
+
 rule MAL_Compromised_Cert_RdViewer_Loader_Certum_2C858B90FCA6B39036B52387E3FF0AA2 {
    meta:
       description         = "Detects RdViewer Loader with compromised cert (Certum)"
@@ -71992,6 +72062,181 @@ rule MAL_Compromised_Cert_SoftHub_Tauri_Rust_Based_Installer_Malware_Campaign_Se
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "05:31:fc:09:12:9a:b7:e3:f3:6f:0d:fc:92:33:3e:de"
+      )
+}
+
+rule MAL_Compromised_Cert_SoftWorkers_Certum_71EC769262102D63E053D47269E7E635 {
+   meta:
+      description         = "Detects SoftWorkers with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-09-22"
+      version             = "1.0"
+
+      hash                = "73ab77da60d7196bce61405c615f8cd03a3157abffaf4a2447bd79fb8082da9f"
+      malware             = "SoftWorkers"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Code Blue Staffing Inc."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "71:ec:76:92:62:10:2d:63:e0:53:d4:72:69:e7:e6:35"
+      cert_thumbprint     = "f41e02b45eb637079920a49a52187f17c0816c7e"
+      cert_valid_from     = "2026-09-22"
+      cert_valid_to       = "2027-09-22"
+
+      country             = "CA"
+      state               = "Ontario"
+      locality            = "Toronto"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "71:ec:76:92:62:10:2d:63:e0:53:d4:72:69:e7:e6:35"
+      )
+}
+
+rule MAL_Compromised_Cert_SoftWorkers_SSL_com_782375605663A3BDDBE66197612689D6 {
+   meta:
+      description         = "Detects SoftWorkers with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-10-23"
+      version             = "1.0"
+
+      hash                = "db6726180b2fc1f64cd7bd6accfb91b7958aca37b3fade08fea25882544a392f"
+      malware             = "SoftWorkers"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Sierra Brumfield"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "78:23:75:60:56:63:a3:bd:db:e6:61:97:61:26:89:d6"
+      cert_thumbprint     = "b2acedede4871af791d226b5549e18d63879ca2e"
+      cert_valid_from     = "2026-10-23"
+      cert_valid_to       = "2027-10-23"
+
+      country             = "US"
+      state               = "Mississippi"
+      locality            = "McComb"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "78:23:75:60:56:63:a3:bd:db:e6:61:97:61:26:89:d6"
+      )
+}
+
+rule MAL_Compromised_Cert_SoftWorkers_Sectigo_5BB028578EC33AFB0F9454F5E48402D9 {
+   meta:
+      description         = "Detects SoftWorkers with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-04-28"
+      version             = "1.0"
+
+      hash                = "9c242f456a2f12306f53e55d5b4c7dd5e413c899559646aad5b0346b82547175"
+      malware             = "SoftWorkers"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "SIA JOBCENTER"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "5b:b0:28:57:8e:c3:3a:fb:0f:94:54:f5:e4:84:02:d9"
+      cert_thumbprint     = "92795fc876279fc2dba707ae8110bf2d3304b33c"
+      cert_valid_from     = "2026-04-28"
+      cert_valid_to       = "2027-04-28"
+
+      country             = "LV"
+      state               = "Rīga"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "5b:b0:28:57:8e:c3:3a:fb:0f:94:54:f5:e4:84:02:d9"
+      )
+}
+
+rule MAL_Compromised_Cert_SoftWorkers_Sectigo_7BC2A20AD43C05E8D3D7F7DF15996F2F {
+   meta:
+      description         = "Detects SoftWorkers with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-11-04"
+      version             = "1.0"
+
+      hash                = "96cbfe40db66a360804742c61d4d8fe8f7dcf3a2bfb29dbbe16ce0ed14f71fb1"
+      malware             = "SoftWorkers"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "PRZEDSIĘBIORSTWO HANDLOWE KOMERS Sp. z o.o."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "7b:c2:a2:0a:d4:3c:05:e8:d3:d7:f7:df:15:99:6f:2f"
+      cert_thumbprint     = "eba307c5491d68c03169dd3f50f11438abd0ea17"
+      cert_valid_from     = "2026-11-04"
+      cert_valid_to       = "2027-11-04"
+
+      country             = "PL"
+      state               = "Pomorskie"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "7b:c2:a2:0a:d4:3c:05:e8:d3:d7:f7:df:15:99:6f:2f"
+      )
+}
+
+rule MAL_Compromised_Cert_SoftWorkers_Sectigo_B683AFC8350CA6388FFB39194E094B09 {
+   meta:
+      description         = "Detects SoftWorkers with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-10-17"
+      version             = "1.0"
+
+      hash                = "698ba27e47db93bf9d0624e42b64037dd0b9e29d5a01e502d6a93dee3f96cb5d"
+      malware             = "SoftWorkers"
+      malware_type        = "Backdoor"
+      malware_notes       = "https://rogueauthority.org/signed-putty-installer-nodejs-loader"
+
+      signer              = "Lille Lykke Gave og Interiør ANS"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "b6:83:af:c8:35:0c:a6:38:8f:fb:39:19:4e:09:4b:09"
+      cert_thumbprint     = "e704929aa80a5eaeed9f88a9b01914735b897533"
+      cert_valid_from     = "2026-10-17"
+      cert_valid_to       = "2027-10-17"
+
+      country             = "NO"
+      state               = "Østfold"
+      locality            = "---"
+      email               = "---"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "b6:83:af:c8:35:0c:a6:38:8f:fb:39:19:4e:09:4b:09"
       )
 }
 

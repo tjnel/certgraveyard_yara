@@ -4,6 +4,19 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.11.26] - 2026-11-26
+
+### Added
+- MAL_Compromised_Cert_RdViewer_Certum_758AF88B88D2116ABFA80F2351FD82F2 (RdViewer - Certum)
+- MAL_Compromised_Cert_HijackLoader_Microsoft_33000ADC717B1590B1BD90EB090000000ADC71 (HijackLoader - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_SoftWorkers_SSL_com_782375605663A3BDDBE66197612689D6 (Updated metadata for SoftWorkers)
+- MAL_Compromised_Cert_SoftWorkers_Sectigo_5BB028578EC33AFB0F9454F5E48402D9 (Updated metadata for SoftWorkers)
+- MAL_Compromised_Cert_SoftWorkers_Certum_71EC769262102D63E053D47269E7E635 (Updated metadata for SoftWorkers)
+- MAL_Compromised_Cert_SoftWorkers_Sectigo_7BC2A20AD43C05E8D3D7F7DF15996F2F (Updated metadata for SoftWorkers)
+- MAL_Compromised_Cert_SoftWorkers_Sectigo_B683AFC8350CA6388FFB39194E094B09 (Updated metadata for SoftWorkers)
+
 ## [2026.11.25] - 2026-11-25
 
 ### Added
