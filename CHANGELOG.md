@@ -4,6 +4,12 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.11.27] - 2026-11-27
+
+### Added
+- MAL_Compromised_Cert_SoftWorkers_Sectigo_AC075D997959B90047C2B87ECA6791F1 (SoftWorkers - Sectigo)
+- MAL_Compromised_Cert_5fee93321465bad97d5f3f67fe90d4bbf35a8172544a6e5e1470a225db8a8058_SSL_com_659A312F4A3F9DF888FEC2D39D993560 (5fee93321465bad97d5f3f67fe90d4bbf35a8172544a6e5e1470a225db8a8058 - SSL.com)
+
 ## [2026.11.26] - 2026-11-26
 
 ### Added
