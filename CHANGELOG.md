@@ -4,6 +4,26 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.11.28] - 2026-11-28
+
+### Added
+- MAL_Compromised_Cert_UNK_50_Microsoft_330008A7EC06F2B46F1B5209E700000008A7EC (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_UNK_50_Microsoft_33000783FEDDD5E2A70A0E7E0A0000000783FE (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_UNK_50_Microsoft_330001613C9B0BAE22FDB4059600000001613C (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_Unknown_Microsoft_3300066F3D4DD2FF2060D6901B000000066F3D (Unknown - Microsoft)
+- MAL_Compromised_Cert_UNK_50_SSL_com_51D6F6F3329863D25B0544C84A5F409 (UNK-50 - SSL.com)
+- MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_115422DA20E07633305632A5889BAD37 (ScreenConnectLoader - SSL.com)
+- MAL_Compromised_Cert_WailsLoader_likely_SSL_com_6F9FBC96C2EFA75EBFDC5356E1E926F0 (WailsLoader (likely) - SSL.com)
+- MAL_Compromised_Cert_ChainScript_Sectigo_95E63DB9D4569ABB2F87489EE97E2242 (ChainScript - Sectigo)
+- MAL_Compromised_Cert_WailsLoader_Certum_637FEC2307D9036A81BF27D1385B58FA (WailsLoader - Certum)
+- MAL_Compromised_Cert_FakeRDCMan_SSL_com_70B469B39976381BFA037925963F275D (FakeRDCMan - SSL.com)
+- MAL_Compromised_Cert_WailsLoader_Sectigo_A092CC6E5FAB2CC168E1BEDC90C111B1 (WailsLoader - Sectigo)
+- MAL_Compromised_Cert_WailsLoader_SSL_com_385D9136BEFA8E2362C40F597694BAE3 (WailsLoader - SSL.com)
+
+### Modified
+- MAL_Compromised_Cert_Unknown_Sectigo_9A11DB914EBBDADDD77712FDF1349D4A (Updated metadata for Unknown)
+- MAL_Compromised_Cert_Unknown_SSL_com_659A312F4A3F9DF888FEC2D39D993560 (Updated metadata for Unknown)
+
 ## [2026.11.27] - 2026-11-27
 
 ### Added
